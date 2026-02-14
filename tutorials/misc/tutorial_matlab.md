@@ -5,48 +5,48 @@ long_title: MATLAB tutorial
 parent: Reference Topics
 grand_parent: Tutorials
 ---
-Matlab tutorial
+Matlabチュートリアル
 ===
 
-The EEGLAB graphic interface is built on top of the powerful MATLAB
-scripting language. Enjoying the full capabilities of EEGLAB for
-building macro commands and performing custom and automated processing
-requires the ability to manipulate EEGLAB data structures in MATLAB.
+EEGLABのグラフィックインターフェイスは強力なMATLABの上に構築されています
+スクリプト言語。 EEGLABのフル機能を楽しむ
+マクロコマンドの構築とカスタムと自動処理の実行
+MATLABのデータ構造を操作する機能が必要です。
 
-## MATLAB Online Course
+## MATLABオンラインコース
 
-MathWorks proposes some MATLAB self-paced online courses. We advise that
- you complete the "MATLAB Onramp," a 1-2hour interactive introduction to the
-  basics of MATLAB programming. 
+MathWorksは、MATLABのセルフペースのオンラインコースを提案しています。 お問い合わせ
+ 「MATLAB ONramp」を1〜2時間の双方向導入完了
+  MATLABプログラミングの基礎 
   
-Accessing MATLAB Onramp: 
-- Follow [this link to MATLAB Academy](https://matlabacademy.mathworks.com/)
-- Or from within MATLAB, select the "Learn MATLAB" menu 
+MATLABへのアクセス ランプ: 
+- フォロー [MATLABアカデミーへのリンク](https://matlabacademy.mathworks.com/)
+- またはMATLAB内の「Learn MATLAB」メニューを選択します。 
 
-Note that you will be asked to log in to your MathWorks
- account, which can be created for free [here](https://www.mathworks.com/mwaccount/register). 
+MathWorksにログインする
+ 無料で作成できるアカウント [詳しくはこちら](https://www.mathworks.com/mwaccount/register). 
 
 
-## MATLAB Documentation
-Alternatively you can also consult MATLAB's help and documentation. 
-We recommend running the following demos and reading the following help sections:
+## MATLABドキュメント
+また、MATLABのヘルプやドキュメントもご相談いただけます。 
+以下のデモを実行し、次のヘルプセクションを読むことをお勧めします。
 
-In the MATLAB help, you should perform the first four tutorials:
+MATLABヘルプでは、最初の4つのチュートリアルを実行する必要があります。
 
--   Getting Started with MATLAB
--   Language Fundamentals
--   Mathematics
--   Graphics (first section 2-D plot only)
+-   MATLABで始める
+-   言語の基礎
+-   数学
+-   グラフィック(第一部2Dプロットのみ)
 
-Each section or demo should take you about 40
-minutes, for a total of about 2 hours. We encourage you to read
-these sections over several days.
+各セクションまたはデモは、約40分かかります
+所要時間約2時間。 お問い合わせ
+これらのセクションは数日以上です。
 
 
 <!-- If you do not have access to the MATLAB demos, [here](http://sccn.ucsd.edu/eeglab/matlaboverview.html) is a short online introduction to MATLAB (recommended pages, 1 to 12).
 -->
-If you do not use MATLAB regularly, we encourage you to watch these demos, read these sections, and practice using the skills they introduce over several days.
+MATLABを定期的に使用しない場合は、これらのデモを見たり、これらのセクションを読んで、数日間にわたって紹介するスキルを使用して練習することをお勧めします。
 
-## A Video tutorial for scripting with EEGLAB
+## EEGLABでスクリプトするためのビデオチュートリアル
 
-This [video tutorial](http://sincxpress.com/neuroscience/) by Mike Cohen uses EEGLAB.
+お問い合わせ [ビデオチュートリアル](http://sincxpress.com/neuroscience/) マイク・コーエンがEEGLABを利用しています。

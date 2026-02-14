@@ -5,53 +5,53 @@ long_title: EEGLAB and MEG data
 parent: Reference Topics
 grand_parent: Tutorials
 ---
-EEGLAB and iEEG, sEEG, or ECoG data
+EEGLABとiEEG、SEEG、またはECoGデータ
 ====================
 
-EEGLAB supports reading most iEEG data formats (EDF, MEF3, NWB) through native code 
-or plugins. The BIDS-Matlab-tools EEGLAB plugin
-also supports importing BIDS-formatted MEG data. You may install plugins from the EEGLAB plugin manager (menu item <span style="color: brown">File > Manage EEGLAB extensions</span>). 
-Gre
-## Importing data
+EEGLABは、ネイティブコードによるほとんどのiEEGデータフォーマット(EDF、MEF3、NWB)の読み込みをサポートしています。 
+またはプラグイン。 BIDS-Matlab-tools EEGLABプラグイン
+また、BIDS-formatted MEGデータのインポートにも対応しています。 EEGLABプラグインマネージャ(メニュー項目)からプラグインをインストールできます <span style="color: brown">ファイル > マネージング EEGLABエクステンション</span>). 
+ログイン
+## データのインポート
 
-For example, after installing the MEF3 and BIDS-Matlab-tools plugins, you may import the 
-[ds003708 BIDS dataset](https://nemar.org/dataexplorer/detail?dataset_id=ds003708&processed=0). 
-First, download the data. Second, use menu item <span style="color: brown">File > BIDS Tools > Import BIDS folder to STUDY</span>. 
-Leave all defaults and press OK (you may also select the column of interest for event types). Alternatively, use
-menu item <span style="color: brown">File > Import data > Using EEGLAB functions and plugins > Import MEF3 folder</span> to import the <i>mefd</i> 
-folder located in the <i>ds003708/sub-01/ses-ieeg01/ieeg/</i> folder of the BIDS dataset.
+例えば、MEF3 と BIDS-Matlab-tools プラグインをインストールした後、インポートすることができます。 
+[ds003708 BIDSデータセット](https://nemar.org/dataexplorer/detail?dataset_id=ds003708&processed=0). 
+まず、データをダウンロードします。 第二に、メニュー項目を使用する <span style="color: brown">ファイル > BIDSツール > BIDSフォルダをSTUDYにインポートする</span>. 
+すべてのデフォルトを残してOKを押します(イベントタイプの関心の列を選択することもできます)。 代わりに、使用
+メニュー項目 <span style="color: brown">ファイル > インポートデータ > EEGLABの機能とプラグインの使用 > インポートMEF3フォルダ</span> インポートする <i>メフッド</i> 
+フォルダにある <i>ds003708/sub-01/ses-ieeg01/ieeg/</i> BIDSデータセットのフォルダ。
 
-When importing with BIDS, the advantage is that, along with the data, you will likely have access to the iEEG electrode locations and relevant events. We show below the raw sEEG data for the unique subject in the BIDS dataset <i>ds003708</i>.
+BIDSにインポートすると、その利点は、データとともに、iEEGの電極の場所や関連イベントへのアクセス権を持つことになります。 BIDSデータセットのユニークな被写体については、生のSEEGデータの下に示します。 <i>ds003708</i>.
 
-![Screen Shot 2022-09-09 at 3 16 34 PM](https://user-images.githubusercontent.com/1872705/189453192-66169ca9-174b-419c-ba7b-2bada4cbda91.png)
+![スクリーンショット 2022-09-09 に 3 16 34 午後](https://user-images.githubusercontent.com/1872705/189453192-66169ca9-174b-419c-ba7b-2bada4cbda91.png)
 
-The channel locations for the same dataset are shown below.
+同じデータセットのチャネルの場所は以下に示します。
 
-![Screen Shot 2022-09-09 at 3 16 56 PM](https://user-images.githubusercontent.com/1872705/189453262-e942a285-b19f-455e-aad0-b38bbc62d0dd.png)
+![スクリーンショット 2022-09-09-09 に 3 16 56 PM](https://user-images.githubusercontent.com/1872705/189453262-e942a285-b19f-455e-aad0-b38bbc62d0dd.png)
 
-Even if you are not planning to use EEGLAB to process iEEG data, importing your iEEG data into EEGLAB and resaving it into an EEGLAB dataset may be useful for processing it in other software.
+iEEGデータを処理するためにEEGLABを使用していない場合でも、iEEGデータをEEGLABにインポートし、EEGLABデータセットに再保存しても、他のソフトウェアで処理するのに便利です。
 
-## Importing spike information
+## スパイク情報のインポート
 
-EEGLAB allows importing spikes as events when using the NWB (Neurodata Without Border). Below, we show an example using the file [sub-01_ses-20140828T132700_ecephys+image.nwb](https://api.dandiarchive.org/api/assets/94ba06fc-c870-4698-9c31-f403ee733887/download/) of this [DandiSet](https://dandiarchive.org/dandiset/000576/). After downloading the file, and after installing the NWB-io EEGLAB plugins (menu item <span style="color: brown">File > EEGLAB extensions</span> then install the NWB-io plugin). After installing the plugin, import the file above in EEGLAB using menu item <span style="color: brown">File > Import data > Using EEGLAB functions and plugins > From NWB file</span>. Make sure to check the checkbox to import spike latencies.
+EEGLABでは、NWB(Neurodata without Border)を使用したイベントとして、スパイクをインポートすることができます。 以下はファイルを使った例を示します。 [サブ-01_ses-20140828T132700_ecephys+image.nwb](https://api.dandiarchive.org/api/assets/94ba06fc-c870-4698-9c31-f403ee733887/download/) お問い合わせ [ダンディセット](https://dandiarchive.org/dandiset/000576/)お問い合わせ ファイルをダウンロードした後、NWB-io EEGLABプラグインをインストールした後(メニュー項目) <span style="color: brown">ファイル > EEGLABエクステンション</span> 次に、NWB-ioプラグインをインストールします。 プラグインをインストールした後、メニュー項目を使用して、EEGLAB の上のファイルをインポートします。 <span style="color: brown">ファイル > インポートデータ > EEGLABの機能とプラグインの使用 > NWBファイルから</span>お問い合わせ チェックボックスをチェックしてスパイクのレイテンシーをインポートしてください。
 
-![Screenshot 2024-04-17 at 10 00 59 AM](https://github.com/sccn/sccn.github.io/assets/1872705/88a21917-0b8e-4f1d-a6fa-cae1297994d2)
+![Screenshot 2024-04-17 に 10 00 59 午前](https://github.com/sccn/sccn.github.io/assets/1872705/88a21917-0b8e-4f1d-a6fa-cae1297994d2)
 
-Once the file has been imported, use menu item <span style="color: brown">Plot > Channel data (scroll)</span>
+ファイルがインポートされたら、メニュー項目を使用する <span style="color: brown">パロット > チャネルデータ(スクロール)</span>
 
-![Screenshot 2024-04-17 at 10 02 28 AM](https://github.com/sccn/sccn.github.io/assets/1872705/d8ddf709-7963-4f05-adef-8bf4049cc484)
+![Screenshot 2024-04-17 に 10 02 28 午前](https://github.com/sccn/sccn.github.io/assets/1872705/d8ddf709-7963-4f05-adef-8bf4049cc484)
 
-We can then extract data epochs and plot ERPs. For example, to extract data epochs based on the spike of unit #1, use menu item <span style="color: brown">Tools > Extract epochs</span> and select events corresponding to the first unit as shown below.
+データエポックを抽出し、ERPをプロットすることができます。 例えば、ユニット#1のスパイクに基づいてデータを抽出するには、メニュー項目を使用する <span style="color: brown">ツール > エキスのエポック</span> 以下に示すように、最初のユニットに対応するイベントを選択します。
 
-![Screenshot 2024-04-17 at 11 45 31 AM](https://github.com/sccn/sccn.github.io/assets/1872705/c9b4082c-33c3-4f75-8d0a-522e852a7009)
+![スクリーンショット 2024-04-17 に 11 45 31](https://github.com/sccn/sccn.github.io/assets/1872705/c9b4082c-33c3-4f75-8d0a-522e852a7009)
 
-You can then use menu item <span style="color: brown">Plot > Channel ERPs > with scalp maps</span> to plot the ERP of the two channels recorded in this dataset.
+メニュー項目を使う <span style="color: brown">Plot > チャンネルERP > 頭皮マップ付き</span> このデータセットで記録された2つのチャンネルのERPをプロットする。
 
-![Screenshot 2024-04-17 at 11 48 32 AM](https://github.com/sccn/sccn.github.io/assets/1872705/a863a7d3-cf51-4e38-b615-44ebc575bd50)
+![スクリーンショット 2024-04-17 に 11 48 32](https://github.com/sccn/sccn.github.io/assets/1872705/a863a7d3-cf51-4e38-b615-44ebc575bd50)
 
-## Additional ressources
+## 追加リソース
 
-Other relevant resources for processing iEEG data:
-- [FieldTrip sEEG tutorial](https://www.fieldtriptoolbox.org/tutorial/human_ecog/)
-- [MIA](http://www.neurotrack.fr/mia/) toolbox. Also accessible as a Brainstorm plugin.
-- [RAVE](https://rave.wiki/) toolbox (R language).
+iEEGデータを処理するためのその他の関連リソース:
+- [FieldTrip sEEGチュートリアル](https://www.fieldtriptoolbox.org/tutorial/human_ecog/)
+- [マニア](http://www.neurotrack.fr/mia/) ツールボックス。 また、Brainstormプラグインとしてアクセス可能です。
+- [ログイン](https://rave.wiki/) ツールボックス(R言語)

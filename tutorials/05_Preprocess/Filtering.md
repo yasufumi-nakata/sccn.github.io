@@ -6,93 +6,93 @@ categories: preproc
 parent: 5. Preprocess data
 grand_parent: Tutorials
 ---
-# Introduction
-Below a graphical explanation of the meaning of cutoff frequencies, pass band, stop band, as well as transition bands.
-![image](https://user-images.githubusercontent.com/10362238/118734865-23797e00-b7f4-11eb-9eec-f52ffcba0585.png)
+# 導入事例
+カットオフ周波数、パスバンド、ストップバンド、トランジションバンドの意味のグラフィカルな説明の下。
+![サイトマップ](https://user-images.githubusercontent.com/10362238/118734865-23797e00-b7f4-11eb-9eec-f52ffcba0585.png)
 
-In the default Windowed Sync filter, we have given some reasonable start values there for the filter order: 2 * cutoff freq for highpass and bandpass (for cutoff < 2Hz). 20 to 40% of cutoff freq for lowpass and 1 to 5 Hz for line noise bandstop. The basic rule is to have the transition band as wide (roll-off soft) as possible to avoid artifacts but separated from the signal of interest.
+デフォルトでは、Windowed Sync フィルターでは、フィルタ オーダーの合理的な開始値が2つあります。ハイパスとバンドパスのカットオフfreq(カットオフ<2Hz)。 20〜40%のカットオフ周波数は、ローパスとラインノイズバンドストップのための1〜5Hzです。 基本ルールは、アーティファクトを避けながら、利益の信号から分離するために、ワイド(ロールオフソフト)としてトランジションバンドを持つことです。
 
-Filtering the data
+データのフィルタリング
 =======
-To remove linear trends, it is often desirable to high-pass filter the
-data. High-pass filtering the data at 1 Hz is also recommended to obtain good quality ICA decompositions ([Klug & Gramann,
-2020](https://onlinelibrary.wiley.com/doi/full/10.1111/ejn.14992)). Low-pass filtering high-frequency noise is also sometimes necessary.
+線形傾向を取除くために、それは頻繁に高パス フィルターに望ましいです
+データ。 1Hzでデータをフィルタリングするハイパスは、高品質のICA分解([Klug&Gramann])を得るためにも推奨されます。
+2020](https://onlinelibrary.wiley.com/doi/full/10.1111/ejn.14992)。 高周波数ノイズをフィルタリングするローパスも時々必要です。
 
-Load the sample EEGLAB dataset
+サンプル EEGLAB データセットをロードする
 -------------------
 
-Select menu item <span style="color: brown">File</span> and press sub-menu item
-<span style="color: brown">Load existing dataset</span>. Select the tutorial file "eeglab_data.set" which is distributed with
-the toolbox, located in the "sample_data" folder of EEGLAB. Then press *Open*.
+メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
+<span style="color: brown">既存のデータセットをロードする</span>お問い合わせ 配布されているチュートリアルファイル「eeglab_data.set」を選択します。
+EEGLABの「sample_data」フォルダにあるツールボックス。 それから *Open*を押して下さい。
 
-![Image:Pop_loadset.png](/assets/images/Pop_loadset.png)
+![画像:Pop_loadset.png](/assets/images/Pop_loadset.png)
 
-Removing linear trends
+リニアトレンドの除去
 -------------------
 
-We recommend filtering continuous EEG data before epoching or
-artifact removal, although epoched data can also be filtered with this
-function (each epoch being filtered separately). Filtering the
-continuous data minimizes the introduction of filtering artifacts at
-epoch boundaries.
+epochingの前に連続的なEEGデータをろ過することを推薦しますまたは
+epochedデータがこのとまたろ過することができるがアーティファクトの取り外し、
+関数(フィルタリングされる各epoch)。 フィルタリング
+連続データにより、アーティファクトのフィルタリング導入を最小限に
+エポックの境界線。
 
-Select <span style="color: brown">Tools → Filter the data → Basic FIR filter (new, default)</span>, enter *1* (Hz) as the *Lower edge* frequency,
-and press *Ok*.
+選択する <span style="color: brown">ツール → データのフィルタ → 基本的な FIR フィルター (新しい、デフォルト)</span>*Lowerの端*の頻度として*1* (Hz)を書き入れて下さい、
+*Ok*を押します。
 
-Note that the EEGLAB legacy filter is no longer recommended but maintained for backward compatibility purposes only ([Widmann & Schröger, 2012](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3391960/)).
+EEGLABのレガシーフィルタは推奨されるものではなく、後方互換性の目的のためにのみ維持されていることに注意してください()[Widmann & Schröger(ウィドマン&シュロガー)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3391960/)).
 
 ![](/assets/images/Pop_eegfiltnew_1hz.jpg)
 
-A window will pop up to ask for the name of
-the new dataset. We choose to modify the dataset name and to overwrite
-the parent dataset by checking the *Overwrite parent* checkbox, then
-pressing the *Ok* button.
+ウィンドウがポップアップして、名前を尋ねます
+新しいデータセット。 データセット名を変更し、上書きする
+*Overwrite親*チェックボックスをチェックして、親データセットを
+*Ok*ボタンを押します。
 
-Note that if high-pass and low-pass cutoff frequencies are BOTH
-selected, low-pass and high-pass parts will have the same slopes. Frequently, the low-pass slope is therefore steeper than necessary. To avoid this problem,
-we recommend first applying the low-pass filter and then, in a second
-call, the high-pass filter (or vice versa).
+ハイパスとローパスのカットオフの周波数がBOTHの場合に注意してください
+選択されたローパスとハイパスのパーツは、同じスロープを持っています。 頻繁に、ローパスの斜面はそれ故に必要以上に切ります。 この問題を避けるため、
+最初にローパスフィルタを適用し、その後、第二にお勧めします
+コール、ハイパスフィルタ(またはその逆)。
  
-After you filter your data,
-check that the filter has been applied by selecting the 
-<span style="color: brown">Plot → Channel spectra and maps</span> menu item to plot the
-data spectra. You might notice that filtered-out frequency regions
-might show 'ripples', unavoidable but hopefully acceptable filtering
-artifacts. 
+データをフィルタリングした後、
+フィルターが選択によって加えられたことを点検して下さい 
+<span style="color: brown">Plot → チャネルのスペクトラおよび地図</span> メニュー項目をプロットする
+データスペクトル。 フィルタアウト周波数領域に気づくかもしれません
+'ripples'、無効なが、できれば受け入れられるろ過を示すかもしれません
+工芸品。 
 
-Note that removing data portions containing major artifacts (by visual inspection), such as large spikes in the data, before filtering can be preferable since filtering can “spread” the artifact out over “good” data, requiring more data to be rejected after filtering. When you remove major artifacts, a “boundary” event replaces the removed data. Filtering is only applied to continuous data segments, not across boundaries.
+主要なアーティファクト(視覚的な検査による)を含むデータ部分を除去することに注意してください。データの大きなスパイクなど、フィルタリングが「スプレッド」できるので、フィルタリングが好ましいことができます。 メジャーなアーティファクトを削除すると、「境界」イベントが削除されたデータを置き換えます。 フィルタリングは、境界を越えてではなく、連続したデータセグメントにのみ適用されます。
 
-# Filtering for connectivity analysis
+# 接続解析のためのフィルタリング
 
-High pass filtering introduces dependencies in neighboring data samples and is often not recommended for connectivity analysis. In this case, it is usually better to apply piecewise detrending to remove data trends. Piecewise detrending is available in the SIFT EEGLAB plugin, for example.
+高パスフィルタは、隣接するデータサンプルの依存性を導入し、接続解析には推奨されません。 この場合、通常はデータの傾向を除去するために部分的に決定を適用することをお勧めします。 例えば、SIFT EEGLABプラグインでは、Piecewise detrendingが利用可能です。
 
-For causal analysis (assessing if one process causes another), call menu item <span style="color: brown">Tools → Filter the data → Basic FIR filter (legacy)</span> and check the checkbox *Use causal filter*. By default, the EEGLAB legacy filter applies the filter forward and then again backward
-to ensure that phase delays introduced by the filter are nullified. When using a causal filter, the filter is only applied forward, so phase delays might be introduced and not compensated for. However, causal relationships are preserved. 
+原因分析(1つのプロセスが別の原因となる場合の評価)のために、コール メニュー項目 <span style="color: brown">ツール → データのフィルタ → 基本 FIR フィルター (レガシー)</span> チェックボックスをチェックします。 *causal filter* を使用してください。 デフォルトでは、EEGLAB のレガシー フィルターはフィルターを先に適用し、再度後方に戻ります
+フィルターによって導入される段階の遅れがnullifiedであることを保障するため。 管状フィルターを使う場合、フィルターは前方のみ適用されますので、段階の遅れは導入され、償われません。 しかしながら、因果関係は維持されます。 
 
-# Filtering without the signal processing toolbox
+# 信号処理ツールボックスなしでフィルタリング
 
-If the MATLAB
-Signal Processing Toolbox is present, the EEGLAB legacy filter uses the MATLAB routine
-*filtfilt.m*. This applies the filter forward and then again backward
-to ensure that phase delays introduced by the filter are nullified. 
+MATLABの場合
+EEGLABのレガシーフィルタはMATLABルーチンを使用しています。
+*filtfilt.m*。 これは、フィルタを転送し、再び後方に適用します
+フィルターによって導入される段階の遅れがnullifiedであることを保障するため。 
 
-If the MATLAB Signal Processing toolbox is not present, the EEGLAB legacy filter may use a
-simple filtering method involving the inverse Fourier transform. To do this, call the <span style="color: brown">Tools → Filter the data → Basic FIR filter (legacy)</span> menu item and check the checkbox *Use (sharper) FFT linear filter instead of FIR filtering*.
+MATLAB シグナル処理ツールボックスが存在しない場合、EEGLAB のレガシーフィルタは、
+逆のFourierの変形を含む簡単なフィルタリング方法。 これを行うには、 <span style="color: brown">ツール → データのフィルタ → 基本 FIR フィルター (レガシー)</span> メニュー項目は FIR の filtering* の代りにチェックボックス *Use (sharper) FFT の線形フィルターを点検し。
 
-# Non-linear infinite impulse response filter and other filters
+# 非線形無限衝動の応答フィルターおよび他のフィルター
 
-A infinite impulse response (IIR) filter plugin is also distributed
-as a plugin to EEGLAB. Once the [iirfilt](https://github.com/sccn/iirfilt) plugin is installed, it can be
-accessed from the menu item <span style="color: brown">Tools → Filter the data → Short IIR filter </span>. This functionality uses the same
-graphical interface as the FIR filtering option described above.
-Although IIR filters usually introduce different phase delays at
-different frequencies, this is compensated for by applying
-filtering in reverse using MATLAB function *filtfilt.m*. Note that the order of infinite impulse response (IIR) filters cannot be directly compared to the order finite impulse response (FIR) filters due to recursive operation.
+無限衝動応答(IIR)フィルタプラグインも配布
+EEGLABへのプラグインとして。 一度に [エントリー](https://github.com/sccn/iirfilt) プラグインをインストールします。
+メニュー項目からアクセス <span style="color: brown">ツール → データのフィルタ → ショート IIR フィルター </span>お問い合わせ この機能は同じを使用します
+上記のFIRフィルタリングオプションとしてグラフィカルインターフェイス。
+IIR フィルターは通常異なった段階の遅れをで導入しますが
+異なる周波数, これは、適用することによって補償されます
+MATLAB 機能 *filtfilt.m* を使用して逆にろ過します。 無限衝動応答(IIR)フィルタの順序は、再帰的動作によるフィニト衝動応答(FIR)フィルタに直接比較できませんのでご注意ください。
 
-There is much more to be learned about filtering and more filtering options available in MATLAB itself. There is also no ideal filter for EEG data. For example, the impact of high-pass filters on ERP data is currently under discussion. In practice, we suggest you talk to your colleagues about the pros and cons of using different filter solutions. See also our [Q/A filtering page](/others/Firfilt_FAQ.html) including relevant references. For an introduction into definitions and concepts you may also check [Widmann et al., 2015](https://home.uni-leipzig.de/biocog/eprints/widmann_a2015jneuroscimeth250_34.pdf).
+MATLAB自体でフィルタリングとフィルタリングオプションについてもっと学ぶことははるかに多くあります。 EEGデータには理想的なフィルタはありません。 例えば、ERPデータのハイパスフィルタの影響は議論中です。 練習では、異なるフィルタソリューションを使用して、長所と短所について同僚に話することをお勧めします。 お問い合わせ [Q/Aフィルタリングページ](/others/Firfilt_FAQ.html) 関連する参照を含む。 定義やコンセプトの紹介のためにもチェック [Widmann ら., 2015](https://home.uni-leipzig.de/biocog/eprints/widmann_a2015jneuroscimeth250_34.pdf).
 
-# Alternative to filtering for line noise removal
+# ラインノイズ除去のためのフィルタリングの代替
 
-Another common use for bandpass filtering is to remove 50-Hz or 60-Hz line noise -- also known as notch filtering. However, to remove line noise, one may also use the [CleanLine](https://github.com/sccn/cleanline) EEGLAB plugin. This plugin adaptively estimates and removes sinusoidal (e.g., line) noise fusing multi-tapering and a Thompson F-statistic. Note that the version of CleanLine implemented in the PREP pipeline claims to have critical fixes [PREP](https://github.com/VisLab/EEG-Clean-Tools) although this claim has not been verified yet. As shown in the comparison figure below, when this method works (and it does not always work), the result can be spectacular.
+バンドパスのろ過のためのもう一つの共通の使用は50-Hzか60-Hzライン騒音を取除くことです-またノッチのろ過として知られている。 しかし、ラインノイズを除去するためには、 [クリーンライン](https://github.com/sccn/cleanline) EEGLABプラグイン このプラグインは、複数のテーパリングとトンプソンF統計を融合した、シンノイド(例えば、ライン)のノイズを適応させ、除去します。 PreP パイプラインの要求で実装された CleanLine のバージョンが重要な修正を持っていることに注意してください。 [プレス](https://github.com/VisLab/EEG-Clean-Tools) しかし、この主張はまだ検証されていません。 以下の比較図に示すように、このメソッドが動作する(そして必ずしも動作しません)、結果は壮観です。
 
-![Image:cleanline.png](/assets/images/cleanline.png)
+![画像:cleanline.png](/assets/images/cleanline.png)

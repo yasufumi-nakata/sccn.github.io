@@ -5,41 +5,41 @@ long_title: e. ICA components
 parent: 8. Plot data
 grand_parent: Tutorials
 ---
-Plotting ICA components
+ICAコンポーネントのプロット
 ================================
-{: .no_toc }
+お問い合わせ
 
-We use ICA to remove/subtract [artifacts](/tutorials/06_RejectArtifacts/RunICA.html). ICA may also be used to find brain sources. In this section of the tutorial, we will assess which components contribute the most to the data.
+ICA は ICA を 取除く/引き込みに使用します [アーティファクト](/tutorials/06_RejectArtifacts/RunICA.html)お問い合わせ ICAは脳情報源を見つけるためにも使用することができます。 チュートリアルのこのセクションでは、どのコンポーネントがデータに最も貢献しているかを評価します。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
 
-Component spectra contribution
+コンポーネントのスペクトルの貢献
 -----------------------------------
 
-We use here the tutorial dataset as it was after extracting data epochs. Select the <span style="color: brown">File → load existing dataset</span> menu item and select the tutorial file "eeglab_data_epochs_ica.set" located in the "sample_data" folder of EEGLAB. Then press *Open*.
+データエポックを抽出した後、チュートリアルデータセットをここで使用します。 選択する <span style="color: brown">ファイル → 既存のデータセットを読み込む</span> メニュー項目を選択し、EEGLABの「sample_data」フォルダにあるチュートリアルファイル「eeglab_data_epochs_ica.set」を選択します。 それから *Open*を押して下さい。
 
-![Image:Pop_loadset2.png](/assets/images/Pop_loadset2.png)
+![画像:Pop_loadset2.png](/assets/images/Pop_loadset2.png)
 
-It is of interest to see which components contribute most strongly to
-which frequencies in the data. To do so, select <span style="color: brown">Plot → Component spectra and maps</span>. 
-This calls the [pop_spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) function.
+どのコンポーネントが最も強く貢献しているかを見るのは関心です
+データの頻度。 お問い合わせ <span style="color: brown">Plot → コンポーネントのスペクトラとマップ</span>. 
+これは呼び出します [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) 機能。
 
-The first input is the epoch time range to
-consider. The fourth input is the percentage of the data to sample at random
-(smaller percentages speeding the computation, larger percentages being
-more definitive). Since our EEG dataset is fairly small, we choose to
-change this value to *100* (= all of the data). We will then visualize
-which components contribute the most at 10 Hz, entering *10* in the
-*Scalp map frequency* text box. We want to scan all components, so use the
-default in *Components to consider*. Press *Ok*.
+最初の入力はエポック時間の範囲です
+お問い合わせ 4つ目の入力は、ランダムでサンプルするデータの割合です
+(計算速度が小さく、割合が大きい)
+より明確な)。 EEGデータセットがかなり小さいので、
+*100*(=すべてのデータ)にこの値を変更します。 それから視覚化します
+どのコンポーネントが10Hzで最も貢献し、*10*を入る
+*スカルプマップ周波数*テキストボックス。 すべてのコンポーネントをスキャンしたいので、
+デフォルトは *Components で検討します*。 プレス *Ok*.
 
 
 
@@ -47,52 +47,52 @@ default in *Components to consider*. Press *Ok*.
 
 
 
-The [spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) window (below) appears.
+ふりがな [スペックトップm](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) ウィンドウ (below) が表示されます。
 
 
 ![](/assets/images/Spectopocomps.gif)
 
 
 
-In the previous window, we plotted the spectra of each component.
+前のウィンドウでは、各コンポーネントのスペクトルをプロットしました。
  
-A more
-accurate strategy is to plot the data signal
-minus the component activity and estimate the decrease in power in
-comparison to the original signal at one channel - it is also possible to
-do this for all channels, but it requires to compute the spectrum of the
-projection of each component at each channel which is computationally
-intensive. 
+もっと詳しく
+正確な戦略は、データ信号をプロットすることです
+コンポーネントのアクティビティをマイナスし、パワーの減少を推定
+1つのチャネルで元の信号と比較して-それはまた可能です
+すべてのチャンネルでこれを行いますが、スペクトルを計算する必要があります
+各チャネルで各コンポーネントのプロジェクションを計算する
+インテンシブ。 
 
-To do so, go back to the previous interactive window:
- - Choose explicitly to plot component's contribution at channel *27* (POz) where
-power appears to be maximum at *10* Hz using the *Electrode number to
-analyze ...:* field, 
-- Uncheck the checkbox *\[checked\] compute component
-spectra...*. 
-- Set percent to *100* as before.
-- Display *6*
-component maps instead of 5 (default) (note that all component spectra
-will be shown) 
-- Set the maximum frequency to be plotted at
-*30* Hz using the *Plotting frequency range* option in the bottom panel
-(below). 
-- Press *Ok* when done.
+そのためには、以前のインタラクティブウィンドウに戻ります。
+ - チャンネル*27*(POz)でコンポーネントの貢献をプロットするために明示的に選択します。
+*10*で最大出力が表示される *電極番号を使用してHz
+分析...:*分野、 
+- checkbox *\[checked\] コンポーネントのチェックを外す
+スペック...*. 
+- ※100*まで設定してください。
+- ディスプレイ *6*
+5(デフォルト)の代わりにコンポーネントマップ (すべてのコンポーネントのspectraを参照)
+詳細はこちら) 
+- 描画される最大周波数を設定します
+*30* Hzは底パネルの*Plotting頻度範囲*の選択を使用して
+(下). 
+- *Ok*を押してください。
 
 
 ![](/assets/images/Channelspectraedit1.gif)
 
 
 
-The [spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) figure appears (as below).
+ふりがな [スペックトップm](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) 図は(以下)表示されます。
 
 
 ![](/assets/images/I102spectopo.jpg)
-x
+ツイート
 
 
 
-The following text is displayed on the MATLAB command line:
+MATLABコマンドラインで次のテキストが表示されます。
 
 ```matlab
     Component 1 percent variance accounted for: 3.07
@@ -109,50 +109,50 @@ The following text is displayed on the MATLAB command line:
     ....
 ```
 
-*"Percent variance accounted for"* (pvaf) compares the variance of the data
-*minus* the (back-projected) component to the variance of the whole data.
-Thus, if one component accounts for all the data, the data minus the
-component back-projection will be 0, and pvaf will be 100%.
-If the component has zero variance, it accounts for none of the data, and pvaf =
+*「Percent variance 」*(pvaf) はデータの分散を比較します
+*minus* は、全データの分散に対する (バックプロジェクト) コンポーネントです。
+したがって、すべてのデータに対して 1 つのコンポーネントのアカウントがある場合、データがマイナスされます。
+コンポーネントのバックプロジェクションは0で、pvafは100%になります。
+コンポーネントがゼロヴァリアンスを持っている場合、データなしのアカウント、pvaf =
 0%. 
-Pvaf may be larger than 100% (meaning: "If you remove this
-component, spectral power actually get larger, not smaller!"). 
-According to
-the variance accounted for output above, component 10 accounts for more
-than 50% of power at 10 Hz for channel POz. Note: A channel number has
-to be entered or component contributions will not be computed.
+Pvaf は 100% より大きいかもしれません(意味: 「これを取除ければ
+コンポーネント、スペクトル出力は、実際には大きくなり、小さくなります!) 
+に従って
+上記出力に占める分散、コンポーネント10アカウント以上
+チャネルのPOZのための10のHzの力の50%以上。 注意: チャンネル番号は
+ご入力いただくか、コンポーネントのコントリビューションを計算しません。
 
-Component ERP contributions
+コンポーネントERPの貢献
 ------------------------------------
-After seeing which components contribute to frequency bands of interest,
-it is interesting to look at which components contribute the most to the
-ERP.
+どのコンポーネントが利益の周波数帯に貢献しているかを見た後、
+どのコンポーネントが最も貢献しているかを見ることは興味深いです
+お問い合わせ
  
-The first step is to visualize component ERPs. To Plot component ERPs,
-select <span style="color: brown">Plot → Component ERPs → In rectangular array</span>, which calls the [pop_plotdata.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_plotdata.m) function. Then
-press *Ok*.
+最初のステップはコンポーネントERPを視覚化することです。 PlotコンポーネントERPに、
+選択する <span style="color: brown">Plot → コンポーネントERP → 長方形配列</span>, 呼び出し [pop_plotdata.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_plotdata.m) 機能。 それから
+プレス *Ok*.
 
 ![](/assets/images/Rectarrayedit.gif)
 
-The [pop_plotdata.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_plotdata.m) window below pops up, showing the average ERP
-for all 31 components.
+ふりがな [pop_plotdata.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_plotdata.m) ポップアップするウィンドウ, 平均ERPを示す
+すべての31コンポーネント。
 
 ![](/assets/images/I103pop_plotdata.jpg)
 
-Click on the component-1 trace (above) to plot this trace in a new window
-(as below).
+このトレースを新しいウィンドウにプロットするために、コンポーネント1トレースをクリックします。
+(以下)
 
 
 ![](/assets/images/I103single_plotdata.jpg)
 
-To plot the contribution of component ERPs to the data ERP, select
-<span style="color: brown">Plot → Component ERPs → with component maps</span>,
-which calls the [pop_envtopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) function. 
-Simply press *Ok* to plot the 7
-components that contribute the most to the dataset's average ERP.
-Note that artifactual components can be subtracted from the data before
-plotting the ERP using the *Indices of components to subtract ...* edit
-box. Press *Ok*.
+データERPへのコンポーネントERPの貢献をプロットするには、選択します
+<span style="color: brown">Plot → Component ERPs → コンポーネントマップ</span>,
+コールする [ポップ ミュージック](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) 機能。 
+プレス *7をプロットするOk*
+データセットの平均ERPに最も貢献するコンポーネント。
+実際のコンポーネントは、以前のデータからサブトラクトすることができます。
+コンポーネントの *Indices を使用して ERP をプロットしてサブトラクトする...* 編集
+ボックス。 プレス *Ok*.
 
 
 ![475](/assets/images/Pop_envtopo.gif)
@@ -160,26 +160,26 @@ box. Press *Ok*.
 
 
 
-In the [pop_envtopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) plot (below), the thick black line
-indicates the data envelope (i.e., minimum and maximum of all channels at
-every time point), and the colored show the component ERPs.
+お問い合わせ [ポップ ミュージック](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) プロット(下)、厚い黒線
+データ封筒(つまり、すべてのチャネルの最小値と最大値)を示します。
+毎回ポイント)、そして着色されたショーは部品ERPを示します。
 
 
 ![375](/assets/images/Envtopo.gif)
 
 
 
-The picture above looks messy, so again call the [pop_envtopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) 
-window and zoom in on time range from *200* ms to *500* ms
-post-stimulus, as indicated below.
+上の写真はメッシーに見えるので、再び呼び出します [ポップ ミュージック](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) 
+*200* msから*500* msまでの時間範囲の窓そしてズームレンズ
+以下に示すようにポスト刺激。
 
 
 ![475](/assets/images/Pop_envtopo2.gif)
 
 
 
-We can see (below) that near 400 ms component 1 contributes most
-strongly to the ERP.
+400 ms コンポーネント 1 近くが最も貢献する (below) を見ることができます。
+ERPに強くなります。
 
 
 ![375](/assets/images/Envtopo2.gif)
@@ -187,8 +187,8 @@ strongly to the ERP.
 
 
 
-On the command line, the function also returns the percent variance
-accounted for by each component:
+コマンドラインでは、関数はパーセントの分散を返します。
+各コンポーネントのアカウント
 
     IC4 pvaf: 31.10%
     IC2 pvaf: 25.02%
@@ -197,122 +197,122 @@ accounted for by each component:
 
 
 
-Component ERP-image
+コンポーネント ERP-image
 ----------------------------
 
-To plot ERP-image figures for component activations, select
-<span style="color: brown">Plot → Component ERP image</span> 
-(calling the [pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) function). 
+コンポーネントの活性化のためのERP-image図をプロットするには、選択します
+<span style="color: brown">Plot → コンポーネントERPイメージ</span> 
+(電話) [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) 関数)。 
 
-This function works the same as the one we used
-for plotting channel ERP images, but instead of visualizing activity at
-one electrode, the function here plots the activation of one component.
+この関数は、私たちが使用したものと同じ機能です。
+チャンネルERPイメージをプロットするだけでなく、アクティビティを視覚化する代わりに
+1つの電極は、ここに1つのコンポーネントの活性化をプロットする機能です。
 
-Copy the parameters in the interactive window to sort trials
-by phase at 10 Hz and 0 ms, to image reaction time, power and
-Inter-Trial Coherence (see the channel [ERP image tutorial](/tutorials/08_Plot_data/Plotting_ERP_images.html) for more
-information).
+インタラクティブウィンドウ内のパラメータをコピーして試用をソートします
+10のHzおよび0のmsの段階によって、イメージの反作用の時間、力および
+Inter-Trial Coherence (チャンネル参照) [ERPイメージチュートリアル](/tutorials/08_Plot_data/Plotting_ERP_images.html) 詳しくはこちら
+インフォメーション
 
 ![](/assets/images/Componenterpedit.gif)
 
 
-For component 6 shown below, we observe in the [pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) figure
-that phase at the analysis frequency (9Hz to 11Hz) is evenly distributed
-in the time window -300 to 0 ms (as indicated by the bottom trace
-showing the inter-trial coherence (ITC) or phase-locking factor). 
-This
-component accounts for much of the EEG power at 10 Hz, but for little if
-any of the average ERP.
- Overall, the mean power at the analysis frequency
-does not change much across time (middle blue trace), and the phase at the
-analysis frequency is not reset by the stimulus (bottom blue trace).
-Here again, the blue-shaded regions indicate non-significant regions.
+以下に示すコンポーネント6については、 [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) プロフィール
+解析周波数(9Hz〜11Hz)でのフェーズが均等に分散
+時ウィンドウ -300 への 0 ms (底の跡によって示されるように)
+相互trialコヒーレンス(ITC)またはフェーズロック因子を示す。 
+お問い合わせ
+10 Hz の EEG パワーの多くのためのコンポーネントのアカウントが、少しなら
+平均ERPのいずれか。
+ 全体的に、分析周波数での平均電力
+時間(中間の青の跡)および段階のまわりで大いに変更しません
+分析の頻度は刺激(底青い跡)によって再調節されません。
+ここに再び、青色に覆われた地域は、非重要な地域を示しています。
 
 ![](/assets/images/I105erpimage.jpg)
 
 
-Note that the scale and polarity information is distributed in the ICA
-decomposition (*not* lost!) between the projection weights (column of
-the inverse weight matrix, *EEG.icawinv*) and rows of the component
-activations matrix (*EEG.icaact*), the absolute amplitude and polarity
-of component activations are meaningless and the activations have no
-unit of measure (though they are *proportional to* microvolt). 
-To recover the absolute value and polarity of activity accounted for by one
-or more components at a given channel, image the back-projection of the
-component activation(s) at that channel:
-- Go back to the previous ERP-image window
-- Use the same parameters 
-- Set *Project to channel \#* to 27
+ICAでスケールと極性情報が配布されていることに注意してください。
+投影重量間の分解(*not*失われた!)(のコラム)
+逆の重量のマトリックス、*EEG.icawinv*)および部品の列
+活発化のマトリックス(*EEG.icaact*)、絶対広さおよび極性
+コンポーネントのアクティベーションが無意味であり、アクティベーションは無意味です。
+測定単位(ただし、*proportional to* microvolt)。 
+1つに占める活動の絶対値と極性を回復するため
+与えられたチャネルでまたはより多くのコンポーネントは、バックプロジェクションをイメージします
+そのチャネルでコンポーネントの活性化:
+- 前のERP-imageウィンドウに戻る
+- 同じパラメータを使用する 
+- *プロジェクトをチャンネル\#*から27に設定する
 
-Note that the ERP is reversed in polarity and that the
-power's unit has changed.
+ERPが極性で逆転していることに注意してください
+パワーユニットが変更されました。
 
 ![](/assets/images/I105erpimage2.jpg)
 
-In the next section, we show how to use EEGLAB to perform and visualize
-time/frequency decompositions of independent
-component activations.
+次のセクションでは、EEGLABが実行して視覚化する方法を紹介します。
+独立した時間/頻度分解
+コンポーネントの活性化。
 
-Component time/frequency transforms
+コンポーネント時間/周波数変換
 -----------------------------------------------
 
-It is potentially more interesting to look at time-frequency decompositions of component activations than at time-frequency decompositions of channel activities since some independent components may directly index one brain EEG source activity, whereas channel activities sum potentials volume-conducted different parts of the brain.
+いくつかの独立したコンポーネントは直接1頭脳EEGのソース活動にインデックスを付ける可能性があるので、チャネル活動の周波数分解よりも、コンポーネントの有効化の時間の頻度分解を調べることは、チャネル活動は、脳のボリューム汚染された異なる部分を要約します。
 
-To plot a component time-frequency transform, we select <span style="color: brown">Plot → Component time-frequency</span> 
-(calling the [pop_newtimef.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) function) then:
-- Enter *1* for the *Component number* to plot
-- And *.05* for the *Bootstrap significance level* and check the *FDR correct* checkbox to  correct for multiple comparisons using the False Discovery Rate method 
-- Again, we press *Ok*
+コンポーネントの時間周波数変換をプロットするには、 <span style="color: brown">Plot → コンポーネントの時間頻度</span> 
+(電話) [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) 関数) それから:
+- *コンポーネント番号* に *1* を入力してください
+- *Bootstrapの重要なレベル*の*.05*およびFalse Discovery率方法を使用して複数の比較のために正しい*のチェックボックスを点検して下さい 
+- 再び、私達は*Ok*を押します
 
-Note: [pop_newtimef.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) decompositions using FFTs allow
-computation of lower frequencies than wavelets since they compute as
-low as one cycle per window, whereas the wavelet method uses a fixed
-number of cycles (default 3) for each frequency.
+注意: [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) FFTを用いた分解が可能
+波形よりも低い周波数の計算。
+窓ごとの1つの周期として低い、波紋方法が固定を使用するように
+各周波数のサイクル数(デフォルト3)。
 
 
 ![](/assets/images/newtimef_comp1.png)
 
-The following [pop_newtimef.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) window appears. 
+以下について [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) ウィンドウが表示されます。 
 
 ![](/assets/images/newtimef_comp2.png)
 
-The ITC image (*lower
-panel*) shows no significant effect. The ERSP image
-(*upper panel*) shows that the 4 to 6Hz and 
-12 to 18Hz power increase, and then later 4 to 6Hz power increase. 
+ITCイメージ(*より低い)
+パネル*)は重要な効果を示しません。 ERSPイメージ
+(*upper Panel*)は4から6Hzおよび 
+12〜18Hzの電力増加、その後4〜6Hzの電力増加。 
 
-Component head plots
+コンポーネントヘッドプロット
 ---------------
-When using [ICA to remove/subtract artifacts](/tutorials/06_RejectArtifacts/RunICA.html), we have plotted 2-D component scalp maps with menu item <span style="color: brown">Plot → Component maps → In 2-D</span>.
+使用時 [ICAがアーティファクトを削除/抽出する](/tutorials/06_RejectArtifacts/RunICA.html)2Dコンポーネントのスカルプマップをメニュー項目にプロットしました。 <span style="color: brown">Plot → コンポーネントマップ → 2Dで</span>.
 
-Using EEGLAB, you may also plot a 3-D head plot of a component
-topography by selecting <span style="color: brown">Plot → Component maps → In
-3-D</span>. This calls the [pop_headplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m) function. The function may
-automatically use the spline file you have generated when plotting ERP
-3-D scalp maps. Select components *1, 2, 3, 4, 5* (below), set the *heaplot options* to " 'view', [0 90] " and press *Ok*.
+EEGLABを使うと、コンポーネントの3Dヘッドプロットをプロットすることもできます。
+選択によるトポグラフィ <span style="color: brown">Plot → コンポーネントマップ → In
+3次元</span>お問い合わせ これは呼び出します [pop_headplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m) 機能。 関数は
+ERPをプロットするときに生成したスプラインファイルを自動的に使用
+3-Dスカルプマップ コンポーネントを選択 *1,2,3,4,5,4,5,4,5,3,4,5,4,5,4,5,3,4,5,3,4,5,3,4,5,3,4,5,3,4,5,3,4,4,5,4,4,5,4,4,4,5,4,4,4,4,5,4,4,4,4,4,5,4,4,4,5,4,4,4,4,5,4,4,4,4,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,4,4,4,4,4,4,4,4,3,4,4,4,4,4,4,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,
 
 
 ![](/assets/images/3Dcomponentedit.gif)
 
 
-The [pop_headplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m) window below appears. You may use the
-MATLAB rotate 3-D option to rotate these headplots. Else,
-enter a different *view* angle in the window above.
+ふりがな [pop_headplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m) 下のウィンドウが表示されます。 ご使用の際には
+MATLABは3Dオプションを回転させ、ヘッドプロットを回転させます。 エルス,
+上記ウィンドウに異なる *view* 角度を入力します。
 
 
 ![](/assets/images/93ICA_3D.jpg)
 
-For more information on this interface and how to perform
-coregistration between electrodes and head models, see the [Plotting ERP Data in
-3-D](/tutorials/08_Plot_data/Data_Averaging.html).
+このインターフェイスおよび実行方法の詳細については、
+電極とヘッドモデル間のコアギストレーションは、[ERPデータのプロット]を参照してください。
+3-D](/tutorials/08_Plot_data/Data_Averaging.html)。
 
-Next steps
+次のステップ
 ----------------------------------
 
-This tutorial only gives a rough idea of the utility of EEGLAB for processing single-trial and averaged EEG or other electrophysiological data. The analyses of the sample dataset(s) presented here are by no way definitive. One should carefully examine each independent component's activity and scalp map noting its dynamics and its relationship to behavior and other component activities to begin to understand its role and possible biological function.
+このチュートリアルでは、単一の致命的および平均的なEEGまたは他の電気生理学的データを処理するためのEEGLABのユーティリティのラフなアイデアのみを提供します。 ここで提示されたサンプルデータセットの分析は、決定的な方法はありません。 一つは、各独立したコンポーネントのアクティビティとスキャルプマップを慎重に調べるべきであり、その動体とその行動と他のコンポーネント活動との関係を指摘して、その役割と可能な生物学的機能を理解し始めるべきです。
 
-Further questions may be more important: How are the activations of
-pairs of maximally independent components inter-related? How do their
-relationships evolve across time or change across conditions? Are
-independent components of different subjects related, and if so, how? EEGLAB group analysis tools a suitable environment for exploring these and other questions
-about brain dynamics, both for [single-subject](/tutorials/10_Group_analysis/study_statistics.html#single-subject-statistics) and for [groups of subjects](/tutorials/10_Group_analysis/).
+さらなる質問はより重要であるかもしれません: アクティベーションの方法は?
+主に独立したコンポーネントの相互関連のペア? どうすればよいですか?
+関係は、時折進化し、条件全体で変化するのか? お問い合わせ
+関連する異なる被験者の独立したコンポーネント、およびその場合、どのように? EEGLABグループ分析ツールは、これらや他の質問を調べるのに適した環境
+脳の動的について、両方のために [シングルサブジェクト](/tutorials/10_Group_analysis/study_statistics.html#single-subject-statistics) そしてのために [被写体のグループ](/tutorials/10_Group_analysis/).

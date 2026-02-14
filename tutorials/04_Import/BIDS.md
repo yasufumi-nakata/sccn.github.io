@@ -5,59 +5,59 @@ long_title: d. Brain Imaging Data Structure data
 parent: 4. Import data
 grand_parent: Tutorials
 ---
-Importing BIDS data
+BIDSデータのインポート
 ===========================
-{: .no_toc }
-The Brain Imaging Data Structure (BIDS) data standards is a community standard for organizing, describing, and annotating collections of neuro-imaging datasets. A magnetoencephalography (MEG) data extension has been developed and, in 2019, another [electrophysiology](https://github.com/bids-standard/bids-specification/blob/master/src/04-modality-specific-files/03-electroencephalography.md) data extension for EEG and intracranial EEG (iEEG) data. EEGLAB allows importing and exporting EEG data to the BIDS format using the [EEG-BIDS](https://github.com/sccn/bids-matlab-tools/wiki) EEGLAB plugin.
+お問い合わせ
+脳イメージングデータ構造(BIDS)のデータ規格は、神経イメージングデータセットの整理、記述、およびアノテーションのためのコミュニティ規格です。 マグネロエンセファログラフィ(MEG)のデータ拡張が開発され、2019年には、 [電気生理学](https://github.com/bids-standard/bids-specification/blob/master/src/04-modality-specific-files/03-electroencephalography.md) EEGおよび慣性EEG(iEEG)データの拡張子 EEGLAB では、EEG データを BIDS 形式にインポートしてエクスポートすることができます。 [EEG-BIDSについて](https://github.com/sccn/bids-matlab-tools/wiki) EEGLABプラグイン
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Downloading a BIDS dataset
+BIDSデータセットのダウンロード
 ----
 
-On [openneuro.org](https://openneuro.org), search for the term "EEG." OpenNeuro will show all the EEG datasets. The quality of these datasets may vary, as shown in this [2021 article](https://sccn.ucsd.edu/~arno/mypapers/Delorme_BIDS_IEEE_Tools20.pdf). We advise you to download this [specific dataset](https://openneuro.org/datasets/ds002718), as shown below.
+お問い合わせ [openneuro.org(オープンネロ)](https://openneuro.org)「EEG」という用語を検索します。 OpenNeuro は EEG のデータセットをすべて表示します。 これらのデータセットの品質が変化する可能性があります。 [2021 記事](https://sccn.ucsd.edu/~arno/mypapers/Delorme_BIDS_IEEE_Tools20.pdf)お問い合わせ お問い合わせ [特定のデータセット](https://openneuro.org/datasets/ds002718)以下に示すように。
 
 ![](/assets/images/openneuro.png)
 
-To download, create an empty folder on your computer, then press the download button and select this folder. Note that the web download interfaces sometimes fail (depending on the speed of your connection).
+ダウンロードするには、コンピュータに空のフォルダを作成し、ダウンロードボタンを押して、このフォルダを選択します。 Webダウンロードインターフェイスは、時々失敗することに注意してください(接続の速度によって異なります)。
 
-The alternative is either to use command-line programs *openneuro*, *aws*, or *datalad*. We have used the three of them with various degrees of success. *Aws* is somewhat simpler because it only requires one install. *datalad* requires installing other modules such as *git* and *git-annex*. The *openneuro* command is the only one that allows you not only to download  but also upload a dataset back to OpenNeuro, and we recommend using it (uploading a dataset using the OpenNeuro web interface almost always systematically fails).
+代替は、コマンドラインプログラム*openneuro*、*aws*、または*datalad*を使用する方法です。 様々な成功度で3つを使用しました。 ※Aws*は1つのインストールのみが必要なため、若干簡単です。 *datalad* は *git* や *git-annex* などの他のモジュールをインストールする必要があります。 *openneuro* コマンドは、OpenNeuro にデータセットをアップロードするだけでなく、OpenNeuro にデータセットをアップロードできる唯一のコマンドです。(OpenNeuro の Web インターフェイスを使用してデータセットを、ほぼ常に体系的に失敗させる)使用することをお勧めします。
 
-Importing the BIDS dataset as an EEGLAB study
+BIDSデータセットをEEGLAB研究にインポート
 ----
-Start EEGLAB, then install the [bids-matlab-io](https://github.com/sccn/bids-matlab-tools/wiki) EEGLAB plugin from the EEGLAB plugin manager using the <span style="color: brown">File → Manage EEGLAB extensions</span> menu item.
+EEGLABを起動し、インストールします。 [bids-matlab-io - アダルトアフィリエイトプログラム モデル募集 モデルログイン](https://github.com/sccn/bids-matlab-tools/wiki) EEGLAB プラグインマネージャーから EEGLAB プラグインを使用する <span style="color: brown">ファイル → EEGLAB 拡張機能の管理</span> メニュー項目。
 
-The select menu item <span style="color: brown">File → BIDS tools → Import BIDS folder to STUDY</span> and select the BIDS folder you have created. The following window pops up.
+選択メニュー項目 <span style="color: brown">ファイル → BIDS ツール → STUDY に BIDS フォルダーをインポート</span> 作成したBIDSフォルダを選択します。 次のウィンドウがポップアップ表示されます。
 
 ![](/assets/images/pop_importbids2.png)
 
-Raw EEG data files often define channel labels. However, BIDS also defines channel labels and channel locations in dedicated event files. By pressing the second checkbox, users may choose to use the channel label and location information contained in the BIDS channel definition files.
+未加工 EEG のデータファイルは頻繁にチャネルのラベルを定義します。 ただし、BIDSは、専用のイベントファイルでチャネルラベルとチャネルの場所を定義します。 2番目のチェックボックスを押すと、BIDSチャンネル定義ファイルに含まれるチャンネルラベルと位置情報を使用する場合があります。
 
-Raw EEG data file often has events. However, BIDS also define events in dedicated event files. Sometimes the BIDS event files contain more information than the raw EEG data file. In that case, users may choose to overwrite raw EEG data events with the event information contained in the BIDS event files. When BIDS events are selected, you may choose the BIDS event column to import, which may be "value" or "trial_type." To choose which column to import, we recommend you look at one of the BIDS event files. In this case, we select *trial_type*.
+生 EEG のデータファイルには、多くの場合、イベントがあります。 ただし、BIDSはイベント専用ファイルでイベントを定義しています。 BIDSイベントファイルには、生EEGデータファイルよりも多くの情報が含まれています。 この場合、BIDSイベントファイルに含まれているイベント情報を含む未加工EEGデータイベントを上書きすることを選択できます。 BIDSイベントが選択されると、BIDSイベント欄が「値」か「trial_type」になる場合があります。 インポートする列を選択するには、BIDSイベントファイルの1つを見ることをお勧めします。 この場合、*trial_type* を選択します。
 
-Finally, users may select an output folder for storing their EEGLAB STUDY. If a folder is not selected, EEGLAB will store STUDY files ''in place'' which means in the BIDS folder structure - resulting in the BIDS folder becoming non-BIDS compliant and failing to pass BIDS validation because of the additional EEGLAB files.
+最後に、EEGLAB STUDY を格納するための出力フォルダを選択できます。 フォルダが選択されていない場合、EEGLABは、BIDSフォルダ構造で意味するSTUDYファイル "in place"を格納します - 追加のEEGLABファイルのためにBIDSフォルダになり、非BIDS準拠になり、BIDS検証に失敗するようになります。
 
-Press *Ok* when done.
+*Ok*を押してください。
 
-Processing BIDS EEGLAB study
+BIDS EEGLABに関する研究
 ----
-To illustrate that this EEGLAB STUDY is functional, we will simply plot the spectrum since we may do this without pre-processing. Select the <span style="color: brown">Study → Precompute channel measures</span> menu item, and check the *Power spectrum* checkbox, as shown below, then press *Ok*.
+このEEGLAB STUDYは機能的であることを示すために、プリプロセッシングなしでこれを行うことができるため、単にスペクトルをプロットします。 選択する <span style="color: brown">研究 → プレコプトチャネル対策</span> メニュー項目は、以下に示すように、*Power スペクトラム*チェックボックスをチェックし、*Ok*を押します。
 
 ![](/assets/images/bidsprecomp.png)
 
-Then use menu item <span style="color: brown">Study → Plot channel measures</span> and, on the right column, press the *Plot spectra* button. The following plot pops up, showing the spectrum for all subjects.
+メニュー項目を使用する <span style="color: brown">研究 → プロットチャネル対策</span> 右側の列で、*Plot spectra* ボタンを押します。 以下のプロットがポップアップし、すべての対象のスペクトルを表示します。
 
 ![](/assets/images/bidsplot.png)
 
-We can clearly see the alpha peak at about 10 Hz for most subjects (with one subject being an outlier, likely due to the presence of artifacts in his/her data). 
+ほとんどの被験者に対して、アルファピークを10Hz程度で確認することができます。(1人の被験者であり、そのデータにおけるアーティファクトの存在によります)。 
 
-You may follow the [batch processing tutorial](/tutorials/10_Group_analysis/multiple_subject_proccessing_overview.html#perform-batch-processing) to pre-process all datasets simultaneously from the EEGLAB GUI, and perform standard [EEGLAB group analyses](/tutorials/10_Group_analysis/).
+あなたはフォローすることができます [バッチ処理チュートリアル](/tutorials/10_Group_analysis/multiple_subject_proccessing_overview.html#perform-batch-processing) EEGLAB GUI から全てのデータセットを同時に処理し、標準を実行します。 [EEGLABグループ分析](/tutorials/10_Group_analysis/).
 
-You may also look at the [BIDS script processing tutorial](/tutorials/11_Scripting/Analyzing_EEG_data_in_EEGLAB_The_Wakeman-Henson_dataset.html), which processes the same dataset from the MATLAB command line.
+見てみることもできます。 [BIDSスクリプト処理チュートリアル](/tutorials/11_Scripting/Analyzing_EEG_data_in_EEGLAB_The_Wakeman-Henson_dataset.html)MATLABコマンドラインから同じデータセットを処理する。

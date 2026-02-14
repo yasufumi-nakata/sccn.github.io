@@ -6,10 +6,10 @@ parent: Contribute
 grand_parent: Tutorials
 nav_order: 2
 ---
-EEGLAB development philosophy
+EEGLAB開発哲学
 ========================
-{: .no_toc }
+お問い合わせ
 
-In [Mythical Man-Month, The: Essays on Software Engineering](https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959), Fred Brooks, a project manager for IBM in the 1990s, emphasizes how difficult it is to maintain the conceptual integrity of software products. The approach we have implemented in EEGLAB is to have a relatively small core supplemented by plugins/extensions. 
+お問い合わせ [神話的なマン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・マン・](https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959), フレッド・ブルックス, 1990年代のIBMのプロジェクトマネージャー, ソフトウェア製品の概念的な完全性を維持することがいかに困難であるかを強調. EEGLABで実装したアプローチは、プラグイン/拡張機能で補う比較的小さなコアを持つことです。 
 
-The advantage of EEGLAB is that other researchers may develop extensions and plugins on top of this strong core. This makes developing new features organic and unsupervised, well adapted to open-source research software. Researchers also get credit for their own extensions, which motivates them to implement them. Important extensions EEGLAB relies on are the clean_rawdata plugin to automatically clean data (Christian Kothe), ICLabel (Luca Pions Toninachi), FirFilt (Andreas Widmann), SIFT (Tim Mullen), LIMO (Cyril Pernet), etc...
+EEGLABの利点は、他の研究者がこの強力なコアの上に拡張やプラグインを開発する可能性があることです。 これは、オープンソースの研究ソフトウェアに適応し、有機および監視されていない新しい機能を開発します。 研究者も自分の拡張のためにクレジットを取得, それらを実装するためにそれらをやる気. 重要な拡張機能 EEGLAB は、データ(Christian Kothe)、ICLabel(Luca Pions Toninachi)、FirFilt(Andreas Widmann)、SIFT(Tim Mullen)、LIMO(Cyril Pernet)などを自動的にクリーンにする clean_rawdata プラグインです。

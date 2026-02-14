@@ -6,544 +6,544 @@ parent: 10. Group analysis
 grand_parent: Tutorials 
 ---
 
-Clustering ICA components
+ICAコンポーネントのクラスタリング
 ===========================
-{: .no_toc }
+お問い合わせ
 
-This part of the tutorial will demonstrate how to use EEGLAB to
-interactively preprocess, cluster, and then visualize the dynamics of
-ICA (or other linear) signal components across one or many subjects by
-operating on one of the tutorial *STUDY*.
+チュートリアルのこの部分は、EEGLABを使用する方法を実証します
+インタラクティブなプリプロセス、クラスター、そしてそれからのダイナミクスを視覚化して下さい
+ICA(または他の線形)は1つまたは多くの主題を渡る信号の部品を
+チュートリアルの1つで動作する*STUDY*。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Why cluster ICA components?
+なぜクラスターICAコンポーネント?
 -----------------
 
-### Is my Cz your Cz?
+### 私のCzはあなたのCzですか?
 
-To compare electrophysiological results across
-subjects, the usual practice of most researchers has been to identify
-scalp channels (for instance, considering recorded channel Cz in every
-subject's data to be spatially equivalent). Actually, this is an
-idealization, since the spatial relationship of any physical electrode
-site (for instance, Cz, the vertex in the International 10-20 System
-electrode labeling convention) to the underlying cortical areas that
-generate the activities summed by the (Cz) channel may be rather
-different in different subjects, depending on the physical locations,
-extents, and particularly the orientations of the cortical source areas,
-both in relation to the 'active' electrode site (e.g., Cz) and/or to its
-recorded reference channel (for example, the nose, right mastoid, or
-other sites).
+全体の電気生理学的結果を比較する
+被験者、ほとんどの研究者の通常の慣行が特定されている
+scalp チャンネル (たとえば、録画チャンネルを考慮して) すべてのCz
+空間的に等しいデータ)。 実はこれは、
+あらゆる物理的電極の空間関係から理想化
+サイト(例えば、Cz、国際10-20システムにおける頂点)
+電極のラベリング条約)を基底部の角質領域へ
+(Cz) チャネルで要するアクティビティを生成する
+物理的な場所に応じて、異なる被写体で異なる、
+範囲、および特に円錐形の源区域のオリエンテーション、
+'active' 電極サイト(例、Cz)および/またはその両方に関連して
+記録された参照チャネル(例えば、鼻、右マストイド、または
+その他サイト
 
-That is, data recorded from equivalent channel locations (Cz) in
-different subjects may sum the activity of different mixtures of underlying
-cortical EEG sources, no matter how accurately the equivalent electrode
-locations were measured on the scalp. This fact is commonly ignored in
-EEG research.
+つまり、同等チャンネルの場所(Cz)から記録されたデータ
+異なる被験者は、基礎の異なる混合物の活動を要約することができます
+同等電極の精度を正確に問わない
+scalp で位置を測定しました。 この事実は一般的に無視される
+EEGの研究。
 
-### Is my IC your IC?
+### ICはICですか?
 
-Following ICA (or other linear) decomposition,
-however, there is no natural and easy way to identify a component from
-one subject with one (or more) component(s) from another subject. A pair
-of independent components (ICs) from two subjects might resemble and/or
-differ from each other in many ways and to different degrees -- by
-differences in their scalp maps, power spectra, ERPs, ERSPs, ITCs, or
-etc. Thus, there are many possible (distance) measures of similarity
-and many different ways of combining activity measures into a global
-distance measure to estimate component pair similarity.
+ICA(または他の線形)分解の後で、
+しかし、成分を識別するための自然で簡単な方法はありません
+別のサブジェクトから1つの(または複数の)コンポーネントを持つ1つのサブジェクト。 ペア
+2つの被写体から独立したコンポーネント(IC)が似ているか、または
+さまざまな方法で互いに異なるし、異なる程度に --
+自分のスカルプマップ、パワースペクトラ、ERP、ERSP、ITCsの違い、または
+など。 このように、類似性(認知症)対策が多々あります。
+活動がグローバルに及ぼすさまざまな方法
+コンポーネントペアの類似性を推定するための距離測定。
 
-Thus, the problem of identifying equivalent components across subjects
-is non-trivial. EEGLAB contains functions and
-supporting structures for flexibly and efficiently performing and
-evaluating component clustering across subjects and conditions (see [2004](http://sccn.ucsd.edu/papers/PLOS04_animation.html) and [2005](http://sccn.ucsd.edu/papers/OntonTheta05.html)). With its
-supporting data structures and stand-alone *std_* prefix analysis
-functions, EEGLAB makes it possible to summarize results of ICA-based
-analysis across more than one condition from a large number of subjects.
-This makes more routine use of linear decomposition and ICA
-possible to apply to a wide variety of hypothesis testing on datasets
-from several to many subjects.
+したがって、被験者間で同等のコンポーネントを識別する問題
+非trivialです。 EEGLAB には関数と関数が含まれています。
+柔軟かつ効率的なパフォーマンスとパフォーマンスのためのサポート構造
+被験者と条件を横断するコンポーネントのクラスタ評価(参照) [2004](http://sccn.ucsd.edu/papers/PLOS04_animation.html) そして、 [2005](http://sccn.ucsd.edu/papers/OntonTheta05.html))。 お問い合わせ
+データ構造とスタンドアローンの対応 *std_* 接頭辞解析
+EEGLAB は、ICA ベースの結果をまとめることを可能にします。
+多数の被験者からの1つの条件にわたる分析。
+これは線形分解およびICAのより規則的な使用を作ります
+データセットに関するさまざまな仮説テストに適用可能
+複数の被写体から多くの被写体まで
 
-Note that independent component clustering (like much other data clustering)
-has no single *correct* solution. Interpreting the results of component
-clustering, therefore, warrants caution. Claims to the discovery of
-physiological facts from component clustering should be accompanied by
-thoughtful caveat and, preferably, by results of statistical testing
-against suitable null hypotheses.
+独立したコンポーネントのクラスタリング(他の多くのデータクラスタリングのような)
+単一*間違い*の解決を持っていません。 コンポーネントの結果を解釈する
+従って、原因を保証するクラスタリング。 発見への主張
+コンポーネントのクラスタリングからの生理学的事実は、同行する必要があります
+思慮深い洞窟と、できれば、統計的なテストの結果によって
+適した null の仮説に対して。
 
-Prepare data for ICA component clustering
+ICAコンポーネントクラスタリングのデータを用意する
 ---
 
-### Load and prepare data
+### データの読み込みと準備
 
-In this tutorial, we will use a [5-subject STUDY](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (450Mb). See the [STUDY creation tutorial](/tutorials/10_Group_analysis/study_creation.html) for more information on this data. Select menu item <span style="color: brown">File</span> and press sub-menu item <span style="color: brown">Load existing study</span>. Select the tutorial file "N400.study" then press *Open*.
+このチュートリアルでは、 [5-サブジェクトSTUDY](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (450Mb)。 詳細はこちら [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html) このデータに関する詳細情報 メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します <span style="color: brown">既存の研究をロードする</span>お問い合わせ チュートリアルファイル「N400.study」を選択し、*Open*を押します。
 
-The *STUDY* above is ready for clustering, but the following steps are usually required before clustering ICA components.
-- You have created a *STUDY* with the data from all participants in your experiment. See [STUDY creation](/tutorials/10_Group_analysis/study_creation.html) tutorial.
-- You have added channel locations. Note that channel
-locations may be edited for all datasets at the same time (simply use
-menu item <span style="color: brown">Edit → Channel locations</span>). 
-- You have run ICA on each dataset. Use menu item <span style="color: brown">Tools → Decompose data by ICA</span> to run ICA on all datasets if this is not the case.
-- You have fitted each ICA component with a dipole. If this is not the case, use menu item <span style="color: brown">Tools → Locate dipoles using DIPFIT -> Head model and settings</span>, and then <span style="color: brown">Tools → Locate dipoles using DIPFIT -> Autofit</span>.
-- You have regularly saved your changes using menu item <span style="color: brown">File → Save current study</span>. You can save the
-updated *STUDY* set to disk, either overwriting the current version - by
-leaving the default file name in the text box - or by entering a new
-file name.
+*STUDY*はクラスタリングの準備が整っていますが、ICAコンポーネントをクラスタリングする前に、以下の手順が必要になります。
+- *STUDY* を実験参加者全員のデータで作成しました。 お問い合わせ [STUDY制作](/tutorials/10_Group_analysis/study_creation.html) チュートリアル。
+- チャンネルの場所を追加しました。 注意: チャンネル
+すべてのデータセットを同時に編集できます。
+メニュー項目 <span style="color: brown">編集 → チャネルの場所</span>). 
+- 各データセットでICAを実行しています。 メニュー項目を使用する <span style="color: brown">ツール → ICAによるデータの分解</span> これはケースではない場合、すべてのデータセットでICAを実行します。
+- 各ICAコンポーネントにダイポールを装着しました。 もしそうでなければ、メニュー項目を使う <span style="color: brown">ツール → DIPFIT を使用したダイポールの検索 → ヘッドモデルと設定</span>それから <span style="color: brown">ツール → DIPFIT を使用したダイポールの検索 → オートフィット</span>.
+- メニュー項目を使用して定期的に変更を保存しています <span style="color: brown">ファイル → 現在の学習を保存</span>お問い合わせ 保存することができます
+更新 *STUDY* ディスクに設定、現在のバージョンを上書きする - によって
+テキストボックスにデフォルトファイル名を残します - または新しい入力で
+ファイル名
 
-### Select components to cluster
+### コンポーネントを選択
 
-Then select the menu item <span style="color: brown">Study → Edit study info</span>. The following interface pops up.
+メニュー項目を選択します。 <span style="color: brown">学習 → 学習情報編集</span>お問い合わせ 次のインターフェイスがポップアップ表示されます。
 
 ![](/assets/images/studyclust1.png)
 
-We have already described this interface when importing data in a *STUDY* in the [STUDY creation tutorial](/tutorials/10_Group_analysis/study_creation.html). The bottom checkbox removes all current cluster information, and you need to check this checkbox if you want to remove all clusters or if you have added or removed datasets (because the modified *STUDY* would not be consistent with the already computed clusters). The button *Select by r.v.* allows
-you to set a threshold for residual variance of the dipole model
-associated with each component. Press this button. The entry box below will appear. 
+*STUDY*にデータをインポートする際には、既にこのインターフェースを記述しています。 [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html)お問い合わせ 一番下のチェックボックスは、現在のクラスター情報をすべて削除し、すべてのクラスターを削除したり、データセットを追加したり削除したりしたい場合に、このチェックボックスをチェックする必要があります(変更された *STUDY * が既に計算されたクラスターと一致していないため)。 ボタン ※r.v.* で選択可能
+ダイポールモデルの残留期間を設定する
+各コンポーネントに関連する。 このボタンを押します。 下記エントリーボックスが表示されます。 
 
 ![](/assets/images/studyclust2.png)
 
-This interface allows specifying that components used in clustering
-will only be those whose equivalent dipole models have residual dipole
-variance of their component map, compared to the best-fitting
-equivalent dipole model projection to the scalp electrodes, less than
-a specified threshold (0% to 100%). The default r.v. value is 15%,
-meaning that only components with dipole models' residual variance of
-less than 15% will be included in clusters. This is useful because of
-the modeled association between components with near *dipolar* (or
-sometimes dual-dipolar) scalp maps with physiologically plausible
-components, those that may represent the activation in one (or two
-coupled) brain area(s). For instance, in the interface above, the
-default residual variance threshold is set to 15%. This means that
-only components that have equivalent dipole models with less than 15%
-of residual variance will be selected for clustering (see [this article](https://pubmed.ncbi.nlm.nih.gov/25234117/) for a justification of the 15% threshold). Pressing *Ok* will
-cause the component column to be updated in the main study-editing
-window.
+このインターフェイスにより、クラスタリングで使用されるコンポーネントを指定できます。
+同等のダイポールモデルが残留ダイポールを持っている人だけが
+コンポーネントのマップの分散、ベストフィットと比較して
+頭皮の電極への同等なダイポール モデル投射、より少ないより
+指定された閾値(0%〜100%)。 デフォルト r.v. 値は 15% です。
+つまり、ダイポールモデルの残留分散のコンポーネントだけ
+クラスターに15%未満の料金が加算されます。 これは、
+*dipolar* (またはの近くで部品間のモデル化された連合)
+場合によっては二重dipolar) scalpは生理学的に可塑性と地図を地図で運びます
+コンポーネント、アクティベーションを表す可能性があるもの(または2つ)
+coupled) 脳領域(s)。 例えば、上記のインターフェイスでは、
+デフォルトの残留差額は15%に設定されます。 つまり、
+同じダイポールモデルが15%未満のコンポーネントのみ
+残留分散のクラスタリングのために選択されます(参照) [この記事について](https://pubmed.ncbi.nlm.nih.gov/25234117/) 15%のしきい値の正当化のために。 *Ok*を押すと
+コンポーネントの列がメインの編集で更新される原因
+ウィンドウ。
 
-The *Comp.* buttons contains the
-components for each dataset that will be clustered based on the residual variance threshold selected above. You may edit these manually. Note that if you
-change the component selection (by pressing the relevant push button),
-all datasets with the same subject name and the same session number
-will also be updated (as these datasets have the same
-ICA decompositions).
+*Comp.*ボタンには、
+上記の残留期限に基づいてクラスタされる各データセットのコンポーネント。 これらを手動で編集することができます。 ご注意
+コンポーネント選択を変更(関連するプッシュボタンを押して)、
+同じ件名と同じセッション番号を持つすべてのデータセット
+また、更新されます(これらのデータセットが同じであるように)
+ICAの分解)。
 
-Press *Ok* in the *STUDY* editing GUI to save your changes.
+*STUDY*編集GUIの*Ok*を押して変更を保存します。
 
-### Multiple ICA decompositions per subject
+### 被写体ごとの複数のICA分解
  
-Continuous data collected in one task or
-experiment session are often separated into epochs defining different
-task conditions (for example, separate sets of epochs time-locked to
-targets and non-targets, respectively). Datasets from different
-conditions collected in the same *session* are assumed by the clustering
-functions to have the same ICA component weights (i.e., the same ICA
-decomposition is assumed to have been applied to the data from all
-session conditions at once). If this was not the case, then datasets
-from the different conditions must be assigned to different
-*sessions*.
+1つのタスクで収集された連続データ
+実験セッションは、異なる定義のepochに分離されることが多い
+タスク条件(例えば、epochsの別々のセットは時間にロックされます)
+それぞれターゲットおよび非ターゲット。 異なるデータセット
+同じ*セッション*で収集される条件は、クラスタリングによって仮定されます
+同じICAコンポーネントの重みを持つ関数(つまり、同じICA)
+分解は、すべてのデータからデータに適用されていると仮定されます
+セッション条件を一度にまとめます。 場合がない場合、データセット
+異なる条件から異なる条件に割り当てる必要があります
+*セッション*
 
-So, we recommend performing one ICA decomposition on all the data
-collected in each data collection session, even when several
-conditions are involved. In our experience, ICA can return a more stable
-decomposition when trained on more data. Having components with common
-spatial maps also makes it easier to compare component behaviors across
-conditions. To use the same ICA decomposition for several conditions,
-simply run ICA on the continuous or epoched data *before* extracting
-separate datasets corresponding to specific task conditions of interest.
-Then extract specific condition datasets; they will automatically
-inherit the same ICA decomposition. We followed this procedure for the tutorial data used on this page.
+そのため、すべてのデータでICAの分解を実行することをお勧めします。
+複数のデータ収集セッションでも収集
+条件は関係しています。 私たちの経験では、ICAはより安定したリターンをすることができます
+より多くのデータで訓練されたとき分解。 一般的なコンポーネントを持つ
+空間マップでは、コンポーネントの挙動を簡単に比較できます。
+条件。 複数の条件で同じICA分解を使用するには、
+単に ICA を連続またはエスポーチされたデータで実行する *before* 抽出
+特定のタスク条件に対応する別のデータセット。
+その後、特定の条件データセットを抽出します。それらは自動的に
+同じICAの分解を継承します。 このページで使用されるチュートリアルデータについては、この手順に従ってください。
 
-### Compute component activity measures
+### コンポーネントのアクティビティ対策
 
-The next step before clustering is to precompute component activity measures for each dataset. Precomputing measure is necessary to cluster components but it is also necessary to visualize component activities. Note that the GUI for precomputing component activity measures is similar to the GUI for precomputing channel activity described in the [channel visualization tutorial](/tutorials/10_Group_analysis/study_data_visualization_tools.html).
+クラスタリングの前の次のステップは、各データセットのコンポーネントのアクティビティを優先することです。 コンポーネントをクラスターするためには、プリコンプト測定が必要ですが、コンポーネントのアクティビティを視覚化する必要があります。 コンポーネントのアクティビティの事前処理のための GUI は GUI に似ています。これは、 GUI で記述されたチャンネルのアクティビティをプリコンパイルするのと同じです。 [チャンネル可視化チュートリアル](/tutorials/10_Group_analysis/study_data_visualization_tools.html).
 
-Select menu item <span style="color: brown">Study → Precompute component measures</span>. In the interface below, select all measures. For ERSP/ITC, select 30 frequencies and 60 time points to speed up computation,  as shown below. Press *Ok*.
+メニュー項目を選択 <span style="color: brown">研究 → プレコンプトコンポーネント対策</span>お問い合わせ 下のインターフェイスでは、すべての対策を選択します。 ERSP/ITCでは、以下に示すように、30の周波数と60時間のポイントを選択して計算速度を上げることができます。 プレス *Ok*.
 
 ![](/assets/images/studyclust3.png)
 
-It should take a few minutes to precompute all measures.
+すべての措置を優先するために数分かかる必要があります。
 
-Cluster components
+クラスタコンポーネント
 -----------------
 
-The main method to cluster components in EEGLAB is the *PCA clustering method* described below. Other methods are the *Measure Projection method* and the *Scalp Correlation method* available in EEGLAB plugins as indicated in a subsequent section.
+EEGLABのクラスターコンポーネントへの主な方法は、以下に示す*PCAクラスタリングメソッド*です。 その他の方法は、EEGLABプラグインで利用できる*Measure Projection method*と*Scalp Correlation method*です。
 
-### Building a preclustering matrix
+### 前の行列を作成する
 
-The aim of the preclustering interface is to build a global distance
-matrix specifying *distances* between components for use by the
-clustering algorithm. This component *distance* is typically abstract,
-estimating how *far* the components' maps, dipole models, and/or
-activity measures are from one another in the space of the joint,
-PCA-reduced measures selected. This will become clearer as we detail the use of the graphic interface below.
+前方インターフェイスの目的は、グローバルな距離を構築することです
+使用するコンポーネント間の*distances*を指定する行列
+クラスタリングアルゴリズム。 このコンポーネント *distance* は、通常、抽象的です。
+*far*のコンポーネントのマップ、ダイポールモデル、および/または
+活動対策は、ジョイントの空間で互いに異なるものです。
+PCA削減対策を選定 下のグラフィックインターフェースの使用を詳細に示すとおり、クリアになります。
 
-The condition means used to construct
-this overall cluster *distance* measure may be selected from a palette
-of standard EEGLAB measures: ERP, power spectrum, ERSP, and/or ITC, as
-well as the component scalp maps (interpolated to a standard scalp grid) and their equivalent dipole model locations. Note that dipole locations are the one type of preclustering information *not* precomputed since it is readilly available in each dataset.
+条件は構築するために使用されることを意味します
+この全体的なクラスター *distance* 測定はパレットから選ぶかもしれません
+標準的なEEGLABの対策:ERP、パワースペクトラム、ERSP、および/またはITCの
+コンポーネントのスカルプマップ(標準スカルプグリッドに補間)と同等のダイポールモデルの場所。 ダイポールのロケーションは、各データセットで読みやすいので、事前に入力した情報 *not* の1種類です。
 
-Invoke the preclustering graphic interface ([pop_preclust.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_preclust.m) function) by using menu item
-<span style="color: brown">Study → PCA clustering (original) → Build preclustering array</span> function  and its GUI interface described below first computes
-desired condition-mean measures used to determine the cluster *distance* of components from each other. 
+予期しないグラフィックインターフェイスを呼び出します()[pop_preclust.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_preclust.m) 関数) メニュー項目を使用して
+<span style="color: brown">勉強 → PCAクラスタリング(オリジナル) → ビルド前方配列</span> 関数とその GUI インターフェイスは、最初の計算下で説明しました。
+各コンポーネントのクラスター *distance* を決定するために使用される望ましい条件測定。 
 
 ![](/assets/images/studyclust4.png)
 
-The checkboxes on the left in the second section of the [pop_preclust.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_preclust.m) interface above allow selection of the
-component activity measures to include in the *cluster location
-measure* constructed to perform clustering. 
+左側のチェックボックスは2番目のセクションで [pop_preclust.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_preclust.m) 上記のインターフェイスは選択を可能にします
+*clusterの場所に含まれるコンポーネントのアクティビティ対策
+測定* 構築されたクラスタリングを実行します。 
 
-The goal of the
-preclustering function is to compute an N-dimensional cluster
-position vector for each component. These *cluster position* vectors
-will be used to measure the *distance* of components from each other
-in the N-dimensional cluster space. The N-dimensional vector incorporates information from PCA-reduced ERP, ERSP, or other measures. The value of N is arbitrary but, because of constraints imposed by clustering algorithms, should be kept relatively low (about 10, e.g., \<3 or less per measure). 
+ゴール
+N次元クラスターを計算する機能
+各コンポーネントの位置ベクトル。 これらの *cluster position* ベクトル
+各コンポーネントの *distance* を計測するために使用します。
+N次元のクラスタースペース。 N次元ベクトルは、PCA-reduced ERP、ERSP、その他の対策に関する情報を組み込んでいます。 N の値は任意であるが、クラスタリングアルゴリズムによって課される制約のために、比較的低い(例えば、\<3 または 1 メートル)を維持すべきである。 
 
-In the cluster position vectors, for
-example, the three first values might represent the 3-D (x, y, z)
-spatial locations of the equivalent dipole for each component. The
-next, say, 2 values might represent the largest 2 principal
-components of the first condition ERP, the next 2, for the second
-condition ERP, and so on. If you are computing (time/frequency) spectral perturbation images,
-you cannot use all their (near-3000) time-frequency values. Here also, you should use the *Dim.* column
-inputs to reduce the number of dimensions (for instance, to 2 or 3).
+クラスター位置ベクトルでは、
+例えば、3つの最初の値が3D(x, y, z)を表すかもしれません。
+各コンポーネントの同等のダイポールの空間位置。 ふりがな
+次に、2つの値が最大の2つのプリンシパルを表す可能性があると言います。
+最初の条件のコンポーネント ERP、次の2、秒
+条件 ERP、等。 計算(時間/頻度)の分裂イメージである場合、
+毎回 (near-3000) のタイム頻度値を使用することはできません。 ここには、*Dim.* 列を使用する必要があります。
+寸法の数を減らすための入力(例えば、2または3)。
 
-#### Dimension normalization
+#### 次元の正規化
  
-You may wish to *normalize* these principal dimensions for the location
-and activity measures you select so their metrics are equivariant across
-measures. Do this by checking the checkbox under the *norm* column. 
-This
-*normalization* process involves dividing the measure data of all
-principal components by the standard deviation of the first PCA
-component for this measure. 
+*normalize* は、この場所の主要寸法を優先する場合があります。
+そして、そのメトリクスが横切っているように選択した活動は、
+対策 *norm* 列の下にあるチェックボックスをチェックしてこれを行います。 
+お問い合わせ
+*normalization* プロセスは、すべての測定データを分割することを含みます
+最初のPCAの標準的な偏差による主要なコンポーネント
+この測定のためのコンポーネント。 
 
-You may also specify a relative weight
-(versus other measures). For instance, if you use two measures (A and B)
-and you want A to have twice the"weight of B, you would normalize both
-measures and enter a weight of 2 for A and 1 for B. If you estimate that
-measure A has more relevant information than measure B, you could also
-enter a greater number of PCA dimension for A than for B.
+相対的な体重を指定することもできます。
+(他の対策) 例えば、2つの対策(AとB)を使う場合
+A を 2 回持っているようにしたい"B の体重、両方を正規化します
+BのAと1のための2の体重を測定し、入る。 見積り依頼
+測定値 Aは、Bを測定するよりも多くの関連情報を持っています, あなたはまた、することができます
+B よりも A の PCA 次元の大きい数を入力してください。
 
-#### Component measures
+#### コンポーネント対策
 
-All the measures described below, once computed, can be used
-for clustering and/or for cluster visualization. First, we have the time-based measures.
+上記のすべての措置は、計算されたら、使用することができます
+クラスターの視覚化のためのクラスタリングおよび/または。 まず、時間ベースの対策があります。
 
--   *Spectra:* The first checkbox allows you to include the log mean
-    power spectrum for each condition in the preclustering measures.
-    Clicking on the checkbox allow you to enter power spectral
-    parameters. In this case, a frequency range \[lo hi\] (in Hz) is
-    required. Note that for clustering purposes (but not for display),
-    for each subject individually, the mean spectral value (averaged
-    across all selected frequencies) is subtracted from all selected
-    components, and the mean spectral value at each frequency (averaged
-    across all selected components) is subtracted from all components.
-    The reason is that some subjects have larger EEG power than others.
-    If we did not subtract the (log) means, clusters might contain
-    components from only one subject, or from one type of subject (e.g., men, who often have thinner skulls and therefore larger EEG than women).
+-   *仕様:* 最初のチェックボックスを使用すると、ログの平均を含めることができます
+    予圧対策の各条件の電力スペクトル。
+    チェックボックスをクリックすると、パワースペクトルを入力することができます
+    パラメータ。 この場合、周波数範囲\[lo hi\](Hz内)
+    お問い合わせ クラスタリングの目的(ただし表示のために)のため、
+    各被写体ごとに、平均スペクトル値(平均値)
+    選択されたすべての周波数で、選択したすべての周波数からサブトラクトされます。
+    コンポーネント、および各周波数における平均スペクトル値(平均値)
+    選択されたすべてのコンポーネントに、すべてのコンポーネントからサブトラクトされます。
+    理由は、いくつかの被写体が他のものよりも大きなEEG力を持っていることです。
+    (log) を割っていなかった場合、クラスターが含まれている可能性があります。
+    1つの被験者のみ、または1つの被験者(例えば、男性、しばしば薄い頭蓋骨を持ち、したがって女性よりも大きいEEG)から構成される。
     
--   *ERPs:* The second checkbox computes mean ERPs for each condition.
-    Here, an ERP latency window \[lo hi\] (in ms) is required.
+-   *ERPs:* 2番目のチェックボックスは、各条件のERPを意味します。
+    ここでは、ERPレイテンシウィンドウ\[lo hi\](ms)が必要です。
     
--   *ERSPs and/or ITCs:* The following two checkboxes allow including
-    event-related spectral perturbation information in the form of
-    event-related spectral power changes (ERSPs), and event-related
-    phase consistencies (ITCs) for each condition.
+-   *ERSPs および/または ITCs:* 次の2つのチェックボックスは、次のようなことができます。
+    イベント関連の分裂情報の形
+    イベント関連の分光力変化(ERSP)、イベント関連
+    各条件の相関(ITC)。
 
-Second, we have the location-based measures.
+次に、位置情報に基づいた対策を講じています。
     
--   *Dipole locations:* The third checkbox allows you to include component equivalent dipole locations in the preclustering process. Dipole
-    locations (shown as \[x y z\]) automatically have three dimensions. It is also possible to cluster on dipole orientations. As mentioned before, the equivalent dipole model for each component and
-    dataset must already have been precomputed. If one component is    modeled using two symmetrical dipoles, the [pop_preclust.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_preclust.m)
-    function will use the average location of the two dipoles for clustering.
+-   *ダイポールの場所:* 3番目のチェックボックスでは、コンポーネントの同等のダイポールの場所を事前に指定することができます。 ダイポール
+    位置(\[x y z\] として表示)は3つの次元を自動的に持っています。 ダイポールのオリエンテーションでクラスターすることもできます。 前述したように、各コンポーネントと同等のダイポールモデル
+    データセットは既に事前入力済みである必要があります。 2つの対称ダイポールを使用して1つのコンポーネントをモデル化した場合、 [pop_preclust.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_preclust.m)
+    関数はクラスタリングのための2つのダイポールの平均位置を使用します。
     
--   *Scalp maps:* The last checkbox allows you to include scalp map
-    information in the component *cluster location*. You may choose to
-    use raw component map values, their laplacians, or their spatial
-    gradients. We have obtained fair results for main components
-    using laplacian scalp maps, though there are still better reasons to
-    use equivalent dipole locations instead of scalp maps. 
-    You may also
-    select whether or not to use only the absolute map values, their
-    advantage being that they do not depend on (arbitrary) component map    polarity. We do not recommend to use dipole *and* scalp map information as the information is redundant.
+-   ※スカルプマップ:* 最後のチェックボックスでは、スカルプマップを含めることができます
+    コンポーネント内の情報 *cluster の場所*。 あなたが選ぶことができます
+    生のコンポーネントのマップ値、ラップラキアン、またはその空間を使用する
+    グラデーション 主要なコンポーネントの公平な結果を得ました
+    laplacian scalp の地図を使用して、まだより良い理由がありますが、
+    scalp のマップではなく、同等のダイポールの場所を使用します。 
+    また、
+    絶対的なマップ値だけを使用するかどうかを選択する、
+    コンポーネントマップの極性に依存しないという利点。 情報が冗長であるため、ダイポール*と*のスカルプマップ情報を使用することはお勧めしません。
 
-In the [pop_preclust.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_preclust.m) interface shown above, select only the dipole checkboxes and leave all
-default parameters (including the dipole residual variance filter at the top of the window). The total number of dimension is the sum of the dimension for all selected measures (in our case, 3+3 = 6). Clustering
-    algorithms may not work well with more than 10 dimensions, especially if the number of components is limited. In our case, the number of dimensions (6) compared to the number of components (151, elected based on residual variable threshold) is acceptable.
+お問い合わせ [pop_preclust.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_preclust.m) 上記のインターフェイスは、ダイポールチェックボックスだけを選択し、すべてを残す
+デフォルトパラメータ(ウィンドウの上部にダイポール残留分散フィルタを含む)。 寸法の合計は、選択したすべての対策の寸法の合計です(当社の場合、3 + 3 = 6)。 クラスタリング
+    特に部品数が制限されている場合、アルゴリズムは10以上の寸法でうまく動作しない場合があります。 この場合、部品数(151、残留可変閾値に基づいて選択)と比較して、寸法(6)の数が許容されます。
 
- Press *Ok*.
+ プレス *Ok*.
 
-### Applying the clustering algorithm
+### クラスタリングアルゴリズムの適用
 
-You may call the [pop_clust.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clust.m) cluster function interface by selecting the <span style="color: brown">Study → PCA clustering (original) → Cluster components</span> menu item, as shown below.
+コールする場合があります。 [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clust.m) クラスター機能インターフェイスを選択して <span style="color: brown">勉強 → PCAクラスタリング(オリジナル) → クラスタコンポーネント</span> 以下に示すようにメニュー項目。
 
 ![](/assets/images/studyclust5.png)
 
-Several algorithms are available: *kmeans*, *neural network*, *affinity*, and *affinity* clustering.
+*kmeans*、*neural network*、*affinity*、および*affinity*のクラスタリング。
 
-*Kmeans* requires the MATLAB Statistics Toolbox, while *neural network* clustering uses a function from the MATLAB Neural Network Toolbox. A version of *kmeans* that does not require the MATLAB Statistics Toolbox is also available. *Affinity* clustering does not require any toolbox. We recommend using *affinity* clustering which does not require to specify the number of clusters, then try the *kmeans* algorithm if the results are not satisfactory. 
+*Kmeans*はMATLABの統計ツールボックスが必要ですが、*神経ネットワーク*のクラスタリングはMATLABのニューラルネットワークツールボックスから機能を使用します。 MATLABの統計ツールボックスを必要としない*kmeans*のバージョンも利用可能です。 *Affinity* クラスタリングはツールボックスを必要としません。 *affinity* クラスタリングは、クラスタの数を指定する必要はありません。結果が満足していない場合は、*kmeans*アルゴリズムを試してください。 
 
-For *kmeans*, note that the default number of clusters is set so on average
-there will be one computed per subject per cluster. For example, if
-about 20 components per subjects are selected based on the residual
-variance threshold and the *STUDY* contains 10 subjects, the average
-number of cluster will be set to 20 - so each cluster will contains on
-average 10 components. In this case, we have a reduced number of subject, so enter 11 to increase the number of component per cluster.
+*kmeans*の場合、クラスターのデフォルト数が平均値に設定されていることに注意してください。
+1クラスターごとに計算されます。 例えば、
+被験者ごとの約20個のコンポーネントが残留に基づいて選択されます
+varianceのしきい値と*STUDY*は10の主題、平均を含んでいます
+クラスターの数が20に設定されるので、各クラスターに各クラスターが含まれている
+平均10コンポーネント。 この場合、件数を削減するので、11を入力すると、クラスターごとのコンポーネント数が増えます。
  
-An option for the *kmeans.m* algorithm can relegate
-*outlier* components to a separate cluster. Outlier components are
-defined as components further than a specified number of standard
-deviations (3, by default) from any of the cluster centroids. To turn
-on this option, click the upper checkbox on the left. Identified
-outlier components will be placed into a designated *Outliers* cluster
-(Cluster 2).
+*kmeans.m* アルゴリズムのオプションは、リリーゲートできます。
+*outlier* コンポーネントを別々のクラスターへ。 アウターコンポーネントは
+指定された標準の数よりも、コンポーネントとして定義される
+任意のクラスターのセントロイドから逸脱 (3, デフォルト). ターンする
+このオプションで、左上のチェックボックスをクリックします。 識別される
+アウターコンポーネントは指定の *Outliers* クラスターに置かれます
+(Cluster 2)。
 
-Press *Ok*. The cluster editing interface detailed in one of the following sections will automatically pop up.
+プレス *Ok*. 次のセクションの1つで詳細に説明するクラスター編集インターフェイスが自動的にポップアップ表示されます。
 
-Optimal Kmeans clustering
+最適Kmeansクラスタリング
 -----------------
-We have recently added **Optimal Kmeans** algorithm to the `pop_clust` function. This feature allows you to find the optimal number of clusters for your data. To use this feature, you must have the [MATLAB Statistics and Machine Learning Toolbox](https://www.mathworks.com/products/statistics.html) installed.
+私たちは最近、*最適なKmeans**アルゴリズムを追加しました `pop_clust` 機能。 この機能を使用すると、データに最適なクラスターが検索できます。 この機能を使用するには、 [MATLAB統計と機械学習ツールボックス](https://www.mathworks.com/products/statistics.html) インストール。
 
-To use this feature, select the **Optimal Kmeans** option from the **Clustering algorithm** dropdown menu. Then, you need to input a range of cluster numbers to test (in the screenshot below, the minimum is set to 10, and the maximum is set to 30). The algorithm will then test the clustering for each number of clusters in the range and choose the optimal number of clusters based on the **silhouette** score. The **silhouette** score is a measure of how similar an object is to its own cluster compared to other clusters. The optimal number of clusters is the one that maximizes the **silhouette** score. Read more about the **silhouette** score from the [MATLAB documentation](https://www.mathworks.com/help/stats/clustering.evaluation.silhouetteevaluation.html).
+この機能を使用するには、**Clusteringアルゴリズム**ドロップダウンメニューから**最適なKmeans**オプションを選択します。 次に、クラスター番号の範囲を入力する必要があります(下のスクリーンショットでは、最小値は10に設定され、最大は30に設定されます)。 アルゴリズムは、各クラスターのクラスタを範囲でテストし、**silhouette**スコアに基づいてクラスタの最適な数を選択します。 **silhouette** スコアは、他のクラスターと比較して、オブジェクトが独自のクラスターにどのように似ているかの測定です。 最適なクラスターの数は、**silhouette** のスコアを最大化するものです。 *silhouette**のスコアについてもっと読む [MATLABのドキュメント](https://www.mathworks.com/help/stats/clustering.evaluation.silhouetteevaluation.html).
 
-**Recommended number of clusters:** Following the rationale for the estimated number of clusters above, we recommend setting the lower bound of the cluster range to half the average number of components per subject. For example, if there are 20 components per subject, set the lower bound to 10. Similarly, set the upper bound to 1.5 times the average number of components per subject. For example, for 20 components per subject, set the upper bound to 30. If the returned number of clusters is at its lower or upper bound, consider expanding the range. We also strongly recommend using the option to separate outliers.
+**クラスターの推奨数:** 上記のクラスターの推定数の合理化後、クラスターの範囲の下限を、対象ごとのコンポーネントの平均数の半分に設定することをお勧めします。 例えば、被写体ごとに20個のコンポーネントがある場合、下限を10に設定します。 同様に、被写体ごとのコンポーネントの平均数が1.5倍に上限をセットします。 例えば、被写体ごとの 20 個のコンポーネントは 30 に上限の境界を置きます。 クラスターの返された数が下限または上限にある場合は、範囲を拡大することを検討してください。 また、アウトリエを分離するオプションを使用することを強くお勧めします。
 
 ![](/assets/images/studyclust14.png)
 
-Other clustering methods
+他のクラスタリング方法
 -----------------
-The main method to cluster components in EEGLAB is the *PCA clustering method* described in this tutorial. Other methods are the *Measure Projection method* and the *Scalp Correlation method* available in the EEGLAB plugins described below.
+EEGLABのクラスターコンポーネントへの主な方法は、このチュートリアルに記載されている*PCAクラスタリングメソッド*です。 その他の方法は、以下のEEGLABプラグインで利用できる*Measure Projectionメソッド*と*Scalp Correlation method*です。
 
-### Finding clusters with the Measure Projection plugin
-Using measure projection, IC measures (ERP, ERSP..., except equivalent dipoles), are compared for each IC pair and their dissimilarity is multiplied to form a combined pairwise dissimilarity matrix. This matrix is then normalized, weighted, and added to the normalized and weighted IC equivalent dipole distance matrix. The final dissimilarity
-matrix is then clustered using affinity clustering method. Refer to the plugin [GitHub repository](https://github.com/sccn/mp_clustering) for details.
+### 測定プロジェクションプラグインでクラスターを探す
+測定の投影を使用して、ICは(ERP、ERSP...、同等のダイポールを除く)測定を、各ICのペアと比較し、その類似性は、結合された対方向の分断の行列を形成するために多彩です。 この行列は、正規化、重み付けされ、正規化および重み付けされた IC の同等なダイポール距離行列に追加されます。 最終的な珍味
+行列は、アフィニティクラスタリング方式でクラスタリングされます。 プラグインを参照 [GitHubリポジトリ](https://github.com/sccn/mp_clustering) 詳しくはこちら
 
-### Finding clusters with the Corrmap plugin
-Corrmap is an EEGLAB plugin that clusters
-components based on the correlation of their scalp topographies. The
-documentation for this plugin is available on 
-[Stefan Debener web page](http://www.debener.de/corrmap/corrmapplugin1.html) and the plugin [GitHub repository](https://github.com/sccn/corrmap).
+### Corrmapプラグインでクラスターを探す
+Corrmapは、クラスターの EEGLAB プラグインです。
+頭皮のトポグラフィの相関に基づいてコンポーネント。 ふりがな
+このプラグインのドキュメントは、 
+[Stefan Debenerのウェブページ](http://www.debener.de/corrmap/corrmapplugin1.html) プラグイン [GitHubリポジトリ](https://github.com/sccn/corrmap).
 
-Visualizing component clusters
+コンポーネントクラスターの可視化
 ----------------------------
-Call the cluster editing function [pop_clustedit.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m) using
-menu item <span style="color: brown">Study → Edit → plot clusters</span>. This will open the following window. 
+クラスター編集機能を呼び出す [pop_clustedit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m) 使用方法
+メニュー項目 <span style="color: brown">研究 → 編集 → プロットクラスター</span>お問い合わせ 以下の画面を開きます。 
 
-Note that the clustering menu item <span style="color: brown">Study → PCA clustering (original) → Cluster components</span> we used in a previous section will also call automatically this window after clustering has finished.
+クラスタリングメニュー項目に注意 <span style="color: brown">勉強 → PCAクラスタリング(オリジナル) → クラスタコンポーネント</span> 以前のセクションで使用しても、クラスタリングが完了した後に自動的にこのウィンドウを呼び出します。
 
 ![](/assets/images/studyclust6.png)
 
-Of the 305 components in the sample *N400* *STUDY*, dipole model
-residual variances for 151 components were below 15%. Other components
-were omitted from clustering. The selected components were
-clustered on the basis of their dipole locations into 11 component clusters, and one outlier cluster.
+サンプルの305の部品の*N400* *STUDY*のダイポール モデルの
+151コンポーネントの残留分散は15%未満でした。 その他のコンポーネント
+クラスタリングから省略されました。 選択したコンポーネントは
+ダイポールの位置を11つのコンポーネントクラスターと1つのアウタークラスターに基づいてクラスター。
 
-Selecting one of the clusters from the list
-shown in the upper left box displays a list of the cluster components in the text box on the upper right. The *All cluster centroids*
-option in the (left) text box list will cause the function to display
-results for all but the *ParentCluster*.
-Selecting one of the plotting options will then show all cluster centroids in a single figure. To review all cluster dipole locations, press the *Plot
-dipoles* button in the left column. This will open the plot viewer
-showing all the cluster component dipoles (in blue), plus the cluster
-mean dipole location (in red). Not surprisingly, components have been clustered in groups of dipoles with distinct locations.
+リストからクラスターの選択
+左上にあるボックスに、右上にあるテキストボックスのクラスターコンポーネントのリストが表示されます。 *すべてのクラスターのセントロイド*
+(左) テキスト ボックス リストのオプションは表示する機能を引き起こします
+*ParentCluster*の全ての結果
+プロットオプションの1つを選択すると、1つの数字ですべてのクラスターのセンチロイドが表示されます。 すべてのクラスターのダイポールの場所を確認するには、 *Plot を押します
+左側の列の dipoles* ボタン。 これは、プロットビューアを開きます
+すべてのクラスターコンポーネントのダイポール(青)とクラスターを表示
+dipoleの場所(赤)を意味します。 間違いなく、コンポーネントは異なる場所とダイポールのグループでクラスターされています。
 
 ![](/assets/images/studyclust8.png)
 
-You may also review cluster scalp maps, by pressing the *Plot scalp maps* option. This will produce the figure below:
+また、*Plot scalp maps*オプションを押すことで、クラスターの scalp マップも確認できます。 以下の図を生成します。
 
 ![](/assets/images/studyclust7.png)
 
-Note that your exact clusters might differ slightly since the *kmean* algorithm starts from a random assignment of components to clusters.
+*kmean* アルゴリズムがコンポーネントのランダムな割り当てからクラスターに始まるので、あなたの正確なクラスターは若干異なる場合があります。
 
-In computing the mean cluster scalp maps (or scalp map centroids), the
-polarity of each of the cluster's component maps was first adjusted so
-as to correlate positively with the cluster mean (recall that component
-maps have no absolute polarity). Then the map variances were equated.
-Finally, the normalized means were computed.
+計算では、クラスタースカルプマップ(またはスカルプマップセントロイド)、
+クラスターのコンポーネントマップの各極性が最初に調整されたので、
+クラスターの意味で正当に相関する(そのコンポーネントを呼び出します)
+地図は絶対極性がありません。 その後、マップの変数が装備されていました。
+最後に、正規化された手段が計算されました。
 
-To see individual component scalp maps for components in the cluster,
-select the cluster of interest in the left column (for example, *Cluster 6* as in the figure above). Then press the *Plot scalp maps* option in the
-right column. The following figure will appear (Note that, in your case, this cluster might be a different index).
+クラスター内のコンポーネントの個々のコンポーネントのスカルプマップを表示するには、
+左側の列に関心のあるクラスター(例えば、上の図のように*Cluster 6*)を選択します。 次に、*Plot scalp maps*オプションを押します。
+右列。 次の図が現れます(この場合、このクラスターは異なるインデックスになる場合があります)。
 
 ![](/assets/images/studyclust9.png)
 
-Here, *SO2 IC6* means *independent component 6 for subject SO2*, etc. 
+※SO2 IC6* は、SO2* の対象となるコンポーネント 6 を意味します。 
 
-Note that channels missing from any of the datasets do not affect clustering or visualization of cluster scalp maps. Component scalp maps are interpolated by the [toporeplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=toporeplot.m) function, avoiding the need
-to restrict *STUDY* datasets to a common *always clean* channel subset
-or to perform *missing channel* interpolation on individual datasets.
+データセットから欠落するチャンネルは、クラスターのスカルプマップのクラスタリングや視覚化には影響しません。 コンポーネントのスカルプマップは、 [toporeplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=toporeplot.m) 機能、必要性を避けて下さい
+*STUDY*のデータセットを共通の*alwaysclean*チャネルのサブセットに制限するために
+または個々のデータセットで *missing channel* の補間を実行します。
 
-You may also plot scalp maps for individual components in the cluster by selecting components in the right column and then pressing *Plot scalp maps* (not shown).
+また、右側の列のコンポーネントを選択して、*Plot scalp maps* を押すと、クラスター内の個々のコンポーネントのスカルプマップをプロットすることもできます。
 
-You may plot the dipoles for this cluster. Press the *Plot dipoles* button in the left or right column. The following image pops up.
+このクラスターのダイポールをプロットすることができます。 左または右列の*Plotダイポール*ボタンを押します。 次の画像がポップアップ表示されます。
 
 ![](/assets/images/studyclust11.png)
 
-Scroll through the dipoles one by
-one, rotating the plot in 3-D or selecting among the three cardinal
-views (lower left buttons), etc. Information about the plotted dipoles is
-presented in the left-center side bar (see the image above).
+ディポールを1つずつスクロール
+1つは3-Dのプロットを回しましたりまたは3の枢機卿の間で選ぶために
+ビュー(左下のボタン)など プロットされたダイポールに関する情報は
+左中央のサイドバーに提示(上の画像を参照)。
 
-Let's also plot the spectrum for this cluster along with the spectrum of the individual components. In the right column, click on the *Plot spectra* button.
+また、個々のコンポーネントのスペクトルとともに、このクラスターのスペクトルをプロットしてみましょう。 右側の列で、*Plot spectra* ボタンをクリックします。
 
 ![](/assets/images/studyclust10.png)
 
-We can see a clear 10 Hz peak in all the components of this cluster. Let's finally plot the ERPs for the two conditions of this *STUDY*. Click on the *Params* button in the central column adjacent to the *Plot ERPs* buttons. Change the time range to -200 ms to 1000 ms as shown below. Check the checkbox to plot the first independent variable on the same plot. Press *Ok*. 
+このクラスターのすべてのコンポーネントで10Hzのピークをクリアすることができます。 この*STUDY*の2つの条件のためにERPを最終的にプロットしてみましょう。 *Plot ERPs* ボタンに隣接する中央の列にある *Params* ボタンをクリックします。 時間範囲を以下に示すように-200 msに1000のmsに変更して下さい。 同じプロットで最初の独立した変数をプロットするためにチェックボックスを確認してください。 プレス *Ok*. 
 
 ![](/assets/images/studyclust12.png)
 
-Then click on the *Plot ERPs* button in the right column. The following window pops up.
+それから右列の*Plot ERPs*ボタンを押して下さい。 次のウィンドウがポップアップ表示されます。
 
 ![](/assets/images/studyclust13.png)
 
-Here Cluster 6 accounts for some central
-occipital alpha activity -- note the strong 10-Hz peak in the activity
-spectra. The cluster ERPs show a very slow (1-Hz) pattern. The
-apparent latency shift between conditions in the slow wave activity may or may not be significant.
+クラスター 6 は、いくつかの中央のアカウント
+occipital アルファ活動 -- 活動の強い 10Hz ピークに注意して下さい
+スペクトラ。 クラスターERPは、非常に遅い(1-Hz)パターンを示しています。 ふりがな
+遅い波活動における条件間のレイテンシーシフトが著しくない場合があります。
 
-To quickly recognize the nature of component clusters by their activity features requires experience (see the [ICA decomposition tutorial](http://localhost:4000/tutorials/06_RejectArtifacts/RunICA.html) for more information).
+コンポーネントのクラスターの性質を素早く認識するには、体験が必要です(参照) [ICAの分解のチュートリアル](http://localhost:4000/tutorials/06_RejectArtifacts/RunICA.html) 詳しくはこちら
 
-Editing clusters
+クラスターの編集
 -----------------
-The results of clustering can also be updated manually in the cluster viewing and
-editing window (called from the <span style="color: brown">Study → Edit/plot clusters</span> menu item). These editing options allow flexibility for
-adjusting the clustering results. Components can be reassigned to different
-clusters, new clusters can be created, and
-*outlier* components can be rejected from a cluster. Note that if you make changes via the [pop_clustedit.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m) GUI, then wish to
-cancel these changes, pressing the *Cancel* button will cause the
-*STUDY* changes to be forgotten.
+クラスタリングの結果は、クラスタービューで手動で更新することもできます。
+編集ウィンドウ(からと呼ばれる) <span style="color: brown">研究 → 編集/プロットクラスター</span> メニュー項目。 これらの編集オプションにより、柔軟性が確保できます。
+クラスタリング結果を調整します。 部品は別のに再割り当てることができます
+クラスター、新しいクラスターを作成できます。
+*outlier* コンポーネントはクラスターから除外できます。 変更を加える場合は、 [pop_clustedit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m) GUIは、
+*Cancel*ボタンを押して変更をキャンセルすると、
+*STUDY*が忘れてしまうこと
 
 ![](/assets/images/studyclust6.png)
 
-We describe below the four button to edit clusters.
+クラスターを編集する4つのボタンの下に記述します。
 
-- *Renaming a cluster.* The *Rename selected cluster* option allows
-you to rename any cluster using a (mnemonic) name of your choice.
-Pressing this option button opens a pop-up window asking for the new
-name of the selected cluster. For instance, if you think a cluster
-contains components accounting for eye blinks you may rename it
-"Blinks".
+- *クラスターの名前変更* *選択したクラスターの名前*オプションは、
+選択の(mnemonic)名を使用して任意のクラスターの名前を変更します。
+このオプションボタンを押すとポップアップウィンドウが開きます
+選択したクラスターの名前。 例えば、クラスターを考えると
+あなたが名前を変更することができる目の点滅のために会計するコンポーネントが含まれています
+「リンク」
 
-- *Removing selected outlier components manually.* You may remove *outlier* components from a cluster manually. This
-option allows you to de-select seeming *outlier* components irrespective
-of their distance from the cluster mean. To manually reject components,
-first select the cluster of interest from the list on the left, then
-select the desired *outlier* component(s) from the component list on the
-right, then press the *Remove selected outlier comps* button. A
-confirmation window will pop up.
+- *選択したアウターコンポーネントを手動で削除します。* 手動で*outlier*コンポーネントを削除できます。 お問い合わせ
+オプションを使用すると、*outlier* コンポーネントの不敬のように選択解除できます。
+クラスターの意味からの距離。 コンポーネントを手動で拒否するには、
+最初に左のリストから関心のクラスターを選択し、次に
+コンポーネントリストから目的の *outlier* コンポーネントを選択します。
+右側に、選択したアウトリアコンプ*ボタンを取り外します。 ツイート
+確認画面がポップアップ表示されます。
 
-- *Creating a new cluster.* To create a new empty cluster, press the
-*Create new cluster* option. This opens a pop-up window asking for a
-name for the new cluster. If no name is given, the default name is 'Cls
-\#', where '\#' is the next available cluster number. For changes to
-take place, press the *Ok* button in the pop-up window. The new empty
-cluster will appear as one of the clusters in the list on the left of
-the editing/viewing cluster window.
+- *新しいクラスターの作成* 新しい空のクラスターを作成するには、
+*新しいクラスター*オプションを作成します。 ポップアップウィンドウが開きます
+新しいクラスターの名前。 名前が与えられない場合、デフォルト名は'Cls
+\#', '\#' が次の利用可能なクラスター番号です。 変更について
+ポップアップウィンドウの*Ok*ボタンを押します。 新しい空の
+クラスターは、左のリストのクラスターの1つとして表示されます
+編集/ビューのクラスターウィンドウ。
 
-- *Reassigning components to clusters.* To move components between
-any two clusters, first select the origin cluster from the list on the
-left, then select the components of interest from the component list on
-the right, and press the *Reassign selected component(s)* option button.
-Select the target cluster from the list of available clusters.
+- *コンポーネントをクラスターに再割り当て* コンポーネントを移動する
+2つのクラスターは、最初にリストからオリジンクラスターを選択します。
+左に、コンポーネントリストから関心のあるコンポーネントを選択します。
+右側に、*Reassign 選択したコンポーネント(s)*オプションボタンを押します。
+利用可能なクラスターのリストからターゲットクラスターを選択します。
 
-Further component clustering consideration
+さらなるコンポーネントのクラスタリング検討
 ----------------------------
 
-### Multiple components from the same subjects in ICA clusters
-When plotting ICA clusters, EEGLAB allows by default several components
-from the same subject to be included in a given cluster. This can sometimes cause problems when using statistics. 
+### ICAクラスターの同じ被験者からの複数のコンポーネント
+ICAクラスターをプロットするとき、EEGLABはデフォルトで複数のコンポーネントを使用できます
+与えられたクラスターに含まれている場合と同じです。 統計情報を使うと問題が発生することがあります。 
 
-When you include more than one component from the same subject, you are not making inferences
-about the general population of subjects anymore but instead about
-components of the specific subjects you are studying. It is all a matter
-of how many components you have per subject compared to the number of
-subjects. 
+同一の被験者から複数の成分を含んだ場合、受容体を作らない
+被写体の一般的な人口についてもうではなく、
+あなたが勉強している特定の主題のコンポーネント。 それはすべての問題です
+被験者が被験者数と比較してどれくらいの成分を持っているか
+トピック 
 
-For example, if you have on average one component per subject
-(some subjects having 0, some other two components in the cluster), and you
-have 200 subjects, then the original null hypothesis (which allows
-making inferences about the general population of subjects) is mostly
-preserved. If you have 10 subjects and 10 components of the same subject in a given cluster, it is
-not.
+例えば、被写体ごとの平均1つのコンポーネントがある場合
+(クラスター内の他の2つのコンポーネントが0つある場合)、
+200 件、元の null 仮説 (可能)
+被写体の一般的な人口についての推論を作る)ほとんどは
+保存される。 指定されたクラスターで同じ主題の10の主題そして10の部品があれば、それはです
+コメントはありません。
 
-In general, when multiple components from the same subjects in ICA
-clusters becomes a problem, we prefer to use at most one
-component per subject per cluster because this avoids having to
-compromise with the statistics (this is possible when using the EEGLAB Corrmap
-plugin for clustering data). Alternatively, remove components manually in clusters.
+一般的に、ICAの同じ被験者から複数のコンポーネントが含まれている場合
+クラスターは問題になります、私達はほとんどの1で使用することを好みます
+これは避けるので、クラスターあたりの被写体ごとのコンポーネント
+統計と妥協する(EEGLAB Corrmapを使用する場合は可能です)
+クラスタリングデータ用のプラグイン また、クラスターで手動でコンポーネントを削除することもできます。
 
-### Choice of *STUDY* design for clustering
+### *STUDY*の設計のための選択
 
-When preclustering ICA components, the current *STUDY* design is taken into account. 
+ICAコンポーネントを前処理する場合、現在の*STUDY*設計が考慮されます。 
 
-For example, if you have two conditions per subject and
-both conditions share the same set of ICA components, then during
-preclustering, when computing the component distance measure used for
-clustering, data measures from both conditions are concatenated. For
-example, when using the mean power spectrum to cluster components,
-instead of having say 50 spectral values (one per frequency) for each
-component, during preclustering 100 values (two sets of 50 frequencies,
-one for each condition) will be placed one after the other. EEGLAB will
-not allow you to cluster components using a *STUDY* design that does not
-include all *STUDY* datasets. Note that you are using anatomical component information only (scalp
-topographies and/or equivalent dipoles) and no other measures to cluster
-components, then the *STUDY* design does not impact the clustering
-solution.
+例えば、被写体ごとに2つの条件がある場合と
+両方の条件は、ICAコンポーネントの同じセットを共有し、その間に
+コンポーネントの距離測定を計算するとき、予圧
+クラスタリング、両方の条件からのデータ対策が組み込まれています。 お問い合わせ
+たとえば、平均出力スペクトルを使用してクラスターコンポーネントに、
+代わりに、それぞれに50のスペクトル値(1つの頻度)を言う
+コンポーネント、100 値の事前調整中(50 の周波数の 2 セット)
+各条件ごとに1つずつ配置します。 EEGLABは
+*STUDY*デザインを使用して、コンポーネントをクラスターできない
+*STUDY*のデータセットはすべて含まれています。 anatomicalコンポーネント情報のみ(scalp)を使用していることに注意してください。
+トポグラフィおよび/または同等のダイポール)およびクラスターへのその他の対策なし
+コンポーネントは、*STUDY*の設計はクラスタリングに影響を与えません
+ソリューション
 
-To precluster, therefore, we
-advise using the simplest *STUDY* design possible. Often, this is the one
-that is most natural for the experiment. After clustering, since all ICA components are included in the
-clustering, ICA clusters are constant for all conditions and STUDY
-designs. Thus, once your components
-are clustered, it is possible to compare cluster activities for any *STUDY* design.
+そのため、前方へ
+最もシンプルな*STUDY*設計を可能とすることを助言して下さい。 多くの場合、これは一つです
+それは実験のために最も自然です。 すべてのICAコンポーネントが含まれているので、クラスタリング後、
+クラスタリング、ICAクラスターは、すべての条件とSTUDYのために定数です
+デザイン。 従って、あなたの部品が
+任意の*STUDY*設計のためのクラスターの活動を比較することが可能であるクラスター。
 
-### Comparing clusters' activity in different conditions
+### 異なる条件でクラスターの活動を比較する
 
-Once ICA components are clustered, it is possible to *compute
-differences between conditions* using any *STUDY* design. Whenever you
-select a different design, ICA components are assigned to the conditions
-in the design according to your design as per the clustering solution.
-For example, if you have only one ICA decomposition per subject and a
-2x1 design (2 conditions, 1 subject group, collected in 1 session), then
-both conditions share the same components.
+ICAコンポーネントがクラスターされると、*compute に可能です。
+*STUDY*の設計を使用して条件*間の相違。 いつまでも
+異なる設計を選択、ICAコンポーネントは条件に割り当てられます
+クラスタリングの解決による設計に従って。
+例えば、被写体と被写体ごとに1つのICAしか分解しなければ
+2x1の設計(2つの条件、1つの主題のグループ、1セッションで集められる)、それから
+両方の条件は同じ部品を共有します。
 
-Comparing activities of ICA components between conditions is like
-comparing activities in different data channels. Comparing the
-activities of a cluster of components between conditions could be seen
-as similar to comparing the activity of a given channel across subjects. 
-Remember that ICA components and
-electrode channels are both <em>spatial filters.</em> Each data
-channel is the arithmetic difference between the potential reaching
-some scalp electrode and the potential reaching a reference electrode
-(or the mean of the potentials reaching the set of reference
-electrodes). Each ICA component gives the arithmetic weighted
-sum/difference of the signals reaching each of the electrodes. Here the
-negatively weighted electrode signals can be said to serve the role of
-the reference channel (although this channel combination will typically
-be different for each component).
+条件間のICAコンポーネントの比較は、
+異なるデータチャネルでの活動を比較します。 比較する
+条件間のコンポーネントのクラスターの活動が見られる
+被写体を渡る特定のチャネルの活動を比較するのと同様に。 
+ICAコンポーネントとICAコンポーネントを忘れないでください。
+電極チャネルは両方 <em>空間フィルタ。</em> 各データ
+チャネルは、潜在的なリーチの算術的な違いです
+いくつかの頭皮電極と参照電極に到達する潜在的な
+(または参照のセットに達する可能性の平均
+電極)。 各ICAコンポーネントは、重量を重ねた算術を与えます
+各電極に届く信号の合計/差。 詳細はこちら
+負の重み付き電極信号は、の役割を果たすために言うことができます
+参照チャンネル(このチャンネルの組み合わせは、通常、
+各コンポーネントごとに異なります。
 
-For *STUDY* designs in which component activities of two subject groups
-are to be compared, the computed measure differences will be between
-components for each group within each cluster.
+*STUDY*は2つの主題グループの構成活動の構成を設計します
+比較されると、計算された測定の違いは間になります
+各クラスター内の各グループのためのコンポーネント。
 
-Try it on your own data
+自分のデータを試してみましょう
 ----
-Note that with only a few subjects and a few clusters (a necessary
-limitation to distribute the tutorial example easily), it may not be
-possible to find consistent component clusters with uniform and
-easily identifiable natures. We have obtained much more satisfactory
-results when clustering data from 15 to 30 or more subjects.
+少数の被験者と少数のクラスターのみ(必要)
+チュートリアルの例を簡単に配布する制限)、それはないかもしれない
+一貫したコンポーネントのクラスターを均一で見つけることができ、
+容易に識別できる性質。 より多くの満足度を得られる
+15～30以上の被験者からデータを集約する場合
 
-After following this tutorial using the sample data, we recommend you
-create a study for a larger group of datasets whose
-properties you know well. Then try clustering components of this study in
-several ways. Carefully study the consistency and properties of the
-generated component clusters to determine which method of clustering
-produces clusters adequate for your research purposes.
+サンプルデータを使用してこのチュートリアルをフォローした後、私たちはあなたをお勧めします
+より大きなデータセットのグループのための研究を作成します。
+あなたがよく知っている特性。 その後、この研究のコンポーネントをクラスタリングしてみてください
+いくつかの方法。 一貫性と特性を慎重に検討する
+生成されたコンポーネントクラスターは、クラスタリングのどの方法を決定する
+あなたの研究目的のために十分なクラスターを生成します。.

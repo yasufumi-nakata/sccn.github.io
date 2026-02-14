@@ -5,30 +5,30 @@ long_title: d. Scripts for advanced plots
 parent: 11. Write scripts
 grand_parent: Tutorials
 ---
-Advanced plotting from the command line
+コマンドラインから高度なプロット
 ======
-{: .no_toc }
+お問い合わせ
 
-In this section, you may obtain custom plots from the MATLAB command line. It is currently not possible to obtain these plots from the EEGLAB menus.
+このセクションでは、MATLABコマンドラインからカスタムプロットを得ることができます。 EEGLABメニューからこれらのプロットを取得することはできません。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Time-frequency plot on all electrodes
+すべての電極上の時間周波数プロット
 -----
-<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'time_freq_all_elec.mlx'));">Show MATLAB command</button>
+<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'time_freq_all_elec.mlx'));">MATLABコマンドを表示する</button>
 
-This example demonstrates some of the power of low-level
-scripting that goes beyond the scope of functions currently available
-through the graphical interface. Below we run this script on the tutorial epoched dataset.
-The [tftopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=tftopo.m) function is a powerful function that
-allows plotting time-frequency decompositions across all channels.
+この例では、低レベルの電力の一部を示しています
+現在利用可能な機能の範囲を超えて行くスクリプト
+グラフィカルインターフェイスを介して。 以下では、このスクリプトをチュートリアルのepochedデータセットで実行します。
+ふりがな [tftopo.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=tftopo.m) 関数は強力な機能です
+すべてのチャネルで時間の頻度分解をプロットできます。
 
 ``` matlab
 % Compute a time-frequency decomposition for every electrode
@@ -63,21 +63,21 @@ tftopo(allersp,alltimes(:,:,1),allfreqs(:,:,1),'mode','ave','limits', …
 [400 8; 350 14; 500 24; 1050 11], 'chanlocs', EEG.chanlocs);
 ```
 
-The script produces the following figure.
+スクリプトは、次の図を生成します。
 
 ![](/assets/images/tftopo.png)
 
-Note that this function may also combine ERSP outputs from different subjects and apply binary statistics.
+この関数は、異なる被験者からERSPの出力を組み合わせ、バイナリ統計を適用することもできます。
 
-Plotting measures in scalp topography
+スカルプトポグラフィにおけるプロット対策
 ------------------
 
-### Plot time-frequency decomposition
+### プロットの時間頻度分解
 
-The [metaplottopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=metaplottopo.m) function is a powerful function that
-allows plotting any measure for all channels and components. For
-example, the code below allows plotting time-frequency decompositions for
-all data channels.
+ふりがな [メタプロットポ.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=metaplottopo.m) 関数は強力な機能です
+すべてのチャネルおよびコンポーネントのあらゆる測定をプロットできます。 お問い合わせ
+例えば、下のコードは時間頻度の分解をのためのプロットすることを可能にします
+すべてのデータチャネル。
 
 ``` matlab
 eeglab; close; % add path
@@ -89,13 +89,13 @@ figure; metaplottopo( EEG.data, 'plotfunc', 'newtimef', 'chanlocs', EEG.chanlocs
 
 ![](/assets/images/Newtimeftopo.png)
 
-### Plot ERP image
+### Plot ERPイメージ
 
-Another example below allows plotting ERPimage for all data channels.
-Note that for ERPimage, the function does not show the axis for each
-plot making it convenient to plot hundreds of channels if necessary. It
-is also possible to plot ICA components in this way by replacing
-EEG.data with EEG.icaact and removing the *'chanlocs'* argument.
+次の例では、すべてのデータチャネルでERPimageをプロットすることができます。
+ERPimage では、各関数の軸線が表示されないことに注意してください。
+必要に応じて、何百ものチャンネルをプロットするのが便利です。 お問い合わせ
+ICAコンポーネントを交換することで、この方法でプロットすることもできます。
+EEG.data と EEG.icaact と *'chanlocs'* 引数を外します。
 
 ``` matlab
 figure; metaplottopo( EEG.data, 'plotfunc', 'erpimage', 'chanlocs', EEG.chanlocs, 'plotargs', ...
@@ -104,16 +104,16 @@ figure; metaplottopo( EEG.data, 'plotfunc', 'erpimage', 'chanlocs', EEG.chanlocs
 
 ![](/assets/images/Erpimagetopo.png)
 
-Creating scalp topography animations
+スカルプトポグラフィアニメーション制作
 ------------------
-<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'make_eeg_movie.m'));">Show MATLAB command</button>
+<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'make_eeg_movie.m'));">MATLABコマンドを表示する</button>
 
-The script used on this page is available at [make_eeg_movie.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=make_eeg_movie.m)
+このページで使用されるスクリプトは、 [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=make_eeg_movie.m)
 
-### Using the eegmovie function to make 2-D scalp topography animations
+### eegmovie関数を使って2Dスカルプトポグラフィアニメーションを作る
 
-A simple way to create scalp map animations is to use the (limited)EEGLAB function [eegmovie.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegmovie.m) from the command line. For
-instance, to make a movie of the latency range -100 ms to 600 ms, type:
+scalpマップアニメーションを作成する簡単な方法は(limited)EEGLAB関数を使うことです [eegmovie。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegmovie.m) コマンドラインから。 お問い合わせ
+例えば、レイテンシー範囲のムービーを作るために-100ミリ秒から600ミリ秒、タイプ:
 
 ```matlab
 %% Simple 2-D movie
@@ -144,11 +144,11 @@ close(vidObj);
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/A9HcbFtTWKc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-Below, we use the same function to plot the ERP on a 3-D head plot.
+以下では、3DヘッドプロットでERPをプロットするために同じ機能を使用します。
 
-### Using the eegmovie function to make 3-D scalp topography animations
+### eegmovie関数を使って3Dスカルプトポグラフィアニメーションを作る
 
-Run the script above first. The script below creates a 3-D head plot movie.
+上記のスクリプトを実行します。 下のスクリプトは3Dヘッドプロットムービーを作成します。
 
 ```matlab
 %% Simple 3-D movie
@@ -175,16 +175,16 @@ close(vidObj);
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/rwo1ufsuQ6w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-In the script above, change the line "headplotparams  = headplotparams1;" to "headplotparams  = headplotparams2;" to switch between headmodels.
+上記のスクリプトでは、 "headplotparams = headplotparams1;" を "headplotparams = headplotparams2;" に改行して、ヘッドモデル間の切り替えを行います。
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/6iuGt7FzX30" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-It is also possible to create frames for movies as shown in the next section.
+次のセクションに示すように映画用のフレームを作成することもできます。
 
-### Creating a movie from frames
+### フレームから映画を作る
 
-Another solution here is to assemble a series of images into a movie. For
-example, type:
+別のソリューションは、映画に一連の画像を組み立てることです。 お問い合わせ
+例:
 
 ``` matlab
 %% Using topoplot to make movie frames

@@ -4,38 +4,38 @@ title: e. Automated pipeline
 parent: 11. Write scripts
 grand_parent: Tutorials 
 ---
-Automated processing pipelines using EEGLAB
+EEGLABを用いた自動処理パイプライン
 =====
-{: .no_toc }
+お問い合わせ
 
-You do not need to write a script to process all datasets simultaneously in a STUDY. This [video](https://www.youtube.com/watch?v=-jL3PuHD3aY) describes how to perform batch processing from the EEGLAB graphic interface. In this section, we run a similar pipeline using a script.
+STUDYで同時にすべてのデータセットを処理するスクリプトを書く必要はありません。 お問い合わせ [ビデオ](https://www.youtube.com/watch?v=-jL3PuHD3aY) EEGLABのグラフィックインターフェイスからバッチ処理を実行する方法について説明します。 このセクションでは、スクリプトを使用して同様のパイプラインを実行します。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'simple_study_pipeline.m'));">Show MATLAB command</button>
+<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'simple_study_pipeline.m'));">MATLABコマンドを表示する</button>
 
-Creating a STUDY or import from BIDS
+STUDYの作成やBIDSからのインポート
 ------------------------------------
 
-Download the data from [https://openneuro.org/datasets/ds003061/](https://openneuro.org/datasets/ds003061/) and go to this folder, then run the script in the next section.
+データのダウンロード [https://openneuro.org/datasets/ds003061/](https://openneuro.org/datasets/ds003061/) そしてこのフォルダに移動し、次のセクションでスクリプトを実行します。
 
-Alternatively, use one of the available [EEGLAB studies](../tutorial_data.html). Note that some of these studies already have their data preprocessed and may not be suitable for automated processing.
+または、利用可能ないずれかを使用する [EEGLAB研究](../tutorial_data.html)お問い合わせ これらの研究のいくつかは既にそのデータが処理済みであり、自動化された処理には適さないことに注意してください。
 
-Running an ERP pipeline
+ERPパイプラインの実行
 ----------------
 
-The pipeline below takes the raw data from all subjects, clean the data, extracts epochs of interest, and plots the grand average ERP.
+下のパイプラインは、すべての被験者から生データを取り、データを消去し、利益のエポックを抽出し、壮大な平均ERPをプロットします。
 
-First, the data is imported. Then it is cleaned with clean_rawdata (default parameters are used here but may need adjustment based on data quality). ICA is then run on all datasets, and ICLabel is used to flag bad ICA components. 
+まず、データをインポートします。 その後、clean_rawdata(デフォルトパラメータはここで使用されますが、データ品質に基づいて調整が必要な場合があります)で清掃されます。 ICAはすべてのデータセットで実行され、ICLabelは悪いICAコンポーネントをフラグするために使用されます。 
 
-Then oddball and standard stimuli epochs are extracted, the baseline is removed (from -1000 to 0 millisecond before the stimulus onset), and ERPs are computed and plotted. If you want to run this pipeline on your own EEGLAB study, then you will need to modify the line for extracting data epochs (as the name of your events will likely differ).
+その後、オッズボールと標準の刺激エポックが抽出され、ベースラインが削除されます(-1000から0ミリ秒まで)、ERPは計算され、プロットされます。 独自の EEGLAB スタディでこのパイプラインを実行したい場合は、データエポックを抽出するための行を変更する必要があります(イベントの名前が異なる場合があります)。
 
 ```matlab
 % check folder
@@ -104,14 +104,14 @@ STUDY = std_erpplot(STUDY,ALLEEG,'channels', {chanlocs.labels}, 'design', 1);
 pop_editoptions( 'option_storedisk', 0);
 ```
 
-A figure similar to the one below will be plotted. The figure may differ as some of the artifact and rejection steps above involve choosing data randomly. To make the pipeline reproducible, add "rng(1)" at the beginning of the script above. note that the script above only process the first two participants. Update the call to *pop_importbids()* to process all participants.
+下の図に似ている数字がプロットされます。 数値は、上記のアーティファクトと拒絶の手順の一部がランダムにデータを選択すると異なる場合があります。 パイプラインを再現できるようにするには、上記のスクリプトの先頭に「rng(1)」を追加します。 上記のスクリプトは最初の2人の参加者のみを処理することに注意してください。 *pop_importbids()* にすべての参加者を処理するコールを更新します。
 
 ![](/assets/images/p300_simple_study.png)
 
-Running a spectral pipeline
+スペクトルパイプラインを実行
 ----------------
 
-The pipeline below takes the raw data from all subjects, clean the data, extracts epochs of interest, and plots the spectrum to compare conditions. The first part is identical to the ERP script above. The end of the script computes the spectrum. Note that if you have continuous data, you need not extract epochs. We extracted epochs in this case since we wanted to reuse the same dataset as above.
+下のパイプラインは、すべての被験者から生データを取り、データをクリーンにし、関心のあるエポックを抽出し、条件を比較するためのスペクトルをプロットします。 最初の部分は、上記のERPスクリプトと同じです。 スクリプトの終端はスペクトルを計算します。 連続データがある場合、エポックを抽出する必要はありません。 上記と同じデータセットを再利用したいので、このケースでエポックを抽出しました。
 
 ```matlab
 % check folder
@@ -182,17 +182,17 @@ STUDY = std_specplot(STUDY,ALLEEG,'channels', {chanlocs.labels}, 'design', 1, 'y
 pop_editoptions( 'option_storedisk', 0);
 ```
 
-A plot similar to the following one will appear. It might be slightly different as the options to remove the artifacts above have been changed.
+次のようなプロットが表示されます。 上記のアーティファクトを削除するためのオプションが変更されているため、若干異なります。
 
-![Screen Shot 2023-02-08 at 8 44 04 PM](https://user-images.githubusercontent.com/1872705/217720016-2b5573d5-5a04-46e3-ab42-ac65e37b9f1b.png)
+![スクリーンショット 2023-02-08 に 8 44 04 PM](https://user-images.githubusercontent.com/1872705/217720016-2b5573d5-5a04-46e3-ab42-ac65e37b9f1b.png)
 
 
-Optimizing the pipeline for your data
+データのパイプラインの最適化
 -------------------------------------
 
-### Filtering
+### フィルタリング
 
-You might want to apply a different filter than the filter applied by the *clean_rawdata* plugin (which is an elliptic filter). For example, to apply a standard FIR filter, you would need to replace the call to the *clean_artifacts* function by:
+*clean_rawdata*プラグイン(楕円フィルタ)で適用されるフィルタよりも異なるフィルタを適用したい場合があります。 たとえば、標準の FIR フィルターを適用するには、次の方法で *clean_artifacts* 関数に呼び出しを置き換える必要があります。
 
 ```matlab
 EEG = pop_eegfiltnew( EEG,'locutoff',0.5);
@@ -202,37 +202,37 @@ EEG = clean_artifacts( EEG,'FlatlineCriterion',5,'ChannelCriterion',0.8, ...
     'WindowCriterionTolerances',[-Inf 7] ,'fusechanrej',1);
 ```
 
-Note that when calling the function to clean artifacts from the *clean_rawdata* plugin, the *highpass* argument is set to *off* to disable filtering.
+*clean_rawdata* プラグインからアーティファクトをきれいにするために関数を呼び出すと、*highpass* 引数は *off* に設定され、フィルタリングを無効にします。
 
-### Why do we reference twice?
+### なぜ2回参照できますか?
 
-Artifact cleaning using *clean_rawdata* usually works better on averaged reference data. We have made this observation when processing data, although there is no published article on this topic. After bad channels have been removed, then we need to compute the average reference again. The second average reference computation undoes the first one, as explained on this [page](../05_Preprocess/rereferencing.html).
+*clean_rawdata*を使用してアーティファクトのクリーニングは通常平均的な参照データでよりよく動作します。 このトピックに公開された記事はありませんが、データを処理する際にこの観察を行いました。 悪いチャンネルを削除した後、再度平均参照を計算する必要があります。 2 番目の平均参照計算は、この上で説明するように、最初の 1 つを undoes します。 [サイトマップ](../05_Preprocess/rereferencing.html).
 
-### Automated cleaning parameter
+### 自動洗浄パラメータ
 
-The call to *clean_artifacts* uses the default EEGLAB parameters. However, these are not always optimal. In particular, *'ChannelCriterion'* may be modified to reject more or fewer channels. *'BurstCriterion'* is another important parameter. Increase it to 40, for example (or some people recommend 100) if you feel too many data regions are rejected. More information is available on the plugin [wiki page](https://github.com/sccn/clean_rawdata).
+*clean_artifacts* への呼び出しはデフォルトの EEGLAB パラメータを使用します。 しかし、常に最適ではありません。 特に、*'ChannelCriterion'* は、複数のチャネルを拒否するために変更される場合があります。 *'BurstCriterion'*は別の重要な変数です。 あまりにも多くのデータ領域が拒否されていると感じた場合、例えば(または一部の人が100を推奨)40に増加します。 プラグインで詳細情報が利用可能 [wikiページ](https://github.com/sccn/clean_rawdata).
 
-Finding optimal parameters for cleaning your data is essential to designing your pipeline. It would be best if you experimented with a couple of subjects. Also, once you run your pipeline on all subjects, you should check how much data was removed for each subject. Sometimes, 80% of the data is removed for some subjects, which is not acceptable.
+データをクリーニングするための最適なパラメータを見つけることは、パイプラインの設計に不可欠です。 被験者数を実験してみると最高でしょう。 また、すべての被験者に対してパイプラインを実行すると、各被験者に対してどれだけのデータが削除されたかを確認する必要があります。 場合によっては、データの80%は、いくつかの被験者のために削除されます。
 
-An alternative solution for cleaning data is also to run data cleaning multiple times. Your run artifact rejection once to remove bad channels and large artifacts. Then after running ICA, you can run it again to remove smaller artifacts. The advantage of this approach is that the first data cleaning will not remove eye blinks (which ICA can subtract from your data allowing you to keep these regions of data). An example of this approach is shown in [this section of the tutorial](11_Scripting/Analyzing_EEG_BIDS_data_in_EEGLAB.html).
+データをクリーニングするための代替ソリューションは、複数の回のデータクリーニングを実行することです。 悪いチャンネルと大規模なアーティファクトを削除したら、アーティファクトの拒否を実行します。 その後、ICAを実行した後、もう一度実行して、より小さいアーティファクトを削除することができます。 このアプローチの利点は、最初のデータクリーニングは、アイブリンクを削除しないということです(ICAは、これらのデータを保存できるようにデータを抽出することができます)。 このアプローチの例は、 [このチュートリアルのセクション](11_Scripting/Analyzing_EEG_BIDS_data_in_EEGLAB.html).
 
-### Which ICA to use
+### 使用するICA
 
-The script above uses *runica* (Infomax), which is the default in EEGLAB. Other popular choices which require installing the relevant plugins are *Amica*, *Picard*, and *FastICA*. We compared different ICA solutions in this [paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135). In short, there is no ideal algorithm:
-- *Runica* has been used the most. It is robust but slow.
-- *picard* optimizes the same objective function as *runica*. It converges faster and with lower residuals. It was also designed by one of the ICA pioneers, Jean-Francois Cardoso. Nevertheless, it is still a new algorithm (as of 2022) that has not been thoroughly compared with others on EEG data.
-- *FastICA* is an ICA algorithm widely used on EEG data. The author of the algorithm advises using the symmetric approach instead of the iterative one (which is the default).
-- *Amica* is the best ICA algorithm based on our [comparison](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135). Nevertheless, it is slow. Also, it may only be applied to single EEG datasets.
+上記のスクリプトは EEGLAB のデフォルトである *runica* (Infomax) を使用します。 関連するプラグインをインストールするために必要なその他の一般的な選択肢は、*Amica*、*Picard*、および*FastICA*です。 異なるICAソリューションを比較しました。 [ペーパー](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135)お問い合わせ 要するに、理想的なアルゴリズムはありません。
+- *Runica*は最も多く使用されました。 堅牢ですが遅いです。
+- *picard*は*runica*と同じ目的機能を最大限に活用します。 それはより速くそしてより低い残留物と収束します。 また、ICAの先駆者であるジャン=フランコワ・カルドソが設計しました。 それにもかかわらず、EEGデータの他のユーザーと徹底的に比較されていない新しいアルゴリズム(2022の時点で)です。
+- *FastICA*はEEGデータで広く使われているICAアルゴリズムです。 アルゴリズムの作者は、反復的なものではなく対称的なアプローチを使用して助言します(デフォルトです)。
+- *Amica*は、当社のベースで最高のICAアルゴリズムです。 [比較比較](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135)お問い合わせ それにもかかわらず、それは遅くなります。 また、単一のEEGデータセットにのみ適用できます。
 
-### What algorithm for automated ICA artifact rejection?
+### 自動化されたICAのアーティファクト拒絶のアルゴリズムは何ですか。
 
-We used *ICLabel* in the script above. They are others. For example *MARA* is another popular EEGLAB plugin to detect artifactual ICA components. 
+上記のスクリプトで *ICLabel* を使用します。 彼らは他の人です。 たとえば、*MARA* は、アーティファクチュアル ICA コンポーネントを検出する別の一般的な EEGLAB プラグインです。 
 
-For *ICLabel*, you may set the threshold to detect artifactual components. In the script above, we set the threshold to 90% for the likelihood to be an eye movement artifact (blink or lateral eye movement) and 90% for the likelihood to be a muscle. This is quite conservative and will only reject 1 to 5 components per subject. Some researchers are less conservative and would set the threshold lower. The [ICLabel](https://github.com/sccn/ICLabel) page contains more information on this subject.
+※ICLabel*の場合、人工成分を検出する閾値を設定できます。 上記のスクリプトでは、目の動きのアーティファクト(点滅または横方向の目の動き)と、筋肉になる可能性の90%にしきい値を設定しています。 これは非常に保守的であり、被写体ごとに1〜5個のコンポーネントのみを拒否します。 一部の研究者は保存性が低いため、閾値が下がります。 ふりがな [ICラベル](https://github.com/sccn/ICLabel) このページには、この件に関する詳細情報が含まれています。
 
-### Finding dipoles for ICA component and ICA component clustering
+### ICAコンポーネントとICAコンポーネントのクラスタリングのダイポールを見つける
 
-Finding dipoles for ICA component and ICA component clustering may also be done at the STUDY level, for example, using the small snippet of code below.
+ICA コンポーネントと ICA コンポーネントのクラスタリングのダイポールを STUDY レベルで見つけることもできます。例えば、以下のコードの小さなスニペットを使用します。
 
 ```matlab
 % find dipoles for all ICA components of all subjects
@@ -249,29 +249,29 @@ EEG = pop_multifit( EEG,[],'threshold',100,'plotopt',{'normlen','on'});
 STUDY = std_dipplot(STUDY,ALLEEG,'clusters',2, 'design', 1);
 ```
 
-For more information, see the [ICA clustering section](../10_Group_analysis/component_clustering_tools.html) of the tutorial.
+詳しくは、 [ICAクラスタリングセクション](../10_Group_analysis/component_clustering_tools.html) チュートリアルの。
 
-### More advanced pipelines
+### より高度なパイプライン
 
-* What if I want to plot the spectrum instead of ERPs? The example above was for ERPs. However, it is easy to plot other measures as described in this [page](command_line_study_functions.html).
-* Can I run statistics in my pipeline? Yes, you may plot ERPs and other measures and compute statistically significant regions as the tutorial explains in [another section](../10_Group_analysis/study_statistics.html). You may also write custom code to generate figures for your papers.
-* Can I use LIMO in my pipeline? Yes, of course. See [this paper](https://www.frontiersin.org/articles/10.3389/fnins.2020.610388/full) and the [LIMO wiki](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) for reference. 
+* ERPsの代わりにスペクトルをプロットしたいのは? 上記の例は ERPs にありました。 しかし、これで説明されているように他の対策をプロットするのは簡単です。 [サイトマップ](command_line_study_functions.html).
+* パイプラインで統計を実行できますか? はい、ERPや他の対策をプロットし、チュートリアルで説明する統計的に重要な領域を計算することができます [他のセクション](../10_Group_analysis/study_statistics.html)お問い合わせ また、カスタムコードを書くことで、紙の数字を生成できます。
+* パイプラインでLIMOを使うことはできますか? もちろんです。 お問い合わせ [この紙](https://www.frontiersin.org/articles/10.3389/fnins.2020.610388/full) そして、 [リモウィキ](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) 参照のため。 
 
-Other EEGLAB pipelines
+その他のEEGLABパイプライン
 ----------------------
 
-Below are other EEGLAB pipelines. 
+その他EEGLABパイプラインです。 
 
-* [The PREP pipeline](https://vislab.github.io/EEG-Clean-Tools/) is an EEGLAB plugin. It is an outdated pipeline (as of 2022) because automated artifact detection is suboptimal, but it was a relevant pipeline from 2014 to 2020, and there is nothing fundamentally wrong with it.
-* [Makoto's processing pipeline](https://sccn.ucsd.edu/wiki/Makoto's_preprocessing_pipeline) is another relevant reference. It is not recommended for beginners. Nevertheless, it contains important information about EEG processing, and it is a worthwhile read.
-* [Danielle Gruber's pipeline](https://medium.datadriveninvestor.com/streamline-your-eeglab-experience-8803c805c5a7). Danielle Gruber is an EEGLAB user who shared her pipeline. It is long and detailed and also outdated (as of 2022). We did not spot any fundamental errors in the pipeline, though. It is a single-subject pipeline.
-* [The BIDS data script](Analyzing_EEG_BIDS_data_in_EEGLAB.html) is part of this tutorial, and it is a similar pipeline (although more complex) compared to the one presented on this page.
-* [The HAPPE pipeline](https://www.frontiersin.org/articles/10.3389/fnins.2018.00097/full). We have not evaluated this EEGLAB-based pipeline but it is a popular one.
-* [EPOC](https://osf.io/cw5qv/) This project provides scripts to easily get into a standardized EEG analysis using EEGLAB. It is published in [Frontiers in Neuroscience](https://www.frontiersin.org/articles/10.3389/fnins.2021.660449/full).
-* [Apice preprocessing pipeline](https://github.com/neurokidslab/eeg_preprocessing) for infant data.
-* [GUI to build EEGLAB-based pipelines](https://github.com/fardinafdideh/EEG-Signal-Cleaning-Pipeline-Management-EEGLAB-based-) EEG Signal Cleaning Pipeline Management.
-* [RELAX](https://github.com/NeilwBailey/RELAX) a fully automated EEGLAB pre-processing plugin using ICA and ICLabel.
+* [PREPパイプライン](https://vislab.github.io/EEG-Clean-Tools/) EEGLABプラグインです。 自動化されたアーティファクト検出が潜在的であるため、古いパイプライン(2022年時点)ですが、2014年から2020年までに関連したパイプラインであり、それには根本的に誤りはありません。
+* [マコトの加工パイプライン](https://sccn.ucsd.edu/wiki/Makoto's_preprocessing_pipeline) 別の参照です。 初心者にはお勧めできません。 それにもかかわらず、EEG処理に関する重要な情報が含まれています。
+* [Danielle Gruberのパイプライン](https://medium.datadriveninvestor.com/streamline-your-eeglab-experience-8803c805c5a7)お問い合わせ Danielle Gruber は、パイプラインを共有した EEGLAB ユーザーです。 それは長く、詳細であり、また(2022の)古いです。 パイプラインの基本的なエラーは見つかりませんでした。 それは単一注入のパイプラインです。
+* [BIDSデータスクリプト](Analyzing_EEG_BIDS_data_in_EEGLAB.html) このチュートリアルの一部であり、このページに提示されたものと比較して、同様のパイプライン(より複雑なもの)です。
+* [HAPPEパイプライン](https://www.frontiersin.org/articles/10.3389/fnins.2018.00097/full)お問い合わせ EEGLABベースのパイプラインは評価していませんが、人気のあるパイプラインです。
+* [エポック](https://osf.io/cw5qv/) このプロジェクトでは、EEGLAB を使用して標準化された EEG 分析を簡単に取得できるスクリプトを提供します。 掲載情報 [神経科学のフロンティア](https://www.frontiersin.org/articles/10.3389/fnins.2021.660449/full).
+* [Apiceの前処理パイプライン](https://github.com/neurokidslab/eeg_preprocessing) 乳幼児向けデータ
+* [EEGLABベースのパイプラインを作成するGUI](https://github.com/fardinafdideh/EEG-Signal-Cleaning-Pipeline-Management-EEGLAB-based-) エッグ 信号のクリーニングのパイプライン管理。
+* [リラックス](https://github.com/NeilwBailey/RELAX) ICA と ICLabel を使用した完全自動 EEGLAB プリプロセスプラグイン。
 
-Below is also a repository containing optimized EEGLAB, FieldTrip, Brainstorm, and MNE pipelines. We scanned parameters to find the optimal artifact rejection thresholds for each software package. We will let you guess which pipeline performed best 😊.
+EEGLAB、FieldTrip、Brainstorm、MNEパイプラインを最適化したリポジトリもあります。 各ソフトウェアパッケージに最適なアーティファクト拒否しきい値を見つけるためのパラメータをスキャンしました。 どのパイプラインが最高だったかを推測します。
 
 [https://github.com/sccn/eeg_pipelines](https://github.com/sccn/eeg_pipelines)

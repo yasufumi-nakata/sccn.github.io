@@ -5,9 +5,9 @@ long_title: Learning EEG
 parent: Concepts guide
 grand_parent: Tutorials
 ---
-Where to learn EEG
+EEGを学ぶ場所
 =======
 
-There are many ressources to learn EEG. One we like is the [learningeeg.com](https://www.learningeeg.com/) website. It is meant for neurology residents, epilepsy or clinical neurophysiology fellows, and EEG technicians. However, it is well suited for aspiring EEG researchers as well.
+EEGを学ぶための多くのリソースがあります。 私たちが好きなのは、 [学習eeg.com](https://www.learningeeg.com/) サイトマップ 神経学の住民、精神病または臨床神経生理学の仲間、およびEEGの技術者のために意味されます。 しかしながら、EGG研究者の志向にも適しています。
 
 

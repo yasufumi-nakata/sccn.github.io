@@ -5,110 +5,110 @@ long_title: The EEGLAB preferences menu
 parent: Reference Topics
 grand_parent: Tutorials
 ---
-The EEGLAB preferences menu
+EEGLAB の設定メニュー
 ========================
 
-This section is intended for users who wish to customize their EEGLAB settings. If there is a setting you think should be optional, please let us know. 
+このセクションは、EEGLAB の設定をカスタマイズしたいユーザー向けです。 ご希望の設定がある場合は、お知らせください。 
 
-Call the EEGLAB preference menu item
+EEGLAB 設定メニュー項目を呼び出します
 ---
 
-To
-modify the relevant EEGLAB options, select <span style="color: brown">File → Preferences</span>. 
+お問い合わせ
+関連するEEGLABオプションを変更し、選択する <span style="color: brown">ファイル → 環境設定</span>. 
 
-By default, the EEGLAB option file (*eeg_options.m*) is saved in your home folder. In the rare case where EEGLAB cannot write in your home folder, the following window will pop up.
+デフォルトでは、EEGLABオプションファイル(*eeg_options.m*)がホームフォルダに保存されます。 EEGLABがホームフォルダに書き込むことができない稀に、次のウィンドウがポップアップ表示されます。
 
 ![](/assets/images/eeglaboptions_warning.png)
 
-If this is the case, edit the *icadefs.m* file and specify another directory for the *eeg_options.m* file using the *EEGOPTION_PATH* parameter.
+この場合、 *icadefs.m* ファイルを編集し、 *EEGOPTION_PATH* パラメーターを使用して *eeg_options.m* ファイルの別のディレクトリを指定します。
 
-Now the following window will pop up.
+次のウィンドウがポップアップ表示されます。
 
 ![](/assets/images/eeglaboptions.png)
 
-These options are for processing multiple datasets in EEGLAB STUDY.
+これらのオプションは、EEGLAB STUDY で複数のデータセットを処理するためのものです。
 
-- When the top option is set, EEGLAB can hold in memory more than one
-dataset at a time. New datasets are created by most of the operations
-called under the <span style="color: brown">Tools</span> menu. With this option set, users can undo dataset changes immediately by going back to
-working with the parent (previous) dataset (unless they set the
-"overwrite dataset" option when they saved the new dataset).
+- トップオプションが設定されている場合は、EEGLABは複数のメモリを1つ以上保持できます。
+一度にデータセット。 ほとんどの操作で新しいデータセットを作成
+以下 <span style="color: brown">ツール</span> メニュー このオプションが設定されていると、ユーザーはすぐにデータセットの変更を解除できます。
+親(前の)データセットで動作する(ただし、設定されていない)
+新しいデータセットを保存したときに「データセットを上書き」オプション。
 
-- The second option allows saving the raw EEG data in a separate file. This option is no longer the default (as of 2021) as there are no advantages to saving two files anymore.
+- 2番目のオプションは、元のEEGデータを別のファイルに保存することができます。 このオプションは、もう2つのファイルを保存する利点がないため、デフォルト(2021の)ではありません。
 
-### ICA options
+### ICAオプション
 
-- The option in this section allows pre-computing ICA component activities.
-This may nearly double the main memory (RAM) required to work with the
-dataset when you have ICA components. Otherwise, ICA activations will
-be computed by EEGLAB only as needed, e.g., each time EEGLAB calls a
-function that requires one or more activations. In this case, only the
-activations needed will be computed, thus using less main memory.
+- このセクションのオプションでは、ICAコンポーネントの事前コンパイルが行えます。
+これは、作業に必要なメインメモリ(RAM)をほぼ倍増させることができます。
+ICAコンポーネントがある場合のデータセット。 さもなければ、ICAの活性化は
+EEGLAB は、EEGLAB が必要に応じて、EEGLAB がコールするたびに
+1つ以上の活性化を必要とする機能。 この場合のみ、
+必要なアクティベーションは計算されますので、メインメモリが少なくなります。
 
-### Current folder option
+### 現在のフォルダオプション
 
-- The folder option is used to remember the last folder when reading datasets. This option is set by default but may be bothersome to expert Matlab users who expect GUIs to open files in the current Matlab folder.
+- フォルダオプションは、データセットを読み込むときに最後のフォルダを覚えておくために使用されます。 このオプションはデフォルトで設定されますが、GUIが現在のMaatlabフォルダ内のファイルを開くのを期待する専門家のMatlabユーザーにとっては煩わしいかもしれません。
 
-### EEG connectivity and support options
+### EEG接続とサポートオプション
 
-- The first option in this list allows settings advanced options (see also below). For this change to take effect, you must close and reopen the current GUI.
+- このリストの最初のオプションは、設定の高度なオプション(以下参照)を可能にします。 効果を取るためにこの変更のために、あなたは、現在のGUIを閉じて、再開する必要があります。
 
-- The next three options pertain to EEGLAB connectivity, checking for
-new versions of EEGLAB, and allowing to see menu items from previous EEGLAB versions. 
+- EEGLAB接続に関する次の3つのオプション、チェック
+EEGLAB の新しいバージョンで、以前の EEGLAB のバージョンからメニュー項目を見ることができます。 
   
-- The last option, "size of cache", allows users to specify cache size limit in RAM when working with EEGLAB studies.
+- 最後のオプションは、「キャッシュのサイズ」で、EEGLAB で作業するときに、ユーザーは RAM のサイズ制限を指定できます。
 
-### Advanced option interface
+### 高度なオプションインターフェイス
 
-If you select the option to show *advanced options*, you will be able to set additional options (not shown). These should be used with care as they could make EEGLAB unstable. Below is the list of additional advanced options.
+*advancedオプション*を表示するオプションを選択すると、追加のオプション(表示されません)を設定できます。 これらは、EEGLABを不安定にすることができるので、注意して使用する必要があります。 以下は、追加の高度なオプションのリストです。
 
-- Files may be written using Matlab 6.5 file format, which is the most compatible format. Uncheck this option to write in Matlab 7.3 format, which allows saving individual data files larger than 2Gb.
+- ファイルは、最も互換性のあるフォーマットであるMatlab 6.5ファイル形式を使用して書かれているかもしれません。 このオプションをオフにして、Matlab 7.3 フォーマットで書き込むことができます。これにより、2Gb よりも大きい個別のデータファイルを保存することができます。
 
-- You may force EEGLAB to use double-precision numbers. Unless
-you have a good reason to do so, you should leave that checkbox checked as EEGLAB will automatically convert the data to double-precision whenever this becomes necessary (filtering, running ICA, etc.).
+- EEGLAB は、EEGLAB が二重の精密番号を使用するように強制する場合があります。 なし
+そのため良い理由があります。EEGLAB でチェックしたチェックボックスは、必要なときにデータを二重精度に自動的に変換します(フィルタリング、ICA の実行など)。
 
-- You may ask EEGLAB to process EEG datasets directly on disk (memory mapping), as this
-is done for fMRI. This should remove any constraint on file size. This is a beta option that should only be used if you have memory limitations that prevent you from processing your data. Using this option may potentially create problems with EEGLAB plugins.
+- EEGLAB は、EEG のデータセットをディスク(メモリーマッピング)で直接処理するように求められます。
+fMRI で行います。 ファイルのサイズの制約は削除します。 これは、データを処理することを防ぐメモリ制限がある場合にのみ使用されるべきベータオプションです。 このオプションを使用すると、EEGLABプラグインで問題が発生する可能性があります。
 
-- You may use EEG objects instead of EEG structures.
-From the user perspective, it will not change anything. However, it
-allows EEGLAB to process objects that are not native to EEGLAB. For
-example, another software could use EEGLAB function by passing on an
-object as long as it behaves in a specific way. This option
-should only be used by expert users, as it could trigger instabilities.
+- EEG構造ではなくEEGオブジェクトを使うことができます。
+ユーザーの視点から、何も変化しません。 しかし、
+EEGLAB は EEGLAB にネイティブでないオブジェクトを処理することを可能にします。 お問い合わせ
+例えば、別のソフトウェアは EEGLAB 関数を渡すことによって使用できます
+特定の方法で動作する限りオブジェクト。 このオプション
+専門家のユーザーのみが機能するので、
 
-- Another option scales ICA component activities to RMS microvolt. 
-  This
-scaling does not change anything in terms of data processing. When
-scaling ICA component activities, ICA scalp topographies are scaled as
-well, so the product of the two remains constant. This scaling was not
-performed in early versions of EEGLAB. There is no reason to uncheck that
-option unless you want to preserve backward compatibility with early
-versions of EEGLAB.
+- もう一つのオプションは、ICAコンポーネントのアクティビティをRMS microvoltにスケールアップします。 
+  お問い合わせ
+scalingはデータ処理の面で何も変更しません。 いつか
+ICAコンポーネントアクティビティのスケーリング、ICAスカルプトポグラフィは、
+まあ、2つの製品が定数のままです。 このスケーリングはなかった
+EEGLABの初期バージョンで実行される。 チェックを外す理由がない
+後方互換性を早期に保持したくない場合
+EEGLABのバージョン
 
-- Another option allow ignoring MATLAB toolboxes
-even if they are present in the path. This may be useful when your
-university has reached its quota in terms of toolbox users. In this
-case, the extra toolbox functions exist in the path, but you may not use
-them. Do not check that box unless you have a very good reason to do so, as it could make MATLAB unstable.
+- 別のオプションでは、MATLABツールボックスを無視することができます
+パスに存在するとしても。 お役に立ちますと便利です。
+大学は、ツールボックスユーザーの面でそのクォータに達しました。 お問い合わせ
+ケース, 追加のツールボックス関数はパスに存在します, しかし、あなたは使用することはできません
+お問い合わせ MATLABが不安定になる可能性があるため、非常に良い理由がない限り、そのボックスをチェックしないでください。
 
-The icadefs.m file
+icadefs.m ファイル
 -------------------
-Using a text editor, you should edit file "icadefs.m" in the
-distribution before beginning to use EEGLAB. This file contains EEGLAB
-constants used by several functions. In this file, you may:
+テキストエディタを使用して、 "icadefs.m" ファイルを編集する必要があります。
+EEGLABを使用する前に分布. このファイルは EEGLAB を含んでいます
+いくつかの関数で使われる定数。 このファイルでは、次のことができます。
 
-- Change the default folder for the EEGLAB option file
+- EEGLABオプションファイルのデフォルトフォルダを変更する
 
-- Change y-axis direction for plotting ERPs
+- ERPをプロットするためのy軸方向を変更
 
-- Change font and color settings of the EEGLAB interface
+- EEGLABインターフェースのフォントとカラー設定を変更
 
--   Reference the binary version of the *runica.m* ICA function
-    *ica* (see the [Binica repository](https://github.com/sccn/binica). For example, *ICABINARY = 'ica_linux2.4'*.
+-   *runica.m* ICA関数のバイナリ版を参照して下さい
+    *ica* (参照して下さい) [Binicaリポジトリ](https://github.com/sccn/binica)お問い合わせ たとえば、*ICABINARY = 'ica_linux2.4'*。
 
-The dipfitdefs.m file
+dipfitdefs.mファイル
 ----------------------
-The dipfitdefs.m contains other constants pertaining to dipole
-localization, default models, and default electrode files.
+dipfitdefs.mには、ダイポールに関連する他の定数が含まれています
+ローカリゼーション、デフォルトモデル、およびデフォルトの電極ファイル。
 

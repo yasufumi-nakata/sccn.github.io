@@ -6,21 +6,21 @@ has_children: true
 has_toc: false
 nav_order: 3
 ---
-![Mugs from the 17th EEGLAB workshop](/assets/images/tutorial_image.jpg)
-# Welcome to the EEGLAB tutorial
+![第17回EEGLABワークショップのマグカップ](/assets/images/tutorial_image.jpg)
+# EEGLABチュートリアルへようこそ
 
-This tutorial is an introduction to basic EEGLAB functions and processing. 
-You can also refer to the [Online Workshop](/workshops/Online_EEGLAB_Workshop.html) that includes a list of videos presenting EEGLAB.  
+このチュートリアルは、基本的なEEGLAB関数と処理入門です。 
+参照することもできます。 [オンラインワークショップ](/workshops/Online_EEGLAB_Workshop.html) EEGLABを提示する動画のリストが含まれています。  
 
-The EEGLAB Tutorial is split into four parts, the last of which is the
-Appendices. In the Appendices, the user is introduced to more advanced
-and technical elements of EEGLAB such as input data formats and MATLAB
-data structures. These topics are presented to the user to fully
-describe the architecture, etc. of the EEGLAB system.
+EEGLAB チュートリアルは 4 つの部分に分割され、その最後には
+おすすめ商品 付録では、ユーザーはより高度に導入されます
+入力データフォーマットやMATLABなどのEEGLABの技術的要素
+データ構造。 これらのトピックはユーザーに完全に提示されます
+EEGLABシステムのアーキテクチャ等について記述します。
 
-Here are the most common steps you might want to take when processing EEG data at the single-subject level:
+ここでは、単一のサブジェクトレベルでEEGデータを処理するときに取ることができる最も一般的な手順は次のとおりです。
 
-<h3><a href="/tutorials"><span style="color: black;">EEGLAB Tutorial</span></a></h3>
+<h3><a href="/tutorials"><span style="color: black;">エッグラボ チュートリアル</span></a></h3>
 {%- assign children_list = site.pages | where: "parent", page.title -%}
 {% include toc_nav_recursive.html nav=children_list %}
 
@@ -57,7 +57,7 @@ Here are the most common steps you might want to take when processing EEG data a
 - [Computing ERSP and ITC for channel and component data](/tutorials/single-subject/time-frequency-decomposition)
 -->
 
-Note on MATLAB 
+MATLAB について 
 ---------------
-If you are new to MATLAB or need a refresher, do not hesitate to consult the material on the [Getting started with MATLAB page](/tutorials/misc/tutorial_matlab.html)
+MATLABに新しくなったり、リピーターが必要な場合は、素材のご相談はご遠慮ください。 [MATLABのページを立ち上げる](/tutorials/misc/tutorial_matlab.html)
 

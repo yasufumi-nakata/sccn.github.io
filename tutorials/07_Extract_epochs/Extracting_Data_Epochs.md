@@ -5,154 +5,154 @@ long_title: 7. Extract Data Epochs
 parent: Tutorials
 nav_order: 7
 ---
-Extracting data Epochs
+データの抽出 Epochs
 ========================
-{: .no_toc }
+お問い合わせ
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Load the sample EEGLAB dataset
+サンプル EEGLAB データセットをロードする
 ---------
 
-Select the <span style="color: brown">File</span> menu item and press the 
-<span style="color: brown">Load existing dataset</span> sub-menu item. Select the tutorial file "eeglab_data.set" located in the "sample_data" folder of EEGLAB. Then press *Open*.
+選択する <span style="color: brown">ファイル</span> メニュー項目および出版物 
+<span style="color: brown">既存のデータセットをロードする</span> サブメニュー項目。 EEGLABの「sample_data」フォルダにある「eeglab_data.set」を選択します。 それから *Open*を押して下さい。
 
-![Image:Pop_loadset.png](/assets/images/Pop_loadset.png)
+![画像:Pop_loadset.png](/assets/images/Pop_loadset.png)
 
-Extracting data epochs
+データのエポック抽出
 ---------
 
-To study the event-related EEG dynamics of continuously recorded data,
-we must extract data epochs time-locked to events of interest (for
-example, data epochs time-locked to onsets of one class of experimental
-stimuli) by selecting <span style="color: brown"> Tools → Extract Epochs</span>
-from the EEGLAB main user interface.
+継続的に記録されたデータのイベント関連のEEGダイナミクスを研究するため、
+関心のあるイベントにタイムロックされたデータを抽出する必要があります(for)
+例えば、実験の1つのクラスのオンセットにタイムロックされたデータepochs
+stimuli を選択することにより <span style="color: brown"> ツール → 抽出エポック</span>
+EEGLABメインユーザーインターフェイスから。
 
-![Image:I51pop_epoch.png](/assets/images/I51pop_epoch.png)
-
-
-Click on the upper right button, marked *"…"*, of the resulting [pop_epoch.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_epoch.m) window, which calls up a browser box listing the
-available event types.
+![画像:I51pop_epoch.png](/assets/images/I51pop_epoch.png)
 
 
-![Image:I51pop_epoch_event.png](/assets/images/I51pop_epoch_event.png)
+右上のボタンをクリックし、*"..."* をマークします。 [人気カテゴリー](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_epoch.m) ブラウザボックスのリストを呼び出すウィンドウ
+利用可能なイベントタイプ。
 
 
-Here, choose event type *square* (onsets of square target stimuli in
-this experiment), and press *Ok*. You may also type in the selected
-event type directly in the upper text box of the [pop_epoch.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_epoch.m) window.
+![画像:I51pop_epoch_event.png](/assets/images/I51pop_epoch_event.png)
 
 
-![Image:I51pop_epoch2.png](/assets/images/I51pop_epoch2.png)
+ここでは、イベントの種類を選択してください *正方形* (正方形のターゲット刺激のonsets)
+この実験)、プレス ※Ok* 選択された項目に入力することもできます。
+イベントタイプは、上部のテキストボックスに直接 [人気カテゴリー](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_epoch.m) ウィンドウ。
 
 
-Here, retain the default epoch limits (from 1 sec before to 2 sec
-after the time-locking event). If you wish, add a descriptive name for
-the new dataset. Then press *Ok*. A new window will pop up, offering
-another chance to change the dataset name and/or save the dataset to a
-disk file. Accept the defaults and enter *Ok*.
+![画像:I51pop_epoch2.png](/assets/images/I51pop_epoch2.png)
 
-Another window will then pop up to facilitate the removal of meaningless
-epoch baseline offsets. This operation is discussed in the next
-section.
-In this example, the stimulus-locked windows are 3 seconds long. It is
-often better to extract long data epochs, as here, to make
-time-frequency decomposition possible at lower (below 10 Hz)
-frequencies.
 
-Removing baseline values
+ここでは、デフォルトのエポック制限を保持します(1秒から2秒まで)
+タイムロックイベント終了後 ご希望の場合は、記述名を入力してください。
+新しいデータセット。 それから *Ok*を押して下さい。 新しいウィンドウがポップアップ表示されます。
+データセット名を変更したり、データセットを保存したりする別のチャンス
+ディスクファイル。 デフォルトを受け付け、*Ok* を入力します。
+
+別のウィンドウがポップアップして、無意味の除去を容易にします
+epochベースラインオフセット。 この操作は、次の操作で議論されます
+セクション。
+この例では、stimulus-lockedウィンドウは3秒の長さです。 お問い合わせ
+多くの場合、長いデータエポックを抽出する方が良いです。
+10Hz以下で時間頻度分解が可能
+頻度。
+
+ベースライン値の削除
 ---------
 
-Removing a mean baseline value from each epoch is useful when baseline
-differences between data epochs (e.g., those arising from low-frequency
-drifts or artifacts) are present. These are not meaningfully
-interpretable, but if left in the data, could skew the data analysis.
-However, high-pass filtering data is also a form of baseline correction,
-rendering the current step optional. It is also essential to remember that
-baseline correction introduces random offsets in each channel, something 
-ICA and source reconstruction algorithms cannot easily cope with.
-Baseline correction should thus be used with caution and short baseline
-windows (on the order of 100 milliseconds) avoided when possible.
+各エポックからの平均ベースライン値を削除することは、ベースライン時に便利です
+データエポックの違い(例えば、低周波数から生じるもの)
+ドリフトやアーティファクトがプレゼントされます。 これらは意味的ではありません
+通訳可能ですが、データに残った場合、データ解析をスカウトできます。
+しかし、ハイパスフィルタリングデータもベースライン補正の形態です。
+任意現在のステップをレンダリングして下さい。 それを覚えておくことも不可欠です
+ベースライン補正は、各チャネルでランダムなオフセットを導入し、何か 
+ICAとソース再構築アルゴリズムは、簡単に対処できません。
+ベースライン補正は、したがって、注意と短いベースラインで使用する必要があります
+窓(100ミリ秒の注文)は、可能であれば避けます。
 
-After the data has been epoched, the following window will pop up
-automatically. It is also possible to call it directly by selecting
-the <span style="color: brown">Tools → Remove baseline</span> menu item.
+データが更新された後、次のウィンドウがポップアップ表示されます。
+自動的に。 選択することで直接呼び出しも可能
+お問い合わせ <span style="color: brown">ツール → ベースラインを削除</span> メニュー項目。
 
 
-![Image:Pop_removebase.png](/assets/images/Pop_removebase.png)
+![画像:Pop_removebase.png](/assets/images/Pop_removebase.png)
 
-Here we may specify the baseline period in each epoch (in ms) -- the
-latency window in each epoch across which to compute the mean to
-remove The original epoched dataset is by default overwritten by the
-baseline-removed dataset. Note: There is no uniformly 'optimum' method
-for selecting either the baseline period or the baseline value. Using
-the mean value in the pre-stimulus period (the [pop_rmbase.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rmbase.m) default) is effective for many datasets if the goal of the analysis
-is to define transformations that occur in the data following the
-time-locking events.
-By default, baseline removal will be applied to all channels.
-However, you can also choose specific channels by type (can be
-specified while editing channel
-information), or manually
-select them. Click on the '...' push buttons to see the list of
-available types/channels for selection.
-Press *Ok* to subtract the baseline (or *Cancel* to not remove the
-baseline).
+ここでは、各エポック(ms)のベースライン期間を指定することができます。
+各エポックのレイテンシウィンドウで、その意味を計算する
+削除 元のepochedデータセットはデフォルトでoverwrittenです
+ベースライン削除されたデータセット。 注意: 'optimum'メソッドは均一にありません
+ベースライン期間またはベースライン値のいずれかを選択します。 使用方法
+前刺激期間における平均値( [pop_rmbase.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rmbase.m) デフォルト)は、分析の目的が一致する場合、多くのデータセットに有効です
+データを次のデータで発生する変換を定義する
+タイムロックイベント。
+デフォルトでは、ベースライン除去は全てのチャネルに適用します。
+ただし、特定のチャンネルをタイプ別に選ぶこともできます(可能)
+チャンネル編集時に指定された
+情報)、または手動で
+選択します。 '...'を押してボタンを押して、リストが表示されます
+選択のための利用できるタイプ/チャネル。
+*Ok*を押してベースライン(または*Cancel*を削除しない)をサブトラクト
+ベースライン)。
 
-A new window will pop up to change the dataset name and/or save the dataset to a
-disk file. Accept the defaults and enter *Ok*.
+データセット名を変更したり、データセットを保存したりするために、新しいウィンドウがポップアップ表示されます。
+ディスクファイル。 デフォルトを受け付け、*Ok* を入力します。
 
-Extracting sub-epochs
+サブエポック抽出
 ---------
-Even after data epochs have been extracted, it is possible to extract sub-epochs with a reduced time range. This is done using the function [pop_select.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_select.m) called by selecting <span style="color: brown">Edit → Select data</span>. The example below would select data sub-epochs with the epoch time range from -500 ms to 1000 ms. 
+データエポックを抽出した後でも、時間を短縮したサブエポックを抽出することができます。 これは関数を使って行われます [ポップアップ_select.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_select.m) 選択によって呼ばれる <span style="color: brown">編集 → データの選択</span>お問い合わせ 以下の例では、500 ms から 1000 ms までのエポック時間範囲でデータサブエポックを選択します。 
 
-![Image:pop_select_reepoch.png](/assets/images/pop_select_reepoch.png)
+![画像:pop_select_reepoch.png](/assets/images/pop_select_reepoch.png)
 
-Selecting data epochs
+データエポックの選択
 ---------
 
-There is no real good reason to select subsets of data epochs.
-When comparing conditions -- performed by creating contrast
-at the STUDY level (the group analysis interface which may also be used for single-subject analysis) -- one may ignore specific data epochs.
+データエポックのサブセットを選択するための本当の理由はありません。
+条件を比較するとき -- コントラストを作成することによって実行される
+STUDYレベル(グループ分析インターフェース)では、単一のサブジェクト解析にも使用できます。1つは特定のデータエポックを無視できます。
 
-Nevertheless, they may be cases in which you might want to remove
-specific artifactual or irrelevant data epochs. 
+それにもかかわらず、あなたが削除したいかもしれない場合もある
+特定のアーティファクチュアルまたは無関係のデータエポック。 
 
-### Selecting a subset of data epochs
+### データのサブセットを選択
 
-Select menu item <span style="color: brown">File</span> and press sub-menu item
-<span style="color: brown">Load existing dataset</span>. Select the tutorial file "eeglab_data_epochs_ica.set" located in the "sample_data" folder of EEGLAB. Then press *Open*.
+メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
+<span style="color: brown">既存のデータセットをロードする</span>お問い合わせ EEGLABの「sample_data」フォルダにある「eeglab_data_epochs_ica.set」のチュートリアルファイルを選択します。 それから *Open*を押して下さい。
 
-The simplest way to remove data epochs is by selecting epoch indices. 
-This is done using the function [pop_select.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_select.m) called by selecting <span style="color: brown">Edit → Select data</span>. The example below select epochs 1 to 10  (1:10 is MATLAB notation to indicate 1, 2, 3, 4, 5, 6, 7, 8, 9, 10).
+データのエポックを除去する最も簡単な方法は、エポックインデックスを選択することによってです。 
+これは関数を使って行われます [ポップアップ_select.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_select.m) 選択によって呼ばれる <span style="color: brown">編集 → データの選択</span>お問い合わせ 以下の例では、epochs 1 から 10 (1:10 は MATLAB の表記で 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) を選択します。
 
-![Image:pop_select_epochs.png](/assets/images/pop_select_epochs.png)
+![画像:pop_select_epochs.png](/assets/images/pop_select_epochs.png)
 
-Alternatively, epochs 1 to 10 may be removed by checking the checkbox adjacent to the epoch edit box. 
+また、epoch の編集ボックスに隣接するチェックボックスをチェックすることで、epochs 1 から 10 が削除される場合があります。 
 
-### Selecting a subset of data epochs based on event information
-In the EEGLAB sample dataset, half the targets appeared at position 1 and the other
-half at position 2. In this section, we will keep all position 1 data epochs. Import the "eeglab_data_epochs_ica.set" tutorial dataset, as indicated in the previous section.
+### イベント情報に基づくデータエポックのサブセットを選択
+EEGLABサンプルデータセットでは、ターゲットの半分が1位と他の場所で現れます
+位置の半分 2。 このセクションでは、すべての位置1のデータエポックを保持します。 前のセクションに示すように、「eeglab_data_epochs_ica.set」チュートリアルデータセットをインポートします。
 
-Select <span style="color: brown">Edit → Select epochs or events</span>. The [pop_selectevent.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_selectevent.m) window (below) will appear. Enter "1" in the textbox next to *position*, which will select all epochs in which the target appeared in position 1 (note the selected checkbox *Remove epochs not referenced by any selected event*). Press *Ok*.
+選択する <span style="color: brown">編集 → エポックやイベントを選択</span>お問い合わせ ふりがな [pop_selectevent.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_selectevent.m) ウィンドウ(下)が表示されます。 *position*の横にあるテキストボックスに「1」と入力し、対象が位置1に出現する全てのエポックを選択します(選択したチェックボックス *選択したイベントで参照されていないエポックを削除します)。 プレス *Ok*.
 
-![Image:pop_select_epoch.png](/assets/images/pop_select_epoch.png)
+![画像:pop_select_epoch.png](/assets/images/pop_select_epoch.png)
 
-Note: The option set above the *Cancel* button (above) *Remove epochs
-not referenced by any selected event*. If this checkbox were left unset
-and the checkbox *Keep only selected events and remove all other
-events*, the function would select the specified events but would
-not remove epochs not containing those events.
+注意: *Cancel* ボタンを上回るオプション * epochs を削除
+選択したイベント*では参照されません。 このチェックボックスがリセットされていない場合
+チェックボックス *選択したイベントのみをキープし、他のイベントをすべて削除
+event* は、指定されたイベントを選択する関数になりますが、
+これらのイベントを含まないエポックを削除しないでください。
 
-The confirmation window below appears. Press *Ok*.
+確認画面が表示されます。 プレス *Ok*.
 
-![Image:confirm_epoch.png](/assets/images/confirm_epoch.png)
+![画像:confirm_epoch.png](/assets/images/confirm_epoch.png)
 
-Now a [pop_newset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m) window for saving the new dataset pops up. We name this new dataset "Square, Position 1" and press *Ok*.
+これから [pop_newset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m) 新しいデータセットポップアップを保存するためのウィンドウ。 この新しいデータセット「Square, Position 1」と入力し、*Ok*を押します。
 

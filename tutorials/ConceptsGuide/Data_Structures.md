@@ -6,55 +6,55 @@ parent: Concepts guide
 grand_parent: Tutorials
 nav_order: 5
 ---
-EEGLAB Data Structures
+エッグラボ データ構造
 =======================
-{: .no_toc }
+お問い合わせ
 
-This section is intended for users who wish to [use EEGLAB and its
-functions in MATLAB scripts](/tutorials/ConceptsGuide/EEGLAB_functions.html). We have tried
-to make EEG structures as simple and as transparent as possible so that
-advanced users can use them to efficiently process their data. 
+このセクションでは、EEGLAB および EEGLAB の使用を希望するユーザーを対象としています。
+MATLABスクリプトの関数:(/tutorials/ConceptsGuide/EEGLAB_functions.html) お問い合わせ
+EEG構造をできるだけシンプルで透明にすることで、
+高度なユーザーは、データを効率的に処理するためにそれらを使用することができます。 
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Introduction
+導入事例
 ------------
 
-Writing EEGLAB MATLAB scripts requires some understanding of the
-EEGLAB data structure (EEG) and its substructures (principally
-*EEG.data*, *EEG.event*, *EEG.urevent*, *EEG.epoch*, *EEG.chanlocs* and
-*EEG.history*). We will introduce EEGLAB data structures below.
+EEGLAB MATLABスクリプトを書くには、いくつかの理解が必要です
+EEGLABのデータ構造(EEG)とそのサブ構造(主に)
+*EEG.data*、*EEG.event*、*EEG.urevent*、*EEG.epoch*、*EEG.chanlocs*および
+*EEG.history* は必須です。 EEGLABのデータ構造をご紹介します。
 
-- EEG: the current EEG dataset
-- ALLEEG: array of all loaded EEG datasets
-- CURRENTSET: the index of the current dataset
-- LASTCOM: the last command issued from the EEGLAB menu
-- ALLCOM: all the commands issued from the EEGLAB menu
-- STUDY: the EEGLAB group analysis structure
-- CURRENTSTUDY: 1 if EEGLAB performing group analysis, 0 otherwise
+- EEG: 現在のEEGデータセット
+- AllEEG:すべての読み込まれたEEGデータセットの配列
+- CURRENTSET: 現在のデータセットのインデックス
+- LASTCOM: EEGLABメニューから発行された最後のコマンド
+- AllCOM: EEGLABメニューから発行されたすべてのコマンド
+- STUDY:EEGLABグループ解析構造
+- CURRENTSTUDY: EEGLABがグループ分析を行う場合は1、それ以外の場合は0
 
-Note that EEGLAB does not use global variables (the variables above are
-accessible from the command line but they are not used as global
-variables within EEGLAB). The above variables are ordinary variables in
-the global MATLAB workspace. All EEGLAB functions except the main interactive window function [eeglab.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m) (and a few other
-display functions) process one or more of these variables explicitly as
-input parameters and do not access or modify any global variable. This
-ensures that they have a minimum chance of producing unwanted 'side
-effects'.
+EEGLABはグローバル変数を使用しないことに注意してください(上記の変数は、
+コマンドラインからアクセス可能ですが、グローバルでは利用できません。
+EEGLAB内の変数。 上記の変数は通常の変数です
+グローバルなMATLABワークスペース。 主要な相互窓機能を除いてすべてのEEGLAB機能 [eeglab.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m) (その他)
+display関数) は、これらの変数の1つ以上を明示的に処理します。
+入力パラメータは、グローバル変数にアクセスしたり変更したりしません。 お問い合わせ
+望ましくない 'side を生産する最小チャンスがあることを確認してください。
+エフェクト
 
-EEG and ALLEEG
+EEGとアレグ
 ---------------
-EEGLAB variable *EEG* is a MATLAB structure that contains all the
-information about the current EEGLAB dataset. For instance, select menu item <span style="color: brown">File</span> and press sub-menu item
-<span style="color: brown">Load existing dataset</span>. Select the tutorial file "eeglab_data_epochs_ica.set" located in the "sample_data" folder of EEGLAB. Then press *Open*. Then typing *\>\>EEG* will produce the following command
-line output:
+EEGLAB変数 *EEG* は、すべてを含むMATLAB構造です。
+現在のEEGLABデータセットに関する情報。 例えば、メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
+<span style="color: brown">既存のデータセットをロードする</span>お問い合わせ EEGLABの「sample_data」フォルダにある「eeglab_data_epochs_ica.set」のチュートリアルファイルを選択します。 それから *Open*を押して下さい。 それから入力*\>\> EEG*は以下のコマンドを生成します。
+ライン出力:
 
 ``` matlab
 >> EEG
@@ -104,15 +104,15 @@ line output:
                  run: []
 ```
 
-See the help message
-of the [eeg_checkset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m) function (which checks the consistency
-of EEGLAB datasets) for the meaning of all the fields.
+ヘルプメッセージを見る
+お問い合わせ [eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m) 関数(一貫性をチェックする)
+EEGLABのデータセット)の全てのフィールドの意味
 
-EEGLAB variable *ALLEEG* is a MATLAB array that holds all the datasets
-in the current EEGLAB/MATLAB workspace. In fact *ALLEEG* is a structure
-array of *EEG* datasets (described above). If, in the current EEGLAB
-session you have one datasets loaded, *ALLEEG* will be equal to *EEG*. If you have two datasets loaded, typing *\>\> ALLEEG* on the MATLAB
-command line returns:
+EEGLAB変数 *ALLEEG* は、すべてのデータセットを保持する MATLAB 配列です。
+現在の EEGLAB/MATLAB のワークスペースで。 実際には*ALLEEG*は構造です
+*EEG*データセットの配列(上述)。 もし、現在の EEGLAB で
+読み込まれるデータセットが1つあります。*ALLEEG*は*EEG*と等しいです。 2つのデータセットがロードされている場合は、*\>\> を入力します。 MATLABのALLEEG*
+コマンドラインリターン:
 
 ``` matlab
 ALLEEG =
@@ -150,20 +150,20 @@ ALLEEG =
         times
 ```
 
-Typing *\>\> ALLEEG(1)* returns the structure of the first dataset in
-ALLEEG, and typing *\>\> ALLEEG(2)* returns the structure of the second
-dataset. See the [using EEGLAB history](/tutorials/11_Scripting/Using_EEGLAB_history.html) section of the tutorial for more
-information on manipulating these structures.
-Most fields of the *EEG* structure contain single values (as detailed in
-[eeg_checkset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m)). However some important fields of the *EEG*
-structure contain sub-structures. We will describe briefly three of
-those below: *EEG.chanlocs*, *EEG.event*, and *EEG.epoch*.
+Typing *\>\> AllEEG(1)* は、最初のデータセットの構造を返します。
+AllEEG と入力 *\>\> allEEG(2)* は 2 番目の構造を返します。
+データセット。 詳細はこちら [EEGLABの歴史](/tutorials/11_Scripting/Using_EEGLAB_history.html) もっとチュートリアルのセクション
+これらの構造を操作するための情報。
+*EEG*構造のほとんどのフィールドには、単一の値が含まれている(詳細として)
+[eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m))。 しかし、*EEG*の重要な分野
+構造はサブ構造を含んでいます。 簡潔に3つを記述します
+※EEG.chanlocs*、*EEG.event*、および*EEG.epoch*
 
-### EEG.chanlocs
+### EEG.chanlocs(エグ)
 
-This EEG-structure field stores information about the EEG channel
-locations and channel names. For example, loading the tutorial dataset
-and typing *\>\> EEG.chanlocs* returns
+この EEG 構造フィールドは EEG チャネルに関する情報を格納します。
+場所とチャンネル名。 例えば、チュートリアルデータセットをロードする
+と入力 *\>\> EEG.chanlocs* を返します
 
 ``` matlab
 >> EEG.chanlocs
@@ -181,11 +181,11 @@ and typing *\>\> EEG.chanlocs* returns
         Z
 ```
 
-Here, *EEG.chanlocs* is a structure array of length 32 (one record for
-each of the 32 channels in this dataset). 
+ここでは、*EEG.chanlocs* は長さ 32 の構造配列です(レコード1つ)
+このデータセットの32チャンネルのそれぞれ。 
 
-Typing *\>\>EEG.chanlocs(1)*
-returns:
+タイピング *\>\>EEG.chanloc(1)*
+リターン:
 
 ``` matlab
 >> EEG.chanlocs(1)
@@ -202,18 +202,18 @@ returns:
         Z:      0.1253
 ```
 
-These values store the channel location coordinates and label of the
-first channel ('FPz'). You may use the [pop_chanedit.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanedit.m)
-function or menu item <span style="color: brown">Edit → Channel locations</span>
-to edit or recompute the channel location information. The value of any
-EEG structure field may also be modified manually from the MATLAB
-command line. See also the tutorial section on importing [channel locations](/tutorials/04_Import/Channel_Locations.html).
+これらの値は、チャネルの位置座標とラベルを保存します。
+最初のチャンネル ('FPz'). ご使用の際には [ポップアップ_chanedit.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanedit.m)
+機能またはメニュー項目 <span style="color: brown">編集 → チャネルの場所</span>
+チャンネルの場所情報を編集または再入力する。 任意の値
+EEG構造フィールドは、MATLABから手動で変更することもできます
+コマンドライン インポートのチュートリアルセクションも参照してください [チャネルの場所](/tutorials/04_Import/Channel_Locations.html).
 
-### EEG.event
+### エッグ・エベント
 
-The *EEG* structure field contains records of the experimental events that
-occurred while the data was being recorded, plus possible additional
-user-defined events. Loading the tutorial dataset and typing:
+*EEG* 構造フィールドには、実験的なイベントのレコードが含まれています。
+データが記録されている間に発生し、追加可能
+ユーザー定義イベント。 チュートリアルデータセットと入力を読み込みます。
 
 ``` matlab
 >> EEG.event
@@ -227,46 +227,46 @@ user-defined events. Loading the tutorial dataset and typing:
             epoch
 ```
 
-In general, fields *type*, *latency*, and *urevent* are always present
-in the event structure:
+一般的なフィールド *type*、*latency*、および *urevent* は常に存在します
+イベント構造:
 
-- *type* contains the event type
-- *latency* contains the event latency in data sample unit
-- *urevent* contains the
-index of the event in the original (= 'ur') urevent table (see below).
+- ※type* にはイベントタイプが含まれています。
+- *latency* はデータ サンプル単位のでき事の潜伏を含んでいます
+- *urevent*は含んでいます
+元のイベントのインデックス(= 'ur')ウレベントテーブル(以下参照)。
 
-Other fields like *position* are user defined and are specific to the
-experiment. 
+*position* のような他のフィールドはユーザ定義であり、
+実験。 
 
-The user may also define a field called *duration*
-(recognized by EEGLAB) for defining the duration of the event (if
-portions of the data have been deleted, the field *duration* is added
-automatically to store the duration of the break (i.e. boundary) event).
+ユーザーは、*duration* と呼ばれるフィールドを定義することもできます。
+イベントの期間を定義するための(EEGLABによって認識)
+削除されたデータの部分、フィールド *duration* が追加されました
+ブレイク(境界線)イベントの期間を自動的に保存します。
 
-If epochs have been extracted from the dataset, another field, *epoch*,
-is added to store the index of the data epoch(s) the event belongs to.
+epochsがデータセットから抽出された場合、別のフィールド、*epoch*、
+イベントが所属するデータepoch(s)のインデックスを保存するために追加されます。
 
-To learn more about the EEGLAB event structure, see the [event
-scripting tutorial](/tutorials/11_Scripting/Event_Processing_command_line.html).
+EEGLABイベントの構造について詳しく知るには、[event]を参照してください。
+スクリプトチュートリアル](/tutorials/11_Scripting/Event_Processing_command_line.html)
 
-There is also a separate 'ur' (German for 'original') event structure,
-*EEG.urevent*, which holds all the event
-information that was originally loaded into the dataset plus events that
-were manually added by the user. When continuous data is first loaded,
-the content of this structure is identical to contents of the
-*EEG.event* structure (minus the *urevent* pointer field of
-*EEG.event*). However, as users remove events from the dataset through
-artifact rejection or extract epochs from the data, some of the original
-(ur) events continue to exist only in the urevent structure.
+また「オリジナル」イベント構造のドイツ「UR」も別々に存在します。
+※イベント開催中のEEG.urevent*
+もともとデータセットにロードされた情報とイベント
+ユーザが手動で追加しました。 連続的なデータが最初に読み込まれるとき、
+この構造の内容は、内容と同一です。
+*EEG.event*構造(*urevent*のポインター フィールドをマイナス)
+*EEG.event*)。 しかし、ユーザーがデータセットからイベントを外すため
+生成物の拒絶またはデータからエポックを抽出する, 元のいくつか
+(ur)イベントは、ウレベント構造にのみ存在し続けます。
 
-The *urevent* field in the EEG.event structure above contains the index
-of the same event in the *EEG.urevent* structure array. For example: If
-a portion of the data containing the second urevent were removed from a
-dataset during artifact rejection, the second event would <u>not</u>
-remain in the *EEG.event* structure -- but would still remain in the
-*EEG.urevent* structure. Now, the second event left in the data might be
-the original third event, and so will be linked to the third
-*EEG.urevent*, i.e. checking
+EEG.event 構造の *urevent* フィールドには、インデックスが含まれています。
+*EEG.urevent* 構造配列の同じイベント。 例えば: お問い合わせ
+2番目のウレベントを含むデータの部分は、
+遺物拒絶時のデータセット、第2回イベント <u>お知らせ</u>
+*EEG.event* 構造に残りますが、まだ残っている
+*EEG.urevent*の構造。 これで、データに残っている2番目のイベントは、
+元の第3回イベントをリンクします。
+*EEG.urevent*、すなわちチェック
 
 ``` matlab
 >> EEG.event(2).urevent
@@ -275,11 +275,11 @@ the original third event, and so will be linked to the third
         3
 ```
 
-#### Event types
+#### イベントの種類
 
-Event fields of the current data structure can be displayed by typing
-''\>\> EEG.event '' on the MATLAB command line. 
-To display the field values for the first event, type:
+現在のデータ構造のイベントフィールドは、タイピングで表示できます。
+''\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\>\> MATLAB コマンドラインで EEG.event '' を実行します。 
+最初のイベントのフィールド値を表示するには、次のようにします。
 
 ``` matlab
 >> EEG.event(1)
@@ -291,26 +291,26 @@ ans =
     urevent: 1
 ```
 
-Remember that custom event fields can be added to the event structure
-and will thereafter be imported with the event information whenever the
-dataset is loaded. Therefore, the names of some event fields may differ
-in different datasets. Note that event field information can be easily
-retrieved using commands such as *\>\> {EEG.event.fieldname}*. For
-example,
+イベント構造にカスタムイベントフィールドを追加できることを忘れないでください
+また、イベント情報を随時インポートします。
+データセットをロードします。 そのため、一部のイベントフィールドの名前は異なる場合があります。
+異なるデータセットで。 イベントフィールド情報を簡単に行うことができます。
+*\>\> {EEG.event.fieldname}* などのコマンドで取得します。 お問い合わせ
+例:
 
 ``` matlab
 >> {EEG.event(1:5).type}
 ```
 
-returns the contents of the *type* field for the first 5 events:
+*type* フィールドの内容を最初の 5 のイベントで返します。
 
 ``` matlab
 ans =
     'square' 'square' 'rt' 'square' 'rt'
 ```
 
-Use the following commands to list the different event types in the
-unprocessed tutorial dataset:
+以下のコマンドを使用して、異なるイベントタイプをリストします。
+加工されていないチュートリアルデータセット:
 
 ``` matlab
 >> unique({EEG.event.type});
@@ -319,26 +319,26 @@ ans=
     'rt' 'square'
 ```
 
-The command above assumes that event types are recorded as strings. Use
-*\>\> unique(cell2mat({EEG.event.type}));* for event types stored as
-numbers.
+上記のコマンドは、イベントタイプが文字列として記録されると仮定します。 使用条件
+*\>\> ユニーク(cell2mat({EEG.event.type}));* として保存されるイベントタイプの場合
+数字。
 
-You may then use the recovered event type names to extract epochs. Below
-is the command-line equivalent of the epoch extraction procedure
-presented above in section [extracting data
-epochs](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html).
+回復したイベント名を使用してエポックを抽出することができます。 詳細はこちら
+エポック抽出手順と同等のコマンドライン
+上記のセクションで提示 [データの抽出]
+epochs(/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html).
 
 ``` matlab
 >> EEG = pop_epoch( EEG, { 'square' }, \[-1 2\], 'epochinfo', 'yes');
 ```
 
-#### Event latencies
+#### イベントのレイテンシー
 
-We may use the same command as in the section above to display the
-contents of the event latency field. Event latencies are stored in units
-of data sample points relative to (1) the beginning of the continuous
-data matrix (EEG.data). For the tutorial dataset (before any
-processing), typing:
+上記のセクションで同じコマンドを使って表示することができます。
+イベントレイテンシフィールドの内容。 イベントレイテンシーはユニットに保存されます
+データの標本は (1) 連続的な始まりに相対的にポイントします
+データ行列(EEG.data)。 チュートリアルデータセット(いずれかのため)
+処理)、タイプ:
 
 ``` matlab
 >> [EEG.event(1:5).latency]
@@ -347,10 +347,10 @@ ans =
      129.0087 218.0087 267.5481 603.0087 659.9726
 ```
 
-To see these latencies in seconds (instead of sample points above), you
-need first to convert this cell array to an ordinary numeric array, then subtract 1 (because
-the first sample point corresponds to time 0) and divide by the sampling
-rate. Therefore,
+これらのレイテンシーを秒(上のサンプルポイントの代わりに)表示するには、
+最初にこのセル配列を通常の数値配列に変換し、1 をサブトラクトする必要があります。
+最初のサンプルポイントは0時間に対応し、サンプリングによる分割
+レート。 そのため、
 
 ``` matlab
 >> ([EEG.event(1:5).latency]-1)/EEG.srate
@@ -359,11 +359,11 @@ ans =
     1.0001 1.6954 2.0824 4.7032 5.1482
 ```
 
-For consistency, for epoched datasets, the event latencies are also
-encoded in sample points with respect to the beginning of the data (as
-if the data were continuous). Thus, after extracting epoch from the
-[data
-epoch extraction](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html) tutorial, look at the first 5 event latencies:
+一貫性のために、エッチングされたデータセットでは、イベントのレイテンシーも
+データの先頭に関してサンプルポイントでエンコードされる(as)
+データが連続していた場合 したがって、エポックを抽出した後
+[データ]
+epoch抽出](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html)チュートリアル、最初の5つのイベントレイテンシーを見てみましょう:
 
 ``` matlab
 >> {EEG.event(1:5).latency}
@@ -372,12 +372,12 @@ ans =
      129 218.00 267.5394 424 513 
 ``` 
 
-Note that for an epoched dataset this information has no direct meaning.
-Instead, select menu item <span style="color: brown">Edit → Event values</span> (calling function [pop_editeventvals.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_editeventvals.m)) to display the
-latency of this event in seconds relative to the epoch time-locking
-event. From the command-line, you may use the function [eeg_point2lat.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_point2lat.m) to convert the given latencies from data
-points relative to the beginning of the data to latencies in seconds
-relative to the epoch time-locking event. For example:
+なお、epochedデータセットでは、この情報は直接的な意味はありません。
+代わりに、メニュー項目を選択 <span style="color: brown">編集 → イベントの値</span> (呼び出し機能) [pop_editeventvals.m がリリースされました。](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_editeventvals.m))表示する
+このイベントのレイテンシは、epoch 時間ロックの相対秒で
+イベント コマンドラインから、関数を使うことができます。 [eeg_point2lat.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_point2lat.m) 指定したレイテンシーをデータから変換する
+秒単位でデータの先頭に相対的なポイント
+エポックタイムロックイベントの相対的。 例えば:
 
 ``` matlab
 >> eeg_point2lat(cell2mat({EEG.event(1:5).latency}), cell2mat({EEG.event(1:5).epoch}), EEG.srate, [EEG.xmin EEG.xmax])
@@ -386,65 +386,65 @@ ans =
     0 0.6953 1.0823 -0.6953 0
 ```
 
-The reverse conversion can be accomplished using function [eeg_lat2point.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_lat2point.m).
+逆変換は機能を使って達成することができます [eeg_lat2point.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_lat2point.m).
 
-The most useful function for obtaining event information from the command-line is EEGLAB function [eeg_getepochevent.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_getepochevent.m). This
-function may be used for both continuous and epoch data to retrieve any
-event field for any event type. For example, using the tutorial data
-(after epoch extraction), type in:
+コマンドラインからイベント情報を取得するための最も便利な機能は EEGLAB 関数です。 [eeg_getepochevent.m の](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_getepochevent.m)お問い合わせ お問い合わせ
+関数は、任意の取得するために、連続およびエポックデータの両方に使用できます。
+イベントの種類を問わずイベントフィールド 例えば、チュートリアルデータを使用する
+(エポック抽出後)、タイプ:
 
 ``` matlab
 >> [rt_lat all_rt_lat] = eeg_getepochevent(EEG, 'rt', [], 'latency');
 ```
 
-to obtain the latency of events of type *rt*. The first output is an
-array containing one value per data epoch (the *first* event of the
-specified type in each data epoch). The second output is a cell array
-containing the field values for *all* the relevant events in each data
-epoch. Latency information is returned in milliseconds. (Note: The third
-input allows searching for events in a specific time window within each
-epoch. An empty value indicates that the whole epoch time range should
-be used).
-Similarly, to obtain the value of the event 'position' field for 'square'
-events in each epoch, type:
+型 *rt* のでき事の潜伏を得るために。 最初の出力は、
+データエポックあたり1つの値を含む配列(*first*イベント)
+各データエポックに指定されたタイプ。 2番目の出力はセル配列です
+*all*のフィールド値を含む各データ内の関連イベント
+エポック。 レイテンシー情報はミリ秒単位で返されます。 (注:第3項)
+入力は各々の特定の時間ウィンドウでイベントを検索できます
+エポック。 空の値は、epoch 全体の時間範囲が
+使用して下さい)。
+同様に、'square'イベント'position'フィールドの値を取得するには お問い合わせ
+各エポックのイベント, タイプ:
 
 ``` matlab
 >> [rt_lat, all_rt_lat] = eeg_getepochevent(EEG, 'square', [], 'position');
 ```
 
-Continuous data behave as a single data epoch, so type:
+連続したデータは単一のデータエポックとして振る舞います。
 
 ``` matlab
 >> [~, all_sq_lat] = eeg_getepochevent(EEG, 'square');
 ```
 
-to obtain the latencies of all 'square' events in the continuous data
-(via the second output).
+連続データ内のすべての'square'イベントの遅延を取得する
+(第二出力経由)
 
-#### Ur-events
+#### ウルビッツ
 
-A separate 'ur' (German for 'original') event
-structure, *EEG.urevent*, holds all the event information originally
-loaded into the dataset. If some events or data regions containing
-events are removed from the data, this should not affect the
-*EEG.urevent* structure. If some new events are inserted into the
-dataset, the urevent structure is automatically updated. This is useful
-to obtain information on the *context* of events in the original
-experiment. Even after extracting data epochs, the prior *context* of
-each event in a continuous or epoched dataset is still available.
-Currently, the *EEG.urevent* structure can only be examined from the
-command line.
+別の 'ur' ('オリジナル' のためのドイツ語) イベント
+*EEG.urevent* は、元々のイベント情報を保持しています。
+データセットに読み込まれます。 一部のイベントやデータ領域を含む場合
+イベントはデータから削除され、これは影響しません
+*EEG.urevent*の構造。 新規イベントを投入する場合
+データセット、ウレベント構造は自動的に更新されます。 これは便利です
+元のイベントの*context*に関する情報を得るために
+実験。 データエポックを抽出した後でも、前の*コンテキスト*の
+連続したデータセットや、epochedデータセットの各イベントは引き続きご利用いただけます。
+現在、*EEG.urevent*構造は、
+コマンドライン
 
-The *EEG.urevent* structure has the same format as the *EEG.event*
-structure. The *urevent* field in the event structure (e.g.,
-*EEG.event(n).urevent*) contains the index of the corresponding event in
-the urevent structure array -- thereby 'pointing' from the event to its
-corresponding urevent, e.g., its 'original event' number in the
-continuous data event stream. For example, if a portion of data
-containing the second event is removed from a continuous dataset during
-artifact rejection, the second event will not remain in the *EEG.event*
-structure. It *will* remain, however, in the *EEG.urevent* structure.
-e.g., the second *EEG.event* might now point to the third *EEG.urevent*:
+*EEG.urevent*構造は*EEG.event*と同じフォーマットを持っています
+構造。 イベント構造の*urevent*フィールド(例、
+*EEG.event(n).urevent*)には、対応するイベントのインデックスが含まれている
+urevent 構造配列 -- イベントからイベントへ'pointing'
+対応するイベント、例えば「オリジナルイベント」の番号など
+連続データイベントストリーム。 例えば、データの一部が
+連続データセットから2番目のイベントが削除されます。
+※EEG.event*では、アーティファクト拒否、第2回イベントは残しません。
+構造。 ※*will* は、*EEG.urevent* 構造に残ります。
+例:2番目の*EEG.event*は3番目の*EEG.urevent*を指すかもしれません:
 
 ``` matlab
 >> EEG.event(2).urevent
@@ -453,9 +453,9 @@ ans =
     3
 ```
 
-Note that *urevent* indices in the *EEG.event* structure do not have to
-increase linearly. For example, after epochs were extracted from the
-tutorial dataset,
+*EEG.event* 構造の *urevent* の徴候は必要ではないです
+線形に増加して下さい。 例えば、エポックが抽出された後、
+チュートリアルデータセット,
 
 ``` matlab
 >> {EEG.event(1:5).urevent}
@@ -464,85 +464,85 @@ ans =
     [1] [2] [3] [1] [2]
 ```
 
-This means that events 1 and 2 (in the first data epoch) and events 4
-and 5 (in the second data epoch) are the same original
-events.
+つまり、イベント1と2(最初のデータエポック)とイベント4
+と5(第2のデータエポック内)は同じ元の
+イベント
 
-A few EEGLAB command-line functions use the *urevent* structure: [eeg_time2prev.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_time2prev.m), [eeg_urlatency.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_urlatency.m) and
-[eeg_context.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m). The next
-section provides more insight into the relation between the *EEG.event*
-and *EEG.urevent* structures.
+いくつかの EEGLAB コマンドライン関数は、 *urevent* 構造を使用します。 [eeg_time2prev.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_time2prev.m), [eeg_urlatency.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_urlatency.m) そして、
+[eeg_context.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m)お問い合わせ 次へ
+セクションでは、*EEG.event* 間の関連性についてのより多くの洞察を提供します。
+*EEG.urevent*構造。
 
-#### Event boundaries
+#### イベントの境界
 
-Events of reserved type 'boundary' are created automatically by EEGLAB
-when portions of the data are rejected from continuous data or when
-continuous datasets are concatenated. These events indicate the
-latencies and (when possible) the durations of the discontinuities these
-operations introduce in the data. In the image below, a portion of data
-that included event \#2 was rejected, and a type 'boundary' event was
-added to the event structure. Its index became 2, since events are
-sorted by their latencies. The urevent structure continues to hold the
-original event information, with no added 'boundary' event.
+EEGLABによる予約型「境界」が自動的に作成されるイベント
+データの部分が連続データから除外される場合や、
+連続的なデータセットは連結されます。 これらのイベントは、
+レイテンシーと(可能な場合)これらを中止する期間
+データに導入した操作。 下の画像では、データの一部
+含まれたイベント \#2 は拒否され、型 'boundary' イベントは
+イベント構造に追加。 イベントが行われるため、そのインデックスが2になりました。
+レイテンシーでソート。 出口の構造は保持し続けます
+オリジナルイベント情報を追加せず、'boundary'イベントを追加。
 
 
-![Image:Eventcontinuous.gif](/assets/images/Eventcontinuous.gif)
+![画像:イベント連続.gif](/assets/images/Eventcontinuous.gif)
 
-The latency of a 'boundary' event is usually between two samples. For example, if samples 101 to 200 are removed, then the latency of the 'boundary'  event will be 100.5, indicating with no ambiguity that sample 101 was removed while we kept sample 100. Also,  'boundary' event durations indicate the number of samples removed (in the example above, 100 of them). Storing this information allows determining how much data was removed. When merging datasets, 'boundary' event duration is irrelevant and set to NaN.
+「境界」イベントのレイテンシーは通常2つのサンプル間で行われます。 例えば、サンプル101から200が削除されると、「境界」イベントのレイテンシは100.5で、サンプル100を保ちながら101が削除されたという曖昧さはありません。 また、'boundary' イベントの期間は、削除されたサンプル数(上記の例では100)を示しています。 この情報を保存すると、データが削除された回数を判断できます。 データセットをマージするときは、'boundary' イベントの期間が無関係でNaNに設定されます。
 
-Note that boundary events are allowed latencies outside of the data range. If the data has 1000 samples, the sample limit is 1 to 1000 (MATLAB starts at sample 1). Events at latency 0.5 and 1000.5 of type 'boundary' are allowed outside the data limits. These boundary events indicate that data has been removed at the onset or the end of the data, and the duration field indicates how much data was removed.
+境界イベントは、データ範囲外のレイテンシーが許可されていることに注意してください。 データに1000サンプルがある場合、サンプルの限界は1〜1000です(MATLABはサンプル1から始まります)。 レイテンシー0.5と1000.5の型「境界」でのイベントは、データ制限の外で許可されます。 これらの境界イベントは、データがオンセットまたはデータの終了時に削除され、期間フィールドはどのくらいのデータが削除されたかを示します。
 
-Boundary events are standard event structures with *event.type* =
-'boundary'. They also have an *event.duration* field that holds the
-duration of the rejected data portion (in data samples). Note that since
-all events in a dataset must have the same set of fields, in datasets
-containing boundary events, every event will have a 'duration' field --
-set by default to 0 or empty except for true boundary type events. Boundary
-events are used by several signal processing functions that process
-continuous data. For example, calculating the data spectrum in the [pop_spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) function operates only on continuous portions
-of the data (between boundary events). Also, data epoching functions
-will not extract epochs that contain a boundary event.
+境界イベントは、*event.type* = の標準的なイベント構造です。
+'境界'。 また、*event.duration* フィールドを保持している
+拒否されたデータ部分(データサンプル)の期間。 それ以来
+データセット内のすべてのイベントは、データセットで同じフィールドを持つ必要があります。
+境界イベントを含む全てのイベントは、'duration' フィールドを持ちます。
+真の境界型イベントを除き、デフォルトで0または空に設定します。 バウンダリー
+イベントは処理する複数の信号処理機能によって使用されます
+連続データ。 例えば、データのスペクトルを計算する [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) 機能は連続した部分だけで作動します
+データ(境界イベント間で)。 また、データエッチング機能
+境界イベントを含むエポックを抽出しません。
 
-*Epoched* datasets do not have boundary events between data epochs.
-Instead of being stored in a 2-D array of size (channels, sample_points)
-like continuous data, epoched data is stored in a 3-D array of size
-(channels, sample_points, trials). Events in data epochs are stored as
-if the data were continuous, in effect treating the data as a 2-D array
-of size (channels, (sample_points\*trials)). This format makes handling
-events from the command-line more convenient.
+*Epoched* データセットはデータepochs間の境界イベントを持っていません。
+2次元サイズの配列(チャンネル、sample_points)に保存される代わりに
+連続データのように、epochedデータは3D配列で保存されます
+(チャンネル、sample_points、トライアル) データエポックのイベントはそのまま保存されます
+データを連続していれば、2次元配列としてデータを処理する効果
+サイズ(チャンネル、(sample_points\*trials))) このフォーマットは処理をします
+コマンドラインからのイベントは便利です。
 
-The purpose of the *EEG.urevent* structure is to retain the full record
-of experimental events from the original continuous data, as shown in the image below. Function [eeg_context.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) uses *urevents*
-information to find events defined by their neighboring event context
-in the experiment (and original data).
+*EEG.urevent*の構造の目的は完全な記録を保持することです
+以下に示すように、元の連続データから実験的なイベント。 ファンクション [eeg_context.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) *urevents*の使用
+近隣イベントのコンテキストで定義されたイベントを見つけるための情報
+実験(元のデータ)
 
-![Image:Eventepoch.gif](/assets/images/Eventepoch.gif)
+![画像:Eventepoch.gif](/assets/images/Eventepoch.gif)
 
-**'Hard' boundaries between datasets**. When continuous datasets are concatenated, a 'harder' type of boundary
-event must be inserted, this time into both the *EEG.event* and
-*EEG.urevent* structures. In particular, if the first urevent in the
-pair was the last event in one dataset, and the next urevent was the
-first event in the next concatenated dataset (which need not have been
-recorded at the same time), the latencies of the neighboring pair of
-urevents cannot be compared directly. Such so-called 'hard' boundary
-events marking the joint between concatenated datasets have the usual
-type 'boundary' but a special 'duration' value, *NaN* (MATLAB numeric
-value 'not-a-number'). They are the only 'boundary' events present in
-*EEG.urevent* and are the only type 'boundary' events in *EEG.event*
-with a 'duration' of 'NaN' and an *EEG.event.urevent* pointer to an
-urevent. Hard 'boundary' events are important for functions such as [eeg_context.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) that are concerned with temporal relationships
-among events in the original experiment (i.e., among urevents).
+**データセット間の「ハード」境界**。 連続したデータセットが連結されると、境界の「ハードル」タイプ
+*EEG.event* と、
+*EEG.urevent*の構造。 特に、最初の緊急事態が発生した場合
+ペアは1つのデータセットで最後のイベントでした。次のイベントは
+次の連結データセットで最初のイベント(不要)
+同時に録音)、隣接するペアのレイテンシー
+尿素は直接比較できません。 いわゆる「ハード」境界
+連結データセット間でのジョイントをマークするイベントは、通常どおり
+type 'boundary' が、特別な 'duration' 値、 *NaN* (MATLAB 数値)
+'not-a-number' の値。 彼らは唯一の「境界」イベントです
+*EEG.urevent* は、*EEG.event* で唯一の「境界」イベントです。
+'NaN' と *EEG.event.urevent* ポインタの 'duration' を使って
+尿道。 ハードドライブの「境界」イベントは、などの機能のために重要です [eeg_context.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) 一時的な関係に関係する
+実験中のイベント(例:ウレベント)
 
-### EEG.epoch
+### EEG.epochの特長
 
-The *EEG.epoch* structure is empty in continuous datasets but is
-automatically filled during epoch extraction. It is computed from the *EEG.event* structure by the function [eeg_checkset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m) (with
-flag 'eventconsistency') as a convenience for users who may want to use
-it in writing EEGLAB scripts. One of the few EEGLAB functions that use
-the *EEG.epoch* structure is [eeg_context.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m). Each *EEG.epoch* entry lists the type and
-*epoch* latency (in msec) of every event that occurred during the epoch.
-The following example was run on the tutorial set after it was converted
-to data epochs.
+*EEG.epoch* 構造は連続したデータセットで空ですが、
+エポック抽出時に自動的に充填されます。 機能による*EEG.event*構造から計算されます [eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m) (付き)
+'eventconsistency' を、使用したいユーザーの利便性としてフラグします。
+EEGLABスクリプトを書いています。 使用するEEGLAB関数の1つ
+*EEG.epoch*構造はあります [eeg_context.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m)お問い合わせ 各 *EEG.epoch* エントリーはタイプをリストします。
+*epoch* レイテンシ(msec)は、エポック中に発生した全てのイベントのことです。
+変換後に設定したチュートリアルで次の例を実行しました
+データエポックに。
 
 ``` matlab
 >> EEG.epoch
@@ -556,7 +556,7 @@ ans =
         eventurevent
 ```
 
-Note that this dataset contains 80 epochs (or trials). Now type:
+このデータセットには80個のエポック(またはトライアル)が含まれています。 タイプ:
 
 ``` matlab
 >> EEG.epoch(1)
@@ -569,38 +569,38 @@ ans =
     eventurevent: {[1] [2] [3]}
 ```
 
-The first field *EEG.epoch(1).event* contains the indices of all events
-that occurred during this epoch. The fields *EEG.epoch(1).eventtype*,
-*EEG.epoch(1).eventposition*, and *EEG.epoch(1).eventlatency* are cell
-arrays containing the event field values of each of the events in that
-epoch. Note that the latencies in *EEG.epoch(1).eventlatency* are in
-milliseconds with respect to the epoch time-locking event. 
+最初のフィールド *EEG.epoch(1).event* すべてのイベントのインデックスが含まれています
+このエポックの間に発生した。 フィールド *EEG.epoch(1).eventtype*,
+*EEG.epoch(1).eventposition*および*EEG.epoch(1).eventlatency*は細胞です
+イベントの各イベントのイベントフィールド値を含む配列
+エポック。 *EEG.epoch(1).eventlatency*のレイテンシーは
+エポックタイムロックイベントに関するミリ秒。 
 
-Some datasets contain *EEG.epoch.eventduration*,  the duration of the 
-events in milliseconds. Note that this format is different from 
-*EEG.event.duration*, which is stored as frames (but displayed in
-seconds or milliseconds).
+一部のデータセットには、*EEG.epoch.eventduration* が含まれています。 
+ミリ秒単位のイベント。 このフォーマットは異なることに注意してください 
+※フレームとして保存されるEEG.event.duration*(ただし表示)
+秒またはミリ秒。
 
-When extracting epochs, it is possible to remove all but a selected set
-of events from the data. For example, if there is only one event in an
-epoch, the epoch table may look more readable. Using the tutorial
-dataset after extracting data epochs, select item <span style="color: brown">Edit → Select epoch/event</span> in the menu, and then enter (in the pop-up
-window below) 'rt' in the *Event type* field, then select *Keep only
-selected events and remove all other events* instead of *Remove epochs
-not referenced by any event*. Press *Ok* to create a new data set. Note:
-This daughter (and its future child datasets, if any) contains no trace
-(except in *EEG.urevent*) of all the events that actually occurred
-during the experiment but were erased by this process.
+エポックを抽出するときは、すべて削除することができますが、選択したセット
+データからのイベント。 例えば、イベントが1つしかない場合
+epochは、epochテーブルが読みやすくなります。 チュートリアルを使用する
+データエポック抽出後のデータセット、項目選択 <span style="color: brown">編集 → 選択する epoch/event</span> メニューで、入力します(ポップアップで)
+下のウィンドウ) 'rt' を *Event type* フィールドで選択します。
+選択したイベントを削除し、他のイベントをすべて削除* 代わりに * 削除 epochs
+いかなるイベントでも参照されません*。 *Ok*を押して、新しいデータセットを作成します。 注意:
+この娘(そしてその将来の子供のデータセット、もしあれば)は痕跡を含まない
+実際に発生した全てのイベント(*EEG.urevent*を除く)
+実験中は、この工程で消去された。
 
-![Image:Pop_selectevent.jpg](/assets/images/Pop_selectevent.jpg)
+![画像:Pop_selectevent.jpg](/assets/images/Pop_selectevent.jpg)
 
-then typing
+その後、タイピング
 
 ``` matlab
 >> EEG.epoch(1)
 ```
 
-returns
+フィードバック
 
 ``` matlab
 
@@ -612,28 +612,28 @@ ans =
     eventurevent: 3
 ```
 
-This means that epoch number 1 contains a single event of type 'rt' at
-latency 1082.3 ms. It also indicates that this is the first event in the
-dataset (i.e., *event: 1*), but note that it was the third event in the
-original dataset, since its corresponding urevent (stored in
-*EEG.event.urevent*) is 3.
+つまり、epoch 番号 1 には、型 'rt' の 1 つのイベントが 1 個あります。
+latency 1082.3 ms. また、これは最初のイベントであることを示しています
+データセット(例:*event:1*)が、3番目のイベントだったことに注意
+元のデータセットは対応するurevent以来(貯えられる)
+*EEG.event.urevent*は3です。
 
-### Saved .set files
+### 保存された .set ファイル
 
-EEGLAB datasets are saved in *.set* files. *.set* files are MATLAB files. You may save an EEG structure using the command.
+EEGLABのデータセットは、*.set*ファイルに保存されます。 *.set* ファイルは MATLAB ファイルです。 コマンドを使用して EEG 構造を保存できます。
 
 ```matlab
 save -mat myfile.set EEG
 ```
 
-This would be a valid dataset file for EEGLAB. Another supported format is to save the content of the structure itself (default as of EEGLAB 2021).
+EEGLABの有効なデータセットファイルとなります。 別のサポートされている形式は、構造自体のコンテンツを保存することです(EEGLAB 2021のデフォルト)。
 
 ```matlab
 save -mat myfile.set -struct EEG
 ```
 
-Yet another supported format is to save two files. One file that contains metadata (with extension .set, and is a type of MATLAB file), and one file containing raw data (float32 with .fdt extension). The raw data file is organized in samples x channels (so first all the data for one channel, then all the data for a second channel, etc.). In case, there are several trials, the raw data file is organized in samples x trials x channels. This is equivalent to the following MATLAB commands.
-Another format for the raw data file (with extension .dat) was to save the data transposed compared to the .fdt file. This format was discontinued more than a decade ago, but can still be read by EEGLAB.
+しかし、別のサポートされているフォーマットは、2つのファイルを保存することです。 メタデータ (拡張子 .set と MATLAB ファイルの種類) を含む 1 つのファイル (.fdt 拡張子を持つ .float32 )。 生データファイルは、サンプルxチャネル(最初の1つのチャネルのすべてのデータ、そして2番目のチャネルのためのすべてのデータなど)で整理されます。 場合によっては、サンプルxトライアルxチャンネルで生データファイルが整理されています。 以下のMATLABコマンドと同じです。
+生データファイル(拡張子 .dat)の別の形式は、.fdt ファイルと比較して、データがトランスポーズされたまま保存することであった。 このフォーマットは10年以上前から廃止されましたが、EEGLABは引き続き読むことができます。
 
 ```matlab
 data = EEG.data;
@@ -642,26 +642,26 @@ floatwrite(data(:,:)', 'myfile.fdt');
 save -mat myfile.set EEG
 ```
 
-There are additional checks performed by the function [pop_loadset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m), so it is always recommended to read EEGLAB datasets using this function.
+機能によって実行される追加のチェックがあります [pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m)なので、この関数を使って EEGLAB のデータセットを読み込むことをおすすめします。
 
 ```matlab
 EEG = pop_loadset('myfile.set')
 ```
 
-The STUDY structure
+STUDYの構造
 ---------
-This section gives details of EEGLAB structures necessary for writing
-custom MATLAB scripts, functions, and plugins that operate on EEGLAB
-STUDY structures and studysets.
+このセクションでは、EEGLAB の記述に必要な構造の詳細を提供します。
+EEGLABで動作するカスタムMATLABスクリプト、関数、プラグイン
+STUDY構造とスタディセット。
 
-The *STUDY* structure contains information for each of its datasets,
-plus additional information to allow the processing of all datasets
-sequentially. Below is a prototypical *STUDY* structure. In this tutorial, the
-examples shown were collected from analysis of a small sample studyset
-comprising ten datasets, two conditions from each of five subjects, which you may download [here](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (1.8
-GB).
-After loading a studyset (see previous sections, or as described below)using the function [pop_loadstudy.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadstudy.m), typing *STUDY* on MATLAB
-command line will produce results like this:
+※STUDY* 構造体には、各データセットの情報が含まれています。
+すべてのデータセットの処理を可能にする追加情報
+お問い合わせ ※STUDY*構造体は以下です。 このチュートリアルでは、
+小さなサンプルスタディセットの解析から得られた例
+10つのデータセット、各5つの被験者から2つの条件を比較し、ダウンロードできます。 [詳しくはこちら](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (1.8
+GB)。
+関数を使用してスタディセットをロードした後(前のセクションを参照するか、または下述のように) [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadstudy.m)MATLABの*STUDY*を入力
+コマンドラインは以下のような結果を生み出します。
 
 ``` matlab
 >> STUDY
@@ -683,38 +683,38 @@ STUDY =
     etc:        [1x1 struct]
 ```
 
-The field *STUDY.datasetinfo* is an array of structures whose length is
-the number of datasets in the *STUDY*. Each structure stores information
-about one of the datasets, including its subject, condition, session,
-and group labels. It also includes a pointer to the dataset file itself
-(*as explained below in more detail*).
+*STUDY.datasetinfo* は長さがある構造の配列です
+*STUDY*のデータセットの数。 各構造店舗情報
+その主題、条件、セッションを含むデータセットの1つについて、
+グループラベル また、データセットファイル自体にポインタが含まれています
+(*詳細は以下に説明)
 
-*STUDY.datasetinfo* sub-fields *subject*, *group*, *session* and
-*condition* label the subject, subject group, session, and condition
-associated with each dataset in the study. This information must be
-provided by the user when the *STUDY* structure is created. Otherwise,
-default values are assumed.
+*STUDY.datasetinfo* サブフィールド *subject*、*group*、*session* および
+*condition* は、対象グループ、セッション、条件をラベル付けます。
+研究の各データセットに関連付けられている。 この情報は、
+*STUDY* 構造が作成されるとユーザが提供しました。 その他,
+デフォルト値は想定されます。
 
-The *STUDY.cluster* field is an array of cluster structures, initialized
-when the *STUDY* is created and updated after clustering is performed
-(*as explained below in more detail*). After clustering the independent components, each of the identified components in each dataset is assigned to one component cluster (in addition to
-Cluster 1 that contains all components identified for clustering).
+*STUDY.cluster* フィールドはクラスター構造の配列で、初期化
+*STUDY*が作成され、クラスタリング後に更新される場合
+(*詳細は以下に説明) 独立したコンポーネントをクラスターした後、各データセット内の各識別されたコンポーネントが1つのコンポーネントクラスターに割り当てられます。
+クラスタリングのために識別されるすべてのコンポーネントを含むクラスタ1。
 
-The *STUDY.history* field is equivalent to the *history* field of the
-*EEG* structure. It stores all the command line calls to the functions
-from the gui. For basic script writing using command history
-information, see the [using EEGLAB history](/tutorials/11_Scripting/Using_EEGLAB_history.html) section of the tutorial.
+*STUDY.history* フィールドは *history* フィールドと同等です。
+*EEG*の構造。 すべてのコマンドラインコールを関数に保存します。
+gui から。 コマンド履歴を用いた基本的なスクリプト作成
+情報、参照 [EEGLABの歴史](/tutorials/11_Scripting/Using_EEGLAB_history.html) チュートリアルのセクション。
 
-The *STUDY.etc* field contains internal information that helps manage
-the use of the *STUDY* structure by the clustering functions. In
-particular, pre-clustering data are stored there before clustering is
-performed.
+*STUDY.etc* フィールドには、管理に役立つ内部情報が含まれています
+*STUDY*構造をクラスタリング機能で使用 お問い合わせ
+特に、クラスタリング前のプリクラスタデータが保存されます
+実行する。
 
-### The STUDY.datasetinfo sub-structure
-The *STUDY.datasetinfo* field is used for holding information on the
-datasets that are part of the study. Below is an example *datasetinfo*
-structure, one that holds information about the first dataset in the
-*STUDY*:
+### STUDY.datasetinfo サブ構造
+*STUDY.datasetinfo* フィールドは、情報を保持するために使用されます
+研究の一部であるデータセット。 以下は、例えば *datasetinfo* です。
+構造、最初のデータセットに関する情報を保持する1
+*スタディ*:
 
 ``` matlab
 >> STUDY.datasetinfo(1)
@@ -731,39 +731,39 @@ structure, one that holds information about the first dataset in the
         index:      1
 ```
 
-This information was posted when the *STUDY* was created by the user.
+*STUDY*がユーザによって作成されたとき、この情報は投稿されました。
 
-The *datasetinfo.filepath* and *datasetinfo.filename* fields give the
-location of the dataset on disk.
+*datasetinfo.filepath* と *datasetinfo.filename* フィールドは
+ディスク上のデータセットの場所。
 
-The *datasetinfo.subject* field attaches a subject code to the dataset.
-Note: Multiple datasets from the same subject belonging to a *STUDY* are
-stored under different *datasetinfo* entries and are usually distinguished
-as being in different experimental conditions and/or as representing
-different experimental sessions.
+*datasetinfo.subject* フィールドは、データセットの対象となるコードを添付します。
+注意: *STUDY* に含まれている同じ主題からの複数のデータセットはあります
+異なる *datasetinfo* エントリに保存され、通常区別されます。
+異なる実験条件や/または表現として
+異なる実験セッション。
 
-The *datasetinfo.group* field attaches a subject group label to the
-dataset.
+*datasetinfo.group* フィールドは、対象グループラベルを
+データセット。
 
-The *datasetinfo.condition* and *datasetinfo.session* fields hold
-dataset condition and session labels. If the *condition* field is empty,
-all datasets are assumed to represent the same condition. If the
-*session* field is empty, all datasets in the same condition are assumed
-to have been recorded in different sessions.
+*datasetinfo.condition* および *datasetinfo.session* フィールドホールド
+データセット条件とセッションラベル。 *condition* フィールドが空の場合、
+すべてのデータセットは同じ条件を表すと仮定されます。 もし、
+*session* フィールドは空で、同じ条件のすべてのデータセットは仮定されます
+異なるセッションで記録されていること。
 
-The *datasetinfo.index* field holds the dataset index in the *ALLEEG*
-vector of currently-loaded dataset structures. It is redundant but
-useful when the the substructure is used as input to another function
-(i.e., *datasetinfo.index = 1* must correspond to *ALLEEG(1)*, *datasetinfo.index =
-2* to *ALLEEG(2)*, etc).
+*datasetinfo.index* フィールドは、*ALLEEG* 内のデータセットインデックスを保持しています。
+現在ロードされたデータセット構造のベクトル。 冗長ですが、
+サブ構造が別の関数への入力として使用されるとき有用
+(例: *datasetinfo.index = 1* は *ALLEEG(1)*、*datasetinfo.index.= に対応する必要があります)
+*ALLEEG(2)*等への2*。
 
-The *datasetinfo.comps* field holds indices of the components of the
-dataset that have been designated for clustering. When it is empty, all
-of its components are to be clustered.
+*datasetinfo.comps* フィールドはコンポーネントのインデックスを保持しています
+クラスタリングに指定されているデータセット。 空の場合、すべて
+そのコンポーネントはクラスター化される。
 
-The *datasetinfo.trialinfo* field holds information about each data
-trial. It is empty for continuous data. This field allow to create
-contrast between trials within a given dataset and is described below.
+*datasetinfo.trialinfo* フィールドは各データに関する情報を保持しています
+トライアル 連続データが空です。 このフィールドでは、
+与えられたデータセット内の試験との違いは、以下に記載されています。
 
 ``` matlab
 >> STUDY.datasetinfo(1).trialinfo(1)
@@ -778,21 +778,21 @@ ans =
            type: 'S253'
 ```
 
-The fields in the trialinfo data structure mirror the field in the event
-structure of the datasets (the fields are the same as in *EEG.event*). The
-field 'type' contains the type of stimulus. The fields 'duration'
-indicates the duration of presentation of the stimulus in samples. Other
-fields ('chan', 'description', 'points') contain information specific to
-a given dataset. In general, a different dataset will contain different
-fields. 
+トライアル情報のデータ構造のフィールドはイベントのフィールドをミラーリングします
+データセットの構造(フィールドは*EEG.event*と同じです)。 ふりがな
+フィールド 'type' には、刺激の種類が含まれています。 フィールド 'duration'
+サンプルの刺激の提示の持続時間を示します。 その他
+フィールド ('chan', 'description', 'points') には、
+与えられたデータセット。 一般的に、異なるデータセットは異なる
+フィールド。 
 
-### The STUDY.design sub-structure
-For the purpose of performing inference testing, any (m x n) design is
-possible (including choosing independent variables from among
-conditions, groups, sessions, particular stimulus-related trials, or
-other trial subsets). Below is a description of the *STUDY* design fields.
+### STUDY.design サブ構造
+推論テストを実行する目的のために、任意の(m x n)設計は
+可能(独立変数の選択を含む)
+条件、グループ、セッション、特定の刺激関連試験、または
+その他のトライアルサブセット ※STUDY*の設計分野の説明です。
 
-This is the current (v2019) STUDY.design sub-structure:
+これは、現在の(v2019)STUDY.designサブ構造です。
 
 ``` matlab
 >> STUDY.design(1)
@@ -805,7 +805,7 @@ This is the current (v2019) STUDY.design sub-structure:
           include: {}
 ```
 
-Exploding the contents of each of these sub-structures, we obtain
+これらのサブ構造の各コンテンツの展開、取得
 
 ``` matlab
              name: 'Design 1 - light and audio all subjects'
@@ -823,52 +823,52 @@ Exploding the contents of each of these sub-structures, we obtain
          include: {}
 ```
 
--   The 'variable' field stands for 'independent variable.' Currently,
-    up to two independent variables may be defined when using EEGLAB
-    standard plotting functions (when using the LIMO extension to EEGLAB
-    for calculating statistics and plotting results, an arbitrary number
-    of independent variables may be used). STUDY.design(x).variable(1)
-    contains the description of the first independent variable for STUDY
-    design number x, and STUDY.design(x).variable(2) contains the
-    description of the second independent variable (if any). Each
-    independent variable has a 'label', a pairing status ('on', for
-    paired data and 'off' for unpaired data), associated values, and a
-    type (categorical or continuous - note that continuous variable are
-    only relevant when using the LIMO extension to EEGLAB). For
-    instance, in this specific example the independent variable
-    'condition' may take the values 'ignore', 'memorize' and 'probe'. As
-    detailed in the graphic interface STUDY.design section, values may
-    be combined by concatenating the value labels and separating them
-    with a '-' character. For instance 'memorize - probe' is a new value
-    for the variable 'condition' and it points to datasets containing
-    either the 'memorize' or the 'probe' stimuli.
+-   'variable' フィールドは、'independent 変数の略です。' 現在、
+    EEGLAB を使用する場合は、2 つの独立した変数まで定義できます。
+    標準プロット機能(LIMOエクステンションをEEGLABに使用する場合)
+    統計を計算し、結果をプロットするために、任意の数
+    独立した変数は使用することができます)。 STUDY.design(x).variable(1)
+    STUDYの最初の独立した変数の説明が含まれています
+    設計番号 x、STUDY.design(x).variable(2) は含んでいます
+    2番目の独立した変数の説明(もしあれば)。 詳しくはこちら
+    独立した変数は「ラベル」、ペアリングステータス('on'、
+    ペアリングされたデータと 'off' がペアリングされていないデータ)、関連する値、および
+    タイプ(分類的または連続的) - 連続変数が
+    LIMO エクステンションを EEGLAB に使用する場合のみ関連します。 お問い合わせ
+    例えば、この特定の例では独立した変数
+    'condition' は、'ignore'、'memorize'、'probe' の値を取ることができます。 お問い合わせ
+    グラフィックインターフェイスSTUDY.designセクションで詳細, 値がかもしれない
+    値ラベルを連結し、それらを分離することによって結合される
+    '-' 文字で。 例えば、'memorize - Probe' は新しい値です。
+    変数 'condition' では、 変数 'condition' に、 変数 'condition' に 含まれたデータセットを指しています。
+    'memorize' または 'probe' stimuli のいずれか。
 
--   The 'cases' field contains the descriptions of the single 'cases' (a
-    term adopted in statistics from clinical studies). Using the current
-    interface, it is not possible to define 'cases' other than subjects
-    (although when plotting single subjects, selecting the option to use
-    single trials for statistics automatically makes 'cases' equivalent
-    to 'trials').
+-   'cases' フィールドには、単一の 'cases' の説明が含まれています(a
+    臨床研究の統計で採用される用語。 現在の使用
+    インターフェイスは、 'cases' を定義することができません。
+    (単一の被写体をプロットするときは、使用するオプションを選択します)
+    統計のための単一の試験は「ケース」の同等を自動的に作ります
+    'trials' へ。
 
--   The 'filepath' field is the path where the data files are being
-    stored.
+-   'filepath' フィールドは、データファイルが存在しているパスです。
+    保存される。
 
--   The 'include' field is a list of independent variables and values to
-    include in the design - for instance, to include 'memorize' stimuli
-    only (and ignore all subject datasets (or, for single-trial
-    statistics, all trials) that do not have this independent variable
-    value.
+-   'include' フィールドは独立した変数と値のリストです。
+    たとえば、'memorize' stimuli を含むデザインに含める
+    唯一の(およびすべての対象データセットを無視する)(または、シングルトライアルの場合)
+    この独立した変数を持たない統計、すべての試験)
+    値。
 
-#### Definition of *STUDY* design independent variables
+#### *STUDY*の設計独立した変数の定義
 
-Most independent variables are defined in the main *STUDY* interface when
-creating a STUDY. 'condition', 'group' and 'session' are independent
-variables defined in the first *STUDY* editing GUI. In addition to these
-variables, EEGLAB extracts independent variables for each subset of data
-epochs based on epoch field information for the time-locking event in
-each dataset. The function [std_maketrialinfo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_maketrialinfo.m) creates the
-'trialinfo' substructure in *STUDY.datasetinfo*. For instance, the first
-dataset in the *STUDY* may have the properties:
+ほとんどの独立した変数は時主要な*STUDY*インターフェイスで定義されます
+STUDY. 'condition', 'group', 'session' は独立した
+最初の*STUDY*編集GUIで定義された変数。 これらに加えて
+変数、EEGLAB はデータの各サブセットに対して独立した変数を抽出します
+epochs フィールド情報に基づくタイムロックイベント
+各データセット。 関数 [std_maketrialinfo.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_maketrialinfo.m) 作成する
+*STUDY.datasetinfo* の 'trialinfo' サブ構造 例えば、最初に
+*STUDY*内のデータセットは、プロパティを持つ場合があります。
 
 ``` matlab
   STUDY.datasetinfo(1).condition = 'a';
@@ -884,40 +884,40 @@ dataset in the *STUDY* may have the properties:
   STUDY.datasetinfo(1).trialinfo(9).presentation = 'spontaneous2';
 ```
 
-The 'trialinfo' structure describes the property of each trial for
-dataset number 1. Trial number 1, 2, 3 are trials of presentation type
-'evoked', whereas trials 4, 5, 6 are trials of presentation type
-'spontaneous1' and trials 7, 8, 9 are trials of presentation type
-'spontaneous2'.
+'trialinfo' 構造は、各試験のプロパティについて説明しています。
+データセット番号 1. 試用番号1、2、3はプレゼンテーションタイプの試験です
+'evoked', Whereas 試験 4, 5, 6 はプレゼンテーションタイプの試験です
+'spontaneous1' と試用版 7, 8, 9 は、プレゼンテーションタイプの試用版です。
+'spontaneous2'。
 
-The function [std_makedesign.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_makedesign.m) (or its GUI equivalent
-[pop_studydesign.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_studydesign.m)) uses the information defined above to create
-STUDY designs. The content for the 'variable1' entry of the
-[std_makedesign.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_makedesign.m) function can be either a field of 'datasetinfo' or
-a field of 'datasetinfo.trialinfo'. Fields from 'trialinfo' are used in
-a similar way to fields of STUDY.datasetinfo structure. For instance if
-the STUDY.datasetinfo is defined as above.
+関数 [std_makedesign.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_makedesign.m) (またはそのGUI等)
+[pop_studydesign.m がリリースされました。](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_studydesign.m))上記の情報を使用して作成します
+STUDYの設計。 'variable1' エントリのコンテンツ
+[std_makedesign.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_makedesign.m) 関数は 'datasetinfo' のフィールドか、
+'datasetinfo.trialinfo' のフィールド。 'trialinfo' のフィールドは、
+STUDY.datasetinfo構造のフィールドに類似した方法。 例えば
+STUDY.datasetinfo は上記と定義されます。
 
-To call std_makestudy(), simply write:
+std_makestudy() を呼び出すには、次のように記述します。
 
 ``` matlab
 >> STUDY = std_makedesign(STUDY, ALLEEG, 1, 'variable1', 'presentation');
 ```
 
-To select specific values for 'presentation'
+「表示」の特定の値を選択する お問い合わせ
 
 ``` matlab
 >> STUDY = std_makedesign(STUDY, ALLEEG, 1, 'variable1', 'presentation', 'values1', { 'spontaneous1' 'spontaneous2' } );
 ```
 
-### The STUDY.changrp sub-structure
+### STUDY.changrp サブ構造
 
-The *STUDY.changrp* sub-structure is the equivalent of the the
-*STUDY.cluster* structure for data channels. There is usually as many
-element in *STUDY.changrp* as there are data channels. Each element of
-*STUDY.changrp* contains one data channels and regroup information for
-this data channel across all subjects. For instance, after precomputing
-channel measures, typing *STUDY.changrp(1)* may return
+*STUDY.changrp* サブ構造は、
+*STUDY.cluster* データ チャネルのための構造。 たくさんあります
+*STUDY.changrp* にデータ チャネルがある要素。 各要素
+*STUDY.changrp*は1つのデータ チャネルおよびregroup情報を含んでいます
+すべての被験者を横断するデータチャネル。 例えば、事前入力後
+*STUDY.changrp(1)* をタイプするチャネルの対策は戻ります
 
 ``` matlab
 >> STUDY.changrp
@@ -929,35 +929,35 @@ channel measures, typing *STUDY.changrp(1)* may return
         chaninds
 ```
 
-The *changrp.name* field contains the name of the channel (i.e. 'FP1').
-The *changrp.channels* field contains the name of the channels in this
-group. This is because a group may contain several channels (for
-instance for computing measures like ERP across a group of channels, or
-for instance for computing the RMS across all data channels; note that
-these features are not yet completely supported in the GUI).
+*changrp.name* フィールドには、チャンネルの名前(つまり 'FP1')が含まれています。
+*changrp.channels* フィールドには、このチャネルの名前が含まれています。
+グループ グループには複数のチャンネルが含まれている可能性があるためです(for)
+チャネルのグループ全体でERPのような計算措置のインスタンス、または
+たとえば、すべてのデータチャネルで RMS を計算します。
+これらの機能はGUIではまだ完全にサポートされていません。
 
-### The STUDY.cluster sub-structure
+### STUDY.clusterサブ構造
 
-The *STUDY.cluster* sub-structure stores information about the
-clustering methods applied to the *STUDY* and the results of clustering.
-Components identified for clustering in each *STUDY* dataset are each
-assigned to one of the several resulting component clusters. Hopefully,
-different clusters may have spatially and/or functionally distinct
-origins and dynamics in the recorded data. For instance, one component
-cluster may account for eye blinks, another for eye movements, a third
-for central posterior alpha band activities, etc. Each of the clusters
-is stored in a separate *STUDY.cluster* field, namely,
-*STUDY.cluster(2)*, *STUDY.cluster(3)*, etc...
+*STUDY.cluster*のサブ構造はについての情報を保存します
+*STUDY*に適用されるクラスタリング方法およびクラスタリングの結果。
+各*STUDY*データセットのクラスタリングのために識別される部品はそれぞれあります
+複数のコンポーネントクラスターに割り当てられます。 お問い合わせ
+異なったクラスターは空間的におよび/または機能的に明瞭であるかもしれません
+記録されたデータの起源とダイナミクス。 例えば、1つのコンポーネント
+クラスターは、目の点滅のために考慮することができます, 目の動きのための別の, 第三
+中央ポスターアルファバンド活動等のため 各クラスター
+別の *STUDY.cluster* フィールドに格納されます。
+*STUDY.cluster(2)*、*STUDY.cluster(3)*、等...
 
-The first cluster, *STUDY.cluster(1)* , is composed of all components
-from all datasets that were identified for clustering. It was created
-when the *STUDY* was created and is not a result of clustering; it is the
-*ParentCluster*. This cluster does not contain those components whose
-equivalent dipole model exhibit a high percent variance from the
-component's scalp map. These components have been excluded from
-clustering (see [component clustering](/tutorials/10_Group_analysis/component_clustering_tools.html)
-tutorial for more information on how to exclude components from clustering).
-Typing *STUDY.cluster* at the MATLAB command line returns
+最初のクラスター、*STUDY.cluster(1)*は、すべてのコンポーネントで構成されます
+クラスタリングのために識別されたすべてのデータセットから。 作成されました
+*STUDY*が作成され、クラスタリングの結果ではありません。
+*ParentCluster*。 このクラスターには、そのコンポーネントが含まれているわけではありません。
+同等ダイポールモデルは、より高い割合の分散を発揮します
+コンポーネントのスカルプマップ。 これらのコンポーネントは除外されています
+クラスタリング(参照) [コンポーネントのクラスタリング](/tutorials/10_Group_analysis/component_clustering_tools.html)
+コンポーネントをクラスタリングから除外する方法の詳細については、チュートリアル。
+MATLAB コマンドラインで *STUDY.cluster* をタイピング
 
 ``` matlab
 >> STUDY.cluster
@@ -980,86 +980,86 @@ Typing *STUDY.cluster* at the MATLAB command line returns
         dipole [struct]
 ```
 
-All this information (including the clustering results) may be accessed
-from the MATLAB command line, or by using the interactive function [pop_clustedit.m](http://sccn.ucsd.edu/eeglab/locatefile.phpfile=pop_clustedit.m).
+この情報(クラスタリング結果を含む)は、すべてアクセスすることができます。
+MATLABのコマンドラインから、またはインタラクティブ機能を使用して [pop_clustedit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.phpfile=pop_clustedit.m).
 
-EEGLAB version 14 use to contain more information pertaining to each
-cluster (such as the ERP, Spectrum and time-frequency data for a given
-cluster) and this information would be made available in this structure
-when a given cluster was plotted. These arrays were accessible to users
-but were mostly cached values used for plotting purposes (so EEGLAB
-would not have to reload them every time they were being plotted).
+EEGLAB バージョン 14 は、それぞれの情報に関する詳細情報を含むために使用します。
+クラスター(ERP、スペクトラム、時間頻度データなど)
+クラスター) この情報は、この構造で利用可能になります
+与えられたクラスターがプロットされたとき。 これらの配列は、ユーザーにアクセス可能であった
+しかし、主にプロットの目的のために使用される値をキャッシュした(EEGLAB)
+それらをプロットされたたびに再ロードする必要はありません。
 
-EEGLAB 2019 and later versions have adopted a simpler cache approach
-where all the plotted data is stored in the STUDY.cache structure. If the data is available in the STUDY
-cache, then the cached values are automatically returned. To
-access this information, it is now recommended to use the return values
-of the plotting functions std_erpplot, std_specplot, and std_erspplot -
-if necessary disabling plotting. 
+EEGLAB 2019以降では、よりシンプルなキャッシュアプローチを採用しています。
+すべてのプロットされたデータはSTUDYに保存されます。 キャッシュ構造。 STUDYでデータが利用可能である場合
+キャッシュすると、キャッシュされた値が自動的に返されます。 お問い合わせ
+この情報にアクセスし、返り値を使用することをお勧めします
+プロット関数 std_erpplot, std_specplot, std_erspplot -
+必要な分解のプロット。 
 
-The *cluster.name* sub-field of each cluster is initialized according to
-the cluster number, e.g. its index in the cluster array (for example:
-'cls 2', 'cls 3', etc.). These cluster names may be changed to any
-(e.g., more meaningful) names by the user via the command line or viathe [pop_clustedit.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m) interface.
+各クラスターの*cluster.name*サブフィールドは、
+クラスター番号(例:クラスター配列のインデックス)
+'cls 2'、'cls 3' など。 これらのクラスター名は、任意のものに変更することができます
+(例えば、より有意義な) コマンド・ラインまたはviatheを介してユーザ名 [pop_clustedit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m) インターフェイス。
 
 
-The *cluster.comps* and *cluster.sets* fields describe which components
-belong to the current cluster: *cluster.comps* holds the component
-indices and *cluster.sets* the indices of their respective datasets.
-Note also that several datasets may use the same
-component weights and scalp maps -- for instance two datasets containing
-data from different experimental conditions for the same subject and
-collected in the same session, therefore using the same ICA
-decomposition and the same component indices. As described further in a later section, *cluster.sets*
-may contain several rows, each row containing a different dataset index.
+*cluster.comps* と *cluster.sets* フィールドは、どのコンポーネントを記述するか
+現在のクラスターに属します: *cluster.comps* はコンポーネントを保持します
+それぞれのデータセットのインデックスと*cluster.sets*
+複数のデータセットが同じように使用できることに注意してください。
+コンポーネントの重みとスカルプマップ -- 例えば2つのデータセットを含む
+同じ被験者と異なる実験条件のデータ
+同じセッションで収集されるため、同じICAを使用して
+分解および同じコンポーネントのインデックス。 後述のセクションで、*cluster.sets*
+異なるデータセットインデックスを含む各行に複数の行が含まれる場合があります。
 
-The *cluster.preclust* sub-field is a sub-structure holding
-pre-clustering information for the component contained in the cluster.
-This sub-structure includes the pre-clustering method(s), their
-respective parameters, and the resulting pre-clustering PCA data
-matrices (for example, mean component ERPs, ERSPs, and/or ITCs in each
-condition). Additional information about the *preclust* sub-structure is
-given in the following section in which its use in further (hierarchic)
-sub-clustering is explained.
+*クラスター。 preclust* サブフィールドはサブ構造の保持
+クラスターに含まれるコンポーネントのプリクラスタ情報。
+このサブ構造は、プリクラータリングメソッド(s)、
+各パラメータ、および結果の前処理PCAデータ
+matrices(例えば、コンポーネントERP、ERSP、および/またはITCをそれぞれ意味する)
+条件)。 *preclust*サブ構造に関する追加情報
+次のセクションで、その使用がさらに(階層)
+サブクラスタリングの説明
 
-The *cluster.centroid* field holds the cluster measure centroids for
-each measure used to cluster the components (e.g., the mean or centroid
-of the cluster component ERSPs, ERPs, ITCs, power spectra, etc. for each
-*STUDY* condition), plus measures not employed in clustering but
-available for plotting in the interactive cluster visualization and editing function, [pop_clustedit.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m).
+*cluster.centroid* フィールドは、クラスター測定のセントロイドを保持しています。
+コンポーネントをクラスターするために使用される各測定(例、平均またはセンチロイド)
+各クラスターコンポーネント ERSP、ERP、ITC、パワースペクトラなど
+*STUDY*条件)、クラスタリングで採用されていない措置に加えて、
+相互クラスターの視覚化および編集機能のプロットのために利用できる、 [pop_clustedit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m).
 
-The *cluster.algorithm* sub-field holds the clustering algorithm chosen
-(for example *kmeans*) and the input parameters that were used in
-clustering the pre-clustering data.
+*cluster.algorithm*サブフィールドは、選択したクラスタリングアルゴリズムを保持します
+(例:*kmeans*) およびで使用される入力パラメータ
+事前にクラスタリングしたデータをクラスタリングします。
 
-The *cluster.parent* and *cluster.child* sub-fields are used in
-hierarchical clustering (see [component clustering](/tutorials/10_Group_analysis/component_clustering_tools.html) section of the tutorial).
+*cluster.parent*および*cluster。 Child* サブフィールドは
+階層クラスタリング (参照) [コンポーネントのクラスタリング](/tutorials/10_Group_analysis/component_clustering_tools.html) チュートリアルのセクション)。
 
-The *cluster.child* sub-field contains indices of any clusters that were
-created by clustering on components from this cluster (possibly,
-together with additional cluster components). The *cluster.parent* field
-contains the index of the parent cluster.
+*クラスター。 Child* サブフィールドには、あるクラスターのインデックスが含まれています。
+このクラスターからコンポーネントのクラスタリングによって作成される(おそらく、
+追加のクラスターコンポーネントと一緒に。 *cluster.parent* フィールド
+親クラスターのインデックスが含まれています。
 
-The *cluster.topo* field contains the average topography of a component
-cluster. Its size is 67x67 and the coordinate of the pixels are given by
-*cluster.topox* and *cluster.topoy* (both of them of size \[1x67\]).
-This contains the interpolated activity on the scalp so different
-subjects having scanned electrode positions may be visualized on the
-same topographic plot. The *cluster.topoall* cell array contains one
-element for each component and condition. The *cluster.topopol* is an
-array of -1s and 1s indicating the polarity for each component.
-Component polarities are not fixed, in the sense that inverting both one
-component activity and its scalp map does not modify the back-projection
-of the component to the data channels). The true scalp polarity is taken
-into account when displaying component ERPs.
+*cluster.topo* フィールドには、コンポーネントの平均トポグラフィが含まれています。
+クラスター。 そのサイズは67x67で、ピクセルの座標は
+*cluster.topox* および *cluster.topoy* (それらのサイズのそれぞれ[1x67\])。
+これは、スカルプに補間活性が含まれているので、異なる
+電極位置をスキャンした被写体を視覚化できる
+同じ地理的なプロット。 *クラスター。 topoall* セル配列には 1 つが含まれています
+各コンポーネントと条件の要素。 *cluster.topopol*は
+各コンポーネントの極性を示す-1sと1sの配列。
+コンポーネントの極性は固定されません。
+コンポーネントのアクティビティとそのスカルプマップは、バックプロジェクションを変更しません
+データチャネルへのコンポーネント) 真の頭皮の極性は取られます
+コンポーネントERPを表示する際に考慮に入れます。
 
-Finally, the *cluster.dipole* structure contains the centroid equivalent
-dipole location of the component cluster. This structure is the same as
-for a single component dipole (see the [ICA sources](/tutorials/09_source/DIPFIT.html) section of the tutorial).
+最後に、*cluster. dipole* 構造は遠心分離機の同等を含んでいます
+コンポーネントクラスターのダイポール位置。 この構造は同じです
+単一のコンポーネントのダイポール(参照) [ICAソース](/tutorials/09_source/DIPFIT.html) チュートリアルのセクション)。
 
-Suppose that Cluster 2 (*artifacts*) comprises 15 components from four
-of the datasets. The *cluster* structure will have the following
-values:
+クラスター2(*artifacts*)が4つの15の構成要素から成っていることを仮定して下さい
+データセットの *cluster* 構造は次の通りです。
+値:
 
 ``` matlab
 >> STUDY.cluster(2)
@@ -1074,21 +1074,21 @@ values:
         preclust:   [1x1 struct]
 ```
 
-This structure field information says that this cluster has no other
-*parent* cluster than the *ParentCluster* (as always, Cluster 1), but
-has three *child* clusters (Clusters 4, 5, and 6). It was created by the
-'Kmeans' *algorithm* and the requested number of clusters was '2'. Note
-that as of EEGLAB 2019, we do not recommend using hierarchical
-clustering. Often simple clustering can achieve similar or better results.
+この構造フィールド情報は、このクラスターが他にはないと言います
+*ParentCluster*(常に、クラスター1)よりも*parent*クラスター
+3つ*子*クラスター(クラスター4、5、6)があります。 によって作られました
+'Kmeans' *algorithm* と要求されたクラスターの数が '2' であった。 お問い合わせ
+EEGLAB 2019 では、階層の使用をお勧めしません。
+クラスタリング。 多くの場合、単純なクラスタリングは、同様の結果またはより良い結果を得ることができます。
 
-Preclustering details are stored in the *STUDY.cluster(2).preclust*
-sub-structure (not shown above but detailed below). For instance, in
-this case, the *cluster.preclust* sub-structure may contain the
-PCA-reduced mean activity spectra (in each of the two conditions) for
-all 15 components in the cluster.
+*STUDY.cluster(2).preclust*にプリクラータリングの詳細は保存されます。
+サブ構造(上図ではなく下図)。 例えば、
+この場合、*cluster。 preclust* サブ構造には、
+PCA-reduced 平均活性スペクトラ(各2条件)
+クラスター内のすべての15コンポーネント。
 
-The *cluster.preclust* sub-structure contains several fields, for
-example:
+*cluster.preclust* サブ構造には、いくつかのフィールドが含まれています。
+例:
 
 ``` matlab
 >> STUDY.cluster(2).preclust
@@ -1099,14 +1099,14 @@ example:
         preclustcomps:  {1x4 cell}
 ```
 
-The *preclustparams* field holds an array of cell arrays. Each cell
-array contains a string that indicates what component measures were used
-in the clustering (e.g., component spectra (*spec*), component ersps
-(*ersp*), etc...), as well as parameters relevant to the measure. In
-this example there is only one cell array, since only one measure (the
-power spectrum) was used in the clustering.
+*preclustparams* フィールドは、セル配列の配列を保持します。 各セル
+array には、コンポーネントの測定が使用されるものを示す文字列が含まれています。
+クラスタリング(例、コンポーネントスペクトラ(*spec*)、コンポーネント ersps
+(*ersp*)、等...)、また測定に関連する変数。 お問い合わせ
+この例は1つのセル配列のみです。1つの測定のみです。
+パワースペクトラム)はクラスタリングで使用されました。
 
-For example:
+例えば:
 
 ``` matlab
 >> STUDY.cluster(1).preclust.preclustparams
@@ -1115,37 +1115,37 @@ For example:
         'spec' 'npca' [10] 'norm' [1] 'weight' [1] 'freqrange' [3 25]
 ```
 
-The data measures used in the clustering were the component spectra in a
-given frequency range ('' 'freqrange' [3 25]*), the spectra were
-reduced to 10 principal dimensions (* 'npca' [10]*), normalized (*
-'norm' [1]*), and each given a weight of 1 (* 'weight' [1]'). When
-more than one method is used for clustering, then *preclustparams* will
-contain several cell arrays.
-The *preclust.preclustdata* field contains the data given to the
-clustering algorithm (*Kmeans*). The data size width is the number of
-ICA components (15) by the number of retained principal components of
-the spectra (10) shown above. To prevent redundancy, only the measure
-values of the 15 components in the cluster were left in the data. The
-other components' measure data was retained in the other clusters.
+クラスタリングで使用されるデータ対策は、コンポーネントのスペクトラでした。
+与えられた周波数範囲(" 'freqrange' [3 25]*)、スペクトルは
+主寸法10個(* 'npca'[10]*)に短縮、正規化(*)
+'norm' [1]*) と 1 (* 'weight' [1]') の重みをそれぞれ指定します。 いつか
+1つ以上の方法は、クラスタリングに使用されます。
+複数のセル配列を含む。
+*preclust.preclustdata* フィールドには、指定したデータが含まれています。
+クラスタリングアルゴリズム(*Kmeans*)。 データサイズ幅は、データサイズ幅の数値です。
+ICAコンポーネント(15)は、保持されたプリンシパルコンポーネントの数で
+上記に示すspectra (10)。 冗長性を防ぐため、測定のみ
+クラスター内の 15 個のコンポーネントの値をデータに残しました。 ふりがな
+他のコンポーネントの計測データを他のクラスターに保持しました。
 
-The *preclust.preclustcomps* field is a cell array of size (nsubjects x
-nsessions) in which each cell holds the components clustered (i.e., all
-the components of the parent cluster).
+*preclust.preclustcomps* フィールドは、サイズのセル配列(nsubjects x)です。
+各セルがクラスターされたコンポーネントを保持するnsession(i.e., all)
+親クラスターのコンポーネント。
 
-#### Understanding the .sets, .comps substructures for *STUDY* clusters
+#### *STUDY* クラスターの .sets、.comps サブ構造を理解する
 
-In this part, *clust* will indicate the current cluster of interest.
-vSTUDY.cluster(clust).sets* and *STUDY.cluster(clust).comps* fields contain
-the list of component included in a given cluster.
-*STUDY.cluster(clust).sets* is a \[datasets_with_same_ica x ncomps\]
-matrix giving the index of the corresponding dataset in
-*STUDY.datasetinfo* and corresponds to the components listed in
-*STUDY.cluster(clust).comps*. *STUDY.cluster(clust).sets* and
-*STUDY.cluster(clust).comps* have the same number of columns. However,
-*STUDY.cluster(clust).sets* may have several rows if some datasets (from
-the same subject) have the same ICA decomposition - an example is given
-below of a cluster when each component is contained in two datasets (2
-rows for the .sets field) containing identical ICA decompositions.
+この部分では、*clust* は現在の関心のクラスターを示します。
+vSTUDY.cluster(クラスト).sets* と *STUDY.cluster(クラスト).comps* フィールドには
+与えられたクラスターに含まれるコンポーネントのリスト。
+*STUDY.cluster(クラスト).sets*は\[datasets_with_same_ica x ncomps\]です。
+対応するデータセットのインデックスを与える行列
+*STUDY.datasetinfo* はリストされている部品に対応します
+*STUDY.cluster(クラスト).comps*。 *STUDY.cluster(クラスト).sets*および
+※STUDY.cluster(clust).comps* は同じカラム数です。 しかし、
+*STUDY.cluster(clust).sets*は、データセット(from)が複数行ある場合
+同じ被写体)は同じICAの分解を持っています - 例が与えられます
+各コンポーネントが2つのデータセットに含まれている場合のクラスターの下(2
+同じICAの分解を含む.setsフィールドの行。
 
 ``` matlab
 >> STUDY.cluster(clust)
@@ -1157,17 +1157,17 @@ rows for the .sets field) containing identical ICA decompositions.
        parent: {'Parentcluster 1'}
 ```
 
-If, for some reasons, the *STUDY.cluster(clust).sets* in not homogeneous –
-some subjects have several datasets with the same decompositions and
-other subjects have a different number of datasets with the same
-decompositions, NaN are inserted for the missing datasets. However, the
-presence of these missing datasets may break some analysis (warning
-messages are displayed when relevant).
+もし、何らかの理由で、*STUDY.cluster(clust).sets*が均質でない場合には、
+いくつかの主題は、同じ分解といくつかのデータセットを持っています
+他の被写体は、同じデータセットの異なる数を持っています
+分解、NANは欠落したデータセットに差し込みます。 しかし、
+これらの欠落したデータセットの存在は、いくつかの分析を破る可能性があります(警告)
+関連するときにメッセージが表示されます。
 
-### STUDY data files
+### STUDYデータファイル
 
-When pre-computing measures for a specific *STUDY* design, some files are
-saved on disk. These files have names such as
+特定の*STUDY*の設計のための事前入力措置が、あるファイルはあります
+ディスクに保存 これらのファイルには、次のような名前があります。
 
 ``` matlab
   S01.daterp  % ERP data for data channels
@@ -1181,22 +1181,22 @@ saved on disk. These files have names such as
   S01.icatopo  % ICA component topographies
 ```
 
-*S01* indicate that these files are for subject 1. The name of the
-file is based on the naming convention in your *STUDY*. If the first
-subject is named 'xx01' then the file name will start with 'xx01'. This
-is also why subjects should not simply be numbers (1, 2, 3, etc...) as
-most operating systems will not allow saving files that start with a
-number.
+*S01* は、これらのファイルが対象のファイルであることを示しています。 1. お名前
+*STUDY* のネーミング条約に基づくファイルです。 最初の場合
+subject は 'xx01' という名前で、ファイル名は 'xx01' から始まります。 お問い合わせ
+単に数字(1, 2, 3, 等)であるべきではない理由もあります。
+ほとんどのオペレーティングシステムは、起動するファイルを保存することができません
+番号。
 
-Note that the file naming convention for versions of EEGLAB older than
-2019 (EEGLAB 12, 13 and 14) was slightly different, and that the files
-needed to be recomputed for each *STUDY* design (which is not the case for
-EEGLAB 2019 and later versions). Also in old versions of EEGLAB, there
-were two additional files *xxxx.datersp* and *xxxx.datitc* that contained
-average time-frequency decompositions - since all files now contain
-single-trial data, these files have been removed.
+EEGLABのバージョンのネーミング条約が古いことに注意
+2019年(EEGLAB 12、13、14)は若干異なります。
+各*STUDY*の設計のためにrecomputedである必要(のための場合ではない)
+EEGLAB 2019以降バージョン EEGLABの古いバージョンでは、
+2つの追加ファイル*xxxx.datersp*と含まれている*xxxx.datitc*
+平均的な時間頻度分解 - すべてのファイルが含まれているので
+単一トリルデータ、これらのファイルは削除されました。
 
-The file structure is similar for all file types listed below.
+ファイル構造は、以下のすべてのファイルタイプに似ています。
 
 ``` matlab
 >> fileContent = load('-mat', 'S01.daterp');
@@ -1219,32 +1219,32 @@ The file structure is similar for all file types listed below.
      trialinfo: [1×784 struct]
 ```
 
-The fields *chanxx* represent ERP data for these channels. For ICA
-components, the prefix is <i>comp</i> instead of <i>chan</i>. Each
-channel data will contain an array for time x trials. Below a
-description of the additional fields:
+*chanxx* は、これらのチャネルのERPデータを表すフィールドです。 アメリカ向け
+コンポーネント、プレフィックスは <i>コンプリート</i> 代わりに <i>チャン</i>お問い合わせ 詳しくはこちら
+チャンネルデータには、時間xの試用版の配列が含まれています。 以下
+追加フィールドの説明:
 
--   *labels*: This is a cell array of channel labels { 'Cz' 'Pz'
-    ... }. This field is only present for data channels and is not
-    present for ICA components.
--   *datatype*: This field contains the type of data saved in the file. More
-    details are provided below.
--   *parameters*: The parameters used to compute each measure are also stored in the file, for example, the frequency range of the component spectra. Measure files are standard MATLAB files that may be read and processed using standard MATLAB commands. The variable names they contain should be self-explanatory.
--   *datafile*: the list of files used to compute this file.
--   *trialinfo*: information about each data trial. This is similar
-    to the list of information in the field 'trialinfo' of
-    *STUDY.dataset* (however it also includes information about
-    condition, group and session which is stored separately in the
-    *STUDY.dataset* structure).
+-   *labels*: これはチャンネルラベルのセル配列です { 'Cz' 'Pz'
+    お問い合わせ このフィールドは、データチャネルのみに存在し、
+    ICAコンポーネントを提示します。
+-   *データ型*: このフィールドには、ファイルに保存されたデータの種類が含まれています。 ニュース
+    以下に詳細が記載されています。
+-   *パラメータ*: 各測定を計算するために使用されるパラメータは、例えば、コンポーネントのスペトラの周波数範囲もファイルに保存されます。 測定ファイルは標準のMATLABコマンドを使用して読み、処理することができる標準的なMATLABファイルです。 含まれている変数名は自己説明であるべきです。
+-   *datafile*: このファイルを計算するために使用されるファイルの一覧です。
+-   *trialinfo*:各データトライアルに関する情報 これは似ています
+    フィールド 'trialinfo' 内の情報のリストに
+    *STUDY.dataset*(STUDY.dataset*)(情報も含む)
+    条件、グループおよびセッションは別に貯えられます
+    *STUDY.dataset*の構造。
 
-The field datatype can take several values:
+フィールドデータ型は複数の値を取ることができます。
 
--   *ERP*: ERP data
--   *SPECTRUM*: SPECTRUM data (legacy)
--   *TIMEF*: time-frequency data
--   *ERPIMAGE*: ERPIMAGE data
+-   *ERP*:ERPデータ
+-   *SPECTRUM*: SPECTRUMデータ(レガシー)
+-   *TIMEF*:時間頻度データ
+-   *ERPIMAGE*:ERPIMAGEデータ
 
-Note that for ERPIMAGE data, the <i>comp</i> and <i>chan</i> fields may
-contain a string of character. If this is the case, the string is
-executed to load data. This avoids storing the single-trial
-data multiple times if this is not necessary.
+ERPIMAGEデータの場合、 <i>コンプリート</i> そして、 <i>チャン</i> フィールドは
+文字の文字列を含む。 この場合、文字列は
+データを読み込みます。 これは、単一trialを格納することを避けます
+必要がない場合は、複数回データが必要になります。

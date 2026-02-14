@@ -5,44 +5,44 @@ long_title: b. Events
 parent: 4. Import data
 grand_parent: Tutorials
 ---
-Importing and managing event and epoch information
+イベントやエポック情報のインポートと管理
 ===========
-{: .no_toc }
+お問い合わせ
 
-This tutorial describes importing, modifying, selecting, and visualizing EEGLAB events within the EEGLAB graphic interface.
+このチュートリアルでは、EEGLAB のグラフィックインターフェイス内の EEGLAB イベントのインポート、変更、選択、および視覚化について説明します。
 
-EEGLAB counts records of the time and nature of experimental events to
-analyze the EEG data. This section details how to load in events' information embedded in one of the data channels, stored in a MATLAB
-array, or separate ASCII file. Once event information is imported, EEGLAB copies the resulting EEG.event structure to a back-up
-(*ur*) copy, EEG.urevent, and creates links from each event to the
-corresponding urevent. This allows the user to select events based on
-the previous (or future) event *context*, even *after* data containing
-some events has been rejected from the data, as described in the event scripting section of the tutorial.
+EEGLABは実験的なイベントの時間と性質の記録をカウントします
+EEGデータを分析します。 このセクションでは、MATLABに保存されたデータチャネルの1つに埋め込まれたイベントの情報をロードする方法について説明します。
+配列、または ASCII ファイルを分離します。 イベント情報がインポートされると、EEGLABは結果のEEG.event構造をバックアップにコピーします
+(*ur*) コピー、EEG.urevent、各イベントからリンクを作成
+対応する尿道。 これにより、ユーザーがイベントを選択できる
+前回(または将来の)イベント *context*、さらに*after*データを含む
+チュートリアルのイベントスクリプトセクションに記載されているように、データからいくつかのイベントが拒否されました。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Importing events
+イベントのインポート
 ------------
 
-Events can be imported into EEGLAB by selecting the <span style="color: brown">File → Import event info</span> menu item. Different methods to import events are detailed below.
+イベントは、選択することでEEGLABにインポートすることができます <span style="color: brown">ファイル → インポートイベント情報</span> メニュー項目。 イベントをインポートするさまざまな方法は以下のとおりです。
 
-### Importing events from a data channel
+### データチャネルからのイベントのインポート
 
-Information about experimental events is often recorded onto one of
-the rows (channels) of the EEG data matrix. Once more, we create
-simulated data to illustrate how to import events from a data channel.
-Assuming an EEG dataset with 33 rows (channels), out of which the first
-32 are data channels, and the last (33) is an event channel with values 1
-(stimulus onset), 2 (subject response), and 0 (other). MATLAB code for
-generating such data follows (to test, copy and paste the code to the
-MATLAB command line):
+実験的なイベントに関する情報は、しばしば1つに記録されます
+EEGデータ行の行(チャンネル)。 まずは、
+データをシミュレートし、データチャネルからイベントをインポートする方法を説明します。
+EEG のデータセットを 33 行 (チャンネル) と仮定して、その最初の
+32 はデータ チャネルであり、最後の (33) は値 1 のでき事チャネルです
+(stimulus onset), 2 (subject response), 0 (Other). MATLABコード
+そのようなデータを生成する(テスト、コピー、コードを貼り付ける)
+MATLABコマンドライン:
 
 ```matlab
 eeglab
@@ -51,66 +51,66 @@ eegdata(33,[10:256:256*100]) = 1; % simulating a stimulus onset every second
 eegdata(33,[100:256:256*100]+round(rand*128)) = 2; % simulating reaction times about 500 ms after stimulus onsets
 ```
 
-After copying the code above to MATLAB and importing the array *eegdata*
-into EEGLAB as a test dataset using the <span style="color: brown">File → Import data →
-from ASCII/float file or MATLAB array</span> menu item, select
-<span style="color: brown">File → Import event info → from data
-channel</span> menu item to call function [pop_chanevent.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanevent.m) .
+上記のコードをMATLABにコピーし、配列*eegdata*をインポートした後
+EEGLABにテストデータセットとして使用 <span style="color: brown">ファイル → インポートデータ →
+ASCII/floatファイルまたはMATLAB配列から</span> メニュー項目, 選択
+<span style="color: brown">ファイル → インポートイベント情報 → データから
+チャンネル</span> 関数を呼び出すためのメニュー項目 [ポップ_chanevent.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanevent.m) .
 
-![Image:Ii21pop_chanevent.jpg](/assets/images/II21pop_chanevent.jpg)
+![画像:Ii21pop_chanevent.jpg](/assets/images/II21pop_chanevent.jpg)
 
-Enter *33* as the event channel and set the edge-extract type to *up
-(leading)* (Note: place the mouse over the text *Transitions to extract*
-to see contextual help messages).
+*33*をイベントチャンネルとして入力し、*up にエッジエキストラタイプを設定
+(トップ)* (注記: テキストにマウスを置く * 変換 抽出する*
+コンテキストヘルプメッセージが表示されます。
 
-Press *Ok*. Now, the event information will have been imported into the
-test EEGLAB dataset. At the same time, channel 33 will have been deleted
-from the test data. Select menu item <span style="color: brown">Edit → Event
-values</span> to inspect the imported event types and latencies.
+プレス *Ok*. 現在、イベント情報をインポートしました。
+EEGLAB データセットをテストします。 同時に、チャンネル33は削除されました
+テストデータから。 メニュー項目を選択 <span style="color: brown">編集 → イベント
+バリュー</span> インポートされたイベントタイプとレイテンシーを検査します。
 
-### Importing events from a MATLAB array or text file
+### MATLAB配列またはテキストファイルからイベントをインポートする
 
-Using the random EEG dataset created above, we import event information
-stored in an ASCII text file,
-[tutorial_eventtable.txt](http://sccn.ucsd.edu/eeglab/download/tutorial_eventtable.txt).
-This text file is composed of three columns, the first containing the
-latency of the event (in seconds), the second the type of the event, and
-the third a parameter describing the event (for example, the stimulus position). For example, the top lines of such a file might be:
+上記のランダムなEEGデータセットを使用して、イベント情報をインポートします。
+ASCII テキストファイルに保存されます。
+[チュートリアル_eventtable.txt](http://sccn.ucsd.edu/eeglab/download/tutorial_eventtable.txt).
+このテキストファイルは3つの列で構成され、最初に含まれている
+イベントの遅延(秒)、イベントの2番目のタイプ、および
+イベントを記述する3番目のパラメータ(例えば、刺激位置)。 たとえば、そのようなファイルの先頭行は次のようになります。
 
 <table>
 <tr>
-<td><strong>Onset</strong></td>
-<td><strong>Type</strong></td>
-<td><strong>Position</strong></td>
+<td><strong>オンセット</strong></td>
+<td><strong>タイプ:</strong></td>
+<td><strong>ポジション</strong></td>
 </tr>
 <tr>
 <td>1</td>
-<td>target</td>
+<td>ターゲット</td>
 <td>1</td>
 </tr>
 <tr>
 <td>2.3047</td>
-<td>response</td>
+<td>フィードバック</td>
 <td>1</td>
 </tr>
 <tr>
 <td>3</td>
-<td>target</td>
+<td>ターゲット</td>
 <td>2</td>
 </tr>
 <tr>
 <td>4.7707</td>
-<td>response</td>
+<td>フィードバック</td>
 <td>2</td>
 </tr>
 <tr>
 <td>5</td>
-<td>target</td>
+<td>ターゲット</td>
 <td>1</td>
 </tr>
 <tr>
 <td>6.5979</td>
-<td>response</td>
+<td>フィードバック</td>
 <td>1</td>
 </tr>
 <tr>
@@ -120,80 +120,80 @@ the third a parameter describing the event (for example, the stimulus position).
 </tr>
 </table>
 
-Select menu item <span style="color: brown">File → Import event info → Import
-MATLAB array or ASCII file</span>
+メニュー項目を選択 <span style="color: brown">ファイル → インポートイベント情報 → インポート
+MATLAB 配列または ASCII ファイル</span>
 
-![Image:Pop_importevent.jpg](/assets/images/pop_importevent.png)
+![画像:Pop_importevent.jpg](/assets/images/pop_importevent.png)
 
-Browse for the tutorial text file [tutorial_eventtable.txt](http://sccn.ucsd.edu/eeglab/download/tutorial_eventtable.txt), set the number of header lines to 1
-(for the first line of the file, which gives the column field names), and
-set the input fields (i.e., the names associated with the columns in the
-array) to *latency type position*. If these field names are quoted or
-separated by commas, these extra characters are ignored. (NOTE: It is
-necessary to use the names *latency* and *type* for two of the fields.
-EEGLAB uses these two field names to extract, sort, and display events. These fields must be lowercase since MATLAB is case sensitive.) Event latencies may be in seconds, milliseconds, or samples in the text file, although they are always stored in EEGLAB in samples.
-In this interactive window, the input *Event indices* and checkbox
-*Append events?* may be used to insert new events instead of replacing, which is the default behavior, a subset of
-events with new events (for instance, for large EEG files, which may have
-several event files).
+チュートリアルテキストファイルのためにブラウズ [チュートリアル_eventtable.txt](http://sccn.ucsd.edu/eeglab/download/tutorial_eventtable.txt)ヘッダー行数を 1 に設定します。
+(ファイルの最初の行では、列フィールド名を与えます)
+入力フィールド(すなわち、列に関連付けられている名前を)設定します。
+array) から *latency 型 position* へ。 これらのフィールド名が引用されているか、
+commasで区切って、これらの追加文字は無視されます。 (注意: それはあります
+フィールドの2つに*latency*と*type*という名前を使用する必要があります。
+EEGLABは、これらの2つのフィールド名を使用してイベントを抽出、ソート、表示します。 これらのフィールドは、MATLABがケースの機密性であるので、下方でなければなりません。) イベントのレイテンシーは、テキストファイル内の秒数、ミリ秒数、またはサンプルで、EEGLABに常に保存されます。
+このインタラクティブなウィンドウで、入力 *Event indices* とチェックボックス
+*イベントを返したいですか?* は、置換ではなく新しいイベントを投入するために使われます。これはデフォルトの動作です。サブセット
+新規イベント(例えば、大きな EEG ファイルの場合、あるかもしれない)
+複数のイベントファイル。
 
-#### Important note about aligning events
+#### イベントの整列に関する重要な注意
 
-An essential input above is *Align event latencies to data events*, which
-aligns the first event latency to the existing event latency and checks
-latency consistency. A value of *NaN* (MATLAB for not-a-number)
-indicates that this option is ignored (as in the example above).
-However, for most EEG data, the EEG is recorded with basic events stored
-in an event channel (see Import events from a data channel above), for
-instance. Detailed event information is recorded separately in a text
-file: as a consequence, the events recorded in the text file have to be
-aligned with the events recorded in the EEG.
+上記の必須入力は、*データイベントへのイベントレイテンシーを一元化*です。
+既存のイベントレイテンシに最初のイベントレイテンシを揃え、チェック
+レイテンシの一貫性。 *NaN*(MATLAB)の数値
+このオプションは無視されます(上記の例のように)。
+しかし、ほとんどのEEGデータでは、EEGは保存された基本イベントで記録されます。
+イベントチャンネル(上記データチャネルからのインポートイベント参照)
+インスタンス。 詳細なイベント情報はテキストに別々に記録されます
+file: その結果として、テキストファイルに記録されたイベントは、
+EEGで記録されたイベントと整列。
 
-To do so, set the input for *Align event latencies to data events* to 0
-if the first event in the text file corresponds to the first event
-recorded in the EEG (i.e. if the offset between the two is 0). Setting
-this value to 1 indicates that event 1 in the event text file
-corresponds to event number 2 in the EEG data. Here, negative values can
-also be used to indicate that events in the text file start before those
-recorded in the EEG).
+そのためには、*Alignイベントのレイテンシーをデータイベント*から0に設定します。
+テキストファイルの最初のイベントが最初のイベントに対応する場合
+EEGで記録される(つまり、2つのオフセットが0の場合)。 セットアップ
+この値が 1 の場合、イベントのテキストファイルでイベント 1 が表示される
+EEGデータのイベント番号2に対応。 ここでは、負の値が
+また、テキストファイルの開始前にイベントが始まることを示すために使用されます
+EEGで記録される。
 
-When aligning events, as shown in the following section, the function
-displays the latencies of the two event types, so the user can check
-that they are aligned based on his knowledge of the experiment (for
-instance, there may be more events in the text file than recorded in the
-EEG).
-The last checkbox automatically adjusts the new events' sampling rate, so they best align with the closest old events. This may correct small differences in sampling rates that could lead to significant
-differences by the end of the experiment (e.g., a 0.01% clock difference would lead to a 360-ms difference after one hour if not
-corrected).
+イベントを整列するときは、次のセクションに示すように、関数
+2つのイベントタイプのレイテンシーが表示されますので、ユーザーは確認することができます
+実験の知識に基づいて整列されていること(のために)
+たとえば、テキストファイルに記録されるよりも多くのイベントがあるかもしれません。
+EEG(エッグ)
+最後のチェックボックスは、新しいイベントのサンプリングレートを自動的に調整するので、最も近い古いイベントと整列します。 これは、重要なにつながる可能性があるサンプリング速度の小さな違いを修正することができます
+実験の終了による差(例えば、0.01%のクロック差は1時間後に360ミリ秒の差をもたらす)
+修正)。
 
-### Importing events from a Presentation file
+### プレゼンテーションファイルからイベントをインポートする
 
-EEGLAB can also import events saved using the Presentation software.
-Sample files are available for download here:
-[TEST.SMA](http://sccn.ucsd.edu/eeglab/download/TEST.SMA) (a SnapMaster
-.SMA file) and [TEST.LOG](http://sccn.ucsd.edu/eeglab/download/TEST.LOG)
-(a Presentation event log file). If you click on the links and a text file appear, right click on the link and use *Save link as* to save the files.
+EEGLABは、プレゼンテーションソフトウェアを使用して保存されたイベントをインポートすることもできます。
+サンプルファイルはこちらからダウンロードできます。
+[テスト.SMA](http://sccn.ucsd.edu/eeglab/download/TEST.SMA) (スナップマスター)
+.SMA ファイル [ダウンロード](http://sccn.ucsd.edu/eeglab/download/TEST.LOG)
+(プレゼンテーションイベントログファイル) リンクとテキストファイルが表示される場合は、リンクをクリックし、*Saveリンクを*として保存して保存してください。
 
-To test the use of these sample files, first import the .SMA data file
-using menu item <span style="color: brown">File → Import data → From .SMA data
-file</span>. Then select <span style="color: brown">File → Import event info →
-from Presentation LOG. file</span> to import events from the
-Presentation log file as shown below</span>
-
-
-
-![Image:load_presentation_file.png](/assets/images/load_presentation_file.png)
+これらのサンプルファイルの使用をテストするには、最初にインポートします。 SMAデータファイル
+メニュー項目を使用して <span style="color: brown">ファイル → インポートデータ → . SMAデータ
+ファイル</span>お問い合わせ それから選択して下さい <span style="color: brown">ファイル → インポートイベント情報 →
+プレゼンテーションログファイルから</span> イベントをインポートする
+以下に示すようにプレゼンテーションログファイル</span>
 
 
 
-Then the following window pops-up</span>
+![画像:load_presentation_file.png](/assets/images/load_presentation_file.png)
 
 
-![Image:Pop_importpres2.jpg](/assets/images/Pop_importpres2.jpg)
 
-Scroll file fields to select which field (i.e., file column) contains the
-event type and which column contains the event latency. The default value is
-fine for this specific file, so simply press *Ok*. MATLAB then returns:
+その後、次のウィンドウがポップアップ表示されます</span>
+
+
+![画像:Pop_importpres2.jpg](/assets/images/Pop_importpres2.jpg)
+
+フィールドをスクロールして、どのフィールド(すなわち、ファイル列)が含まれているかを選択します。
+イベントタイプとイベントレイテンシを含むカラム。 デフォルト値は
+この特定のファイルについては、単に*Ok*を押してください。 MATLAB が返します。
 
 ```matlab
 Replacing field 'Event Type' by 'type' for EEGLAB compatibility
@@ -213,105 +213,105 @@ eeg_checkset note: creating the original event table (EEG.urevent)
 Done.
 ```
 
-The function aligns the first event latency recorded in the Presentation
-file to the first event latency recorded in the EEG in the SnapMaster
-file. Check that the events recorded in the SnapMaster file have the
-same latencies as the ones recorded in the .LOG presentation file. The
-function then computes the best sampling rate ratio: this may account
-for small differences in sampling rate that could lead to big
-differences at the end of the experiment (e.g., 0.01% clock difference
-during half an hour would lead to a 360-ms difference after one hour if
-not corrected). Note that if the events are shifted (with respect to
-events from the binary EEG file), it is always possible to suppress
-events manually or to import the presentation file as a text file, as
-described in the previous section. Note that some Presentation files
-that contain comments at the end of the file may not be supported. If
-importing a Presentation file fails, try removing any
-comments from the end of the file. If it still does not work, try
-importing the Presentation file as a text file, as described in the
-previous section.
+プレゼンテーションで記録された最初のイベントレイテンシを揃える機能
+SnapMasterでEEGで記録された最初のイベントレイテンシにファイル
+ファイル。 SnapMasterファイルで記録されたイベントに、
+.LOG プレゼンテーションファイルに記録されたものと同じレイテンシー。 ふりがな
+関数は、最高のサンプリング速度比を計算します。これはアカウントかもしれません
+見本抽出率の小さい相違のために大きいにつながることができます
+実験終了時の差(例:0.01%クロック差)
+1時間半に360ミリ秒の差が出ます。
+修正されていない)。 イベントがシフトされている場合(敬称して)
+バイナリEEGファイルからイベントを抑制することも可能です。
+手動でイベントやプレゼンテーションファイルをテキストファイルとしてインポートする
+前のセクションで説明します。 プレゼンテーションファイルの一部
+ファイルの末尾にコメントが含まれている場合、サポートできません。 お問い合わせ
+プレゼンテーションファイルをインポートしても失敗し、削除してみてください
+ファイルの最後にコメント。 それでもうまくいかない場合、ぜひお試しください。
+プレゼンテーションファイルをテキストファイルとしてインポートします。
+前のセクション。
 
-Note: The presentation file contains more events (such as reaction time)
-than the raw EEG data file, which is why we are importing
-it. Once events are aligned, the function will automatically remove duplicate events.
+注意: プレゼンテーションファイルには、より多くのイベント(反応時間など)が含まれています。
+私たちが輸入している理由は、生EEGデータファイルよりも
+お問い合わせ イベントが整列されると、自動的に重複するイベントを削除します。
 
-### Importing E-Prime information files
+### E-Prime情報ファイルのインポート
 
-The E-prime format is highly configurable, so you may use the ASCII
-importer to import data files. Use the <span style="color: brown">File → Import event info →
-from E-Prime ASCII (text) file</span> menu item, which is the same as calling the <span style="color: brown">Import data → From ASCII/float file or MATLAB array</span> menu item. Configure the
-interface with the name of the E-Prime columns to import the event file. In some cases, it might be necessary to export the E-Prime to a tab-delimited file first (for
-example, in a spreadsheet application) and edit some of the column
-information that might not be read correctly under MATLAB. Please send us your
-E-Prime files (at eeglab at sccn.ucsd.edu), so we may tailor the ASCII
-import menu for E-Prime files.
+E-prime 形式は非常に設定可能ですので、ASCII を使うこともできます。
+データをインポートするためのインポーター。 利用する <span style="color: brown">ファイル → インポートイベント情報 →
+E-Prime ASCIIファイルから</span> メニュー項目は、呼び出しと同じです <span style="color: brown">インポートデータ → ASCII/floatファイルまたはMATLAB配列から</span> メニュー項目。 設定する
+E-Prime 列の名前をインターフェイスし、イベントファイルをインポートします。 場合によっては、E-Primeをタブ区切りファイルへエクスポートする必要があります(for
+たとえば、スプレッドシートアプリケーションで)、列の一部を編集する
+MATLABでは正しく読み取れない情報。 お問い合わせ
+E-Primeファイル (sccn.ucsd.edu の eeglab で) なので、ASCII を仕立てるかもしれません。
+E-Primeファイルのインポートメニュー。
 
-### Importing Neuroscan .DAT information files
+### Neuroscan .DAT情報ファイルのインポート
 
-A sample .DAT file [TEST.DAT](http://sccn.ucsd.edu/eeglab/download/TEST.DAT) associated with the sample [TEST.CNT](http://sccn.ucsd.edu/eeglab/download/TEST.CNT) continuous file are available for download for testing purposes. Both the .DAT file and the .CNT files must contain the same number of events (in this case, 100). Neuroscan .DAT files contain data epoch information, so after importing the CNT file into EEGLAB, you must first extract data epochs. To do so, use the menu item <span style="color: brown">Tools → Extract epochs</span>. Select a time window from -0.1 to 0.5, and make sure 100 epochs are generated (if your time window is too large, some epochs at the onset and outset might be removed). Then to import the Neuroscan .DAT file, use the menu item <span style="color: brown">File → Import epoch info → From Neuroscan .DAT info file</span>. After selecting the file to import, a second window appears:
+サンプル。 DATファイル [TEST.DATの特長](http://sccn.ucsd.edu/eeglab/download/TEST.DAT) サンプルに関連付けられている [試験.CNT](http://sccn.ucsd.edu/eeglab/download/TEST.CNT) 連続的なファイルはテスト目的のためのダウンロードのために利用できます。 両方 . DATファイルと. CNTファイルには、同じイベントが含まれている必要があります(この場合、100)。 Neuroscan .DAT ファイルにはデータエポック情報が含まれています。そのため、CNT ファイルを EEGLAB にインポートした後、最初にデータを抽出する必要があります。 そのためには、メニュー項目を使用する <span style="color: brown">ツール → 抽出エポック</span>お問い合わせ -0.1 から 0.5 までのタイムウィンドウを選択し、100 個のエポックが生成されることを確認してください(時間ウィンドウが大きすぎると、オンセットとアウトセットが削除される場合があります)。 それからNeuroscanを輸入するため。 DATファイル、メニュー項目を使用する <span style="color: brown">ファイル → インポート エポック情報 → Neuroscan .DAT情報ファイルから</span>お問い合わせ インポートするファイルを選択すると、2番目のウィンドウが表示されます。
 
-![Image:Pop_loaddat.gif](/assets/images/Pop_loaddat.gif)
+![画像:Pop_loaddat.gif](/assets/images/Pop_loaddat.gif)
 
-In .DAT files, there must be a reaction time (in milliseconds) for each
-epoch. However, depending the experiment design, there may be no reaction
-time in a given epoch. Then one has to use a code value for reaction
-time latencies in these epochs. For instance, you might decide that a
-value of *1000* (ms) would indicate that the subject did not respond.
-(If all the epochs of the experiment already have a reaction time, do
-not enter anything here.)
+.DATファイルでは、それぞれに反応時間(ミリ秒単位)がある必要があります
+エポック。 しかし、実験設計によっては反応がない場合もございます。
+特定のエポックの時間。 その後、反応のためにコード値を使用する必要があります
+これらのエポックの時間レイテンシー。 例えば、
+*1000*(ms) の値は、被写体が応答しなかったことを示します。
+(実験のすべてのエポックがすでに反応時間を持っている場合は、
+お問い合わせ
 
-### Importing epoch info (MATLAB array or text file) into EEGLAB
+### EEGLABにEPOC情報(MATLAB配列またはテキストファイル)をインポートする
 
-Importing epoch information means that data epochs have already been
-extracted from the continuous EEG data and that the MATLAB array or
-text epoch information file has one entry per epoch. To illustrate how
-to import such a file or array, we will once more create some simulated
-EEG data.
+epoch 情報のインポートは、データ epoch が既に存在していることを意味します。
+連続した EEG データと MATLAB 配列から抽出するか、
+テキスト epoch 情報ファイルには、epoch ごとに 1 つのエントリがあります。 方法を説明する
+このようなファイルや配列をインポートするには、シミュレートされたファイルを作成すると、
+EEGデータ。
 
 ```matlab
 eegdata = rand(32, 256, 10); % 32 channels, 256 time points per epoch, 10 epochs
 ```
 
-Select menu item <span style="color: brown">File → Import data → From ascii/float data file or MATLAB array</span>. Refer to the [previous section](http://localhost:4000/tutorials/Import/Importing_Continuous_and_Epoched_Data.html) of the tutorial. 
+メニュー項目を選択 <span style="color: brown">ファイル→ インポートデータ→ ascii/floatデータファイルまたはMATLAB配列から</span>お問い合わせ 参照して下さい [前のセクション](http://localhost:4000/tutorials/Import/Importing_Continuous_and_Epoched_Data.html) チュートリアルの。 
 
-The MATLAB array, being 3-D, is
-automatically imported as data epochs: the first dimension is
-interpreted as data channels, the second as data points, and the third as
-data epochs or trials (e.g., our sample data matrix above contains 10
-epochs). Let us imagine that our simulated EEG data came from a simple
-stimulus/response task, with subject responses being either 'correct' or
-'wrong' and response latencies recorded in milliseconds. Then the epoch
-event file might look something like this:
+MATLAB 配列は 3 D で、
+データエポックとして自動的に輸入される:最初の次元はあります
+データチャネルとして解釈され、データポイントとして2番目に、および3分の1
+データ epochs か試験(例えば、上の私達のサンプル データ マトリックスは 10 を含んでいます
+エポック シミュレーションしたEEGデータが簡単なものから来たことを想像してみましょう。
+stimulus/response タスクは、 'correct' または 'true' または 'true' のいずれかの応答を持つ。
+'wrong' とミリ秒で記録された応答レイテンシー。 それからエポック
+イベントファイルは次のようになります。
 
 <table>
 <tr>
-<td><strong>Epoch</strong></td>
-<td><strong>Response</strong></td>
-<td><strong>Response_latency</strong></td>
+<td><strong>エポック</strong></td>
+<td><strong>フィードバック</strong></td>
+<td><strong>レスポンス_レイテンシー</strong></td>
 </tr>
 <tr>
 <td>1</td>
-<td>Correct</td>
+<td>変更について</td>
 <td>502</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Correct</td>
+<td>変更について</td>
 <td>477</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Correct</td>
+<td>変更について</td>
 <td>553</td>
 </tr>
 <tr>
 <td>4</td>
-<td>Correct</td>
+<td>変更について</td>
 <td>612</td>
 </tr>
 <tr>
 <td>5</td>
-<td>Wrong</td>
+<td>ログイン</td>
 <td>430</td>
 </tr>
 <tr>
@@ -321,210 +321,210 @@ event file might look something like this:
 </tr>
 </table>
 
-This file [tutorial_epoch.txt](http://sccn.ucsd.edu/eeglab/download/tutorial_epoch.txt) may
-be downloaded (or copied from the array above in a text file). Then select
-menu item <span style="color: brown">File → Import epoch info → from MATLAB
-array or ascii file</span>, bringing up the following window:
+このファイル [チュートリアル_epoch.txt](http://sccn.ucsd.edu/eeglab/download/tutorial_epoch.txt) かもしれません
+ダウンロード(またはテキストファイル内の上の配列からコピー) それから選択して下さい
+メニュー項目 <span style="color: brown">ファイル → インポート epoch info → MATLAB から
+array または ascii ファイル</span>, 次のウィンドウを上げます:
 
-![Image:Ii33pop_inportepoch.jpg](/assets/images/II33pop_inportepoch.jpg)
+![画像:Ii33pop_inportepoch.jpg](/assets/images/II33pop_inportepoch.jpg)
 
 
-Above, browse for the *tutorial_epoch.txt* file, set the input fields to
-*epoch response rt* (where rt is an acronym for 'reaction time'). The
-only one of these fields that contains latency information is *rt*, so
-it is entered as input to the *Field name(s) containing
-latencies* query box. This file (see above) has 1 header line, as we
-need to specify in the *Number of file header lines to ignore* box.
-Finally, the reaction times are recorded in milliseconds, which we
-indicate as *1E-3* (i.e., one-thousandth of a second). Note that the
-last entry, *Remove old epoch ...*, allows the user to import other
-information later if it is unset. Press *Ok*, when done.  Now select
-the <span style="color: brown">Edit → Event values</span> menu item to inspect what
-happened to the reaction time information (use the arrow to move to the
-second event):
+上記は、*tutorial_epoch.txt*ファイルを参照し、入力フィールドを入力フィールドに設定します。
+*epoch応答rt*(rtは'reaction time'の頭字語です)。 ふりがな
+レイテンシー情報を含むこれらのフィールドの1つだけは*rt*です。
+*Field名(s)に入力して入力します。
+latencies* クエリ ボックス。 このファイル(上記参照)には1つのヘッダラインがあります。
+無視*ボックスにファイルヘッダ行の*Numberで指定する必要があります。
+最後に、反応時間はミリ秒で記録されます。
+*1E-3*(例:第2の第1位)として示します。 注意:
+最後のエントリ, *古いepochを削除 ...*, ユーザーが他のインポートすることができます
+設定されていない場合は後で情報。 ニュース *Ok* は、 今すぐ選択
+お問い合わせ <span style="color: brown">編集 → イベントの値</span> メニュー項目は何かを点検します
+反応時間情報に起こった(矢印を使用して移動します)
+第2イベント:
 
-![Image:Ii33pop_editeventvals.jpg](/assets/images/II33pop_editeventvals.jpg)
+![画像:Ii33pop_editeventvals.jpg](/assets/images/II33pop_editeventvals.jpg)
 
-As shown above, when epoch information was imported, events with the type
-named *rt* were created and assigned a latency. If we had had several
-columns containing latency information, the function would have created
-several types. If you get an error that the number of trials (10, in this case,
-do not match the number of trials in the EEG dataset), this is because you have
-not imported the "eegdata" variable properly.
+上記に示すように、epoch情報がインポートされたとき、型付きのイベント
+*rt* が作成され、レイテンシが割り当てられました。 いくつかありましたら
+レイテンシ情報を含む列、関数は作成されます
+いくつかのタイプ。 試行回数(10、この場合は、
+EEGデータセットで試用回数に一致しない)、これはあなたが持っているので
+"eegdata" 変数を正しくインポートしない。
 
-Note: For convenience, standard epoch information is
-available from the command line in the variable *EEG.epoch*. Also, event
-information available in *EEG.event* can be used for script or command
-line data processing. See the events script writing
-tutorials for more details.
+注意: 便宜上、標準のエポック情報は
+変数 *EEG.epoch* のコマンドラインから利用できます。 イベント
+*EEG.event*で利用可能な情報はスクリプトやコマンドに使用できます。
+ラインデータ処理。 イベントスクリプトの書き込みを参照してください。
+詳細については、チュートリアル。
 
-Managing events
+イベントの管理
 ------------------------
 
-The current section should help familiarize yourself with event handling
-in EEGLAB. Most EEGLAB functions take events into account. For instance,
-functions that remove data ([pop_eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_eegplot.m), 
-[pop_select.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_select.m)) will also remove events that occur during
-the removed data (though not their corresponding urevents).
-Functions that process continuous data ([pop_spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m),
-[pop_resample.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_resample.m), [pop_mergeset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_mergeset.m)) will take
-into account 'boundary' events (data events added by EEGLAB to note
-portions of the data that have been removed or at 'hard' boundaries
-between concatenated datasets).  The event *type* field can be used to extract data epochs, and events can also be used for making ERP-image plots using the [pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) function. Finally, event information is extensively used for group-level analysis.
+現在のセクションでは、イベントの処理に精通するのに役立つはずです
+EEGLAB では ほとんどの EEGLAB 関数はイベントを考慮に入れます。 例えば、
+データを削除する関数()[pop_eegplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_eegplot.m), 
+[ポップアップ_select.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_select.m)) また、中に発生するイベントも削除します
+削除されたデータ(その対応するイベントではない)。
+連続データを処理する機能([pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m),
+[pop_resample.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_resample.m), [pop_mergeset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_mergeset.m)) 取ります
+'boundary' イベント (EEGLAB が追加したデータイベント) を考慮に入れる
+削除されたデータの部分または「ハード」境界
+連結されたデータセット間の。 イベント *type* フィールドは、データエポックを抽出し、ERP-image のプロットを作るためにイベントを使用することができます。 [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) 機能。 最後に、グループレベルの解析にイベント情報を広く利用しています。
 
-### Plotting events
+### プロットイベント
 
-First, start EEGLAB, and load dataset *eeglab_data.set* in the
-*sample_data* folder using the <span style="color: brown">File → Load
-dataset</span> menu item. Then use the <span style="color: brown">Plot → Channel
-data (scroll)</span> menu item to visualize the data and associated events.
+まず、EEGLAB を起動し、データセット *eeglab_data.set* を読み込みます。
+*sample_data* フォルダーは、 <span style="color: brown">ファイル → ロード
+データセット</span> メニュー項目。 次に、 <span style="color: brown">Plot → チャネル
+データ(スクロール)</span> データと関連イベントを視覚化するためのメニュー項目。
 
 ![](/assets/images/Scroll_raw_data.png)
 
-Events are shown as vertical lines. Different event types are shown in
-different colors. The button *Event types* will show the list of event
-types for this dataset.
+イベントは縦線として表示されます。 異なるイベントタイプが表示されます。
+異なった色。 ボタン ※イベントタイプ*はイベントの一覧が表示されます。
+このデータセットの型
 
-### Recognized event fields
+### 認定イベントフィールド
 
-The EEG event structure contains records of the experimental events that
-occurred while the data was being recorded. To view the
-information for an event, use the <span style="color: brown">Edit → Event
-values</span> menu item (see the window below, which shows the tutorial dataset's events imported in the previous step).
+EEGイベント構造は、実験的なイベントの記録が含まれています
+データが記録されたときに発生しました。 見るために
+イベントの情報は、 <span style="color: brown">編集 → イベント
+バリュー</span> メニュー項目(前のステップでインポートされたチュートリアルデータセットのイベントを示す下のウィンドウを参照してください)。
 
 ![](/assets/images/V1pop_editeventvals.png)
 
-The *type* and *latency* fields are the most important EEGLAB event
-fields (see below). Some EEGLAB functions recognize and use these two
-fields for plotting events, sorting trials, etc. (Note: One can also
-process events lacking these fields, though this strongly limits the
-range of event processing possibilities). Other fields, including
-*epoch*, *duration*, *urevent*, are also recognized by EEGLAB (they are
-created automatically during extracting of epochs, rejecting data, or
-storing event data). User-defined fields can have any other name 
-relevant to the data (for example, *position* in the example above).
-A short description of recognized event fields is given below. Further
-information may be found in the event scripting tutorial.
+*type* と *latency* フィールドは、最も重要な EEGLAB イベントです。
+フィールド(以下参照)。 これらの2つのEEGLAB関数を認識し、使用している
+イベントのプロット、トライアルのソートなどのためのフィールド (注)1つでも可
+これらのフィールドを欠いているプロセスイベントは、この強く制限しますが、
+イベント処理の可能性の範囲 他の分野を含む
+*epoch*、*duration*、*urevent*はEEGLABによってまた認められます(theyはあります)
+epoch の抽出、データの拒否、または
+イベントデータの保存 ユーザー定義フィールドには、他の名前を持つことができます 
+上記例の *position* などのデータに関連する。
+認定されたイベントフィールドの短い説明は以下のとおりです。 もっと詳しく
+情報は、イベントスクリプトチュートリアルで見つけることができます。
 
--   <u>type</u> - specifies the type of event. For example, 'square'
-in the example above is a stimulus type, 'rt' is a subject button-press
-(i.e., reaction-time) event, etc... In continuous datasets, EEGLAB may
-add events of type 'boundary' to specify data boundaries (breaks in the
-continuous data).
--   <u>latency</u> - contains event latencies. The latency information
-    is displayed in seconds for continuous data or in milliseconds
-    relative to the epoch's time-locking event for epoched data. As we
-    will see in the event scripting section, the latency information is
-    stored internally in data samples. These may be fractional samples
-    in case the time resolution of events exceeds the data resolution.
--   <u>duration</u> - duration of the event. This information is
-    displayed in seconds for continuous data, and in milliseconds for
-    epoched data. Internally, duration is stored in data samples.
--   <u>urevent</u> - contains indices of events in the original ('ur' in
-    German) event structure. The first time events are imported, they
-    are copied into a separate structure called the 'urevent' structure.
-    This field is hidden in the graphic interface (above) since it
-    should not be casually modified. This field is described in detail
-    in the event scripting tutorial.
--   <u>epoch</u> - indices of the data epochs (if any) the event falls
-    within. This field is only present for data for which data epochs
-    have been extracted (which is not the case here since the data is
-    continuous).
+-   <u>タイプ:</u> - イベントの種類を指定します。 例えば、'square お問い合わせ
+上記の例では、stimulusタイプ、'rt' はサブジェクトボタンプレスです。
+(例、反応時間)イベントなど... 継続的なデータセットでは、EEGLABは
+'boundary' の型イベントを追加して、データ境界(ブレイク)を指定
+連続データ)。
+-   <u>レイテンシー</u> - イベントレイテンシーが含まれています。 レイテンシー情報
+    連続データまたはミリ秒単位で秒単位で表示
+    epochedデータのepochのタイムロックイベントに相対的。 私たちに関しては
+    イベントスクリプトセクションでレイテンシ情報が表示されます。
+    データサンプルに内部的に保存されます。 これらは僅かなサンプルかもしれません
+    イベントの時間の解像度がデータ解像度を超えた場合。
+-   <u>期間</u> - イベントの期間。 お問い合わせ
+    連続データとミリ秒単位で表示
+    epochedデータ。 内部的には、データサンプルに保存されます。
+-   <u>エクステンション</u> - 元のイベント('ur' in')のインデックスが含まれています
+    ドイツ)イベント構造。 最初のイベントはインポートされ、
+    'urevent' 構造と呼ばれる別の構造にコピーされます。
+    このフィールドはグラフィックインターフェイス(above)で隠されています
+    適度に修正しないでください。 このフィールドは詳細に記載されています
+    イベントスクリプトチュートリアルで。
+-   <u>エポック</u> - イベントが落ちるデータエポック(もしあれば)のインデックス
+    お問い合わせ このフィールドは、データepochsのデータのみが公開されます。
+    データが抽出されているので(ここにいない場合ではない)
+    連続的な)。
 
-Note: all event fields may contain either numbers or strings (except for
-*latency*, *duration*, *urevent*, and *epoch*, which must contain
-numbers). For instance, the *type* field can contain a number (e.g., 1, 2, 
-etc.) or a string (e.g., 'square', 'rt', etc.). Note that when using
-the [ERPLAB](https://github.com/lucklab/erplab) plugin, the event *type* field is expected to contain numerical values. EEGLAB cannot
-process a mixture of both formats (numeric and string) for one field. A
-function that checks the event structure ([eeg_checkset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m)
-with flag *eventconsistency*), called each time a dataset is modified,
-enforces each field's contents to remain consistent, automatically
-converting numeric values to strings if necessary. This function will also automatically 
-resort events by increasing latencies. 
+注意: すべてのイベントフィールドには、数字または文字列が含まれている場合があります。
+*レイテンシ*、*duration*、*urevent*および*epoch*は、含まなければなりません
+数字)。 たとえば、*type* フィールドには、数(例、1、2、2)を含むことができます。 
+等)または文字列(例、'square'、'rt'など)。 使用時注意
+お問い合わせ [ERPラボ](https://github.com/lucklab/erplab) プラグイン、イベント *type* フィールドは数値値を含むと予想されます。 EEGLABができない
+1つのフィールドに両方のフォーマット(数値と文字列)の混合物を処理します。 ツイート
+イベント構造をチェックする機能([eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m)
+フラグ *eventconsistency* で、データセットが変更されるたびに呼び出されます。
+各フィールドのコンテンツが一貫性を維持し、自動的に強制されます。
+必要に応じて数値値を文字列に変換します。 この機能も自動的に 
+レイテンシーの増加によるリゾートイベント。 
 
-### Adding, and modifying events
+### イベントの追加、変更
 
-To insert new events manually, select the <span style="color: brown">Edit
-→ Event values</span> menu item. Click on the *Insert event* button to add a new
-event before the current event. The *Append event* button adds an event
-*after* the current event. After a new event has been inserted or
-appended, its event-field information can immediately be changed in the
-corresponding boxes. For instance, to insert an event of type *new* 500
-ms after the onset of the time-locking stimulus, enter *new* in the
-event *type* edit box, and 500 in the event *latency* edit box.
-Note: If you click on the *cancel* button, none of the new
-information will be saved.
+新しいイベントを手動で入力するには、 <span style="color: brown">編集
+→ イベントの値</span> メニュー項目。 *Insertイベント*ボタンをクリックし、新規追加
+イベント前のイベント。 ※イベント*ボタンはイベントを追加
+*その後*現在のイベント。 新規イベントの投入後、または
+イベントフィールド情報は、すぐに変更できます。
+対応ボックス たとえば、型*new*500のでき事を差し込むため
+タイムロックの刺激の開始の後でmsは、*new*をで入れます
+イベント *type* の編集箱およびイベント *latency* の編集箱の 500。
+注意: *cancel* ボタンをクリックすると、新しいものはありません。
+情報は保存されます。
 
 ![](/assets/images/V121pop_editeventvals_2.png)
 
-After you press *Ok*, the events may be resorted (events must always be
-in order of increasing latencies), and some field contents may be modified
-to ensure consistency, as indicated at the end of the previous
-section.
+※Ok*を押すと、イベントが離脱されることがあります(必ず必ず必ずご持参ください)。
+レイテンシーを増加させるため)、フィールドの内容は変更される場合があります。
+前回の最後に示されているように、一貫性を確保するために
+セクション。
 
-In the graphic interface above, all experimental events can be manually
-modified by simply typing the new values in the edit window for each
-field. Events may also be deleted (*Delete event* button).
+上記のグラフィックインターフェイスでは、すべての実験的なでき事は手動である場合もあります
+それぞれの編集ウィンドウに新しい値を入力するだけで変更
+フィールド。 イベントも削除できます(*イベント削除*ボタン)。
 
-The [Vised EEGLAB plugin](https://github.com/jadesjardins/vised_marks)
-available from the EEGLAB plugin manager allows users to manually add
-events directly on the EEG browser and is convenient for marking events
-of interest (such as blinks, for example).
+ふりがな [EEGLABプラグイン](https://github.com/jadesjardins/vised_marks)
+EEGLABプラグインマネージャから利用可能なユーザーは手動で追加することができます
+EEGブラウザで直接イベントを行い、イベントをマークするのに便利です。
+興味(例えばblinksのような)。
 
-### Modifying events in bulk
+### 一括でイベントを変更する
 
-Another way to modify new events is to export them, modify them under Excel, and then import them back into EEGLAB. You may
-import the tutorial data *eeglab_data.set* in the
-*sample_data* under EEGLAB, then call menu item <span style="color: brown">File → Export → Events to text file</span> and save
-a data file. Using this data file, we show how to rename all events with
-type "rt" to events with type "response" under Excel. The
-figure below shows the exported file (left) and the edited file (right).
+新しいイベントを変更する別の方法は、それらをエクスポートし、Excelの下にそれらを変更し、EEGLABにそれらをインポートすることです。 可能です。
+チュートリアルデータをインポートする *eeglab_data.set* で
+※EEGLABのsample_data*はメニュー項目を呼び出します。 <span style="color: brown">ファイル → エクスポート → テキストファイルへのイベント</span> 保存
+データファイル。 このデータファイルを使用して、すべてのイベントの名前を変更する方法を示します。
+Excel の "response" 型でイベントに "rt" をタイプします。 ふりがな
+以下の図は、エクスポートされたファイル(左)と編集されたファイル(右)を示しています。
 
 ![](/assets/images/Spreadsheet_event.png)
 
-Then, using the <span style="color: brown">File → Import event info → From
-MATLAB array of ASCII file</span> menu item, we select the modified file. We enter
-the column names, indicate that there is 1 line of header, and set the
-unit latency to NaN (which indicates that time information conversion is necessary). We
-also uncheck the alignment option (although leaving it checked has no
-effect). Now all the events have been renamed (note that the interface
-to select events presented in the following section also allows to rename
-event type values, so this is only presented as a didactic example).
+それから、使用して下さい <span style="color: brown">ファイル → インポートイベント情報 → から
+ASCIIファイルのMATLAB配列</span> メニュー項目は変更されたファイルを選択します。 お問い合わせ
+列名は、ヘッダの 1 行があることを示し、
+ユニットレイテンシをNaNに(時間情報変換が必要であることを示す)。 お問い合わせ
+また、アライメントオプションのチェックを外します(チェックしたままにしても、何もありません)
+効果)。 今、すべてのイベントが名前を変更しました (インターフェイスに注意)
+次のセクションで提示されたイベントを選択すると、名前を変更することができます
+イベント型の値なので、これはdactic例としてのみ表示されます。
 
 ![](/assets/images/Event_reimport.png)
 
-### Selecting/removing/renaming events
+### 選択/取消/催し物
 
-You may
-import the tutorial data *eeglab_data.set* in the
-*sample_data* under EEGLAB. To select specific events, use the <span style="color: brown">Edit →
-Select epochs or events</span>menu item. This can be used to remove spurious events or rename events. 
+可能です。
+チュートリアルデータをインポートする *eeglab_data.set* で
+※EEGLAB では、 特定のイベントを選択するには、 <span style="color: brown">編集 →
+エポックやイベントを選択</span>メニュー項目。 大切なイベントを除去したり、イベントの名前を変更したりすることができます。 
 
-For example, to only keep type "square" events, you would enter "square" for event type as shown below.
+たとえば、「正方形」イベントだけを保持するには、以下に示すようにイベントタイプに「正方形」を入力します。
 
-![Image:pop_select_events_new2.png](/assets/images/pop_select_events_new2.png)
+![画像:pop_select_events_new2.png](/assets/images/pop_select_events_new2.png)
 
-Alternatively, since they are only two event types ("square" and "rt"), you could also remove all reaction time events. To do so, enter "rt" for event type and check the checkbox to select all other events as shown below.
+また、2つのイベントタイプ(「スクエア」と「rt」)のみなので、すべての反応時間イベントを削除することもできます。 そのためには、イベントタイプに「rt」を入力し、チェックボックスをチェックして、以下に示すように他のイベントをすべて選択します。
 
-![Image:pop_select_events_new3.png](/assets/images/pop_select_events_new3.png)
+![画像:pop_select_events_new3.png](/assets/images/pop_select_events_new3.png)
 
-In the example below, we simply rename to "response" events with the type "rt", as we did in the previous section.
-Select "rt" for the event type, enter "response" in the renaming event text box. Make sure to uncheck the 
-option *Keep only selected events and remove all other events*. Otherwise all events which are not of type
-"rt" will be removed.
+以下の例では、前のセクションで行なったように、 "rt" 型で "response" イベントに名前を変更します。
+イベントタイプの「rt」を選択し、名前変更イベントテキストボックスに「response」を入力します。 チェックを外すことを確認してください 
+オプション *選択したイベントのみを選択して、他のイベントをすべて削除します*。 それ以外の場合は、タイプされていないすべてのイベント
+"rt" は削除されます。
 
-![Image:pop_select_events_new.png](/assets/images/pop_select_events_new.png)
+![画像:pop_select_events_new.png](/assets/images/pop_select_events_new.png)
 
-Note: To select events outside the given range, check the *Select events
-NOT selected above* box to the right of the field range entry. It is
-possible to rename the type of the selected events (while (optionally)
-keeping the old event type name as a new field) using the last edit
-boxes.
+注意: 指定した範囲外のイベントを選択するには、*イベントを選択してください
+フィールド範囲のエントリの右側に上記の*ボックスを選択していません。 お問い合わせ
+選択したイベントの型の名前を変更できます(オプション)
+古いイベント名を新しいフィールドに保つ)最後の編集
+ボックス。
 
-You may also specify more complex
-combinations of event field selections and ranges as the criterion for
-selecting trials. For instance, you could select events of type "rt" that
-have latencies between 0 and 400 milliseconds and rename these as "fast_rt."
-Use the event selection interface a second time and rename the remaining
-events as "slow_rt."
+より複雑なものを指定することもできます。
+イベントフィールドの選択と範囲の組み合わせは、
+トライアルを選択 たとえば、"rt" の型イベントを選択できます。
+0〜400ミリ秒間のレイテンシーを持ち、「fast_rt」として名前を変更します。
+イベント選択インターフェイスを秒間使用し、残りの名前を変更します
+"slow_rt" としてイベント

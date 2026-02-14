@@ -5,29 +5,29 @@ long_title: c. EEG source model
 parent: 9. Source analysis
 grand_parent: Tutorials
 ---
-Equivalent dipole source localization of EEG or ERP data
+EEGまたはERPデータの同等のダイポールソースローカリゼーション
 ========================================
-{: .no_toc }
+お問い合わせ
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Using DIPFIT to fit one dipole to EEG or ERP scalp maps
+DIPFITを使用して、EEGまたはERPスカルプマップに1つのダイポールに合うように
 --------
 
-EEGLAB provides a command-line implementation of the [DIPFIT plugin](https://github.com/sccn/dipfit) to fit 
-dipoles to raw ERP or EEG scalp maps that has otherwise not been 
-expressly designed anywhere else. Fitting may only be
-performed at selected time points, not throughout a time window. First,
-you must specify the DIPFIT settings on the selected dataset. Then, to fit a
-time point at 100 ms in an average ERP waveform (for example) from the
-main tutorial data set, use the following MATLAB commands.
+EEGLABはコマンドラインの実装を提供しています。 [DIPFITプラグイン](https://github.com/sccn/dipfit) フィットする 
+原材料ERPまたはEEGのスカルプマップへのダイポールは、そうでなかった 
+どこでも設計されている。 フィッティングのみ
+選択したタイムポイントで、タイムウィンドウ全体で実行します。 まずは、
+選択したデータセットでDIPFIT設定を指定する必要があります。 その後、
+平均 ERP 波形で 100 ms のタイムポイント (例)
+メインチュートリアルデータセットは、以下のMATLABコマンドを使用します。
 
 ``` matlab
 eeglab; close; % add path
@@ -55,39 +55,39 @@ pop_dipplot(TMPEEG, 1, 'normlen', 'on');
 figure; pop_topoplot(TMPEEG,0,1, [ 'ERP 100ms, fit with a single dipole (RV ' num2str(dipole(1).rv*100,2) '%)'], 0, 1);
 ```
 
-Click [here](http://sccn.ucsd.edu/eeglab/locatefile.php?file=dipfit_erpeegtest.m) to download the script above. When running the script, the two plots below are created.
+クリック [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=dipfit_erpeegtest.m) 上記のスクリプトをダウンロードします。 スクリプトを実行すると、以下の2つのプロットが作成されます。
 
-![Image:scalp_topo_dipole.png](/assets/images/scalp_topo_dipole.png)
+![画像:scalp_topo_dipole.png](/assets/images/scalp_topo_dipole.png)
 
-It is also possible to locate EEG/ERP sources using eLoreta.
-We have written a simple [plugin](https://github.com/sccn/erpsource) for that purpose.
-This plugin was designed in a minimalist fashion so it could be used as a template for other similar plugins.
-Its graphical output is the same as the script shown in the next section.
+eLoreta を使用して EEG/ERP ソースを見つけることもできます。
+シンプルに書かれている [プラグイン](https://github.com/sccn/erpsource) その目的のために。
+このプラグインはミニマルなファッションで設計されており、他のプラグインのテンプレートとして使用できます。
+そのグラフィカルな出力は、次のセクションに示すスクリプトと同じです。
 
-Advanced source reconstruction using DIPFIT/FieldTrip
+DIPFIT/FieldTripを使用した高度なソース再構築
 --------
 
-Background: DIPFIT relies on FieldTrip, though in fact, DIPFIT was also an ancestor
-of FieldTrip: when Robert Oostenveld, the first FieldTrip developer,
-decided to release source imaging functions he had developed during his
-dissertation work, he first packaged them in EEGLAB as DIPFIT. A few
-years later, when he and his collaborators released FieldTrip (also
-running on MATLAB), we reworked DIPFIT so it would use the FieldTrip
-functions that Robert and colleagues planned to and have since
-maintained for use in FieldTrip. Below is a short tutorial on how to
-perform source modeling using FieldTrip applied to data in an EEGLAB
-dataset.
+背景:DIPFITはフィールドトリップに依存していますが、実際には、DIPFITも祖先でした
+フィールドトリップ: ロバート 初のフィールドトリップ開発者、Oostenveld
+ソースのイメージング機能を解放することにしました。
+まずはEEGLABでDIPFITとしてパッケージ化。 いくつか
+その後、彼と彼の協力者がFieldTripをリリースしたとき(また)
+MATLAB 上で実行)、DIPFIT をリワークし、FieldTrip を使用する
+以来、ロバートと同僚が計画し、持っている機能
+FieldTripでの使用のために維持される。 以下は、方法に関する簡単なチュートリアルです
+EEGLABのデータにフィールドトリップを適用したソースモデリングを実行
+データセット。
 
-Implementation: First, use DIPFIT to align the electrode
-locations with a head model of choice (menu item <span style="color: brown">Tools → Locate
-dipoles using DIPFIT → Head model and settings</span>). The resulting DIPFIT
-information may then be used to perform source localization in
-FieldTrip.
+導入: まず、DIPFITを使用して電極を揃えます
+選択のヘッド モデルが付いている位置(メニュー項目) <span style="color: brown">ツール → ロック
+DIPFIT → ヘッドモデルと設定を使用したダイポール</span>)。 結果DIPFIT
+情報は、ソースのローカリゼーションを実行するために使用することができる
+フィールドトリップ
 
-### Performing source reconstruction in a volume
+### ボリュームでソースの再構築を実行
 
-The first snippet of code below creates the leadfield matrix for a 3-D
-grid (for example, for use with eLoreta).
+下のコードの最初のスニペットは3Dのリードフィールド行列を作成します
+グリッド(例えば、eLoreta で使用する)。
 
 ``` matlab
 %% First load a dataset in EEGLAB.
@@ -106,9 +106,9 @@ EEG = pop_dipfit_settings( EEG, 'hdmfile',fullfile(bemPath, 'standard_vol.mat'),
            'chansel',[1:32] );
 ```
 
-Then calculate a volumetric leadfield matrix using FieldTrip function
-*ft_prepare_leadfield*. Note that the head model is also used to
-assess whether a given voxel is within or outside the brain.
+次に、FieldTrip関数を使用してボリュームメトリックリードフィールド行列を計算します
+*ft_prepare_leadfield*. ヘッドモデルも使うので注意
+与えられたボクセルが脳内外にあるかどうかを評価します。
 
 
 ``` matlab
@@ -132,13 +132,13 @@ cfg.channel    = { 'all' };
 [sourcemodel] = ft_prepare_leadfield(cfg);
 ```
 
-Then use the now generated leadfield matrix to perform source
-reconstruction. Below, we provide a simple example, to model putative
-sources of ERP features using eLoreta. Here, eLoreta may be replaced by
-other approaches, such as Dynamical Imaging of Coherent Sources 'dics'
-(see the FieldTrip [tutorial
-page](http://www.fieldtriptoolbox.org/tutorial/beamformer) from which
-this section is inspired for more information).
+次に生成されたリードフィールド行列を使用してソースを実行します
+再構築。 以下では、シンプルな例をモデル化します。
+eLoretaを使用したERP機能のソース。 ここでは、eLoreta が置換される可能性があります。
+他のアプローチは、コヒーレントソースの動的イメージ投射のような 'dics'
+(FieldTrip参照)
+ページ:()http://www.fieldtriptoolbox.org/tutorial/beamformer) から
+このセクションは、より多くの情報に触発されています。
 
 ``` matlab
 %% Compute an ERP in FieldTrip. Note that the covariance matrix needs to be calculated here for use in source estimation.
@@ -156,28 +156,28 @@ cfg.headmodel   = vol.vol;
 source          = ft_sourceanalysis(cfg, dataAvg);  % compute the source model
 ```
 
-Then plot the solution using FieldTrip functions. Note that the
-solutions are generated in a low-resolution head volume. It is not
-technically feasible to interpolate this volume onto a high-resolution
-MRI in (near) real-time -- online, it would require too many
-computational resources, while offline, it would require too much memory
-(one head volume at every latency. Unlike fMRI data, EEG data have a high temporal resolution, so the low-resolution head volume x latencies
-matrix is already quite large - transforming it into a high-resolution
-volume matrix is impractical). Note that you will need to click on
-different voxels and latencies to obtain a figure that looks like the
-one below.
+次に、FieldTrip関数を使用してソリューションをプロットします。 注意:
+ソリューションは、低解像度のヘッドボリュームで生成されます。 それはない
+このボリュームを高解像度に補うために技術的に可能
+MRI in (near) リアルタイム -- オンラインで、あまりにも多く必要
+計算リソース, オフラインながら, それはあまりにも多くのメモリが必要になります
+(全てのレイテンシーで1頭のボリューム。 fMRIデータとは異なり、EEGデータには高い仮説がありますので、低解像度のヘッドボリュームxレイテンシー
+行列は既にかなり大きい - 高解像度に変換
+容積のマトリックスは非現実的です)。 クリックする必要があります。
+異なるボクセルとレイテンシーは、見た目の数字を取得する
+お問い合わせ
 
-Note also that you can see discontinuities in the plotted volume. This
-is because of sudden inversion of the polarity of the dipole orientation in
-the nearest voxels. This is normal. The product of voxel polarity by
-temporal activity remains continuous in space and time. Still, because of
-the projection method for the 3-D dipole orientation at the voxel level,
-neighboring voxels may have opposite polarities (and, of
-course, oppositely-signed time courses as well). An ideal solution has
-not been found yet to avoid inversions in both space and time - having
-all dipoles point outwards with respect to the head center - and
-inverting associated source time courses accordingly - would be a
-solution worth trying. Or we could plot the different axes of dipole orientation.
+また、プロットされたボリュームの中断を見ることができます。 お問い合わせ
+ダイポールの方向の極性の突然の反転のためです
+最寄のボクセル。 これは正常です。 voxelの極性のプロダクトによる
+空間と時間において、一時的な活動は継続的です。 それでも、
+voxel レベルの 3 D ダイポールのオリエンテーションのための投影方法、
+隣接するボクセルは、反対の極性を持っているかもしれません(そして、の
+コース、反対に署名された時間コースも。 理想的なソリューションは、
+スペースと時間の両方で反転を避けるためにまだ発見されていない - 持っている
+すべてのダイポールは、ヘッドセンターに敬意を表しています。
+関連するソース時間コースをそれに応じて反転 - は
+試してみる価値のあるソリューション。 または、ダイポールの方向の異なる軸をプロットすることができます。
 
 ``` matlab
 %% Plot Loreta solution
@@ -197,11 +197,11 @@ cfg.funparameter = 'mom';
 figure; ft_sourceplot(cfg, sourceProj);
 ```
 
-![border\|500px](/assets/images/Dipfiteloreta3.png)
+![ボーダー|500px](/assets/images/Dipfiteloreta3.png)
 
-Once latencies of interest have been chosen, they may be projected into
-a high-resolution MRI. head image. Below, we show global power on MRI
-slices of a template brain.
+興味の遅延が選択されたら、それらはにプロジェクトされるかもしれません
+高分解能MRIヘッドイメージ 以下は、MRIのグローバルパワーを示しています。
+テンプレートの脳のスライス。
 
 ``` matlab
 %% project sources on MRI and plot solution
@@ -221,19 +221,19 @@ cfg.funparameter = 'pow';
 ft_sourceplot(cfg, sourceInt);
 ```
 
-![border\|500px](/assets/images/Dipfiteloreta4.png)
+![ボーダー|500px](/assets/images/Dipfiteloreta4.png)
 
-### Performing source reconstruction on a surface
+### 表面にソースを再構築する
 
-Alternatively, the code below generates a leadfield matrix for a
-realistic 3-D mesh in MNI space. Note that this requires that you choose
-the MNI BEM head model when selecting the head model in the DIPFIT
-settings menu. Different mesh versions are available using different
-resolutions. Refer to
-[this FieldTrip
-tutorial](http://www.fieldtriptoolbox.org/template/sourcemodel/) for
-more information. Note that the code below assumes that you have run
-the code above.
+あるいは、下のコードはリードフィールド行列を生成します。
+現実的な MNI空間の3次元メッシュ これはあなたが選ぶ必要があることに注意して下さい
+DIPFIT のヘッド モデルを選ぶとき MNI BEM の頭部モデル
+設定メニュー 異なるメッシュバージョンが異なる
+解像度。 詳しくはこちら
+[このフィールドトリップ]
+チュートリアル:()http://www.fieldtriptoolbox.org/template/sourcemodel/) のための
+詳細情報。 以下のコードは実行していると仮定します
+上記のコード。
 
 ``` matlab
 %% Prepare leadfield surface
@@ -246,10 +246,10 @@ cfg.headmodel = vol.vol;        % volume conduction model
 leadfield = ft_prepare_leadfield(cfg, dataAvg);
 ```
 
-The code in the previous section used eLoreta. In this section we will
-use minimal norm estimate (MNE). Both MNE and eLoreta can perform source
-reconstruction at each latency (assuming you are using an EEG time
-series as input).
+前のセクションのコードは eLoreta を使っていました。 このセクションでは、
+最小限のノーム見積(MNE)を使用します。 MNEとeLoretaの両方がソースを実行できます
+各レイテンシーでの再構築(EEG時間の使用を認める)
+入力としてシリーズ。
 
 ``` matlab
 %% Surface source analysis
@@ -262,10 +262,10 @@ cfg.mne.scalesourcecov = 'yes';
 source            = ft_sourceanalysis(cfg, dataAvg);
 ```
 
-Now we will plot global power. Using the same approach, it is possible
-to create movies in which the MNE source solutions evolves over time, as
-described on [this
-page](http://www.fieldtriptoolbox.org/tutorial/minimumnormestimate/).
+今、私たちはグローバルパワーをプロットします。 同じアプローチで、
+MNEのソースソリューションが時間とともに進化する映画を作成する
+このページのトップへ
+ページ:()http://www.fieldtriptoolbox.org/tutorial/minimumnormestimate/).
 
 ``` matlab
 %% Surface source plot
@@ -278,11 +278,11 @@ cfg.opacitylim = [0 200];
 ft_sourceplot(cfg, source);
 ```
 
-![border\|500px](/assets/images/FieldTrip_surface_solution2.png)
+![ボーダー|500px](/assets/images/FieldTrip_surface_solution2.png)
 
-You may also visually check the alignment of the source model mesh with
-the BEM head model mesh by overlaying the BEM mesh on the image above,
-as shown below
+ソースモデルのメッシュのアライメントを視覚的に確認することもできます。
+上の画像にBEMメッシュをオーバーレイすることにより、BEMヘッドモデルメッシュ、
+下記の通りです。
 
 ``` matlab
 hold on; ft_plot_mesh(vol.vol.bnd(3), 'facecolor', 'red', 'facealpha', 0.05, 'edgecolor', 'none');
@@ -290,26 +290,26 @@ hold on; ft_plot_mesh(vol.vol.bnd(2), 'facecolor', 'red', 'facealpha', 0.05, 'ed
 hold on; ft_plot_mesh(vol.vol.bnd(1), 'facecolor', 'red', 'facealpha', 0.05, 'edgecolor', 'none');
 ```
 
-![border\|500px](/assets/images/FieldTrip_surface_solution_with_bem2.png)
+![ボーダー|500px](/assets/images/FieldTrip_surface_solution_with_bem2.png)
 
-Click [here](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_fieldtrip_script.m) to download the script above.
+クリック [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_fieldtrip_script.m) 上記のスクリプトをダウンロードします。
 
-Relevant FieldTrip tutorials
+関連するFieldTripチュートリアル
 --------
--   [How to build a source
-    model](http://www.fieldtriptoolbox.org/tutorial/sourcemodel/) and
-    [available template source
-    models](http://www.fieldtriptoolbox.org/template/sourcemodel/) (one
-    of them is used above)
--   [How to define the volume conduction
-    model](http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem/)
--   [Beamformer
-    methods](http://www.fieldtriptoolbox.org/tutorial/beamformer/) -
-    note that you may replace 'dics' by 'eloreta' in this tutorial
--   [Minimum norm
-    estimates](http://www.fieldtriptoolbox.org/tutorial/minimumnormestimate/)
-    for MEG, but can be adapted for EEG
--  [Previous tutorial version of DIPFIT](https://sccn.ucsd.edu/eeglab/dipfittut/dipfit.htmlold)
+-   [ソースを作成する方法]
+    モデル:()http://www.fieldtriptoolbox.org/tutorial/sourcemodel/)と
+    [利用可能なテンプレートソース]
+    モデル:()http://www.fieldtriptoolbox.org/template/sourcemodel/) ( 1 つ
+    上記で使用しているもの)
+-   [ボリューム伝導を定義する方法]
+    モデル:()http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem/)
+-   [ビームフォーマー]
+    メソッド:()http://www.fieldtriptoolbox.org/tutorial/beamformer/) -
+    このチュートリアルでは'eloreta'によって'dics'を置き換える可能性があることに注意してください
+-   [最小限の規範]
+    見積りhttp://www.fieldtriptoolbox.org/tutorial/minimumnormestimate/)
+    MEGは、EEGのために適応することができます
+-  [DIPFITの以前のチュートリアルバージョン](https://sccn.ucsd.edu/eeglab/dipfittut/dipfit.htmlold)
 
-This section was written by Arnaud Delorme with contributions and
-feedback from Robert Oostenveld and Scott Makeig.
+このセクションは、Arnaud Delorme が貢献して書いていました。
+Robert OostenveldとScott Makeigからのフィードバック。

@@ -6,108 +6,108 @@ parent: Contribute
 grand_parent: Tutorials
 nav_order: 1
 ---
-Creating EEGLAB plugins and extension
+EEGLABプラグインの作成と拡張
 ========================
-{: .no_toc }
-This section about creating plugins and extension is fairly long. However, creating an EEGLAB plugin is very simple. If you are in a rush, jump to the [example section](/tutorials/contribute/design_plugin.html#eegplugin_-function-examples) and copy and paste code.
+お問い合わせ
+プラグインの作成と拡張に関するこのセクションはかなり長いです。 しかし、EEGLABプラグインの作成は非常に簡単です。 急いでいるなら、 [例セクション](/tutorials/contribute/design_plugin.html#eegplugin_-function-examples) コードをコピーして貼り付けます。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-How to write EEGLAB functions
+EEGLAB関数の書き方
 --------------------------------
 
-### EEGLAB function encapsulation
+### EEGLAB機能カプセル化
 
-EEGLAB operates in the rich MATLAB environment. The structure of
-EEGLAB functions makes it easy to combine them in new ways in original
-MATLAB scripts that can also incorporate any of the wide variety of
-processing tools and methods available in MATLAB. Thus, the
-straightforward way to add to EEGLAB capabilities is to use EEGLAB
-functions and data structures within your MATLAB scripts, something
-many or most EEGLAB users do routinely.
+EEGLABは、豊富なMATLAB環境で動作します。 構造の
+EEGLAB関数は、元の新しい方法でそれらを組み合わせるのを容易にします
+MATLABスクリプトは、多種多様なものを組み込むこともできます。
+MATLABでは、ツールやメソッドの処理が可能です。 したがって、
+EEGLABの機能を追加する簡単な方法は、EEGLABを使用することです
+MATLABスクリプト内の関数とデータ構造、何か
+多くまたはほとんどの EEGLAB のユーザーは定期的に行います。
 
-EEGLAB functions provide a level of encapsulation and isolation that
-minimizes the possibility of interference between variable names within
-and outside of the functions themselves, e.g., in MATLAB scripts or
-functions that may call them. EEGLAB is, in essence, a large set of
-MATLAB functions. 
+EEGLAB関数はカプセル化と分離のレベルを提供します
+変数名間の干渉の可能性を最小限に抑える
+そして、MATLABスクリプトで、またはその関数の外部から、
+それらを呼び出すことができる関数。 EEGLABは、本質的に、大きなセットです。
+MATLABの機能。 
 
-Adding new functionality to EEGLAB requires a pair of functions, a
-signal processing function (Ex:
-[sample.m](http://sccn.ucsd.edu/eeglab/download/sample.m)), and an
-accompanying *pop_* function (Ex:
-[pop_sample.m](http://sccn.ucsd.edu/eeglab/download/pop_sample.m)). The
-*pop_* function pops up a text input window allowing the user to specify
-arguments to the signal processing function. The MATLAB help messages
-for each function should state clearly what input arguments the
-functions require and what they output, using the help message format
-explained below. You should read the [EEGLAB function](/tutorials/ConceptsGuide/EEGLAB_functions.html) section of the tutorial to understand
-the different levels of functions in EEGLAB.
+EEGLABに新しい機能を追加するには、機能のペアが必要です。
+信号処理機能(例:
+[サンプル。 m 点](http://sccn.ucsd.edu/eeglab/download/sample.m))、および
+*pop_* 関数を伴って (例:
+[人気カテゴリー](http://sccn.ucsd.edu/eeglab/download/pop_sample.m))。 ふりがな
+*pop_* 関数は、ユーザが指定できるようにテキスト入力ウィンドウをポップアップします
+シグナル処理関数への引数。 MATLABのヘルプメッセージ
+各関数は、入力引数が何であるかを明確に記述する必要があります。
+関数は、ヘルプメッセージの形式を使用して、出力されたものと要求します
+お問い合わせ あなたが読む必要があります [EEGLAB機能](/tutorials/ConceptsGuide/EEGLAB_functions.html) チュートリアルのセクションを理解する
+EEGLABの機能の異なるレベル。
 
-### Signal processing functions
+### 信号処理機能
 
-Functions that directly operate on EEG data fields should comply with the
-EEGLAB help-message syntax EEGLAB users are familiar with. For example, see this [sample
-header](http://sccn.ucsd.edu/eeglab/download/sample.m).
+EEGデータフィールド上で直接動作する機能が遵守すべき
+EEGLAB のヘルプメッセージの構文 EEGLAB のユーザは使い慣れています。 例えば、この[sample]を参照してください。
+ヘッダ>(http://sccn.ucsd.edu/eeglab/download/sample.m).
 
-### Associated pop_ functions
+### 関連するポップアップ_関数
 
-A *pop_* function associated with a signal processing function creates a
-graphic user interface to it. The *pop_* function (the whole name should
-begin with *pop_* followed by the name of the signal processing
-function) should include the same disclaimer as the signal processing
-function and
+信号処理機能に関連した *pop_* 関数は、
+それにグラフィック ユーザー インターフェイス。 *pop_* 関数(全名は必須)
+*pop_* で始まると、シグナル処理の名前が続きます。
+関数)は信号処理として同じdisclaimerを含んでいるべきです
+機能および
 
-1.  It must take the EEGLAB data structure 'EEG' as a first input. Optionally, the
-    function's second parameter may specify whether the signal processing function
-    will be applied to ICA component activations or the raw EEG data
-    channels.
-2.  Additional parameters should be optional. If they are left blank in
-    a command line or script call to the *pop_* function a MATLAB
-    window should pop-up to ask for their values.
-3.  The *pop_* function must return a 'string' containing the resulting
-    call to the signal processing function (or, in some cases, to the
-    *pop_* function). When this string is evaluated using the MATLAB
-    function *eval*, the result must be the same as that of the
-    *pop_* function itself, e.g., including all the parameters the user may
-    have entered into the pop-up interface window. This string will be
-    pushed into the EEGLAB command history stack.
-4.  By convention, if the function draws a figure, calling the function
-    without enough arguments should pop up a new figure. However, given
-    enough arguments, the function should
-    directly draw the output graphic in the current figure (thus
-    allowing the user to build multi-part figures, e.g., using the *sbplot*
-    command). Writing a *pop_* function is easy and can usually be done in
-    a few minutes if you modify this
-    [pop_sample.m](http://sccn.ucsd.edu/eeglab/download/pop_sample.m)
-    function source.
+1.  EEGLAB のデータ構造 'EEG' を最初の入力として取り込む必要があります。 オプションで、
+    関数の第2変数は信号処理機能かどうか指定できます
+    ICAコンポーネントのアクティベーションやEEGデータに適用します。
+    チャンネル.
+2.  追加パラメータはオプションです。 空白のままの場合
+    MATLAB の *pop_* 関数へのコマンドラインやスクリプト呼び出し
+    ウィンドウは、自分の値を求めるためにポップアップする必要があります。
+3.  *pop_* 関数は結果を含む 'string' を返す必要があります
+    信号処理機能(または、場合によっては、
+    *pop_* 関数)。 この文字列がMATLABで評価される場合
+    関数 *eval*, 結果は、そのと同じでなければなりません
+    *pop_* 関数自体、例えば、ユーザが持つ全てのパラメータを含む
+    ポップアップインターフェイスウィンドウに入力しました。 この文字列は
+    EEGLABコマンド履歴スタックにプッシュ。
+4.  慣習によって、機能が図を引いたら、機能を呼び出す
+    十分な引数なしで新しい数字をポップアップする必要があります。 しかし、与えられた
+    十分な引数、関数は
+    現在の図の出力グラフィックを直接描画します。
+    *sbplot* を使用して、複数の部分の図を、例えば造ることを可能にします
+    コマンド) *pop_* 関数を書くことは簡単で、通常は実行できます
+    これを変更した場合、数分
+    [人気カテゴリー](http://sccn.ucsd.edu/eeglab/download/pop_sample.m)
+    機能ソース。
 
-### How to debug EEGLAB functions
+### EEGLAB関数のデバッグ方法
 
-When called from the EEGLAB GUI, EEGLAB intercepts errors, which can make
-it challenging to debug functions. The solution is to call the
-function from the command line (preceded by *dbstop if
-error*), and EEGLAB will not intercept the error.
+EEGLAB GUI から呼び出されると、EEGLAB はエラーを傍受します。
+デバッグ機能への挑戦 ソリューションは、
+コマンドラインから関数(*dbstop で前述)
+error*) と EEGLAB はエラーを遮断しません。
 
-Using EEGLAB GUI design functions
+EEGLAB GUI デザイン機能を利用する
 -----------------------------------
-The function [supergui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) is the main function used for creating
-graphic interfaces in EEGLAB. We will be describing below some basic and
-more advanced uses for it:
+関数 [スーパーギ.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) 作成に使用する主な機能
+EEGLABのグラフィックインターフェイス。 私たちは、いくつかの基本の下に記述します
+それのためのより高度の使用:
 
-### Using the supergui function
+### supergui関数を使用する
 
-The [supergui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) was designed to alleviate the burden of manually creating
-a graphic interface for each function. Instead, a series of controls are
-defined along with their approximate locations and the figure is automatically created.
-An example is shown below:
+ふりがな [スーパーギ.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) 手動で作成する負担を軽減するように設計されました
+各機能のグラフィックインターフェイス。 代わりに、一連の制御が
+近似の場所と図が自動的に作成されます。
+以下の例を示します。
 
 ``` matlab
   supergui( 'geomhoriz', { 1 1 1 }, 'uilist', { ...
@@ -115,22 +115,22 @@ An example is shown below:
          { 'style', 'pushbutton' , 'string', 'OK' } } );
 ```
 
-This creates the following graphic interface
+これは、次のグラフィックインターフェイスを作成します。
 
-![center](/assets/images/Supergui1.jpg)
+![センター](/assets/images/Supergui1.jpg)
 
-The command-line call above contains two main arguments: 'geometry' and
-'uilist'. 'geometry' defines the geometry in this case 3 lines { 1 1 1 }
-(see more complex geometry below). The 'uilist' defines the content for
-each of these lines. The first line contains some text "{ 'style',
-'text', 'string', 'Hello!' }". The second line is empty "{ }" and the
-third line contains the "OK" button "{ 'style', 'pushbutton' , 'string',
-'OK' }".
+上記のコマンドラインコールには、'geometry' と
+'uilist'. 'geometry' は、このケースで幾何学を定義します。 3 行 { 1 1 1 1 1 1 }
+(下のより複雑な幾何学参照)。 'uilist' は、コンテンツの定義
+これらの行のそれぞれ。 最初の行には "{ 'style' というテキストが含まれています。
+'text', 'string', 'Hello!' はコメントを受け付けていません。 2番目の行は "{ }" と "
+3行目は "OK" ボタン "{ 'style', 'pushbutton' , 'string' を含んでいます。
+お問い合わせ
 
-However, if you press *Ok*, nothing will happen because no action has been
-associated with this button. To associate an action to a UI control,
-simply use the 'callback' command and enter any MATLAB command in the
-associated string parameter.
+しかし、*Ok*を押すと、アクションがないため何も起こらない
+このボタンに関連付けられている。 UI 制御にアクションを関連付けるには、
+単に 'callback' コマンドを使用し、任意の MATLAB コマンドを入力します。
+関連する文字列パラメータ。
 
 ``` matlab
   supergui( 'geomhoriz', { 1 1 1 }, 'uilist', { ...
@@ -138,11 +138,11 @@ associated string parameter.
          { 'style', 'pushbutton' , 'string', 'OK' 'callback' 'close(gcbf);' } } );
 ```
 
-Above, we added the 'callback' command "close(gcbf)" which closes the
-current figure when users press the *Ok* button.
+上記は「callback」コマンド "close(gcbf)" を追加しました。
+ユーザーが*Ok*ボタンを押しているとき現在の図。
 
-Almost any geometry (but not all as detailed in the advanced section)
-may be defined using this scheme. For instance
+ほぼすべてのジオメトリ(ただし、高度なセクションですべて詳細ではありません)
+このスキームを使用して定義することができます。 例えば
 
 ``` matlab
   supergui( 'geomhoriz', { [1 1] 1 1 }, 'uilist', { ...
@@ -151,23 +151,23 @@ may be defined using this scheme. For instance
          { 'style', 'pushbutton' , 'string', 'OK' 'callback' 'close(gcbf);' } } );
 ```
 
-![center](/assets/images/Supergui2.jpg)
+![センター](/assets/images/Supergui2.jpg)
 
-The first line now has geometry \[1 1\], which means that two UI will
-share this line and have the same horizontal extent. As shown below, changing \[1 1\] to
-\[1 0.5\] forces the second UI on the line to have only
-half the horizontal extent of the first one.
+最初の行はジオメトリ\[1\]を持っています。つまり、2つのUIが
+この行を共有し、同じ水平な範囲を持っています。 以下に示すように、 \[1 1\] を
+\[1 0.5\] は、行の 2 番目の UI を強制してのみ
+最初の1つの水平方向の半分。
 
-![center](/assets/images/Supergui3.jpg)
+![センター](/assets/images/Supergui3.jpg)
 
-In some cases, it is convenient to have a UI spam more than one line of
-text. This is often the case for *listbox* UI, for instance. Below we define a
-*listbox* UI with multiple choice and use the additional command 'geomvert'
-to specify the vertical geometry. It is set to \[3 1 1\], which means
-that the UI on the first line will span 3 lines of text, and the other
-lines will only span one line of text (we have to add carriage returns -
-character 10 - to the text of the first UI so this text is aligned with
-the *listbox* UI).
+場合によっては、UIのスパムを1ライン以上持っていることは便利です
+テキスト。 これは、例えば、*listbox* UI の場合です。 以下は定義します
+*listbox* UI は複数の選択で、追加のコマンド 'geomvert を使用します。 お問い合わせ
+垂直ジオメトリを指定する。 \[3 1 \] に設定されます。
+最初の行の UI が 3 行のテキストと他の行に及ぶこと
+行はテキストの 1 行だけにスパンします(キャリッジリターンを追加する必要があります -
+文字10 - 最初のUIのテキストにこのテキストは整列されます
+*listbox* UI の
 
 ``` matlab
   supergui( 'geomhoriz', { [1 1] 1 1 }, 'geomvert', [3 1 1], 'uilist', { ...
@@ -176,16 +176,16 @@ the *listbox* UI).
          { 'style', 'pushbutton' , 'string', 'OK' 'callback' 'close(gcbf);' } } );
 ```
 
-![center](/assets/images/Supergui4.jpg)
+![センター](/assets/images/Supergui4.jpg)
 
-### Using the inputgui function
+### Inputgui関数を使用する
 
-Although [supergui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) can be useful, it only creates the GUI, and all the
-control flow of events needs to be handled by the UIs; i.e., creating a
-button *Ok*, a button *Cancel* and handling the events associated to
-these buttons are left to the user. The [inputgui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=inputgui.m) function (which
-calls the [supergui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) function) helps supplement this by automatically
-creating these buttons and also by processing outputs. For instance:
+しかし、 [スーパーギ.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) GUI だけを生成し、すべてのGUI が使える
+イベントの制御フローは、UIによって処理する必要があります。つまり、
+ボタン *Ok*、ボタン *Cancel* および関連するイベントの処理
+これらのボタンはユーザーに残されます。 ふりがな [入力gui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=inputgui.m) 関数(その
+呼び出し [スーパーギ.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) 機能) 自動的にこれを補うのを助けて下さい
+出力を処理することで、これらのボタンやボタンを作成できます。 例えば:
 
 ``` matlab
   res = inputgui( 'geometry', { [1 1] }, ...
@@ -194,14 +194,14 @@ creating these buttons and also by processing outputs. For instance:
          { 'style', 'listbox', 'string', 'Choice 1|Choice 2|Choice 3' } } );
 ```
 
-![center](/assets/images/Supergui5.jpg)
+![センター](/assets/images/Supergui5.jpg)
 
-The *res* output contains the results -- in this case, a cell array
-containing a single value from 1 to 3 indicating the user's choice  (for instance, { \[1\] }). The number of elements in this cell array
-depends on the number of UIs returning output (in general text and
-button do not return output but checkboxes, listboxes, and edit boxes do).
-Another way to use this function is to set tag for each UI and use the
-4th output:
+*res* 出力は結果 -- をこの場合、セル配列含んでいます
+ユーザの選択肢(例えば、{\[1\]})を示す1から3までの単一値を含む。 このセル配列の要素数
+出力を返すUIの数に依存します(一般的なテキストで、
+ボタンは出力を戻しませんが、チェックボックス、リストボックス、および編集ボックスは行いません。
+この関数を使用する別の方法は、各 UI のタグを設定し、使用することです。
+第4出力:
 
 ``` matlab
   [res userdata err structout] = inputgui( 'geometry', { [1 1] }, ...
@@ -210,13 +210,13 @@ Another way to use this function is to set tag for each UI and use the
          { 'style', 'listbox', 'string', 'Choice 1|Choice 2|Choice 3' 'tag' 'list' } } );
 ```
 
-Now the output structure *structout* includes a field named *list* that contains the output of the *listbox* UI (structout.list = 1 for
-instance). This is convenient for creating GUIs, as developers do not
-need to remember the output order. You may change the order of
-lines, and you will not have to change any other part of your script.
+出力構造 *structout* には、*listbox* UI (structout) の出力を含む *list* というフィールドが含まれます。 リスト = 1
+インスタンス 開発者がいないのでGUIの作成に便利です。
+出力順序を覚える必要があります。 注文を変更することができます
+行、スクリプトの他の部分を変更する必要はありません。
 
-A complex UI shown below uses this technique. It is inspired by the
-*pop_newtimef* function.
+以下に示す複雑なUIは、この技術を使用しています。 インスピレーションは、
+*pop_newtimef* 関数。
 
 ``` matlab
     g = [1 0.3 0.6 0.34];
@@ -276,21 +276,21 @@ A complex UI shown below uses this technique. It is inspired by the
            'pophelp(''pop_newtimef'');', 'Plot channel time frequency -- pop_newtimef()');
 ```
 
-Copying and pasting the script above should generate the GUI below. Note
-how simply the geometry was defined. The [supergui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) function automatically adapts the width and height of the window to the containing
-elements. Also, note the *Help* button, which executes the command
-"pophelp(*pop_newtimef*);" defined in the [inputgui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=inputgui.m) command-line call.
-Upon pressing *Ok*, the fields of the *structout* structure
-contain all the user entries in the GUI.
+上記のスクリプトをコピーして貼り付けると、以下のGUIが生成されます。 お問い合わせ
+幾何学が定義されたのか。 ふりがな [スーパーギ.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) 関数は、ウィンドウの幅と高さを自動的に変化させます。
+要素。 また、コマンドを実行する *Help* ボタンに注意して下さい。
+"pophelp(*pop_newtimef*);" で定義されている [入力gui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=inputgui.m) command-line 呼び出し。
+*Ok*を押すと、*structout*構造のフィールド
+GUI 内のすべてのユーザエントリを含む。
 
-![center](/assets/images/Supergui6.jpg)
+![センター](/assets/images/Supergui6.jpg)
 
-### Advanced GUI design
+### 高度なGUI設計
 
-One limitation of the [supergui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) calling format is that it is not possible
-to define random geometries. Any given line needs to span the same
-height. There is an advanced calling format that allows circumventing
-that problem.
+1つの制限 [スーパーギ.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) 呼び出し形式は不可能である
+ランダムな幾何学を定義する。 任意の行は同じにスパンする必要があります
+高さ。 周囲の形成を可能にする高度な呼び出し形式があります
+その問題。
 
 ``` matlab
   supergui('geom', { {2 2 [0 0] [1 2] } { 2 2 [1 0] [2 1] } { 2 2 [1 1] [2 2] } }, ...
@@ -299,62 +299,62 @@ that problem.
                        { 'style' 'text' 'string' 'cell 4' } });
 ```
 
-![center](/assets/images/Supergui7.jpg)
+![センター](/assets/images/Supergui7.jpg)
 
-The *geom*
-input above is detailed in the help section of the [supergui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) function.
+お問い合わせ
+上記の入力はヘルプセクションで詳細です [スーパーギ.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) 機能。
 
-How to write an EEGLAB extension
+EEGLAB拡張機能の書き方
 ---------------------------------
 
-EEGLAB also has an *extension* (also called *plugin*) facility that
-automatically searches for functions loaded into a specified *plugin*
-directory, causing one or more menu items calling the extension to
-appear in the EEGLAB menu. EEGLAB *extensions* can be offered for
-download and use by anyone, independent of the EEGLAB distribution. They can be included
-in the EEGLAB extension manager.
+EEGLABには、*extension*(*plugin*とも呼ばれる)施設もあります。
+指定された *plugin* にロードされた関数を自動的に検索
+ディレクトリは、拡張を呼び出す1つ以上のメニュー項目を引き起こします
+EEGLABメニューに表示されます。 EEGLAB *extensions*は、
+EEGLABの配布を独立して、誰でもダウンロードして使用してください。 それらは含まれていることができます
+EEGLAB拡張マネージャで。
 
 
-EEGLAB will automatically incorporate any appropriately named plugin
-functions that are named *eegplugin_myfunc.m* that EEGLAB
-finds in the same directory as *eeglab.m*. (Here, *myfunc* should be the
-name of the main signal processing function for the extension). Creating
-an *eegplugin_* function in this directory will add a menu item
-with the menu label(s) specified in your *eegplugin_* function to the
-bottom of the specified top-level EEGLAB menu (this extension menu label
-being possibly linked to an unlimited number of sub-menus). This menu
-item (or items) can call standard or custom EEGLAB data processing and
-*pop_* functions (see examples below). When a user downloads an EEGLAB
-extension (either from the EEGLAB extension manager, the main
-EEGLAB site, or any other web site), the *eegplugin_* function will then be detected by
-EEGLAB at startup (by looking for files or directories with names
-beginning *eegplugin_* in the main EEGLAB directory).
+EEGLABは、適切な名前のプラグインを自動的に組み込む
+EEGLAB の *eegplugin_myfunc.m* という名前の関数
+*eeglab.m* と同じディレクトリにあります。 (Here, *myfunc* は必須です)
+延長のための主要な信号処理機能の名前)。 作成する
+このディレクトリの *eegplugin_* 関数はメニュー項目を追加します。
+*eegplugin_* 関数で指定されたメニューラベル(s)を
+指定されたトップレベルのEEGLABメニューの下部(この拡張メニューラベル)
+サブメニューの無制限数にリンクする可能性があります。 メニュー
+項目(または項目)は標準か習慣EEGLABのデータ処理を呼ぶことができます
+*pop_* 関数(以下例を参照)。 ユーザが EEGLAB をダウンロードしたときに
+エクステンション(EEGLABエクステンションマネージャー、メイン担当)
+EEGLABサイト、またはその他のWebサイト)、*eegplugin_*関数は、その後、
+スタートアップでEEGLAB(名前のファイルやディレクトリを検索)
+メインの EEGLAB ディレクトリの *eegplugin_* を開始します。
 
-### Creating an eegplugin_ function
+### eegplugin_ 関数の作成
 
-To create a new EEGLAB extension, simply create a MATLAB function file
-whose name begins with *eegplugin_* and place it in the
-*plugins* function subdirectory. This
-function must take three arguments, as in the 'test' extension
-*eegplugin_* function shown below:
+新しい EEGLAB 拡張機能を作成するには、MATLAB 関数ファイルを作成するだけです。
+その名前は *eegplugin_* で始まり、
+*plugins*機能サブディレクトリ。 お問い合わせ
+関数は 'test' 拡張子のように 3 つの引数をとらなければならない
+*eegplugin_* 関数は以下を示します。
 
 ```matlab
 >> eegplugin_test (fig, try_strings, catch_strings);
 ```
 
-The three arguments above are provided to the *eegplugin_* function by
-EEGLAB. The first argument is the handle of the main EEGLAB
-window. The second and third arguments are structures passed by EEGLAB
-that allow the *eegplugin_* function to check parameters, detect errors,
-etc. (see below). Suppose you do not want your extension to
-use EEGLAB history and error message handling. In that case, you can ignore the last
-two parameters (although the *eegplugin_* function <em>definition</em>
-still must list all three arguments, or EEGLAB will not be able to call it).
+上記の3つの引数は、*eegplugin_* 関数に
+エグラボ 最初の引数は、メインのEEGLABのハンドルです。
+ウィンドウ。 第2引数と第3引数は、EEGLABが渡した構造です。
+これにより、*eegplugin_* 関数がパラメータをチェックしたり、エラーを検出したりすることができます。
+その他(下記参照) 延長を望まないとします
+EEGLABの履歴とエラーメッセージ処理を使用します。 その場合、最後に無視できます
+2つのパラメータ(*eegplugin_*関数が) <em>ログイン</em>
+それでも3つの引数をすべてリストしなければなりません。または EEGLAB は呼び出しできません。
 
-### Adding an extension menu item or sub-menu
+### 拡張メニュー項目またはサブメニューの追加
 
-To create a new menu item for your extension under a top-level EEGLAB
-menu, simply add a command like this to your *eegplugin_* function:
+EEGLABのトップレベルの拡張機能で新しいメニューアイテムを作成する
+メニューは、このコマンドを *eegplugin_* 関数に追加するだけです。
 
 ```matlab
 uimenu(fig,'label', 'My menu item','callback',...
@@ -362,26 +362,26 @@ uimenu(fig,'label', 'My menu item','callback',...
   [ALLEEG EEG CURRENTSET] = eeg_store(ALLEEG, EEG, CURRENTSET);' ]);
 ```
 
-The statement *\[ALLEEG EEG CURRENTSET\] = eeg_store(ALLEEG, EEG,
-CURRENTSET);* above ensures that your modified EEG dataset will be
-stored in the EEGLAB *ALLEEG* structure. *myfunc* should be replaced
-with your extension's name, and *My menu item* with a brief
-menu-item label (typically the name of your extension).
+ステートメント *\[ALLEEG EEG CURRENTSET\] = eeg_store(ALLEEG、EEG、
+CURRENTSET; * 上記では、変更されたEEGデータセットが行われることを保証します。
+EEGLAB *ALLEEG*構造に格納されます。 *myfunc* は置換されるべきです
+拡張子の名前と*マイメニュー項目*を簡略で使用
+メニュー項目ラベル(通常、拡張子の名前)。
 
-### Extensions and EEGLAB history
+### エクステンションとEEGLABの歴史
 
-If you want your extension to interact with the EEGLAB history
-mechanism, you should take advantage of the second ('try_strings') and
-third ('catch_strings') arguments to your eegplugin_ function call. The
-second argument (see *eegplugin_test.m* above) contains commands
-(organized into a MATLAB structure) that check the input dataset and
-attempt to execute your command. The third argument ('catch_strings')
-includes commands to handle errors and add the contents of the LASTCOM
-(i.e., last command) variable to the EEGLAB history.
+EEGLABの歴史とやりとりする拡張機能が必要な場合
+メカニズムは、2番目の('try_strings')を利用し、
+eegplugin_ 関数呼び出しに対する3番目の ('catch_strings') 引数。 ふりがな
+2番目の引数 (上の *eegplugin_test.m* を参照) にはコマンドが含まれています
+入力データセットを点検する(MATLABの構造に整理される)
+コマンドを実行しようとする。 第3引数('catch_strings')
+エラーを処理するコマンドと、LASTCOM のコンテンツを追加します。
+(つまり、最後のコマンド) 変数を EEGLAB の履歴に変換します。
 
 
-*eegplugin_* functions should declare one or more EEGLAB menu items. Each
-menu declaration should look like this:
+*eegplugin_* 関数は 1 つ以上の EEGLAB メニュー項目を宣言する必要があります。 詳しくはこちら
+メニュー宣言はこのようになります。
 
 ``` matlab
 uimenu( submenu, 'label', 'My menu item', 'callback', ...
@@ -390,43 +390,43 @@ uimenu( submenu, 'label', 'My menu item', 'callback', ...
 ```
 
 
-Possible fields for 'try_strings' (above) are:
+'try_strings' (above) のフィールドは次のようになります。
 
--   *try_strings.no_check* : check for the presence of a non-empty EEG
-    dataset only
--   *try_strings.check_ica* : check that the dataset includes ICA
-    weights
--   *try_strings.check_cont* : check that the dataset is continuous
--   *try_strings.check_epoch* : check that the dataset is epoched (not
-    continuous data)
--   *try_strings.check_event* : check that the dataset contains events
--   *try_strings.check_epoch_ica* : check that the dataset is epoched
-    **and** includes ICA weights
--   *try_strings.check_chanlocs* : check that the dataset contains a
-    channel location file
--   *try_strings.check_epoch_chanlocs* : check that the dataset is
-    epoched **and** includes a channel locations (chanlocs) file
--   *try_strings.check_epoch_ica_chanlocs* : check that the dataset is
-    epoched **and** includes ICA weights **and** a channel locations
-    file.
+-   *try_strings.no_check* : 空でないEEGの存在を確認する
+    データセットのみ
+-   *try_strings.check_ica* : データセットがICAを含むことを確認します
+    体重
+-   *try_strings.check_cont* : データセットが連続していることを確認します
+-   *try_strings.check_epoch* : データセットが epoched であることを確認 (not)
+    連続データ)
+-   *try_strings.check_event* : データセットにイベントが含まれていることを確認してください
+-   *try_strings.check_epoch_ica* : データセットが epoched であることを確認
+    **および**はICAの重量を含んでいます
+-   *try_strings.check_chanlocs* : データセットが含まれていることを確認します
+    チャンネルの場所ファイル
+-   *try_strings.check_epoch_chanlocs* : データセットがであることを確認します
+    epoched ** と** には、チャンネルの場所 (chanlocs) ファイルが含まれます
+-   *try_strings.check_epoch_ica_chanlocs* : データセットがであることを確認してください
+    epoched ** と** は ICA の重み** と** チャネルの場所が含まれています
+    ファイル。
 
 
-Possible fields for 'catch_strings' are:
+'catch_strings' のフィールドは次のようになります。
 
--   *catch_strings.add_to_hist* : add the LASTCOM variable content (if
-    not empty) to the EEGLAB history
--   *catch_strings.store_and_hist* : add the LASTCOM variable content
-    (if not empty) to the EEGLAB history **and** store the EEG dataset
-    in the ALLEEG variable.
--   *catch_strings.new_and_hist* : add the LASTCOM variable content (if
-    not empty) to the EEGLAB history **and** pop up a new dataset window.
+-   *catch_strings.add_to_hist* : LASTCOM 変数 コンテンツを追加 (if)
+    EEGLABの歴史に空でない)
+-   *catch_strings.store_and_hist* : LASTCOM変数のコンテンツを追加します。
+    EEGLABの歴史に(空でない)**と**EEGデータセットを保存
+    AllEEG変数で。
+-   *catch_strings.new_and_hist* : LASTCOM 変数 コンテンツを追加 (if)
+    EEGLAB の履歴に空でない**と** 新しいデータセットウィンドウがポップアップ表示されます。
 
-### eegplugin_ function examples
+### eegplugin_ 関数例
 
-A simple type of *eegplugin_* function might only call a plotting
-function. For instance, to write a simple extension to plot the ERP
-trial average at every channel in a different color (without performing
-any data checking):
+*eegplugin_* 関数の単純なタイプは、プロットを呼び出している
+機能。 例えば、ERPをプロットする簡単な拡張子を書く
+異なる色ですべてのチャンネルで試用平均(パフォーマンスなし)
+点検するデータ:
 
 ``` matlab
 % eegplugin_erp() - plot ERP plugin
@@ -439,20 +439,20 @@ uimenu( plotmenu, 'label', 'Plot ERP', ...
 ```
 
 
-Save the text above as a file *eegplugin_erp.m* into the *plugins* sub-directory of EEGLAB and restart EEGLAB (click
-[here](http://sccn.ucsd.edu/eeglab/download/eegplugin_erp.m) to
-download this function). Then, given an epoched dataset, select the menu
-item <span style="color: brown">Plot → Plot ERP</span> to plot the ERP average
-of all the dataset epochs.
+上記のテキストをファイルとして保存します。 *eegplugin_erp.m* に EEGLAB の *plugins* サブディレクトリに、 EEGLAB を再起動 (クリック)
+[詳しくはこちら](http://sccn.ucsd.edu/eeglab/download/eegplugin_erp.m) お問い合わせ
+この機能をダウンロードしてください。 次に、epochedデータセットで、メニューを選択します。
+アイテム <span style="color: brown">プロット → プロット ERP</span> ERP平均をプロットする
+すべてのデータセットのエポック。
 
-We describe another example below. To create an extension named *PCA* that
-would apply PCA to your data and store the PCA weights in place of the
-ICA weights (Note: Not recommended for most purposes!), save the MATLAB
-commands below as file *eegplugin_pca.m* into the *plugins* sub-directory
-of EEGLAB and
-restart EEGLAB (click
-[here](http://sccn.ucsd.edu/eeglab/download/eegplugin_pca.m) to
-download this .m file).
+次の例を説明します。 *PCA*という名前の拡張子を作成するには
+PCAをデータに適用し、PCAの重量を貯える
+ICAの重量(注意:ほとんどの目的のためにお勧めしません!)、MATLABを保存します
+*eegplugin_pca.m* を *plugins* のサブディレクトリにファイルとして下にあるコマンド
+EEGLABと
+EEGLABを再起動 (クリック)
+[詳しくはこちら](http://sccn.ucsd.edu/eeglab/download/eegplugin_pca.m) お問い合わせ
+この .m ファイルをダウンロードします。
 
 ``` matlab
 % eegplugin_pca() - a pca plugin
@@ -472,116 +472,116 @@ cmd = [ cmd 'EEG.icasphere = eye(EEG.nbchan); disp(''Done'');' ];
 uimenu( menu, 'Label', 'Run PCA', 'CallBack', cmd, 'separator', 'on');
 ```
 
-Note: You may use *eegplugin_* functions to append new extension-related
-menu items under different EEGLAB menu headings. Above, we add an item
-(labeled 'Run PCA') to the <span style="color: brown">Tools</span> menu by
-specifying '' 'tag','tools' '' in the *findobj.m* call. If the specified
-tag were *import data*, EEGLAB would add the specified menu
-item to the <span style="color: brown">File → Import data</span> sub-menu. Using
-the tag *import epoch* would add the specified menu item to
-the <span style="color: brown">File → Import epoch info</span> sub-menu. The tag
-*import event* would add the specified menu item to the
-<span style="color: brown">File → Import event info</span> menu. The tag
-*export* would add the specified menu item to the
-<span style="color: brown">File → Export data</span> menu. Finally, the tag
-*plot* would add the specified menu item to the
-<span style="color: brown">Plot</span> menu. (Note that the tag should be in
-lower case).
+Note: *eegplugin_* 関数を使って、新しい拡張関連を追加できます。
+異なるEEGLABメニュー見出しの下にメニュー項目。 上記は項目を追加します。
+(「Run PCA'」と表記) <span style="color: brown">ツール</span> メニュー
+*findobj.m* 呼び出しで 'tag','tools' を指定する。 指定された場合
+タグは *import data* で、EEGLAB は指定したメニューを追加します。
+アイテムへ <span style="color: brown">ファイル → インポートデータ</span> サブメニュー 使用方法
+タグ *import epoch* は指定されたメニュー項目を に追加します。
+お問い合わせ <span style="color: brown">ファイル → インポート エポック情報</span> サブメニュー タグ
+*import event* は指定されたメニュー項目を指定したメニュー項目に追加します。
+<span style="color: brown">ファイル → インポートイベント情報</span> メニュー タグ
+*export* は指定されたメニュー項目を指定したメニュー項目に追加します。
+<span style="color: brown">ファイル → エクスポートデータ</span> メニュー 最後に、タグ
+*plot* は指定されたメニュー項目をに付加します
+<span style="color: brown">ピロー</span> メニュー (タグが入るべきであることに注意)
+より低い場合)。
 
 
-After installing the *eegplugin_* function above, a new EEGLAB menu item
-<span style="color: brown">Tools → Run PCA</span> will be created. Use this menu
-item to learn the PCA transform for the current EEG dataset. The
-resulting PCA decomposition will be stored in place of the ICA
-decomposition. (Note: This is possible (if not typically advisable)
-since both PCA and ICA are linear decompositions).
+上記の *eegplugin_* 関数をインストールした後、新しい EEGLAB メニュー項目
+<span style="color: brown">ツール → PCAを実行</span> 作成します。 メニュー
+現在のEEGデータセットのPCA変換を学習するための項目。 ふりがな
+PCAの分解がICAの代わりに保存されます
+分解します。 (注:通常は不可)
+PCAとICAの両方が線形分解であるため。
 
-See the EEGLAB [erpsource extension](https://github.com/sccn/erpsource) for an
-example of a more elaborate extension.
+EEGLABを見る [erpsource 拡張子](https://github.com/sccn/erpsource) お問い合わせ
+より精巧な延長の例。
 
-### EEGLAB menu integration
+### EEGLABメニューの統合
 
-Since 2011, the user can control menu behavior
-within EEGLAB. EEGLAB can automatically enable or disable (e.g., gray
-out and make unresponsive) menu items based on data in memory. This may
-result in some extension-related menu items being automatically disabled
-when they should not be. Thus, we
-implemented a menu item activation scheme that makes it
-possible to control when an extension's menu item(s) will be active. To
-do so, developers must incorporate several keywords in the *userdata*
-field of the menu item:
+2011年以降、メニューの動作を制御することができます。
+EEGLAB 内で。EEGLAB は自動的に有効または無効にすることができます(例えば、グレー
+メモリ内のデータに基づいて、非応答性のメニュー項目を出し、作り出します。 かもしれません。
+いくつかの拡張関連メニュー項目が自動的に無効になっています
+もしそうでなければいけません。 ですから、
+メニュー項目の有効化スキームを実装し、
+拡張メニュー項目(s)が有効になったときに制御可能。 お問い合わせ
+そのため、開発者は*userdata*で複数のキーワードを組み込む必要があります。
+メニュー項目のフィールド:
 
 <table>
 <thead>
 <tr class="header">
-<th>Keyword</th>
-<th>Default</th>
-<th>Description</th>
+<th>キーワード</th>
+<th>デフォルト</th>
+<th>コンテンツ</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>epoch</strong></td>
-<td style="background-color:lightgreen">on</td>
-<td>set to <strong>off</strong> to disable the menu item for epoched datasets</td>
+<td><strong>エポック</strong></td>
+<td style="background-color:lightgreen">お問い合わせ</td>
+<td>設定する <strong>オフ</strong> epoched データセットのメニュー項目を無効にするには</td>
 </tr>
 <tr class="even">
-<td><strong>continuous</strong></td>
-<td style="background-color:lightgreen">on</td>
-<td>set to <strong>off</strong> to disable the menu item for continuous datasets</td>
+<td><strong>連続的な</strong></td>
+<td style="background-color:lightgreen">お問い合わせ</td>
+<td>設定する <strong>オフ</strong> 継続的なデータセットのメニュー項目を無効にするには</td>
 </tr>
 <tr class="odd">
-<td><strong>startup</strong></td>
-<td style="background-color:orange">off</td>
-<td>set to <strong>on</strong> to enable the menu item at startup (no data loaded)</td>
+<td><strong>スタートアップ</strong></td>
+<td style="background-color:orange">オフ</td>
+<td>設定する <strong>お問い合わせ</strong> 起動時にメニュー項目を有効にする(データ読み込みなし)</td>
 </tr>
 <tr class="even">
-<td><strong>study</strong></td>
-<td style="background-color:orange">off</td>
-<td>set to <strong>on</strong> to enable the menu item when a STUDY is being processed</td>
+<td><strong>トレーニング</strong></td>
+<td style="background-color:orange">オフ</td>
+<td>設定する <strong>お問い合わせ</strong> STUDYが処理されるときのメニュー項目を有効にする</td>
 </tr>
 <tr class="odd">
-<td><strong>chanloc</strong></td>
-<td style="background-color:orange">off</td>
-<td>set to <strong>on</strong> to disable the menu item if channel locations are absent</td>
+<td><strong>チャンロック</strong></td>
+<td style="background-color:orange">オフ</td>
+<td>設定する <strong>お問い合わせ</strong> チャネルの場所が不在である場合メニュー項目を無効にするため</td>
 </tr>
 </tbody>
 </table>
 
 
-Semicolons should separate keywords. An example of an
-extension-elated menu item that is enabled only at startup and when
-processing EEGLAB studies is shown below:
+セミコロンはキーワードを分けるべきです。 の一例
+起動時や起動時にのみ有効にする拡張関連メニュー項目
+EEGLABの研究の処理は以下のとおりです。
 
 ``` matlab
    toolsmenu = findobj(fig, 'tag', 'tools');
    uimenu( submenu, 'label', 'My menu', 'callback', mycommand, 'userdata', 'startup:on;study:on');
 ```
 
-Note that adding *epoch:on* or *continuous:on* would not change the
-menu item behavior since these are default behaviors. The following
-example would enable the menu item only when processing continuous or
-epoched datasets that have channel locations present:
+*epoch:on* または *continuous:on* が変更されないことに注意して下さい
+これらはデフォルトの動作であるため、メニュー項目の動作。 以下について
+たとえば、連続処理時または連続処理時にのみメニュー項目を有効にします。
+チャネルの場所が現在あるepochedデータセット:
 
 ``` matlab
    toolsmenu = findobj(fig, 'tag', 'tools');
    uimenu( submenu, 'label', 'My menu', 'callback', mycommand, 'userdata', 'chanloc:on');
 ```
 
-Omitting the *userdata* parameter results in the extension menu item
-adopting the default behaviors defined in the table above.
+拡張メニュー項目の*userdata*パラメータ結果の省略
+上記のテーブルで定義されたデフォルト動作を採用しています。
 
-### Submitting your plugin
+### プラグインの送信
 
-You may then add your extension to the list above so that EEGLAB users can
-download it automatically from the EEGLAB plugin manager. To do this, use [this
-form](http://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php). If
-you want to upload a new version of your plugin, you can use 
-[this simplified form](http://sccn.ucsd.edu/eeglab/plugin_uploader/version_update.php).
+EEGLAB のユーザが使えるように、上記のリストに拡張を追加できます。
+EEGLABプラグインマネージャから自動的にダウンロードします。 これを行うには、[これを使用する]
+フォームhttp://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)。 お問い合わせ
+プラグインの新しいバージョンをアップロードしたい、 
+[この単純化されたフォーム](http://sccn.ucsd.edu/eeglab/plugin_uploader/version_update.php).
 
-Assist with unmaintained plugins
+不要なプラグインをアシスト
 ------------------------
-An extensive collection of plugins are not maintained anymore by their
-author. Yet, they are still widely used. For example, the
-[FMR-IB](https://github.com/sccn/fMRIb) plugin from Rami Niazi (for
-artifact removal) is not supported anymore. There are several issues listed on Gitbub if you want to take over maintaining this plugin. Also, if there is an EEGLAB plugin you are using routinely, and it is no longer supported, consider becoming the maintainer for that plugin. You will get credit for it.
+プラグインの広範なコレクションは、そのことによってもう維持されていない
+著者。 しかし、彼らはまだ広く使用されている。 例えば、
+[FMR-IBの特長](https://github.com/sccn/fMRIb) Rami Niaziのプラグイン
+アーティファクト除去)はもうサポートされていません。 Gitbub には、このプラグインの維持を継続したい場合は、いくつかの問題があります。 また、EEGLABプラグインがあれば、ルーチンを使っていますが、もうサポートされていない場合は、そのプラグインのメンテナーになることを検討してください。 クレジットを受け取る

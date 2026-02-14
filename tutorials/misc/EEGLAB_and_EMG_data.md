@@ -5,35 +5,35 @@ long_title: EEGLAB and EMG data
 parent: Reference Topics
 grand_parent: Tutorials
 ---
-EEGLAB and EMG data
+EEGLABとEMGデータ
 ====================
 
-EEGLAB supports processing electromyography (EMG) data in addition to EEG and MEG data. This tutorial demonstrates how to analyze EMG data in BIDS format, compute EMG event-related potentials (EMG-ERPs), and compare muscle activation patterns across different conditions.
+EEGLABは、EEGおよびMEGデータに加えて、電子画像(EMG)データを処理する支援を行っています。 このチュートリアルでは、BIDS形式でEMGデータを分析し、EMGイベント関連の潜在能力(EMG-ERP)を計算し、異なる条件で筋肉の活性化パターンを比較する方法を説明します。
 
-We will use the [emg2qwerty dataset](https://nemar.org/dataexplorer/detail?dataset_id=nm000104) available on NEMAR, which contains surface EMG recordings from forearm muscles during touch typing on a QWERTY keyboard.
+ご利用にあたって [emg2qwerty データセット](https://nemar.org/dataexplorer/detail?dataset_id=nm000104) NEMAR では、QWERTY キーボードのタッチタイピング時に、フェーアームの筋肉から表面 EMG の記録を含む。
 
-## Dataset Overview
+## データセットの概要
 
-The emg2qwerty dataset includes:
-- 32 bipolar EMG channels (16 per forearm)
-- Surface EMG recordings from wristband sensors
-- Keystroke events with precise timing
-- Sampling rate: ~2000 Hz
-- Task: Touch typing prompted text
+emg2qwerty データセットには以下が含まれます。
+- 32 双極 EMG チャネル (16 パーフォーアーム)
+- リストバンドセンサーからの表面EMGの録音
+- 正確なタイミングでキーストロークイベント
+- 見本抽出率:~2000 Hzの
+- タスク: プロンプトされたテキストを入力するタッチ
 
-This dataset is ideal for demonstrating EMG-ERP analysis because:
-1. Events (keystrokes) have precise timing
-2. Different keys activate different muscle patterns
-3. Left vs right hand comparisons are possible
-4. High trial counts for common keys
+このデータセットは、EMG-ERP解析のデモに最適です。
+1. イベント(keystrokes)は正確なタイミングを持っています
+2. 別のキーは別の筋肉パターンを活動化させます
+3. 左対右手比較が可能
+4. 共通のキーのための高い試験の計算
 
-## Importing EMG BIDS data
+## EMG BIDSデータのインポート
 
-EEGLAB can import BIDS-formatted EMG data using the [bids-matlab-tools](https://github.com/sccn/bids-matlab-tools) plugin. After starting EEGLAB, use menu item <span style="color: brown">File > Import data > From BIDS folder structure</span>.
+EEGLAB は、BIDS-formatted EMG データをインポートすることができます。 [bids-matlab ツール](https://github.com/sccn/bids-matlab-tools) プラグイン。 EEGLABを起動した後、メニュー項目を使用する <span style="color: brown">ファイル > インポートデータ > BIDSフォルダ構造から</span>.
 
 <img src="/assets/images/emg-bids-dialogbox-shot.png" alt="BIDS Import Dialog" style="width:60%">
 
-Alternatively, you can import programmatically:
+あるいは、プログラムをプログラム的にインポートすることもできます。
 
 ```matlab
 % Start EEGLAB
@@ -53,13 +53,13 @@ session_id = 'ses-1620588853';
 EEG = ALLEEG(1);
 ```
 
-After import, EEGLAB shows the dataset information:
+インポート後、EEGLABはデータセット情報を表示します。
 
-![BIDS Import Result](/assets/images/emg-bidsimport-shot.png)
+![BIDSインポート結果](/assets/images/emg-bidsimport-shot.png)
 
 <img src="/assets/images/emg-eeglabview-shot.png" alt="EEGLAB Interface" style="width:60%">
 
-You can also load the BDF files directly:
+BDFファイルを直接ロードすることもできます。
 
 ```matlab
 % Load BDF file
@@ -86,13 +86,13 @@ EEG.etc.datatype = 'emg';
 EEG = eeg_checkset(EEG);
 ```
 
-## Sanity checks: Visualizing the data
+## サンティチェック: データの可視化
 
-Before preprocessing, it's important to verify the data quality and structure using EEGLAB's visualization tools.
+前処理の前に、EEGLABの可視化ツールを使用してデータ品質と構造を確認することが重要です。
 
-### Plotting raw EMG data
+### 生EMGデータのプロット
 
-Use EEGLAB's scrolling data viewer to inspect raw EMG signals and events:
+EEGLABのスクロールデータビューアを使用して、原材料EMG信号とイベントを検査します。
 
 ```matlab
 % Use EEGLAB menu: Plot > Channel data (scroll)
@@ -100,22 +100,22 @@ Use EEGLAB's scrolling data viewer to inspect raw EMG signals and events:
 pop_eegplot(EEG, 1, 1, 1);
 ```
 
-This opens an interactive window where you can:
-- Scroll through the continuous EMG data
-- See keystroke events marked with vertical lines
-- Identify noisy channels or artifacts
-- Adjust the display scale and time window
+これは、あなたができるインタラクティブなウィンドウを開きます。
+- 連続したEMGデータをスクロール
+- 縦線でマークされたキーストロークイベントを見る
+- 騒々しいチャンネルやアーティファクトを特定する
+- ディスプレイスケールとタイムウィンドウを調整する
 
-![Raw EMG Data Viewer](/assets/images/emg-rawdata-shot.png)
+![未加工EMG データビューア](/assets/images/emg-rawdata-shot.png)
 
-**Note for EMG:** The scrolling viewer works the same as for EEG, but expect:
-- Higher amplitude signals (µV to mV range)
-- High-frequency oscillations (20-250 Hz)
-- Bursts of activity aligned with keystroke events
+**EMGの注意:** スクロールビューアは EEG と同じですが、期待します。
+- 高振幅信号(μV～mV)
+- 高周波振動(20-250Hz)
+- キーストロークイベントと並ぶ活動のバースト
 
-### Inspecting event structure
+### イベント構造の点検
 
-Use EEGLAB's event viewer to check event timing and types:
+EEGLABのイベントビューアを使用してイベントのタイミングとタイプを確認します。
 
 ```matlab
 % View events: Edit > Event values
@@ -129,9 +129,9 @@ keystroke_idx = find(contains({EEG.event.type}, 'keystroke_'));
 fprintf('Keystroke events: %d\n', length(keystroke_idx));
 ```
 
-### Computing power spectral density (PSD)
+### 計算力スペクトル密度(PSD)
 
-Use EEGLAB's spectral plotting function to verify EMG frequency content:
+EEGLABのスペクトルプロット機能を使用して、EMG周波数コンテンツを確認します。
 
 ```matlab
 % Use EEGLAB menu: Plot > Channel spectra and maps
@@ -142,25 +142,25 @@ figure; pop_spectopo(EEG, 1, [0 EEG.xmax*1000], 'EEG', ...
     'freq', []);
 ```
 
-This displays:
-- Power spectral density for all channels overlaid
-- Frequency range up to 500 Hz (appropriate for EMG)
-- **Important**: We set `'freq', []` to disable topoplots - they are NOT meaningful for EMG data since electrodes are on forearm muscles, not scalp
+この表示:
+- すべてのチャネルのoverlaidのための力のスペクトル密度
+- 500Hzまでの周波数範囲(EMGの適切な)
+- **重要**:私達は置きました `'freq', []` topoplots を無効にするには - 電極が外れ筋にあるので、EMG データは意味がありません。
 
-![EMG Power Spectrum](/assets/images/emg-spectopo-shot.png)
+![EMGについて パワースペクトラム](/assets/images/emg-spectopo-shot.png)
 
-**Expected pattern:** Most EMG power should be concentrated in the 20-250 Hz range, with peaks around 50-150 Hz for muscle activity.
+**期待パターン:** ほとんどのEMG力は筋肉活動のための50-150 Hzのまわりのピークと20-250 Hzの範囲で集中されるべきです。
 
-## EMG preprocessing
+## EMGの前処理
 
-EMG signals require different preprocessing than EEG:
+EMG 信号は EEG より別の前処理を要求します:
 
-### Frequency ranges
-EMG contains higher frequencies than EEG:
-- **EEG**: Typically 1-50 Hz
-- **EMG**: Typically 20-450 Hz (motor tasks: 20-250 Hz)
+### 周波数範囲
+EMG は EEG よりも高い周波数が含まれています。
+- **EEG**:典型的に1-50のHz
+- **EMG**:典型的に20-450 Hz (モーター仕事:20-250 Hz)
 
-### Bandpass filtering
+### バンドパスフィルタリング
 
 ```matlab
 % Apply bandpass filter for EMG
@@ -170,9 +170,9 @@ highcut = 250; % Hz - removes high-frequency noise
 EEG = pop_eegfiltnew(EEG, 'locutoff', lowcut, 'hicutoff', highcut);
 ```
 
-### Channel quality check
+### チャネルの品質チェック
 
-For EMG, check channels with unusual variance:
+EMG の場合、異常な分散のチャンネルを確認します。
 
 ```matlab
 % Calculate variance for each channel
@@ -185,20 +185,20 @@ bad_chan_idx = find(channel_vars < mean_var - 3*std_var | ...
                     channel_vars > mean_var + 3*std_var);
 ```
 
-## Data cleaning with clean_rawdata
+## clean_rawdata によるデータのクリーニング
 
-**Important:** EMG data can have extremely noisy channels or bad segments. These must be cleaned BEFORE computing the envelope, otherwise artifacts will be preserved in the ERP.
+**重要:** EMGのデータは非常に騒々しいチャネルか悪い区分を持つことができます。 これらは、エンベロープを計算するBEFOREをきれいにする必要があります。そうしないとアーティファクトはERPに保存されます。
 
-### Why cleaning is critical for EMG
+### EMGのクリーニングが重要な理由
 
-- **Electrode displacement**: Wristband movement creates large amplitude artifacts
-- **Bad channels**: Some channels may have poor contact throughout the session
-- **Motion artifacts**: Arm/wrist movement during typing
-- **Session variability**: Some sessions have much worse quality than others
+- **電極の変位**:リストバンドの動きは大きい広さのアーティファクトを作成します
+- **悪いチャネル**: 一部のチャネルは、セッション全体に不接触の可能性があります
+- **モーションアーティファクト**: タイプの腕/手首の動き
+- **セッションの分散性**: いくつかのセッションは、他の人よりもはるかに悪い品質を持っている
 
-### Installing clean_rawdata plugin
+### clean_rawdataのインストール プラグイン
 
-If not already installed:
+既にインストールされていない場合:
 
 ```matlab
 % From EEGLAB menu: File > Manage EEGLAB extensions
@@ -208,9 +208,9 @@ If not already installed:
 plugin_askinstall('clean_rawdata');
 ```
 
-### Using ASR (Artifact Subspace Reconstruction)
+### ASR(アーティファクトサブスペース再構築)の使用
 
-ASR removes bad data portions while preserving good segments:
+ASRは、良いセグメントを保存しながら、悪いデータ部分を削除します。
 
 ```matlab
 % Apply clean_rawdata with ASR
@@ -229,27 +229,27 @@ EEG = clean_rawdata(EEG, ...
 EEG = eeg_checkset(EEG);
 ```
 
-### Understanding ASR parameters for EMG
+### EMG の ASR パラメータを理解する
 
-**Key parameters to adjust:**
+調節する**主変数:**
 
-1. **BurstCriterion** (default: 20 for EMG, 5 for EEG)
-   - Higher values = less aggressive cleaning
-   - EMG has naturally higher amplitudes than EEG
-   - Too aggressive (low value) removes genuine muscle activity
-   - Recommended: 15-25 for EMG
+1. **BurstCriterion** (デフォルト: EMGの20、EEGの5)
+   - より高い値=より少ない積極的なクリーニング
+   - EEGよりも自然に高い振幅
+   - Too積極的な(低値)は本物の筋肉の活動を取除きます
+   - EMGの推奨:15-25
 
-2. **ChannelCriterion** (0.8 recommended)
-   - Removes channels that don't correlate well with neighbors
-   - Important for wristband arrays where channels should be similar
+2. **ChannelCriterion** (0.8推奨)
+   - 隣人と相関しないチャンネルを削除
+   - チャンネルが似ているべきリストバンド配列のために重要
 
 3. **WindowCriterion** (0.25)
-   - Removes time windows where >25% of channels are bad
-   - Useful for movement artifacts affecting multiple channels
+   - チャンネルの >25% が悪い時間ウィンドウを削除します。
+   - 複数のチャネルに影響を与える動きのアーティファクトに有用
 
-### Alternative to ASR: Manual bad channel removal
+### ASRの代替:手動悪いチャネル除去
 
-If you prefer manual control:
+手動制御を好む場合:
 
 ```matlab
 % Mark bad channels
@@ -262,9 +262,9 @@ EEG = pop_select(EEG, 'nochannel', bad_channels);
 % EEG = pop_interp(EEG, bad_channels, 'spherical');
 ```
 
-### Session quality metrics
+### セッション品質メトリック
 
-Before cleaning, compute quality metrics to decide if a session should be excluded:
+クリーニングの前に、セッションが除外されるべきであるかどうかを決定するために品質メトリックを計算します。
 
 ```matlab
 % Compute RMS per channel
@@ -283,46 +283,46 @@ if pct_extreme > 1
 end
 ```
 
-### Cleaning workflow summary
+### ワークフローの削除
 
-**Recommended cleaning order:**
-1. Bandpass filter (20-250 Hz) - removes low/high frequency noise
-2. Identify obviously bad channels (visual inspection)
-3. Apply ASR with conservative parameters (BurstCriterion=20)
-4. Visual inspection of cleaned data
-5. Compute session quality metrics
-6. Decide whether to keep or exclude session
+**推薦されたクリーニングの発注:**
+1. バンドパスフィルタ(20-250 Hz) - 低/高周波数ノイズを除去します
+2. 明らかに悪いチャンネルを識別します。 (ビジュアル検査)
+3. 保守的なパラメータ(BurstCriterion=20)でASRを適用
+4. クリーンなデータの外観検査
+5. 計算セッション品質メトリック
+6. セッションを維持または除外するかどうかを決定
 
-**When to exclude entire sessions:**
-- >30% of data removed by ASR
-- >50% of channels removed
-- Extreme amplitude artifacts persisting after cleaning
-- Subject-level RMS >3 SD from mean
+**セッション全体を除外する場合:**
+- ASRで削除されたデータの30%
+- >削除されたチャネルの50%
+- 非常に広さのアーティファクトはクリーニングの後で主張します
+- 主題レベルRMS >3 SD から 平均
 
-### Important notes
+### 重要なメモ
 
-- **Clean BEFORE envelope**: Artifacts in filtered data will be preserved in the envelope
-- **Conservative for EMG**: EMG has higher amplitudes than EEG, don't over-clean
-- **Session-level decisions**: Some sessions may be too noisy to salvage
-- **Document exclusions**: Keep track of which sessions/channels were excluded
+- **クリーンBEFORE envelope**: フィルタされたデータのアーティファクトは、封筒に保存されます
+- **EMG **のための保守的**:EMGは、EEGよりも高い振幅を持っています, オーバークリーニングしないでください
+- **セッションレベルの決定**: いくつかのセッションは、サルベージにあまりにもうるさいかもしれません
+- **ドキュメント除外**: どのセッション/チャンネルが除外されたかを把握
 
-## Computing the linear envelope (CRITICAL for EMG-ERP)
+## 線形封筒の計算(EMG-ERPのためのCRITICAL)
 
-**Important:** Standard ERP analysis does NOT work well for raw EMG data. Here's why:
+**重要:**標準ERP分析は、生EMGデータにうまく動作しません。 なぜですか?
 
-### Why raw EMG ERPs fail
+### なぜ生EMG ERPsが失敗するのか
 
-EMG is a high-frequency oscillatory signal (20-250 Hz). When you average raw EMG epochs together:
-- Positive phases of the oscillation cancel out negative phases
-- Result: Weak, noisy ERPs that don't reflect true muscle activation
-- The averaging destroys the amplitude information we care about
+EMGは高周波振動信号(20-250Hz)です。 生EMGのエポックを一緒に平均すると:
+- 振動の肯定的なフェーズは否定的なフェーズをキャンセルします
+- 結果:真の筋肉の活発化を反映しない弱い、騒々しいERPs
+- 平均化は、私たちが気にしている広さ情報を破壊します
 
-### Solution: The linear envelope
+### ソリューション: 線形封筒
 
-The **linear envelope** preserves amplitude information while removing the problematic oscillations:
+**linear envelope** は、問題のある発振を除去する際の広さ情報を保持します。
 
-1. **Rectification**: Take the absolute value (makes all values positive)
-2. **Low-pass filtering**: Smooth the rectified signal (10-20 Hz)
+1. **資格**: 絶対値を取る(すべての値が正になります)
+2. **ローパスフィルタリング**: 修正された信号(10-20 Hz)を滑らかにして下さい
 
 ```matlab
 % Step 1: Rectify the filtered EMG
@@ -340,18 +340,18 @@ EEG.etc.is_envelope = true;
 EEG.etc.envelope_cutoff = envelope_cutoff;
 ```
 
-### Visualization: Linear envelope computation
+### 可視化: 線形封筒の計算
 
-![Envelope Computation](/assets/images/emg_envelope_computation.png)
+![封筒の計算](/assets/images/emg_envelope_computation.png)
 
-This figure shows the four processing stages for two representative channels (left and right wristband). The red dashed line marks a keystroke event:
+この図は、2つの代表チャンネル(左と右リストバンド)の4つの処理段階を示しています。 赤いラインはキーストロークイベントをマークします。
 
-1. **Raw signal** (blue): Unfiltered EMG with baseline noise and drift
-2. **Band-pass filter** (green): 20-250 Hz filtered EMG - removes low-frequency drift and high-frequency noise
-3. **Rectified** (purple): Absolute value of filtered signal - all values positive
-4. **Low-pass filter / linear envelope** (magenta): Smooth envelope (20 Hz cutoff) capturing muscle activation amplitude
+1. **未加工信号** (青):基線騒音および漂流が付いているろ過されていないEMG
+2. **バンド パス フィルター** (緑): 20-250 Hz は EMG をろ過しました-低頻度の漂流および高周波騒音を取除きます
+3. **立方**(紫): フィルタされた信号の絶対値 - すべての値肯定的な
+4. **ローパス フィルター/線形封筒** (マゼンタ): 筋肉活動の広さを捕獲する滑らかな封筒(20のHzの締切り)
 
-Code to generate this visualization:
+この可視化を生成するコード:
 
 ```matlab
 %% Visualize the envelope computation process
@@ -394,20 +394,20 @@ end
 sgtitle('Linear Envelope Computation Process');
 ```
 
-### Parameters for envelope computation
+### 封筒の計算のための変数
 
-**Envelope low-pass cutoff frequency:**
-- **5-10 Hz**: Maximum smoothing, for slow movements
-- **20 Hz**: Standard for fast tasks like typing (recommended)
-- **30-40 Hz**: Minimal smoothing, for very fast movements
+**封筒の低パスの締切りの頻度: メニュー
+- **5-10 Hz**: 最高の滑らかになること、遅い動きのための
+- ** 20のHz**: タイプの速い仕事のための標準(推薦される)
+- ** 30-40 Hz**: 非常に速い動きのための最低の滑らかになること、
 
-For typing tasks, **20 Hz** is recommended as it provides faster response to capture rapid finger movements while still smoothing the high-frequency oscillations.
+タスクを入力するために、 **20 Hz**は高周波振動を滑らかにする間急速な指の動きを捕獲する速い応答を提供するので推薦されます。
 
-## Epoching EMG data
+## EMGデータの取得
 
-**Important**: Epoch the **envelope data**, not the raw filtered EMG!
+**重要**: *envelope data** を省略します。, 生の濾過EMGではありません!
 
-Extract epochs around keystroke events:
+キーストロークイベントの周りのエポックを抽出します。
 
 ```matlab
 % Define epoch window
@@ -427,9 +427,9 @@ unique_keystrokes = unique(keystroke_types);
 EEG = pop_epoch(EEG, unique_keystrokes, [epoch_start epoch_end], 'epochinfo', 'yes');
 ```
 
-### Baseline correction
+### ベースライン補正
 
-Remove baseline to focus on event-related activity:
+ベースラインを削除してイベント関連のアクティビティに焦点を当てます。
 
 ```matlab
 % Define baseline window (avoid 100ms immediately before keystroke)
@@ -439,11 +439,11 @@ baseline_window = [-0.5, -0.1];  % seconds
 EEG = pop_rmbase(EEG, baseline_window * 1000);  % Convert to ms
 ```
 
-## Computing EMG-ERPs
+## EMG-ERPの計算
 
-**Note on trial balancing:** When comparing ERPs across conditions with different trial counts (e.g., common keys like 'e' vs rare keys like 'x'), consider randomly subsampling the higher-count condition using `pop_select(EEG, 'trial', randperm(EEG.trials, n))` to match trial counts and ensure equal signal-to-noise ratios.
+**トライアルバランスに注意:** 異なる試用カウントで条件全体でERPを比較する場合(例:'e'などの一般的なキーと'x'のようなまれなキー)、ランダムにより高いカウント条件をサブサンプリングすることを検討 `pop_select(EEG, 'trial', randperm(EEG.trials, n))` 試験のカウントに一致し、等しい信号に騒音の比率を保障するため。
 
-EMG-ERPs are computed by averaging **envelope data** across trials:
+EMG-ERPは、試験全体で**エンベロープデータ**を平均化することで計算されます。
 
 ```matlab
 % Identify channel groups
@@ -464,9 +464,9 @@ ERP_a_left = mean(EEG_a.data(left_wristband, :, :), 3);
 ERP_k_right = mean(EEG_k.data(right_wristband, :, :), 3);
 ```
 
-### Visualizing EMG-ERPs with EEGLAB
+### EEGLABでEMG-ERPを可視化
 
-Use EEGLAB's ERP plotting functions to visualize event-related muscle activation:
+EEGLABのERPプロット機能を使用して、イベント関連の筋肉の活性化を視覚化します。
 
 ```matlab
 % Use EEGLAB menu: Plot > Channel ERPs > In rectangular array
@@ -475,67 +475,67 @@ figure; pop_plottopo(EEG_a, [1:16], 'EMG-ERP for key "a" (left channels)', ...
     0, 'ydir', 1);
 ```
 
-This figure shows EMG-ERPs for all burst-initial keystrokes, separated by hand (left vs right) and wristband. All 32 channels are displayed across four panels, using envelope data from Step 2b.
+この図は、すべてのバースト・イニシャル・キーストロークのためのEMG-ERPを示しています, 手で分離 (左対右) そして、リストバンド. ステップ2bから封筒データを使用して、すべての32チャンネルが4つのパネルに表示されます。
 
-![Individual Channel ERPs](/assets/images/emg_all_channels.png)
+![個々のチャネル 採用情報](/assets/images/emg_all_channels.png)
 
-**Trial selection**: Only burst-initial keystrokes (preceded by >500ms pause) are included to avoid epoch overlap from rapid typing. From approximately 4,000 total keystrokes in this recording session, the burst-initial criterion selects ~100-300 epochs per hand—sufficient for reliable EMG-ERPs while ensuring clean baselines. The exact epoch counts are shown in the figure title.
+**トライアル選択**: 急なタイピングからエポックオーバーラップを避けるために、バースト・イニシャル・キーストロークのみ(前例:>500ms一時停止)が含まれています。 この記録セッションでは、約4,000の合計キーストロークから、バースト・イニシャル・クリテリオンは、クリーンなベースラインを確保しながら、信頼性のあるEMG-ERPに十分な1本あたり100〜300個のエポックを選択しています。 数字のタイトルに正確なエポックカウントが表示されます。
 
-Note the **contralateral activation pattern**: left-hand keys (a, s, d, e, r, ...) show stronger activation in the left wristband (top-left), while right-hand keys (k, l, j, i, o, ...) show stronger activation in the right wristband (bottom-right).
+**横の活性化パターン**:左キー(a、s、d、e、r、...)は左リストバンド(左上)でより強い活性化を示し、右手キー(k、l、j、i、o、...)は右リストバンド(右下)でより強い活性化を示しています。
 
-**Important for EMG:**
-- EEGLAB's topoplot (scalp maps) is NOT meaningful for EMG data
-- Focus on channel ERPs and time-course plots
-- Compare ERPs across channels on the same limb
+**EMGの重要:**
+- EEGLABのtopoplot(スカルプマップ)はEMGデータには意味がありません
+- チャネルERPおよび時間コースのプロットに焦点を合わせて下さい
+- 同じ肢のチャネル間でERPを比較する
 
-## Key differences: EMG vs EEG
+## 主な違い: EMG 対 EEG
 
-| Aspect | EEG | EMG |
+| アスペクト | EEG | EMG |
 |--------|-----|-----|
-| **Frequency range** | 1-50 Hz | 20-450 Hz |
-| **Amplitude** | Microvolts | Microvolts to millivolts |
-| **Spatial resolution** | Brain regions | Specific muscles |
-| **Common artifacts** | Eye blinks, muscle tension | Motion, electrode displacement |
-| **Baseline** | Pre-stimulus period | Pre-movement period |
-| **ERP computation** | Direct averaging works | Requires linear envelope first! |
-| **Summary measures** | ERP amplitude/latency | RMS, integrated EMG, envelope amplitude |
+| **周波数範囲** | 1-50 Hz | 20-450 Hz |
+|**広さ** | マイクロボルト | マイクロボルト
+|**空間分解能** | 脳領域 | 特定の筋肉 |
+|**Common artifacts** | 眼圧・筋肉張力 | 動き・電極変位 |
+|**ベースライン** | 事前刺激期間 | 予報期間 |
+|**ERPの計算** | 直接的な平均作品 | 線形封筒を最初に要求して下さい! お問い合わせ
+お問い合わせ **概要措置** | ERPの振幅・遅延 | RMS、統合EMG、封筒の振幅 |
 
-## Tips for EMG-ERP analysis with EEGLAB
+## EEGLABによるEMG-ERP解析のヒント
 
-1. **ALWAYS use the linear envelope**: Direct averaging of raw EMG does not work! Rectify and low-pass filter (~20 Hz for typing) before epoching and averaging.
+1. **ALWAYSは線形封筒**を使用します: 生EMGの直接平均化は機能しません! Epoching および平均化の前に Rectify およびローパス フィルター (タイプのための 20 Hz)。
 
-2. **Use EEGLAB visualization tools**:
-   - `pop_eegplot()` for scrolling raw data inspection
-   - `pop_spectopo()` for frequency analysis (extend range to 500 Hz for EMG)
-   - `pop_plottopo()` or `pop_plotdata()` for ERP visualization
-   - Avoid EEGLAB's topographic maps (topoplot) - not meaningful for EMG
+2. **EEGLABの可視化ツールを使用する**:
+   - `pop_eegplot()` 生データ検査のスクロール
+   - `pop_spectopo()` 周波数解析(EMG の 500 Hz に範囲を拡張)
+   - `pop_plottopo()` または `pop_plotdata()` ERPの視覚化のために
+   - EEGLABの地理的地図(topoplot)を避ける - EMGの意味がない
 
-3. **Choose appropriate filters**: Use higher cutoff frequencies than EEG (20-250 Hz for motor tasks) via `pop_eegfiltnew()`.
+3. **適切なフィルタを選択**: EEG(モータータスク用20-250Hz)よりも高いカットオフ周波数を使用 `pop_eegfiltnew()`.
 
-4. **Baseline correction is critical**: Use `pop_rmbase()` to remove pre-event baseline. The envelope should have near-zero baseline.
+4. **ベースライン補正が重要**: 使用条件 `pop_rmbase()` プレエベントベースラインを削除します。 封筒は、ほぼゼロベースラインを持っている必要があります。
 
-5. **Sanity checks with EEGLAB**:
-   - Plot raw data with `pop_eegplot(EEG, 1, 1, 1)`
-   - Check PSD with `pop_spectopo()` - verify power in 20-250 Hz
-   - Inspect events via menu: Edit > Event values
+5. **EEGLABでSanityチェック **:
+   - Plotの未加工データと `pop_eegplot(EEG, 1, 1, 1)`
+   - PSD を点検して下さい `pop_spectopo()` - 20-250の力を確認して下さい Hzの
+   - メニューでイベントを調べる: 編集 > イベントの値
 
-6. **Account for trial count**: More trials = better SNR. Use `pop_epoch()` and check `.trials` field. Balance conditions using `pop_select()`.
+6. **トライアルカウントのアカウント**: より多くのトライアル = より良いSNR. 使用条件 `pop_epoch()` チェックイン `.trials` フィールド。 バランス条件の使用 `pop_select()`.
 
-7. **Check lateralization**: Expect stronger activation in the hand performing the movement.
+7. **横方向確認**: 動きを実行する手でより強い活発化を期待して下さい。
 
-8. **Visualize individual trials**: Use `pop_eegplot(EEG_epoched, 0, 1, 1)` to inspect trial-by-trial variability.
+8. **個別トライアルの仮想化**: 使用条件 `pop_eegplot(EEG_epoched, 0, 1, 1)` トライアルバイトライアルの分散性を検査します。
 
-9. **For multi-subject analysis**: Use EEGLAB's STUDY framework (menu: File > Create study) for group-level statistics.
+9. **マルチサブジェクト解析の場合**: EEGLABのSTUDYフレームワーク(メニュー:ファイル > グループレベルの統計データを作成する
 
-10. **Compare envelope parameters**: If ERPs look noisy, try adjusting the envelope cutoff (5-20 Hz) and re-epoch.
+10. **比較封筒パラメーター**: ERPsが騒々しい場合は、封筒のカットオフ(5-20 Hz)と再エポックを調整してみてください。
 
-## Additional resources
+## 追加リソース
 
-- **Dataset**: [emg2qwerty on NEMAR](https://nemar.org/dataexplorer/detail?dataset_id=nm000104)
-- **Paper**: [emg2qwerty at NeurIPS 2024](https://arxiv.org/abs/2410.20081)
+- **データセット**: [NEMAR の emg2qwerty](https://nemar.org/dataexplorer/detail?dataset_id=nm000104)
+- **ペーパー**: [NeurIPS 2024のemg2qwerty](https://arxiv.org/abs/2410.20081)
 
-## Related tutorials
+## 関連チュートリアル
 
-- [EEGLAB and MEG data](EEGLAB_and_MEG_data.html)
-- [Automated processing pipelines](../11_Scripting/automated_pipeline.html)
-- [Analyzing EEG BIDS data in EEGLAB](../11_Scripting/Analyzing_EEG_BIDS_data_in_EEGLAB.html)
+- [EEGLABとMEGデータ](EEGLAB_and_MEG_data.html)
+- [自動加工パイプライン](../11_Scripting/automated_pipeline.html)
+- [EEGLABのEEG BIDSデータを分析](../11_Scripting/Analyzing_EEG_BIDS_data_in_EEGLAB.html)

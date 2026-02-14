@@ -5,44 +5,44 @@ title: c. Group-level analysis
 parent: 11. Write scripts
 grand_parent: Tutorials 
 ---
-Group-level analyses using EEGLAB scripts
+EEGLABスクリプトを用いたグループレベルの解析
 =====
-{: .no_toc }
+お問い合わせ
 
-Building a *STUDY* from the graphic interface (as described in previous
-sections) calls eponymous MATLAB functions that may also be called
-directly by users. Below we briefly describe these functions. See their
-MATLAB help messages for more information. Functions whose names begin
-with *std_* take *STUDY* and/or *EEG* structures as arguments and
-perform signal processing and/or plotting directly on channel or cluster
-activities. Whenever relevant, feel free to look up documentation in the part of the tutorial describing [the STUDY structure](/tutorials/ConceptsGuide/Data_Structures.html#the-study-structure).
+グラフィックインターフェイスから*STUDY*の構築(前述の通り)
+セクション) 呼ばれるかもしれない別名 MATLAB 関数を呼ぶ
+直接ユーザーによって。 これらの関数を簡潔に記述します。 お問い合わせ
+MATLABは、より多くの情報のためのメッセージを支援します。 名前が始まる機能
+*std_* は *STUDY* および/または *EEG* を引数として扱います。
+チャネルまたはクラスターに直接信号処理および/またはプロットを実行
+活動内容 関係なく、記述するチュートリアルの部分で文書を調べるのは自由です [STUDYの構造](/tutorials/ConceptsGuide/Data_Structures.html#the-study-structure).
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'study_script.m'));">Show MATLAB command</button>
+<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'study_script.m'));">MATLABコマンドを表示する</button>
 
-Creating a STUDY
+STUDYの作成
 -----------------
 
-If a *STUDY* contains many datasets, you might prefer to write a small script to build the *STUDY* instead of using the [pop_study.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_study.m) GUI. This is also helpful when you need to build many studies or to
-repeatedly add files to an existing *STUDY*.
+*STUDY*に多くのデータセットが含まれている場合は、代わりに*STUDY*を作成するために小さなスクリプトを書くことを好みます [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_study.m) ログイン 多くの研究を造る必要がある場合や、
+既存の *STUDY* にファイルを繰り返し追加します。
 
-*Important note:* If you want to modify the STUDY structures, you need to be careful as the STUDY checking function ([std_checkset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_checkset.m)) performs multiple checks to keep it compatible with the datasets it represents. So this function
-might undo your changes (a warning will be issued on the command line).
-It is often possible to modify the datasets themselves to achieve the
-same goal, and changes will be automatically reported in the STUDY
-structures.
+*注意事項:* STUDY構造を変更したい場合は、STUDYチェック機能(STUDYチェック機能)に注意してください。[std_checkset.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_checkset.m)) 複数のチェックを実行して、それが表しているデータセットと互換性を保つことができます。 だからこの機能
+変更を解除する可能性があります(コマンドラインで警告が発行されます)。
+データセットを自分で変更して達成できることが多い
+同じ目標と変更がSTUDYで自動的に報告されます
+構造。
 
-Below is a MATLAB script
-calling the GUI-equivalent command line function [std_editset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_editset.m) 
-from the "5subjects" folder (you may download tutorial data [here](https://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip)) then change the path to the folder you have uncompressed. The code snippets used on this page are available at [study_script.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=study_script.m)
+MATLABスクリプトは以下のとおりです。
+GUI-equivalentコマンドライン関数を呼び出す [std_editset.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_editset.m) 
+"5subjects"フォルダから(チュートリアルデータをダウンロードできます) [詳しくはこちら](https://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip)) それからあなたが不圧縮したフォルダへのパスを変更します。 このページで使用されるコードスニペットは、 [勉強_script.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=study_script.m)
 
 ``` matlab
 [STUDY ALLEEG] = std_editset( STUDY, [], 'name','N400STUDY',...
@@ -62,23 +62,23 @@ from the "5subjects" folder (you may download tutorial data [here](https://sccn.
         { 'dipselect' 0.15 } });
 ```
 
-Above, each line of the command loads a dataset. 
+上記では、コマンドの各行がデータセットをロードします。 
 
-The last line
-preselects components whose equivalent dipole models have less than 15%
-residual variance from the component scalp map. See *\>\> help
-std_editset* for more information. 
+最後の行
+同等のダイポールモデルが15%未満のコンポーネントを選択
+コンポーネントのスカルプマップからの残留分散。 お問い合わせ サポート
+詳細は std_editset* をご覧ください。 
 
-Notice that the path to the datasets
-in the code above is a relative path. Then, to run the same code
-snippet, your current directory in MATLAB should contain the datasets.
+データセットへのパスについて
+上のコードは相対パスです。 その後、同じコードを実行する
+snippet、MATLABの現在のディレクトリには、データセットが含まれている必要があります。
 
-Once you have created a new *STUDY* (or once you have loaded it from disk), both the
-*STUDY* structure and its corresponding *ALLEEG* array of resident *EEG*
-structures will be variables in the MATLAB workspace. 
+新しい*STUDY*(またはディスクから読み込まれたら)を作成したら、両方
+*STUDY* 構造とその対応 *ALLEEG* 居住者配列 *EEG*
+MATLAB ワークスペースでは構造が変数になります。 
 
-Typing *\>\>
-STUDY* on the MATLAB command line will list field values:
+タイピング *\>\>
+MATLAB コマンドラインの STUDY* はフィールドの値を表示します。
 
 ``` matlab
 >> STUDY =
@@ -106,88 +106,88 @@ STUDY* on the MATLAB command line will list field values:
           saved: 'yes'
 ```
 
-Because *conditions* have been defined in the individual datasets (*synonyms* and *non-synonyms*), EEGLAB will automatically create a *STUDY* design to compare these two conditions. You may also use the [std_makedesign.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_makedesign.m) function from the command line to create different design. Try creating design in the EEGLAB graphic interface and look at what is returned in the history (via the [eegh.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegh.m) function). If you wish to add event information for creating designs, refer to the section of the tutorial for [adding event information for group analysis](http://localhost:4000/tutorials/11_Scripting/Event_Processing_command_line.html#adding-event-information-for-group-analysis).
+*conditions*は個々のデータセット(*synonyms*と*non-synonyms*)で定義されているため、EEGLABはこれらの2つの条件を比較するために*STUDY*の設計を自動的に作成します。 また、ご使用いただくこともできます。 [std_makedesign.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_makedesign.m) コマンドラインから異なるデザインを作成する機能。 EEGLABのグラフィックインターフェイスでデザインを作成して、履歴で返されたものを見てみましょう(ビア [ログイン m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegh.m) 関数)。 デザインを作成するためのイベント情報を追加する場合は、チュートリアルのセクションを参照してください。 [グループ分析のためのイベント情報の追加](http://localhost:4000/tutorials/11_Scripting/Event_Processing_command_line.html#adding-event-information-for-group-analysis).
 
-Computing and plotting channel measures
+チャネル対策の計算とプロット
 ----------------------------------------
 
-### Computing measures
+### コンピューティング対策
 
-You may use the function [pop_precomp.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) (which calls function
-[std_precomp.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) to precompute channel measures). For instance,
-the following code calls the graphic user interface for computing
-measures in channels.
+関数を使う [pop_precomp.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) (関数を呼び出す)
+[std_precomp.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) チャネル対策を優先します。 例えば、
+次のコードは、コンピューティング用のグラフィックユーザーインターフェイスを呼び出します
+チャネルにおける対策
 
 ``` matlab
  >> [STUDY ALLEEG] = pop_precomp(STUDY, ALLEEG);
 ```
 
-If you wish to use precomputes measures from the command line, the code snippet below interpolates all the
-missing channels and computes ERP for all channels and all datasets of a
-given study. Here an additional parameter to remove the baseline (*erpparams*) comprised from latencies (-200 ms to 0 ms) has been used as well.
+コマンドラインから優先措置を使用する場合は、以下のコードスニペットがすべてのものを補う
+チャンネルを欠落させ、すべてのチャネルとすべてのデータセットのERPを計算します
+与えられた研究。 レイテンシーから構成されるベースライン(*erpparams*)を削除する追加のパラメータ(-200 ms〜0 ms)も使用されます。
 
 ``` matlab
 >> [STUDY ALLEEG] = std_precomp(STUDY, ALLEEG, 'channels', 'erp', 'on', 'erpparams', {'rmbase' [-200 0]});
 ```
 
-### Plotting measures
+### プロット対策
 
-You may then plot results using the same functions that are used
-for component clusters. For instance, to plot the grand average ERP for
-channel 'Oz', you may try:
+同じ機能を使って結果をプロットすることができます。
+コンポーネントクラスタ用 例えば、壮大な平均ERPをプロットする
+チャンネル 'Oz', あなたが試すかもしれません:
 
 ``` matlab
 >> STUDY = std_erpplot(STUDY, ALLEEG, 'channels', {'Oz'});
 ```
 
-![File:Erp_chann_oz](/assets/images/channel_oz.png)
+![ファイル:Erp_chann_oz](/assets/images/channel_oz.png)
 
-You may retrieve data by adding output variables as described in the help message of the [std_erpplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m) function, and then replot it using the std_plotcurve function.
+出力変数をヘルプメッセージに記述したように追加することでデータを取得できます。 [std_erpplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m) 関数は std_plotcurve 関数を使ってリプロットします。
 
 ``` matlab
 [STUDY erpdata erptimes] = std_erpplot(STUDY, ALLEEG, 'channels', {'Oz'}, 'timerange', [-200 1000]);
 std_plotcurve(erptimes, erpdata, 'plotconditions', 'together', 'plotstderr', 'on', 'figure', 'on', 'filter', 30);
 ```
 
-As shown above, the [std_plotcurve.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_plotcurve.m) function has additional
-parameters to plot the standard error which are not available from the
-EEGLAB graphic interface. The output of the function [std_erpplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m) can also be controlled by the addition of
-parameters native to [std_erpplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m) and [pop_erpparams.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpparams.m). 
+上記のように、 [std_plotcurve.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_plotcurve.m) 関数は付加的な持っています
+標準的な間違いをプロットする変数はから利用できません
+EEGLABのグラフィックインターフェイス。 関数の出力 [std_erpplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m) また、追加で制御することもできます
+ネイティブパラメータ [std_erpplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m) そして、 [pop_erpparams.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpparams.m). 
 
 
-For example, notice the addition of the
-option *timerange* above to constrain the latency range to be between
--200 to 1000ms.
+たとえば、追加通知
+上記のオプション *timerange* は、レイテンシ範囲を間にあるように制約します
+200〜1000ms。
 
-![File:Erp_chann_oz](/assets/images/Erp_chann_Oz.png)
+![ファイル:Erp_chann_oz](/assets/images/Erp_chann_Oz.png)
 
-Try some other commands from the channel plotting graphic interface and look at what is returned in the history (via the [eegh.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegh.m) function) to plot ERP in different formats.
+グラフィックインターフェイスをプロットするチャンネルから他のコマンドを試し、履歴で返されたものを見る (ビア [ログイン m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegh.m) 関数) 異なるフォーマットでERPをプロットする。
 
-### Retrieving computed measures for subsequent processing
+### その後の処理のための計算された対策の取得
 
-All STUDY plotting functions are able to return plotted results. After
-plotting STUDY results, look into the EEGLAB history (<i>eegh</i> from
-the MATLAB command line) to see which STUDY function was called, then
-look at the help of this function. It is usually possible to add
-additional parameters.
+すべてのSTUDYプロット機能は、プロット結果を返すことができます。 アフター
+STUDY の結果をプロットし、EEGLAB の履歴を調べます()<i>ログイン</i> から
+MATLAB コマンドライン) は、STUDY 関数が呼び出されたかを確認します。
+この関数の助けを見てみましょう。 通常は追加可能です
+追加パラメータ。
 
-For example, if the following line appears in the EEGLAB history:
+例えば、EEGLAB の履歴に次の行が表示される場合:
 
 ``` matlab
 >> STUDY = std_erpplot(STUDY,ALLEEG,'channels',{ 'FP1'});
 ```
 
-To retrieve results, add two outputs, one for the ERP data and one for the ERP
-time values, as follow:
+結果を取得するには、2つの出力を追加し、ERPデータとERP用の1つ
+時間値、続くように:
 
 ``` matlab
 >> [STUDY erpdata erptimes] = std_erpplot(STUDY,ALLEEG,'channels',{ 'FP1'}, 'noplot', 'on');
 ```
 
-The <i>erpdata</i> array contains the ERP data for all subjects.
-Its size also depends on the STUDY design. The following command will
-plot the ERP for all subjects (included in the design) for the second
-cell in the STUDY design (the *synonyms* condition).
+ふりがな <i>エルプデータ</i> 配列は全ての対象のERPデータを含んでいます。
+また、STUDYデザインによりサイズも異なります。 次のコマンドは、
+第二の全ての被写体(デザインに含まれる)のERPをプロットする
+STUDYの設計の細胞(*synonyms*の状態)。
 
 ``` matlab
 >> figure; plot(erptimes, erpdata{2});
@@ -196,9 +196,9 @@ cell in the STUDY design (the *synonyms* condition).
 ![](/assets/images/plot_erp.png)
 
 
-The small script below computes time-frequency decomposition on a small study.
-It also compares a time-frequency decomposition at the dataset
-level with a time-frequency decomposition at the STUDY level.
+小さなスクリプトは、小さな研究で時間頻度分解を計算します。
+また、データセットで時間の頻度分解を比較します
+STUDYレベルでの時間頻度分解によるレベル。
 
 ``` matlab
 % Compute newtimef on first dataset for channel 1
@@ -211,24 +211,24 @@ figure; X = pop_newtimef( TMPEEG, 1, 1, [TMPEEG.xmin TMPEEG.xmax]*1000, [3 0.8] 
 STUDY = std_erspplot(STUDY,ALLEEG,'channels',{TMPEEG.chanlocs(1).labels}, 'subject', 'S02', 'design', 1 );
 ```
 
-We should the result of the script below (after clicking on the plot to remove the side panels adjusting the color scale).  It is not surprising that the result is the same since the same functions
-are being used in both cases.
+以下のスクリプトの結果(プロットをクリックしてカラースケールを調整するサイドパネルを削除します)。 同じ機能で結果が同じであることは驚くべきことではありません
+どちらのケースでも使われています。
 
-![border\|700px](/assets/images/newtimef_res.png)
+![ボーダー|700px](/assets/images/newtimef_res.png)
 
-### Retrieving statistical results
+### 統計結果の取得
 
-All plotting functions able to compute statistics will return the
-statistical array in their output. You must first enable statistics
-either from the graphic interface or using a command-line call. 
+統計を計算できる全てのプロット機能は、
+出力中の統計配列。 最初に統計を有効にする必要があります
+グラフィックインターフェイスから、またはコマンドラインコールを使用する。 
 
-For instance to compute condition statistics, type:
+条件統計を計算するインスタンスの場合、タイプ:
 
 ``` matlab
 >> STUDY = pop_statparams(STUDY, 'condstats', 'on');
 ```
 
-Then, for a given channel, type:
+それから、与えられたチャネルのために、タイプして下さい:
 
 ``` matlab
 >> [STUDY erpdata erptimes pgroup pcond pinter] = std_erpplot(STUDY,ALLEEG,'channels',{ 'FP1'});
@@ -236,7 +236,7 @@ Then, for a given channel, type:
 
 ![](/assets/images/plot_erp_stats.png)
 
-Now, typing:
+今、タイピング:
 
 ``` matlab
 >> pcond
@@ -245,25 +245,25 @@ Now, typing:
         [820x1]
 ```
 
-The statistical array contains 820 p-values, one for each time point.
+統計配列は、毎回820 p値、1つが含まれています。
 
-Note that the type of statistics returned depends on the parameter you
-selected in the ERP parameter graphic interface (for instance, if you
-selected *permutation* for statistics, the p-value based on surrogate
-data will be returned).
+返される統計の種類は、パラメータに依存することに注意してください。
+ERP パラメータ グラフィック インターフェイスで選択 (例えば、
+選択された *permutation* 統計値、surrogate に基づく p 値
+データが返されます。
 
-The *pgroup* and *pinter* arrays contain statistics across groups and
-the ANOVA interaction terms, respectively, if both groups and conditions
-are present. 
+*pgroup* と *pinter* 配列は、グループとグループ間での統計を含む
+ANOVAの相互作用の用語, それぞれ, グループと条件の両方の場合
+あります。 
 
-Other functions such as [std_specplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_specplot.m), [std_erspplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erspplot.m), and [std_itcplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_itcplot.m) behave in a
-similar manner (see the function help messages for more details). Note that for more control, you may also use directly call the [statcond.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) function, giving the *erpdata* cell array as
-input. 
-See the help message of the [statcond.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) function for more help on this subject (see also example at the end of this page).
+その他の機能など [std_specplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_specplot.m), [std_erspplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erspplot.m)と [std_itcplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_itcplot.m) アクション
+同様の方法(詳細については、関数ヘルプメッセージを参照してください)。 より多くの制御のために、また直接呼ぶことができます注意して下さい [スタコンド。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) 関数は、*erpdata* セル配列をとして与えます
+入力。 
+ヘルプメッセージを見る [スタコンド。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) この件名にもっと役立つ機能(このページの最後に例も参照)。
 
-### Saving results for processing in other software packages
+### 他のソフトウェアパッケージで処理する結果を保存する
 
-Saving any STUDY result for subsequent processing in SPSS, Statistica, Stata, R, SAS, and Excel can easily be done from the command line. Saving a MATLAB array into a text file is simple in MATLAB. Below are five different options. All options are equivalent. Below we are saving the data for condition 1. Some save files with tab-separated values, while others save files with comma-separated values by default. Most functions below have many options.
+SPSS、Statistica、Stata、R、SAS、Excel で処理したSTUDY結果を簡単に保存できます。 MATLAB 配列をテキストファイルに保存するのは簡単です。 5つの異なるオプションがあります。 すべてのオプションは同等です。 以下は、条件1のデータを保存しています。 タブ区切り値のあるファイルを保存するものもありますが、デフォルトではコンマ区切り値でファイルを保存します。 以下のほとんどの機能には多くのオプションがあります。
 
 ``` matlab
 array = erpdata{1}; % or array = rand(100,200); 
@@ -274,7 +274,7 @@ writematrix(array, 'matlabarray4.csv');
 writetable(table(array), 'matlabarray5.csv')
 ```
 
-Imagine you have three conditions for ERP data of size 750 points x 13 subjects (<i>erpdata</i> obtained in the previous section). Imagine you have three conditions in the <i>erpdata</i> array. The short script below will save them in the file 'erpfile.txt' and append the condition in the last column. You may import this file into any statistical software and use the last column as the categorical predictor.
+サイズ750ポイント×13の対象のERPデータに3つの条件があることを想像してみてください()<i>エルプデータ</i> 前のセクションで得られた。 3つの条件があると想像してみてください <i>エルプデータ</i> 配列。 以下のショートスクリプトは、ファイル 'erpfile.txt' に保存され、最後の列で条件を追加します。 このファイルを任意の統計ソフトウェアにインポートし、カテゴリ予測として最後の列を使用する可能性があります。
 
 ``` matlab
 [STUDY erpdata erptimes] = std_erpplot(STUDY,ALLEEG,'channels',{ 'FP1'}, 'noplot', 'on');
@@ -283,7 +283,7 @@ dlmwrite('erpfile.txt',squeeze([ erptimes' erpdata{2} ones(size(erpdata{2},1),1)
 dlmwrite('erpfile.txt',squeeze([ erptimes' erpdata{3} ones(size(erpdata{3},1),1)*3 ]),'-append', 'delimiter', '\t', 'precision', 2);
 ```
 
-The same goes if you have a set of n x m conditions. You can then add 2 columns representing 2 categorical variables.
+n x m条件のセットがある場合、同じことが起こります。 2つの分類変数を表す2つのカラムを追加できます。
 
 ``` matlab
 dlmwrite('erpfile.txt',squeeze([ erpdata{1,1} ones(size(erpdata{1,1},1),1)*[1 1] ]),'delimiter', '\t', 'precision', 2);
@@ -292,7 +292,7 @@ dlmwrite('erpfile.txt',squeeze([ erpdata{2,1} ones(size(erpdata{2,1},1),1)*[2 1]
 dlmwrite('erpfile.txt',squeeze([ erpdata{2,2} ones(size(erpdata{2,2},1),1)*[2 2] ]),'-append', 'delimiter', '\t', 'precision', 2);
 ```
 
-Imagine that you want to be able to use subjects as cases. in that case they cannot be defined as columns. Most statitical software will allow you convert between the two formats (they are usually called long and wide forms). In the case above, you would want to convert from wide to long form. Alternatlively, you may also use a MATLAB script. For example, for the <i>erpdata</i> condition 1 containing 750 points and 13 subjects, saving the data in long form would look like this. This file will only contain 2 columns, one for the data and one for the subject index.
+被写体をケースとして使用できるようにしたいと想像してみてください。 この場合、カラムとして定義することはできません。 ほとんどの固定ソフトウェアを使用すると、2つのフォーマット(通常は長くて広いフォームと呼ばれる)の間で変換できます。 上記の場合、ワイドからロングまで変換したい。 MATLABスクリプトも使えます。 例えば、例えば <i>エルプデータ</i> 条件 1 は 750 ポイントと 13 件を含み、長いフォームでデータを保存すると、このように見えます。 このファイルは、2つの列のみ、対象のインデックスの1つと1つが含まれます。
 
 ``` matlab
 dlmwrite('erpfile.txt',[ erpdata{1}(:,1) ones(size(erpdata{1},1),1)*1],'delimiter', '\t', 'precision', 2);
@@ -301,7 +301,7 @@ for iSubject = 2:size(erpdata{1},2)
 end
 ```
 
-Let's look at a more general case of ERSP data. The script below can save ERSP data (ignore vs. memorize condition). The example below shows 12-time steps, 10 frequencies, 71 channels, and 13 subjects. More elegant and faster ways to do this exist.
+ERSPデータの一般的なケースを見てみましょう。 以下のスクリプトは、ERP データを保存することができます(無視対記憶状態)。 以下の例では、 12 時間のステップ、10 の周波数、71 チャンネル、13 件を表示しています。 これを行うためのよりエレガントで高速な方法。
 
 ```matlab
 chanlocs = eeg_mergelocs(ALLEEG.chanlocs);
@@ -326,45 +326,45 @@ for iFreq = 1:10
 end
 ```
 
-Below is the beginning of the saved file with the column names added. You may modify the script to add them as well automatically. This is just an example. Actual frequencies and time may be saved as well, replacing <i>iFreq</i> and <i>iTime</i> with <i>erspfreqs(iFreq)</i> and <i>ersptimes(iTime)</i> in the script above. 
+以下は、保存したファイルの先頭に列名を追加しています。 スクリプトを変更して、自動的に追加することもできます。 これは一例です。 実際の周波数と時間は保存されるだけでなく、交換する <i>フィードバック</i> そして、 <i>ログイン</i> お問い合わせ <i>erpfreqs(iFreq)</i> そして、 <i>erptimes(iTime) は、</i> 上記のスクリプトで。 
 
-![Screen Shot 2022-11-04 at 3 47 27 PM](https://user-images.githubusercontent.com/1872705/200086058-98a10d7a-27f8-4f60-8bd4-e70d6170f6a6.png)
+![スクリーンショット 2022-11-04 3 47 27 PM](https://user-images.githubusercontent.com/1872705/200086058-98a10d7a-27f8-4f60-8bd4-e70d6170f6a6.png)
 
-Computing and plotting component measures
+コンポーネント対策の計算とプロット
 -----------------------------
 
-### Computing measures for components
+### コンポーネントの複雑な対策
 
-The function [pop_precomp.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) can also be used to compute measures when
-working with components. As when working with channels, the function [std_precomp.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) can also precompute component
-measures. The syntax is very similar in both cases. For
-instance, the function [pop_precomp.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) called in the following way will
-launch the graphic user interface for computing measures on components:
+関数 [pop_precomp.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) また、測定を計算するために使用することができます
+コンポーネントを扱う。 チャネルを扱うときとして、機能 [std_precomp.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) また、プレコンピューティングコンポーネント
+対策 構文は両方のケースで非常に似ています。 お問い合わせ
+インスタンス、関数 [pop_precomp.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) 次の方法で呼ばれる
+コンポーネントのコンピューティング対策のためのグラフィックユーザーインターフェイスを起動します。
 
 ``` matlab
 [STUDY ALLEEG] = pop_precomp(STUDY, ALLEEG, 'components'); % pop up graphical interface
 ```
 
-The same operation may be performed without the need to use the
-GUI when the function [std_precomp.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) is called with parameters defining the type of
-measure that wants to be computed. For example, in the following code
-snippet, ERP will be computed for all components:
+同じ操作を使わなくても実行できます。
+関数のとき GUI [std_precomp.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) 型を定義するパラメータで呼び出されます。
+計算したい測定。 例えば、次のコードで
+スニペット、ERPはすべてのコンポーネントに計算されます。
 
 ``` matlab
 [STUDY ALLEEG] = std_precomp(STUDY, ALLEEG, 'components', 'recompute', 'on', 'erp', 'on', 'filter', 30);
 ```
 
-The type of measures computed are in close relationship with the
-hypothesis to be tested, and the selection of the measures
-technically constrains the type of analysis that can be performed. For
-instance, in the next section, the measures from each component will be
-aggregated to perform ICA component clustering. In the EEGLAB jargon,
-this is called *pre-clustering*. The measures used at the pre-clustering
-level have to be precomputed to be used for plotting. Then, ahead of
-pre-clustering, a careful assessment of the measures to be used and the
-parameters to use on its generation have to be carried.
+計算された措置の種類は、密接な関係にあります
+仮説をテストし、措置の選択
+技術的に実行できる分析の種類を制約します。 お問い合わせ
+例えば、次のセクションでは、各コンポーネントからの対策は、
+ICAコンポーネントのクラスタリングを実行するために集約。 EEGLAB jargon では、
+これは *pre-clustering* と呼ばれます。 前処理で使用される措置
+レベルは、プロットに使用するために事前に入力する必要があります。 それから、先に
+プリクラスタリング、使用される措置の慎重な評価、および
+その世代で使用するパラメータは、運ぶ必要があります。
 
-Below is the code used for generating the measures:
+以下は、対策を生成するために使用されるコードです。
 
 ``` matlab
 [STUDY ALLEEG] = std_precomp(STUDY, ALLEEG, 'components',...
@@ -375,13 +375,13 @@ Below is the code used for generating the measures:
     'itc','on');
 ```
 
-### Component pre-clustering and clustering
+### コンポーネントの前処理とクラスタリング
 
-For clustering ICA components, we usually first compute all available activity measures. 
-To specify clustering on power spectra in
-the \[3 30\]-Hz frequency range, ERPs in the \[100 600\]-ms time window,
-dipole location information (weighted by 10), and ERSP information with
-the above default values, type:
+ICAコンポーネントのクラスタリングのために、通常は利用可能なすべてのアクティビティを計算します。 
+パワースペクトルのクラスタリングを指定する
+\[3 30\]-Hz 周波数範囲、\[100 600\]-ms タイムウィンドウ内のERP、
+dipoleの場所情報(10によって重くされる)およびERSP情報
+上記のデフォルト値、タイプ:
 
 ``` matlab
 >> [STUDY ALLEEG] = std_preclust(STUDY, ALLEEG, 1,...
@@ -391,43 +391,43 @@ the above default values, type:
         {'ersp' 'npca' 10 'freqrange' [3 25]  'timewindow' [-1600 1495]  'weight' 1 'norm' 1 'weight' 1});
 ```
 
-Alternatively, to enter these values in the graphic interface, type:
+または、グラフィックインターフェイスでこれらの値を入力するには、次のようにします。
 
 ``` matlab
 >> [STUDY ALLEEG] = pop_preclust(STUDY, ALLEEG);
 ```
 
-To cluster components from the command line, type:
+コマンドラインからクラスターコンポーネントを作成するには、次のようにします。
 
 ``` matlab
 >> [STUDY] = pop_clust(STUDY, ALLEEG, 'algorithm','kmeanscluster', 'clus_num', 10);
 ```
 
-or to pop up the graphic interface:
+またはグラフィックインターフェイスをポップアップする:
 
 ``` matlab
 >> [STUDY] = pop_clust(STUDY, ALLEEG);
 ```
 
-### Visualizing component clusters
+### コンポーネントクラスターの可視化
 
-The main function for visualizing component clusters is [pop_clustedit.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m). To pop up this interface, simply type:
+コンポーネントクラスターを視覚化するための主な機能 [pop_clustedit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m)お問い合わせ このインターフェイスをポップアップするには、単にタイプします。
 
 ``` matlab
 >> [STUDY] = pop_clustedit(STUDY, ALLEEG);
 ```
 
-This function calls a variety of plotting functions for plotting: 
- - scalp maps ([std_topoplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_topoplot.m)), 
- - power spectra ([std_specplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_specplot.m)), 
- - equivalent dipoles ([std_dipplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_dipplot.m)), 
- - ERPs ([std_erpplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m)), 
- - ERSPs ([std_erspplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erspplot.m)), 
- - ITCs ([std_itcplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_itcplot.m)). 
+この関数は、プロットするためのさまざまなプロット関数を呼び出します。 
+ - scalpのマップ ([std_topoplot.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_topoplot.m)), 
+ - パワースペクトル ( )[std_specplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_specplot.m)), 
+ - 同等のダイポール (等価ダイポール)[std_dipplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_dipplot.m)), 
+ - ERPsについて[std_erpplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m)), 
+ - ERSPs()[std_erspplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erspplot.m)), 
+ - ITCs(イッツ)[std_itcplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_itcplot.m)). 
 
-All of these functions follow the same calling format (though [std_dipplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_dipplot.m) is slightly different; refer to its help message). 
-Using function [std_topoplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_topoplot.m) as an example, the following code will plot the
-average scalp map for cluster 2:
+これらの関数のすべてが同じ呼び出し形式に従う (ただし) [std_dipplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_dipplot.m) 若干異なります。ヘルプメッセージを参照してください。 
+機能の使用 [std_topoplot.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_topoplot.m) 例として、次のコードがプロットされます。
+クラスターの平均スカルプマップ2:
 
 ``` matlab
  >> [STUDY] = std_topoplot(STUDY, ALLEEG, 'clusters', 2, 'mode', 'together');
@@ -436,8 +436,8 @@ average scalp map for cluster 2:
 ![](/assets/images/clust2.png)
 
 
-The code snippet below will plot the average scalp map for Cluster 3
-plus the scalp maps of components belonging to Cluster 3:
+以下のコードスニペットは、クラスタ3の平均スカルプマップをプロットします
+クラスタ3に属するコンポーネントのスカルプマップ:
 
 ``` matlab
  >> [STUDY] = std_topoplot(STUDY, ALLEEG, 'clusters', 2, 'mode', 'apart');
@@ -445,7 +445,7 @@ plus the scalp maps of components belonging to Cluster 3:
 
 ![](/assets/images/clust2maps.png)
 
-The following code will plot component 3 of Cluster 2:
+次のコードは、クラスタ2のコンポーネント3をプロットします。
 
 ``` matlab
  >> [STUDY] = std_topoplot(STUDY, ALLEEG, 'clusters', 2, 'comps', 3);
@@ -453,32 +453,32 @@ The following code will plot component 3 of Cluster 2:
 
 ![](/assets/images/clust2_2.png)
 
-Computing and plotting custom measures
+カスタム対策の計算とプロット
 ------------
 
-### Computing custom measures
+### カスタム対策の計算
 
-This section requires EEGLAB 2021.0 or later versions.
-It is possible to compute custom measures on STUDY using the [std_precomp.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m)
-function. Before calling the custom
-function, the [std_precomp.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) function will conveniently apply dataset modifiers such as
-*rmclust*, *rmicacomps* or *interp* to remove components or interpolate
-channels. You may use the option *customparam* to pass additional
-parameters to your custom function. 
+このセクションでは、EEGLAB 2021.0 以降のバージョンが必要です。
+STUDYのカスタム対策をSTUDYで計算することができます。 [std_precomp.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m)
+機能。 カスタムを呼び出す前に
+機能、 [std_precomp.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) 関数は便利なようにデータセットの修飾語を適用します
+*rmclust*、*rmicacomps*か*interp*は部品を取除くか、またはinterpolate
+チャンネル. オプション *customparam* を使用して、追加のパス
+カスタム機能へのパラメーター。 
 
-First we call the function [std_precomp.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) to store the transformed single-trial data. For example, below, we remove the baseline (data samples from 1 to 410 out of 820). If you do not want to modify the single trials, then we can load them as explained later. 
+まず関数を呼び出します [std_precomp.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) 変換された単一致命的なデータを格納する。 例えば、ベースライン(820のうち1～410のデータサンプル)を外します。 単一のトライアルを変更したくない場合は、後で説明するように読み込みます。 
 
 ```matlab
 std_precomp(STUDY, ALLEEG, 'channels', 'customfunc', @(data)bsxfun(@minus, data, mean(data(:,1:410,:),2)), 'interp', 'on');
 ```
 
-The code below low-pass filter the single-trial data below 10 Hz as another example of single trial processing.
+低パスフィルタの下のコードは、単一の試行処理の別の例として10 Hzの下の単一trialデータをフィルタリングします。
 
 ```matlab
 std_precomp(STUDY, ALLEEG, 'channels', 'customfunc', @(data)reshape(eegfilt(data(:,:), EEG(1).srate, 0,10,EEG(1).pnts,60,0,'fir1'), size(data)), 'interp', 'on');
 ```
 
-The we use the [std_readata.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_readata.m) to import the processed data and organize it according to the selected STUDY design, in this case, two conditions *synonyms* versus *non-synonyms*. The data array for each condition is 820 time samples, 61 channels and 5 subjects.
+私たちが使うのは、 [std_readata.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_readata.m) 処理されたデータをインポートし、選択したSTUDY設計に従ってそれを整理するために、この場合、2つの条件 *synonyms* versus *non-synonyms*。 各条件のデータ配列は820時間のサンプル、61チャネルおよび5つの主題です。
 
 ```matlab
 [~, customdata] = std_readdata(STUDY, ALLEEG, 'channels', {ALLEEG(1).chanlocs.labels }, 'design', 1, 'datatype', 'custom');
@@ -489,7 +489,7 @@ customdata
     {820×61×1×5 single}
 ```
 
-If you just want to read the unprocesed single-trial data organized according to the study design, read the ERP single-trial data as shown below. Note that the last dimension of the output arrays differs. This is because the custom function is for general purpose use and allows for 2-D array output for each channel (in which case the 3rd dimension will be larger than 1).
+研究設計に従って組織された未処理の単一致命的なデータを読みたい場合は、以下に示すようにERP単trialデータをお読みください。 出力配列の最後の寸法が異なることに注意してください。 これは、カスタム機能が汎用用途のためであり、各チャネルの2-D配列出力を可能にします(この場合、第3次元は1よりも大きくなります)。
 
 ```matlab
 [~, erpdata] = std_readdata(STUDY, ALLEEG, 'channels', {ALLEEG(1).chanlocs.labels }, 'design', 1, 'datatype', 'erp');
@@ -500,10 +500,10 @@ erpdata
     {820×61×5 single}
 ```
 
-### Plotting custom measures
+### カスタム対策のプロット
 
-Then you can use the [std_plotcurve.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_plotcurve.m) to plot the data average.  For example, the function below computes the ERP for
-each channel and plots it (either using the *erpdata* output array or using the *customdata* output array)
+それからあなたは使用することができます [std_plotcurve.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_plotcurve.m) データ平均をプロットする。 例えば、以下の関数はERPを計算します。
+各チャンネルとプロット(*erpdata*出力配列を使用して、または*customdata*出力配列を使用して)
 
 ```matlab
 std_plotcurve(EEG(1).times, erpdata, 'chanlocs', ALLEEG(1).chanlocs);
@@ -513,7 +513,7 @@ std_plotcurve(EEG(1).times, customdata, 'chanlocs', ALLEEG(1).chanlocs);
 
 ![](/assets/images/custom_plot2.png)
 
-Or you can use your own function. For example, the code snippet below, computes the root mean square (RMS) across channels for each condition.
+またはあなた自身の機能を使うことができます。 たとえば、以下のコードスニペットは、各条件のチャンネル全体でルートの平均平方(RMS)を計算します。
 
 ```matlab
 figure;
@@ -528,9 +528,9 @@ setfont(gcf, 'fontsize', 16); % change font size
 
 ![](/assets/images/custom_plot1.png)
 
-### Computing statistics on custom measures
+### カスタム対策に関する統計計算
 
-Note that we can use the function [std_stat.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_stat.m) to perform statistics on the *customdata* and *customerp* cell arrays obtained above. The code snippet below will use permutation statistics and false discovery correction for multiple comparisons. The output is an array of corrected p values of size 820 samples by 61 channels.
+関数を使うことができることに注意して下さい [std_stat.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_stat.m) *customdata* と *customerp* のセル配列の統計を上回る。 以下のコードスニペットは、複数の比較のために、パーマテーション統計と偽の発見修正を使用します。 出力は 61 チャネルによるサイズ 820 のサンプルの修正された p 値の配列です。
 
 ```matlab
 std_stat(erpdata, 'condstats', 'on', 'mcorrect', 'fdr', 'method', 'permutation')
@@ -540,7 +540,7 @@ ans =
     {820×61 double}
 ```
 
-The code snippet below performs correction for multiple comparisons using the cluster method available in FieldTrip.
+以下のコードスニペットは、FielTripで利用可能なクラスターメソッドを使用して複数の比較の修正を行います。
 
 ```matlab
 std_stat(erpdata, 'condstats', 'on', 'fieldtripmcorrect', 'cluster', 'fieldtripmethod', 'montecarlo', 'mode', 'fieldtrip')
@@ -550,7 +550,7 @@ ans =
     {820×61 double}
 ```
 
-You may also call the low-level functions [statcond.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) and [statcondfieldtrip.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) directly (refer to the function help message for additional information). For example:
+また、低レベル関数を呼び出すこともできます。 [スタコンド。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) そして、 [スタコンドフィールドトリップ.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) 直接(追加情報のための機能ヘルプメッセージを参照)。 例えば:
 
 ```matlab
 res = statcond(erpdata); size(res)

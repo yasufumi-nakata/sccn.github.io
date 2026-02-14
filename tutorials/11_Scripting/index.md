@@ -7,4 +7,4 @@ has_children: true
 has_toc: true
 nav_order: 11
 ---
-Writing MATLAB scripts to perform EEGLAB analyses allows the user to largely automate the processing of one or more datasets. This series of tutorials illustrate how to write EEGLAB compatible scripts.
+MATLAB スクリプトを使用して EEGLAB 分析を実行することで、ユーザーは複数のデータセットの処理を大幅自動化できます。 この一連のチュートリアルでは、EEGLAB対応スクリプトの書き方を説明します。

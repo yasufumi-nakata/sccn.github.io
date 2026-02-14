@@ -5,46 +5,46 @@ long_title: Legacy artifact rejection methods in EEGLAB
 parent: Reference Topics
 grand_parent: Tutorials
 ---
-Legacy methods for rejecting artifacts in continuous and epoched data
+連続したデータのアーティファクトを拒否するためのレガシーメソッド
 ======================================================================
 
-This other [section](/tutorials/06_RejectArtifacts/) of the tutorial contains methods that are currently recommended for rejecting artifacts.
+その他 [セクション](/tutorials/06_RejectArtifacts/) チュートリアルでは、現在アーティファクトを拒否するために推奨されるメソッドが含まれています。
 
-<span style="color: red">The current section refers to obsolete methods that are no longer recommended for artifact rejections, given better methods are now available. In EEGLAB 2019.1 and later version, make sure to select the option <i>Show all menus from previous versions of EEGLAB</i> in EEGLAB menu item <span style="color: brown">File > Preference</span> to be able to use the tools on this page.</span>
+<span style="color: red">現在のセクションでは、もはやアーティファクト拒否のために推奨されていないメソッドを廃止し、より良いメソッドが利用可能になりました。 EEGLAB 2019.1以降のバージョンでは、必ずオプションを選択してください。 <i>EEGLABの以前のバージョンからすべてのメニューを表示</i> EEGLABメニュー項目 <span style="color: brown">ファイル > リファレンス</span> このページのツールを利用できるようにします。</span>
 
-Strategy: The approach used in EEGLAB for artifact rejection uses
-'statistical' thresholding to 'suggest' epochs to reject from the analysis.
-Current computers are fast enough to allow easy confirmation and adjustment of suggested rejections by visual inspection, which our [eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) tool makes convenient. We therefore favor
-*semi-automated rejection* coupled with a visual inspection, as detailed
-below. 
+ストラテジー:EEGLABで使用されるアプローチは、アーティファクト拒絶用途に使用されます
+'suggest' epochs に対する 'statistical' のしきい値で解析から拒否します。
+現在のコンピュータは視覚点検によって提案された拒絶の容易な確認そして調節を可能にする十分速いです、 [eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) 工具は便利になります。 お問い合わせ
+*半自動拒絶*は視覚点検と、細部と結合しました
+お問い合わせ 
 
-In practice, we favor applying EEGLAB rejection methods to
-*independent components* of the data, using a seven-stage method
-outlined below.
+練習では、EEGLABの拒絶方法を適用してほしい
+※7段方式によるデータ独立コンポーネント*
+お問い合わせ
 
-Examples: In all this section, we illustrate EEGLAB methods for artifact
-rejection using the same sample EEG dataset we used in the single-subject data analysis
-tutorial. These
-data are not perfectly suited for illustrating artifact rejection since
-they have relatively few artifacts! Nevertheless, by setting low
-thresholds for artifact detection, it is possible to find and mark
-outlier trials. Though these may not necessarily be artifact related, we
-use them here to illustrate how the EEGLAB data rejection functions
-work. We encourage users to make their own determinations as to which
-data to reject and to analyze using the set of EEGLAB rejection tools.
+例: このセクションでは、アーティファクトのEEGLABメソッドを説明します。
+単一サブジェクトのデータ解析で使用した同じサンプルEEGデータセットを用いた拒絶
+チュートリアル。 お問い合わせ
+データは、アーティファクトの拒絶反応を誘発するために完全に適していません。
+彼らは比較的少ないアーティファクトを持っています! それにもかかわらず、低い設定によって
+人工物検出のためのしきい値、見つけるとマークすることができます
+体験試験 これらは必ずしもアーティファクトに関係するわけではありませんが、
+EEGLABのデータ拒否機能についてはこちら
+仕事。 ユーザーが自らの判断を下すように促します。
+EEGLAB拒否ツールのセットを使用して、拒否および解析するデータ。
 
-Rejecting artifacts in continuous data
+連続データにおけるアーティファクトの除去
 ----------------------------------------
-### Rejecting data channels based on channel statistics
+### チャネル統計に基づくデータチャネルの除去
 
-Channel statistics may help determine whether to remove a channel or
-not. To compute and plot one channel statistical characteristics, use
-menu <span style="color: brown">Plot → Data statistics → channel statistics</span>. In the pop-up window below, enter the channel number.
-The parameter "Trim percentage" (default is 5%) is used for computing
-the trimmed statistics (recomputing statistics after removing tails of
-the distribution). If P is this percentage, then data values below the P
-percentile and above the 1-P percentile are excluded for computing
-trimmed statistics.
+チャネル統計は、チャネルを削除したり、チャネルを削除したりするかどうかを判断するのに役立ちます
+コメントはありません。 1つのチャネル統計特性を計算し、プロットするために、使用して下さい
+メニュー <span style="color: brown">Plot → データ統計 → チャネル統計</span>お問い合わせ 下のポップアップウィンドウでチャンネル番号を入力します。
+パラメータ "トリムパーセンテージ" (デフォルトは5%) は、コンピューティングに使用されます
+トリミングされた統計(の尾を取除いた後の統計処理)
+分布)。 P がこのパーセンテージの場合、P の下のデータ値
+1Pのパーセンシャルを上回るパーセンシーは、コンピューティングのために除外されます
+トリミングされた統計。
 
 
 
@@ -52,7 +52,7 @@ trimmed statistics.
 
 
 
-Pressing *Ok* will open the image below.
+※Ok*を押すと、以下の画像が開きます。
 
 
 
@@ -60,52 +60,52 @@ Pressing *Ok* will open the image below.
 
 
 
-Some estimated variables of the statistics are printed as text in the
-lower panel to facilitate graphical analysis and interpretation. These
-variables are the signal mean, standard deviation, skewness, and
-kurtosis (technically called the four first cumulants of the distribution)
-and the median. The last text output displays the
-Kolmogorov-Smirnov test result (estimating whether the data distribution
-is Gaussian or not) at a significance level of p=0.05.
+統計の推定変数はテキストとして印刷されます
+グラフィカルな分析と解釈を容易にするためのパネルを下げます。 お問い合わせ
+変数は信号の平均、標準的な偏差、スキューネスであり、
+久留米症(流通の4つの最初の累積者と呼ばれる)
+メディア 最後のテキスト出力は、
+Kolmogorov-Smirnovテスト結果(データ分布かどうかを推定)
+p = 0.05 の重要度で Gaussian またはないです。
 
-The upper left panel shows the data histogram (blue bars), a vertical
-red line indicating the data mean, a fitted normal distribution (light
-blue curve), and a normal distribution fitted to the trimmed data (yellow
-curve). The P and 1-P percentile points are marked with yellow ticks on
-the X axis. A horizontal notched-box plot with whiskers is drawn below
-the histogram. The box has lines at the lower quartile
-(25th-percentile), median, and upper quartile (75th-percentile) values.
-The whiskers are lines extending from each end of the box to show the
-extent of the rest of the data. The whisker extends to the most extreme
-data value within 1.5 times the width of the box. Outliers ('+') are
-data with values beyond the ends of the whiskers.
+左上のパネルは、データヒストグラム(ブルーバー)、垂直を示しています
+データの平均を示す赤いライン、合う正常な配分(ライト
+青曲線)、およびトリミングされたデータ(黄色)に収まる通常の分布
+カーブ)。 Pと1-Pのパーセンタイルポイントは、黄色のダニでマークされています
+X軸。 ウィスカー付きの水平ノッチボックスプロットは下図
+ヒストグラム。 箱により低いquartileのラインがあります
+(第25回パーセンタイル)、メディアン、および上質(第75回パーセンタイル)値。
+ウィスカーは、ボックスの各端から拡張される行で、
+データの残りの部分の程度。 ウィスカーは最も極端に伸びます
+箱の幅が1.5回以内のデータ価値。 アウター('+')は
+ウィスカーの端を超えた値を持つデータ。
 
-The upper right panel shows the empirical quantile-quantile plot
-(QQ-plot). Plotted are the quantiles of the data versus the quantiles of
-a Standard Normal (i.e., Gaussian) distribution. The QQ-plot visually
-helps to determine whether the data sample is drawn from a Normal
-distribution. If the data samples do come from a Normal distribution
-(same shape), even if the distribution is shifted and re-scaled from the
-standard normal distribution (different location and scale parameters),
-the plot will be linear.
+上部の右側のパネルは帝国quantilequantileのプロットを示します
+(QQQ-plot). Plotted はデータの量子であり、データの量子は、
+標準ノーマル(ガウス)分布。 QQ-プラットを視覚的に
+データサンプルが通常から描画されるかどうかを判断するのに役立ちます
+分布。 通常の分布からデータサンプルが来る場合
+(同じ形状)、分布がシフトして再スケールしても
+標準的な正常な配分(異なった位置およびスケール変数)、
+プロットは線形です。
 
-Empirically, 'bad' channels have distributions of potential values that
-are further away from a Gaussian distribution than other scalp channels.
-For example, plotting the statistics of periocular (eye) Channel 1
-below, we can see that it is further away from a normal distribution
-than Channel 10 above. (However, Channel 1 should not itself be
-considered a 'bad' channel since ICA can extract the eye movement
-artifacts from it, making the remained data from this channel usable for
-further analysis of neural EEG sources that project to the face). The
-function plotting data statistics may provide an objective measure for
-removing a data channel. 
+「悪い」 チャネルは、潜在的な値の分布を持っています
+Gaussian分布は、他のスカルプチャネルよりも遠ざかります。
+例えば、周期(目)チャネル1の統計をプロットする
+以下では、通常の分布からさらに離れたことがわかります。
+チャンネル10以上 (ただし、チャネル1はそれ自体ではない
+ICAが目の動きを抽出できるので「悪い」チャネルと考えられる
+それをアーティファクトし、このチャネルから残されたデータを使用可能なようにします。
+顔に映るニューラルEEGソースのさらなる解析 ふりがな
+データ統計をプロットする機能は目的の測定を提供できます
+データチャネルを削除します。 
 
-Select menu item <span style="color: brown">Edit → Select data</span> to remove one or more data channels. 
+メニュー項目を選択 <span style="color: brown">編集 → データの選択</span> 1つ以上のデータチャネルを削除します。 
 
-It is also
-possible to plot event statistics from the EEGLAB menu -- see the
-EEGLAB event tutorial for
-details.
+それはまたあります
+EEGLABメニューからイベントの統計をプロットできます。
+EEGLABイベントチュートリアル
+お問い合わせ
 
 
 
@@ -113,17 +113,17 @@ details.
 
 
 
-Note that the function above may also be used to detect bad channels in
-non-continuous (epoched) data.
+上記機能は、悪いチャンネルを検知するためにも使用している可能性があることに注意してください。
+非連続(エッチング)データ。
 
-Rejecting artifacts in epoched data
+epochedデータのアーティファクトの除去
 ------------------------------------
-In contrast to continuous EEG data, we have developed several functions
-to find and mark for rejection of those data epochs that appear to contain
-artifacts using their statistical distributions. Since we want to work
-with epoched dataset, you should either load an earlier saved epoched
-dataset or, using the downloaded dataset (better loaded with channel
-locations info), use the following MATLAB script code:
+連続したEEGデータとは対照的に、複数の機能を開発
+含まれているように見えるそれらのデータエポックの拒絶とマーク
+統計的分布を用いたアーティファクト。 仕事をしたいから
+epochedデータセットで、保存した前のepochedを読み込む必要があります
+データセットまたは、ダウンロードしたデータセットを使用して(チャネルで読み込まれる)
+場所情報)、次のMATLABスクリプトコードを使用します。
 
 ``` matlab
 EEG = pop_eegfilt( EEG, 1, 0, [], [0]); % Highpass filter cutoff freq. 1Hz.
@@ -139,12 +139,12 @@ eeglab redraw % redraw eeglab to show the new epoched dataset
 ```
 
 
-After having an epoched dataset, call the main window for epoched data
-rejection, select <span style="color: brown">Tools → Reject data epochs → Reject data (all methods)</span>. The window below will pop up. We will
-describe the fields of this window in top-to-bottom order. First, change
-the bottom multiple-choice button reading <span style="color: brown">Show all trials marked for rejection by the measure selected above or checked below</span> to the first option: 
-<span style="color: brown">Show only the new trials marked for rejection by the measure selected above</span>. We
-will come back to the default option at the end.
+epochedデータセットをした後、epochedデータのメインウィンドウを呼び出します
+拒否、選択 <span style="color: brown">ツール → データ epochs → Reject データ (すべてのメソッド)</span>お問い合わせ 下のウィンドウがポップアップ表示されます。 お問い合わせ
+このウィンドウのフィールドをトップ・ツー・ボトム・オーダーで記述します。 まずは変更
+最下の複数選択ボタン読書 <span style="color: brown">上記または以下にチェックされた測定で拒否のためにマークされたすべての試験を表示</span> 最初のオプションへ: 
+<span style="color: brown">上記の測定で拒否のためにマークされた新しいトライアルのみを表示する</span>お問い合わせ お問い合わせ
+最後にデフォルトオプションに戻ります。
 
 
 ![](/assets/images/Iii2pop_rejmenu.jpg)
@@ -152,40 +152,40 @@ will come back to the default option at the end.
 
 
 
-### Rejecting epochs by visual inspection
+### 視線検査によるエポックの除去
 
-As with continuous data, it is possible to use EEGLAB to reject epoched
-data simply by visual inspection. To do so, press the *Scroll data*
-button on the top of the interactive window. A scrolling window will pop
-up. Change the scale to '79'. Epochs are shown delimited by blue dashed
-lines and can be selected/deselected for rejection simply by clicking on
-them. Rejecting parts of an epoch is not possible.
+連続したデータと同様に、EEGLABを使用して、epochedを拒否することができます。
+視覚的な点検によって単にデータを。 そのためには、*Scrollデータ*を押します。
+インタラクティブウィンドウの上部にあるボタン。 スクロールウィンドウがポップアップ表示されます
+アップ。 スケールを'79'に変更します。 Epochs は青色で区切られた
+行を選択し、クリックするだけで拒否を選択/選択できます
+お問い合わせ エポックの部分の除去はできません。
 
 
 ![](/assets/images/Iii21eegplot.jpg)
 
 
-### Rejecting extreme values
+### 極端な値を注入する
 
-During 'threshold rejection', the user sets up bounding values the data
-should not exceed. If the data (at the selected electrodes) exceeds the
-given limits during a trial, the trial is marked for rejection. Enter
-the following values under *find abnormal values* (which calls the 
-[pop_eegthresh.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_eegthresh.m) function), and press *CALC/PLOT*. The parameters
-entered below tell EEGLAB that EEG values should not exceed +/-*75* µV
-in any of the 32 channels (*1:32* ) at any time within the epoch
-(''-1000 ''to *2000* ms).
+'threshold reject' の間に、ユーザはデータの境界値を設定します
+超過しないでください。 データ(選択した電極で)が超過した場合
+試用期間中に限度額を付与し、試験は拒絶のためにマークされます。 お問い合わせ
+* 異常値* の下の次の値 (これは呼び出します) 
+[pop_eegthresh.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_eegthresh.m) 機能)、および出版物*CALC/PLOT*。 パラメータ
+EEG 値が +/-*75* μV を超えるべきではないことを EEGLAB に入力して下さい
+32チャンネル(*1:32*)のいずれかで、エポック内のいつでも
+("-1000"への*2000* ms)。
 
 
 ![](/assets/images/Iii22find_abnormal_val.jpg)
 
-Marked trials are highlighted in the [eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) window
+マークされたトライアルは、 [eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) ウィンドウ
 
-(below) that then pops up. Now epochs marked for rejection may be
-un-marked manually simply by clicking on them. Note that the activity at
-some electrodes is shown in red, indicating the electrodes in which the
-outlier values were found. Press *Update Marks* to confirm the epoch
-markings.
+(below) ポップアップします。 今、拒否のためにマークされたエポックは、
+クリックするだけで手動でマークされていない。 活動内容に注意してください。
+いくつかの電極は赤で示され、電極がその中の電極を示す
+以前の値が見つかりました。 プレス *アップデートマーク* で、エポックを確認します
+マーキング
 
 
 ![](/assets/images/Iii22eegplot.jpg)
@@ -193,169 +193,169 @@ markings.
 
 
 
-At this point, a warning will pop up, indicating that the marked epochs
-have not yet been rejected and are simply marked for rejection. When
-seeing this warning, press *Ok* to return to the main rejection window.
+この時点で、警告がポップアップ表示されます。
+まだ拒否されていないし、拒否のために単にマークされています。 いつか
+この警告を見ると、*Ok*を押してメインの拒絶ウィンドウに戻ります。
 
 
 ![](/assets/images/Iii22warning.jpg)
 
 
 
-Also, note that several thresholds may be entered along with separate
-applicable time windows. In the following case, in addition to the
-preceding rejection, additional epochs in which EEG potentials went
-above *25* µV or below *-25* µV during the *-500* to ms interval will be
-marked for rejection.
+また、いくつかのしきい値が別のものと一緒に入力される可能性があることに注意してください
+適当な時間窓。 以下の場合は、別途
+前回拒絶、EEGの潜在能力がなくなった追加の画期的な
+上記 *25* μV 以下 *-25* μV 時 *-500* から ms 間隔
+拒否のためにマークされています。
 
 
 ![](/assets/images/Rawyellowmultiple.gif)
 
 
-### Rejecting abnormal trends
+### 異常な傾向の注入
 
-Artifactual currents may cause linear drift to occur at some electrodes.
-To detect such drifts, we designed a function that fits the data to a
-straight line and marks the trial for rejection if the slope exceeds a
-given threshold. The slope is expressed in microvolt over the whole
-epoch (50, for instance, would correspond to an epoch in which the
-straight-line fit value might be 0 µv at the beginning of the trial and
-50 µ v at the end). The minimal fit between the EEG data and a line of
-minimal slope is determined using a standard R-square measure. To test
-this, in the main rejection window, enter the following data under *findabnormal trends* (which calls function [pop_rejtrend.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejtrend.m)), and
-press *CALC/PLOT*.
+実際の電流は、いくつかの電極で発生する線形漂流を引き起こす可能性があります。
+このようなドリフトを検知するため、データに収まる機能を設計しました。
+直線線をマークし、斜面が上回る場合拒絶の試験をマークします
+与えられたしきい値。 斜面は全体にわたってマイクロボルトで表現されます
+epoch (50, 例えば, epoch に相当します。
+直線適合値は、試験開始時に0μvになる可能性があります。
+端の50 μ v)。 EEGデータとライン間の最小限の適合
+最小限の勾配は、標準のR字測定で決定されます。 テストする
+これは、メインの拒絶ウィンドウで、*findabnormalトレンド*の下に次のデータを入力します(関数を呼び出す) [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejtrend.m))、および
+プレス *CALC/PLOT*
 
 
 ![](/assets/images/Rawgreen.gif)
 
 
 
-The following window will pop up. Note that the values we
-entered are clearly too low (otherwise, we could not detect any linear
-drifts in this clean EEG dataset). Electrodes triggering the
-rejection are again indicated in red. To deselect epochs for rejection,
-click on them. To close the scrolling window, press the *Update marks*
-button.
+次のウィンドウがポップアップ表示されます。 値が値であることに注意してください。
+入力は明確に余りに低いです(また、私達は線形を検出できません
+このクリーンなEEGデータセットで漂流します。 電極トリガー
+再び赤で表示されている拒絶反応。 拒否のためのエポックを選択解除するには、
+クリックしてください。 スクロールウィンドウを閉じるには、*Update mark* を押します。
+ボタン。
 
 
 ![](/assets/images/Iii23eegplot.jpg)
 
 
-Note: Calling function [pop_rejtrend.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejtrend.m) either directly from
-the command line, or by selecting <span style="color: brown">Tools > Reject data
-epochs > Reject flat line data</span>, allows specifying additional
-parameters.
+Note: 呼出し機能 [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejtrend.m) 直接から
+コマンドラインを選択するか、 <span style="color: brown">ツール > データを注入する
+エポック > フラットラインデータを注入する</span>, 追加を指定する
+パラメータ。
 
-### Rejecting improbable data
+### 不可解なデータを取り出す
 
-By determining the probability distribution of values across the data
-epochs, one can compute the probability of occurrence of each trial.
-Trials containing artifacts are (hopefully) improbable events and thus
-may be detected using a function that measures the probability of
-occurrence of trials. Here, thresholds are expressed in terms of
-standard deviations of the mean probability distribution. Note that the
-probability measure is applied both to single electrodes and the
-collection of all electrodes. In the main rejection window, enter the
-following parameters under *find improbable data* press *Calculate* (which calls function [pop_jointprob.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_jointprob.m)), and then press *PLOT*.
+データ全体の値の確率分布を決定することによって
+エポックは、各試験の発生確率を計算することができます。
+アーティファクトを含むトライアルは(うまくいけば)不可解なイベントなので、
+確率を測定する機能を使用して検出することができる
+トライアルの発生 ここでは、しきい値が条件で表現されます
+平均確率分布の標準的な偏差。 注意:
+確率測定は単一電極および単一電極に両方加えられます
+すべての電極のコレクション。 メインの拒絶ウィンドウで、入る
+*findableデータ*の出版物*の下の次の変数は*機能を呼ぶ計算* ( [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_jointprob.m))、それから*PLOT*を押して下さい。
 
 
 ![](/assets/images/Iii24find_improbable_data.jpg)
 
 
 
-The first time this function is run on a dataset, its computation may
-take some time. However, the trial probability distributions will be
-stored for future calls. The following display shows the probability
-measure value for every trial and electrode (each number at the bottom
-shows an electrode, and the blue traces indicate the trial values). On the right, the
-panel containing the green lines shows the probability measure over all
-the electrodes. Rejection is carried out using both single- and
-all-channel thresholds. To disable one of these, simply raise its limit
-(e.g., to 15 std.). The probability limits may be changed in the window
-below (for example, to 3 standard deviations). The horizontal red lines
-shift as limit values are then modified. Note that if you change the
-threshold in the window below, the edit boxes in the main window will be
-automatically updated (after pressing the *UPDATE* button).
+この関数がデータセットで実行されるのは、その計算は
+お問い合わせ しかし、試用確率分布は、
+将来の呼び出しのために保存されます。 次の表示は確率を示しています
+あらゆる試験・電極の計測値(下部の各番号)
+電極を表示し、ブルートレースは試験値を示します。 右側に、
+緑線を含むパネルは、すべての上に確率測定を示す
+電極。 注入は単一を使用して遂行され、
+すべてのチャネルのしきい値。 これらのいずれかを無効にするには、その限界を上げるだけです
+(例:15std) ウィンドウで確率制限が変更される場合があります。
+以下(例えば、3つの標準的な逸脱)。 水平赤線
+リミット値としてシフトして変更します。 変更する場合は注意
+下のウィンドウの閾値、メインウィンドウの編集ボックスは
+自動的に更新される(*UPDATE*ボタンを押した後)。
 
 
 ![](/assets/images/Iii24rejecttrials.jpg)
 
 
 
-It is also possible to look in detail at the trial probability measure
-for each electrode by clicking on its sub-axis plot in the above window.
-For instance, by clicking on electrode number two on the plot, the
-following window would pop up (from left to right, the first plot is the
-ERPimage) of the square
-values of EEG data for each trial, the second plot indicates which
-trials were labeled for rejection (all electrodes combined), and the last
-plot is the original probability measure plot for this electrode with
-limits indicated in red).
+試験確率測定で詳細を見ることもできます
+上記ウィンドウのサブ軸のプロットをクリックすることで、各電極に対して
+例えば、プロットの電極番号2をクリックすることで、
+次のウィンドウがポップアップ表示されます(左から右へ、最初のプロットは
+四角形のERPimage
+各試験のためのEEGデータの値、第2のプロットは、
+拒絶反応(全電極結合)、最終検査
+プロットはこの電極のための元の確率測定のプロットです
+赤で示される限界)。
 
 
 ![](/assets/images/Iii24elctrode2.jpg)
 
 
 
-Close this window and press the *UPDATE* button in the probability plot
-window to add to the list of trials marked for rejection.
+このウィンドウを閉じて、確率プロットの*UPDATE*ボタンを押します
+拒否のためにマークされたトライアルのリストに追加するウィンドウ。
 
-Now press the *'Scroll data* button to obtain the standard scrolling
-data window. Inspect the trials marked for rejection, make any
-adjustments manually, then close the window by pressing *UPDATE
-MARKS*.
+*'Scroll data*ボタンを押して標準スクロールを取得
+データウィンドウ。 拒絶のためにマークされた試験を点検し、
+手動で調整し、*UPDATEを押すことでウィンドウを閉じます
+マークス*
 
 
 ![](/assets/images/Iii24eegplot.jpg)
 
 
-### Rejecting abnormally distributed data
+### 異常に分散したデータを注入する
 
-Artifactual data epochs sometimes have very 'peaky' activity value
-distributions. For instance, if a discontinuity occurs in the activity
-of data epoch for a given electrode, the activity will be either close
-to one value or the other. To detect these distributions, a statistical
-measure called kurtosis is useful. Kurtosis is also known as the fourth
-cumulant of the distribution (the skewness, variance, and mean being the
-first three). A high positive kurtosis value indicates an abnormally
-'peaky' distribution of activity in a data epoch, while a high negative
-kurtosis value indicates abnormally flat activity distribution. Once
-more, single- and all-channel thresholds are defined in terms of
-standard deviations from mean kurtosis value. For example, enter the
-following parameters under ''find abnormal distribution '' press *Calculate* (which calls function [pop_rejkurt.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejkurt.m)), then press
-*PLOT*.
+アーティファクチュアル・データ・エポックは時々非常に「ピーク」の活動の価値を持っています
+分布。 例えば、アクティビティで不連続が発生した場合
+与えられた電極のためのデータepochの、活動はどちらか近いです
+1つの値または他の値に。 これらの分布を検知するため、統計的
+kurtosisと呼ばれる測定は便利です。 クルトーシスも4番目として知られています
+分布の累積(串、分散、平均)
+3つ目 高い肯定的なkurtosisの価値は異常にを示します
+データエポックでのアクティビティのピーク分布、高いマイナス
+kurtosis 値は異常に平らな活動の配分を示します。 おすすめ
+複数の単一チャネルおよび全チャネルのしきい値は条件で定義されます
+平均kurtosisの価値からの標準的な偏差。 例えば、
+「異常分布を見つける」の下の次の変数は*計算*を押します(機能を呼び出す) [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejkurt.m))、それから出版物
+*スロット*。
 
 
 ![](/assets/images/Iii25find_abnormal_dist.jpg)
 
 
 
-In the main rejection window, note that the *Currently marked trials*
-field have changed to 5. In the plot figure, all trials above the
-threshold (red line) are marked for rejection. Note that there are more
-than 5 such lines. The figure presents all channels, and the same trial
-can exceed the threshold several times in different channels, and
-therefore there are more lines than marked trials.
+メインの拒絶ウィンドウで、*現在のマーク付きトライアル*に注意
+フィールドは5に変わります。 プロット図では、上記のすべての試験
+閾値(赤線)は、拒絶のためにマークされます。 詳しくはこちら
+5行以上。 数字はすべてのチャンネルを提示し、同じトライアル
+異なるチャネルで数回閾値を超えることができ、
+そのため、マークされた試験よりも多くの行があります。
 
 
 ![](/assets/images/Iii25rejecttrials.jpg)
 
 
 
-As with probability rejection, these limits may be updated in the pop-up
-window below, and pressing *Scroll data* in the main rejection window
-(above) brings up the standard data scrolling window display which may
-be used to manually adjust the list of epochs marked for rejection.
+確率拒否と同様に、これらの制限はポップアップで更新される可能性があります
+下のウィンドウで、メイン拒絶ウィンドウの*スクロールデータ*を押します。
+(above) は標準的なデータスクロール窓の表示を、かもしれない持って来ます
+拒否のためにマークされているエポックのリストを手動で調整するために使用される。
 
-### Rejecting abnormal spectra
+### 異常スペクトルの注入
 
-According to [our analysis](https://www.researchgate.net/publication/2552520_Automatic_Artifact_Rejection_For_EEG_Data_Using_High-Order_Statistics_And_Independent_Component_Analysis),
-rejecting data epochs using spectral estimates may be the most effective
-method for selecting data epochs to reject for analysis. In this case,
-thresholds are expressed in terms of amplitude changes relative to
-baseline in dB. To specify that the spectrum should not deviate from
-baseline by *+/-50* dB in the '' 0-2'' Hz frequency window, enter the
-following parameters under '' find abnormal spectra'' (which calls the [pop_rejspec.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejspec.m) function), then press *CALC/PLOT*.
+に従って [当社の分析](https://www.researchgate.net/publication/2552520_Automatic_Artifact_Rejection_For_EEG_Data_Using_High-Order_Statistics_And_Independent_Component_Analysis),
+スペクトル推定を使用してデータエポックを拒否することは最も効果的であるかもしれません
+データエポックを選択する方法で、分析を拒否します。 この場合、
+閾値は、相対的な振幅変化の面で表現されます
+dBのベースライン。 スペクトラムが逸脱するべきではないことを指定する
+''の*+/-50* dBによるベースライン0-2" Hzの頻度窓は、入ります
+'' の下の次のパラメータは異常なスペクトラを見つけます(これは呼び出します) [pop_rejspec.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejspec.m) 関数)、それから出版物*CALC/PLOT*。
 
 
 
@@ -363,19 +363,19 @@ following parameters under '' find abnormal spectra'' (which calls the [pop_rejs
 
 
 
-Computing the data spectrum for every data epoch and channel may take a
-while. We use a frequency decomposition based on the Slepian multitaper
-(MATLAB *pmtm* function) to obtain more accurate spectra than using
-standard Fourier transforms. After computing the trial spectra, the
-function removes the average power spectrum from each trial spectrum and
-tests whether the remaining spectral differences exceed the selected
-thresholds. Here, two windows pop up (as below), the top window being
-slaved to the bottom. The top window shows the data epochs, and the
-bottom window the power spectra of the same epochs. When scrolling
-through the trial spectra, the user may use the top window to check what
-caused a data trial to be labeled as a spectral outlier. After further
-updating the list of marked trials, close both windows by pressing
-*UPDATE MARKS* in the bottom window.
+すべてのデータエポックとチャネルのデータスペクトルを計算すると、
+お問い合わせ Slepianマルチタッパーに基づく周波数分解
+(MATLAB *pmtm* 関数) より正確なスペクトルを取得
+標準的なFourierは変形します。 試用スペクトルを計算した後、
+関数は各試験スペクトルから平均電力スペクトルを取除きます
+残りのスペクトルの違いが選択した値を超えたかどうかのテスト
+閾値。 ここでは、2つのウィンドウがポップアップ(以下)、トップウィンドウがポップアップ表示されます。
+底にスレーブ。 上部のウィンドウは、データエポックと、
+一番下のウィンドウは同じエポックのパワースペクトラです。 スクロールするとき
+トライアルのspectraを通して、ユーザーはトップウィンドウを使用して何かをチェックすることができます
+スペクトラル・アウターとしてラベルを付けるデータ・トライアルを引き起こしました。 アフターフォロー
+マーク付きトライアルのリストを更新し、両方のウィンドウを閉じる プレス
+※下ウィンドウの「UPDATE MARKS*」
 
 
 ![](/assets/images/Iii26eegplotup.jpg)
@@ -383,12 +383,12 @@ updating the list of marked trials, close both windows by pressing
 ![](/assets/images/Iii26eegplotdown.jpg)
 
 
-As with standard rejection of extreme values, several frequency
-thresholding windows may be defined. In the window below, we specify
-that the trial spectra should again not deviate from the mean by *+/-50*
-dB in the *0-2* Hz frequency window (good for catching eye movements)
-and should not deviate by *+25* or *-100* dB in the *20-40* Hz frequency
-window (useful for detecting muscle activity).
+極端な値の標準的な拒絶と同様に、いくつかの周波数
+しきい値のウィンドウを定義することができます。 下のウィンドウで指定します。
+試用スペクトラは、*+/-50*による意味から再び逸脱してはならない
+*0-2* Hzの頻度窓のdB (目の動きを捕獲するためによい)
+*20-40*の*+25*か*-100* dBによってdeviateべきではないです Hzの頻度
+窓(筋肉活動を検出するのに有用)。
 
 
 ![](/assets/images/Iii26find_abnormal_spectra2.jpg)
@@ -396,171 +396,171 @@ window (useful for detecting muscle activity).
 
 
 
-### Inspecting current versus previously proposed rejections
+### 以前に提案された拒絶と現在の対を調べる
 
-To compare the effects of two different rejection thresholds, the user
-can plot the currently and previously marked data epochs in different
-colors. To do this, change the option in the long rectangular tab under
-*Plotting options* (at the bottom of the figure). Select
-<span style="color: brown">Show previous and new trials marked for rejection by
-this measure selected above</span>. For instance, using '' abnormal
-distribution'', enter the following parameters, and press *Scroll
-data*.
+2つの異なる拒絶しきい値の影響を比較するには、ユーザー
+現在および以前にマークされたデータを異なる場所でプロットすることができます
+色。 これを行うには、下の長い長方形タブのオプションを変更します
+※オプション*(図の下部) 選択する
+<span style="color: brown">拒否のためにマークされた以前の新しいトライアルを表示
+上記の測定値</span>お問い合わせ 例えば、"異常"を使用して下さい
+配布」は、次のパラメータを入力し、*スクロールを押します。
+データ*
 
 
 ![](/assets/images/Iii27find_abnormal_dist.jpg)
 
 
 
-The scrolling window appears and now shows that at trials 11 & 12, the
-blue window is actually divided into two, with dark blue on the top and
-light blue on the bottom. Dark blue indicates that the trial is
-currently marked as rejected. The light blue indicates that the trial
-was already rejected using the previous rejection threshold.
+スクロールウィンドウが表示され、試用版11&12で表示されるようになりました。
+青色の窓は実際に2つに分けられ、上の濃紺と
+底にライトブルー。 ダークブルーは、試験が行われることを示しています
+現在、拒否されている。 淡い青は、試験が示す
+既に前の拒絶しきい値を使用して拒否されました。
 
 
 ![](/assets/images/Iii27eegplot.jpg)
 
 
 
-Note: Pressing *UPDATE MARKS* updates the currently rejected trials
-and optional visual adjustments. Previously rejected trials are ignored
-and can not be removed manually in the plot window.
+Note: プレス *UPDATE MARKS* は、現在拒否されたトライアルをアップデートします。
+そして任意視覚調節。 以前は拒否された試験は無視されます
+プロットウィンドウで手動で削除することはできません。
 
-### Inspecting results of all rejection measures
+### 全拒絶対策の結果の特定
 
-To visually inspect data epochs marked for rejection by different
-rejection measures, select <span style="color: brown">Show all trials marked for
-rejection measures by the measure selected above or checked below</span>
-in the long rectangular tab under '' Plotting options''. Then press
-*CALC/PLOT* under *Find abnormal spectra*. Rejected windows are divided
-into several colored patches, each color corresponding to a specific
-rejection measure. Channels colored red are those marked for rejection
-by any method.
+異なる方法で拒否のためにマークされたデータのエポックを視覚的に検査するため
+拒絶対策、選択 <span style="color: brown">マークされたすべてのトライアルを表示する
+上記の測定値による拒絶措置または以下にチェック</span>
+'' の下の長い長方形タブでオプションをプロットする。 プレス
+*Find異常スペクトル*の下の*CALC/PLOT*。 注入された窓は分けられます
+特定の色に対応する複数のカラーパッチに
+拒絶測定。 チャネルは、赤色は拒絶のためにマークされているもの
+あらゆる方法によって。
 
 
 ![](/assets/images/Iii28eegplot.jpg)
 
 
 
-When visually modifying the set of trials labeled for rejection in the
-window above, all the *current rejection measures* are affected and are
-reflected in the main rejection window after you press the *UPDATE
-MARKS* button.
+拒否のためにラベル付けされたトライアルのセットを視覚的に変更する場合
+上記では、全ての*現在の拒絶措置*が影響され、
+*UPDATEを押すとメインの拒絶ウィンドウに反映されます。
+MARKS*ボタン。
 
-Notes and strategy
+ノートと戦略
 -------------------
 
--   The approach we take to artifact rejection is to use statistical
-    thresholding to suggest epochs to reject from the analysis. Current
-    computers are fast enough to allow easy confirmation and adjustment
-    of suggested rejections by visual inspection. Therefore, we favor
-    *semi-automated rejection* coupled with a visual inspection.
--   All the functions presented here can also be called individually
-    through <span style="color: brown">Plot -> Reject data epochs</span> or from
-    the MATLAB command line.
--   After labeling trials for rejection, it is advisable to *save* the
-    dataset before actually rejecting the marked trials (marks will be
-    saved along with the dataset). This gives one the ability to go back to
-    the original dataset and recall which trials were rejected.
--   To actually reject the marked trials, either use the option *Reject
-    marked trials* at the bottom of the main rejection window, or use
-    the main EEGLAB window options <span style="color: brown">Tools > Reject
-    data epochs > Reject marked epochs</span>.
--   All these rejection measures are useful, but if one does not know
-    how to use them, they may be inefficient. Because of this, we have
-    not provided standard rejection thresholds for all the measures. In
-    the future we may include such information in this tutorial. The
-    user should *begin* by visually rejecting epochs from some test
-    data, then adjust parameters for one or more of the rejection
-    measures, comparing the visually selected epochs with the results of
-    the rejection measure. All the measures can capture both simulated
-    and real data artifacts. In our experience, the most efficient
-    measures seem to be the frequency threshold and linear trend detection.
--   We typically apply semi-automated rejection to the *independent
-    component activations* instead of to the raw channel data, as
-    described below.
+-   当社がアーティファクト拒絶に取り込むアプローチは、統計的利用
+    分析から拒否するエポックを提案するしきい値。 現在の位置:
+    コンピュータは容易な確認および調節を可能にする十分速いです
+    視覚検査による拒絶の提案 ですから、
+    ※セミオートレジェクション※は、視線検査と相まっています。
+-   ここで提示されたすべての機能は、個別に呼び出すこともできます。
+    コース <span style="color: brown">パロット → データエポックを注入する</span> またはから
+    MATLABコマンドライン
+-   拒絶のための試練をラベリングした後は、*save*にお勧めです
+    実際にマークされた試用を拒否する前にデータセット (マークは表示されます)
+    データセットと一緒に保存します。 これは、戻って行く能力を1つ与えます
+    元のデータセットと試用を拒否したリコール。
+-   マークされたトライアルを実際に拒否するには、オプション *Reject を使用します。
+    メインの拒絶ウィンドウの下部にあるマーク付きトライアル*、または使用
+    メインの EEGLAB ウィンドウオプション <span style="color: brown">ツール > リジェクト
+    データエポック > マークされたエポックを注入する</span>.
+-   これらすべての拒絶措置は有用であるが、誰も知らない
+    それらを使用する方法、それらは非効率であるかもしれません。 そのためには、
+    すべての措置のための標準的な拒絶しきい値を提供していません。 お問い合わせ
+    このチュートリアルでは、このような情報を含む可能性がある未来。 ふりがな
+    *begin* は、一部のテストからエポックを視覚的に拒否することで
+    データ、それから拒絶の1つ以上の変数を調節して下さい
+    視覚的に選択したエポックを比較し、結果の結果を照らす
+    拒絶測定。 すべての措置は、シミュレートされた両方をキャプチャすることができます
+    実際のデータアーティファクト。 私達の経験では、最も有効
+    測定は周波数のしきい値および線形傾向の検出であるように思えます。
+-   通常、セミオートレジェクションを*独立者に適用します。
+    コンポーネントのアクティベーション*は、生のチャンネルデータではなく、
+    お問い合わせ
 
-Rejection based on independent data components
+独立したデータコンポーネントに基づく拒絶反応
 ----------------------------------------------
 
-### Rejecting data based on ICA component activity
+### ICAコンポーネントアクティビティに基づくデータを抽出する
 
-To reject data by visual inspection of its ICA component activations,
-select <span style="color: brown">Plot → Component activation (scroll)</span> (calling [pop_eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_eegplot.m
-). It is often easier to spot artifacts in ICA component activation than it is in raw data. Rejecting portions of data will reject it for both EEG data and ICA components.
+ICAコンポーネントの活性化の視覚的検査によるデータを拒絶するため、
+選択する <span style="color: brown">Plot → コンポーネントの有効化(スクロール)</span> (コール [pop_eegplot.m])http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_eegplot.m
+)。 生データよりも、ICAコンポーネントの活性化にアーティファクトを簡単に見つけやすくなります。 データを取り出すと、EEGデータとICAコンポーネントの両方が拒否されます。
 
-Note that marked
-epochs can be kept in memory before being actually rejected - if the
-option *Reject marked trials (checked=yes)* below is not set. Thus it
-is possible to mark trials for rejection and then to come back and
-update the marked trials. The first option - *Add to previously marked
-rejections (checked=yes)* - allows us to include previous trial markings
-in the scrolling data window or to ignore/discard them. 
+マークされていることに注意
+実際には拒否される前に、エポックをメモリに保存することができます - もし
+※マーク付きトライアル(checked=yes)*を以下に差し込みます。 こうして
+拒絶の試練をマークし、その後、戻って来て、
+マークされたトライアルを更新します。 最初のオプション - *以前にマークされたものに追加
+拒否(checked=yes)* - 以前のトライアルマークを含むことができます
+スクロールデータウィンドウで、または無視/拒否する。 
 
-Since it is the
-first time we have used this function on this dataset, the option to
-plot previously marked trials won't have any effect. 
+なので、
+このデータセットでこの機能を使用しました。
+以前にマークされたトライアルをプロットしても効果はありません。 
 
-Check the checkbox
-to reject marked trials, so that the marked trials will be immediately
-rejected when the scrolling window is closed. Press *Ok*.
+チェックボックスをチェック
+マークされたトライアルを拒否するため、マークされたトライアルがすぐに行われるように
+スクロールウィンドウを閉じると拒否されます。 プレス *Ok*.
 
 ![](/assets/images/Inspectionpop.gif)
 
-First, adjust the scale by entering *10* in the scale text edit box
-(lower right). 
+まず、スケールテキスト編集ボックスに*10*を入力することでスケールを調整します
+(右下) 
 
-Now, click on the data epochs you want to mark for
-rejection. For this exercise, highlight two epochs. 
+今, あなたがマークしたいデータエポックをクリック
+拒絶反応。 この演習では、2つのエポックを強調します。 
 
-You can then
-deselect the rejected epochs by clicking again on them. 
+お問い合わせ
+拒否されたエポックを再度クリックして選択解除します。 
 
-Press the
-*Reject* button when finished and enter a name for the new dataset (the
-same dataset minus the rejected epochs), or press the *Cancel* button to
-cancel the operation.
+プレス
+*Reject* ボタンを終了すると、新しいデータセットの名前を入力します。
+同じデータセットは、拒否されたエポックをマイナスするか、または*Cancel*ボタンを押してください。
+操作をキャンセルします。
 
 ![](/assets/images/Inspectionhighlight.gif)
 
-At this point, you may spend some time trying out the advanced rejection
-functions we developed to select and mark artifactual epochs based on
-ICA component maps and activations. 
+この時点で、高度な拒絶を試してみると、いくつかの時間を費やすことができます
+私たちが開発した関数は、に基づいてアーティファクチュアルなエポックを選択し、マークするために開発しました
+ICAコンポーネントのマップと活性化。 
 
-Then,
-after rejecting 'bad' epochs, run ICA decomposition again. Hopefully, by
-doing this, you may obtain a 'cleaner' decomposition.
+それから、
+'bad' epochs を拒絶した後、ICA は再び分解します。 うまくいけば、
+これを行うと「クリーナー」の分解を得ることができます。
 
-### Semi-automated artifact rejection
+### 半自動アーティファクト拒絶
 
-We usually apply the measures described in the previous sections to the activations of the
-independent components of the data. As independent components tend to
-concentrate artifacts, we have found that bad epochs can be more easily
-detected using independent component activities. The functions described
-above work exactly the same when applied to data components as when they
-are applied to the raw channel data. Select <span style="color: brown">Tools >
-Reject data using ICA > Reject data (all methods)</span>. We suggest
-that the analysis be done iteratively in the following seven steps:
+通常、前のセクションで説明した措置を有効活用します。
+データの独立したコンポーネント。 独立した部品が傾向があるように
+濃縮アーティファクト、悪いエポックがより簡単にできることがわかりました
+独立した構成活動を使用して検出される。 説明する関数
+上記の作業は、データコンポーネントに適用したときにまったく同じです。
+生のチャンネルデータに適用されます。 選択する <span style="color: brown">ツール >
+ICAでデータを取り込む > データを除去する(すべてのメソッド)</span>お問い合わせ お問い合わせ
+次の7つのステップで分析が反復的に行われること:
 
-1.  Visually reject unsuitable (e.g., paroxysmal) portions of the
-    continuous data.
-2.  Separate the data into suitable short data epochs.
-3.  Perform ICA on these epochs to derive their independent components.
-4.  Perform semi-automated and visual-inspection based rejection of data
-    epochs on the derived components. (\*)
-5.  Visually inspect and select data epochs for rejection.
-6.  Reject the selected data epochs.
-7.  Perform ICA a second time on the pruned collection of short data
-    epochs -- This may improve the quality of the ICA decomposition,
-    revealing more independent components accounting for neural, as
-    opposed to mixed artifactual activity. If desired, the ICA unmixing
-    and sphere matrices may then be applied to (longer) data epochs from
-    the same continuous data. Longer data epochs are useful for
-    time/frequency analysis and may be desirable for tracking other
-    slow dynamic features.
-8.  Inspect and reject the components. Note that components should NOT
-    be rejected before the second ICA, but after.
+1.  不適切(例えば、paroxysmal)部分を視覚的に拒絶して下さい
+    連続データ。
+2.  データを適切な短いデータエポックに分離します。
+3.  これらのエポックでICAを実行して、独立したコンポーネントを導き出します。
+4.  データの半自動・視覚的インスペクションによる拒否を実行
+    得られたコンポーネントのエポック。 (*)
+5.  データを視覚的に検査し、拒否のために選択します。
+6.  選択したデータエポックを注入します。
+7.  短いデータの剪定されたコレクションでICAを2度実行する
+    エポック -- これは、ICA分解の品質を向上させることができます,
+    神経を占めるより独立したコンポーネントを明らかにする
+    混合アーティファクチュアル活動とは対照的。 必要に応じて、ICAの混合
+    そして球のmatricesは(より長い)データepochsにそれから加えることができます
+    同じ連続データ。 より長いデータ epochs はのために有用です
+    時間/頻度の分析は他の追跡のためにdesirableかもしれません
+    動的機能が遅い。
+8.  コンポーネントの特定および拒否 コンポーネントがコンポーネントではないことに注意してください
+    ICAの2つ目の前に拒否されます。
 
-(\*) After closing the main ICA rejection window, select <span style="color: brown">Tools → Reject data using ICA → Export marks to data rejection</span>, and then 
- <span style="color: brown">Tools → Reject data epochs → Reject by inspection</span> to visualize data epochs marked for rejection using ICA component activities.
+(*) ICA拒否ウィンドウを閉じた後、選択します <span style="color: brown">ツール → ICA → エクスポートマークを使用してデータをデータ拒否する</span>それから 
+ <span style="color: brown">ツール → データを抽出 → 検査によるレジェクト</span> ICAコンポーネントのアクティビティを使用して拒否のためにマークされたデータを視覚化します。

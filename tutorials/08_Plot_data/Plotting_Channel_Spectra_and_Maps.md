@@ -6,71 +6,71 @@ longtitle:
 parent: 8. Plot data
 grand_parent: Tutorials
 ---
-Plotting channel spectra and maps
+チャンネルのスペクトラとマップのプロット
 =====================
-Besides reading the tutorial sections below, you may want to watch the short video on computing spectra in EEGLAB (hosted on Youtube) below. In particular, we recommend video 1 and 2 describing the Welch method used in this section, and video 5, describing the EEGLAB functions used in this section.
+以下のチュートリアルセクションを読む以外にも、以下のEEGLAB(Youtubeでホストされている)で計算スペクトルの短いビデオを見たいかもしれません。 特に、このセクションで使用される Welch メソッドを記述するビデオ 1 と 2 を、このセクションで使用される EEGLAB 関数を記述するビデオ 5 をお勧めします。
 
 <a href="https://www.youtube.com/playlist?list=PLXc9qfVbMMN2TAoLHVW5NvNmJtwiHurzw"><img align="center" width="400" src= "/assets/images/yt_spectopo2.png"></a>
 
-Load the sample EEGLAB dataset
+サンプル EEGLAB データセットをロードする
 -----------------
 
-Select the <span style="color: brown">File</span> menu item and press the
-<span style="color: brown">Load existing dataset</span> sub-menu item. Select the tutorial file "eeglab_data.set" located in the "sample_data" folder of EEGLAB. Then press *Open*.
+選択する <span style="color: brown">ファイル</span> メニュー項目および出版物
+<span style="color: brown">既存のデータセットをロードする</span> サブメニュー項目。 EEGLABの「sample_data」フォルダにある「eeglab_data.set」を選択します。 それから *Open*を押して下さい。
 
-![Image:Pop_loadset.png](/assets/images/Pop_loadset.png)
+![画像:Pop_loadset.png](/assets/images/Pop_loadset.png)
 
-Plot Channel Spectra and Maps
+プロット チャネルのスペクトルおよび地図
 -----------------
 
-To plot the channel spectra and associated topographical maps, select
-<span style="color: brown">Plot → Channel spectra and maps</span>. This will pop up the [pop_spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) window (below). 
-Leave the default settings and press *Ok*.
+チャンネルのスペクトルと関連するトポグラフィマップをプロットするには、
+<span style="color: brown">Plot → チャネルのスペクトラおよび地図</span>お問い合わせ これはポップアップ表示されます [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) ウィンドウ(下)。 
+デフォルト設定を残して、*Ok*を押します。
 
 ![](/assets/images/spectopo1gui.png)
 
-The function should return a [spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) plot (below).
-Since we only sampled 50% of the data (via the *Percent data...* edit
-box above), results should differ slightly on each call. (Naturally,
-this will not occur if you enter 100% in the edit box).
+関数は戻るべきです [スペックトップm](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) プロット(下)。
+データの50%だけをサンプル化したので(*Percent data...*編集)
+上記)は、各呼び出しに若干異なる結果です。 (当然、
+編集ボックスに100%を入れた場合はこれが発生しません。
 
 ![](/assets/images/spectopo1plot.png)
 
-Each colored trace represents the spectrum of the activity of one data
-channel. The leftmost scalp map shows the scalp distribution of power
-at 6 Hz, which in these data is concentrated on the frontal midline.
-The other scalp maps indicate the distribution of power at 10 Hz and
-22 Hz.
+各色のトレースは、1つのデータの活動のスペクトルを表します
+チャンネル. 左端のスカルプマップは、電力のスカルプ分布を示しています
+これらのデータは正面の中間線に集中する6つのHzで。
+他のスカルプマップは、10 Hzで電力の分布を示し、
+22のHz。
 
-The [pop_spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) window menu (above) allows the user to
-compute and plot spectra in specific time windows in the data. The
-*Percent data...* value can be used to speed the computation (by
-entering a number close to 0) or to return more definitive measures
-(by entering a number closer to 100).
+ふりがな [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) ウィンドウメニュー (above) を使用すると、ユーザーは
+データ内の特定の時間ウィンドウで spectra を計算し、プロットします。 ふりがな
+*Percent data...* 値を使用して計算を高速化できます(by)
+0 に近い番号を入力するか、より明確な措置を返す
+(100に近い番号を入力してください)
 
-On the MATLAB command line, the parameters for calculating the spectrum using
-the Welch method are exposed (window size of 128 samples with no overlap between
-windows). We can change these parameters. Select menu item <span style="color: brown">Plot → Channel spectra and maps</span> and in the *Spectral and scalp map options* edit box, enter
-" *'winsize', 256, 'overlap', 128* ". 
+MATLABのコマンドラインでは、スペクトルを計算するためのパラメータ
+Welchメソッドが露出します(ウィンドウサイズ128サンプルのオーバーラップなし)
+窓)。 これらのパラメータを変更することができます。 メニュー項目を選択 <span style="color: brown">Plot → チャネルのスペクトラおよび地図</span> と *Spectral と scalp マップオプション* 編集ボックス, 入る
+" *'winsize', 256, 'overlap', 128*". 
 
 ![](/assets/images/spectopo2gui.png)
 
-This will result in a smoother spectrum with higher frequency
-resolution as shown below.
+これはより高い頻度のより滑らかなスペクトルで起因します
+以下に示すように決断。
 
 ![](/assets/images/spectopo2plot.png)
 
 
-Note that functions [pop_spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo) and [spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) also work with epoched data.
+関数は [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo) そして、 [スペックトップm](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) また、epochedデータで動作します。
 
-Another menu item, <span style="color: brown">Plot → Channel properties</span>, plots the scalp location of a selected channel, its
-activity spectrum, and an ERP-image plot of its activity in
-single-epochs.
+別のメニュー項目, <span style="color: brown">Plot → チャネル特性</span>, 選択したチャンネルのスカルプ位置をプロット, その
+活動のスペクトル、およびその活動のERPイメージのプロット
+シングルエポック。
 
-*Note*: The MATLAB Signal Processing Toolbox should be in your MATLAB path to use these functions. EEGLAB has replacement functions in case the signal processing toolbox is not present, but their capabilities are limited. 
+*注記:MATLAB信号処理ツールボックスは、これらの機能を使用するMATLABパスにする必要があります。 EEGLABには、シグナル処理ツールボックスが存在しない場合の代替機能がありますが、その機能は限られています。 
 
-*Note*: It is also possible to plot electrode locations in the spectral
-graph by entering '' 'electrodes', 'on' '' in the lowest text box
-(*Scalp map options*) of the interactive [pop_spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m)
-window.
+※注: 分光中の電極の位置をプロットすることも可能です。
+'' 'electrodes', 'on' '' を一番低いテキストボックスに入力することでグラフ
+(*Scalpのマップオプション*) のインタラクティブ [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m)
+ウィンドウ。
 

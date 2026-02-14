@@ -7,204 +7,204 @@ grand_parent: Tutorials
 has_toc: true
 ---
 
-Study Statistics and Visualization Options
+統計と可視化オプション
 ============================================
-{: .no_toc }
+お問い合わせ
 
-Statistics are at the core of EEG analysis. Here, we will briefly
-review how to use different types of statistics at the group level. For an introduction to robust statistics in EEGLAB, read [the statistics theory](/tutorials/ConceptsGuide/statistics_theory.html) section of the tutorial or watch the series of short videos below. Click on the icon on the top right corner to access the list of videos in the playlist.
+統計は、EEG分析のコアです。 ここでは、簡単に
+グループレベルで異なる種類の統計を使用する方法を確認します。 EEGLABの堅牢な統計情報について、 [統計理論](/tutorials/ConceptsGuide/statistics_theory.html) チュートリアルのセクションまたは以下の短いビデオのシリーズを見てください。 右上のアイコンをクリックして、プレイリスト内の動画のリストにアクセスします。
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN3M_CGqAOEIIOKhjTPS9T2n" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Channel ERP statistics
+チャネルERP統計
 --------------
-EEGLAB allows users to use either
-parametric or non-parametric statistics to compute and estimate the
-reliability of these differences within *STUDY* designs. Below we illustrate the use of these options on scalp channel ERPs,
-though they apply to all measures and are valid for both scalp channels
-and independent component (or other) source activity clusters.
+EEGLAB では、ユーザがどちらでも利用することができます。
+パラメトリックまたは非パラメトリックの統計を計算し、推定する
+*STUDY*の設計内のこれらの相違の信頼性。 以下では、これらのオプションの使用を scalp チャネル ERPs で説明しています。
+すべての対策を適用し、両方のスカルプチャネルで有効であるが
+そして独立した部品(または他の)の源の活動のクラスター。
 
-### Load tutorial data and precompute ERPs
+### チュートリアルデータをロードし、ERPをプリコンプト
 
-For this tutorial we will use the [STERN STUDY](http://sccn.ucsd.edu/eeglab/download/STUDYstern_125hz.zip) (0.9 Gb). Please download the data on your computer. See the [STUDY design](/tutorials/10_Group_analysis/working_with_study_designs.html) section of the tutorial for more information about this dataset.
+このチュートリアルでは、 [スタンスチュディ](http://sccn.ucsd.edu/eeglab/download/STUDYstern_125hz.zip) (0.9 Gb)。 パソコン上のデータをダウンロードしてください。 詳細はこちら [STUDY デザイン](/tutorials/10_Group_analysis/working_with_study_designs.html) このデータセットの詳細については、チュートリアルのセクション。
 
-Use menu item <span style="color: brown">File → Load existing study</span> and select the *stern_3designs.study* file. After loading the data, to review the *STUDY* design, use the <span style="color: brown">Study → Select/Edit study design</span> menu item. See the [STUDY design tutorial](/tutorials/10_Group_analysis/working_with_study_designs.html) for details on how to create these designs.
+メニュー項目を使用する <span style="color: brown">ファイル → 既存の研究をロードする</span> *stern_3designs.study*ファイルを選択します。 データをロードした後、*STUDY*の設計を見直し、使用して下さい <span style="color: brown">研究 → 選択/編集研究設計</span> メニュー項目。 詳細はこちら [STUDYの設計チュートリアル](/tutorials/10_Group_analysis/working_with_study_designs.html) これらのデザインを作成する方法の詳細。
 
-Before plotting the channel measures, you must precompute
-them using the <span style="color: brown">Study → Precompute channel measures</span> menu item, as shown below.
-- Select the checkbox *Remove ICA artifactual components pre-tagged in each dataset*
-- Select the *ERPs* checkbox
-- Change the baseline to -200 to 0 as shown below
-- Press *Ok* 
+チャンネル対策をプロットする前に、事前にコンプトする必要があります
+それらを使って <span style="color: brown">研究 → プレコプトチャネル対策</span> 以下に示すようにメニュー項目。
+- チェックボックスを選択 *各データセットでICAのアーティファクチュアルコンポーネントを事前に削除*
+- *ERPs*チェックボックスを選択
+- ベースラインを以下に示すように-200〜0に変更
+- プレス *Ok* 
 
 ![](/assets/images/studystats1.png)
 
-### 1-way ANOVA on ERP plots
+### ERPのプロットの1方向ANOVA
 
-Select menu item <span style="color: brown">Study → Plot channel measures</span>. Select channel *Oz* in the left column, as shown below.
+メニュー項目を選択 <span style="color: brown">研究 → プロットチャネル対策</span>お問い合わせ 左列のチャンネル *Oz* を選択します。
 
-![image not found](/assets/images/studystats03.png)
+![画像が見つかりません](/assets/images/studystats03.png)
 
-First, select a shorter time range for plotting ERPs. Press the *Params* button and enter a time range from -200 ms to 600 ms as shown below. Select the checkbox for plotting the first independent variable values (i.e., conditions) on the same panel. Press *Ok*.
+まず、ERPをプロットするための短い時間範囲を選択します。 *Params*ボタンを押し、200 msから600 msまでの時間範囲を入力してください。 同じパネルで最初の独立した変数値(例、条件)をプロットするためのチェックボックスを選択します。 プレス *Ok*.
 
-![image not found](/assets/images/studystats04.png)
+![画像が見つかりません](/assets/images/studystats04.png)
 
-In the middle of the two lists of channels, click on the
-large *STATS* pushbutton. The following graphic interface pops up. 
-- Click on the *Compute 1st independent variable statistics* checkbox.
-Note that, since there were no second independent variable selected in this study design, the *Compute 2nd independent variable statistics* is not be available. 
-- Select *Use permutation statistics* in the dropdown list for the type of statistics instead of *Parametric statistics*. While parametric
-statistics might be adequate for exploring your data, it is better to
-use permutation-based statistics to plot final results. 
-- Select the False Discovery Rate (FDR) method in the dropdown list to correct for multiple comparisons. 
-- Enter *0.05* for the p-value threshold.
-- Press *Ok*.
+チャンネルの2つのリストの中央に、クリック
+大きい*STATS*の押しボタン。 次のグラフィックインターフェイスがポップアップ表示されます。 
+- *Compute 1st独立した変数の統計*チェックボックスをクリックします。
+なお、この研究設計で2番目の独立した変数が選択されていないため、*Compute 2nd独立した変数の統計*は利用できません。 
+- *Parametric統計*の代わりに、統計の種類のドロップダウンリストで *Use permutation 統計*。 パラメトリック
+統計は、データを探索するのに適しているかもしれません。
+permutation ベースの統計を使用して最終結果をプロットします。 
+- ドロップダウンリストのFalse Discovery Rate(FDR)メソッドを選択して、複数の比較を修正します。 
+- p値のしきい値の*0.05*を入力します。
+- プレス *Ok*.
 
-![image not found](/assets/images/studystats05.png)
+![画像が見つかりません](/assets/images/studystats05.png)
 
-Then press the *Plot ERPs* button on the right column. The following plot pops up, showing the ERPs for the three types of letter *ignore*, *memorize*, and *probe*. We observe a significant difference from about 450 ms to about 570 ms, indicated by the black bar under the ERP plots. We also observe transient significance in the baseline at about -100 ms.
+その後、右列の*Plot ERPs*ボタンを押します。 以下のプロットがポップアップし、3種類のレター*ignore*、*memorize*、および*probe*のERPを示す。 ERPのプロットの下にあるブラックバーに示す約450msから約570msの大きな違いを観察します。 ベースラインでは、約100msのトランジェントの意義も観察しています。
 
-![image not found](/assets/images/studystats06.png)
+![画像が見つかりません](/assets/images/studystats06.png)
 
-Let's try a different method to correct for multiple comparisons. Click on the *STATS* button again:
-- Check the checkbox *Use FieldTrip statistics*. 
-- Select *montecarlo/permutation* as the type of statistics.
-- Select *Use cluster correction (CC)* to correct for multiple comparisons. Refer to the FieldTrip documentation to tune the parameters for the cluster correction (use the defaults for now). 
-- Use *0.05* for the statistics threshold. 
-- Press *Ok*.
+複数の比較で正しい方法を試してみよう。 *STATS*ボタンをもう一度クリックしてください。
+- チェックボックス *FieldTrip の統計*を使用してください。 
+- *montecarlo/permutation* を統計の種類として選択します。
+- *クラスター補正(CC)*を複数比較で補正する FieldTrip ドキュメントを参照して、クラスタ補正のパラメータをチューニングします(現在のデフォルト値を使用します)。 
+- 統計閾値の*0.05*を使用してください。 
+- プレス *Ok*.
 
-![image not found](/assets/images/studystats07.png)
+![画像が見つかりません](/assets/images/studystats07.png)
 
-Then press the *Plot ERPs* button again on the left column. The region of significance is similar to the previous FDR correction for multiple comparisons method, although the transient statistical difference in the baseline has disappeared.
+その後、左の列に*Plot ERPs*ボタンをもう一度押します。 重要な領域は、ベースラインの一時的な統計差が消えているにもかかわらず、複数の比較方法の前のFDR補正に類似しています。
 
-![image not found](/assets/images/studystats08.png)
+![画像が見つかりません](/assets/images/studystats08.png)
 
-### 1-way ANOVA on ERP scalp topographies
+### ERPのスカルプトポグラフィの1方向ANOVA
 
-Now let's perform statistics on scalp topographies. Press again the *Params* button, and select the 150 to 300 ms time range. Select *Plot averaged topography over time* in the bottom panel and press *Ok*.
+これで、スカルプトポグラフィの統計情報を実行しましょう。 *Params*ボタンを再度押下し、150〜300ms時間範囲を選択します。 *Plot は、下部パネルの time* で平均されたトポグラフィを選択し、 *Ok* を押します。
 
-![image not found](/assets/images/studystats10.png)
+![画像が見つかりません](/assets/images/studystats10.png)
 
-Press the *STATS* button and select permutation statistics with FDR correction for multiple comparisons as shown below.
+*STATS*ボタンを押して、下図のように複数の比較でFDR補正でパーマテーション統計を選択します。
 
-![image not found](/assets/images/studystats11.png)
+![画像が見つかりません](/assets/images/studystats11.png)
 
-Now press the *Sel all.* button in the right column to select all channels. Then press the *Plot ERPs* button. The following plot pops up. This plot shows scalp topographies from 150 ms to 300 ms for the different conditions, and the associated p-value map (extreme right). The difference, in this case, seems driven by the probe condition. In the following section, we will look at the difference between the *ignore* and *memorize* letters.
+右列の*Sel all.*ボタンを押して、すべてのチャンネルを選択します。 それから*Plot ERPs*ボタンを押して下さい。 以下のプロットがポップアップします。 このプロットは、150 msから300 msのスカルプトポグラフィを異なる条件に表示し、関連するp値マップ(右)を示しています。 違いは、この場合、プローブ条件によって駆動されるようです。 以下のセクションでは、*ignore*と*memorize*の文字の違いを調べます。
 
-![image not found](/assets/images/studystats12.png)
+![画像が見つかりません](/assets/images/studystats12.png)
 
-### 2-way ANOVA
+### 2ウェイANOVA
 
-Let's select the third design in the *STUDY* plotting interface as shown below (dropdown list in the upper part of the GUI). This design compares the *ignore* and *memorize* conditions under different memory loads (from 0 to 5). The [STUDY design](/tutorials/10_Group_analysis/working_with_study_designs.html) section of the tutorial describes how this design was created. Select also the *Oz* channel.
+※STUDY* プロットインターフェースの3番目のデザインを以下に示すように選択してみましょう(GUIの上部にあるドロップダウンリスト)。 この設計は、*ignore* と *memorize* 条件を異なるメモリ負荷(0 から 5)と比較します。 ふりがな [STUDY デザイン](/tutorials/10_Group_analysis/working_with_study_designs.html) チュートリアルのセクションでは、この設計が作成された方法について説明します。 *Oz*チャンネルも選択できます。
 
-![image not found](/assets/images/studystats15.png)
+![画像が見つかりません](/assets/images/studystats15.png)
 
-Now press the *Params* button and change the plotting time range to -200 ms to 600 ms as shown below. Check the checkbox to *Plot section variable on the same panel*. Make also sure to select the option to *Plot channels individually*. Press *Ok*.
+*Params*ボタンを押して、下図のように200ミリ秒から600ミリ秒にプロット時間範囲を変更します。 同じパネルの*Plotセクション変数にチェックボックスをオンにします。 *Plotチャンネルを個別に選択してください*。 プレス *Ok*.
 
-![image not found](/assets/images/studystats16.png)
+![画像が見つかりません](/assets/images/studystats16.png)
 
-Press *Plot ERPs* button. The plot below pops up.
+*Plot ERPs*ボタンを押します。 下のプロットはポップアップします。
 
-![image not found](/assets/images/studystats17.png)
+![画像が見つかりません](/assets/images/studystats17.png)
 
-We will study statistics of scalp topographies in the 150 ms to 300 ms range. To do so, press the *Params* button and enter a time range from 150 ms to 300 ms as shown below. Make also sure to select the option to *Plot averaged topography over time*. You may or may not uncheck the checkbox to *Plot section variable on the same panel* (this has no consequences since scalp topographies for different conditions cannot be plotted on the same panel). Press *Ok*.
+150ms〜300msの範囲でスカルプトポグラフィの統計を研究します。 そのためには、*Params*ボタンを押して、150 msから300 ms までの時間範囲を入力します。 *Plot にオプションを必ず選択してください。 同じパネルで*Plotセクション変数にチェックボックスを外すか、またはチェックボックスを外すか(これは、異なる条件のスカルプトポグラフィが同じパネルにプロットできないための結果はありません)。 プレス *Ok*.
 
-![image not found](/assets/images/studystats18.png)
+![画像が見つかりません](/assets/images/studystats18.png)
 
-Press the *STATS* button and select both independent variables as shown below. Select permutation statistics with no correction for multiple comparisons. Press *Ok*.
+*STATS*ボタンを押し、以下に示すように独立した変数を選択します。 複数の比較を補正せずにパーマテーション統計を選択します。 プレス *Ok*.
 
-![image not found](/assets/images/studystats19.png)
+![画像が見つかりません](/assets/images/studystats19.png)
 
-Press the *Plot ERPs* button again. The following plot pops up and shows an array of 2 x 5 scalp topographies for the 2 x 5 design (2 conditions *ignore* and *memorize* times 5 memory loads). The scalp topography on the bottom shows the p-value map across conditions (*ignore* vs. *memorize*). The scalp topography on the right shows the p-value map across memory loads. The scalp topography in the bottom right corner shows the p-value for the ANOVA interaction term between conditions and memory loads. We observe a statistical trend for the memory load, meaning that memory load may lead to different scalp topographies in the time range of interest. Note that we added the green and orange lines with photoshop to help illustrate how the main effect for each variable is calculated. The load variable statistics is an ANOVA across 7 different loads. By contrast, the condition variable compares two conditions.
+*Plot ERPs*ボタンをもう一度押します。 以下のプロットがポップアップし、2 x 5のスカルプトポグラフィの配列を2 x 5デザイン(2条件 *ignore*と*memorize*時間5メモリ負荷)表示します。 下部のスカルプトポグラフィは、条件(*ignore*と*memorize*)を渡るp値のマップを示しています。 右上のスカルプトポグラフィは、メモリ負荷を渡るp-valueマップを表示します。 右下隅にあるスカルプトポグラフィは、条件とメモリ負荷間のANOVA相互作用用語のp値を示しています。 メモリ負荷の統計的傾向を観察します。つまり、メモリ負荷が異なるスキャルプトポグラフィにつながります。 各変数の主な効果が計算される方法を説明するために、フォトショップで緑色とオレンジ色の線を追加しました。 ロード変数の統計は7つの異なる負荷を渡るANOVAです。 対照的に、条件変数は2つの条件を比較します。
 
-![image not found](/assets/images/studystats20.png)
+![画像が見つかりません](/assets/images/studystats20.png)
 
-We now select the *STATS* button again and add check the *FDR* correction for multiple comparisons checkbox (not shown). Press the *Plot ERPs* button again. As shown below, the p-value statistical maps are all green indicating no significant effect.
+*STATS*ボタンをもう一度選択し、複数の比較チェックボックス(未表示)の*FDR*補正をチェックしてください。 *Plot ERPs*ボタンをもう一度押します。 以下に示すように、p-value統計マップは、重要な効果を示すすべての緑色です。
 
-![image not found](/assets/images/studystats22.png)
+![画像が見つかりません](/assets/images/studystats22.png)
 
-Let's try the cluster method to correct for multiple comparisons. Press the *STATS* button again. Check the checkbox to compute statistics only on the first variable (FieldTrip cannot perform 2-way ANOVAs, only 1-way ANOVAs) and check the checkbox *Use FieldTrip statistics*. Select *Montecarlo/permutation* as the type of statistics and *Use cluster correction (CC)* method to correct for multiple comparisons. Press *Ok*.
+複数の比較を補正するためにクラスターメソッドを試してみましょう。 *STATS*ボタンをもう一度押します。 チェックボックスをチェックして、最初の変数(FieldTrip は 2 方向の ANOVAs を実行できません。1 方向の ANOVAs)でのみ統計を計算し、チェックボックス *FieldTrip 統計* を確認してください。 *Montecarlo/permutation* は、統計の種類と*クラスター補正(CC)*メソッドで複数の比較を修正します。 プレス *Ok*.
 
-![image not found](/assets/images/studystats23.png)
+![画像が見つかりません](/assets/images/studystats23.png)
 
-Press the *Plot ERPs* button, and the following plot appears, showing a statisticallly significant difference between the *ignore* and *memorize* conditions.
+*Plot ERPs*ボタンを押し、次のプロットが表示され、*ignore*と*memorize*条件の統計的に重要な違いが表示されます。
 
-![image not found](/assets/images/studystats24.png)
+![画像が見つかりません](/assets/images/studystats24.png)
 
-To look at the marginal statistics, select the *STATS* button and check the checkbox to compute marginal statistics (only the upper panel of the GUI is shown below).
+マージン統計を見るには、*STATS* ボタンを選択し、チェックボックスをチェックしてマージン統計を計算します(GUIの上部パネルは下に表示されます)。
 
-![image not found](/assets/images/studystats25.png)
+![画像が見つかりません](/assets/images/studystats25.png)
 
-Then press the *Plot ERPs* button again. We see that the statistical difference observed previously is mostly due to memory loads 0, 1, and 2.
+その後、再度*Plot ERPs*ボタンを押します。 過去に観察した統計差は、メモリ負荷が0、1、および2のためにほとんどあることがわかります。
 
-![image not found](/assets/images/studystats26.png)
+![画像が見つかりません](/assets/images/studystats26.png)
 
-Note that the analysis above is preliminary at best. The fact that uncorrected significance was low for the comparison between conditions, then showed up as significant with the cluster analysis, indicate weakly significant regions. Based on the scalp topography for the cluster analysis, it is unclear if significance is below 0.05. You may retrieve the p-values from the command line, as explained in the [group analysis scripting tutorial](/tutorials/11_Scripting/command_line_study_functions.html).
+上記の分析は、最優先事項です。 誤った意義が条件の比較のために低かったという事実は、クラスター分析で重要なことを示し、弱く重要な地域を示します。 クラスター分析のスカルプトポグラフィに基づいて、0.05未満の重要度が不明です。 コマンド行から p-values を取得できます。 [グループ分析スクリプトチュートリアル](/tutorials/11_Scripting/command_line_study_functions.html).
 
-In general, we advise focusing on reporting unambiguous results (significance below 0.005 after correction for multiple comparisons).
+一般的には、非曖昧な結果を報告することに重点を置いています(複数比較修正後、0.005未満の重要度)。
 
-Statistics on spectra, ITC, and ERSP
+スペクトル、ITC、およびERSPに関する統計
 -------------------------------
 
-The graphic interfaces for both power spectral and ERSP/ITC measures are
-similar to those used for ERPs and need not be described in detail. Statistics options, selected in the statistics graphic interface (*STATS* button), apply to all measures. You
-may refer to the relevant function help messages for more detail. 
+パワースペクトルとERSP/ITC対策のグラフィックインターフェイスは、
+ERPs で使用されるものと同様、詳細に記述する必要はありません。 統計オプション, 統計グラフィックインターフェイスで選択 (*STATS* ボタン), すべての措置に適用されます. お問い合わせ
+詳細は、関連する機能ヘルプメッセージを参照することができます。 
 
-ICA component cluster statistics
+ICAコンポーネントクラスター統計
 ----
-The same methods for statistical comparison apply to both groups of data channels and component clusters. 
+統計比較のための同じ方法は、データチャネルとコンポーネントクラスターのグループに適用されます。 
 
-The plotting interface is virtually identical for channels and ICA component clusters. In the channel plotting interface, the left column is used to plot grand averages, and the right column to plot individual subjects. Similarly, for clusters, the left column plots ICA clusters, and the right column plot individual components.
+プロットインターフェイスは、チャンネルとICAコンポーネントクラスターとほぼ同じです。 インターフェイスをプロットするチャネルでは、左の列は壮大な平均をプロットするのに使用され、個々の主題をプロットする右の列。 同様に、クラスターの場合、左列はICAクラスターをプロットし、右列は個々のコンポーネントをプロットします。
 
-General Linear Modelling using LIMO
+LIMOを用いた汎用リニアモデリング
 ----
-For more complex statistical designs, one must use the LIMO plugin. The [LIMO toolbox](https://limo-eeg-toolbox.github.io/limo_meeg/) allows you to use general linear modeling approaches on an arbitrarilly large number of categorical and continuous variables. For more information, refer to the [LIMO plugin documentation](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) and the [LIMO tutorial video series](https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2Vrzte9ul3nrrG8AgB5OkU).
+複雑な統計設計では、LIMOプラグインを使用する必要があります。 ふりがな [LIMOツールボックス](https://limo-eeg-toolbox.github.io/limo_meeg/) 任意の数の分類と連続変数の一般的な線形モデリングアプローチを使用することを可能にします。 詳細については、を参照してください。 [LIMOプラグインのドキュメント](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) そして、 [LIMOチュートリアルビデオシリーズ](https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2Vrzte9ul3nrrG8AgB5OkU).
 
-Single-subject statistics
+単一サブジェクト統計
 ----
-When a *STUDY* only contains data from a single subject, you may also compute single-subject statistics. Below, we illustrate the process using ERPs, but we would use a similar procedure on other measures, including *spectra*, *ERP-image*, *ERSP*, and *ITC*.
+*STUDY*が単一の対象からのデータのみを含んでいる場合、単一のサブジェクト統計を計算することもできます。 以下では、ERPを使ったプロセスを説明しますが、*spectra*、*ERP-image*、*ERSP*、*ITC*など、他の対策についても同様の手順を使用します。
 
-In this section of the tutorial, we will use the [5-subject experiment](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (450Mb), although we will only use one of the five subjects. See the [STUDY creation tutorial](/tutorials/10_Group_analysis/study_creation.html) for more information on this data. 
+チュートリアルのこのセクションでは、我々は使用します [5-サブジェクト実験](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (450Mb) 5つの被験者のうちの1つしか使用しません。 詳細はこちら [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html) このデータに関する詳細情報 
 
-Restart EEGLAB. After uncompressing the data archive, load the two datasets for subject two (s02) using the <span style="color: brown">File → Load existing dataset</span> menu item. When several datasets are in the same folder, they may be selected and loaded in EEGLAB simultaneously, as shown below.
+EEGLABを再起動します。 データアーカイブを解凍した後、2つのデータセットをサブジェクト2(s02)にロードします。 <span style="color: brown">ファイル → 既存のデータセットをロードする</span> メニュー項目。 複数のデータセットが同じフォルダにある場合、以下に示すように、EEGLABで同時に選択して読み込むことができます。
 
 ![](/assets/images/multisub1.png)
 
-Then use the <span style="color: brown">File → Create study → Using all loaded datasets</span> menu item. The GUI below pops up. Press *Ok*.
+次に、 <span style="color: brown">ファイル → 研究の作成 → 読み込まれたすべてのデータセットを使用する</span> メニュー項目。 下のGUIがポップアップ表示されます。 プレス *Ok*.
 
 ![](/assets/images/singlestat1.png)
 
-Select the <span style="color: brown">Study → Precompute channel measures</span> menu item. The GUI below pops up. Select the checkbox to *Remove artifactual ICA components pre-tagged in each dataset*. Select the *ERPs* checkbox and enter -200 ms to 0 ms for the baseline, as shown below. Press *Ok*.
+選択する <span style="color: brown">研究 → プレコプトチャネル対策</span> メニュー項目。 下のGUIがポップアップ表示されます。 チェックボックスを選択 *各データセットで事前にタグ付けされたアーティファクチュアルICAコンポーネントを削除*。 *ERPs*チェックボックスを選択し、200 msをベースラインに0 msに入力します。 プレス *Ok*.
 
 ![](/assets/images/singlestat2.png)
 
-Next, select the <span style="color: brown">Study → Plot channel measures</span> menu item. The GUI below appears. Select channel *Oz* in the right column.
+次に、選択します <span style="color: brown">研究 → プロットチャネル対策</span> メニュー項目。 下記のGUIが表示されます。 右列のチャンネル*Oz*を選択します。
 
 ![](/assets/images/singlestat3.png)
 
-Now, press the *Params* button next to the *Plot ERPs* button. Enter -200 ms to 1000 ms for the time range. Check the checkbox *Plot first variable on the same panel*. Press *Ok*.
+*Plot ERPs*ボタンの横にある*Params*ボタンを押します。 時間範囲の -200 ms に 1000 の ms を書き入れて下さい。 同じパネルでチェックボックス *Plot 最初の変数を確認してください*。 プレス *Ok*.
 
 ![](/assets/images/singlestat4.png)
 
-Press the *STATS* button. Check the checkboxes *Compute 1st independent variable statistics if any* and *Use single trials for statistics*. Select *Use FDR correction* for the correction for multiple comparisons method. Enter *0.01* for the p-value threshold, as shown below. Press *Ok*.
+*STATS*ボタンを押します。 checkboxes *Compute 1st 独立した変数の統計情報をチェックしてください。* と * 単一の試験を統計*に使用します。 複数の比較方法の修正には、FDR修正* を選択します。 以下に示すように、p-値のしきい値の*0.01*を入力します。 プレス *Ok*.
 
 ![](/assets/images/singlestat5.png)
 
-Now, click on the *Plot ERPs* button. The ERP for both conditions is shown with regions of significance indicated by black rectangles. We observe a typical N400 effect, with ERPs differing between the semantic conditions at about 400 ms after stimuli presentation.
+*Plot ERPs* ボタンをクリックします。 両条件のERPは、黒の長方形で示されている意義の領域で示されています。 代表的なN400効果を観察し、Stimuliプレゼンテーションの後、約400msの皮下条件とERPが異なります。
 
 ![](/assets/images/singlestat6.png)
 
-The use of single trials is not restricted to single-subject statistics. When multiple subjects are present, trials may be pooled for all subjects. However, we do not recommend using this option for more than one subject because it alters the null hypothesis. 
+単一トライアルの使用は、単一のサブジェクト統計に限定されません。 複数の被験者が存在する場合、すべての被験者に対して試験をプールすることができます。 ただし、このオプションは、null 仮説を変更するため、1 件以上使用することをお勧めしません。 
 
-When performing statistics on a single subject, the null hypothesis pertains to the trials of this subject. When performing statistics on multiple subjects, the null hypothesis relates to the population of subjects. Using single-trials statistics with multiple subjects would mean that the null hypothesis pertains to the trials of the selected subjects (and not the population of subjects), which greatly limits the data interpretation.
+単一の主題で統計を実行すると、null 仮説は、この主題の試行に関連しています。 複数の被験者に関する統計を実行すると、null 仮説は被験者の人口に関連します。 複数の被験者と単価統計を使用して、nullの仮説は、選択した被験者の試験(および被験者の人口ではない)に関して、データ解釈を大幅に制限することを意味する。
 
-The [LIMO plugin](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) also allows performing single-subject statistics in EEGLAB.
+ふりがな [LIMOプラグイン](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) また、EEGLAB で単一サブジェクト統計を実行することもできます。

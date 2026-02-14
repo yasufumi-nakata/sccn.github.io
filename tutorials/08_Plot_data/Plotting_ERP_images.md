@@ -5,373 +5,373 @@ long_title: b. ERP-image
 parent: 8. Plot data
 grand_parent: Tutorials
 ---
-Plotting ERP images
+Plotting ERP 画像
 ====================
 
-Data averaging collapses the dynamic information in the data, ignoring
-inter-trial differences, which are large and may be crucial for
-understanding how the brain operates *in real-time*. Here, we show how to use EEGLAB to make 2-D ERP-image plots of
-collections of single trials, sorted by any of many possibly relevant
-variables. In ERP-image plots, EEG data epochs (trials) are first sorted along some
-relevant dimension (for example, subject reaction times, within-trial
-theta power levels, mean voltage in a given latency window, alpha phase
-at stimulus onset, or etc.), then (optionally) smoothed across
-neighboring trials, and finally color-coded and visualized as a 2-D
-rectangular color (or monochrome) image. For more background information on how to build ERP images, please refer to the [Concept guide](ConceptsGuide/erp_image_background.html). 
+データの収集は、データの動的情報、無視を遮断します。
+大きく、非常に重要である間trial相違、
+脳がどのように動作するかを理解する *リアルタイム*。 ここでは、2-D ERP-image プロットを作るためにEEGLABを使用する方法を紹介します
+シングルトライアルのコレクション, 任意の多くの可能性関連でソート
+変数。 ERP-image では、EEG のデータエポック (trials) が最初に並べ替えられます。
+関連する寸法(例えば、被写体反応時間、内部致命的
+スタットパワーレベル、特定のレイテンシーウィンドウ、アルファフェーズの電圧を意味します
+stimulusのオンセット、または等で)、そして(任意に)滑らかにされる
+隣接する試行と、ついに2次元で色分けして視覚化
+長方形色(またはモノクロ)イメージ。 ERPイメージの作成方法に関する背景情報については、こちらを参照してください。 [コンセプトガイド](ConceptsGuide/erp_image_background.html). 
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Basic plotting options
+基本的なプロットオプション
 -----------------------
-We use here the tutorial dataset as it was after extracting data epochs. Select the <span style="color: brown">File → load existing dataset</span>  menu item and select the tutorial file "eeglab_data_epochs_ica.set" located in the "sample_data" folder of EEGLAB. Then press *Open*.
-To plot an ERP image, we must first choose a channel to plot. This is
-best done when plotting ERPs. In this section of the tutorial, we will use the *POz* occipital channel (index 27).
+データエポックを抽出した後、チュートリアルデータセットをここで使用します。 選択する <span style="color: brown">ファイル → 既存のデータセットを読み込む</span>  メニュー項目を選択し、EEGLABの「sample_data」フォルダにあるチュートリアルファイル「eeglab_data_epochs_ica.set」を選択します。 それから *Open*を押して下さい。
+ERPイメージをプロットするには、最初にプロットするチャンネルを選択する必要があります。 お問い合わせ
+ERPをプロットする際に最善を尽くします。 このチュートリアルでは、*POz* occipital チャンネル (インデックス27) を使用します。
 
-### Plotting a raw ERP image
+### 生ERP画像のプロット
 
-Select <span style="color: brown"> Plot → Channel ERP image</span>. This
-brings up the [pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) window (below). 
+選択する <span style="color: brown"> Plot → チャネルERPイメージ</span>お問い合わせ お問い合わせ
+ピックアップ [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) ウィンドウ(下)。 
 
-Enter the channel number (27 or click on the "..." button to select channel *POz*), a trial-smoothing value of *1*, and press *Ok*.
+チャンネル番号 (27 または "..." ボタンをクリックし、チャンネル *POz*) を選択し、*1* の試行錯誤値を入力し、 *Ok* を押します。
 
 ![](/assets/images/I82pop_erpimage.jpg)
 
 
-An ERP image is a rectangular colored image in which every horizontal
-line represents activity occurring in a single experimental trial (or
-a vertical moving average of adjacent single trials). By stacking above each other the color-sequence lines for all trials
-in a dataset, we produce an ERP image. See the [Appendix](/tutorials/ConceptsGuide/erp_image_background.html) for more details on how ERP images are constructed.
+ERPイメージは、すべての水平方向に長方形のカラーイメージです。
+ラインは単一の実験試験(または)で起こる活動を表します
+隣接する単一試験の垂直移動平均)。 上記各々のカラーシーケンス線を重ねることにより、すべての試験
+データセットでは、ERPイメージを生成します。 詳細はこちら [アレンデックス](/tutorials/ConceptsGuide/erp_image_background.html) ERP画像の構成方法の詳細については、こちらをご覧ください。
 
-In the standard [erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) output figure (below), the trace below the ERP
-image shows the average of the single-trial activity, i.e. the ERP
-average of the imaged data epochs. 
+標準で [エルプイメージ。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) 出力図(下)、ERPの下のトレース
+画像は単一のtrial活動の平均を示します。例:ERP
+イメージしたデータのエポックの平均。 
 
-The head plot (top left) containing
-a red dot indicates the position of the selected channel in the
-montage. Both of these plotting features (as well as several others) can
-be turned off in the [pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) pop-up window (above).
-See checkboxes *plot ERP* and *plot scalp map*.
+ヘッドプロット(左上)を含む
+赤い点は、選択したチャンネルの位置を示す
+モンタージュ。 これらのプロット機能(他のいくつか)のどちらもできます
+オンオフ [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) ポップアップウィンドウ(above)。
+チェックボックス *plot ERP* と *plot scalp map* を参照してください。
 
 
 ![](/assets/images/1ERPimagesmooth.gif)
 
 
-Since activity in single trials contains many variations, it may be
-useful to smooth the activity (vertically) across neighboring trials
-using a rectangular (boxcar) moving average.
+シングルトライアルのアクティビティには様々なバリエーションがありますので、
+隣接する試験を横断する活動(口頭)を滑らかにするのに有用
+四角形(箱車)の移動平均を使用して。
 
-### Plotting a smoothed ERP image
+### スムーズなERP画像のプロット
 
-Again call up the [pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) interactive window and
-set the smoothing width to *10* instead of *1*. Now (see below) it is
-easier to see the dominant alpha-band oscillations in single trials.
+繰り返しコールアップ [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) インタラクティブなウィンドウと
+*1*の代わりに*10*に滑らかな幅を置いて下さい。 今(以下参照)です
+単一の試験でドミナントのアルファバンド発振を簡単に確認できます。
 
-*Note*: Because of the large number of available options, parameters
-from the last call (if any) are recalled as defaults (though optional
-arguments entered via the text box are not). 
-If you experience a
-problem with this feature, you may type *\>\>eegh(0)* on the MATLAB
-command line to clear the history.
+*注記: 利用可能なオプションの数が多いため、パラメーター
+最後の呼び出しから (もしあれば) はデフォルトとしてリコールされます (オプションとして)
+テキストボックスで入力した引数はそのままです。 
+体験してみると
+この機能の問題は、MATLABの*\>\>eegh(0)*を入力できます。
+コマンドラインで履歴をクリアします。
 
 
 ![](/assets/images/1ERPimage27.gif)
 
-**ERP image with large numbers of trials**. When plotting a large number of trials, it is not necessary to plot
-each (smoothed) trial as a horizontal line. (The screen and/or printer
-resolution may be insufficient to display them all). To reduce the
-imaging delay (and to decrease the saved plot file size), one can
-decimate some of the (smoothed) ERP-image lines. Entering *4* in the
-*Downsampling* box of the [pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) window would
-decimate (reduce) the number of lines in the ERP image by a factor of
-*4*. If the *Smoothing* width is (in this case) greater than *2\*4 =
-8*, no information will be lost from the smoothed image.
-To image our sample dataset, it is not necessary to decimate
-since we have relatively few (80) trials.
+*ERP画像は多数の試用版**です。 多数のトライアルをプロットする場合、プロットする必要はありません。
+水平線として各(スムース)の試験。 (スクリーンおよび/またはプリンター)
+解像度は、それらをすべて表示するのに不十分な場合があります)。 減らすために
+イメージング遅延(および保存されたプロットファイルサイズを減らすために)、1つはできます
+ERP-image行の一部を解読します。 *4*入力
+*Downsampling*箱の [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) ウィンドウは
+decimate(reduce)の要素によってERPイメージの行の数
+*4*. *Smoothing*の幅が(この場合)*2\*4より大きい場合=
+8*は、滑らかなイメージから情報が失われません。
+サンプルデータセットをイメージするには、解読する必要はありません。
+比較的少ないので (83) 試験.
 
-Sorting trials in ERP images
+ERP画像の試作品のソート
 ----------------------------------------------
 
-In the ERP-image figures above, trials were imaged in (bottom-to-top)
-order of their occurrence during the experiment. It is also possible to
-sort them in order of any other variable that is coded as an event field
-belonging to each trial in the dataset.
+上記のERP-image図では、試用版をイメージしました(ボトムツートップ)
+実験中に起こる順序。 可能です。
+イベントフィールドとしてコードされている他の変数の順にそれらをソートする
+データセット内の各試験に所在します。
 
-Altogether, there are five trial sorting methods available
-in *erpimage.m*. Some methods are only available when calling *erpimage.m* from the command line:
-- Sort by the sorting variable (*sortvar* command-line option). This sorts input data trials (epochs) by the sorting variable (for example, RT) input for
-each epoch of the input data.
--   Sort by value (*valsort* command-line option). Here, trials are sorted in order of their
-    mean value in a given time window. Use this option to sort by ERP
-    size (option not available yet in the interactive window).
--   Sort by amplitude (*ampsort* command-line option). Trials are sorted in order of
-    spectral amplitude or power at a specified frequency and time
-    window. Use this option to display, for example, P300 responses
-    sorted by alpha amplitude (option not available yet in the
-    interactive window).
--   Sort by phase (*phasesort* command-line option). Trials are sorted in order of spectral
-    phase in a specified time/frequency window.
--   Do not sort (*nosort* command-line option). Display input trials in the same order they
-    are input.
+Altogether、利用可能な5つのトライアルソート方法があります
+*erpimage.m* で コマンドラインから *erpimage.m* を呼び出すと、いくつかのメソッドが利用できます。
+- ソート変数 (*sortvar* コマンドラインオプション) でソートします。 ソート変数(例えば、RT)入力による入力データ試行(epochs)をソートします。
+入力データの各epoch。
+-   値(*valsort*コマンドラインオプション)でソートします。 ここでは、試行は、その順番でソートされます
+    与えられた時間ウィンドウで値を意味します。 ERPでソートするこのオプションを使用する
+    サイズ(ただし、インタラクティブウィンドウでは選択できません)。
+-   振幅(*ampsort*コマンドラインオプション)でソートします。 トライアルは順にソートされます
+    指定された周波数および時間における分光度または電力
+    ウィンドウ。 たとえば、P300 応答を表示するには、このオプションを使用します。
+    アルファ振幅でソート(オプションはまだ使用できません)
+    インタラクティブウィンドウ)。
+-   フェーズ(*phasesort*コマンドラインオプション)でソートします。 トライアルはスペクトルの順にソートされます
+    指定された時間/周波数ウィンドウのフェーズ。
+-   ソートしない(*nosort* command-lineオプション)。 同じ順序で入力トライアルを表示
+    入力です。
 
-Below, we demonstrate sorting the same trials in order of response time event latency (reaction time).
+以下では、応答時間イベントレイテンシー(反応時間)の順に同じ試行を並べ替えることを示しています。
 
-### Sorting trials by reaction time
+### 反応時間による試行のソート
 
-Use menu item <span style="color: brown"> Plot → Channel ERP image</span> to call the [pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) window again:
-- First press the button *Epoch-sorting field*, and select *latency*. 
-- Next, press the button *Event type*, and select *rt*. 
-- Enter *Event time
-range* of *-200 800* ms to plot activity immediately following
-stimulus onsets.
+メニュー項目を使用する <span style="color: brown"> Plot → チャネルERPイメージ</span> コールする [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) 再びウィンドウ:
+- 最初にボタンを押します *Epoch-sorting フィールド*、および *latency* を選択します。 
+- 次に、ボタンを押します *イベントタイプ*、および*rt*を選択します。 
+- ※イベント時間
+*-200 800* ms の範囲* は活動をすぐに続いてプロットします
+stimulusのオンセット。
 
-In the resulting ERP image, trials will
-be sorted by the *latency* of *rt* events (our sample data has one
-*rt* event per epoch; 
-If this were not the case, [erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m)
-would only have plotted epochs with rt events).
+結果のERP画像では、試験が行われます
+*rt* イベントの*latency*によってソートされます(サンプルデータに1つあります)
+*rt* イベント/エポック 
+もしそうでなければ、 [エルプイメージ。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m)
+rt イベントでエポックをプロットするだけです。
  
  
 
 ![](/assets/images/ERPimagelatency.gif)
 
-*Note*: In this and some other interactive pop-windows, holding the
-mouse cursor over the label above a text-entry box for a few seconds
-pops up an explanatory comment.
+*注記*:これと他のインタラクティブなポップアップウィンドウで、保持
+テキスト入力ボックスの上のラベル上のマウスカーソル数秒
+説明コメントをポップアップします。
 
-Now, the [erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) figure below appears. The curved black line corresponds to the latency time of the event (rt) we are sorting
-by.
+今、 [エルプイメージ。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) 下の図が現れます。 曲線の黒線は、イベント(rt)の遅延時間に対応する
+によって。
 
 ![](/assets/images/1ERPimagelatency.gif)
 
-In general, the user can sort on any event field value.
+一般に、ユーザーはイベントフィールドの値にソートできます。
 
-For example, call back the [pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) window, press
-the *Epoch-sorting Field* button, and select *position* instead of
-*latency*. Remove *rt* from the *Event type* box. Finally, enter *yes*
-under the *Rescale* box. Press *Ok*. 
+例えば、コールバック [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) ウィンドウ、プレス
+*Epoch-sorting Field*ボタンをクリックし、代わりに*position*を選択します。
+*レイテンシー* *イベントタイプ*ボックスから*rt*を削除します。 お問い合わせ
+*Rescale*の箱の下。 プレス *Ok*. 
 
-In the resulting plot, trials are sorted by stimulus position (1
-or 2, automatically normalized values to fit the post-stimulus space
-for display). Note that the smoothing width (10) is applied to both
-the single-trial data and to the sorting variable. This explains the
-oblique line connecting the low (1) and high (2) sorting variable
-regions.
+結果のプロットでは、トライアルはstimulusの位置によってソートされます(1
+または2、ポスト刺激空間に合うように自動的に正規化された値
+ディスプレイ用) 円滑な幅(10)は両方に適用されることに注意してください
+単一trialデータとソート変数へ。 これは、
+低い(1)および高い(2)の分類変数を接続する斜めライン
+地域。
 
-*Note*: One can also enter a MATLAB expression to normalize the sorting
-variable explicitly (see [erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) help).
+*注記*: ソートを正規化するためにMATLAB式を入力することもできます。
+変数 explicitly (参照) [エルプイメージ。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) お問い合わせ
 
 
 ![](/assets/images/1ERPimageposition.gif)
 
-### Using the *Align* parameter
+### *Align*パラメーターを使用する
 
-Now, reselect the *latency* of the *rt* events as the trial-sorting
-variable (press the *Epoch-sorting field* button to select *latency*
-and press the *Event type* button to select *rt*). Enter *no* under
-*Rescale* (else, reaction times would be automatically normalized).
+今度は、*rt* イベントの*latency*をトライアルソートとして再選択します
+変数(*Epoch-sorting field*ボタンを押して下さい*latency*を選んで下さい
+※イベントタイプ*ボタンを押して「*rt*」を選択します。 お問い合わせ
+※Rescale*(else、反応時間は自動正規化)
 
-Use the *Align* input to re-align the single-trial data based on the
-sorting variable (here the reaction time) and the change time limits.
-The latency value given in *Align* will be used for specifying time
+*Align* の入力を使用して、単一のtrial データをに基づいて再整列します。
+変数をソート(その反応時間)と変更時間制限。
+*Align*で指定したレイテンシ値が時間指定に使用されます。
 0.
 
-To select the median of the trial-sorting values (here, median
-reaction time) for specifying the new time 0 (which will be at the
-response time minus the median reaction time), our convention is to
-use the MATLAB symbol for infinity (*Inf*) in this box, as shown below. If
-you want to set a different value (for instance, while plotting an
-ERP image for one subject, you might want to use the median reaction
-time you computed for all your subjects), simply enter the value in ms
-in the *Align* input box.
+試行値の中央値を選択する(ここでは、中央値)
+反応時間) 新規時間 0 を指定する (これは、
+応答時間は、メディアの反応時間をマイナスします)、私たちの慣習は、
+以下に示すように、このボックスに無限(*Inf*)のMATLABシンボルを使用します。 お問い合わせ
+異なる値を設定したい(例えば、プロット中)
+1つの主題のためのERPのイメージ、媒体の反作用を使用してほしいかもしれません
+すべてのあなたの主題のために計算される時間)、単にmsで価値を書き入れて下さい
+*Align*の入力箱で。
 
-*Note*: Temporal realignment of data epochs, relative to one another,
-will result in missing data at the lower-left and upper-right corners
-of the ERP image. The ERP-image function shows these as green (0) and
-returns these values as *NaN*s (MATLAB not-a-number).
+*注記*: データのエポックの一時的な再配列、互いに相対的、
+左下と右上隅に不足しているデータが発生します。
+ERPイメージの ERP-image 関数は緑(0) と示します。
+*NaN*s (MATLAB の no-a-number) としてこれらの値を返します。
 
 
 ![](/assets/images/1ERPimageinfedit.gif)
 
 
-The ERP image figure (below) will be created. Here, the straight
-vertical line at about 400 ms post-stimulus indicates the moment of the subject
-response, and the curving vertical line, the time at which the
-stimulus was presented in each trial. Compare the figure below with
-the previous non-aligned, RT-sorted ERP image.
+ERPイメージ図(以下)を作成します。 ここで、ストレート
+約400 msのポスト刺激の縦ラインは主題の瞬間を示します
+応答、および曲がる縦ライン、その時
+各試験で刺激が贈られました。 下の図を比較してみる
+以前の非整列、RTソートERP画像。
 
 
 ![](/assets/images/1ERPimageinf.gif)
 
 
-### Sorting trials by EEG phase value
-In a [2004](http://www.sccn.ucsd.edu/papers/TICS04.html) publication, we have discussed
-ways how the event-related EEG dynamics occurring in a set of data
-epochs time-locked to some classes of events are not limited to nor
-completely expressed in features of their time-locked trial average or
-Event-Related Potential (ERP). To do this, we used phase-sorted ERP-images.
+### EEGフェーズ値による試行のソート
+お問い合わせ [2004](http://www.sccn.ucsd.edu/papers/TICS04.html) 出版物、私達は論議しました
+一連のデータで発生するイベント関連のEEGの動的方法
+いくつかのイベントのいくつかのクラスにタイムロックされたエポックは、制限されていません
+タイムロックされた試験平均の特徴で完全に表現されるか、
+イベント関連ポテンシャル(ERP) これを行うには、フェーズソートされたERP画像を使用します。
 
-Next, we will experiment with sorting trials by their EEG phase value in
-a specified time/frequency window. Though *rt* values can be shown in
-phase-sorted ERP-image figures, we will omit them for simplicity.
+次に、EEGフェーズの値で試行をソートして実験を行います。
+指定された時間/頻度ウィンドウ。 ※rt* の値を表示できますが
+フェーズソートのERPイメージ図は、シンプルさのためにそれらを省略します。
 
 
-To do this, return to the [pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) window from the
-menu:
-- Enter *-200 800* next to *Time limits (ms)* to zoom in on the period near
-stimulus onset
-- Clear the contents of the *Sort/align trials by epoch event values* fields *Epoch-sorting field*, *Event type(s)* and *Align* inputs
+これを行うには、 [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) ウィンドウから
+メニュー:
+- *時間制限(ms)*の横の*-200 800*を近くの期間にズームして下さい
+stimulusのオンセット
+- *Epoch-sorting field*、*Event type(s)*、*Align*入力による*Sort/alignトライアルの内容をクリア
 
-then in the *Sort trials by phase* section, complete the following fields as indicated:
-- *Sort trials by phase → Frequency*: *10* (Hz) 
-- *Sort trials by phase → Window center*: *0*(ms) 
+その後、フェーズ*セクションによる*Sort試験で、次のフィールドを次のように完了します。
+- ※相差→周波数*:*10* (Hz)によるソート試験 
+- ※フェーズ→ウィンドウセンター*:*0*(ms)によるソート試験 
 
 ![](/assets/images/I84pop_erpimage.jpg)
 
 
-We then obtain the ERP-image figure below.
+以下、ERPイメージ図を入手してください。
 
 
 ![](/assets/images/1ERPimage10.gif)
 
 
-Note that the activity before the stimulus onset the oblique red stripe is
-produced by phase sorting: the phase (i.e., the latency of the wave
-peaks) is uniformly distributed across the re-sorted trials.
+刺激が斜めの赤いストライプをオンセットする前に活動がであることに注意してください
+段階の分類によって作り出される:フェーズ(すなわち、波の潜伏
+ピークス)は、再ソートされたトライアル全体に均一に配布されます。
 
-In this computation, a 3-cycle 10 Hz wavelet was applied to a window
-in each trial centered at time 0. The width of the wavelet was 300 ms
-(i.e., three 10-Hz cycles of 100 ms). Therefore, it extended from -150
-ms to 150 ms. After the wavelet was applied to each trial, the
-function sorted the trials in order of the phase values (-pi to pi)
-and displayed an ERP image of the trials in this (bottom-to-top)
-order. The dominance of circa 10-Hz activity in the trials, together
-with the 10-trial smoothing we applied, makes the phase coherence
-between adjacent trials obvious in this view.
+この計算では、3サイクル10Hzのウェーブレットをウィンドウに取り付けました。
+毎回試験を集中的に実施 0。 ウェーブレットの幅は300msでした
+(例:100msの3 10Hzサイクル) そのため、-150 から拡張される
+ms から 150 ms。 各試験にウェーブレットを適用した後、
+フェーズ値(-pi to pi)の順に試行をソートする関数
+トライアルのERPイメージを表示(ボトムツートップ)
+注文。 サーカ 10Hz のアクティビティーを試行錯誤する
+私達が加えた10trial滑らかになることによって、段階の一貫性をします
+このビューで明らかな隣接する試験の間。
 
-Phase-sorted ERP images
-using different time and frequency windows represent different paths
-to fly through complex (single-channel) EEG data. We could have applied phase-sorting of trials using any time/frequency
-window. The results would depend on the strength of the selected
-frequency in the data, particularly on its degree of momentum (i.e.,
-did the data exhibit long bursts at this frequency), and its
-phase-locking (or not) to experimental events. 
+フェーズソートERP画像
+異なる時間と周波数ウィンドウを使用して異なるパスを表します
+複雑な(単一チャネル) EEG データを飛行するために。 私たちは、任意の時間/周波数を使用して、試験の相続を適用することができます
+ウィンドウ。 結果は選択した強度に依存します
+データ内の頻度、特にその量の運動量(すなわち、
+データがこの周波数で長いバーストを展示しました。
+フェーズロック(またはない)を実験的なイベントに。 
 
-To see the phase sorting more clearly, keep the same settings, but
-this time enter *50* under *percent low-amp. trials to ignore*. Here,
-the 50% of trials with the lowest 10-Hz (alpha) power in the selected
-time window will be rejected; only the other 40 trials (larger-alpha 50%)
-will be imaged. Here (below), we can better see how the alpha wave
-seems to resynchronize following the stimulus. Before time 0, the alpha
-phase is more or less random (uniformly distributed), and there is
-little activity in the average ERP. At about 200 ms, alpha activity
-seems to (partially) synchronize with the stimulus, and an N300 and
-P400 ERP appears.
+より明確に並べ替えるフェーズを見るには、同じ設定を維持しますが、
+今回は、*50* で入力してください。 無視する試み*。 お問い合わせ
+選択した10Hz(アルファ)電力で試用回数の50%
+タイムウィンドウは拒否されます。他の40トライアルのみ(大文字50%)
+画像をイメージします。 ここで(下)、私たちはより良いアルファ波の見方を見ることができます
+刺激に従って再同期するようです。 時間 0 の前に、アルファ
+段階はより少し任意です(均一に分配される)、およびあります
+平均的なERPで少しの活動。 約200ms、アルファ活動
+(部分的に) 刺激と同期し、N300 と
+P400 ERP が表示されます。
 
 
 
 ![](/assets/images/1ERPimage1050.gif)
 
 
-Our interpretation (above) of these trials as representing phase
-synchronization need not be based on visual impression alone. To
-statistically assess whether the alpha activity is partially resynchronized
-by (i.e., is partly phase-reset by) the stimuli, we need to plot the
-phase coherence (or phase-locking factor) between the stimulus sequence
-and the post-stimulus data. 
+フェーズを代表するこれらの試験の私達の解釈(平均)
+視覚的な印象だけに基づく同期の必要性。 お問い合わせ
+アルファ活動が部分的に再同期されるかどうかを統計的に評価して下さい
+stimuli(すなわち、部分的にフェーズリセット)によって、我々はプロットする必要があります
+段階の一貫性(または段階閉鎖の要因) 刺激の順序間の
+そしてポスト刺激データ。 
 
-This measure, the *Inter-Trial Coherence
-(ITC)* our terminology, takes values between 0 and 1. A value of 1 for
-the time-frequency window of interest indicates that the alpha phase (in
-this latency window) is constant in every trial. A value of 0 occurs
-when the phase values in all trials are uniformly distributed around the
-unit circle. In practice, values somewhat larger than 0 are expected for
-any finite number of randomly phase-distributed trials.
+この測定値、*Inter-Trial Coherence
+(ITC)* 用語集は 0 と 1 の間の値を取ります。 1 の値
+関心のタイム頻度ウィンドウは、アルファフェーズ(in)を示します
+このレイテンシウィンドウは、すべての試験で定数です。 0 の値は
+すべての試験のフェーズ値が均一に分散されるとき
+単位の円。 練習では、0よりも若干大きい値が期待されます
+ランダムな位相分布試験の任意の有限数。
 
-Plotting Inter-Trial Coherence ERP images 
+Plotting Inter-Trial Coherence ERP 画像 
 ------------------------------------------
 
-Inter-Trial Coherence (ITC) is defined and described in detail in the [time-frequency decomposition section](/tutorials/08_Plot_data/Time-Frequency_decomposition.html) of the tutorial and in the online tutorial.
+Inter-Trial Coherence (ITC) は定義され、細部で記述されます [時間頻度分解セクション](/tutorials/08_Plot_data/Time-Frequency_decomposition.html) チュートリアルとオンラインチュートリアルで。
 
-To plot the ITC in our ERP-image figure, we choose to enter the
-following parameters in the [pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) window:
-- Omit the *Percent low-amp. of Trials to ignore* value (or enter 0)
-- Under *Sort trials by phase → Frequency* enter *9 11*
-- Also enter *9 11* in the *Inter-TrialCoherence → Frequency* box
-- Enter *0.01* under *Signif. level*. This value is
-*NOT* corrected for multiple comparisons.
+ERP-image の図に ITC をプロットするためには、入力します
+次のパラメーター [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) ウィンドウ:
+- 無視する* 値 (または 0 を入力してください) へのトライアルの *Percent のローアンプ。
+- ※相差→周波数*による相続試験 ※9 11*
+- *Inter-TrialCoherence →の頻度*箱で*9 11*を書き入れて下さい
+- *Signif で *0.01* を入力してください。 この値が
+*NOT*は複数の比較のために訂正しました。
 
-Then, press *Ok*.
+それから、*Ok*を押して下さい。
 
-Note that these two entries must be equal (the window actually
-prevents the user from entering different values). Entering a
-frequency range instead of one frequency (e.g., *10* as before) tells
-[erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) to find the data frequency with maximum power
-in the input data (here between 9 and 11 Hz).
+これらの2つのエントリは等しい必要があります(実際にはウィンドウ
+ユーザが異なる値を入力するのを防ぎます。 エントリー
+1つの頻度(例えば、*10*の前に)の代りの頻度範囲は指示します
+[エルプイメージ。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) 最大電力でデータ頻度を見つける
+入力データ(9～11Hz)
 
 
 ![](/assets/images/I84pop_erpimage2.jpg)
 
 
-The following window is created.
+次のウィンドウが作成されます。
 
 
 ![](/assets/images/I84Coher_freq.jpg)
 
 
-Two additional plot panels appear below the ERP panel (&micro;V). The middle
-panel, labeled *ERSP* for Event-Related Spectral Power, shows mean
-changes in power across the epochs in dB. The blue region indicates 1%
-confidence limits according to surrogate data drawn from random
-windows in the baseline. Here, power at the selected frequency (10.12
-Hz) shows no significant variations across the epoch. 
+ERPパネル(&micro;V)の下に2つの追加のプロットパネルが現れます。 ミドル
+でき事-関連したスペクトル力、ショーの平均のためのパネル、分類される*ERSP*
+dBのエポックを渡る力の変化。 青い領域は1%を示しています
+ランダムなデータから描画された代理データによると、自信の限界
+ベースラインの窓。 ここでは、選択した周波数で電力 (10.12)
+Hz)は、エポック全体に大きな変化はありません。 
 
-The number
-*25.93 dB* in the baseline of this panel indicates the absolute
-baseline power level. To compare results, it is sometimes useful to set this value
-manually in the main ERP-image pop-window.
+数字
+*25.93 dB*はこのパネルのベースラインの絶対を示します
+ベースラインパワーレベル。 結果を比較するには、この値を設定するのに役立ちます
+メインERP-imageのポップアップウィンドウで手動で。
 
-The bottom plot panel shows the event-related Inter-Trial Coherence
-(ITC), which indexes the degree of phase synchronization of trials
-relative to stimulus presentation. The value *10.12 Hz* here indicates
-the analysis frequency selected. Phase synchronization becomes
-stronger than our specified p=0.01 significance cutoff at about 300
-ms.
+ボトムプロットパネルは、イベント関連のInter-Trial Coherenceを示しています
+(ITC)、試験の相同期の度をインデックス化
+stimulusの提示に相対的に。 値 *10.12 Hz*はここに示します
+選択した分析周波数。 相同期化が進む
+私達の指定p=0.01の意義の締切りを約300でより強い
+ミリ秒
 
-*Note*: The ITC significance level is typically lower when based on more
-trials. Moreover, ITC is usually not related to power changes.
+*注記*:ICCの重要度はよりに基づいているとき普通より低いです
+トライアル また、ICCは通常、電力変化に関係しない。
 
-For a further discussion on how to interpret the results of phase sorting in ERP image plot, see the 
-[Appendix](/tutorials/ConceptsGuide/erp_image_background.html)
+ERPイメージプロットでソートするフェーズの結果を解釈する方法に関するさらなる議論については、 
+[アレンデックス](/tutorials/ConceptsGuide/erp_image_background.html)
 
-Plotting spectral amplitude ERP images and additional options
+Plotting spectral 広さ ERP 画像と追加のオプション
 --------------------------------------------------------------------
-There are several other [erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) options that we will
-briefly illustrate in the following example: 
+他にもいくつかあります [エルプイメージ。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) オプション
+以下の例で簡単に説明する: 
 
-- The *Image amps* entry on the [pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) window allows us to image amplitude of
-the signal (at the frequency of interest) in the single trials, instead
-of the raw signals themselves. Check this box. 
-- The *Plot spectrum (minHz maxHz)* entry adds a small power spectrum plot to the top right
-of the figure. Enter *2 50* to specify the frequency limits for this
-graph.
-- Change the *Epoch-sorting field* box back to *latency* and *Event
-type* back to *rt*. 
-- Enter *500* under *Mark times* to plot a
-vertical mark at 500 ms (here for illustrative purpose only)
-- Enter *-500 1500* under *Time limits* to zoom in on a specific time
-window
-- Enter *-3 3* under *Amplitude limits (dB)*.
+- *イメージアンプ*エントリー [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) ウィンドウはイメージの広さを可能にしました
+シグナル(関心の頻度)を単一の試験で、代わりに
+生の信号自体。 チェックボックス 
+- *Plotのスペクトル(minHz maxHz)*の記入項目は右上のに小さい電力スペクトルのプロットを加えます
+プロフィール *2 50* を入力すると、この周波数の制限が指定されます。
+グラフ。
+- *Epoch-sorting field* を *latency* および *Event に変えて下さい
+*rt*に戻る 
+- *マークタイム*の下の*500*をプロットするために入れて下さい
+500 ms の縦の印(illustrative 目的だけのために)
+- 特定の時間に* 500 1500*の下の*Timeの限界*でズームして下さい
+ウィンドウ
+- *3*を*Amplitudeの限界(dB)の下で入れて下さい*。
 
 ![](/assets/images/I85pop_erpimage.jpg)
 
-The [erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) figure below appears.
+ふりがな [エルプイメージ。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) 下の図が現れます。
 
 ![](/assets/images/I85erpimage.jpg)
 

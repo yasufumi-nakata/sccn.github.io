@@ -5,81 +5,81 @@ long_title: 3. Dataset management
 parent: Tutorials
 nav_order: 3
 ---
-Managing datasets in EEGLAB
+EEGLABにおけるデータセットの管理
 =========================
 
-This section deals with the basics of manipulating EEGLAB datasets. To illustrate the process, we will be loading the tutorial dataset and modifying it.
+このセクションでは、EEGLABのデータセットを操作する基本について説明します。 プロセスを記述するには、チュートリアルデータセットをロードして変更します。
 
-Load the sample EEGLAB dataset
+サンプル EEGLAB データセットをロードする
 ------
 
-Select menu item <span style="color: brown">File</span> and press sub-menu item
-<span style="color: brown">Load existing dataset</span>. Select the tutorial file "eeglab_data.set", which is distributed with
-the toolbox, located in the "sample_data" folder of EEGLAB. Then press *Open*.
+メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
+<span style="color: brown">既存のデータセットをロードする</span>お問い合わせ 配布されているチュートリアルファイル「eeglab_data.set」を選択します。
+EEGLABの「sample_data」フォルダにあるツールボックス。 それから *Open*を押して下さい。
 
-![Image:Pop_loadset.png](/assets/images/Pop_loadset.png)
+![画像:Pop_loadset.png](/assets/images/Pop_loadset.png)
 
-Modify and store the dataset
+データセットの変更と保存
 ------
 
-We need to modify the dataset for illustrative purposes, so we will only filter it. Select <span style="color: brown">Tools → Filter the data → Basic FIR filter (new, default)</span>, enter *1* as the *Lower edge* frequency in Hz (the first edit box), and press *Ok*.
+イラストの目的でデータセットを変更する必要がありますので、フィルタリングのみ行います。 選択する <span style="color: brown">ツール → データのフィルタ → 基本的な FIR フィルター (新しい、デフォルト)</span>、Hz (最初の編集箱)の*Lowerの端*の頻度として**1*を書き入れ、*Ok*を押して下さい。
 
-Upon modifying a dataset, EEGLAB asks users what to do with the modified dataset, as shown below. The default settings are to store the new datasets in memory while keeping the first dataset. Users may also decide to overwrite the original dataset in memory by clicking the appropriate checkbox below. At this point, it can be quite useful to edit the dataset
-description -- to store the exact nature of the new dataset for future reference. Do this by pressing
-*Description*. When done, press *Ok*.
+データセットを変更すると、EEGLABは、下記のように変更されたデータセットで何をすべきかをユーザーに尋ねます。 デフォルト設定は、最初のデータセットを維持しながら、新しいデータセットをメモリに保存することです。 ユーザーは、以下の適切なチェックボックスをクリックすることで、元のデータセットをメモリに上書きすることもできます。 この時点で、データセットを編集するのは非常に便利です
+説明 -- 将来の参照のための新しいデータセットの正確な性質を保存します。 プレスでこれを行う
+*ご説明* 完了したら、*Ok*を押して下さい。
 
-![Image:pop_newset_new.png](/assets/images/pop_newset_new.png)
+![画像:pop_newset_new.png](/assets/images/pop_newset_new.png)
 
-Upon storing a new dataset (not overwriting it), you may use the EEGLAB menu item <span style="color: brown">Dataset</span> to visualize and navigate between datasets available in memory as shown below. It is possible to select any dataset in this menu.
+新しいデータセット(上書きしない)を格納すると、EEGLABメニュー項目を使用できます。 <span style="color: brown">データセット</span> 以下に示すように、メモリ内で利用可能なデータセットを視覚化し、ナビゲートします。 このメニューでデータセットを選択することも可能です。
 
-![Image:eeglab_dataset_menu.png](/assets/images/eeglab_dataset_menu.png)
+![画像:eeglab_dataset_menu.png](/assets/images/eeglab_dataset_menu.png)
 
-Saving a dataset
+データセットを保存
 ------
 
-Note that storing the new dataset in MATLAB memory does not
-automatically store it permanently on disk.  To do this, select
-<span style="color: brown">File → Save current dataset(s)</span> to resave a modified dataset and overwrite the original file or <span style="color: brown">File → Save current dataset as</span> to save a new data file.
+MATLABメモリに新しいデータセットを保存しないことに注意してください
+ディスクに自動的に保存します。 これを行うには、選択する
+<span style="color: brown">ファイル → 現在のデータセットを保存します。</span> 変更されたデータセットを再保存し、元のファイルを上書きするか <span style="color: brown">ファイル → 現在のデータセットをそのまま保存</span> 新しいデータファイルを保存する。
 
-When saving a new data file, a file-browser window appears. Entering a name for the dataset
-(which should end with the filename extension *.set*), and pressing
-*SAVE* (below) will save the dataset, including
-all its ancillary information re events, channel locations, processing
-history, etc., plus any unique structure fields you may have added
-yourself.
+新しいデータファイルを保存すると、ファイルブラウザウィンドウが表示されます。 データセットの名前を入力する
+(ファイル名拡張子 *.set* で終わるべき)、および押すこと
+※SAVE*(below)はデータセットを保存します。
+すべての情報を回復するイベント、チャネルの場所、処理
+歴史等、また加えられたかもしれない独特な構造分野
+お問い合わせ
 
-![Image:Saveepoch.png](/assets/images/Saveepoch.png)
+![画像:Saveepoch.png](/assets/images/Saveepoch.png)
 
-Deleting a dataset
+データセットを削除する
 ------
 
-To delete from the MATLAB memory the newly created second dataset, select
-<span style="color: brown">File → Clear dataset(s)</span> or
-<span style="color: brown">Edit → Delete dataset(s)</span> and enter the
-dataset index, "2" as shown below, and press *Ok*.
+新しく作成した2番目のデータセットを MATLAB メモリから削除するには、
+<span style="color: brown">ファイル → 明確なデータセット</span> または
+<span style="color: brown">編集 → データセットの削除</span> 入る
+データセットインデックス「2」を以下に示し、*Ok*を押します。
 
-![Image:Delete.png](/assets/images/Delete.png)
+![画像:Delete.png](/assets/images/Delete.png)
 
-The second dataset will now be removed from the EEGLAB/MATLAB
-workspace. (Note: It is not necessary to switch back to the first
-dataset before deleting the second. It is also possible to delete
-several datasets at once from this window by entering their indices
-separated by spaces.) If the dataset has not been saved on disk, it will be lost.
+EEGLAB/MATLABから2番目のデータセットが削除されます。
+ワークスペース。 (注意: 最初に戻って切り替える必要はありません
+秒を削除する前にデータセット。 削除も可能です。
+インデックスを入力することで、このウィンドウから一度に複数のデータセット
+スペースで区切る データセットがディスクに保存されていない場合、失われます。
 
-To delete a dataset file, simply delete the file(s) from disk outside of MATLAB.
+データセットファイルを削除するには、MATLABの外にあるディスクからファイル(s)を削除するだけです。
 
-Dataset and file preferences
+データセットとファイルの好み
 ------
 
-Call menu item <span style="color: brown">File → Preferences</span>. Dataset and file preferences are the first three items shown below.
+コールメニュー項目 <span style="color: brown">ファイル → 環境設定</span>お問い合わせ データセットとファイルの好みは、以下に示す最初の3つの項目です。
 
-![Image:preferences.png](/assets/images/preferences.png)
+![画像:preferences.png](/assets/images/preferences.png)
 
-The first option determines if more than one dataset may be stored in memory. We will be selecting this option when performing group analysis, as it is often not possible to hold all datasets in memory. When this option is selected, the drawback is that users must either save or overwrite the parent, as shown below (one of the checkboxes in the lower section must be selected).
+最初のオプションは、複数のデータセットがメモリに保存されているかどうかを決定します。 グループ分析を実行すると、メモリ内のすべてのデータセットを保持できないため、このオプションを選択します。 このオプションを選択すると、欠点は、以下に示すように、ユーザーが親を保存または上書きする必要があります(下セクションのチェックボックスのいずれかを選択する必要があります)。
 
-![Image:pop_newset_overwrite.png](/assets/images/pop_newset_overwrite.png)
+![画像:pop_newset_overwrite.png](/assets/images/pop_newset_overwrite.png)
 
-Going back to the list of options, by default, EEGLAB will save two files for each dataset. One file that contains metadata (with extension .set, and is a type of MATLAB file), and one file containing raw data (float32 with .fdt extension). The second option makes it possible to save a single file.
+デフォルトでオプションのリストに戻ると、EEGLABは各データセットの2つのファイルを保存します。 メタデータ (拡張子 .set と MATLAB ファイルの種類) を含む 1 つのファイル (.fdt 拡張子を持つ .float32 )。 2番目のオプションは、単一のファイルを保存することを可能にします。
 
-The third option allows you to save MATLAB files (the .set file) in different formats. It is best to write files in the MATLAB 6.5 format because it is faster and Octave compatible. When dealing with individual data files larger than 2Gb, one may choose to save in the MATLAB 7.3 format. Note that this last option is also relevant if you are concerned about files taking too much space on disk (as opposed to files in 6.5 format, files in 7.3 format are compressed).
+3番目のオプションでは、さまざまな形式のMATLABファイル(.setファイル)を保存できます。 MATLAB 6.5 フォーマットでファイルを書くのが最善です。 2Gb より大きい個々のデータファイルを扱う場合、MATLAB 7.3 フォーマットで保存することができます。 この最後のオプションは、ディスクにあまりにも多くのスペースを取っているファイルについて懸念している場合にも関連しています(6.5フォーマットのファイルではなく、7.3フォーマットのファイルが圧縮されます)。
 

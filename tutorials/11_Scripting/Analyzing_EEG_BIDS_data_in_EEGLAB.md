@@ -5,93 +5,93 @@ long_title: e. BIDS pipeline
 parent: 11. Write scripts
 grand_parent: Tutorials 
 ---
-# Analyzing EEG-BIDS data with EEGLAB scripts
-{: .no_toc }
+# EEG-BIDSデータをEEGLABスクリプトで分析
+お問い合わせ
 
-Here we demonstrate how to import EEG-BIDS data into EEGLAB and use the [EEGLAB STUDY](https://sccn.github.io/tutorials/10_Group_analysis) tool for group analysis on these data to perform some basic EEGLAB group-level processing. You may also watch the series of short YouTube videos below. Click on the icon on the top right corner to access the list of videos in the playlist.
+ここでは、EEG-BIDSデータをEEGLABにインポートし、EEGLABを使用する方法を示します。 [エグラボスタディ](https://sccn.github.io/tutorials/10_Group_analysis) これらのデータをグループ分析するためのツールは、基本的なEEGLABグループレベルの処理を実行します。 また、以下の短いYouTube動画をご覧いただけます。 右上のアイコンをクリックして、プレイリスト内の動画のリストにアクセスします。
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN3II4EnVQNjOeVl-UprWlnM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'bids_process_face_experiment.mlx'));">Show MATLAB command</button>
+<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'bids_process_face_experiment.mlx'));">MATLABコマンドを表示する</button>
 
-## EEG-BIDS 
+## EEG-BIDSについて 
 
-The data in this tutorial are organized according to the [EEG BIDS format](https://github.com/bids-standard/bids-specification/blob/master/src/04-modality-specific-files/03-electroencephalography.md). You can read more on the specificities of the EEG-BIDS format [here](https://www.nature.com/articles/s41597-019-0104-8). EEGLAB has a dedicated plugin called [EEG-BIDS](https://github.com/sccn/EEG-BIDS) to export and import BIDS datasets. This plugin is available  using the EEGLAB plugin manager and must be installed before running the scripts in this tutorial. It is worthwhile spending some time looking at how the files are organized in this BIDS example, as we will follow this convention throughout.
+このチュートリアルのデータは、 [EEG BIDSフォーマット](https://github.com/bids-standard/bids-specification/blob/master/src/04-modality-specific-files/03-electroencephalography.md)お問い合わせ EEG-BIDSフォーマットの特定性についてもっと読むことができます [詳しくはこちら](https://www.nature.com/articles/s41597-019-0104-8)お問い合わせ EEGLABには専用のプラグインがあります。 [EEG-BIDSについて](https://github.com/sccn/EEG-BIDS) BIDSデータセットのエクスポートとインポート このプラグインは、EEGLABプラグインマネージャを使用して利用でき、このチュートリアルでスクリプトを実行する前にインストールする必要があります。 このBIDSの例でファイルを整理する方法を調べるのは、しばらく費やす価値があります。
 
-To know more about the integration of BIDS into EEGLAB, you can also visit the [bids-matlab-io](https://github.com/sccn/EEG-BIDS/wiki) EEGLAB plugin documentation. 
+EEGLABにBIDSの統合について詳しく知るには、 [bids-matlab-io - アダルトアフィリエイトプログラム モデル募集 モデルログイン](https://github.com/sccn/EEG-BIDS/wiki) EEGLABプラグインのドキュメント。 
 
-## Download the data
-The EEG data used in this example comes from [Wakeman and Henson (2015)](https://www.nature.com/articles/sdata20151). In this experiment, simultaneous MEG-EEG data were collected while subjects  viewed famous, unfamiliar, and scrambled faces. Each image was repeated  three times, and subjects pressed one of two keys with their left or right index finger, indicating how symmetric they regarded each image relative to  the average.
+## データのダウンロード
+この例で使われているEEGデータは、 [ウェイクマンとヘンソン (2015)](https://www.nature.com/articles/sdata20151)お問い合わせ この実験では、著名な、非有名、スクランブルな顔を見ながら、同時にMEG-EEGデータを収集しました。 各画像は3回繰り返され、左右のインデックスの指で2つのキーの1つを押下し、各画像が平均比例した対称性を示す。
 
-Human perception of suddenly presented face images produces a large
-negative peak at about 170 ms (dubbed ‘the N170’) in averaged event-related
-potentials (ERPs) for posterior scalp channels ([Bentin et al.,
-1996](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2927138/)). This
-potential has been localized by several methods, including direct
-electrocorticographic (ECoG) recording from the cortical surface, to the
-bilateral fusiform gyrus. 
+突然提示された顔のイメージの人間の認識は大きい作り出します
+平均的なイベント関連で約170ms(N170をdubbed)で負のピーク
+ポスタースカルプチャンネル([ベントイン ら.,
+1996](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2927138/)。 お問い合わせ
+直接を含むいくつかの方法によって局在する可能性
+腐食性表面から、腐食性表面への録音(ECoG)
+二国間fusiformジャイラス。 
 
-Henson and Wakeman (2015) apply joint EEG/MEG
-source analysis to the N170 peak scalp maps to estimate the areas of
-the inferior temporal cortex that produce the response feature. A BOLD
-signal increase in the same areas is seen in fMRI studies ([Kanwisher et
-al., 1997](https://www.ncbi.nlm.nih.gov/pubmed/9151747)). A long train
-of functional imaging and EEG experiments have considered the question
-of whether activation of fusiform gyrus by face image presentations
-indexes face-specific processing ([Kanwisher & Yovel,
-2006](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1857737/)) or
-processing supporting more general expert identification of individuals
-or subcategories for any large set of important and long-studied objects
--- for example, automobile grilles by automobile experts ([Gauthier et
-al., 1999](https://www.ncbi.nlm.nih.gov/pubmed/10448223)). 
+Henson と Wakeman (2015) がジョイント EEG/MEG を適用
+N170ピークスカルプマップへのソース分析で、エリアを推定
+応答機能を生成する劣性心皮質。 ボールド
+fMRI研究([Kanwisher et)で同じ領域の信号増加が見られる
+1997年(平成9年)https://www.ncbi.nlm.nih.gov/pubmed/9151747)。 長い電車
+機能的なイメージングとEEG実験の質問を検討している
+顔画像プレゼンテーションによるfusiformのジャイラスの活性化かどうか
+インデックスフェイス固有の処理([Kanwisher & Yovel])
+2006](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1857737/)または
+より一般的な専門家の個人識別をサポートする処理
+または重要なおよび長い規定された目的の大きいセットのためのサブカテゴリ
+--例えば、自動車専門家による自動車グリル([Gauthier et])
+1999年(平成11年)https://www.ncbi.nlm.nih.gov/pubmed/10448223)). 
 
-Generally,
-face presentations produce much larger ‘N170’ potentials (and ensuing
-fusiform BOLD activations) than do presentations of ‘face-like’ images
-of houses, etc. 
+一般的に、
+顔のプレゼンテーションは、「N170」の可能性を大きく生み出しています。
+FUsiform BOLDの活発化)は「顔のような」イメージの提示をします
+住宅など 
 
-[Wakeman and Henson (2015)](https://www.nature.com/articles/sdata20151) developed the paradigm used to
-collect the data treated here to determine how repetition (of the same
-face image) in a series of tachistoscopically presented ‘face versus
-house’ images experiment affected EEG and concurrent MEG responses, and
-how responses to well-known, unknown, and scrambled faces in the same
-sequence differed. See details of the paradigm in the figure below.
+[ウェイクマンとヘンソン (2015)](https://www.nature.com/articles/sdata20151) 使用するパラダイムを開発
+ここで扱われたデータを収集し、繰り返しの決定(同じ)
+顔のイメージ)シリーズのtachistoscopically提示された「顔のversus
+家のイメージ実験は、EEGと同時応答の影響を受け、
+よく知られている、未知の、およびスクランブルされた顔に対する反応が同じである方法
+配列は異なります。 下の図のパラダイムの詳細をご覧ください。
 
 ![`center|400px`](/assets/images/Wakeman_henson_eegset.jpg)
 
-The original dataset containing both EEG and MEG is quite large, so the raw data was transformed into a form that could be used for tutorials. The data were prepared (i.e., EEG extracted, timing corrected,  electrode positions re-oriented, events latency corrected and renamed) by Dung Truong, Ramon  Martinez & Arnaud Delorme and can be downloaded from [OpenNeuro](https://openneuro.org/datasets/ds002718).
+EEGとMEGの両方を含む元のデータセットはかなり大きいので、生データはチュートリアルに使用できる形式に変換されました。 データは、Dung Truong、Ramon Martinez、Arnaud Delormeによって(EEG抽出、タイミング修正、電極位置再指向、イベントレイテンシー修正および名前変更)によって準備されました。 [オープンニューロ](https://openneuro.org/datasets/ds002718).
 
-## Data pre-processing
-Once you have downloaded the data on [OpenNeuro](https://openneuro.org/datasets/ds002718/versions/1.0.2), you may run the code below (refer to [this page](/tutorials/04_Import/BIDS.html) if you experience problems downloading the data).
+## データの事前処理
+データをダウンロードしたら [オープンニューロ](https://openneuro.org/datasets/ds002718/versions/1.0.2)下記のコードを実行できます。 [サイトマップ](/tutorials/04_Import/BIDS.html) データのダウンロードに問題がある場合)。
 
-### Start EEGLAB 
+### EEGLABを始める 
 
-In the scripts below, we use the [git version of EEGLAB](/others/How_to_download_EEGLAB.html) available as of 2021. Scripts may not work with earlier versions of EEGLAB.
+以下のスクリプトでは、 [EEGLABのgitバージョン](/others/How_to_download_EEGLAB.html) 2021年(昭和20年) スクリプトはEEGLABの以前のバージョンでは動作しません。
 
 ``` matlab
 clear
 [ALLEEG, EEG, CURRENTSET, ALLCOM] = eeglab;
 ```
 
-The code below assumes you have saved the data in the EEGLAB "sample_data" subfolder. If this is not the case, adjust the filepath variable in the cell below :
+以下のコードは、EEGLABの「sample_data」サブフォルダに保存したデータを想定しています。 この場合、以下のセルでファイルパス変数を調整します。
 
 ``` matlab
 eeglabPath = fileparts(which('eeglab'));
 filepath = fullfile(eeglabPath, 'sample_data', 'ds002718');
 ```
 
-### Import BIDS data
-The function *pop_importbids.m* imports a BIDS format folder structure into an EEGLAB study. 
-If 'bidsevent' is 'on' then events will be imported from the BIDS .tsv event file, and events in the raw binary EEG files will be ignored. Similarly, 'bidschanloc', 'on' will import channel locations from BIDS .tsv file and ignore any locations in raw EEG files. The 'studyName' field lets you specify the name of the newly created STUDY. See the [BIDS import tutorial](/tutorials/04_Import/BIDS.html) for more details on how to import BIDS studies.
+### BIDSデータのインポート
+*pop_importbids.m* は、BIDS 形式のフォルダー構造を EEGLAB にインポートします。 
+'bidsevent' が 'on' の場合、イベントは BIDS .tsv イベントファイルからインポートされ、 生バイナリ EEG ファイルのイベントは無視されます。 同様に、'bidschanloc'、'on' は BIDS .tsv ファイルからチャンネルの場所をインポートし、EEG ファイルの任意の場所を無視します。 'studyName' フィールドでは、新しく作成した STUDY の名前を指定できます。 詳細はこちら [BIDSのインポートチュートリアル](/tutorials/04_Import/BIDS.html) BIDSの研究をインポートする方法の詳細については、.
 
 ``` matlab
 [STUDY, ALLEEG] = pop_importbids(filepath, 'eventtype','trial_type', 'bidsevent','on','bidschanloc','on', ...
@@ -103,19 +103,19 @@ EEG=pop_chanedit(EEG, 'eval','chans = pop_chancenter( chans, [],[]);'); % center
 CURRENTSTUDY = 1; EEG = ALLEEG; CURRENTSET = [1:length(EEG)];
 ```
 
-We will perform artifact rejection in three steps:
-1. Mild artifact rejection using the [clean_rawdata](https://github.com/sccn/clean_rawdata) plugin
-2. Rejection of artifactual independent components
-3. Aggressive artifact rejection using the [clean_rawdata](https://github.com/sccn/clean_rawdata) plugin
+3つのステップでアーティファクト拒絶反応を行います。
+1. ミルドアーティファクト拒絶による [clean_rawdata(クリーンロード)](https://github.com/sccn/clean_rawdata) プラグイン
+2. 人工の独立したコンポーネントの拒絶
+3. 攻撃的なアーティファクトの拒絶 [clean_rawdata(クリーンロード)](https://github.com/sccn/clean_rawdata) プラグイン
 
-We are using three steps for rejecting artifacts because there are large numbers of high-amplitude eye blinks in this data. Before running ICA, the data needs to be cleaned of major artifacts in step 1. If we had used the automated aggressive artifact rejection using the *clean_rawdata* plugin before running ICA, then all data portions containing blinks would have been removed. This is not desirable because ICA can remove/subtract blinks from the data. Then in step 3, once the data has been cleaned by ICA, other remaining artifacts may be removed using *clean_rawdata*. 
+このデータでは、大量の高振度目のバリンクが多数あるため、アーティファクトを拒否するための3つのステップを使用しています。 ICAを実行する前に、データをステップで主要なアーティファクトをきれいにする必要があります 1。 ICA を実行する前に、*clean_rawdata* プラグインを使用して、自動攻撃的アーティファクト拒否を使用した場合、blink を含むすべてのデータ部分が削除されます。 ICAはデータからblinkを削除/サブトラクトできるため、これは望ましくありません。 それからステップ3で、データはICAによってきれいにされたら、他の残りのアーティファクトは*clean_rawdata*を使用して取除かれるかもしれません。 
 
-Often, only steps 1 and 2 are necessary. This will depend on the data.
+多くの場合、ステップ1と2のみが必要です。 データに依存します。
 
-### Remove bad channels and regions of activity with extreme artifacts
+### 極端なアーティファクトで活動の悪いチャンネルや地域を削除
 
-Here we are using the *pop_clean_rawdata.m* function to high-pass filter the data at 0.5 Hz, reject channels with abnormal activity, and remove data portions with extreme artifactual activity.
-The *pop_clean_rawdata.m* uses the [Artefact Subspace Reconstruction](https://sccn.github.io/tutorials/ConceptsGuide/ASR_background.html) (ASR) module that is integrated into the EEGLAB [clean_rawdata() plugin](https://sccn.github.io/tutorials/ConceptsGuide/ASR_background.html) (installed by default in EEGLAB). 
+ここでは、*pop_clean_rawdata.m* 関数を使用して、0.5 Hz でデータをフィルタリングし、異常なアクティビティでチャネルを拒否し、極端なアーティファクトアクティビティでデータ部分を削除します。
+*pop_clean_rawdata.m* は、 [アーティファクト・サブスペースの復興](https://sccn.github.io/tutorials/ConceptsGuide/ASR_background.html) EEGLABに統合される(ASR)モジュール [clean_rawdata() プラグイン](https://sccn.github.io/tutorials/ConceptsGuide/ASR_background.html) (EEGLABでデフォルトでインストール) 
 
 ``` matlab
 EEG = pop_clean_rawdata( EEG,'FlatlineCriterion',5,'ChannelCriterion',0.8,...
@@ -124,20 +124,20 @@ EEG = pop_clean_rawdata( EEG,'FlatlineCriterion',5,'ChannelCriterion',0.8,...
     'WindowCriterionTolerances',[-Inf 10] );
 ``` 
 
-### Re-reference using the average reference
+### 平均参照を使用して再参照
 
-Average reference may be applied multiple times during processing. Applying average reference at a given time cancels all re-referencing done before that time. This is not a required step.
+処理中に平均的な参照が複数回適用される場合があります。 指定された時間に平均的な参照を適用すると、その前に行われるすべての再参照をキャンセルします。 必須ステップではありません。
 
 ``` matlab
 EEG = pop_reref( EEG,[],'interpchan',[]);
 ```
 
-### Run ICA and flag artefactual components using IClabel
-Then, we apply ICA to the data. If you have installed the *Picard* plugin for EEGLAB, you may replace 'runica' by 'picard'. As 'runica', *Picard* is an Infomax ICA algorithm but uses the newton optimization method, which is both faster and theoretically more efficient. You can find more details on using ICA to remove artifacts embedded in EEG data by reading the [dedicated section](/tutorials/06_RejectArtifacts/RunICA.html) on the EEGLAB tutorial.
+### IClabel を使用して ICA とフラグのアーファクト コンポーネントを実行します。
+次に、ICAをデータに適用します。 EEGLAB用の*Picard*プラグインをインストールしている場合は、'picard'で'runica'を置き換えることができます。 'runica' として、*Picard* は Infomax ICA アルゴリズムですが、より速く、理論的により有効な newton の最適化方法を使用します。 ICAを使用して、EEGデータに埋め込まれたアーティファクトを読み取り、詳細を見つけることができます [専用セクション](/tutorials/06_RejectArtifacts/RunICA.html) EEGLABチュートリアル
 
-Then we use IClabel to classify components. IClabel is an EEGLAB plugin installed by default with EEGLAB, which calculates a probability for the type of each independent component (brain, eye, muscle, line noise, etc.).
-Note that the second argument of the function *pop_icflag.m* 'thresh' is to specify the minimum and maximum threshold values used for selecting components as artifacts. The thresholds are entered for 6 categories of ICA components that are, in order: *Brain*, *Muscle*, *Eye*, *Heart*, *Line Noise*, *Channel Noise*, *Other*.
-So here, you can see that we only remove ICA components if they are classified in the *Eye* or *Muscle* with at least 80% confidence. ICA components that are flagged as artefactual by IClabel are then subtracted (removed) from the data.
+その後、IClabelを使用してコンポーネントを分類します。 IClabel は、EEGLAB でデフォルトでインストールされている EEGLAB プラグインで、各独立したコンポーネントの型(脳、目、筋肉、線騒音など)の確率を計算します。
+関数 *pop_icflag.m* 'thresh' の2番目の引数は、コンポーネントをアーティファクトとして選択するために使用される最小値と最大値を指定することです。 *Brain*、*Muscle*、*Eye*、*Heart*、*Line Noise*、*Channel Noise*、*Other*の6つの分類のICAの部品のために、順序で入ります。
+そのため、*Eye* または *Muscle* に少なくとも 80% の自信で分類されている場合は、ICA コンポーネントのみを削除していることを確認してください。 IClabel によるアーティファクチュアルとしてフラグが付けられている ICA コンポーネントは、データから (削除) をサブトラクトします。
 
 ``` matlab
 EEG = pop_runica(EEG, 'icatype','runica','concatcond','on',...
@@ -148,9 +148,9 @@ EEG = pop_subcomp(EEG, [], 0, 0); %remove bad components
 
 ```
 
-### Remove remaining portions of contaminated data
-Again we are using ASR and *pop_clean_rawdata.m* here, but this time to aggressively remove portions of data containing remaining artefactual activity.
-First, ASR finds clean portions of data (calibration data) and  calculates the standard deviation of PCA-extracted components (ignoring  physiological EEG alpha and theta waves by filtering them out). Then, it rejects data regions if they exceed 20 times (by default) the standard deviation of the calibration data. The lower this threshold, the more  aggressive the rejection is.
+### 汚染されたデータの残りの部分を削除します。
+ASR と *pop_clean_rawdata.m* を使っていますが、ここでは残りのアーファクトアクティビティを含むデータの部分を積極的に削除します。
+まず、ASRはデータのクリーンな部分(キャリブレーションデータ)を見つけ、PCA抽出されたコンポーネントの標準的な偏差を計算します(生理学的EEGアルファとそれらをフィルタリングすることにより、β波を無視します)。 それから、キャリブレーションデータの標準的な偏差が20回を超えると、データ領域を拒否します。 このしきい値の下、拒絶反応がより攻撃的である。
 
 ``` matlab
 EEG = pop_clean_rawdata( EEG,'FlatlineCriterion','off','ChannelCriterion','off',...
@@ -159,24 +159,24 @@ EEG = pop_clean_rawdata( EEG,'FlatlineCriterion','off','ChannelCriterion','off',
     'WindowCriterionTolerances',[-Inf 7] );
 ```
 
-Note that dataset 15 (EEG(15)) only has 15% data left at the end of this process and that the threshold above are likely too aggressive. You can access the description of each of this function's parameter from within MATLAB by typing:
+データセット15(EEG(15)は、このプロセスの最後に残された15%のデータのみを持ち、上記の閾値があまりにも攻撃的であることに注意してください。 MATLAB 内の各関数のパラメーターの記述は、次のように入力できます。
 ``` matlab
 help pop_clean_rawdata
 ```
 
-### Extract data epochs 
-Below, we convert the continuous EEG datasets to epoched datasets by extracting data epochs that are time-locked to the specified event types. The 'timelim' input defines the epoch latency limits in seconds relative to the time-locking events: here, we define a window from -0.5s before the event to 1s after the event. 
-Note that we do not remove a baseline (high-pass filtering performed above is sufficient at this stage).
+### データを抽出する epochs 
+以下では、指定したイベントタイプにタイムロックされたデータエポックを抽出することで、連続したEEGデータセットをエポケされたデータセットに変換します。 'timelim' の入力は、タイムロックイベントに対して秒単位で epoch のレイテンシ制限を定義します。ここでは、イベントが 1 秒後にイベントの前に -0.5 からウィンドウを定義します。 
+ベースラインを削除しない(上記のハイパスフィルタリングは、この段階で十分です)。
 
 ```matlab
 EEG = pop_epoch( EEG,{'famous_new','famous_second_early','famous_second_late','scrambled_new','scrambled_second_early','scrambled_second_late','unfamiliar_new','unfamiliar_second_early','unfamiliar_second_late'},[-0.5 1] ,'epochinfo','yes');
 ```
 
-## Data plotting
+## データプロット
 
-### Creating a STUDY design
+### STUDYデザインの作成
 
-The code below will create a STUDY design to compare across conditions. 
+以下のコードは、条件全体で比較するためのSTUDYデザインを作成します。 
 
 ``` matlab
 ALLEEG = EEG; % update ALLEEG structure
@@ -188,28 +188,28 @@ STUDY = std_makedesign(STUDY, ALLEEG, 1, 'name','Faces','delfiles','off','defaul
     'sub-010', 'sub-011','sub-012','sub-013','sub-014','sub-015','sub-016','sub-017','sub-018','sub-019'});
 ```
 
-Update the main EEGLAB window.
+メインの EEGLAB ウィンドウを更新します。
 
 ``` matlab
 eeglab redraw
 ```
 
-### Compute channels measures
-Note that this can be done before creating a study design.
-Here, we compute event-related potentials. This is computed over each individual channel. Below, we only per-compute ERPs, with a -200 ms to 0 ms baseline.
+### チャネルの計算
+研究設計を作成する前にこれを行うことができます。
+ここではイベント関連の可能性を計算します。 それぞれのチャネルで計算されます。 以下では、我々は唯一のコンパスERP、200ミリ秒から0ミリ秒のベースライン。
 
 ``` matlab
 [STUDY, ALLEEG] = std_precomp(STUDY, ALLEEG, {},'savetrials','on','rmicacomps','on','interp','on',...
     'recompute','on','erp','on','erpparams',{'rmbase',[-200 0] });
 ```
 
-### Plot ERP at a single channel
-Now we are going to plot the ERPs for one channel for each of the conditions. We first specify plotting parameters.
+### 単一のチャネルでPlot ERP
+これで、各条件の1つのチャネルでERPをプロットする予定です。 まずはプロットパラメータを指定します。
 
 ``` matlab
 STUDY = pop_erpparams(STUDY, 'timerange',[-200 1500], 'plotconditions','together');
 ```
-Then we plot the figure (here, we select channel 65 as in the original publication).
+その後、図を描きます(ここでは、元の出版物でチャンネル65を選択します)。
 
 ``` matlab
 STUDY = std_erpplot(STUDY,ALLEEG,'channels',{'EEG065'}, 'design', 1);
@@ -217,16 +217,16 @@ STUDY = std_erpplot(STUDY,ALLEEG,'channels',{'EEG065'}, 'design', 1);
 
 ![](/assets/images/erp_wh_bids2.png)
 
-More details about plotting STUDY measure is available in the [STUDY visualization tutorial](/tutorials/10_Group_analysis/study_data_visualization_tools.html).
+STUDY測定のプロットに関する詳細は、 [STUDY視覚化チュートリアル](/tutorials/10_Group_analysis/study_data_visualization_tools.html).
 
-### Plot the ERP activity as an averaged topographical map
+### 平均的な地理的地図としてERP活動をプロット
 
-We first change the plotting parameters to plot the scalp topography 170 ms after stimulus presentation (average of the potential between 160 and 180 ms).
+最初にプロットパラメータを変更して、スカルプトポグラフィを170ミリ秒後に作成します(160ミリ〜180ミリ秒間の潜在的な平均)。
 
  ``` matlab 
 STUDY = pop_erpparams(STUDY, 'topotime',[160 180] ,'timerange',[]);
 ```
-and then, we plot the scalp topography.
+そして、スカルプトポグラフィを描いています。
 
 ``` matlab
 STUDY = std_erpplot(STUDY,ALLEEG,'channels',{'EEG001','EEG002','EEG003','EEG004', ...
@@ -241,4 +241,4 @@ STUDY = std_erpplot(STUDY,ALLEEG,'channels',{'EEG001','EEG002','EEG003','EEG004'
 
 ![](/assets/images/topo_wh_bids2.png)
 
-This tutorial was a simple demonstration of how to process BIDS data. At this point, you may refer to the group analysis tutorial to perform [statistics](/tutorials/10_Group_analysis/study_statistics.html) or advanced processing of [brain source activities](/tutorials/10_Group_analysis/component_clustering_tools.html) on this data. You may also look at the [LIMO plugin](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) tutorial, which uses the same BIDS data to perform statistical analyses based on the general linear model.
+このチュートリアルは、BIDSデータを処理する方法の簡単なデモでした。 この時点で、グループ分析チュートリアルを参照して実行することができます [統計情報](/tutorials/10_Group_analysis/study_statistics.html) または高度な処理 [脳のソース活動](/tutorials/10_Group_analysis/component_clustering_tools.html) このデータについて 見てみることもできます。 [LIMOプラグイン](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) 一般的なリニアモデルに基づいて統計分析を行うために同じBIDSデータを使用するチュートリアル。

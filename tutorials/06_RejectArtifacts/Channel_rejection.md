@@ -6,66 +6,66 @@ categories: artifact
 parent: 6. Reject artifacts
 grand_parent: Tutorials
 ---
-Removing bad channels by visual inspection
+視線検査による不良チャネルの除去
 ======
 
-Bad channels are common when collecting EEG data. For example, this may be due to a bad connection.
-You may know in advance which channels are bad, or you may need to look at the data.
+EEGデータを収集する際には、悪いチャネルが一般的です。 たとえば、悪い接続のためです。
+どのチャネルが悪いか、データを見る必要があるかを事前に知ることができます。
 
-Load a sample EEGLAB dataset
+サンプル EEGLAB データセットをロードする
 --------------------------
-The tutorial datasets distributed with EEGLAB are relatively clean and do not contain channels we normally reject. Instead, please download this other [data file](http://sccn.ucsd.edu/eeglab/download/eeglab_data_bad_channels.set).
+EEGLABで配布されたチュートリアルデータセットは比較的きれいで、通常拒否するチャンネルは含まれていません。 代わりに、この他をダウンロードしてください [データファイル](http://sccn.ucsd.edu/eeglab/download/eeglab_data_bad_channels.set).
 
-Select menu item <span style="color: brown">File</span> and press sub-menu item
-<span style="color: brown">Load existing dataset</span>. Select the tutorial file "eeglab_data_bad_channels.set" downloaded above. Then press *Open*.
+メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
+<span style="color: brown">既存のデータセットをロードする</span>お問い合わせ 上記のチュートリアルファイル「eeglab_data_bad_channels.set」を選択します。 それから *Open*を押して下さい。
 
-Inspect data
+データを調べる
 -------------
 
-### Scrolling channel data
+### チャネルデータのスクロール
 
-The next section contains extensive details on the data scrolling interface. Here, we will simply use it to visually identify bad channels. To scroll through the channel data of the current dataset, select
-<span style="color: brown">Plot → Channel data (scroll)</span>. This pops up
-the scrolling data display window below. The window has been magnified vertically, so channel indices may be visible.
+次のセクションには、データのスクロールインターフェースに関する広範な詳細が含まれています。 ここでは、単に悪いチャンネルを視覚的に識別するためにそれを使用します。 現在のデータセットのチャネルデータをスクロールするには、
+<span style="color: brown">Plot → チャンネルデータ(スクロール)</span>お問い合わせ このポップアップ
+下のスクロールデータ表示ウィンドウ。 ウィンドウは垂直に拡大されているため、チャンネルのインデックスが表示される場合があります。
 
-![Image:scroll_data_bad_chan3.png](/assets/images/scroll_data_bad_chan3.png)
+![画像:scroll_data_bad_chan3.png](/assets/images/scroll_data_bad_chan3.png)
 
-Potentially bad channels are indicated above with red lines for channels 3, 73, 74, 75 (flat channels), and 45, 55, 65 (noisy channels). Channels 45 and 55 seem to have higher noise content than channel 65. The colored lines were added with Photoshop and are not be visible on the channel scrolling interface. When visually identifying bad channels, you should scroll through the whole dataset, as some channels may only be bad for short periods. In this case, it might be preferable to remove the corrupted data segment than the channel itself. Removing a channel that is only transiently bad is also a trade-off with the number of channels available. When a large number of channels are available, one may easily remove a few channels.
+チャンネル3、73、74、75(フラットチャンネル)、45、55、65(騒々しいチャンネル)の赤いラインで、ポテンシャルに悪いチャンネルが上に表示されます。 チャンネル 45 と 55 は、チャネル 65 よりも高いノイズコンテンツを持っているように見える. Photoshopでカラーラインを追加し、チャンネルスクロールインターフェイスでは表示されません。 悪いチャンネルを視覚的に識別するときは、データセット全体をスクロールする必要があります。一部のチャネルは短い期間にのみ悪くなる可能性があります。 この場合、チャネル自体よりも破損したデータセグメントを削除することをお勧めします。 過渡的に悪いチャネルを削除することは、利用可能なチャネルの数とトレードオフです。 多数のチャネルが利用できる場合、複数のチャネルを容易に取除くことができます。
 
-Once you have identified bad channel indices or labels, you may use instructions to remove these channels in the final section of this page.
+悪いチャンネルのインデックスやラベルを識別したら、このページの最後のセクションでこれらのチャンネルを削除するための指示を使うことができます。
 
-### Looking data spectrum
+### データスペクトルの検索
 
-Another way to identify bad channels is to plot the channels' spectra. To plot the channel spectra, select
-<span style="color: brown">Plot → Channel spectra and maps</span>. The interface below pops up. Simply press *Ok*.
+悪いチャンネルを識別するための別の方法は、チャンネルのスペクトをプロットすることです。 チャンネルのスペクトラをプロットするには、
+<span style="color: brown">Plot → チャネルのスペクトラおよび地図</span>お問い合わせ 下のインターフェイスは現れます。 *Ok*を押してください。
 
-![Image:plot_spectrum_bad_chan.png](/assets/images/plot_spectrum_bad_chan.png)
+![画像:plot_spectrum_bad_chan.png](/assets/images/plot_spectrum_bad_chan.png)
 
-The following window pops up.
+次のウィンドウがポップアップ表示されます。
 
-![Image:plot_spectrum_bad_chan2.png](/assets/images/plot_spectrum_bad_chan2.png)
+![画像:plot_spectrum_bad_chan2.png](/assets/images/plot_spectrum_bad_chan2.png)
 
-In this window, it is possible to click on individual channel traces, and the channel index is shown on the MATLAB command line. In this case, we see that the bottom four channels are outliers. Clicking on the channel traces reveals that these are channels 3, 73, 74, and 75. There are also two channels with high-frequency noise (the purple and blue trace). These are channels 45 and 55. This confirms bad channels visually identified in the previous section -- although in this case, channel 65 does not appear to be an outlier.
+このウィンドウでは、個々のチャンネルのトレースをクリックし、MATLABコマンドラインでチャンネルのインデックスが表示されます。 この場合、一番下の4つのチャネルが上手であることがわかります。 チャンネルトレースをクリックすると、チャンネル 3, 73, 74, 75 が表示される。 また、高周波ノイズ(紫と青のトレース)の2つのチャネルがあります。 チャンネル45、55 これは、以前のセクションで視覚的に識別された悪いチャンネルを確認します。このケースでは、チャンネル65はoutlierに表示されません。
 
-Reject channels by index or label
+インデックスまたはラベルでチャネルを注入
 --------------------------
-If you know which channels are bad, you may reject them using the function [pop_select.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_select.m) called by selecting the <span style="color: brown">Edit → Select data</span> mneu item. In the example below, we remove channel 3, 45, 55, 73, 74, and 75 identified in the previous sections.
+どのチャネルが悪いかを知れば、関数を使ってそれらを拒絶するかもしれません [ポップアップ_select.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_select.m) 選択によって呼び出される <span style="color: brown">編集 → データの選択</span> mneu 項目。 以下の例では、前のセクションで識別されるチャンネル3、45、55、73、74、75を削除します。
 
-![Image:pop_select_new.png](/assets/images/pop_select_new.png)
+![画像:pop_select_new.png](/assets/images/pop_select_new.png)
 
-Press *Ok* to remove the channels. Now a [pop_newset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m) window for saving the new dataset pops up. We name this new dataset "Dataset cleaned of bad channels" and press *Ok*.
+*Ok*を押してチャンネルを削除します。 これから [pop_newset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m) 新しいデータセットポップアップを保存するためのウィンドウ。 この新しいデータセット「不良チャネルの消去データセット」を名付け、*Ok*を押します。
 
-### Channel labels and channel indices
+### チャネルのラベルおよびチャネルのインデックス
 
-EEGLAB uses both channel labels and channel indices. The EEG dataset we processed in this section did not have channel labels. However, the tutorial dataset has channel labels. You may use the <span style="color: brown">File → Load existing dataset</span> menu item to import tutorial file "eeglab_data.set" in the "sample_data" folder.
+EEGLABは、チャネルラベルとチャネルインデックスの両方を使用します。 このセクションで処理したEEGデータセットには、チャンネルラベルがなかった。 しかし、チュートリアルデータセットはチャンネルラベルを持っています。 ご使用の際には <span style="color: brown">ファイル → 既存のデータセットをロードする</span> "sample_data" フォルダ内の "eeglab_data.set" をインポートするためのメニュー項目です。
 
-To find the correspondence, use the channel editor <span style="color: brown">Edit → Channel locations</span>. You may also plot the electrode names and locations by selecting
-<span style="color: brown">Plot → Channel locations → By name</span>,
-producing the figure below. 
+対応を見つけるには、チャンネルエディタを使用する <span style="color: brown">編集 → チャネルの場所</span>お問い合わせ 選択することで電極名や位置をプロットすることもできます。
+<span style="color: brown">Plot → チャンネルの場所 → お名前</span>,
+下の図の作成。 
 
 ![](/assets/images/Channellocationname.png)
 
-Click on a channel label (for example, *POz*) to display its number (27).
+チャンネルラベル(例えば、*POz*)をクリックすると、その番号が表示されます。
 
 
 

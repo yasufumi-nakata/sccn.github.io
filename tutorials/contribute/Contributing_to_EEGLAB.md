@@ -6,191 +6,191 @@ parent: Contribute
 grand_parent: Tutorials
 nav_order: 3
 ---
-Contributing to the EEGLAB core code
+EEGLABコアコードへの貢献
 ========================
-{: .no_toc }
+お問い合わせ
 
-The main EEGLAB repository is not the place to add new functions. Instead, this is done by creating EEGLAB extensions/plugins. However, it is possible to modify the core code to either fix bugs, or add minor improvements to existing functions. 
+メインの EEGLAB リポジトリは新しい関数を追加する場所ではありません。 代わりに、これは EEGLAB エクステンション/プラグインを作成することによって行われます。 ただし、コアコードを変更してバグを修正したり、既存の機能にマイナーな改善を加えることもできます。 
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-EEGLAB development model
+EEGLAB開発モデル
 -------------------
 
-### EEGLAB history
+### EEGLABの歴史
 
-The chief EEGLAB software architects are Arnaud Delorme and Scott Makeig. The predecessor to EEGLAB, the ICA/EEG Toolbox (1997-2001), comprised
-functions written by Makeig with Tony Bell, Colin Humphries, Sigurd
-Enghoff, Tzyy-Ping Jung, Te-Won Lee, and others, was first released on
-the Web in 1997 by Scott Makeig at the Computational Neurobiology
-Laboratory of Terrence Sejnowski at The Salk Institute, La Jolla. 
+EEGLABソフトウェア設計者のチーフはArnaud DelormeとScott Makeigです。 EEGLAB、ICA/EEG Toolbox(1997-2001)のプレデッサ
+Tony Bell、Colin Humphries、SigurdとMakeigによって書かれた機能
+Enghoff、Tzyy-Ping Jung、Te-Won Leeなど、最初にリリースされました。
+1997年 スコッツ・マディグによる計算神経生物学
+サーク・インスティテュート、ラ・ホラーのテルレンス・セジュノスキの研究室。 
 
-The first version of the integrated EEGLAB toolbox was written there by
-Delorme and Makeig with subsequent contributions by many, including
-Marissa Westerfield, Jörn Anemüller, Luca Finelli, Robert Oostenveld,
-Hilit Serby, Toby Fernsler, Nima Shamlo Bigdeley, Jason Palmer, and many
-others. Dedicated beta testers include Andreas Romeyke and his team, who
-developed a test suite for EEGLAB, and other advanced users, including
-Stefan Debener and Andreus Widmar. 
+EEGLABの統合ツールボックスの最初のバージョンは、
+Delorme と Makeig は、多くの貢献を伴います。
+Marissa Westerfield、Jörn Anemüller、Luca Finelli、Robert Oostenveld、
+Hilit serby, Toby Fernsler, ニマ シャムロ Bigdeley、Jason Palmer、その他多数
+その他。 専用のベータテスターには、アンドレアス・ロメイケと彼のチームが含まれます。
+EEGLABの試験スイート、その他上級者向けのテストスイートを開発
+Stefan Debener と Andreus Widmar. 
 
-EEGLAB development is now centered at the Swartz Center for Computational Neuroscience (SCCN) of the Institute
-for Neural Computation at the University of California San Diego (UCSD). Core EEGLAB maintenance and development is supported by the US National Institute of Neurological Disorders and Stroke (NINDS). 
+EEGLABの開発は、Swartz Center for Computational Neuroscience (SCCN) のインスティテュートで中心になりました。
+カリフォルニア大学サンディエゴ校(UCSD)での神経コンピューティング コアEEGLABのメンテナンスと開発は、米国国立神経疾患研究所および脳卒中(NINDS)がサポートしています。 
 
-The EEGLAB core code cannot be modified by third parties directly. Instead,
-users submits [pull requests](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository). EEGLAB core developers then
-review the code and add it to the repository.
+EEGLABコアコードは、直接第三者によって変更することはできません。 代わりに、
+ユーザーの投稿 [プルリクエスト](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository)お問い合わせ EEGLABコア開発者は、
+コードを見直し、リポジトリに追加します。
 
-For third-party developers, we welcome collaborations with users and
-open-source developers to expand and improve EEGLAB functions and/or
-independently write and release EEGLAB plugin/extension applications
-and environments. If you have written plugins for use in your
-laboratory, please consider releasing them for use by others, as described on this page.
+サードパーティの開発者にとって、ユーザーとのコラボレーションを歓迎します。
+オープンソースの開発者がEEGLABの機能および/または拡張し、改善します
+独立して EEGLAB プラグイン/拡張アプリケーションを作成およびリリース
+そして環境。 プラグインを書いているなら、
+研究室では、本ページに記載されているように、他の人が使用するためにそれらを解放することを検討してください。
 
-EEGLAB is under active open-source development. Together with user
-developers, we are extending its capabilities to include across-subject
-general linear model statistics. User-contributed features and
-suggestions are welcome, and we encourage and plan to interconnect EEGLAB
-with other MATLAB-compatible toolboxes.
+EEGLABは、オープンソース開発を積極的に行っています。 ユーザーと共に
+開発者は、オーバーサブジェクトを含む機能を拡張しています。
+一般的なリニアモデル統計。 ユーザーの機能と機能
+提案を歓迎し、EEGLABの相互接続を奨励し、計画します
+その他のMATLAB対応ツールボックス
 
-### Open-source model
+### オープンソースモデル
 
-EEGLAB is an open-source software environment and is available free of
-charge to any user.
+EEGLABはオープンソースソフトウェア環境であり、無料でご利用いただけます。
+任意のユーザに請求します。
 
-However, EEGLAB requires that you purchase and install the commercial
-[MATLAB software environment](http://www.mathworks.com/store/). MATLAB
-version 2008b or later is required; We recommend using the latest
-version of MATLAB. MATLAB and EEGLAB run under Linux/Unix, Mac OS X, or
-Windows. Purchasing MATLAB can be expensive, though the MATLAB student
-version is usually priced near $50 US.
+しかし、EEGLABでは、商用購入やインストールが必要です。
+[MATLABソフトウェア環境](http://www.mathworks.com/store/)お問い合わせ マトラボ
+バージョン2008b以降が必要です。 最新の使い方をおすすめします。
+MATLAB. MATLABとEEGLABは、Linux/Unix、Mac OS X、または
+ウィンドウズ。 MATLABを購入すると、MATLABの学生が高価にすることができます
+バージョンは通常$ 50 US付近で価格です。
 
-We have attempted to remove all dependencies on add-on MATLAB toolboxes.
-Thus, no additional toolboxes are necessary to run the EEGLAB core distribution. However, some advanced plugin toolboxes may
-use functions from a specific MATLAB toolbox: see their documentation
-for details.
+アドオンMATLABツールボックスの依存関係をすべて削除しようとしました。
+したがって、EEGLABコア分布を実行するには、追加のツールボックスは必要ありません。 しかし、いくつかの高度なプラグインツールボックスは、
+特定の MATLAB ツールボックスから関数を使用する: ドキュメントを参照してください。
+詳しくはこちら
 
-Note that all EEGLAB processing functions (not its graphic interface) also can be run under the free
-[Octave environment](http://www.gnu.org/software/octave/download.html). EEGLAB also exists as a compiled program that does not require MATLAB.
+すべての EEGLAB 処理機能 (グラフィックインターフェイスではありません) も無料で実行できます
+[Octave 環境](http://www.gnu.org/software/octave/download.html)お問い合わせ EEGLABは、MATLABを必要としないコンパイルされたプログラムとして存在します。
 
-### License and credits
+### ライセンスとクレジット
 
-EEGLAB is distributed under the [BSD
-    license](https://opensource.org/licenses/BSD-2-Clause). Any
-    contributed functions we add to EEGLAB will be made available for
-    free commercial and non-commercial use under this license.
+EEGLAB は [BSD] で配布されます。
+    ライセンスhttps://opensource.org/licenses/BSD-2-Clause)。 その他
+    EEGLABに追加する機能が利用可能になりました
+    このライセンスに基づく商用および非商用利用
 
-Contributors are acknowledged on GitHub, which record commits made to the main source code. 
+コントリビューターは GitHub で認識され、メインソースコードにコミットしたコミットを記録しています。 
 
-Consider writing an *extension* or *plugin* option, as described
-in the section below. EEGLAB extensions allow authors to flexibly
-incorporate new functions into the EEGLAB menu of every user who has
-downloaded the extension. The authors also retain all commercial rights to the functions they write.
+*extension* または *plugin* オプションを記述する
+以下のセクションで。 EEGLABの拡張機能により、著者が柔軟に対応
+EEGLABメニューに新しい機能を組み込む
+拡張子をダウンロード. 著者はまた、書き込み機能にすべての商用権利を保持します。
 
-### Code of conduct
+### 行動規範
 
-We strive to follow a code of conduct emphasizing community,
-collaboration, respect, and responsibility first outlined by the [Ubuntu
-community](https://ubuntu.com/community/code-of-conduct).
+コミュニティを重視する行動規範を追究し、
+[Ubuntu ] が最初に説明したコラボレーション、尊敬、責任
+コミュニティhttps://ubuntu.com/community/code-of-conduct).
 
-### Using GIT to contribute code
+### GITによるコードの貢献
 
-To contribute code to the EEGLAB core code, fork the code and create a
-pull request as indicated below. You will need a Github account
-to perform these operations but do not require any special permission
-from us.
+EEGLABのコアコードにコードを付与し、コードをフォークして作成する
+下の要求として引き。 Githubアカウントが必要です
+これらの操作を実行するが、特別な許可を必要としません
+私たちから。
 
-Forking the EEGLAB repository
+EEGLABリポジトリのフォーク
 ---
 
-The main EEGLAB repository is not the place to add new functions. If
-you want to add new functionality, write an EEGLAB
-[plugin](/tutorials/contribute/Contributing_to_EEGLAB.html) instead.
+メインの EEGLAB リポジトリは新しい関数を追加する場所ではありません。 お問い合わせ
+新しい機能を追加したい、EEGLAB を書く
+[プラグイン](/tutorials/contribute/Contributing_to_EEGLAB.html) 代わりに。
 
-### Why fork the EEGLAB repository?
-This page assumes that you are somewhat familiar with GitHub, Git, and version control.
+### EEGLABリポジトリをフォークする理由
+このページでは、GitHub、Git、バージョン管理に少し精通していると仮定しています。
 
-Forking (copying) a software repository makes a copy of the repository
-that belongs to you. This allows you to experiment
-without affecting the existing code. Once you are done with your
-changes, you will be able to transfer them (push them) to the main
-repository by using *pull requests* (this could have been
-referred to as *push requests*, but the software community decided to
-name it from the perspective of the main repository, which then is
-<em>pulling</em> in your changes). This page will introduce you to the
-basics of forking the EEGLAB repository. Github makes the procedure very
-simple.
+ソフトウェアリポジトリをフォーク(コピー)することで、リポジトリのコピーを作成
+あなたに属します。 これにより実験が可能
+既存のコードに影響を与えない。 完了したら
+変更は、それらを(それらをプッシュ)メインに転送することができます
+*pullリクエスト*を使用してリポジトリ(*)
+*pushリクエスト* と呼びますが、ソフトウェアコミュニティは
+メインリポジトリの観点から名前を付けます。
+<em>プルリング</em> あなたの変更に)。 このページが紹介されました
+EEGLABリポジトリをフォークする基本 Githubはプロシージャを非常にさせます
+シンプル。
 
-### Forking the EEGLAB repository
+### EEGLABリポジトリのフォーク
 
-To fork the EEGLAB repository from Github, follow these two simple
-steps:
+Github から EEGLAB リポジトリをフォークするには、次の 2 つの単純な
+ステップ:
 
-1.  On Github, go to the [EEGLAB
-    repository](https://github.com/sccn/eeglab)
-2.  Click *Fork* in the top right corner of the window (See the figure
-    below).
+1.  Github で [EEGLAB] に行く
+    リポジトリ(Repository)https://github.com/sccn/eeglab)
+2.  ウィンドウの右上隅にある「*Fork*」をクリック(図を参照)
+    お問い合わせ
 
-![center\|thumb\|700px](/assets/images/Fork_link.jpg)
+![センター\|thumb\|700px](/assets/images/Fork_link.jpg)
 
-Once you have executed these two steps, you will have successfully
-created your own copy of the EEGLAB repository. The new repository will look
-exactly like the EEGLAB repository you forked, but the forked copy
-will be under your username account.
+これらの2つのステップを実行したら、あなたは成功したでしょう
+EEGLABリポジトリの独自のコピーを作成しました。 新しいリポジトリが見える
+あなたがフォークしたEEGLABリポジトリのように正確に、フォークされたコピー
+ユーザー名アカウントの下にあります。
 
-![center\|thumb\|700px](/assets/images/Fork_username.jpg)
+![センター\|thumb\|700px](/assets/images/Fork_username.jpg)
 
-### Working on your forked copy
+### あなたのフォークされたコピーで作業
 
-Once you have created your fork in Github, you will need to set up
-*git* in your computer to start working on your EEGLAB code copy. Then
-you will need to clone the forked repository to your computer.
+Githubでフォークを作成したら、設定する必要があります
+*git* はコンピュータで EEGLAB のコードコピーで作業を開始できます。 それから
+コンピュータにフォークされたリポジトリをクローンする必要があります。
 
--   Go to the forked repository page in Github. This is the
-    same page described in the figure above.
--   Look on the right side of the page for the button *Clone or
-    download* and click it.
+-   Githubでフォークされたリポジトリページに移動します。 これは、
+    上記の図で説明したページと同じです。
+-   画面の右側にあるボタン*クローンまたは
+    ダウンロード* をクリックしてクリックします。
 
-![center\|thumb\|700px](/assets/images/Clone_link.jpg)
+![センター\|thumb\|700px](/assets/images/Clone_link.jpg)
 
--   Click in the clone HTTPS section to copy the link.
+-   クローン HTTPS セクションでリンクをコピーします。
 
-![center\|thumb\|400px](/assets/images/Clone_https_link.jpg)
+![センター\|thumb\|400px](/assets/images/Clone_https_link.jpg)
 
--   Open a terminal on your computer and type *git clone* and then paste
-    and execute the link you copied in the previous step.
+-   コンピュータの端末を開き、*git clone* を入力し、貼り付けます。
+    前のステップでコピーしたリンクを実行します。
 
 `$git clone `[`https://github.com/yourgitusername/eeglab.git`](https://github.com/yourgitusername/eeglab.git)
 
-After following these steps, you will be ready to start modifying the EEGLAB code.
+これらの手順に従って、EEGLABコードの変更を開始することができます。
 
-### Issuing a pull request
+### プルリクエストの発行
 
-Once you are satisfied with your code changes, commit them to GitHub. Then,  go back to Github
-and issue a *pull request*. Once your changes are evaluated and approved
-by the EEGLAB team, they will be merged into the EEGLAB master code.
+コードの変更に満足したら、GitHubにコミットしてください。 それから、Githubに戻る
+*pullリクエスト*を発行します。 変更が評価され、承認されると
+EEGLABのチームによって、EEGLABのマスターコードに統合されます。
 
-![center\|thumb\|700px](/assets/images/Pullrequest1.png)
+![センター\|thumb\|700px](/assets/images/Pullrequest1.png)
 
-This brings you to a screen where you can select the forked branch to merge into the EEGLAB repository. NOTE: Always merge
-into the "develop" branch of EEGLAB.
+EEGLABリポジトリにマージするためにフォークされたブランチを選択できる画面が表示されます。 Note: 常にマージする
+EEGLABの「デベロプ」ブランチに。
 
-![center\|thumb\|700px](/assets/images/Pullrequest2.png)
+![センター\|thumb\|700px](/assets/images/Pullrequest2.png)
 
-### Considerations regarding pull requests
+### プルリクエストの検討
 
-For expedited approval:
--   If you have added a new feature, make sure it works both from the
-    graphic interface and from the MATLAB command line. Please send us a
-    simple test script to demonstrate this.
--   Run the test cases on the modified function. If possible, add the test case to the [EEGLAB test case repository](https://github.com/sccn/eeglab-testcases).
--   You can never add too much documentation. Make sure you document
-    your changes clearly and thoroughly!
--   Issue pull request for single-function changes.
--   Avoid making large numbers of cosmetic changes (indentation, etc.). If there are too many changes, they take a long time to review and are often rejected.
+事前承認のため:
+-   新しい機能を追加した場合は、両方の機能が動作することを確認してください。
+    グラフィックインターフェイスとMATLABコマンドラインから。 お問い合わせ
+    シンプルなテストスクリプトでこれを実証します。
+-   修正された関数でテストケースを実行します。 可能であれば、テストケースを [EEGLABテストケースリポジトリ](https://github.com/sccn/eeglab-testcases).
+-   あまりにも多くの文書を追加することはできません。 ドキュメントを必ず確認
+    あなたの変更は明確にそして徹底的に!
+-   単一機能変更のための問題の引き。
+-   多数の化粧品の変更(刻み等)を作ることを避けて下さい。 変更が多すぎると、レビューに時間がかかることがあります。

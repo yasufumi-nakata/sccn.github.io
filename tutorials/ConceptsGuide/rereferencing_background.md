@@ -7,108 +7,108 @@ grand_parent: Tutorials
 categories: concepts
 
 ---
-Background on EEG references
+EEGリファレンスの背景
 =====
 
-Refer to the [re-referencing tutorial](/tutorials/05_Preprocess/rereferencing.html) for learning how to reference EEG data in EEGLAB.
+参照して下さい [チュートリアルを再参照する](/tutorials/05_Preprocess/rereferencing.html) EEGLAB で EEG データを参照する方法を学びます。
 
-What is re-referencing, and why re-reference?
+再参照とは何か、なぜ再参照なのか?
 ---------------------------------------------
-The reference electrode used in recording EEG data is usually termed the
-'common' reference for the data -- if all the channels use this same
-reference. Typical recording references in EEG recording are one mastoid
-(for example, TP10 in the 10-20 System, the electrode colored red in the
-picture below), linked mastoids (usually, digitally-linked mastoids,
-computed *post hoc*), the vertex electrode (Cz), single or linked
-earlobes, or the nose tip. Systems with active electrodes (e.g., BIOSEMI
-Active Two) may record data reference-free. In this case, a reference
-be must be chosen *post hoc* during data import. Failing to do so may
-leave 40 dB of unnecessary noise in the data.
+EEGデータの記録に使用される参照電極は通常、
+'common' はデータを参照します。- すべてのチャネルがこの同じを使用する場合
+参照。 EEGの記録の典型的な録音の参照は1つのマストイドです
+(例えば、10-20システム内のTP10、電極は赤で着色しました)
+下の写真)、リンクされたマストイド(通常、デジタルリンクされたマストイド、
+計算された *post hoc*)、頂点の電極(Cz)、単一かリンク
+イヤーロブ、または鼻の先端。 アクティブ電極付システム(BIOSEMIなど)
+アクティブ2は、データ参照フリーを記録することができます。 この場合、参照
+データインポート時に*post hoc*を選択する必要があります。 失敗する可能性がある
+データの不要なノイズの40dBを残します。
 
-There is no 'best' common reference site. Some researchers claim that
-non-scalp references (earlobes, nose) introduce more noise than a scalp
-channel reference though this has not been proven to our knowledge. If
-the data have been recorded with a given reference, they can usually be
-re-referenced (inside or outside EEGLAB) to any other reference channel
-or channel combination.
+「ベスト」の共通参照サイトはありません。 研究者の中には、
+ノンスカルプリファレンス(イヤーローブ、ノーズ)は、スカルプよりもノイズが多い
+これは私たちの知識に証明されていないが、チャンネル参照. お問い合わせ
+与えられた参照でデータが記録され、それらは通常ある場合もあります
+その他の参照チャンネルへの再参照(EEGLAB内外)
+またはチャネルの組み合わせ。
 
 
 ![](/assets/images/Reref.jpg)
 
 
-Converting data, before analysis, from fixed or common reference (for
-example, from a common earlobe or other channel reference) to 'average
-reference' is advocated by some researchers, particularly when the
-electrode montage covers nearly the whole head (as for some high-density
-recording systems).
+データの変換、分析前、固定または一般的な参照から(forfor)
+例えば、一般的なイヤーロブや他のチャンネル参照から「平均」へ
+レファレンスとは、特に研究者が提唱するものです。
+電極のモンタージュはほぼ全頭部をカバーします(一部高密度のため)
+録音システム)。
  
- The advantage of average reference rests on the fact
-that outward positive and negative currents, summed across an entire
-(electrically isolated) sphere, will sum to 0 (by Ohm's law). For
-example, in the figure below, a tangentially-oriented electrical source
-is associated with a positive inward current to the left (here, blue)
-and an opposing outward negative current to the right (red). If the
-current passing through the base of the skull to the neck and body is
-assumed to be negligible (for instance, because of low conductance of
-the skull at the base of the brain), one may assume that the sum of the
-electric field values recorded at all (sufficiently dense and evenly
-distributed) scalp electrodes is always 0 (the average reference
-assumption).
+ 平均参照の利点は事実に残ります
+全体にわたって要約された肯定的で否定的な流れ、
+(電気的に隔離された)球は、0に合計します(オームの法律によって)。 お問い合わせ
+例えば、下の図では、形質指向の電気源
+左にプラスの内側の電流に関連付けられている(ここでは、青)
+右(赤)に反対する負の電流。 もし、
+頭と体への頭蓋骨のベースを通過する電流は、
+無視できないと仮定される(例えば、低い伝導のために)
+脳のベースにある頭蓋骨)は、頭の合計を仮定するかもしれない
+全てで記録される電界値(十分に密で均等に)
+分散) scalp 電極は常に 0 (平均参照)
+前提)。
 
-The problem with this assumption is that true average reference data
-would require the distribution of electrodes to be even over the head.
-This is not usually the case, as researchers typically place more
-electrodes over certain scalp areas and fewer (if any) on the lower
-half of the head surface. As a consequence, an average reference result
-using one montage may not be directly comparable to an average reference
-result obtained using another montage.
-
-
-
-![Image:Averef.gif](/assets/images/Averef.gif)
+この仮定の問題は、真の平均参照データである
+電極の分布を頭の上にさえ必要とします。
+研究者が通常より多くの場所を置くように、これは通常、ケースではありません
+特定のスカルプ領域および下面(もしあれば)上の電極
+ヘッド表面の半分。 その結果として、平均参照結果
+1つのモンタージュを使用して、直接平均参照に匹敵することができません
+別のモンタージュで得られる結果。
 
 
 
-In the [re-referencing tutorial](/tutorials/05_Preprocess/rereferencing.html), we detail the process of transforming data to 'average
-reference'. Note that in this process, the implied activity time course
-at the former reference electrode may be calculated from the rest of the
-data (so the data acquires an additional channel - though not an
-additional degree of freedom). Also, note that if the data were recorded
-using nose tip or ear lobe electrodes, you should not include these
-reference electrodes when computing the average reference in (1)
-(below). Thus, in the tutorial example, the dividing factor (in (2)) would
-be 64 instead of 65. Note that in localizing sources using the EEGLAB
-DIPFIT plugin, 'average reference' will be used internally (without
-user input).
+![画像:Averef.gif](/assets/images/Averef.gif)
 
-The choice of data reference does color (literally) the plotted results
-of the data analysis. For example, plots of mean alpha power over the
-scalp must have a minimum at the reference channel, even if there are alpha sources just below and oriented toward the reference channel.
-Of note, no (valid) reference can be said to be wrong. Instead, each
-reference can be said to give another view of the data. However, the
-nature of the reference needs to be considered when evaluating (or, particularly, comparing) EEG results with those of the literature.
 
-![Image:Reref2.gif](/assets/images/Reref2.gif)
 
-## Note on re-referencing and ICA decompositions
+お問い合わせ [チュートリアルを再参照する](/tutorials/05_Preprocess/rereferencing.html)データを変換するプロセスを「平均化」に詳細化
+リファレンス このプロセスでは、暗黙のアクティビティ時間コース
+元参照電極は、残りの部分から計算することができます
+データ(データが追加のチャネルを獲得する)
+自由度の追加。 また、データが記録されている場合は注意してください。
+鼻の先端か耳のロブの電極を使用して、これらを含まない
+(1)平均参照を計算するとき参照電極
+(下). したがって、チュートリアル例では、分割係数((2))は
+65 ではなく 64 になります。 EEGLAB を使用してソースをローカライズすることに注意してください。
+DIPFITプラグイン「平均参照」は内部で使用されます(なし)
+ユーザ入力)。
 
-For ICA decomposition, in theory the selection of
-a reference is not so important. This is because changing the reference
-only amounts to making a linear transformation of the data (in
-mathematical terms, multiplying it by a fixed re-referencing matrix), a
-transformation to which ICA should be insensitive. In practice, we transform the data to average reference before running ICA, but the benefits of using this transformation have not been demonstrated.
+データ参照の選択は、プロット結果の色(文字通り)を行います
+データの解析。 例えば、平均アルファ出力のプロット
+scalp は参照チャンネルで最小限のものでなければなりません。アルファソースがすぐ下にあり、リファレンスチャンネルに向かって方向づけている場合でも、参照チャンネルに向かう必要があります。
+注意して、 (valid) 参照は間違っていると言えません。 それぞれ
+参照は、データの別のビューを与えるために言うことができます。 しかし、
+参照の性質は、(または、特に、比較) EEG が文献のそれらと結果を評価するときに考慮する必要があります。
 
-We advise recording eye channels (conventionally four channels, two for
-vertical eye movement detection and two for horizontal eye movement
-detection) using the same reference as other channels instead of using
-bipolar montages. One can always recover the bipolar montage activity by
-subtracting the activities of the electrode pairs. We term these
-channels 'peri-ocular EEG' channels since what they record is not
-exclusively electro-oculographic (EOG) signals but also includes 
-prefrontal EEG activities.
+![イメージ:Reref2.gif](/assets/images/Reref2.gif)
 
-ICA can be used to decompose data from either average reference, common
-reference, or bipolar reference channels -- or from more than one of
-these types at once. However, plotting single scalp maps requires that
-all channels use either the same common reference or the same average
-reference.
+## 再発酵およびICAの分解に注意してください。
+
+ICAの分解のために、理論の選択で
+参照はそれほど重要ではありません。 これは、参照を変更しているためです
+データの線形変換を行う量だけ(in)
+数学的な用語, 固定再発酵行列によってそれを乗っ), a
+ICAが無感覚であるべき転換。 慣行では、ICAを稼働させる前に平均的な参照にデータを変換しますが、この変換を使用する利点は実証されていません。
+
+記録眼チャンネル(正式4チャンネル、2チャンネル)
+縦の目の動きの検出および横の目の動きのための2
+検出) 使用する代わりに他のチャネルと同じ参照を使用して
+バイポーラモンタージュ。 一つは、常にバイポーラモンタージュ活動を回復することができます
+電極の対の活動の引き下げ。 これらを語る
+チャンネル 'peri-ocular EEG' チャンネルは、彼らが記録されていないものだから
+排他的な電気oculographic (EOG)信号しかしまた含んでいます 
+EEG活動の前面
+
+ICAは平均参照、共通からデータを分解するのに使用することができます
+参照、またはバイポーラの参照チャネル -- 以上 1 つから
+一度にこれらのタイプ。 しかしながら、単一のスカルプマップをプロットするには、
+すべてのチャネルは同じ共通の参照か同じ平均を使用します
+参照。

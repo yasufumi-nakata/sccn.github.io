@@ -6,30 +6,30 @@ categories: preproc
 parent: 5. Preprocess data
 grand_parent: Tutorials
 ---
-Changing the data sampling rate
+データサンプリングレートの変更
 ======
 
-Load the sample EEGLAB dataset
+サンプル EEGLAB データセットをロードする
 ---------------------------------
 
-Select menu item <span style="color: brown">File</span> and press sub-menu item
-<span style="color: brown">Load existing dataset</span>. Select the tutorial file "eeglab_data.set" distributed with
-the toolbox and located in the "sample_data" folder of EEGLAB. Then press *Open*.
+メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
+<span style="color: brown">既存のデータセットをロードする</span>お問い合わせ 配布するチュートリアルファイル「eeglab_data.set」を選択します。
+EEGLABの「sample_data」フォルダにあるツールボックスです。 それから *Open*を押して下さい。
 
-![Image:Pop_loadset.png](/assets/images/Pop_loadset.png)
+![画像:Pop_loadset.png](/assets/images/Pop_loadset.png)
 
-Change the sampling rate
+サンプリングレートを変更する
 ---------------------------------
 
-The most common use for <span style="color: brown">Tools → Change sampling
-rate</span> is to reduce the sampling rate to save memory and disk
-storage. A [pop_resample.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_resample.m) window pops up, asking for the new
-sampling rate. The function uses MATLAB *resample.m* (in the Signal
-Processing toolbox-- if you do not have this toolbox, it will use the
-slow MATLAB function *griddata*).
+最も一般的な用途 <span style="color: brown">ツール → サンプリングの変更
+レート</span> メモリとディスクを保存するためのサンプリング速度を減らすことです
+ストレージ。 ツイート [pop_resample.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_resample.m) ウィンドウがポップアップし、新しいことを尋ねます
+サンプリングレート。 関数は MATLAB *resample.m* (信号の)を使用します
+処理ツールボックス---このツールボックスを持っていない場合、それは使用します
+遅いMATLAB機能*griddata*)。
 
-![Image:pop_resample.png](/assets/images/pop_resample.png)
+![画像:pop_resample.png](/assets/images/pop_resample.png)
 
-You do not need to change the sampling rate for processing the tutorial data since it is already at an acceptable sampling rate.
+既に許容サンプリングレートであるため、チュートリアルデータを処理するためのサンプリングレートを変更する必要はありません。
 
-Before resampling, a low-pass filter at half the resampling frequency (so 64 Hz if you resample at 128 Hz) is applied to the data to avoid aliasing effects.
+再サンプリングする前に、リサンプリング頻度の半分にローパスフィルタ(128Hzで再サンプリングしても64Hz)がデータに適用され、エイリアシング効果を回避します。

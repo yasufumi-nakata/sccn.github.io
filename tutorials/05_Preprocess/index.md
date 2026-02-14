@@ -7,4 +7,4 @@ has_children: true
 has_toc: true
 nav_order: 5
 ---
-EEG data needs to be pre-processed before calculating behaviorally relevant EEG derived measures. This series of tutorials guides you through pre-processing EEG data, including filtering, re-referencing, and resampling.
+EEGデータは、行動関連EEGの対策を計算する前に事前に処理する必要があります。 この一連のチュートリアルでは、フィルタリング、再参照、および再サンプリングを含む、前処理EEGデータを通してあなたを導きます。

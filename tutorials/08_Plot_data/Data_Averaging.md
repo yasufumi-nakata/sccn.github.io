@@ -5,245 +5,245 @@ long_title: a. Event Related Potentials
 parent: 8. Plot data
 grand_parent: Tutorials
 ---
-Plotting Event Related Potentials
+プロットイベント関連ポテンシャル
 ==================
-{: .no_toc}
+お問い合わせ
 
-EEGLAB contains several functions for
-plotting 1-D ERP averages of dataset trials (i.e., epochs). EEGLAB also
-features functions for studying the EEG dynamics expressed in the single
-trials. This may be visualized, in large part, via 2-D (potential time
-series by trials) ERP image transforms of a dataset of single-trial epochs (a.k.a., epoched data) as detailed in the following section of the tutorial.
+EEGLABにはいくつかの機能が含まれています
+プロット 1-D ERP データセットの試験の平均値(例、epochs)。 EEGLABも
+EEG ダイナミクスを単一で表現する学習機能
+トライアル 大きい部分は2次元(時間)によって視覚化されるかもしれません
+実験によるシリーズ)ERPイメージは、チュートリアルの次のセクションで詳細として、単一trial epochs(a.k.a.、epochedデータ)のデータセットのデータを変換します。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Plotting the ERP data on a single axis with scalp maps
+単一軸にERPデータをスカルプマップでプロットする
 -------------------------------------------------------- 
 
-We use here the tutorial dataset as it was after [extracting data epochs](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html). Select menu item <span style="color: brown">File</span> and press sub-menu item
-<span style="color: brown">Load existing dataset</span>. Select the tutorial file "eeglab_data_epochs_ica.set" located in the "sample_data" folder of EEGLAB. Then press *Open*.
+チュートリアルデータセットをそのまま使用しました。 [データエポック抽出](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html)お問い合わせ メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
+<span style="color: brown">既存のデータセットをロードする</span>お問い合わせ EEGLABの「sample_data」フォルダにある「eeglab_data_epochs_ica.set」のチュートリアルファイルを選択します。 それから *Open*を押して下さい。
 
-![Image:Pop_loadset.png](/assets/images/Pop_loadset2.png)
+![画像:Pop_loadset.png](/assets/images/Pop_loadset2.png)
 
-### Plotting all-channel ERPs
+### すべてのチャネルをプロット 採用情報
 
-To plot the average ERP of all dataset epochs, plus ERP scalp maps at
-selected latencies, select <span style="color: brown">Plot → Channel ERPs → With scalp maps</span>. As a simple illustration using the sample
-dataset, we retain the default settings in the resulting [pop_timtopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) window below, and
-press *Ok*.
-
-
-![Image:Pop_timtopo.png](/assets/images/Pop_timtopo.png)
+すべてのデータセットのEPOCの平均ERPをプロットするには、ERPスカルプマップを
+選択したレイテンシー、選択 <span style="color: brown">Plot → チャネルERP → スカルプマップ付き</span>お問い合わせ サンプルを使ったシンプルなイラストとして
+dataset は、結果のデフォルト設定を保持します。 [pop_timtopo.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) 下のウィンドウ、および
+プレス *Ok*.
 
 
-A figure (below) appears. Each trace plots the
-averaged ERP at one channel. The scalp map shows the topographic
-distribution of the average potential at 430 ms (the latency of maximum
-ERP data variance). Alternatively, one or more exact scalp map
-latencies may be specified in the pop-window above.
+![画像:Pop_timtopo.png](/assets/images/Pop_timtopo.png)
 
 
-![Image:Erpplot1.png](/assets/images/Erpplot1.png)
+図(下)が表示されます。 各トレースはプロットします
+1つのチャネルで平均ERP。 scalpの地図は地理的を示しています
+430 msで平均的な潜在能力の分布(最大遅延)
+ERPデータ分散 あるいは1つ以上の正確なスカルプマップ
+上記のポップアップウィンドウでレイテンシーを指定できます。
 
 
-The [pop_timtopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) function plots the relative time courses of the
-averaged ERP at all channels, plus ‘snapshots’ of the scalp potential
-distribution at various moments during the average ERP time course. Clicking on one of the traces above will plot the scalp topography at the corresponding latency. 
-Note that to visualize the ERP scalp map at *all* latencies as an
-ERP movie (i.e., to view the play of the ERP on the scalp), use
-function [eegmovie.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegmovie.m) from the command line as described in the [scripting section of the tutorial](/tutorials/11_Scripting/EEG_scalp_measures.html#using-the-eegmovie-function-to-make-2-d-scalp-topography-animations).
+![画像:Erpplot1.png](/assets/images/Erpplot1.png)
 
 
-### Plotting ERPs in a Topographic Map
-
-Here we will plot the ERPs of an epoched dataset as single-channel
-traces in their 2-D topographic arrangement. 
-Select <span style="color: brown">Plot → Channel ERPs → In scalp array/rect. array</span>. Using the default settings and pressing *Ok* in the window below.
-
-
-![Image:Pop_plottopo.png](/assets/images/Pop_plottopo.png)
+ふりがな [pop_timtopo.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) 関数は相対的な時間のコースをプロットします
+すべてのチャネルで平均ERP、スキャルプポテンシャルの「スナップショット」
+平均ERP時間コース中に様々な瞬間に分布します。 上記のトレースの1つをクリックすると、対応するレイテンシでスカルプトポグラフィをプロットします。 
+*all* レイテンシーでERPのスカルプマップを可視化することに注意してください。
+ERP映画(例えば、スカルプのERPの再生を表示する)、使用
+関数 [eegmovie。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegmovie.m) コマンドラインから記述されている [チュートリアルのスクリプトセクション](/tutorials/11_Scripting/EEG_scalp_measures.html#using-the-eegmovie-function-to-make-2-d-scalp-topography-animations).
 
 
-This produces the following [pop_timtopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) figure.
+### 地図でERPをプロットする
+
+ここでは、epochedデータセットのERPを単一チャネルとしてプロットします
+2Dトポグラフィの配置でトレースします。 
+選択する <span style="color: brown">Plot → チャネルERP → scalp配列/rect で。配列</span>お問い合わせ デフォルト設定を使用して、下のウィンドウで*Ok*を押します。
 
 
-![Image:Erpplot2.png](/assets/images/Erpplot2.png)
+![画像:Pop_plottopo.png](/assets/images/Pop_plottopo.png)
 
 
-You may visualize a specific channel time course by
-clicking on its trace (above), producing a pop-up sub-axis view. For
-example, click on the ERP trace marked *POz* (above) to call up a
-full-sized view of this trace (as below).
+以下を生成します。 [pop_timtopo.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) プロフィール
 
 
-![Image:Zoom1.png](/assets/images/Zoom1.png)
+![画像:Erpplot2.png](/assets/images/Erpplot2.png)
 
 
-Many EEGLAB plotting routines use the toolbox function [axcopy.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=axcopy.m) to pop up a sub-axis plotting window whenever
-users click on the main plot window. Sub-axis windows do
-not have [axcopy.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=axcopy.m) enabled, allowing the user to use the
-standard MATLAB mouse 'Zoom In/Out' feature.
+特定のチャンネルタイムコースを視覚化できます。
+トレース(平均)をクリックし、ポップアップサブ軸ビューを作成します。 お問い合わせ
+例: *POz* (above) マークされている ERP トレースをクリックして、
+このトレースのフルサイズのビュー(以下)。
 
 
-### Plotting ERPs in a Column Array
+![画像:Zoom1.png](/assets/images/Zoom1.png)
 
 
-To plot (one or more) average ERP data traces in two-column arrays,
-select menu item <span style="color: brown"> Plot → Channel ERPs → In scalp/rect. array</span>. To use the default settings in the resulting window, check the "Plot in rect. array"
-checkbox and press *Ok*.
+ルーチンをプロットする多くのEEGLABはツールボックス機能を使用します [axcopy. m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=axcopy.m) サブ軸プロットウィンドウをいつでもポップアップする
+メインプロットウィンドウをクリックします。 サブ軸窓は
+ありません [axcopy. m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=axcopy.m) 有効で、ユーザーが使用できるようにします
+標準MATLABマウス「ズームイン/アウト」機能。
 
 
-![Image:Pop_topoplotrectarray.png](/assets/images/Pop_topoplotrectarray.png)
+### 列配列でERPをプロットする
 
 
-The resulting [pop_plottopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_plottopo.m) figure (below) appears.
+2列配列で平均ERPデータトレースをプロットする
+メニュー項目を選択 <span style="color: brown"> Plot → チャネルERP → scalp/rect で。配列</span>お問い合わせ 結果のウィンドウでデフォルト設定を使用するには、「Rect. array のPlot」をチェックします。
+チェックボックスとプレス *Ok*.
 
 
-![Image:Erpplot3.png](/assets/images/Erpplot3.png)
+![画像:Pop_topoplotrectarray.png](/assets/images/Pop_topoplotrectarray.png)
 
 
-As in the previous plot, clicking on a trace above pops up a full
-window sub-axis view.
+その結果 [pop_plottopo.m の](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_plottopo.m) 図(下)が表示されます。
 
-Plotting a series of 2-D ERP scalp maps
+
+![画像:Erpplot3.png](/assets/images/Erpplot3.png)
+
+
+前のプロットと同様に、上のトレースをクリックしてフルポップアップします
+ウィンドウサブ軸ビュー。
+
+2次元ERPスカルプマップのシリーズをプロット
 ----------------------------------------
-Here we will plot ERP data for a series of 2-D scalp maps representing
-potential distributions at a selected series of trial latencies.
-Select <span style="color: brown"> Plot → ERP map series → In 2-D</span>. In
-the top text box of the resulting [pop_topoplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m) window
-(below), type the epoch latencies of the desired ERP scalp maps. 
+ここでは、2次元スカルプマップのシリーズのERPデータをプロットします。
+選択した一連のトライアルレイテンシーで潜在的な分布。
+選択する <span style="color: brown"> Plot → ERPマップシリーズ → 2Dで</span>お問い合わせ お問い合わせ
+結果のトップテキストボックス [pop_topoplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m) ウィンドウ
+(below)、目的のERPスカルプマップのepochレイテンシーを入力します。 
 
-Note that in this or any other numeric text entry box, you may enter
-any numeric MATLAB expression. For example, instead of *0 100 200 300
-400 500*, try *0:100:500*. Even more complicated expressions, for
-example *-6000+3\*(0:20:120)*, are interpreted correctly.
+この場合、またはその他の数値テキストエントリボックスに入力してください。
+任意の数値MATLAB式。 例えば、*0 100 200 300の代わりに
+400 500*の試み*0:100:500*。 より複雑な表現も、
+例 *-6000+3\*(0:20:120)*は正しく解釈されます。
 
-![Image:641pop_topoplot.png](/assets/images/641pop_topoplot.png)
+![画像:641pop_topoplot.png](/assets/images/641pop_topoplot.png)
 
-The window (below) then appears, containing ERP
-scalp maps at the specified latencies. Here, the plot grid has 3
-columns and 2 rows; other plot geometries can be specified in the GUI window above via the *Plot geometry* text box.
+ウィンドウ (below) が表示され、ERP を含む
+指定されたレイテンシーのスカルプマップ。 ここでは、プロットグリッドは3を持っています
+列と2列。他のプロットのジオメトリは、*Plotのジオメトリ*テキストボックスを介して上記のGUIウィンドウで指定できます。
 
-![Image:2dscalpmap.png](/assets/images/2dscalpmap.png)
+![画像:2dscalpmap.png](/assets/images/2dscalpmap.png)
 
 
-Plotting a series of 3-D ERP scalp maps
+3次元ERPスカルプマップのシリーズをプロット
 ----------------------------------------
 
-To plot ERP data as a series of 3-D scalp maps, go to the menu
-<span style="color: brown">Plot → ERP map series → In 3-D</span>. The query
-window (below) will pop up, asking you to create and save a new 3-D
-head map *3-D spline file*. This process must be done only once for
-every montage. Click *Ok* to begin this process.
+ERPデータを3Dスカルプマップのシリーズとしてプロットするには、メニューに移動します
+<span style="color: brown">Plot → ERPマップシリーズ → 3Dで</span>お問い合わせ クエリ
+ウィンドウ(下)がポップアップし、新しい3Dを作成して保存するように要求します
+ヘッドマップ *3-D スプラインファイル* このプロセスは、一度だけ行わなければならない
+すべてのモンタージュ。 *Ok*をクリックすると、このプロセスが開始されます。
 
-![Image:3dscalpmessage.png](/assets/images/3Dscalpmessage.png)
+![画像:3dscalpmessage.png](/assets/images/3Dscalpmessage.png)
 
-The window below will pop up. Because we use template electrode locations, the 
-conversion between channel location and 3-D headplot coordinate (*Talairach-model transformation matrix* entry) is automatically filled in. If this is not the case, refer to the following section on aligning the 3-D head plot to your electrode coordinate system.
+下のウィンドウがポップアップ表示されます。 テンプレートの電極の位置を使うので、 
+チャネル位置と3Dヘッドプロット座標(*Talairach-model変換行列*エントリ)間の変換が自動的に入力されます。 この場合、電極座標系に3Dヘッドプロットを合わせる次のセクションを参照してください。
 
-Enter trial latencies to be
-plotted (*0:100:500* below indicating latencies *0, 100, 200, 300, 400,*
-and *500* ms) and press *Ok*.
+トライアルレイテンシーを入力する
+整形 (*0:100:500* 未満のレイテンシー *0,100,200,300,400,*)
+*500* ms と *Ok* を押します。
 
 ![](/assets/images/pop_headplot1.png)
 
-Now, the 3-D plotting function [pop_headplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m), will create
-the 3-D channel locations spline file. A progress bar will pop up to
-indicate when this process will be finished. When the 3-D spline file
-has been generated, the following plot will appear.
+今、3Dプロット機能 [pop_headplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m)、作成します
+3Dチャンネルの場所スプラインファイル。 進行バーがポップアップ表示されます
+このプロセスが終了すると示します。 3Dスプラインファイルの場合
+生成されると、次のプロットが表示されます。
 
 ![](/assets/images/pop_headplot_res2.png)
 
-As usual, clicking on a head plot will make it pop up in a sub-axis
-window in which it can be rotated using the mouse. Note that to select
-(for other purposes) a head plot or other object in a figure with
-the [axcopy.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=axcopy.m) pop-up feature activated, click on it, then
-delete the resulting pop-up window.
+通常通り、ヘッドプロットをクリックしてサブ軸にポップアップします
+マウスで回転できるウィンドウ。 選択する注意
+(他の目的のために) 頭のプロットまたは図の他のオブジェクト
+お問い合わせ [axcopy. m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=axcopy.m) ポップアップ機能を有効にして、それをクリックし、
+結果ポップアップウィンドウを削除します。
 
-To plot the heads at a specified angle, select again the <span style="color: brown"> Plot → ERP map series → In 3-D</span> menu item. By
-default, the function uses the 3-D spline file you have generated
-above. Enter latencies to be displayed and the [headplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m)
-'view' option (as in the example below), and press *Ok*.
+指定された角度で頭をプロットするには、再度選択します <span style="color: brown"> Plot → ERPマップシリーズ → 3Dで</span> メニュー項目。 によって
+デフォルトでは、生成した3Dスプラインファイルを使用します。
+上記。 表示されるレイテンシーと表示されます。 [ヘッドプロットm](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m)
+'view' オプション (例として)、 *Ok* を押します。
 
 ![](/assets/images/pop_headplot_view.png)
 
 
-The [headplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m) window (below) will then appear. You may
-also rotate the individual heads using the mouse. This is often
-necessary to best show the illustrated spatial distribution.
+ふりがな [ヘッドプロットm](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m) ウィンドウ(下)が現れます。 可能です。
+また、マウスを使用して個々の頭を回転させます。 これはしばしば
+説明された空間分布を示すために必要です。
 
 ![](/assets/images/pop_headplot_res1.png)
 
-You may also use a different head template. For example, use again the <span style="color: brown"> Plot → ERP map series → In 3-D</span> menu item, and select the second template model *Colin27headmesh.mat* in the *3-D mesh file* list box (you may also browse for your own 3-D mesh file using the *Browse other* button). Again select latencies to be
-plotted (0:100:500) and press *Ok*. Now the result is being plotted on a different head model.
+別のヘッドテンプレートを使うこともできます。 例えば、再び使う <span style="color: brown"> Plot → ERPマップシリーズ → 3Dで</span> メニュー項目を選択し、*3-Dメッシュファイル*リストボックスの2番目のテンプレートモデル*Colin27headmesh.mat*を選択します(*Browse other*ボタンを使用して3Dメッシュファイルを閲覧することもできます)。 再びレイテンシーを選択
+プロット(0:100:500)とプレス*Ok*。 結果は異なるヘッドモデルにプロットされています。
 
 ![](/assets/images/pop_headplot_res3.png)
 
 
-### Co-registration of channel locations with head model
+### ヘッドモデルとチャネルの位置の共同登録
 
-Select again the <span style="color: brown"> Plot → ERP map series → In 3-D</span> menu item. If you have already generated a spline file for this channel location structure,
-you may enter it here in the first edit box (first click on the *Use
-existing spline file or structure* to activate the edit box, then
-browse for a data file). If you do not have such a file, you will need
-to generate one.
+再び選択する <span style="color: brown"> Plot → ERPマップシリーズ → 3Dで</span> メニュー項目。 既にこのチャンネルの位置構造のスプラインファイルを生成する場合、
+最初の編集ボックスにここに入力することができます(最初に*使用をクリックしてください)
+既存のスプラインファイルまたは構造*は編集ボックスをアクティブにし、その後、
+データファイルの閲覧 そのようなファイルを持っていない場合は、必要な
+生成する。
 
-However, first, your channel locations must be co-registered with the
-3-D head template to be plotted. Note that if you are using one of the
-template channel location files and one of the template head mesh, the *Talairach-model transformation matrix* field (containing channel alignment information) will be filled automatically, as this was the case in the previous section.
+ただし、最初に、チャンネルの場所を共同登録する必要があります。
+3-Dヘッドテンプレートをプロットする。 ※1つご利用の場合
+テンプレートのチャンネル位置ファイルとテンプレートヘッドメッシュの1つ、*Talairach-model変換行列*フィールド(チャネルアライメント情報を含む)は、前のセクションのケースだったため、自動的に入力されます。
 
-We will now briefly describe the channels-to-head model
-co-registration process. If your dataset contains channel
-locations, for example, locations that you may have measured on the
-subject head using a Polhemus system, and you want to use these
-electrode locations for 3-D plotting, [headplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m) must
-first determine the positions of your electrode locations relative to
-a template head surface. A generic transformation cannot be performed
-because the origin (\[0 0 0\]) in your electrode location system does
-not necessarily correspond to the center of the template head (.e.g.,
-the intersection of the fiducial points: nasion and pre-auricular
-points) used by [headplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m). Even if this were the case,
-heads have different shapes, so your scanned electrode locations might
-need to be scaled or warped in 3-D to match the template head mesh.
+チャネル・ツー・ヘッド・モデルを簡潔に記述します。
+共同登録プロセス。 データセットにチャネルが含まれている場合
+場所、例えば、測定した場所を
+Polhemusシステムを使用して被験者の頭部, そして、あなたはこれらの使用したい
+3Dプロットのための電極の場所, [ヘッドプロットm](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m) 必須
+まず、電極の位置を相対的に決定します。
+テンプレートヘッド面。 一般的な変換は実行できません
+電極位置システムにおける原点(\[0 0\])は
+テンプレートヘッドの中央に必ずしも対応しない(例えば、
+課外ポイントの交差点: 吐出と前方
+ポイント) [ヘッドプロットm](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m)お問い合わせ この場合も、
+ヘッドは異なる形状なので、スキャンした電極の位置が異なる
+テンプレートヘッドメッシュに合わせて3Dでスケールまたは警告する必要があります。
 
-The co-registration window begins this operation. Set the checkbox labeled *Or
-recompute a new spline file named:*, and then click the *Manual
-coreg.* push button. A window appears explaining how to perform the
-co-registration.
+共同登録画面が始まります。 ラベル付きのチェックボックスを設定します *Or
+名前付き新しいスプラインファイルをrecomputeし、*Manualをクリックします。
+coreg.* 押しボタン。 実行方法を説明するウィンドウが表示されます
+共同登録。
 
 
 ![](/assets/images/Coregister.gif)
 
 
-Pressing *Ok* will cause the co-registration window below to open.
+※Ok*を押すと、以下の共同登録画面が開きます。
 
 
 ![](/assets/images/Coregister2.gif)
 
 
-In the window above, the red electrodes are those natively associated
-with the template head mesh. Rather than directly aligning your
-electrode locations (shown in green) to the head mesh, your montage
-will be aligned to template electrode locations associated with the
-head mesh by scanning on the same subject's head (here shown in red).
-For the sample dataset, this alignment has already been performed.
-(Click the *Labels on* push button to display the electrode labels).
+上記のウィンドウでは、赤い電極は、ネイティブに関連付けられている
+テンプレートヘッドメッシュを使って。 あなたの直接整列よりもむしろ
+電極の位置(緑色で表示)、ヘッドメッシュ、モンタージュ
+関連する電極の位置をテンプレートに整列する
+同じ被写体の頭部のスキャンによるヘッドメッシュ(赤)。
+サンプルデータセットの場合、このアライメントは既に実行されています。
+(*Labels on* pushボタンをクリックすると、電極ラベルが表示されます)
 
-When you have finished the co-registration, simply click *Ok* and a
-vector of 9 new channel alignment values (shift, in 3-D; rotation, in
-3-D; scaling, in 3-D) will be copied back to the *Talairach-model transformation matrix* field of the interactive [headplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m) window. For more information about channel co-registration, see the [source reconstruction tutorial](/tutorials/09_source/DIPFIT.html).
+共同登録が完了したら、*Ok* と A をクリックします。
+9チャンネルアライメント値(シフト、3D、回転)のベクトル
+3-D; scaling、3-Dで)は、インタラクティブな*Talairach-model変換行列*フィールドにコピーされます [ヘッドプロットm](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m) ウィンドウ。 チャンネルの共同登録の詳細については、を参照してください。 [ソース再構築チュートリアル](/tutorials/09_source/DIPFIT.html).
 
-Note that it is possible, and relatively easy, to generate custom [headplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m) head meshes. This may be done using Freesurfer or [FieldTrip](https://www.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
+可能であり、比較的簡単に、カスタムを生成する [ヘッドプロットm](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m) ヘッドメッシュ。 Freesurfer を使うか、 [フィールドトリップ](https://www.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
 
-Comparing different conditions and performing statistics
+異なる条件を比較し、統計を実行
 ---------------------------
 
-Comparing ERPs between conditions is done using [group-level analysis](/tutorials/10_Group_analysis/) *even if* you only have one subject. This is because the group-level analysis interface has rich options to select and plot ERPs for different conditions, including [calculating statistics across trials for single subjects](/tutorials/10_Group_analysis/study_statistics.html#single-subject-statistics). 
+条件間のERPの比較は、 [グループレベルの分析](/tutorials/10_Group_analysis/) ※1件のみが1件あります。 これは、グループレベルの分析インターフェイスが異なる条件のERPを選択およびプロットする豊富なオプションを持っているので、 [単一の被験者のための試験全体で統計を計算する](/tutorials/10_Group_analysis/study_statistics.html#single-subject-statistics). 
 

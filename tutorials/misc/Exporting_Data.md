@@ -5,57 +5,57 @@ long_title: How to export data?
 parent: Reference Topics
 grand_parent: Tutorials
 ---
-Exporting Data
+データのエクスポート
 ================
-{: .no_toc }
+お問い合わせ
 
-This reference guide describes how to export EEGLAB data.
+本リファレンスガイドでは、EEGLABデータをエクスポートする方法について説明します。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Supported Data Formats
+サポートされているデータ形式
 -----------------------
 
-The following export formats are supported:
+以下のエクスポート形式がサポートされています。
 
--  EEG Data: ASCII Text, .txt, .csv
--  EEG Data: European Data Format (16-bit), .edf 
--  EEG Data: Biosemi, .bdf  
--  EEG Data: BIOSIG, .gdf  
--  EEG Data: Brain Vision Analyzer, .dat, .vhdr, .vmrk 
--  EEG Data: MFF EGI format, .mff
--  EEG Data: Neuroscan .cnt (beta)
--  ICA Activity:  ASCII Text, .txt               
--  Weight Matrix : ASCII Text,  .txt               
--  Inverse Weight Matrix: ASCII Text, .txt               
--  Find More information regarding possible supported data formats in
-    the [BIOSIG documentation](http://biosig.sourceforge.net/).
+-  エッグ データ: ASCII テキスト、.txt、.csv
+-  エッグ データ: ヨーロッパのデータ フォーマット(16ビット)、.edf 
+-  エッグ データ:Biosemi、.bdf  
+-  エッグ データ: BIOSIG、.gdf  
+-  エッグ データ: 脳の視野の検光子、.dat、.vhdr、.vmrk 
+-  エッグ データ: MFF EGIのフォーマット、.mff
+-  エッグ データ: Neuroscan .cnt (ベータ)
+-  アメリカ アクティビティ: ASCII テキスト、.txt               
+-  重量のマトリックス: ASCIIのテキスト、.txt               
+-  逆の重量のマトリックス: ASCII のテキスト、.txt               
+-  お問い合わせ サポートされているデータフォーマットに関する詳細情報
+    お問い合わせ [BIOSIGドキュメント](http://biosig.sourceforge.net/).
 
 
-Exporting data and ICA matrices
+データのエクスポートとICAのマトリックス
 -------------------------------
 
-### Exporting data to an ASCII text file
+### データを ASCII テキストファイルにエクスポートする
 
-EEGLAB datasets can be exported as ASCII files using the menu item
-<span style="color: brown">File → Exports → Data and ICA activity to text file</span>. 
-Enter a file name (*mydata.txt*, for instance). Check the
-second checkbox to export the average ERP instead of the data epochs. By
-default, the electrode labels are saved for each row (4th check box), and
-the time values are saved for each column (5th checkbox). Time units can
-be specified in the edit box closest to the time values checkbox.
-Finally, check the third checkbox to transpose the matrix before saving.
+EEGLAB データセットは、メニュー項目を使用して ASCII ファイルとしてエクスポートできます。
+<span style="color: brown">ファイル → エクスポート → テキストファイルへのデータとICAアクティビティ</span>. 
+ファイル名(*mydata.txt*)を入力します。 チェックイン
+データエポックではなく平均ERPをエクスポートする2番目のチェックボックス。 によって
+デフォルトでは、各行(4番目のチェックボックス)に電極ラベルが保存され、
+各列(第5チェックボックス)に時間値が保存されます。 時間単位はできます
+時刻値チェックボックスに最も近い編集ボックスに指定します。
+最後に、保存する前に行列をトランスポーズするために3番目のチェックボックスを確認してください。
 
-![Image:Pop_export.gif](/assets/images/pop_export1.png)
+![画像:Pop_export.gif](/assets/images/pop_export1.png)
 
-The file written to disk may look like this:
+ディスクに書かれているファイルは次のようになります:
 
 ```
 FPz             EOG1       F3          Fz        F4        EOG2       FC5        FC1           ...
@@ -88,62 +88,62 @@ FPz             EOG1       F3          Fz    �
 ...
 ```
 
-The first column contains the time axis and the other the data for each
-electrode. This file might, for example, be imported into SPSS or BMDP.
+最初の列には、それぞれの時間軸とその他のデータが含まれています
+電極。 このファイルは SPSS や BMDP にインポートされる場合があります。
 
-### Exporting EEG data in binary formats
+### バイナリ形式でEEGデータをエクスポートする
 
-You may use different EEGLAB menu items to exporting to different EEG formats.
+異なる EEGLAB メニュー項目を使用して、異なる EEG 形式にエクスポートできます。
 
--  EEG Data: European Data Format (16-bit) .edf, Biosemi .bdf, and BIOSIG .gdf formats. Use the <span style="color: brown">File → Exports → Data to EDF/BDF/GDF file</span> menu item. This requires BIOSIG to be installed (you will be prompted to install BIOSIG if it is not installed).
+-  エッグ データ:ヨーロッパデータフォーマット(16ビット).edf、Biosemi .bdf、BIOSIG .gdfフォーマット。 利用する <span style="color: brown">ファイル → エクスポート → EDF/BDF/GDF ファイルへのデータ</span> メニュー項目。 これは、BIOSIGをインストールする必要があります(インストールされていない場合はBIOSIGをインストールする必要があります)。
 
--  EEG Data: Brain Vision Analyzer, .dat, .vhdr, .vmrk. Use the <span style="color: brown">File → Exports → Write Brain Vis. Exchange format file</span> menu item. This requires the [bva-io](https://github.com/arnodelorme/bva-io) plugin to be installed.
+-  エッグ データ:脳の視野の検光子、.dat、.vhdr、.vmrk。 利用する <span style="color: brown">ファイル → エクスポート → Brain Vis を書く。 交換形式ファイル</span> メニュー項目。 これは、 [bva-io(ババオ)](https://github.com/arnodelorme/bva-io) インストールするプラグイン。
 
--  EEG Data: MFF EGI format, .mff. Use the <span style="color: brown">File → Exports → EGI .mff file</span> menu item. This requires the [mffMatlabIO](https://github.com/arnodelorme/mffMatlabIO) plugin to be installed.
+-  エッグ データ: MFF EGIのフォーマット、.mff。 利用する <span style="color: brown">ファイル → エクスポート → EGI .mff ファイル</span> メニュー項目。 これは、 [mffMatlabIOの動画](https://github.com/arnodelorme/mffMatlabIO) インストールするプラグイン。
 
--  EEG Data: Neuroscan .cnt (beta). This can be done from the command line using the *writecnt.m* function. This requires the [neuroscanio](https://github.com/sccn/neuroscanio) plugin to be installed.
+-  エッグ データ: Neuroscan .cnt (ベータ)。 *writecnt.m*関数を使ってコマンドラインから実行できます。 これは、 [神経癌](https://github.com/sccn/neuroscanio) インストールするプラグイン。
 
-### Exporting data as BIDS
+### BIDSとしてデータをエクスポートする
 
-Refer to the [bids-matlab-io EEGLAB plugin tutorial](https://github.com/sccn/bids-matlab-tools/wiki) for exporting EEGLAB studies as BIDS (Brain Imaging Data Structure) archives.
+参照して下さい [bids-matlab-io EEGLABプラグインチュートリアル](https://github.com/sccn/bids-matlab-tools/wiki) BIDS(Brain Imaging Data Structure)のアーカイブとしてEEGLABの研究をエクスポートします。
 
-Exporting ICA weights and inverse weight matrices
+ICA の重量および逆の重量のマトリックスを輸出する
 ---
 
-Use menu item <span style="color: brown">File → Export→ Weight matrix to text file</span> to export the ICA unmixing matrix (weights\*sphere). Simply
-enter a file name in the pop-up window and press *Save*.
+メニュー項目を使用する <span style="color: brown">ファイル→エクスポート→テキストファイルへの重量行列</span> ICAの混合のマトリックス(weights\*sphere)を輸出するため。 シンプル
+ポップアップウィンドウにファイル名を入力し、*Save*を押します。
 
-The text file on disk then contains the weight matrix. It may be
-re-imported into another EEGLAB dataset using menu item
-<span style="color: brown">Edit → Dataset info</span>. As shown below, enter the
-filename in the *ICA weight array* edit box. Leave the sphere edit box
-empty, or empty it if it is not empty. See the [ICA decomposition
-tutorial](/tutorials/06_RejectArtifacts/RunICA.html) for more
-details on sphere and weight matrices.
+ディスク上のテキストファイルでは、重量行列が含まれています。 お問い合わせ
+メニュー項目を使用して別のEEGLABデータセットに再インポート
+<span style="color: brown">編集 → データセット情報</span>お問い合わせ 以下に示すように、
+*ICA重量配列*編集ボックスのファイル名。 球の編集箱を残して下さい
+空にするか、空にしないと空にしてください。 [ICA分解]を参照してください。
+チュートリアル:(/tutorials/06_RejectArtifacts/RunICA.html) より
+球および重量のマトリックスの細部。
 
 ![](/assets/images/Pop_editset.gif)
 
-Exporting events
+イベントのエクスポート
 ---
 
-Event information can also be exported to a .txt file (a plain text file
-containing tab-separated values). This
-file can be opened with any text editor, OpenOffice Calc, or Microsoft
-Excel, for example. 
+イベント情報は .txt ファイル(プレーンテキストファイル)にもエクスポートできます。
+タブ区切り値を含む)。 お問い合わせ
+ファイルは、任意のテキストエディタ、OpenOffice Calc、またはMicrosoftで開くことができます
+たとえばExcelなど。 
 
-You may import the tutorial data <i>eeglab_data.set</i> in the
-<i>sample_data</i> under EEGLAB.
-To export all events of the currently loaded EEG
-file, select the menu item <span style="color: brown">File → Export → Events to text file</span>. A dialog window pops
-up asking for the name and location of the .csv file. The first row of
-the file contains the names of the event fields. Note that there is
-an additional column "number", which is not an event field.
+チュートリアルデータをインポートすることができます <i>eeglab_data.set ディレクティブ</i> お問い合わせ
+<i>サンプルデータ</i> EEGLAB では
+現在ロードされたEEGのすべてのイベントをエクスポートするには
+file, メニュー項目を選択 <span style="color: brown">ファイル → エクスポート → テキストファイルへのイベント</span>お問い合わせ ダイアログウィンドウのポップアップ
+.csv ファイルの名前と場所を尋ねます。 最初の行
+ファイルがイベントフィールドの名前が含まれています。 ご注意
+イベントフィールドではない追加のカラム "number" 。
 
 ![](/assets/images/Spreadsheet_event.png)
 
-If you want more control over export options, you should use the command-line version of the [pop_expevents.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_expevents.m) function. An alternative 
-function, [eeg_eventtable.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_eventtable.m), has additional options for exporting events.
+エクスポートオプションをもっとコントロールしたい場合は、コマンドラインバージョンのコマンド・ライン・バージョンを使用する必要があります。 [pop_expevents.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_expevents.m) 機能。 代替手段 
+機能, [eeg_eventtable.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_eventtable.m)、でき事を輸出するための付加的な選択があります。
 
-Exporting output and STUDY results
+出力とSTUDY結果のエクスポート
 ---
-The [scripting tutorial section](/tutorials/11_Scripting/command_line_study_functions.html#saving-results-for-processing-in-other-software-packages) describes solutions for exporting any results to a text or Excel file for subsequent processing in SPSS, Statistica, Stata, R, SAS, and Excel.
+ふりがな [スクリプトチュートリアルセクション](/tutorials/11_Scripting/command_line_study_functions.html#saving-results-for-processing-in-other-software-packages) SPSS、Statistica、Sta、R、SAS、Excel で以降の処理のために、任意の結果をテキストまたはExcelファイルにエクスポートするためのソリューションについて説明します。

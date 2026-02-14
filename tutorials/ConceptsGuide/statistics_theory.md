@@ -6,242 +6,242 @@ parent: Concepts guide
 grand_parent: Tutorials
 ---
 
-Statistics in EEGLAB
+EEGLABの統計
 ==============================
-{: .no_toc }
+お問い合わせ
 
-Computing statistics is essential to the observation of group, session,
-and/or condition measure differences. EEGLAB allows users to use either
-parametric or non-parametric statistics to compute and estimate the
-reliability of these differences across conditions and/or groups.
-Here we describe some essential concepts behind the statistical methods implemented in EEGLAB. For a complete introduction to robust statistics in EEG research, you may watch this series of short videos. Click on the icon on the top right corner to access the list of videos in the playlist.
+グループ、セッションの観察には、計算統計が不可欠です。
+そして/または条件は相違を測定します。 EEGLAB では、ユーザがどちらでも利用することができます。
+パラメトリックまたは非パラメトリックの統計を計算し、推定する
+条件および/またはグループを渡るこれらの相違の信頼性。
+ここでは、EEGLABで実装された統計的方法の背後にある重要な概念について説明します。 EEGの研究で堅牢な統計情報の完全な導入のために、あなたはこのシリーズの短いビデオを見ることができます。 右上のアイコンをクリックして、プレイリスト内の動画のリストにアクセスします。
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN3M_CGqAOEIIOKhjTPS9T2n" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
 
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
 
-Different types of inferential statistics
+異なる種類の固有の統計
 ------------------------------
 
-What is the best way of doing statistics on your data?
-Do you have continuous numerical data, categorical/discrete data? For
-discrete data, you may use binomial, chi2, or Cochran's Q test, depending
-on your design. We will assume here that you have continuous numerical EEG data.
+データの統計を行う最良の方法は?
+連続した数値データ、分類/分離データはありますか? お問い合わせ
+ディスクリートデータ、binomial、chi2、またはCochranのQテストを使用する場合があります。
+あなたの設計で。 連続した数値 EEG のデータがあると仮定します。
 
-### Parametric statistics
+### パラメトリック統計
 
-If your data is Gaussian, you will want to use t-test (paired or
-unpaired), repeated measure ANOVA if you have more than two conditions or
-n x m design. Note that depending on your design, some complex version
-of ANOVA might be required. For example, if you want to blend ANOVA and
-regression, you will have to use an ANCOVA. Note that even if your data
-is not Gaussian, parametric tests may be used. However, their power may
-be reduced compared to other tests.
+データがGaussianの場合、t-test(ペアリングまたは
+あなたが2つの条件以上の場合、または
+n x mの設計。 あなたの設計に応じて、いくつかの複雑なバージョンに注意
+ANOVAの必要はあります。 例えば、ANOVAとANOVAを融合させたい、
+ANCOVAを使用する必要があります。 データがデータであっても注意
+Gaussian ではなく、パラメトリックテストを使用できます。 しかし、その力は、
+他の試験と比較して削減します。
 
-Some transformation might be necessary in some cases to make the data more Gaussian. The most common is to
-log-transform spectral EEG power.
+一部のトランスフォーメーションは、データがGaussianをより多くのものにするためにいくつかのケースで必要である可能性があります。 最も一般的なのは、
+ログトランスフォームスペクトルEEGパワー。
 
-### Non-parametric statistics
+### 非パラメトリック統計
 
-Equivalent non-parametric tests exist for all the parametric tests.
-These tests assume a Gaussian probability distribution of the rank of
-the sorted data values. (t-test paired -\> Sign test or Wilcoxon test;
-unpaired t-test -\> Mann Whitney U test; ANOVA -\> Krukal Walis and
-Friedman test). These types of inferential statistics are usually not used on EEG data and are not available in EEGLAB.
+すべてのパラメトリックテストで同等の非パラメトリックテストが存在します。
+これらのテストは、ガウスの確率分布を仮定します
+ソートされたデータ値。 (t-test ペアリング -\) 署名テストかWilcoxonテスト;
+unpaired t-test -\> Mann Whitney Uテスト; ANOVA -\> クルカル・ワリスと
+フライドマンテスト EEGデータでは、これらの種類の非有効な統計が使われず、EEGLABでは利用できません。
 
-### Use of surrogate tests for non-Gaussian data
+### 非Gaussianデータの代理テストの使用
 
-Surrogate tests are ideals for EEG data because they make no assumption on the data
-distribution. Surrogate tests consist of repetitively shuffling values
-between conditions and recompute the measure of interest using the
-shuffled data (for example, the difference between 2 conditions). We then
-obtain a distribution of difference, and we can see if the original
-difference is in the tail of this distribution. Under the null
-hypothesis of no difference between the conditions, the original
-difference should not be in the tail. If it is, we can assess the
-probability of rejecting H0. Permutation and bootstrap test are two
-surrogate tests. Permutation performs drawing of data samples without
-replacement, and bootstrap performs drawing with replacement. In theory,
-bootstrap is more valid since draws are independent of each other. In
-practice, there is little difference between the two tests. The main
-drawback of such approaches is that they can take longer to compute.
+サーロゲートテストは、データを想定しないため、EEGデータに理想的です。
+分布。 Surrogate テストは、繰り返し値のシャッフルから構成されます
+条件間で、利息の対策を講じる
+shuffledデータ(例えば、2つの条件の違い)。 お問い合わせ
+相違の配分を得、元のかどうかを見ることができます
+違いは、この分布の尾にあります。 null で
+条件、元の違いの仮説
+違いは尾にならない。 もしあれば、評価できます。
+H0を拒絶する確率。 透過率とブートストラップテストは2
+テストを代理します。 Permutation はデータサンプルのデッサンをなしで行ないます
+交換、ブートストラップは交換で描画を行います。 理論では、
+ドローが互いに独立しているので、ブートストラップはより有効です。 お問い合わせ
+練習は2つのテストと若干の違いがあります。 メインページ
+このようなアプローチの欠点は、計算に時間がかかることができることです。
 
-The cleaner the data, the easier the statistics. But getting clean data
-is an effort in itself. When outliers are present, surrogate tests are
-the most robust. However, even a surrogate test may fail in these
-conditions. The solution is to trim the distribution of value at each
-iteration of the test.
+データのクリーナー、統計が容易になります。 しかし、きれいなデータを取得する
+自らの努力です。 アウトリアが存在する場合、テストを監視します。
+最も堅牢です。 しかしながら、これらでも、代理テストが失敗する可能性がある
+条件。 ソリューションは、それぞれの値の分布をトリムすることです。
+テストの反復。
 
-We recommend using parametric tests for data exploration
-since they are fast to compute. However, for publication, we recommend using surrogate tests.
+データ探索のためのパラメトリックテストを使用することをお勧めします
+彼らは高速に計算するので. ただし、出版物については、代理テストの使用をお勧めします。
 
-Statistics implemented in EEGLAB
+EEGLABで実施された統計
 -----------------------------------------
-EEGLAB allows performing classical parametric tests (paired t-test,
-unpaired t-test, ANOVA) on ERPs, power spectra, ERSPs, and ITCs. 
+EEGLABは、古典的なパラメトリックテスト(ペアリングテスト)を実行できます。
+ERPs、パワースペクトラ、ERSPs、およびICCs上の不断のtテスト、ANOVA)。 
 
-*Below, we will use channel ERPs as an example, though in general, we recommend
-source-resolved measures be used instead. This
-is because no data features of interest are generated in the
-scalp, but rather in the brain itself.*
+※ただし、一般的には、チャンネルERPを例に使っています。
+ソース解決された対策は、代わりに使用されます。 お問い合わせ
+興味のデータは生成されないためです。
+頭皮ではなく、脳自体で。 * 必須
 
-For example, given 15 subjects' ERPs for two task or stimulus
-conditions, EEGLAB functions can perform a simple two-tailed paired
-t-test at each trial latency on the average ERPs from each subject. 
+例えば, 与えられた 15 二つのタスクまたは刺激のための主題のERP
+条件、EEGLAB 関数は、単純な2尾のペアリングを実行できます。
+各被験者の平均ERPに関する各試験遅延でt-test。 
 
-If there are different numbers of subjects in each condition, EEGLAB will
-use an unpaired t-test. If there are more than two STUDY conditions,
-EEGLAB will use ANOVA instead of a t-test. For mean power spectra, the
-p-values are computed at every frequency; for ERSP and ITC
-time/frequency transforms, p-values are computed at every time/frequency
-point.
+各条件に異なる被験者数がある場合、EEGLABは
+unpaired t-test を使用します。 2つのSTUDY条件以上の場合、
+EEGLABは、T-testの代わりにANOVAを使用します。 平均出力スペクトルのため、
+p-values はすべての周波数で計算されます。 ERSP と ITC の場合
+time/frequency は、毎回 p-values が計算されます。
+ポイント。
 
-EEGLAB functions can also compute non-parametric statistics. The null
-hypothesis is that there is no difference between the conditions. In this
-case, the average difference between the ERPs for two conditions should
-lie within the average difference between 'surrogate' grand mean
-condition ERPs, averages of ERPs from the two conditions whose condition
-assignments have been shuffled randomly. An example follows:
+EEGLAB関数は、非パラメトリック統計を計算することもできます。 null の
+仮説は、条件の違いがないことです。 お問い合わせ
+場合、2つの条件のERP間の平均差は、
+'surrogate'の壮大な平均間の平均的な相違内の嘘
+条件ERP、条件条件2つの条件からのERPの平均
+ランダムにシャッフルされている。 例は以下のとおりです。
 
-Given 15 subjects and two conditions, let us use
-<span style="color: red"> a1, a2, a3, ... a15</span>, the scalp
-channel ERP values (in microvolts) at 300 ms for all 15 subjects in
-the first condition, and <span style="color: green">b1, b2, b3, ... b15</span>,
- the ERP values for the second condition. 
+15の件数と2つの条件を考えると、使用してみましょう
+<span style="color: red"> a1, a2, a3, ... a15</span>, スカルプ
+チャンネル ERP 値 (マイクロボルトで) 300 ms の全ての 15 件
+最初の条件、および <span style="color: green">b1、b2、b3、...b15</span>,
+ 2番目の条件のERP値。 
 
- The grand average ERP condition difference is
+ 壮大な平均ERP条件差は、
 >
-<span style="color: blue">d</span> = mean(
-(<span style= "color: red">a1</span>-<span style="color: green">b1</span>) +
-(<span style= "color: red">a2</span>-<span style="color: green">b2</span>) + ... +
-(<span style= "color: red">a15</span>-<span style="color: green">b15</span>) ).
+<span style="color: blue">ログイン</span> = 平均()
+(<span style= "color: red">a1の</span>-<span style="color: green">b1の</span>) +
+(<span style= "color: red">a2の</span>-<span style="color: green">b2</span>) + ... +
+(<span style= "color: red">a15の</span>-<span style="color: green">b15の</span>) ).
 
-Now, if we repeatedly shuffle these values between the two condition
-(under the null hypothesis that there are no significant differences
-between them), and then average the shuffled values,
+今度は、2つの条件間のこれらの値を繰り返しシャッフルすれば
+(大幅な違いがない場合のヌル仮説の下)
+それらの間で)、そしてそれからシャッフルされた値の平均、
 >
-<span style="color: blue">d1</span> = mean(
-(<span style="color: green">b1</span>-<span style = "color: red">a1</span>) +
-(<span style = "color: red">a2</span>-<span style="color: green">b2</span>) + ... +
-(<span style="color: green">b15</span>-<span style = "color: red">a15</span>) ).
+<span style="color: blue">d1の</span> = 平均()
+(<span style="color: green">b1の</span>-<span style = "color: red">a1の</span>) +
+(<span style = "color: red">a2の</span>-<span style="color: green">b2</span>) + ... +
+(<span style="color: green">b15の</span>-<span style = "color: red">a15の</span>) ).
 >
-<span style="color: blue">d2</span> = mean(
-(<span style="color: red">a1</span>-<span style="color: green">b1</span>) +
-(<span style="color: green">b2</span>-<span style="color: red">a2</span>) + ... +
-(<span style="color: red">a15</span>-<span style="color: green">b15</span>) ).
+<span style="color: blue">d2の</span> = 平均()
+(<span style="color: red">a1の</span>-<span style="color: green">b1の</span>) +
+(<span style="color: green">b2</span>-<span style="color: red">a2の</span>) + ... +
+(<span style="color: red">a15の</span>-<span style="color: green">b15の</span>) ).
 >
-<span style="color: blue">d3</span> = mean(
-(<span style="color: green">b1</span>-<span style="color: red">a1</span>) +
-(<span style="color: green">b2</span>-<span style="color: red">a2</span>) + ... +
-(<span style="color: red">a15</span>-<span style="color: green">b15</span>) ).
+<span style="color: blue">d3</span> = 平均()
+(<span style="color: green">b1の</span>-<span style="color: red">a1の</span>) +
+(<span style="color: green">b2</span>-<span style="color: red">a2の</span>) + ... +
+(<span style="color: red">a15の</span>-<span style="color: green">b15の</span>) ).
 ...
 
-We then obtain a distribution of surrogate condition-mean ERP values
-<i>dx</i> constructed using the null hypothesis (see their smoothed
-histogram below). If we observe that the initial value <i>d</i> lies
-in the very tail of this surrogate value distribution, then the
-supposed null hypothesis (no difference between conditions) may be
-rejected as highly unlikely, and the observed condition difference may
-be said to be statistically valid or significant.
+その後、surrogate条件-mean ERP値の分布を取得します
+<i>ドックス</i> null仮説を使用して構築された(スムース表示を参照)
+ヒストグラム以下 初期値を観察する場合 <i>ログイン</i> クチコミ
+この代理価値配分の非常に尾で、それから
+null 仮説 (条件の違いはありません) は
+同様に拒絶され、観察された状態の相違はかもしれない
+統計的に有効または有意であると言われています。
 
 
 
 
-![Image:Statistics.gif](/assets/images/Statistics.gif)
+![画像:Statistics.gif](/assets/images/Statistics.gif)
 
 
 
-Note that the surrogate value distribution above can take any shape and
-does not need to be gaussian. In practice, we do not compute the mean
-condition ERP difference, but its t-value (the mean difference divided
-by the standard deviation of the difference and multiplied by the square
-root of the number of observations less one). The result is equivalent
-to using the mean difference. The advantage is that when we have more
-conditions, we can use the comparable ANOVA measure. Computing the
-probability density distribution of the t-test or ANOVA is only a
-"trick" to be able to obtain a distance measure across all subjects
-and conditions. It has nothing to do with relying on a parametric t-test
-or ANOVA model, which assume underlying gaussian value distributions.
+上記の代理値分布が任意の形状を取ることができることに注意してください。
+ガウスは必要ありません。 練習では意味を計算しません
+条件 ERP の違いが、その t 値 (定義された意味の違い)
+正方形の差と乗算の標準的な偏差
+観察回数のルートが少ない)。 結果は等しいです
+意味の違いを使用する。 利点は私達がより多くのを持っているときです
+条件、私達は同等のANOVAの測定をしてもいいです。 コンピューティング
+t-test または ANOVA の確率密度分布は、
+すべての被験者を横断する距離測定を得ることができる「トリック」
+そして条件。 パラメトリックt-testに依存して何もしない
+またはアノバモデルは、ガウス値分布を根本的に想定しています。
 
-Correcting for multiple comparisons
+複数の比較修正
 ----------------------------------
 
-When performing a large number of statistical inferences, it is
-necessary to correct for multiple comparisons. For example, with a
-statistical threshold at p\<0.05, by definition, about 5% of the inferred
-significant values will be false positives. We advise watching the short video on [correction for multiple comparisons on Youtube](https://youtu.be/DQQAkID0vNQ).
+多数の統計的推論を行う場合、
+複数の比較を修正する必要があります。 例えば、
+p\<0.05、定義による統計的閾値、推論値の5%
+重要な値は偽陽性になります。 短いビデオを見ることをお勧めします [YouTubeに掲載されている複数の比較の修正](https://youtu.be/DQQAkID0vNQ).
 
-There are several methods for correcting for multiple comparisons.
+複数の比較を修正するためのいくつかの方法があります。
 
--   <b>Bonferroni</b>: The most conservative method, the Bonferroni
-    method, simply divides the p-value by the number of comparisons. For
-    example, when computing ERSP time-frequency images of 100
-    frequencies by 200 time points, the number of inferences is 20,000.
-    To correct for multiple comparisons at p\<0.05, a statistical
-    threshold of 0.05/20000 = 0.0000025 should be applied. This method
-    is quite conservative as, essentially, it assumes (erroneously) that
-    all time/frequency values are independent.
+-   <b>ボンフェロニ</b>: : : 最も保守的な方法、ボンフェロニ
+    メソッドは、比較数でp-valueを分割するだけです。 お問い合わせ
+    例えば、100 の ERSP の時間頻度イメージを計算するとき
+    200点の周波数、推論回数は20,000点です。
+    p\<0.05で複数の比較を修正するには、統計
+    0.05/20000 = 0.0000025のしきい値が適用されます。 この方法
+    としてかなり保守的です, 基本的に, それは仮定します (誤って) その
+    すべての時間/頻度は独立しています。
 
--   <b>Holm's method</b>: Holm's method, also called Holm-Bonferroni's
-    method, is not as conservative. Actual uncorrected p-values are
-    sorted and, to assess whether a given p-value reaches the corrected
-    threshold for multiple comparisons, the lowest uncorrected p-value is
-    compared to the Bonferroni statistical threshold of 0.05/20000. Next,
-    the second-lowest is compared to a statistical threshold of
-    0.05/(20000-1), etc. The highest uncorrected p-value is compared to
-    the uncorrected threshold of 0.05/(20000-19999)=0.05.
+-   <b>ホルムの方法</b>: : : Holm'sメソッド、ホルム・ボンフェロニとも呼ばれる
+    メソッドは保守的ではありません。 実際の未修正p値が
+    ソートされ、指定された p 値が正しい値に達するかどうかを評価する
+    複数の比較のためのしきい値、最も低い誤ったp値が
+    0.05/20000のBonferroniの統計的なしきい値と比較される。 次へ
+    第2位は統計的閾値と比較して
+    0.05/(20000-1)、等。 最小限のp値と比較して、
+    0.05/(20000-19999)=0.05の誤ったしきい値。
 
 <!-- -->
 
--   <b>False Discovery Rate:</b> The False Discovery Rate (FDR) method
-    corrects for the percentage of false positives (no more than 0.05% false positives with a 0.05 p-value threshold). This is different from Bonferroni and Holm-Bonferroni, which correct for the family-wise error rate (aiming to achieve no more false positives than when performing a single statistical test).  FDR and Holm-Bonferroni use the same procedure to assess significance, except for FDR, the gradient of p-value threshold between the Bonferroni corrected, and uncorrected p-value is linear (while it is inverse for Holm-Bonferroni).
+-   <b>偽の発見 レート:</b> 偽の発見率(FDR)方式
+    偽陽性の割合(0.05 p値のしきい値で0.05%以上の偽陽性)の修正。 これは、家族的なエラーレート(単一の統計テストを実行するよりも、より多くの偽陽性を達成するために)のために正しいボネロニとホルムボンフェロニとは異なります。 FDR と Holm-Bonferroni は、FDR 以外の重要性を評価するために同じ手順を使用します。, 修正された Bonferroni の間の p 値のしきい値の勾配, 未修正 p 値が線形です (ホルム・ボンフェロニの逆です).
 
-In EEGLAB, other methods are made available using statistics routines written
-for FieldTrip and LIMO -- the max, cluster, and TFCE methods. These methods are now widely been used, but are only available when using
-    non-parametric (surrogate data-based statistics).
+EEGLABでは、他のメソッドは書かれた統計ルーチンを使用して利用できます。
+FieldTrip と LIMO -- は、最大、クラスター、および TFCE メソッドです。 これらの方法は広く使われていますが、使用時にのみ使用可能です。
+    非パラメトリック(データベースの統計を代理)。
 
--   <b>Max method:</b> At each iteration
-    in computing a surrogate distribution of a time-frequency
-    decomposition (for example), the maximum statistic across all
-    time-frequency points is calculated. The surrogate distribution is
-    compiled of these <i>maximum</i> statistics. The original statistics
-    (for example, t-scores) at all time-frequency points are compared
-    against this unique surrogate distribution (instead of each
-    time-frequency point being compared to its corresponding surrogate
-    distribution as in the other methods).
+-   <b>最高の方法:</b> 各反復で
+    時間の頻度の代理分布を計算する
+    分解(例えば)、すべての全体で最大の統計
+    時間頻度ポイントを計算します。 代理配分はあります
+    これらのコンパイル <i>マックス</i> 統計情報 元の統計
+    (例:t-scores) は、すべての周波数点で比較されます。
+    このユニークな代理販売に対して(各々の代わりに)
+    その対応する代理と比較して時間頻度ポイント
+    他の方法のように分布。
 
--   <b>Cluster method:</b> The cluster method is also only available
-    when using non-parametric (surrogate) statistics. It is similar to the max method. Instead of using the raw statistics, it uses the size of significant regions (uncorrected) as the statistics.
+-   <b>クラスタメソッド:</b> クラスターメソッドも利用できます
+    非パラメトリック(代理)統計を使用する場合。 maxメソッドに似ています。 生の統計を使用する代わりに、統計として重要な領域(未修正)のサイズを使用します。
 
--   <b>Threshold free cluster enhancement (TFCE) method:</b> The TFCE method is only available in the EEGLAB LIMO plugin. It consists in enhancing statistical values (for example, t-statistics) if they belong to a cluster of similar values. After cluster enhancement, it then uses the max method. 
+-   <b>Thresholdの自由なクラスターの強化(TFCE)方法:</b> TFCE メソッドは EEGLAB LIMO プラグインでのみ利用できます。 類似した値のクラスターに属している場合、統計値(例えば、t-statistics)を強化する。 クラスターの強化後、maxメソッドを使用します。 
 
-General Linear Modelling in EEGLAB 
+EEGLABの一般的なリニアモデリング 
 ----------------------------------
 
-For complex design, you might also want to build a design matrix as this
-is done in the SPM software package for processing fMRI data, for example. Once you have design matrix, you may use a
-general linear model to fit parameters. The [LIMO statistics video series](https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2Vrzte9ul3nrrG8AgB5OkU) introduces general linear modeling using EEGLAB and the [LIMO toolbox](https://limo-eeg-toolbox.github.io/limo_meeg/). General linear models encompass all linear statistics and offer a general framework for performing statistics on EEG data.
+複雑な設計では、設計行列をこのように構築することも可能です。
+たとえばfMRIデータを処理するためのSPMソフトウェアパッケージで行われます。 設計行列がある場合には、
+パラメータに合った一般的なリニアモデル。 ふりがな [LIMO統計ビデオシリーズ](https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2Vrzte9ul3nrrG8AgB5OkU) EEGLABとEEGLABを用いた一般的なリニアモデリングを紹介します。 [LIMOツールボックス](https://limo-eeg-toolbox.github.io/limo_meeg/)お問い合わせ 一般的なリニアモデルは、すべての線形統計を網羅し、EEGデータの統計を実行するための一般的なフレームワークを提供します。
 
-Additional tips and resources
+追加のヒントとリソース
 ---------------------
 
-<b>Do not:</b> p-hacking consist in testing all possible combination of
-test and data transformation in the hope that one test will be
-significant (and it usually will!). Obviously this type of practice
-should be discouraged. In practice, we like to check that several
-inference tests and methods for correcting for multiple comparisons and
-report all results in articles.
+<b>しない:</b> p-hacking は、すべての可能な組み合わせのテストで構成されます
+1つのテストが期待するテストとデータ変換
+重要な(そしてそれは通常!)。 明らかにこのタイプの練習
+捨てるべきです。 練習では、いくつか調べてみたい
+複数の比較を修正するための推論テストとメソッド
+記事のすべての結果を報告します。
 
-We suggest consulting a relevant statistics book for more details: An
-introduction to statistics written by Arnaud Delorme is available
-[here](http://sccn.ucsd.edu/~arno/mypapers/statistics.pdf). We also recommend Rand Wilcox's textbook on non-parametric statistics [Introduction to robust estimation and hypothesis testing](https://www.sciencedirect.com/book/9780123869838/introduction-to-robust-estimation-and-hypothesis-testing).
+詳細については、関連する統計書に相談することをお勧めします。 サインイン
+Arnaud Delormeで書かれた統計情報を紹介します。
+[詳しくはこちら](http://sccn.ucsd.edu/~arno/mypapers/statistics.pdf)お問い合わせ また、非パラメトリック統計でRan Wilcoxの教科書をお勧めします [堅牢な推定と仮説のテスト入門](https://www.sciencedirect.com/book/9780123869838/introduction-to-robust-estimation-and-hypothesis-testing).
 

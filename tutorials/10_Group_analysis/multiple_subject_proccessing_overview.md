@@ -5,138 +5,138 @@ long_title: a. Batch processing for groups of subjects
 parent: 10. Group analysis
 grand_parent: Tutorials 
 ---
-Batch processing of subjects' data
+被写体のデータの一括処理
 ====
-{: .no_toc }
+お問い合わせ
 
-In this tutorial, we introduce advanced elements of EEGLAB focused on processing multiple subjects. These topics
-are recommended to successfully analyze large-scale
-experiments, which go beyond single-subject analysis. 
+このチュートリアルでは、複数の被写体を処理することに重点を置いたEEGLABの高度な要素を紹介します。 これらのトピック
+大規模な分析を成功にお勧め
+単一サブジェクト解析を超えた実験。 
 
-In addition to reading this tutorial, you may want to watch the short video below on multiple subjects processing in EEGLAB:
+このチュートリアルを読むことに加えて、EEGLABで複数の被写体処理で以下の短いビデオを見たい場合があります。
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/-jL3PuHD3aY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Load multiple datasets
+複数のデータセットをロードする
 ----
-To explore the multiple-dataset processing functionality of EEGLAB, you must first load and select several datasets.
+EEGLABの複数のデータセット処理機能を探索するには、まず複数のデータセットをロードして選択する必要があります。
 
-In this tutorial, we will use a [5-subject experiment](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (450Mb). See the [STUDY creation tutorial](/tutorials/10_Group_analysis/study_creation.html) for more information on this data. 
+このチュートリアルでは、 [5-サブジェクト実験](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (450Mb)。 詳細はこちら [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html) このデータに関する詳細情報 
 
-After uncompressing the data archive, load one by one all the datasets in EEGLAB using the <span style="color: brown">File → Load existing dataset</span> menu item. When several datasets are in the same folder, they may be all selected and loaded in EEGLAB simultaneously, as shown below.
+データアーカイブを解凍した後、EEGLABのすべてのデータセットを1つずつ読み込む <span style="color: brown">ファイル → 既存のデータセットをロードする</span> メニュー項目。 複数のデータセットが同じフォルダにある場合、以下に示すように、EEGLAB で選択してロードされることがあります。
 
 ![](/assets/images/multisub1.png)
 
-Select multiple datasets for processing
+処理用に複数のデータセットを選択
 ----
 
-After importing all ten datasets, select the <span style="color: brown">Datasets → Select multiple datasets</span> menu item, as shown below.
+すべての10個のデータセットをインポートした後、 <span style="color: brown">データセット → 複数のデータセットを選択</span> 以下に示すようにメニュー項目。
 
 ![](/assets/images/multisub2.png)
 
-The following GUI will pop up. Select all ten datasets and press *Ok*.
+次のGUIがポップアップ表示されます。 10個のデータセットを選択し、*Ok*を押します。
 
 ![](/assets/images/multisub3.png)
 
-Perform batch processing
+バッチ処理を実行
 ----
-EEGLAB allows processing a collection of datasets, whether these datasets are organized in a *STUDY* or not. 
-When there are multiple current datasets, menu items unable to
-process multiple datasets are disabled. All available tools process data in a similar way. Upon menu selection,
-a menu window pops up (identical to the single dataset window) in which
-you may select processing parameters that are then applied to all the
-datasets. 
+EEGLABは、これらのデータセットが*STUDY*で編成されているか否か、データセットの収集を可能にします。 
+複数のデータセットがある場合、メニュー項目が表示されない
+複数のデータセットが無効になっています。 すべての利用可能なツールは、同様の方法でデータを処理します。 メニュー選択時、
+メニューウィンドウがポップアップ(単一のデータセットウィンドウに識別)
+処理パラメータを選択すると、すべてのパラメーターが適用されます。
+データセット。 
 
-Note that the behavior of EEGLAB will differ depending on your optional settings under
-<span style="color: brown">File → Preferences</span>.
+EEGLABの動作はオプションの設定により異なりますのでご注意ください。
+<span style="color: brown">ファイル → 環境設定</span>.
 
-- If you allow only one
-dataset to be present in memory at a time (see the [dataset management](/tutorials/03_Dataset_management/datasets.html) section of the tutorial sfor more details), existing
-datasets will be automatically overwritten *on disk* (a warning window will appear).
+- 1つだけを許可する
+メモリに存在するデータセット(参照) [データセット管理](/tutorials/03_Dataset_management/datasets.html) チュートリアルのセクション sfor 詳細情報), 既存の
+データセットは、自動的にオーバー書き込みされます*ディスク*(警告ウィンドウが表示されます)。
 
-- However, suppose you allow all datasets to be present in memory simultaneously. In that case, only the
-datasets in memory will be overwritten, and their copies in disk files
-will not be affected (you may then select menu item
-<span style="color: brown">File → Save current dataset(s)</span> to save all the
-currently selected datasets).
+- しかしながら、すべてのデータセットを同時にメモリに提示できるようにしましょう。 その場合、唯一の
+メモリ内のデータセットは上書きされ、ディスクファイルのコピーは上書きされます。
+影響を受けない(メニュー項目を選択したらよい)
+<span style="color: brown">ファイル → 現在のデータセットを保存します。</span> すべて保存する
+現在、選択したデータセット。
 
-You may now select any available menu item to process the selected datasets. A standard sequence to process raw datasets could be:
-1. Remove unwanted channels using the <span style="color: brown">Edit → Select data</span> menu item.
-1. Look up channel locations using the <span style="color: brown">Edit → Channel locations</span> menu item.
-1. High-pass filter the data using the <span style="color: brown">Tools → Filter the data → Basic FIR filter</span> menu item.
-1. Perform automated artifact rejection using the <span style="color: brown">Tools → Reject data using Clean Rawdata and ASR</span> menu item.
-1. Re-reference the data using the <span style="color: brown">Tools → Re-reference the data</span> menu item.
-1. Run independent component analysis using the <span style="color: brown">Tools → Decompose data by ICA</span> menu item.
-1. Label components using the <span style="color: brown">Tools → Classify components using IClabel → Label components</span> menu item.
-1. Classify components using the <span style="color: brown">Tools → Classify components using IClabel → Flag components as artifact</span> menu item.
-1. Locate component equivalent dipoles using the <span style="color: brown">Tools → Locate dipoles using DIPFIT -> Head model and settings</span> menu item, and then the <span style="color: brown">Tools → Locate dipoles using DIPFIT -> Autofit</span> menu item.
-1. Extract data epochs using the <span style="color: brown">Tools → Extract epochs</span> menu item.
+選択したデータセットを処理するために利用可能なメニュー項目を選択できるようになりました。 生データセットを処理する標準的なシーケンスは次のことができます。
+1. 不要なチャンネルを削除 <span style="color: brown">編集 → データの選択</span> メニュー項目。
+1. チャンネルの位置を調べる <span style="color: brown">編集 → チャネルの場所</span> メニュー項目。
+1. ハイパスフィルタでデータをフィルタリング <span style="color: brown">ツール → データをフィルタリング → 基本 FIR フィルター</span> メニュー項目。
+1. 自動化されたアーティファクト拒否を実行します。 <span style="color: brown">ツール → Clean Rawdata と ASR を使用してデータを抽出する</span> メニュー項目。
+1. データを再参照する <span style="color: brown">ツール → データを再参照する</span> メニュー項目。
+1. 独立したコンポーネント分析を実行します。 <span style="color: brown">ツール → ICAによるデータの分解</span> メニュー項目。
+1. ラベルコンポーネントを使用して <span style="color: brown">ツール → IClabel → ラベルコンポーネントを使用してコンポーネントを分類する</span> メニュー項目。
+1. コンポーネントの分類 <span style="color: brown">ツール → IClabel → フラグコンポーネントを使用してコンポーネントをアーティファクトとして分類する</span> メニュー項目。
+1. コンポーネントの同等のダイポールを割り当てる <span style="color: brown">ツール → DIPFIT を使用したダイポールの検索 → ヘッドモデルと設定</span> メニュー項目およびそれから <span style="color: brown">ツール → DIPFIT を使用したダイポールの検索 → オートフィット</span> メニュー項目。
+1. データを抽出する epochs を使用して <span style="color: brown">ツール → 抽出エポック</span> メニュー項目。
 
-### Filter the datasets
+### データセットをフィルタリング
 
-The selected datasets are already processed and do not require additional processing. Nevertheless, we will simply filter them for illustrative purposes. Select the <span style="color: brown">Tools → Filter the data → Basic FIR filter</span> menu item. The following interface pops up. Enter *100* in the second edit box to low-pass filter the data below 100 Hz (this is half the 200 Hz sampling frequency and will not affect subsequent processing). Press *Ok*.
+選択したデータセットは既に処理され、追加の処理を必要としません。 それにもかかわらず、我々は単にイラストの目的のためにそれらをフィルタリングします。 選択する <span style="color: brown">ツール → データをフィルタリング → 基本 FIR フィルター</span> メニュー項目。 次のインターフェイスがポップアップ表示されます。 2 番目の編集ボックスに 100 Hz 未満のデータ (これは 200 Hz のサンプリング周波数の半分であり、その後の処理には影響しません) をフィルタリングします。 プレス *Ok*.
 
 ![](/assets/images/multisub5.png)
 
-EEGLAB asks for confirmation, warning that the datasets will be automatically overwritten on disk. Select *Proceed*.
+EEGLABは、データセットが自動的にディスク上に上書きされることを確認、警告を求めます。 お問い合わせ
 
 ![](/assets/images/multisub4.png)
 
-The datasets are filtered one by one and resaved on disk. All menu items mentioned previously work similarly.
+データセットは1つずつフィルタリングされ、ディスク上に再保存されます。 以前に述べたすべてのメニュー項目は同様に動作します。
 
-### Apply ICA
+### ICAを適用する
 
-Running ICA on multiple datasets is useful when you have two EEGLAB datasets for
-two conditions from a subject that were collected in the same session
-and want to perform ICA decomposition on their combined data. Using this
-option, you do not have to concatenate the datasets yourself; EEGLAB
-will detect that these two datasets belong to the same subject, merge them, run ICA, and save the (same) decomposition in each of the subject's datasets.
+複数のデータセットでICAを実行すると、EEGLABのデータセットが2つある場合に便利です。
+同じセッションで収集された被験者からの2つの条件
+ICAのデータを組み合わせて実行したい。 これを使う
+オプション、自分でデータセットを連結する必要はありません。 EEGLAB
+これらの2つのデータセットが同じ主題に属し、それらを結合し、ICAを実行し、各被写体のデータセットに分解(same)を保存します。
 
-The graphic interface for running ICA is a bit more elaborate. Select
-menu item <span style="color: brown">Tools \"> Run ICA</span>. The following
-window will appear.
+ICAを実行するためのグラフィックインターフェイスはもう少し精巧です。 選択する
+メニュー項目 <span style="color: brown">ツール \"> ICAの実行</span>お問い合わせ 以下について
+ウィンドウが表示されます。
 
 
 ![](/assets/images/pop_runica_multiple.png)
 
-By default, 
-[pop_runica.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m)
- will concatenate datasets from the same
-subject and session. For example, you may have several datasets time-locked to different classes of events, constituting several experimental
-conditions per subject, all collected in the same session with the same
-electrode montage. 
-By default (leaving the lowest checkbox checked), 
-[pop_runica.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m)  will perform ICA decomposition on the
-concatenated data trials from these datasets, and will then attach the
-same ICA unmixing weights and sphere matrices to each dataset.
-Information about the datasets selected for concatenation will be
-provided on the MATLAB command line before beginning the decomposition. Note that to apply [pop_runica.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m) to
-concatenated datasets, the datasets' epoch lengths are
-assumed to be equal.
+デフォルトでは、 
+[pop_runica.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m)
+ 同じデータセットを連結します。
+テーマとセッション。 たとえば、複数のデータセットがイベントの異なるクラスにタイムロックされ、複数の実験を構成できます。
+被写体ごとの条件、同じセッションで収集されるすべてのもの
+電極モンタージュ。 
+デフォルトでは(チェックボックスを最低限にしておく)、 
+[pop_runica.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m)  ICAの分解を行います。
+これらのデータセットからのデータ試用を連結し、その後、添付します
+同じICAは、各データセットに重量と球のマトリックスを混合します。
+連結用に選択したデータセットに関する情報は、
+MATLAB コマンドラインでデコンポジションを開始する前に提供しました。 応募方法 [pop_runica.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m) お問い合わせ
+連結データセット、データセットのエポックの長さは
+等しいと仮定される。
 
-If you wish (and have enough computer RAM), you may also ask 
-[pop_runica.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m) to load and concatenate all datasets before
-running ICA. We do not recommend this approach since it tacitly
-(and unreasonably) assumes that the very same brain and non-brain
-sources and the very same
-electrode positions exist in each session and/or subject.
+ご希望の場合(コンピューターのRAMが十分な場合)、お尋ねください。 
+[pop_runica.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m) 前にすべてのデータセットをロードして連結する
+ICAの運営 このアプローチをお勧めしません。
+(そして不当に)非常に同じ脳および非脳を仮定します
+ソースと非常に同じ
+各セッションおよび/または対象に電極の位置が存在します。
 
-Multiple-subject selection and EEGLAB studies
+複数のサブジェクト選択とEEGLAB研究
 ---
 
-After processing of all selected datasets, you may use menu item
-<span style="color:brown">File → Create Study → Using all loaded datasets</span> to create a study using all loaded datasets (if you only
-want to use the dataset you selected, you will have to remove the other
-datasets from the list of datasets to include in the STUDY). See the [group analysis tutorial](/tutorials/10_Group_analysis/) for more details.
+選択したすべてのデータセットの処理後、メニュー項目を使用できます。
+<span style="color:brown">ファイル → 研究の作成 → 読み込まれたすべてのデータセットの使用</span> すべての読み込まれたデータセットを使用して研究を作成する(あなただけの場合)
+選択したデータセットを使用するには、他のデータを削除する必要があります
+データセットのリストからSTUDYに含まれるデータセット。 詳細はこちら [グループ分析チュートリアル](/tutorials/10_Group_analysis/) 詳しくはこちら
 
-Note that you may also create a *STUDY* before processing datasets and then proceed to batch process them. Once a *STUDY* is created, all  *STUDY* datasets remain selected, and multi-subject processing menu items become available. See the [STUDY creation tutorial](/tutorials/10_Group_analysis/study_creation.html) on how to create a *STUDY*.
+データセットを処理する前に*STUDY*を作成して、バッチ処理に進むこともできます。 *STUDY*が作成されると、全ての*STUDY*データセットが選択され、複数のサブジェクト処理メニュー項目が使用可能になります。 詳細はこちら [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html) *STUDY*を作成する方法。
 

@@ -6,460 +6,460 @@ parent: 6. Reject artifacts
 grand_parent: Tutorials
 has_toc: false
 ---
-Independent Component Analysis for artifact removal
+アーティファクト除去のための独立したコンポーネント分析
 =====
-{: .no_toc }
+お問い合わせ
 
-Independent Component Analysis (ICA) may be used to remove/subtract artifacts embedded in the data (muscle, eye blinks, or eye movements) <i>without</i> removing the affected data portions. ICA may also be used to find brain sources, and we will come back to this topic in subsequent sections of the tutorial. For more theory and background 
-information on ICA you can also refer to the [Appendix](/tutorials/ConceptsGuide/ICA_background.html).
+独立したコンポーネント分析(ICA)は、データを埋め込まれたアーティファクト(筋肉、目線の点滅、または目の動き)を削除/抽出するために使用できます。 <i>なし</i> 影響を受けたデータ部分を外します。 ICAは脳のソースを見つけるためにも使用することができ、チュートリアルの後にこのトピックに戻ります。 より多くの理論と背景のため 
+ICAに関する情報も参照できる [アレンデックス](/tutorials/ConceptsGuide/ICA_background.html).
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Watch ICA presentations
+ICAプレゼンテーションを見る
 -----------------------
 
-You may watch below eleven short presentations on EEG independent component analysis (part of the EEGLAB online tutorial). If you click on the icon on the top right corner, you can see the list of all the videos in the playlist.
+EEGの独立したコンポーネント分析(EEGLABオンラインチュートリアルの一部)で11のショートプレゼンテーションを下回すことができます。 右上のアイコンをクリックすると、プレイリスト内のすべての動画のリストが表示されます。
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2uDadxZ_OEsHjzcRtlLNxc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
 
-Running ICA decompositions
+ランニングICA分解
 ---------------------------
 
-### Load the sample EEGLAB dataset
+### サンプル EEGLAB データセットをロードする
 
-Select menu item <span style="color: brown">File</span> and press sub-menu item
-<span style="color: brown">Load existing dataset</span>. Select the tutorial file "eeglab_data.set" located in the "sample_data" folder of EEGLAB. Then press *Open*.
+メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
+<span style="color: brown">既存のデータセットをロードする</span>お問い合わせ EEGLABの「sample_data」フォルダにある「eeglab_data.set」を選択します。 それから *Open*を押して下さい。
 
-![Image:Pop_loadset.png](/assets/images/Pop_loadset.png)
+![画像:Pop_loadset.png](/assets/images/Pop_loadset.png)
 
-In theory, you should go through rejecting bad channels and bad portions of data before running ICA. However, the tutorial dataset is clean enough for running ICA without prior artifact rejection.
+理論的には、ICAを実行する前に、悪いチャンネルとデータが悪い部分を拒絶して行く必要があります。 しかし、チュートリアルデータセットは、事前のアーティファクト拒否なしでICAを実行するのに十分です。
 
-This dataset already contains channel locations. However, when working with a dataset that does not have channel locations, select the <span style="color: brown">Edit → Channel locations</span> menu item and press *Ok* to look up channel locations based on channel labels, then close the channel editor.
+このデータセットには、既にチャンネルの場所が含まれています。 ただし、チャネルの場所を持たないデータセットで動作する場合、選択 <span style="color: brown">編集 → チャネルの場所</span> メニュー項目を押すと、チャンネルラベルに基づいてチャネルの位置を調べる*Ok*を押して、チャンネルエディタを閉じます。
 
-### Run ICA
+### ICAの実行
 
-To compute ICA components of a dataset of EEG epochs (or of a continuous
-EEGLAB dataset), select <span style="color: brown">Tools →  Decompose data by ICA</span>. 
-This
-calls the function [pop_runica.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m). To run ICA using the default options,
-simply press *Ok*.
+EEGのエポック(または連続した)のデータセットのICAコンポーネントを計算するには
+EEGLAB データセット <span style="color: brown">ツール → ICAによるデータの分解</span>. 
+お問い合わせ
+関数を呼び出す [pop_runica.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m)お問い合わせ デフォルトオプションを使用して ICA を実行するには、
+*Ok*を押してください。
 
 
 ![](/assets/images/Runica.gif)
 
 
 
-We detail each entry of this GUI in detail below.
+このGUIの各エントリーを以下に詳しく紹介します。
 
-### Which ICA Algorithm?
+### ICAアルゴリズムとは?
 
-EEGLAB allows users to try
-different ICA decomposition algorithms.  Infomax ICA using [runica.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=runica.m), Jader algorithm using [jader.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=jader.m), and the SOBI algorithm using the [sobi.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=sobi.m) are all part of the default EEGLAB distribution. Other options available in the dropdown list of algorithms are a modified version of SOBI for data epochs ([acsobiro.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=acsobiro.m)), and [binica.m](https://github.com/sccn/binica) which is a compiled C-version of Infomax (as opposed to the MATLAB [runica.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=runica.m) version).
+EEGLABは、ユーザーが試してみることを可能にします
+異なるICA分解アルゴリズム。 Infomax ICA の使用 [ラニカ。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=runica.m)、Jaderのアルゴリズムを使用して [ジェイダーム](http://sccn.ucsd.edu/eeglab/locatefile.php?file=jader.m)、およびSOBIアルゴリズムを使用して [ソビム](http://sccn.ucsd.edu/eeglab/locatefile.php?file=sobi.m) デフォルトの EEGLAB 分布のすべての部分です。 アルゴリズムのドロップダウンリストで利用可能なその他のオプションは、データエポック用のSOBIの修正版です()[acsobiro.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=acsobiro.m))、および [ログイン](https://github.com/sccn/binica) インフォマックスのコンパイルされたCバージョン(MATLABとは対照的) [ラニカ。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=runica.m) バージョン)
 
-To use the FastICA algorithm, one must install the [FastICA toolbox](http://www.cis.hut.fi/projects/ica/fastica/) and include it in the MATLAB path. You may also install the [ICALAB](http://bsp.teithe.gr/members/downloads/ICALABSignal.html) distribution, which contains other algorithms, or install the [Picard](https://github.com/pierreablin/picard) EEGLAB plugin, a version of Infomax implementing Newton optimization. ICA algorithms installed with these tools will automatically appear in the dropdown list of available ICA algorithms  in the previous section's graphic interface.
+FastICAアルゴリズムを使用するには、インストールする必要があります。 [FastICAツールボックス](http://www.cis.hut.fi/projects/ica/fastica/) MATLABパスに含める。 インストールすることもできます。 [ログイン](http://bsp.teithe.gr/members/downloads/ICALABSignal.html) 他のアルゴリズムを含む分布、またはインストール [ピカード](https://github.com/pierreablin/picard) EEGLAB プラグイン、Newton の最適化を実装する Infomax のバージョン。 これらのツールでインストールされたICAアルゴリズムは、前のセクションのグラフィックインターフェイスで利用可能なICAアルゴリズムのドロップダウンリストに自動的に表示されます。
 
-You may install the [Amica](https://github.com/japalmer29/amica) and [postAmicaUtility](https://github.com/sccn/postAmicaUtility) plugins to use Amica in EEGLAB. By contrast with other ICA algorithms, Amica does not use the standard ICA interface and creates its own sets of menus.
+あなたはインストールすることができます [アミカ](https://github.com/japalmer29/amica) そして、 [投稿者Amicaユーティリティ](https://github.com/sccn/postAmicaUtility) EEGLABでAmicaを使用するプラグイン。 他のICAアルゴリズムとは対照的に、Amicaは標準的なICAインターフェイスを使用しず、独自のメニューを作成します。
 
-Refer to the [ICA concept guide](/tutorials/ConceptsGuide/ICA_background.html#note-on-ica-algorithms) for further information on 
-the different ICA algorithms.
+参照して下さい [ICAコンセプトガイド](/tutorials/ConceptsGuide/ICA_background.html#note-on-ica-algorithms) 詳細情報 
+異なるICAアルゴリズム。
 
-*Important note* 
+*注意事項* 
 
-We usually run ICA using many more trials than
-the sample decomposition presented here. 
-ICA works best when given a large amount of basically similar
-and mostly clean data. When the number of channels (N) is large (\>\>32),
-then a considerable amount of data may be required to find N components.
-When insufficient data are available, then use the 'pca' option to find fewer than N components may be the only good
-option. In general, it is important to give ICA as
-much data as possible for successful training. 
-Refer to [the ICA concept guide](/tutorials/ConceptsGuide/ICA_background.html#how-many-data-points-do-i-need-to-run-an-ica) for more details.
+我々は通常、より多くの試験を使用してICAを実行します
+ここに示されるサンプル分解。 
+ICAは、基本的に同様の量を与えられたときに最善を尽くします
+主にクリーンなデータ。 チャネル数(N)が大きい場合(\>\>32)、
+次に、Nコンポーネントを見つけるには、かなりの量のデータが必要になります。
+不十分なデータが利用できる場合、N コンポーネントよりも少ない 'pca' オプションを使用してください。
+オプション。 一般的には、ICAをできるだけ与えることが重要です。
+成功するトレーニングのためにできるだけ多くのデータ。 
+詳しくはこちら [ICAコンセプトガイド](/tutorials/ConceptsGuide/ICA_background.html#how-many-data-points-do-i-need-to-run-an-ica) 詳しくはこちら
 
-### Selecting channel types 
+### チャネルタイプの選択 
 
-It is possible to select specific channel types
-(or even a list of channel numbers) to use for ICA decomposition. For
-instance, if you have both EEG and EMG channels, you may want to run ICA
-on EEG channels only since any relationship between EEG and EMG signals
-should involve propagation delays. ICA assumes an instantaneous
-relationship (e.g., common volume conduction). Use menu item <span style="color: brown">Edit →  Channel locations</span> to define channel
-types.
+特定のチャンネルタイプを選択することが可能
+(またはチャンネル番号の一覧) ICAの分解に使用する。 お問い合わせ
+例えば、EEG と EMG チャネルの両方を持っている場合は、ICA を実行したい場合
+EEG と EMG のシグナルとの間の関係は、EEG チャネルのみ
+伝搬遅延を伴う必要があります。 ICAはインスタンスを想定
+関係(例えば、一般的な容積の伝導)。 メニュー項目を使用する <span style="color: brown">編集 → チャネルの場所</span> チャンネルを定義する
+タイプ。
 
-### Command-line output
+### コマンドライン出力
 
-Running *runica.m* produces the following text on the MATLAB command line:
+run *runica.m* は MATLAB コマンドラインで次のテキストを生成します。
 
-        Input data size [32,30720] = 32 channels, 30720 frames.
-        Finding 32 ICA components using logistic ICA.
-        Initial learning rate will be 0.001, block size 36.
-        Learning rate will be multiplied by 0.9 whenever angledelta >= 60 deg.
-        Training will end when wchange < 1e-06 or after 512 steps.
-        Online bias adjustment will be used.
-        Removing mean of each channel ...
-        Final training data range: -145.3 to 309.344
-        Computing the sphering matrix...
-        Starting weights are the identity matrix ...
-        Sphering the data ...
-        Beginning ICA training ...
-        step 1 - lrate 0.001000, wchange 1.105647
-        step 2 - lrate 0.001000, wchange 0.670896
-        step 3 - lrate 0.001000, wchange 0.385967, angledelta 66.5 deg
-        step 4 - lrate 0.000900, wchange 0.352572, angledelta 92.0 deg
-        step 5 - lrate 0.000810, wchange 0.253948, angledelta 95.8 deg
-        step 6 - lrate 0.000729, wchange 0.239778, angledelta 96.8 deg
+        入力データサイズ [32,30720] = 32 チャンネル、30720 フレーム。
+        ロジスティックICAを使用して32 ICAコンポーネントを検索します。
+        初期学習率は0.001、ブロックサイズ36になります。
+        学習率は、角質 >=60度で0.9倍増します。
+        wchange < 1e-06 以降 512 の手順でトレーニングを終了します。
+        オンラインバイアス調整が使用されます。
+        各チャネルの平均を取除く...
+        最終的な訓練のデータ範囲:-145.3への309.344
+        球面の行列を計算する...
+        開始重量は、アイデンティティ行列です...
+        データをスフェリング...
+        ICAトレーニングを開始...
+        ステップ1 - lrate 0.001000、wchange 1.105647
+        ステップ2 - lrate 0.001000、wchange 0.670896
+        ステップ3 - lrate 0.001000、wchange 0.385967、angledelta 66.5 deg
+        ステップ4 - lrate 0.000900、wchange 0.352572、angledelta 92.0 deg
+        ステップ5 - lrate 0.000810、wchange 0.253948、angledelta 95.8 deg
+        ステップ6 - lrate 0.000729、wchange 0.239778、angledelta 96.8 deg
         ...
-        step 55 - lrate 0.000005, wchange 0.000001, angledelta 65.4 deg
-        step 56 - lrate 0.000004, wchange 0.000001, angledelta 63.1 deg
-        Inverting negative activations: 1 -2 -3 4 -5 6 7 8 9 10 -11 -12 -13 -14 -15 -16 17 -18 -19 -20 -21 -22 -23 24 -25 -26 -27 -28 -29 -30 31 -32
-        Sorting components in descending order of mean projected variance ...
+        ステップ55 - lrate 0.000005、wchange 0.000001、angledelta 65.4 deg
+        ステップ56 - lrate 0.000004、wchange 0.000001、angledelta 63.1 deg
+        逆転の否定的な活発化:1 -2 -3 4 -5 6 7 8 9 10 -11 -12 -13 -14 -15 -16 17 -18 -19 -20 -21 -23 24 -25 -26 -29 -29 -30 31 -32
+        平均の降下順序でコンポーネントをソートするプロジェクト分散...
         1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
 
 
-Note: The Infomax algorithm implemented in *runica.m* can only select for components with
-a super-gaussian activity distribution (i.e., more highly peaked than a
-Gaussian, something like an inverted T). If there is strong line noise
-in the data, use the option '' 'extended', 1'' in
-the command-line edit box (set as default), so the algorithm can also detect
-subgaussian sources of activity, such as line current and/or slow
-activity. 
+注: *runica.m* で実装された Infomax アルゴリズムは、コンポーネントのみで選択できます。
+スーパーガウスのアクティビティ分布(つまり、より高度にピークされたよりも
+Gaussian, 逆にTのようなもの. 強い線騒音がある場合
+データで、"extended"、1"をで使用して下さい
+コマンドライン編集ボックス(デフォルトで設定)なので、アルゴリズムも検出できます。
+ライン電流や/または遅いなどのアクティビティのサブガウスソース
+活動。 
 
-Another option we often use is the stop option: try '' 'stop', 1E-7'' to
-lower the criterion for stopping learning, thereby lengthening ICA
-training but possibly returning cleaner decompositions, particularly of
-high-density array data.
+私たちがよく使うもう1つのオプションは、ストップオプションです: 'stop', 1E-7''を試す
+学習を停止するための基準を下げ、それによってICAを延ばす
+訓練が、特に洗剤の分解を、戻すかもしれない
+高密度配列データ。
 
-*Important note:* Run twice on the same data, ICA decompositions under
-*runica.m* will differ slightly. That is, the ordering, scalp
-topography, and activity time courses of best-matching components may
-appear slightly different. This is because ICA decomposition starts with
-a random weight matrix (and randomly shuffles the data order in each
-training step), so the convergence is slightly different every time. Is
-this a problem? At the least, the decomposition features that do not
-remain stable across decompositions of the same data should not be
-interpreted except as irresolvable ICA uncertainty. The [RELICA](https://github.com/sccn/relica) plugin
-allows assessing the reliability of ICA decomposition when bootstrapping the data.
+*注意事項:* 同じデータで2回実行し、ICAは下で分解します
+※runica.m*は若干異なります。 つまり、注文、頭皮
+トポグラフィとベストマッチングコンポーネントのアクティビティタイムコースは、
+若干異なります。 ICAの分解が始まりますから
+ランダムな重量行列(およびランダムに各データ順をシャッフル)
+訓練のステップ)、従ってconvergenceは毎回少し異なります。 です。
+これは問題ですか? 少なくとも、分解機能は、ない
+同じデータの分解は安定していなければなりません
+不可解なICA不確実性を除いて解釈される。 ふりがな [リリカ](https://github.com/sccn/relica) プラグイン
+データをブートストラップする際にICA分解の信頼性を評価することができます。
 
-Differences between decompositions trained on somewhat different data
-subsets may have several causes. We have not yet performed such repeated
-decompositions and assessed their common features - though this would
-seem a sound approach.
+異なるデータで訓練された分解の違い
+サブセットにはいくつかの原因があります。 こんなリピートは行っていない
+一般的な機能の分解と評価 - しかし、これは
+音のアプローチは思える。
 
-For this tutorial, we decide to accept the initial ICA decomposition of our data and study its independent components' nature and behavior(s).
+このチュートリアルでは、当社のデータの初期ICA分解を受け入れ、独立したコンポーネントの性質と行動を研究することにしました。
 
-First, we review a series of functions whose
-purpose is to determine which components to study and how to
-study them.
+まず、一連の機能を検討しています。
+目的は、どのコンポーネントを勉強するか、どのように検討するかを決定することです
+それらを研究.
 
-Inspecting ICA components
+ICAコンポーネントの検査
 ==========================
-The component order returned by *runica.m* is in decreasing order
-of the EEG variance accounted for by each component. In other words, the
-lower the order of a component, the more data (neural and/or
-artifactual) it accounts for.
+*runica.m*で返されたコンポーネントの注文は、注文を解除する
+各コンポーネントが占めるEEGの分散。 つまり、
+コンポーネントの注文を下げる、より多くのデータ(ニューラルまたは/または)
+実際のところ、アカウントのアカウントです。
 
-Scrolling through component activations
+コンポーネントの活性化によるスクロール
 -----------------------------------------
-To scroll through component activations (time courses), select
-<span style="color: brown">Plot → Component activations (scroll)</span>.
-Scrolling through the ICA activations, one may easily spot components
-accounting for characteristic artifacts. For example, in the scrolling 
-[eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) below, component 3 appears to account primarily for
-blinks (we will learn how to recognize components in this tutorial).
+コンポーネントのアクティベーション(タイムコース)をスクロールするには、
+<span style="color: brown">Plot → コンポーネントの活性化 (スクロール)</span>.
+ICAアクティベーションをスクロールすると、コンポーネントを簡単に表示できます。
+特徴的なアーティファクトの会計。 例えば、スクロール中 
+[eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) 以下、コンポーネント3は主にアカウントに表示される
+blinks(このチュートリアルでコンポーネントを認識する方法を学びます)。
 
 ![](/assets/images/Scrollcomponentact2.png)
 
-Plotting 2-D Component Scalp Maps
+2Dコンポーネントのスカルプマップのプロット
 ----------------------------------
 
-To plot 2-D scalp component maps, select <span style="color: brown"> Plot → Component maps → In 2-D</span>. The interactive window (below) is then
-produced by function [pop_topoplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m). Simply press *Ok* to plot
-all components.
+プロットする 2-Dスカルプコンポーネントマップ、選択 <span style="color: brown"> Plot → コンポーネントマップ → 2Dで</span>お問い合わせ 対話型ウィンドウ (below) は、
+機能によって作り出される [pop_topoplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m)お問い合わせ *Ok*を押してプロットする
+すべてのコンポーネント。
 
-*Note:* This may take several figures, depending on the number of channels and
-the *Plot geometry* parameter. An alternative is to call this
-function several times for smaller groups of channels (e.g., *1:30* ,
-*31:60* , etc.). Below we ask for the first 12 components (*1:12*) only,
-and choosing to set 'electrodes', 'off'.
+※注記:* チャンネル数やチャンネル数に応じて複数の数字を取る場合があります。
+*Plotの幾何学*変数。 これを呼び出すための代替手段
+チャネルの小さいグループ(例えば、*1:30*、)のための数回機能して下さい
+*31:60*等。 以下は、最初の12コンポーネント(*1:12*)のみを要求します。
+'electrodes', 'off' の設定を選択
 
 ![](/assets/images/I92pop_topoplot.jpg)
 
-The following [topoplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m) window appears, showing the scalp
-map projection of the selected components. Note that the scale in the
-following plot uses arbitrary units. The scale of the component's
-activity time course also uses arbitrary units. However, the component's
-scalp map values multiplied by the component activity time course are in
-the same unit as the data. 
+以下について [topoplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m) ウィンドウが表示され、スカルプを示す
+選択したコンポーネントのマップ投影。 スケールは
+以下のプロットは任意単位を使用します。 コンポーネントのスケール
+活動時間コースは、任意のユニットを使用する。 しかし、コンポーネントの
+scalp はコンポーネントのアクティビティ・タイム・コースによって多岐に渡る値が
+データと同じ単位。 
 
 ![](/assets/images/92ICA_topo.jpg)
 
-Studying and flagging artifactual ICA components
+製造業のICAコンポーネントの調査とフラグ付け
 ----------------------------------
 
-Learning to recognize types of independent components may require
-experience. A later section on *Automated detection of artifactual ICA components* on this page contains links to an online tutorial for learning to recognize components.
+独立したコンポーネントの種類を認識する学習が必要
+経験。 このページでは、アーティファクチュアル ICA コンポーネントの自動検出に関する後述のセクションには、コンポーネントを認識するためのオンラインチュートリアルへのリンクが含まれています。
 
-The main criteria to determine if a component is 1) cognitively related 2) a muscle artifact, or 3) some other type of
-artifacts are
-- First, the scalp map (as shown above), 
-- Next the component time course, 
-- Next the component activity power spectrum,
-- Finally
-(given a dataset of event-related data epochs), the 
-[erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m).
+コンポーネントが 1) 認知的に関連した 2) 筋肉のアーティファクト、または 3) いくつかの他のタイプのかどうかを決定する主な基準
+工芸品は
+- まず、スカルプマップ(上図のように)、 
+- コンポーネントのタイムコースの次に、 
+- 次 コンポーネントアクティビティパワースペクトラム,
+- お問い合わせ
+(イベント関連データエポックのデータセット)、 
+[エルプイメージ。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m).
 
-In the
-window above, click on scalp map number 3 to pop up a window showing it
-alone (as mentioned earlier, your decomposition and component ordering
-might be slightly different). An expert eye would spot component 3 (below) as an eye
-artifact component. 
+お問い合わせ
+上のウィンドウ, クリックします。 scalp マップ番号 3 それを示すウィンドウをポップアップします
+一人で(前に述べたように、あなたの分解とコンポーネントの注文
+若干異なります。 エキスパートの目は、コンポーネント3(下)を目指す
+アーティファクトコンポーネント。 
 
 ![](/assets/images/92ICA_eyecomp.jpg)
 
 
-To study component properties and label components for rejection (i.e.,
-to identify components to subtract from the data), select
-<span style="color: brown"> Tools → Inspect/label components by maps</span>. 
+コンポーネントのプロパティとラベルコンポーネントを拒絶(すなわち、
+データから抽出するコンポーネントを識別するために、
+<span style="color: brown"> ツール → 地図によるインスペクト/ラベルコンポーネント</span>. 
 
-The difference between the resulting figure(s) and the
-previous 2-D scalp map plots is that one can here plot each component's properties by clicking on the rectangular button above each
-component scalp map.
+結果図と結果図の違い
+前の投稿 2-Dスカルプマッププロットは、各コンポーネントのプロパティをそれぞれ上の矩形ボタンをクリックすることでプロットできます。
+コンポーネントのスカルプマップ。
 
 ![](/assets/images/94reject_ICAcomp.jpg)
 
-For example, click on the button labeled *3*. This component can be
-identified as an eye artifact for three reasons:
+たとえば、 *3* をラベルしたボタンをクリックして下さい。 このコンポーネントは
+3つの理由でアイアーティファクトとして識別される:
 
-1.  The smoothly decreasing EEG spectrum (bottom panel) is typical of an
-    eye artifact;
-2.  The scalp map shows a strong far-frontal projection typical of eye
-    artifacts; And,
-3.  It is possible to see individual eye movements in the component 
-[erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) (top-right panel).
+1.  EEGスペクトル(ボトムパネル)を円滑に減少させるのは、
+    目アーティファクト;
+2.  頭皮の地図は目の典型的な強い遠方投射を示します
+    アーティファクト; そして、
+3.  コンポーネント内の個々の目の動きを見ることができます。 
+[エルプイメージ。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) (右上のパネル)
 
-Eye artifacts are (nearly) always present in EEG datasets. They are usually in leading positions in the component array (because they tend
-to be big) and their scalp topographies (if accounting for lateral eye
-movements) look like component 3 or perhaps (if accounting for eye
-blinks) like that of component 10 (above). 
+アイアーティファクトは、EEGデータセットに常に存在します。 それらは、通常、コンポーネント配列のリーディングポジションにあります(それらが傾向があるため)
+大きくなること)および頭皮のトポグラフィ(側面の目の会計なら)
+動き) コンポーネント 3 か多分のように見て下さい(目のための会計なら
+blinks) コンポーネント 10 (above) のような。 
 
-You can also access component property figures directly by selecting 
-<span style="color: brown"> Plot → Component properties</span>. (There is an equivalent menu item for
-channels, <span style="color: brown"> Plot → Channel properties</span>).
+コンポーネントプロパティ図を直接選択することでアクセスすることもできます。 
+<span style="color: brown"> Plot → コンポーネントプロパティ</span>お問い合わせ (同等メニュー項目がございます)
+チャンネル, <span style="color: brown"> Plot → チャネル特性</span>).
 
-Artifactual components are also relatively easy to identify by visual
-inspection of component time course 
-(menu <span style="color: brown">Plot → Component activations (scroll)</span> --- not shown here).
+人工成分も視覚で識別しやすい
+部品時間経過の点検 
+(メニュー) <span style="color: brown">Plot → コンポーネントの活性化 (スクロール)</span> お問い合わせ
 
 
 ![](/assets/images/I94component3_properties.jpg)
 
 
 
-Since this component accounts for eye activity, we may wish to subtract
-it from the data before further analysis and plotting. If so, click on
-the bottom green <span style="color: green">*Accept* </span> button (above) to
-toggle it into a red <span style="color: red"> *Reject*</span> button (note: at
-this point, components are only marked for rejection; to subtract marked
-components, see the section of this page on *Subtracting ICA components from data*. 
-Now press
-*Ok* to go back to the main component property window.
+このコンポーネントは、目のアクティビティのアカウントなので、サブトラクトをしたい場合があります。
+さらなる分析とプロットの前にデータからそれ。 お問い合わせ
+底緑 <span style="color: green">*受付* </span> ボタン(上)へ
+赤に切り替える <span style="color: red"> *リジェクト*</span> ボタン(注記)
+この点は、コンポーネントは拒否のためにのみマークされます。 マークされたサブトラクト
+コンポーネントは、このページのセクションを参照してください。*データ*からICAコンポーネントを抽出する。 
+プレス
+*Ok*は、メインコンポーネントプロパティウィンドウに戻ります。
 
-Another artifact example in our decomposition is component 32, which
-appears to be a typical muscle artifact component. This component is
-spatially localized and shows high power at high frequencies (20-50 Hz
-and above), as shown below.
+私たちの分解のもう一つのアーティファクト例は、コンポーネント32です。
+典型的な筋肉アーティファクトコンポーネントであるように見えます。 このコンポーネントは
+空間的にローカライズされ、高い周波数で高出力を示しています(20-50 Hz)
+以下に示すように。
 
 
 ![](/assets/images/I94component32_properties.jpg)
 
 
-Artifactual components often encountered (but not present in this
-decomposition) are single-channel (channel-pop) artifacts in which a
-single channel goes 'off,' or line-noise artifacts such as 23. 
-The ERP
-image plot below shows that it picked up some line noise at 60 Hz,
-especially in trials 65 and on.
+アーティファクチュアルコンポーネントはしばしば遭遇しました(ただし、これには存在しません)
+decomposition は単一チャネル(チャネル・ポップ)のアーティファクトであり、
+シングルチャンネルは「オフ」、または23などのラインノイズのアーティファクトに行きます。 
+ERPについて
+下のイメージのプロットは60のHzのライン騒音を拾ったことを示します、
+特に65以上の試験で。
 
 ![](/assets/images/I94component24_properties.jpg)
 
-Many other components appear to be brain-related. A different section of the tutorial deals with using [ICA component for brain source localization](/tutorials/09_source/DIPFIT.html).
-What if a component looks to be "half artifact, half brain-related"?
-In this case, we may ignore component 23, or may try running ICA decomposition again
-on a cleaner data subset or using other ICA training parameters. 
+他の多くのコンポーネントが脳関連であるように見えます。 チュートリアルの異なるセクションは、使用して取引します [脳局在化のためのICAコンポーネント](/tutorials/09_source/DIPFIT.html).
+コンポーネントが「ハーフアーティファクト、半脳関連」になれば?
+この場合、コンポーネント23を無視するか、またICAの分解を再度実行しようとする場合があります。
+クリーンなデータサブセットまたは他のICAトレーニングパラメータを使用して。 
 
-As a rule of thumb, we have learned that removing artifactual data regions
-containing one-of-a-kind artifacts is very useful for obtaining 'clean'
-ICA components.
+親指のルールとして、アーティファクチュアルなデータ領域を除去することを学びました
+一種のアーティファクトを含んだのは「きれいな」を得るために非常に有用です お問い合わせ
+ICAコンポーネント。
 
-Optimizing ICA decompositions' quality
+ICA分解の品質を最適化
 ==========================
 
-What do we mean by obtaining a better ICA decomposition?
+より良いICAの分解を得るとどういう意味ですか?
 ---------------------------------------
-ICA takes all training data into consideration. When too many types
-(i.e., scalp distributions) of noise - complex movement artifacts,
-electrode *pops*, etc -- are left in the training data, these
-unique and irreplicable data features will *draw the attention* of ICA,
-producing a set of component maps including many single-channel or
-noisy-appearing components. The number of components (degrees of
-freedom) devoted to the decomposition of brain EEG alone will be
-correspondingly reduced. 
+ICAは、すべてのトレーニングデータを考慮に入れます。 種類が多すぎる場合
+(すなわち、スカルプ分布)ノイズ - 複雑な動きのアーティファクト、
+電極 *pops* 等 -- は訓練データ、これらに残ります
+ユニークで、不可解なデータ機能が* ICAの注意*を引き出します。
+多くのシングルチャネルを含むコンポーネントマップのセットを作成するか、
+ノイズ対応コンポーネント。 コンポーネントの数(程度)
+自由)脳EEG単独の分解に専念する
+対応する。 
 
-Therefore, presenting ICA with as much *clean*
-EEG data as possible is the best strategy. Note that blink and other
-stereotyped EEG artifacts do not necessarily have to be removed since
-they are likely to be isolated as single ICA components. 
+そのため、ICAを提示するだけ*クリーン*
+EEGは可能な限り最高の戦略です。 blink とその他
+ステレオタイプのEEGアーティファクトは、必ずしも削除する必要はありません
+それらは単一ICAの部品として隔離される可能性があります。 
 
-Here *clean* EEG data means data after removing noisy time segments (does not apply
-to removed ICA components).
+ここでは*clean* EEGデータは、騒々しい時間セグメントを削除した後のデータを意味します(適用されません)
+ICAコンポーネントの削除
 
-How to deal with the aggressive high-pass filter applied before running ICA
----------------------------------------
-
-ICA decompositions are notably higher quality (less ambiguous components) when the data is high-pass filtered above 1 Hz or sometimes even 2 Hz. High-pass filtering is the easiest solution to fix bad quality ICA decompositions. However, for processing EEG data (such as ERP analysis), high-pass filtering at 2 Hz might not be optimal as it might remove essential data features. In this case, we believe an optimal strategy is to:
-
-1.  Start with an unfiltered (or minimally filtered) dataset (dataset 1)
-2.  Filter the data at 1Hz or 2Hz to obtain dataset 2
-3.  Run ICA on dataset 2
-4.  Apply the resulting ICA weights to dataset 1. To copy ICA weights and sphere information from
-    dataset 1 to 2: First, call the <span style="color: brown">Edit → Dataset info</span> menu item for dataset 1. Then enter *ALLEEG(2).icaweights* in the *ICA weight array ...* edit box, *ALLEEG(2).icasphere* in the *ICA sphere array ...* edit box, and press *Ok*.
-
-ICA components can be considered as spatial filters, and it is perfectly valid to use these spatial filters on the original unfiltered data. The only limitation is that since strong artifacts affect low-frequency bands filtered out before using ICA, they may not be removed by ICA. In practice, we have never found this to be a problem because artifactual processes that contaminate the data below 2 Hz also tend to contaminate the data above 2 Hz.
-
-What to do with a low-quality ICA decomposition
+ICAの実行前に適用される積極的なハイパスフィルタに対処する方法
 ---------------------------------------
 
-With a low-quality ICA decomposition, you can try filtering the data as indicated in the previous section. Another strategy is to clean the data aggreesively of artifacts before running ICA as explained below:
+ICAの分解は、データが1 Hz以上または2 Hz以上フィルタリングされたハイパスである場合、品質(非あいまいなコンポーネント)が著しく向上します。ハイパスフィルタリングは、不良品質のICA分解を修正するための最も簡単なソリューションです。 ただし、EEGデータ(ERP分析など)処理には、重要なデータ機能を削除しても2Hzのハイパスフィルタリングが最適ではない場合があります。 この場合、最適な戦略は以下であると考えています。
 
-1.  Start with an unfiltered (or minimally filtered) dataset (dataset 1)
-2.  Aggressively clean dataset either manually or using the automated tools provided in EEGLAB to obtain dataset 2
-3.  Run ICA on dataset 2
-4.  Apply the resulting ICA weights to dataset 1. To copy ICA weights and sphere information from
-    dataset 1 to 2: First, call the <span style="color: brown">Edit → Dataset info</span> menu item for dataset 1. Then enter *ALLEEG(2).icaweights* in the *ICA weight array ...* edit box, *ALLEEG(2).icasphere* in the *ICA sphere array ...* edit box, and press *Ok*.
+1.  非フィルタリング(または最小限にフィルタリング)データセット(データセット)で開始 1) 1
+2.  1Hz または 2Hz でデータをフィルタリングし、データセット 2
+3.  データセットでICAを実行 2
+4.  結果の ICA の重量をデータセットに適用して下さい 1. ICA重量と球情報をコピーする
+    dataset 1 から 2: まず、呼び出します <span style="color: brown">編集 → データセット情報</span> データセットのメニュー項目 1. それから *ICA の重量の配列の *ALLEEG(2).icaweights* を書き入れて下さい...* 編集箱、*ALLEEG(2).icasphere* の *ICA の球の配列の*...*の編集箱で*Ok*を押して下さい。
 
-As mentioned previously, ICA components can be considered as spatial filters, and it is perfectly valid to use these spatial filters on the original unfiltered data. One limitation of this approach is that the quality of ICA decompositions depends on the quantity of EEG data provided as input. Reducing the amount of data could decrease the overall quality of an ICA decomposition.
+ICAコンポーネントは空間フィルタとして考えられ、元の非濾過データにこれらの空間フィルタを使用するのは完全に有効です。 唯一の制限は、強力なアーティファクトがICAを使用する前にろ過された低周波数帯域に影響するので、それらはICAによって削除されないことがあります。 慣行では、2 Hz以下のデータを合成するアーティファクチュアルなプロセスが 2 Hz を超えるデータを合成する傾向があるため、この問題は見つかりませんでした。
 
-How to deal with *corrupted* ICA decompositions
+高品質のICA分解で何をすべきか
 ---------------------------------------
 
-When using Infomax ICA, which is the default in EEGLAB, the first two components' activity can blow up. This happens because
-the two components' activities compensate for each other. Both components are almost
-identical with opposite polarities. In this case,
-both components are seen as having a large amount of noise. This is
-illustrated below.
+高品質のICA分解により、前のセクションに示すようにデータをフィルタリングすることができます。 もう一つの戦略は、以下の説明としてICAを実行する前に、アーティファクトのデータをaggreesivelyをきれいにすることです。
+
+1.  非フィルタリング(または最小限にフィルタリング)データセット(データセット)で開始 1) 1
+2.  データセットを手動でまたはEEGLABで提供した自動ツールを使用して、データセット2を入手する
+3.  データセットでICAを実行 2
+4.  結果の ICA の重量をデータセットに適用して下さい 1. ICA重量と球情報をコピーする
+    dataset 1 から 2: まず、呼び出します <span style="color: brown">編集 → データセット情報</span> データセットのメニュー項目 1. それから *ICA の重量の配列の *ALLEEG(2).icaweights* を書き入れて下さい...* 編集箱、*ALLEEG(2).icasphere* の *ICA の球の配列の*...*の編集箱で*Ok*を押して下さい。
+
+以前述べたように、ICAコンポーネントは空間フィルタと見なすことができます。また、これらの空間フィルタを元の非濾過データで使用することは完全に有効です。 このアプローチの1つの制限は、ICA分解の品質は、EEGデータの入力として提供される量によって異なります。 データの量を減らすと、ICA分解の全体的な品質が低下する可能性があります。
+
+*corrupted* ICAの分解に対処する方法
+---------------------------------------
+
+Infomax ICA を使用する場合は、EEGLAB のデフォルトで、最初の 2 つのコンポーネントのアクティビティが吹き上げることができます。 これは、
+2つのコンポーネントのアクティビティが互いに補正されます。 どちらのコンポーネントもほとんど
+反対の極性と同一。 この場合、
+ノイズの量が多いため、両方のコンポーネントが見られる。 お問い合わせ
+以下に示す。
 
 ![](/assets/images/Comp_identical1.gif)
 
-This may happen in case of rank deficiency (as explained in the next section). However, this may also happen in full ranked data. The solution to this problem is not obvious. One solution is to use a different
-ICA algorithm. Another solution is to experiment with
-decreasing the number of dimensions using PCA. For example,
-with 32 channels, decreasing the number of dimensions to 10 could eliminate
-the problem (decreasing to 20 did not). Below is the same data but
-decomposed with only 10 PCA components (only the first component is shown). Not only
-does this component account for both component activities above, but the
-noise in its activation disappears (i.e., is more properly assigned
-by ICA to other component processes). The noise above is most likely due
-to instability in the ICA decomposition algorithm, which here forced
-to create two components compensating for each others' activity. We
-are not sure that removing the single blink component below is
-preferable to removing the two very noisy components above since we have
-not run any formal comparison. Our reasoning is that the two components
-above tend to make other components noisy, so the
-PCA dimension reduction solution is preferable.
+ランク欠乏症(次のセクションで説明)の場合、これは起こるかもしれません。 ただし、全ランキングデータでも発生することがあります。 この問題に対する解決策は明らかではありません。 1つの解決は別の使用することです
+ICAアルゴリズム。 別のソリューションは、実験的である
+PCAを用いた寸法の減少 例えば、
+32 チャンネルで、10 までの寸法の減少は排除できます
+問題(20に減少した)。 以下は同じデータですが、
+10個のPCAコンポーネントのみで分解(最初のコンポーネントのみ表示)。 だけでなく、
+上記の両方のコンポーネントアクティビティのこのコンポーネントアカウントは行いますが、
+活性化中のノイズが消えます(つまり、より適切に割り当てられます)
+ICA は他のコンポーネントプロセスへ 上記の騒音は最も可能性が高い
+ここで強制されるICA分解アルゴリズムの不安定性に
+他の人の活動を補う2つのコンポーネントを作成する。 お問い合わせ
+下の単一の blink コンポーネントを取除くことは確かめません
+上記の2つの非常に騒々しいコンポーネントを削除するために好ましい
+正式な比較を実行しません。 私達の推論は2つの部品です
+上記は他のコンポーネントのうるさいを作る傾向があるので、
+PCA次元の減少の解決は好ましいです。
 
 ![](/assets/images/Comp_identical2.gif)
 
-This is not to say that using PCA should be done systematically. In
-general, PCA will slightly corrupt the data by adding nonlinearities, so
-it is better to use the full rank data matrix whenever possible.
+これは、PCAを体系的に行うべきだと言いません。 お問い合わせ
+一般的に、PCAは非線形性を加えることによってデータが少し破損します、従って
+いつでもフルランクのデータ行列を使用することをお勧めします。
 
-A full discussion of corrupted ICA components, also called Ghost ICA components, is available in this [paper](https://www.frontiersin.org/articles/10.3389/frsip.2023.1064138/full) and this [one](https://www.frontiersin.org/articles/10.3389/fnimg.2023.1331404/full).
+Ghost ICAコンポーネントとも呼ばれる破損したICAコンポーネントの完全な議論は、これで利用可能です [ペーパー](https://www.frontiersin.org/articles/10.3389/frsip.2023.1064138/full) そしてこれ [1](https://www.frontiersin.org/articles/10.3389/fnimg.2023.1331404/full).
 
-Issues with data rank deficiencies
+データランク不足の問題
 ---------------------------------------
 
-When computing average reference on n-channel data, the rank of the data
-is reduced to n-1. Why? Because the sum of the potential is 0 at all
-time points, the last channel activity is equal to minus the sum of the
-others. ICA does not behave well in this (rank-deficient) case.
+nチャネルデータの計算平均参照時、データの順位
+n-1に減少します。 なぜ? 潜在能力の合計が0だから
+タイムポイント、最後のチャンネルアクティビティはマイナスの合計に等しい
+その他。 ICAは、この(ランク防衛)ケースではうまく動作しません。
 
-If the rank of the data is lower than the number of channels, the EEGLAB
-<em>pop_runica()</em> function should detect it and uses different strategies to do so.
+チャネルの数よりもデータが低い場合、EEGLAB
+<em>pop_runica()</em> 関数はそれを検出し、それを行うために異なる戦略を使用する必要があります。
 
-However, rank
-calculations in MATLAB are imprecise, especially since raw EEG data is
-stored as a single-precision matrix. Thus, there are some cases in which the rank
-reduction arising from using average reference is not detected. In this
-case, the user should manually reduce the number of components. If the ICA decomposition does not look "right" (with the types of components shown on this page), check on the MATLAB command line that EEGLAB reduced the number of dimensions. If this is not the case, you can fix this manually.
+しかし、ランク
+MATLABの計算は、特に生のEEGデータが重要であるため、非推奨です。
+単一の精密行列として貯えられる。 したがって、ランクがいるケースもあります。
+平均参照を使用して生じる減少は検出されません。 お問い合わせ
+場合、ユーザーは手動でコンポーネントの数を減らす必要があります。 ICA分解が見つからない場合(このページに示すコンポーネントの種類と)、EEGLABが寸法の数を削減するMATLABコマンドラインをチェックしてください。 ケースがない場合、手動で修正できます。
 
-For example, when using 64 channels, enter "'pca', 63" in the option
-edit box. If you do not do this, the activity of one of the
-components that contributes the most to the data might be duplicated (as explained
-in the previous section), and you will not be able to use the ICA decomposition.
+たとえば、64チャンネルを使用する場合は、オプションの "'pca', 63" を入力します。
+編集ボックス。 これをしないと、その活動の1つ
+データに最も貢献するコンポーネントは重複する可能性があります(説明として)
+前のセクションでは、ICAの分解は使用できません。
 
-Issues associated with aggressive automated artifact removal before ICA
+ICA前の積極的な自動アーティファクト除去に関連する問題
 ---------------------------------------
 
-Automated artifact removal before ICA may remove data (such data portions containing blinks), which can easily be corrected by ICA. However, lowering the thresholds for automated artifact rejection might retain too many artifacts that ICA cannot remove. In this case, we recommend the following procedure.
+ICAが容易にICAによって訂正することができるデータ(blinksを含むデータ部分)を取除くことができる前の自動化されたアーティファクトの取り外し。 しかし、自動アーティファクト拒絶のしきい値の低下は、ICAが削除できない多くのアーティファクトを保持する可能性があります。 この場合、次の手順をお勧めします。
 
-1.  Start with a dataset that has been minimally cleaned of artifacts (or where only bad channels have been removed)
-2.  Run ICA on this dataset
-3.  Identify bad ICA components and remove/subtract them from the data as explained in one of the following sections
-4.  Clean again the dataset using a more aggressive threshold or strategy to remove the remaining artifactual portions of data
+1.  アーティファクトを最小限に清掃したデータセット(または不良チャネルのみ削除)で開始
+2.  このデータセットでICAを実行
+3.  悪いICAコンポーネントを特定し、次のセクションで説明したようにデータを削除/サブトラクトする
+4.  データの残りの部分を削除するために、より積極的なしきい値または戦略を使用して、再びデータセットをきれいにする
 
-Applying ICA to data epochs instead of continuous data
+ICAを連続したデータの代わりにデータエポックに適用する
 ---------------------------------------
 
-In general, we recommend using ICA on continuous data, not data for which epochs have been extracted. First, extracting data epochs reduces the number of samples, and ICA component quality is usually higher when more data is present. Second, you are not tempted to remove the epochs' baseline. Removing the epoch baseline can have <a href="https://pubmed.ncbi.nlm.nih.gov/19162199/">dramatic consequences for ICA</a> because it introduces random offsets in each channel, something ICA cannot model or compensate for. Note that it is possible to extract epochs and not remove the epoch baseline. Then after running ICA, the baseline may be removed.
+一般的には、ICAを連続データに使用することを推奨していますが、どのEPOCが抽出されたかのデータではありません。 まず、データエポックを抽出すると、サンプルの数が減り、より多くのデータが存在すると、ICAコンポーネントの品質が高くなります。 第二に、epochsのベースラインを外すことは気にしません。 エポックベースラインを取り戻すことができる <a href="https://pubmed.ncbi.nlm.nih.gov/19162199/">ICAの劇的な結果</a> それぞれのチャネルでランダムなオフセットを導入するので、ICAはモデルやコンペンセートはできません。 エポックを抽出し、エポックベースラインを削除することはできません。 その後、ICAを実行した後、ベースラインが削除される場合があります。
 
-However, applying ICA to data epochs is possible. ICA expects the data to be stationary, i.e., the same statistical model
-is generating all data samples. If you have enough data after epoching, then
-epoched data might be preferable since it will be more stationary.  However, when epoching on different events to produce
-different datasets, we recommend using the same ICA decomposition for all conditions. Practically, this may mean creating a dataset containing all epoch types before running ICA. More data generally gives a better ICA decomposition, assuming all the data
-is similar statistically. Longer epochs are preferable because they yield more data for
-ICA (assuming stationarity holds.) 
+ただし、ICAをデータエポックに適用することも可能です。 ICAは、同じ統計モデルである、すなわち、データが文房具であることを期待しています
+すべてのデータサンプルを生成します。 epochingの後で十分なデータがあれば、それから
+epochedデータは、より文房具になるので好ましいかもしれません。 しかし、異なるイベントを生成する際、
+異なるデータセットは、すべての条件で同じICA分解を使用することをお勧めします。 実際には、これは、ICAを実行する前に、すべてのエポックタイプを含むデータセットを作成することを意味するかもしれません。 一般的により多くのデータは、すべてのデータを仮定して、より良いICA分解を与えます
+統計的には似ています。 より長いエポックは、より多くのデータをのために収まるので好ましいです
+ICA(文具の採用) 
 
-However, if you are epoching before ICA,you don’t want to give ICA overlapping epochs since it will duplicate some data skewing the statistical model. For example, the pre-stimulus baseline portion of
-an epoch time-locked to a target stimulus may contain some portion of an
-epoch time-locked to a preceding nontarget stimulus event. Infomax ICA
-performed by [pop_runica.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m)
-does not consider the time order of the data samples but selects time
-samples in random order during training. Thus, replicated data samples in
-concatenated datasets will only tend to be used more often during
-training. So the epoch start
-time should not be before the stop time of the previous epoch, and the stop
-time should not be after the start time of the next epoch.
+しかし、ICAの前にエポックしている場合、統計モデルをスケーリングするデータが複製されるため、ICAオーバーラップエポックをする必要はありません。 例えば、プレ刺激のベースライン部分
+ターゲット刺激にタイムロックされたエポックは、いくつかの部分が含まれている可能性があります
+前の非ターゲット刺激イベントにタイムロックされたエポック。 インフォマックス ICA
+出演者: [pop_runica.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m)
+データサンプルのタイムオーダーは考慮しませんが、時間を選択してください
+訓練中のランダムな順序のサンプル。 そのため、データのサンプルを再現
+連結されたデータセットは、より頻繁に使用される傾向があるだけ
+トレーニング それではエポックが始まります
+前のエポックの停止時間の前に時間がない、および停止
+次のエポックの開始時刻が過ぎてはいけません。
 
-Re-referencing the data after ICA
+ICAの後のデータを再参照する
 ---------------------------------------
-In general, re-referencing is best performed before running ICA and then left unchanged afterward. ICA learns a spatial unmixing model that is specific to the reference used during training. Changing the reference after decomposition applies a linear transform to the channel data that is inconsistent with the learned unmixing matrix. Althought the transformation is also applied to the ICA decomposition, the ICA activations may no longer strictly represent independent sources. In practice, this can degrade component interpretability and may introduce numerical issues, especially when the new reference reduces data rank, as occurs with average reference. For these reasons, EEGLAB will warn you against re-referencing after ICA. If a different reference is required for downstream analysis, the recommended approach is to apply that reference before ICA and recompute the decomposition so that the weights remain valid for the transformed data.
+一般的には、ICAの実行前に再会議が最善を尽くし、その後は変更されないままにします。 ICAは、トレーニング中に使用されている参照に固有の空間の混入モデルを学びます。 分解後の参照を変更するには、学習した非混合行列と矛盾するチャネルデータへの線形変換を適用します。 トランスフォーメーションはICAの分解にも適用されますが、ICAアクティベーションは独立したソースを厳密に表すことはできません。 実際には、これはコンポーネントの解釈性を劣化させ、特に新しい参照が平均的な参照で起こるように、データランクを削減するときに数値の問題を導入することができます。 これらの理由から、EEGLABは、ICAの後に再発酵に対して警告します。 下流分析のために異なる参照が必要な場合は、推奨されるアプローチは、ICAの前の参照を適用し、重量が変換されたデータのために有効であるように分解を再計算することです。
 
-Automated detection of artifactual ICA components
+人工ICAコンポーネントの自動検出
 ==========================
 
-The <a href="https://github.com/sccn/ICLabel">ICLabel</a>  plugin of Luca Pion-Tonachini is an EEGLAB plugin installed by default with EEGLAB, which provides an estimation of the type of each
-of the independent components (brain, eye, muscle, line noise, etc.). The ICLabel project's goal was to develop an EEG IC classifier that is reliable and accurate enough to use in large-scale studies. The current classifier implementation is trained on thousands of manually labeled ICs and hundreds of thousands of unlabeled ICs. More information may be found in the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6592775/">ICLabel reference article</a>. The <a href="http://labeling.ucsd.edu/tutorial/about">ICLabel website</a>  also allows you to train to recognize components and compare your performance with experts. Note that ICLabel is one of many such EEGLAB plugins that can automatically find artifactual ICA components. Other plugins or toolboxes worth checking for automatically labeling ICA components are MARA, FASTER, SASICA, ADUST, and IC_MARK. 
+ふりがな <a href="https://github.com/sccn/ICLabel">ICラベル</a>  Luca Pion-Tonachini のプラグインは、EEGLAB でデフォルトでインストールされている EEGLAB プラグインで、各タイプの推定を提供します。
+独立したコンポーネント(脳、目、筋肉、線騒音など)。 ICLabelプロジェクトの目標は、大規模な研究で使用するのに十分な信頼性と正確であるEEG ICの分類器を開発することです。 現在の分類器の実装は、数千の手動ラベル付きICと数千の未分類ICで訓練されています。 詳細については、 <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6592775/">ICLabel リファレンス記事</a>お問い合わせ ふりがな <a href="http://labeling.ucsd.edu/tutorial/about">ICLabelウェブサイト</a>  また、コンポーネントを認識し、専門家とのパフォーマンスを比較するために訓練することができます。 ICLabelは、アーティファクチュアルICAコンポーネントを自動的に見つけることができる多くのそのようなEEGLABプラグインの1つです。 ICAコンポーネントを自動的にラベル付けするためのその他のプラグインやツールボックスは、MARA、FASTER、SASICA、ADUST、IC_MARKです。 
 
-Once you have run ICA, select menu item <span style="color: brown">Tools → Classify components using ICLabel → Label components</span>. Simply select the default and press OK.
+ICAを実行したら、メニュー項目を選択します。 <span style="color: brown">ツール → ICLabel → ラベルコンポーネントを使用してコンポーネントを分類する</span>お問い合わせ デフォルトを選択し、[OK] を押します。
 
 ![](/assets/images/iclabel1.png)
 
-A second window will pop up and ask to plot components. Simply press *Ok*.
+2番目のウィンドウがポップアップし、コンポーネントをプロットするように要求します。 *Ok*を押すだけ。
 
 ![](/assets/images/iclabel2.png)
 
-Clicking on a component will pop up a
-window with an expanded set of component property measures, as well as
-the estimated probabilities of each component being of each type.
-IC components will be plotted along with the category they most likely belong to and the likelihood of belonging to that category. Press *Ok* when done.
+コンポーネントをクリックすると、コンポーネントがポップアップ表示されます
+コンポーネントプロパティ対策の拡張されたセットを持つウィンドウ、および
+各成分の推定能力は、各種類である。
+ICコンポーネントは、そのカテゴリに所属する可能性のあるカテゴリと、そのカテゴリに属する可能性と一緒にプロットされます。 *Ok*を押してください。
 
-Note that the probability that a component belongs to a given category is also available on the MATLAB command line. There are six categories of components <i>Brain</i>, <i>Muscle</i>, <i>Eye</i>, <i>Heart</i>, <i>Line Noise</i>, <i>Channel Noise</i>, and <i>Other</i>. By typing the following command on the MATLAB prompt, you can see the probability for each of the first ten components (rows) to belong to one of the component categories (columns):
+MATLABコマンドラインでコンポーネントが指定されたカテゴリに所属する確率も利用できます。 コンポーネントの6つのカテゴリがあります <i>ログイン</i>, <i>筋肉</i>, <i>ログイン</i>, <i>ハート</i>, <i>ライン騒音</i>, <i>チャネルの騒音</i>と <i>その他</i>お問い合わせ MATLAB プロンプトの次のコマンドを入力すると、コンポーネントカテゴリ(列)の 1 つに属する最初の 10 個のコンポーネント(列)ごとに確率が確認できます。
 
 ``` matlab
 >>  round(EEG.etc.ic_classification.ICLabel.classifications(1:10,:)*100)
@@ -480,53 +480,53 @@ ans =
     23     0     0     0    21     0    56
 ```
 
-Then you may select menu item <span style="color: brown">Tools → Classify components using ICLabel → Flag components as artifacts</span>. The default is to label those components which have more than 90% probability of being in the muscle or eye artifacts (eye blinks and eye movements) category. When components are flagged using this function, the button will appear red in the interface for rejecting components manually (<span style="color: brown">Tools → Reject using ICA → Reject components by map</span>), so may edit which components have been flagged as artifacts.
+メニュー項目を選択 <span style="color: brown">ツール → ICLabel → フラグコンポーネントを使用してコンポーネントをアーティファクトとして分類する</span>お問い合わせ デフォルトは、筋肉や目のアーティファクト(目の点滅と目の動き)カテゴリにある90%以上の確率を持つそれらのコンポーネントをラベル付けすることです。 この関数を使用してコンポーネントがフラグが付けられているとき、ボタンは手動でコンポーネントを拒否するためのインタフェースで赤表示されます()<span style="color: brown">ツール → ICA → コンポーネントをマップで拒否する</span>)、そのため、どのコンポーネントがアーティファクトとしてフラグが付けられているかを編集できます。
 
 ![](/assets/images/iclabel3.png)
 
-Subtracting ICA components from data
+データからICAコンポーネントを抽出する
 ==========================
 
-Typically we do not subtract whole independent
-component processes from our datasets because we study
-individual component (rather than summed scalp channel) activities. Also, even you are only interested in removing ICA components, at the STUDY level (group analysis level), components you have flagged as artifacts, either manually or using an automated method, may be automatically subtracted from the data. Therefore, there is no need to physically remove/subtract components from the EEG data.
+典型的に私達は全体の独立した引き込みません
+データセットからコンポーネントプロセスを調べる
+個々のコンポーネント(要約されたスカルプチャネルよりもむしろ)活動。 また、ICAコンポーネントの削除、STUDYレベル(グループ分析レベル)では、アーティファクトとしてフラグを立てているコンポーネント、手動でまたは自動化されたメソッドを使用しても、自動的にデータから引き下げることができます。 そのため、EEGデータからコンポーネントを物理的に削除/抽出する必要はありません。
 
-However, if we want to remove components, we use the 
-<span style="color: brown">Tools → Remove components</span> menu item, which calls the 
-[pop_subcomp.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_subcomp.m)
- function. 
+しかし、コンポーネントを削除したい場合は、 
+<span style="color: brown">ツール → コンポーネントを削除</span> メニュー項目は、 
+[pop_subcomp.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_subcomp.m)
+ 機能。 
  
-The component numbers included by
-default in the resulting window (below) are those marked for rejection
-in the previous <span style="color: brown">Tools → Reject using ICA → Reject components by map</span> 
-component rejection window (using the *<span style="color: green">Accept</span> or <span style="color: red">Reject</span>*
-buttons). 
+コンポーネント番号に含まれる
+結果ウィンドウ(下)のデフォルトは、拒否のためにマークされているもの
+過去の <span style="color: brown">ツール → ICA → コンポーネントをマップで拒否する</span> 
+コンポーネントの reject ウィンドウ (* を使用して)<span style="color: green">お問い合わせ</span> または <span style="color: red">リジェクト</span>*
+ボタン) 
 
 ![](/assets/images/pop_selectcomp25.png)
 
-You may press *Yes* or select the *Manual rej* button to manually edit the list of components, as shown below.
+*Yes* を押すか、*Manual rej* ボタンを選択してコンポーネントのリストを手動で編集できます。
 
 ![](/assets/images/pop_subcomp.png)
 
-Enter the component numbers you wish to reject (in this case, we will leave component 3) and press *Ok*. Note that component 3 might not be an eye blink artifact in your case. Since your ICA decomposition might be slightly different, you will need to select manually (or using the automated detection of artifactual ICA components) the corresponding component. A window will pop up, asking if you want to compare the data before and after rejecting components, as shown below.
+拒否したいコンポーネント番号を入力してください(この場合、コンポーネント3を離れ、*Ok*を押します。) コンポーネント 3 は、あなたのケースで目の blink のアーティファクトではないかもしれないことに注意してください。 ICAの分解が若干異なるため、対応するコンポーネントを手動で(または、アーティファクチュアルICAコンポーネントの自動検出を使用して)選択する必要があります。 以下に示すように、コンポーネントを拒否前後のデータを比較したい場合は、ウィンドウがポップアップ表示されます。
 
 ![](/assets/images/pop_selectcomp22.png)
 
-Click on *Plot single trial* pushbutton. This shows (below) the data before (in black) and after
-(in red) component(s) subtraction. We can clearly see how well ICA has removed the blink artifact.
+*Plotシングルトライアル*プッシュボタンをクリックします。 前のデータ(黒)と後
+(赤) コンポーネント(s) 減算。 私たちは、ICAがblinkアーティファクトを削除したのを明らかにすることができます。
 
 ![](/assets/images/pop_selectcomp23.png)
 
-In case you are removing ICA component in data epochs, you may click on
-*Plot ERPs* pushbutton -- it is possible
-to run ICA, extract epochs, and then remove ICA components. We have used continuous data for this tutorial, so
-we cannot plot ERPs. If we had extracted ERPs, we would obtain a plot similar
-to the one below, plotting channel ERP before (in blue) and after
-(in red) component(s) subtraction.
+データエポックでICAコンポーネントを削除している場合は、クリックしてください
+*Plot ERPs* pushbutton -- 可能です
+ICAを実行し、エポックを抽出し、ICAコンポーネントを削除します。 このチュートリアルでは連続したデータを使用していますので、
+ERPをプロットすることはできません。 ERPを抽出した場合、同様のプロットを得る
+下の1つに、チャネルERPを(青)前後にプロットする
+(赤) コンポーネント(s) 減算。
 
 ![](/assets/images/pop_selectcomp24.png)
 
-Once you are satisfied with the result, press the *Accept* button in the query window. Another window will pop up asking you if you want to rename
-the new data set. Give it a name and again press *Ok*.
+結果に満足したら、クエリウィンドウの*Accept*ボタンを押して下さい。 あなたが名前を変更したい場合は、別のウィンドウがポップアップ表示されます
+新しいデータセット。 名前をつけ、再度押す*Ok*。
 
-In the rest of this tutorial, after running ICA, we pursue with retaining all components, so you can appreciate the contribution of artifactual components to ERPs. 
+このチュートリアルの残りの部分では、ICAを実行した後、我々はすべてのコンポーネントを保持することを追求していますので、あなたはERPにアーティファクチュアルコンポーネントの貢献を感謝することができます。 

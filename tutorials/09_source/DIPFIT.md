@@ -5,421 +5,421 @@ long_title: b. ICA equivalent dipole sources
 parent: 9. Source analysis
 grand_parent: Tutorials
 ---
-Equivalent dipole source localization of independent components
+独立したコンポーネントの同等のダイポールソースローカリゼーション
 ====================================
-{: .no_toc }
+お問い合わせ
 
-A major obstacle to using EEG data to visualize macroscopic brain
-dynamics is the underdetermined nature of the inverse problem: Given an
-EEG scalp distribution of activity observed at given scalp electrodes,
-any number of brain source activity distributions can be found that
-would produce it. This is because there is any number of possible brain
-source area pairs or etc. that, jointly, add to the scalp data. Therefore, solving this *EEG inverse* problem
-requires making additional assumptions about the nature of the
-source distributions. A computationally tractable approach is to find
-some number of brain current dipoles (like vanishingly small
-batteries) whose summed projections to the scalp most nearly resemble
-the observed scalp distribution. In this section of the tutorial, we show how to solve this problem using ICA.
+マクロスコピック脳を視覚化するためにEEGデータを使用する主要な障害
+ダイナミクスは、逆の問題の根本的な性質です。 与えられた
+与えられた頭皮の電極で観察される活動のEEGの頭皮の配分、
+任意の数の脳情報源活性分布が発見することができます
+生成します。 これは、可能な脳の数があるためです
+ソース領域のペアなど、共同で、スカルプデータに追加します。 そのため、この*EEG inverse*問題を解決します
+自然の性質に関する追加の仮定を作る必要があります
+ソース分布。 複雑なアプローチを見つけること
+いくつかの脳電流ダイポール(驚くほど小さい)
+ほとんど似ている頭皮への投影を要した電池)
+観察された頭皮の配分。 このチュートリアルでは、ICAでこの問題を解決する方法を紹介します。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Rational for localizing ICA components
+ICAコンポーネントをローカライズするための合理的
 ---------
 
-Unfortunately, the problem of finding the locations of more than one
-simultaneously active equivalent dipoles also does not have a unique
-solution, and "best fit" solutions will differ depending on the observed
-scalp distribution(s) (or scalp *maps*) that are given to the source
-inversion algorithm. For this reason, approaches to solving the EEG
-inverse problem have tended to focus on fitting scalp maps in which a
-single dipolar scalp map is expected to be active, for instance, very
-early peaks in ERP (or magnetic ERF) response averages indexing the
-first arrival of sensory information in the cortex. Others attempt to fit
-multiple dipoles to longer portions of averaged ERP (or ERF) waveforms
-based on "prior belief" (i.e., guesses) as to where the sources *should*
-be located. This approach has often been criticized for not being based
-wholly on the observed data and thus subject to bias or ignorance.
-Using ICA to un-mix the continuous EEG data into brain and non-brain
-effective source processes is a radically different approach. ICA
-identifies temporally independent signal sources in multi-channel EEG
-data as well as their patterns of projection to the scalp electrodes,
-which are fixed for spatially stationary sources. These ICA 'component
-maps' are significantly more dipolar (i.e.,
-"dipole-like") than either the raw EEG or any average ERP at nearly any
-time point -- even though neither the locations of the electrodes nor
-the biophysics of volume propagation is taken into account by ICA
+残念ながら、1つ以上の場所を見つける問題
+同時に活動的な同等のダイポールもユニークではない
+ソリューション、および「ベストフィット」ソリューションは、観察された状況に応じて異なります。
+ソースに与えられたスカルプ分布(s)(またはスカルプ *マップ*)
+inversionアルゴリズム。 そのため、EEGを解決するアプローチ
+逆の問題は、フィッティングスカルプマップに焦点を合わせている傾向があります
+シングルのダイポーラのスカルプマップは、例えば、非常にアクティブであることが期待されます
+ERP(または磁気ERF)応答の初期ピークは、インデックス化平均
+コルテックスの感覚情報の最初の到着。 他は合うことを試みます
+平均 ERP (または ERF) 波形の長い部分に複数のダイポール
+「プライオア信念」に基づく(すなわち、推測) ソース *should*
+あります。 このアプローチはしばしば基づいていないために批判されている
+観察されたデータに完全にあり、バイアスまたは無視される。
+ICAを使用して、連続EEGデータを脳と非脳に統合
+効果的なソースプロセスは根本的に異なるアプローチです。 アメリカ
+多チャンネルEEG内の一時独立した信号ソースを識別する
+データだけでなく、頭皮電極への投影のパターン、
+これは、空間的に静止したソースのために固定されます。 これらの ICA 'component
+maps' は、より大まかなっています(つまり、
+"dipole-like") 生 EEG またはほぼすべての平均 ERP よりも
+タイムポイント -- 電極の位置がない場合でも
+数値伝播の生体物理学はICAが考慮に入れられます
 ([Delorme et al.,
-2012](https://sccn.ucsd.edu/~scott/pdf/Delorme_Dipolar2012.pdf)). Many
-independent EEG components have scalp maps that nearly perfectly match
-the projection of a single equivalent brain dipole. 
+2012](https://sccn.ucsd.edu/~scott/pdf/Delorme_Dipolar2012.pdf)。 詳しくはこちら
+独立した EEGコンポーネントは、ほぼ完全に一致するスカルプマップを持っています
+単一の同等の脳のダイポールの投影。 
 
-This finding is
-consistent with ICA components presumed generation via partial synchrony of local
-field potential (LFP) processes within a connected domain or patch of
-cortex. Because
-local cortical connections have a much higher density than longer-range
-connections, it is reasonable to assume that synchronous coupling of
-neuronal activity, as isolated by ICA, usually occurs within a single
-brain area. Some ICA component scalp maps do highly resemble the
-projection of a single equivalent dipole (or in some cases, a bilaterally
-symmetric pair of dipoles). Residual scalp maps variance of the
-best-fitting single- or two-dipole component models are often
-surprisingly low (see below), given the relative inaccuracy of the
- head models used to compute them. Such ICA components may thus
-represent the projection of activity from one (or two symmetric) patch(es)
-of cortex.
+この結果は
+ローカルの部分的な同期によるICAコンポーネント推定生成と一貫
+フィールドポテンシャル(LFP)は、接続されたドメインまたはパッチ内のプロセス
+コルテックス。 なので
+ローカルの相関関係はより長い範囲より大いにより高い密度を持っています
+接続、同期の結合を仮定することは適度です
+ICAによって隔離されるように、通常単一の内で起こる神経活動
+脳領域。 一部のICAコンポーネントのスカルプマップは、非常に似ています
+単一の同等性ダイポールの投影(または場合によっては、二国間的に
+dipolesの対の対。 残留スカルプマップの分散
+シングルまたは2ダイポールコンポーネントモデルのベストフィット
+意外に低い(下参照)、相対的な不正確さを与えられた
+ それらを計算するために使用されるヘッド モデル。 このようなICAコンポーネントは、したがって、
+1つの(または2つの対称)パッチからの活動の投影を表す
+皮質。
 
-Fortunately, the problem of finding the location of a single equivalent
-dipole generating a given dipolar scalp map is well-posed, given a
-sufficiently accurate electrical 'forward problem' head model that
-specifies the resistance between each scalp electrode location and each
-possible (brain) source location. Mathematically, coherent local field
-potential (LFP) activity across a 'cortical patch' will have an
-*equivalent* single infinitesimal oriented dipole model whose scalp
-projection pattern matches the joint projection of the spatially
-coherent activity across the patch. In general, the location of the equivalent
-dipole for such a patch will be quite near (\< 2 mm) but not
-necessarily precisely at the center of the patch. In particular, if the
-patch is radially oriented (e.g., on a cortical gyrus) and is thus
-facing the supervening scalp surface, the equivalent dipole tends to be
-slightly deeper than the cortical source patch. However, the location of
-the equivalent dipole for an *effective source* of this type is
-relatively easy to compute and easy to compare across conditions and
-subjects. We use the term *effective source* since currents from a
-spatially coherent (in-phase) signal across a cortical patch will make a
-much larger contribution to the scalp EEG than spatially incoherent
-(out-of-phase) activities from smaller domains within the same or any
-similar cortical patch because the out-of-phase contributions of the
-smaller domains will tend to cancel each other out at the scalp
-recording electrode (*phase cancellation*). Thus, even when the actual
-LFP magnitudes in a smaller cortical domain are no less than in the
-spatially coherent *effective source* patch, their net contribution to
-the scalp EEG will be minimal compared to the spatially coherent
-*effective source*.
+幸いなことに、単一の同等の位置を見つけることの問題
+dipole は与えられた dipolar scalp の地図を発生させます井戸置かれます
+十分に正確な電気 'forward 問題' ヘッド モデル
+各頭皮の電極の位置と各々の抵抗を指定する
+可能(脳) ソースの場所。 数学的に、コヒーレントローカルフィールド
+'cortical patch' を渡る潜在的な (LFP) 活動は持っています
+*equivalent* 単一無限の指向のダイポール モデルの頭皮
+投影パターンは空間の共同投影と一致します
+パッチ全体で一貫した活動。 一般的に、等価の所在地
+そのようなパッチのためのダイポールは、かなり近くになります (\<2 mm) しかし、ない
+パッチの中心に必ず正確に。 特に、もし
+パッチは放射状指向(例えば、角質ジラス)であり、したがって
+重ねる頭皮の表面に直面して、同等の棒は傾向にあります
+コルテソースパッチよりも若干深くなります。 しかし、その場所は
+このタイプの*有効なソース*の同等のダイポールはあります
+条件を渡る比較し、容易な比較的容易および容易
+トピック 現在のところから*有効なソース*という用語を使用します。
+角形のパッチを渡る空間的に一貫した(inフェーズ)信号は作ります
+スカルプEEGへの大きな貢献は、空間的に固有のものよりもはるかに大きい
+(フェーズアウト) 同じドメインまたはいずれかのドメインからの活動
+相続的な貢献のために類似した相関パッチ
+小さいドメインは、頭皮で互いに取り消す傾向があります
+記録電極(*フェーズキャンセル*)。 そのため、実際のところも
+より小さい角質ドメインの LFP の大きさは、
+空間的に一貫性のある*効果的なソース*パッチ、それらのネットの貢献
+頭皮EEGは空間的に凝ったコヒーレントと比較して最小限になります
+*効果的なソース*。
 
-EEGLAB includes two
-plugins for localizing equivalent dipole locations of independent
-component scalp maps: (1) the DIPFIT plugin described here and (2) the
-[Neuroelectromagnetic Forward modeling Toolbox (NFT)](https://github.com/sccn/nft). The DIPFIT plugin is the default approach in EEGLAB. The NFT plugin can also perform distributed cortical source imaging and build individual subject
-electrical (forward) head models from an available subjects' MR head image and sufficient EEG.
+EEGLABには2つが含まれています。
+独立した同等のダイポールの位置をローカライズするためのプラグイン
+コンポーネントのスカルプマップ: (1) DIPFITプラグインは、ここに説明し、(2)
+[神経電磁気 フォワードモデリングツールボックス(NFT)](https://github.com/sccn/nft)お問い合わせ DIPFIT プラグインは EEGLAB のデフォルトアプローチです。 NFT プラグインは、分散型コア ソース イメージングを実行し、個々の被写体を構築することもできます。
+利用できる主題の MR の頭部のイメージおよび十分な EEG からの電気(フォワード)のヘッド モデル。
 
-What reference for ICA components?
+ICAコンポーネントの参考文献
 --------
-ICA components are reference-free. If you re-reference data after computing ICA components in EEGLAB, the ICA component scalp topography will remain the same. So ICA components, because of the ICA algorithm properties, are computed under the ideal infinity reference irrespective of the original reference of the data. However, this reference can only be approximated by creating a forward solution over the entire scalp. If the ICA topography and the forward solution of the dipole being fitted are not consistent (as they use different approximations of the infinite reference), then the optimal dipole(s) positions(s) are not accurately determined. In other words, we should not use ICA components scalp topography with an infinity reference source localization model. Instead, both the ICA topography and the dipole model should be re-referenced using the same infinite reference approximation.
+ICAコンポーネントは参照フリーです。 EEGLAB で ICA コンポーネントを計算した後にデータを再参照すると、ICA コンポーネントのスカルプトポグラフィは同じままになります。 ICA のアルゴリズム特性のために、ICA のコンポーネントは、データの元の参照の理想的な無限参照の下で計算されます。 しかし、この参照は、スキャルプ全体にフォワードソリューションを作成することによってのみ近似することができます。 ICAのトポグラフィとダイポールのフォワードソリューションが一貫していない場合(無限参照の異なる近似を使用するため)、最適なダイポール(s)ポジションは正確に決定されません。 つまり、ICAコンポーネントのスカルプトポグラフィを無限参照ソースローカリゼーションモデルで使用しないでください。 代わりに、ICAのトポグラフィとダイポールモデルは、同じ無限参照近似を使用して再設定する必要があります。
 
-In practice, before performing source localization in DIPFIT, the scalp topography of ICA components is recomputed using an average reference (the mean of the ICA projection to all channels is removed), as the forward model is also computed with an average reference. During dipole fitting, the model and the averaged reference ICA topography are compared, and dipole parameters are adjusted until the model matches the scalp topography as closely as possible. Thank you to Robert Oostenveld for helping clarify this section.
+実際には、DIPFITのソースローカリゼーションを実行する前に、ICAコンポーネントのスカルプトポグラフィは平均参照(すべてのチャネルへのICA投影の手段が削除される)を使用して再入力され、フォワードモデルは平均参照で計算されます。 ダイポールフィッティングでは、モデルと平均参照のICAトポグラフィを比較し、モデルができるだけ近いスカルプトポグラフィと一致するまで、ダイポールパラメータを調整します。 ロバート・オオステンドがこのセクションを明らかにするのを支援するためにありがとうございます。
 
-Dipole fitting with DIPFIT
+DIPFITによるダイポールフィッティング
 --------
 
-### Prepare data for component dipole fitting
+### コンポーネントダイポールフィッティングのデータの準備
 
-To fit dipole models to ICA components in an EEGLAB dataset, you must at the very least:
-1. Import channel locations using the <span style="color: brown">Edit → Channel locations</span> menu item.
-2. High pass filter the data using the <span style="color: brown">Tools → Filter the data → Basic FIR filter</span> menu item.
-3. Run independent component analysis using the <span style="color: brown">Tools → Decompose data by ICA</span> menu item.
-4. Select head model using the <span style="color: brown"> Tools → Locate dipoles using DIPFIT → Head model and settings</span> menu item.
+EEGLAB のデータセットで ICA コンポーネントにダイポール モデルに合うには、少なくとも:
+1. インポートチャネルの場所を使用して <span style="color: brown">編集 → チャネルの場所</span> メニュー項目。
+2. 高いパス フィルターはデータを使用してろ過します <span style="color: brown">ツール → データをフィルタリング → 基本 FIR フィルター</span> メニュー項目。
+3. 独立したコンポーネント分析を実行します。 <span style="color: brown">ツール → ICAによるデータの分解</span> メニュー項目。
+4. ヘッドモデルを選択 <span style="color: brown"> ツール → DIPFIT → ヘッドモデルと設定を使用してダイポールを探します</span> メニュー項目。
 
-Refer to the corresponding section of the tutorial for more information on these steps. To illustrate dipole fitting, we will use the tutorial dataset [eeglab_dipole.set](https://sccn.ucsd.edu/eeglab/download/eeglab_dipole.set). This sample dataset contains a channel location file,  pre-computed ICA weights, and head model.
+これらの手順の詳細については、チュートリアルの対応セクションを参照してください。 ダイポールフィッティングを説明するには、チュートリアルデータセットを使用します。 [eeglab_dipole.set ディレクティブ](https://sccn.ucsd.edu/eeglab/download/eeglab_dipole.set)お問い合わせ このサンプルデータセットには、チャンネル位置ファイル、プリコンプトされたICA重量、ヘッドモデルが含まれています。
 
-Select menu item <span style="color: brown">File → load existing dataset</span> and select the tutorial file "eeglab_dipoles.set" downloaded above. Then press *Open*.
+メニュー項目を選択 <span style="color: brown">ファイル → 既存のデータセットを読み込む</span> 上記のチュートリアルファイル「eeglab_dipoles.set」を選択します。 それから *Open*を押して下さい。
 
-Before running DIPFIT, we must select a head model. Select the EEGLAB menu item <span style="color: brown"> Tools → Locate dipoles using DIPFIT → Head model and settings</span>, as shown below. Press *Ok* to use all defaults. For additional information on this topic, see the [head model selection](/tutorials/09_source/Model_Settings.html) section of the tutorial.
+DIPFITを実行する前に、ヘッドモデルを選択する必要があります。 EEGLABメニュー項目を選択 <span style="color: brown"> ツール → DIPFIT → ヘッドモデルと設定を使用してダイポールを探します</span>以下に示すように。 *Ok*を押して、すべてのデフォルトを使用する。 このトピックに関する追加情報については、 [ヘッドモデル選定](/tutorials/09_source/Model_Settings.html) チュートリアルのセクション。
 
-![400px\|border](/assets/images/dipfitnew3.png)
+![400px\|ボーダー](/assets/images/dipfitnew3.png)
 
-### Select components of interest
+### 関心のあるコンポーネントを選択
 
-Next, you must select which component to fit. Independent component (IC)
-5 of the sample dataset decomposition is a typical left posterior
-alpha rhythm process. To plot component scalp map, use menu item
-<span style="color: brown">Plot → Component maps → In 2-D</span>, enter *5* for the component number. Press *Ok*.
+次に、どのコンポーネントが適合するかを選択する必要があります。 独立コンポーネント(IC)
+サンプルデータセット分解の5つは典型的な左のポスターです
+アルファのリズム プロセス。 コンポーネントのスカルプマップをプロットするには、メニュー項目を使用する
+<span style="color: brown">Plot → コンポーネントマップ → 2Dで</span>コンポーネント番号の *5* を入力してください。 プレス *Ok*.
 
-![400px\|border](/assets/images/dipfitnew2.png)
+![400px\|ボーダー](/assets/images/dipfitnew2.png)
 
-There are two steps required to create equivalent dipole models for
-independent components:
+2つのステップは、同等のダイポールモデルを作成するために必要です
+独立した部品:
 
--   Grid scanning: This involves scanning possible positions in a coarse
-    3-D grid to determine an acceptable starting point for fitting
-    equivalent dipoles to each component.
--   Non-linear interactive fitting: This involves running an
-    optimization algorithm to find the best position for each equivalent
-    dipole.
+-   格子スキャン: これは粗いスキャン可能な位置を含みます
+    適合のための受諾可能な開始ポイントを決定する3-D格子
+    各コンポーネントに相当するダイポール。
+-   非線形相互付属品: これは、実行を実行することを含みます
+    各同等の最良の位置を見つけるための最適化アルゴリズム
+    ディポール。
 
-Below we describe these steps in detail. Note that the grid
-scanning and non-linear optimization may also be performed automatically
-for a group of selected components. This is described later in this
-tutotial.
+これらの手順を詳細に説明します。 グリッドに注意
+スキャンと非線形の最適化も自動的に実行される
+選択したコンポーネントのグループ。 これは、後で説明します。
+チュートリアル
 
-### Initial fitting - Scanning on a coarse-grained grid
+### 初期フィッティング - 粗粒グリッドでスキャン
 
-Before you perform interactive dipole fitting, use DIPFIT to
-scan for the best-fitting dipole locations on a coarse 3-D grid covering
-the whole brain. The solutions of this grid search are not very accurate
-yet, but they are acceptable as starting locations for the non-linear
-optimization. Starting from these best grid locations will speed up
-finding the final best-fitting solution. To scan dipoles on a coarse grid, select
-the <span style="color: brown">Tools → Locate dipoles using DIPFIT →
-Coarse fit (grid scan)</span> menu item. The window
-below will pop up:
+インタラクティブなダイポールフィッティングを実行する前に、DIPFIT を使用して、
+粗い3-D格子カバーの最もよい付属品の棒の位置のためのスキャン
+脳全体。 このグリッド検索のソリューションは非常に正確ではありません
+しかし、彼らは非線形のための開始場所として受け入れられています
+最適化。 これらの最高のグリッドの場所から、速度を上げる
+最終的なベストフィットソリューションを見つける。 粗いグリッドでダイポールをスキャンするには、
+お問い合わせ <span style="color: brown">ツール → DIPFIT を使ってダイポールを探る →
+粗いフィット(グリッドスキャン)</span> メニュー項目。 ウィンドウ
+以下がポップアップ表示されます。
 
-![400px\|border](/assets/images/dipfitnew3bis.png)
+![400px\|ボーダー](/assets/images/dipfitnew3bis.png)
 
-The first edit box *Component(s)* allows you to select a subset of
-components to fit. Selecting only a few components does not
-increase computation speed since the forward model still has
-to be computed at each location on the grid. The *Grid in
-X-direction*,*Grid in Y-direction*, and *Grid in Z-direction* edit boxes
-allow you to specify the size and spacing of the coarse grid. By
-default, DIPFIT uses 24 steps equally spaced between -radius and +radius
-of the sphere that best matches the electrode positions. Since
-equivalent dipoles are not likely to be in the lower hemisphere of the
-model head, by default DIPFIT only scans through positive Z values. The
-last edit box, *Rejection threshold RV(%)*, allows you to set a
-threshold on the maximum residual variance that is accepted. Using this
-threshold, components that do not resemble a dipolar field distribution
-will not be assigned a dipole location. Press *Ok* to continue.
+最初の編集ボックス *Component(s)*を使用すると、サブセットを選択することができます
+適合する部品。 いくつかのコンポーネントのみを選択すると、
+前方モデルがまだ持っているので計算速度を増加して下さい
+グリッドの各位置で計算する。 *グリッドイン
+X-direction*、*Y-direction*のGridおよびZ方向*の編集箱の*Grid
+粗いグリッドのサイズと間隔を指定できます。 によって
+デフォルトでは、DIPFIT は -radius と +radius の間で均等に間隔をあけられる 24 つのステップを使用します
+電極の位置に最も適した球の。 お問い合わせ
+同等なダイポールは、低半球の低半球にある可能性はない
+デフォルト DIPFIT によるモデル ヘッドは肯定的な Z 値だけスキャンします。 ふりがな
+最後の編集箱、*Rejectionのしきい値RV(%)*は、置くことを可能にします
+受け入れられる最大の残留期間のしきい値。 これを使う
+しきい値、ジポーラフィールド分布に似ていないコンポーネント
+ダイポールの位置を割り当てません。 プレス *Ok* 続行
 
-Progress of the coarse grid
-scanning is shown on the MATLAB command window. During dipole localization, the electrode positions are
-projected to the skin surface of the spherical or BEM head model, though
-the electrode positions of the dataset are *not*
-altered. DIPFIT starts the grid scan by first excluding all 3-D grid
-locations that are outside the head. It then computes the forward model
-(dipole-to-electrode projections) at each remaining grid location and
-compares it with all component topographies.
+粗い格子の進歩
+MATLABコマンドウィンドウにスキャンが表示されます。 ダイポールローカリゼーション中、電極位置は
+球面またはBEMのヘッド モデルの皮の表面に写し出されるが、
+データセットの電極位置は*not*です
+変更される。 DIPFITは、3Dグリッドを全て排除してグリッドスキャンを開始
+頭の外にある場所。 前方モデルを計算します
+各グリッドの位置で(ダイポール・ツー・エレクト・プロジェクション)
+すべてのコンポーネントのトポグラフィと比較します。
 
-### Plotting dipole locations in 3-D volume
+### 3Dボリュームでダイポールの位置をプロット
 
-When the process is completed,
-select the <span style="color: brown">Tools → Locate dipoles using DIPFIT → Plot component dipoles</span> menu item to call the GUI below:
+プロセスが完了したら、
+選択する <span style="color: brown">ツール → DIPFIT → プロットコンポーネントダイポールを使用してダイポールを割り当てる</span> 下のGUIを呼び出すためのメニュー項目:
 
-![400px\|border](/assets/images/dipfitnew4.png)
+![400px\|ボーダー](/assets/images/dipfitnew4.png)
 
-Simply press *Ok* to produce the figure below:
+プレス *Ok*は下記の図を生成します。
 
-![400px\|border](/assets/images/dipfitnew5.png)
+![400px\|ボーダー](/assets/images/dipfitnew5.png)
 
-Here, all the dipoles plotted had a residual variance (vis a vis their
-component maps) below 40% (as we specified in the coarse grid search
-interactive window). Note that some components end up having the same x,
-y, and z coordinates because of the coarseness of the grid. You may view
-individual components by pressing the *Plot one* button. The component's
-residual variance is indicated under its number.
+ここでは、プロットされたすべてのダイポールは、残留差を持っていた(彼らの指示に従ってください
+コンポーネントのマップ) 40%未満(粗いグリッド検索で指定)
+インタラクティブウィンドウ)。 同じxを持つコンポーネントが終わることに注意してください。
+y、zはグリッドの粗さのために調整します。 閲覧する
+*Plot 1*ボタンを押して個々のコンポーネント。 コンポーネントの
+残留期間は、その番号の下に示されます。
 
-### Plotting dipole locations on scalp maps
+### scalp の地図のディポールの位置をプロット
 
-Select menu item <span style="color: brown">Plot → Component maps → In 2-D</span>, enter *1:12* in the *Component numbers* edit box to only plot the first 12 components. Check the checkbox to plot associated dipoles and press *Ok*.
+メニュー項目を選択 <span style="color: brown">Plot → コンポーネントマップ → 2Dで</span>※コンポーネント番号* 編集ボックスに *1:12* を入力し、最初の 12 コンポーネントのみをプロットします。 チェックボックスをチェックして、関連するダイポールをプロットし、*Ok*を押します。
 
-![400px\|border](/assets/images/dipfitnew6.png)
+![400px\|ボーダー](/assets/images/dipfitnew6.png)
 
-The following plot will pop up. 2-D projections of component associated dipoles are overlaid on components' scalp topographies. Components'
-residual variance (in percent) are indicated next to their number.
+以下のプロットがポップアップ表示されます。 コンポーネント関連のダイポールの2次元予測は、コンポーネントのスカルプトポグラフィにオーバーレイされます。 コンポーネント お問い合わせ
+残留分散(パーセント)は、その番号の横に示されます。
 
-![400px\|border](/assets/images/dipfitnew7.png)
+![400px\|ボーダー](/assets/images/dipfitnew7.png)
 
-### Interactive fine-grained fitting
+### 相互罰金を科される付属品
 
-To scan dipoles interactively, call the <span style="color: brown">Tools → Locate dipoles using DIPFIT →Fine fit (iterative)</span> menu item. The
-following window pops up. Enter a component index (here, 5) in the
-*Component to fit* edit box.
+対話的にダイポールをスキャンするには、 <span style="color: brown">ツール → DIPFIT → ファインフィット(iterative)を使用してダイポールを探します</span> メニュー項目。 ふりがな
+次のウィンドウがポップアップ表示されます。 コンポーネントのインデックス(以下、5)を入力します。
+* コンポーネントをフィット* 編集ボックスにします。
 
-![400px\|border](/assets/images/dipfitnew7bis.png)
+![400px\|ボーダー](/assets/images/dipfitnew7bis.png)
 
-Prior to fitting this component, press the *Plot map* button to show the
-component scalp map. Then press the *Fit dipole(s) position & moment* button to perform fine fitting. Press the *Plot map* button again. The two scalp topographies are shown below (left, before fine fitting; right, after fine fitting). The residual variance decreases from 3.8% to 3%.  
+このコンポーネントを取り付ける前に、*Plot map* ボタンを押して表示します。
+コンポーネントのスカルプマップ。 その後、 *Fit ダイポール (s) 位置 & 瞬間* ボタンを押して、細かいフィッティングを実行します。 *Plot map* ボタンをもう一度押します。 2つの頭皮のトポグラフィは(左、細かいフィッティングの前に、右、細かいフィッティング後)以下に表示されます。 残留分散は3.8%から3%に減少します。  
 
-![400px\|border](/assets/images/dipfitnew8.png)
+![400px\|ボーダー](/assets/images/dipfitnew8.png)
 
-Note that the polarity of components is not fixed (but their orientation
-is): the product of the component scalp map value and the component
-activation value (i.e., the back-projected contribution of the
-component to the scalp data) is in the original data units (e.g.,
-microvolts), but the polarities of the scalp map and of the activation
-values are undetermined. For example, you may multiply both the scalp
-map and the component activity by -1 while preserving the component
-back-projection to the scalp (since the two negative factors cancel
-out). As a result, you may choose to flip the visualized dipole
-orientations: use the pop-up window for fitting, then press the *Flip
-in\|out* button and then the *Plot dipole(s)* button to re-plot the
-dipoles with indicated orientations reversed.
+コンポーネントの極性が固定されていないことに注意してください(ただし、その方向性)
+is): コンポーネントの scalp マップ値とコンポーネントの製品
+アクティベーション値(例えば、プロジェクト後のコントリビュート)
+scalpデータへのコンポーネントは、元のデータ単位(例えば、
+microvolts), しかし、スカルプマップと活性化の極性
+値が途方もない。 例えば、両方のスカルプを掛けることができます。
+map とコンポーネントのアクティビティを -1 で保存しながら、
+頭皮へのバックプロジェクション(2つの負の要因がキャンセルされるため)
+お問い合わせ その結果、視覚化したダイポールをフリップする
+オリエンテーション: 付属品のためのポップアップ ウィンドウを使用して下さい、それから *Flip を押して下さい
+in\|out* ボタンを押して、*Plot ダイポール(s)* ボタンを押してリプロットします。
+指示されたオリエンテーションが逆転したダイポール。
 
-<u>Important note:</u> When you are done, press the *Ok* button in the
-interactive dipole fitting interface. Do not press *Cancel* or close
-the window -- if you do, all the dipole locations computed
-using this interface will be lost!
+<u>重要な注意:</u> 完了したら、*Ok*ボタンを押して下さい
+相互ダイポールフィッティングインターフェイス。 *Cancel*を押さないで下さいまたは閉まないで下さい
+窓 -- なら、すべてのダイポールの位置は計算されます
+このインターフェイスは失われます!
 
-### Fitting symmetrical dipoles
+### 対称ダイポールのフィッティング
 
-Select component *3* and press the *Plot map* button to visualize this component. This component, showing a clear left-right symmetric activity, cannot be
-accurately modeled using a single dipole. To fit this component using
-two dipoles constrained to be located symmetrically across the (corpus
-callosum) midline, set both dipole 1 and 2 to 'active' and 'fit' (by
-checking the relevant checkboxes in the GUI). Then press the *Fit
-selected dipole position(s)* button. If fitting fails, enter different
-starting positions (e.g., \[-10 -68 17\] for first dipole and \[10 -68
-17\] for the second dipole and refit).
+コンポーネント *3* を選択し、*Plot map* ボタンを押してこのコンポーネントを視覚化します。 このコンポーネントは、明確な左右対称的なアクティビティを表示し、
+単一ダイポールを使用して正確にモデル化。 このコンポーネントに合わせる
+対称的に配置される2つのダイポール(corpus)
+callosum) ミッドライン, dipole 1 と 2 を 'active' と 'fit' (by) に設定します。
+GUIのチェックボックスをチェックします。 それから *Fit を押して下さい
+選択されたダイポールポジション*ボタン。 フィッティングが失敗した場合は、異なる
+開始位置(例:\[-10-68 17\])は、最初のダイポールと\[10-68
+17\] 2番目のダイポールとリジットのために。
 
-![400px\|border](/assets/images/dipfitnew9.png)
+![400px\|ボーダー](/assets/images/dipfitnew9.png)
 
-Press the *Plot map* button. When dipole fitting is done, note the
-low residual variance for the two-dipole model on the top right corner
-of the interactive interface.
+*Plotマップ*ボタンを押します。 ダイポールフィッティングが完了したら、注意してください。
+右上隅の2ダイポールモデルの低残留分散
+インタラクティブなインターフェイス。
 
-![400px\|border](/assets/images/dipfitnew10.png)
+![400px\|ボーダー](/assets/images/dipfitnew10.png)
 
-### Automated dipole fitting
+### 自動ダイポールフィッティング
 
-Automated dipole fitting performs the grid search and the non-linear
-fitting on several components without human intervention. To
-find a best-fitting equivalent dipole for component of your choice, select
-the EEGLAB <span style="color: brown">Tools → Locate dipoles using
-DIPFIT → Autofit (coarse fit, fine fit, plot)</span> menu item. Set the *Component indices* to *5*, enter
-*100* in the *rejection threshold* edit box so the iterative solution is
-computed regardless of the residual variance for the coarse fit, and
-check the *Plot resulting dipoles* checkbox to plot component dipoles at
-the end dipole fitting. Then, press *Ok*.
+自動ダイポールフィッティングがグリッド検索と非リニアを実行
+人間の介入なしで複数の部品で付属品。 お問い合わせ
+あなたの選択のコンポーネントのための最高のフィット同等のダイポールを見つける、選択
+EEGLABについて <span style="color: brown">ツール → ダイポールの検索
+DIPFIT → オートフィット(粗いフィット、細かいフィット、プロット)</span> メニュー項目。 *コンポーネントのインデックス*を*5*に設定し、入力
+*rejectionのしきい値*の編集箱の*100*は反復的な解決です
+粗いフィットの残留分散に関係なく計算され、
+*Plot 結果のダイポール*チェックボックスをチェックしてコンポーネントのダイポールをプロットする
+エンドダイポールフィッティング。 それから、*Ok*を押して下さい。
 
-![400px\|border](/assets/images/dipfitnew11.png)
+![400px\|ボーダー](/assets/images/dipfitnew11.png)
 
-The function starts by scanning a 3-D grid to determine acceptable
-starting positions for each component. Then it uses the non-linear
-optimization algorithm to find the exact dipole position for each
-component. At the end of the procedure, the following window pops up.
+機能は3-D格子をスキャンによって受諾可能定めることから始まります
+各コンポーネントの開始位置。 それからそれは非線形を使用します
+各々の正確なダイポール位置を見つけるための最適化アルゴリズム
+コンポーネント。 手順の最後に、次のウィンドウがポップアップ表示されます。
 
-![400px\|border](/assets/images/dipfitnew12.png)
+![400px\|ボーダー](/assets/images/dipfitnew12.png)
 
-The [dipplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=dipplot.m) function above allows you to rotate the head model
-in 3-D with the mouse, and plot MRI slices closest to the equivalent dipole as shown in the following sections.
+ふりがな [ディップロット.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=dipplot.m) 上記の機能を使用すると、ヘッドモデルを回転させることができます
+マウスで3-Dで、次のセクションに示すように、MRIのスライスを同等に近づけます。
 
 
-### Advanced visualization of dipole models
+### ダイポールモデルの高度な可視化
 
-Use the <span style="color: brown">Tools → Locate dipoles using DIPFIT → Plot component dipoles</span> menu item and select component numbers 3 and 5 (assuming you performed the fit for both
-components 3 and 5 as described above). Select all options as shown below.
+利用する <span style="color: brown">ツール → DIPFIT → プロットコンポーネントダイポールを使用してダイポールを割り当てる</span> メニュー項目を選択し、コンポーネント番号3と5を選択します(両方にフィットしたと仮定します)
+上記のようにコンポーネント3と5。 以下に示すすべてのオプションを選択します。
 
-![400px\|border](/assets/images/dipfitnew13.png)
+![400px\|ボーダー](/assets/images/dipfitnew13.png)
 
-The following plot pops-up.
+以下のプロットポップアップ。
 
-![400px\|border](/assets/images/dipfitnew14.png)
+![400px\|ボーダー](/assets/images/dipfitnew14.png)
 
-Press the *Plot one* button. You may scroll through the components by
-pressing the *Next/Prev* buttons. Note that the closest MRI slices to
-the dipole being currently plotted are shown. Note also that if you do
-not select the option *Plot closest MRI slices* in the graphic
-interface, and then press the *Tight view* button in the dipplot window,
-you will be able to see the closest MRI slices at the location of the
-plotted dipole as shown below. Try moving the 3-D perspective of the
-tight view plot with the mouse and/or selecting the three cardinal
-viewing angles (sagittal, coronal, top) using the lower-left control
-buttons.
+*Plot one*ボタンを押します。 コンポーネントをスクロールすると、
+*Next/Prev*ボタンを押します。 最も近い MRI スライスに注意してください
+現在プロットされているダイポールが表示されます。 注意する
+グラフィックのオプション*Plot closest MRIスライス*を選択しない
+インターフェイスは、ディプロットウィンドウの*Tight view*ボタンを押し、
+一番近いMRIのスライスは、その場所にあるMRIのスライスを見ることができます。
+以下に示すようにプロットされたダイポール。 3D視点を動かそう
+マウスと/または3つの枢機卿を選択するタイトなビュープロット
+左下制御を用いる視野角(左、冠、上)
+ボタン。
 
-![Image:Dipole_tight.gif](/assets/images/Dipole_tight.gif)
+![画像:Dipole_tight.gif](/assets/images/Dipole_tight.gif)
 
-Note that it is not possible to toggle the dipole "stems" or
-"projection lines" on and off from within the graphic interface. Instead, use the EEGLAB menu item again and unselect the corresponding checkbox.
+ダイポール「茎」や「茎」を切り替えることはできません。
+グラフィックインターフェース内でのプロジェクトライン。 代わりに、EEGLABメニュー項目を再度使用し、対応するチェックボックスをオフにします。
 
-Finally, again call menu item <span style="color: brown">Tools → Locate dipoles using DIPFIT → Plot component dipoles</span>. Select *Summary mode* and
-press *Ok*.
+最後に、再びメニュー項目を呼び出します <span style="color: brown">ツール → DIPFIT → プロットコンポーネントダイポールを使用してダイポールを割り当てる</span>お問い合わせ *Summaryモード*を選択し、
+プレス *Ok*.
 
-![Image:Dipole_summary.gif](/assets/images/Dipole_summary.gif)
+![画像:Dipole_summary.gif](/assets/images/Dipole_summary.gif)
 
-For comparison, using the spherical model, the location of the dipoles
-would have been as shown in the following picture (to obtain this picture, select the spherical head model and redo dipole fitting). Notice the similarity
-of the Talairach coordinates for the two models. Notice also that the
-BEM model does not overestimate dipole depth compare to the spherical
-model (which is usually the case when the BEM model mesh is too coarse).
-The MRI used to plot the spherical result is the average MNI brain (over
-about 150 subjects), whereas the MRI used to plot the BEM is the average
-MNI brain of a single subject (which was used to generate the model
-leadfield matrix).
+比較のために、球面モデル、ダイポールの位置を使用して
+次の画像(この画像を取得するには、球面ヘッドモデルと赤面ダイポールフィッティングを選択します)に示すようにされています。 類似性について
+2つのモデルのTalairach座標。 また、お知らせ
+BEMモデルは、球面に比例するダイポールの深さを比較しません
+モデル(BEMモデルメッシュが粗すぎる場合)
+球面結果をプロットするために使用されるMRIは平均MNIの脳です(上)
+約150件)、BEMをプロットするために使用されるMRIは平均です
+単一の主題のMNIの脳(モデルを発生させるために使用された)
+リードフィールド行列)。
 
-![Image:Dipole_summary2.gif](/assets/images/Dipole_summary2.gif)
+![画像:Dipole_summary2.gif](/assets/images/Dipole_summary2.gif)
 
-The entry *Background image* contains the name of the MRI in which to
-plot dipoles. You may enter the subject's MRI assuming you have normalized it to the MNI brain. The [SPM software](https://www.fil.ion.ucl.ac.uk/spm/) will
-take a raw subject MRI as input and normalize it to the MNI brain template.
+エントリー *背景画像*には、MRIの名前が含まれている
+ディポールをプロットします。 被験者のMRIをMNI脳に正規化させると入力できます。 ふりがな [SPMソフトウェア](https://www.fil.ion.ucl.ac.uk/spm/) お問い合わせ
+MNI脳のテンプレートに入力して正規化として生の主題MRIを取ります。
 
-eLoreta using DIPFIT
+DIPFITを使用したeLoreta
 --------
-DIPFIT also allows computing eLoreta solutions for ICA components. Model settings and coregistration with head model are
-the same for eLoreta as for dipole source localization. 
+DIPFITは、ICAコンポーネント用のELoretaソリューションも利用できます。 ヘッドモデルによるモデル設定とコアギストレーション
+eLoreta はダイポールソースのローカリゼーションと同じです。 
 
-If you have not done so already, load the [eeglab_dipole.set](https://sccn.ucsd.edu/eeglab/download/eeglab_dipole.set) tutorial dataset in EEGLAB. Select menu item <span style="color: brown">File → load existing dataset</span> and select the tutorial file "eeglab_dipoles.set" downloaded above. Then press *Open*.
+すでに行っていない場合は、 [eeglab_dipole.set ディレクティブ](https://sccn.ucsd.edu/eeglab/download/eeglab_dipole.set) EEGLABのチュートリアルデータセット。 メニュー項目を選択 <span style="color: brown">ファイル → 既存のデータセットを読み込む</span> 上記のチュートリアルファイル「eeglab_dipoles.set」を選択します。 それから *Open*を押して下さい。
 
-eLoreta source
-localization may be performed using the <span style="color: brown">File
-→Locate component using eLoreta</span> menu item. Enter component *5* and press *Ok*.
+eLoreta ソース
+ローカリゼーションを行なうことができる <span style="color: brown">ファイル
+→eLoretaを使用してコンポーネントをロードする</span> メニュー項目。 コンポーネント *5* を入力し、 *Ok* を押します。
 
 ![](/assets/images/loreta1.png)
 
-Result for this component is shown
-below. Like other DIPFIT functions, eLoreta relies on FieldTrip functions.
-Refer to the FieldTrip *ft_sourceanalysis.m* function help message for more information on eLoreta source localization.
+このコンポーネントの結果が示されています
+お問い合わせ 他のDIPFIT関数と同様に、eLoretaはFieldTrip関数に依存しています。
+eLoreta ソースのローカリゼーションの詳細については、FieldTrip *ft_sourceanalysis.m* を参照してください。
 
 ![](/assets/images/loreta2.png)
 
-Using DIPFIT to fit independent MEG components
+DIPFITを使用して独立したMEGコンポーネントに適合
 ----
-It is possible to use DIPFIT to fit MEG components. This [other section of the tutorial](/tutorials/misc/EEGLAB_and_MEG_data.html) contains more details on using EEGLAB to process MEG data.
+MEGコンポーネントに合うDIPFITを使うことができます。 お問い合わせ [チュートリアルの他のセクション](/tutorials/misc/EEGLAB_and_MEG_data.html) EEGLABを使用してMEGデータを処理するための詳細情報が含まれています。
 
-DIPFIT structures and functions
+DIPFIT構造と機能
 --------
 
-Like other EEGLAB functions, DIPFIT functions are standalone and may
-also be called from the command line. Note that whenever you call some of the
-DIPFIT menu items from EEGLAB, a text command is stored in the EEGLAB history
-as for any other EEGLAB menu item. The two DIPFIT menu items that generate an EEGLAB history command that can be re-used in batch
-scripts are <span style="color: brown">Tools → Locate dipoles using DIPFIT → Autofit</span> and <span style="color: brown">Tools → Locate dipoles using DIPFIT → Head model and settings</span>. Type *eegh* on the MATLAB command line to
-view the command history. 
+他の EEGLAB 関数と同様に、DIPFIT 関数はスタンドアロンであり、
+コマンドラインからも呼び出されます。 何かを呼ぶときの注意
+EEGLABのテキストコマンドであるEEGLABのDIPFITメニュー項目は、EEGLABの歴史に格納されます。
+他のEEGLABメニュー項目に関しては。 バッチで再使用できるEEGLAB履歴コマンドを生成する2つのDIPFITメニュー項目
+スクリプトは <span style="color: brown">ツール → DIPFIT → Autofit を使用してダイポールを割り当てる</span> そして、 <span style="color: brown">ツール → DIPFIT → ヘッドモデルと設定を使用してダイポールを探します</span>お問い合わせ MATLABコマンドラインで*eegh*を入力
+コマンド履歴を表示します。 
 
-DIPFIT creates a *EEG.dipfit* sub-structure within the main *EEG*
-dataset structure. This structure has several fields:
+DIPFITは、メインの*EEG*内で*EEG.dipfit*サブ構造を作成します。
+データセットの構造。 この構造には、いくつかのフィールドがあります。
 
 > |                            |                                                                                                                                                                                                                                                                                                         |
 > |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-> | EEG.dipfit.hdmfile         | Model file name. Contains information about the geometry and the conductivity of the head. This is a standard MATLAB file and may be edited as such.                                                               |
-> | EEG.dipfit.mrifile         | Contains the MRI file used for plotting dipole locations.                                                                                                                                                                                                                                               |
-> | EEG.dipfit.chanfile        | Contains the template channel location file associated with the current head model. This is used for electrode co-registration.                                                                                                                                                                         |
-> | EEG.dipfit.coordformat     | Contains the coordinate format in the model and MRI structure. This is "spherical" for the spherical model or "MNI" for the BEM model. MNI means that the coordinates will be rotated by 45 degree                                                                                                                                                                          |
-> | EEG.dipfit.coord_transform | Contains the Talairach transformation matrix to align the user dataset channel location structure (*EEG.chanlocs*) with the selected head model. This is a length-9 vector *\[shiftx shifty shiftz pitch roll yaw scalex scaley scalez\]*. Type *\>\> help traditionaldipfit* in MATLAB for more information. |
-> | EEG.dipfit.chansel         | Array of selected channel indices to fit (for instance, ECG or EYE channels might be excluded).                                                                                                                                                                                                          |
-> | EEG.dipfit.model           | A structure array containing dipole information.                                                                                                                                                                                                                                                        |
-> | EEG.dipfit.model.posxyz    | Contains the 3-D position of the dipole(s). If a two-dipole model is used for a given component, each row of this array contains the location of one dipole.                                                                                                                                            |
-> | EEG.dipfit.model.momxyz    | Contains 3-D moment of the dipole(s). If a two-dipole model is used for a given component, each row of this array contains the moment of one dipole.                                                                                                                                                    |
-> | EEG.dipfit.model.rv        | Gives the relative residual variance between the dipole potential distribution and the component potential distribution, ranging from 0 to 1.                                                                                                                                                           |
-> | EEG.dipfit.model.active    | Remembers which dipole was active when the component model was last fitted.                                                                                                                                                                                                                             |
-> | EEG.dipfit.model.select    | Remembers which dipole was selected when the component model was last fitted.                             
-> | EEG.dipfit.current         | Index of the component currently being fitted.                                                                                                                                                                                                                                                          |
+> | EEG.dipfit.hdmfile | モデルファイル名 形状やヘッドの導電性に関する情報が含まれています。 これは標準のMATLABファイルであり、そのようなように編集することができる。 お問い合わせ
+> | EEG.dipfit.mrifile | ダイポールの位置をプロットするために使用されるMRIファイルが含まれています。 お問い合わせ
+> | EEG.dipfit.chanfile | 現在のヘッドモデルに関連したテンプレートチャンネル位置ファイルが含まれています。 電極の調整に使用されます。 お問い合わせ
+> | EEG.dipfit.coordformat | モデルとMRI構造の座標形式が含まれています。 BEMモデルの球面モデルやMNIの「球面」です。 MNIは45度で座標が回転することを意味します |
+> | EEG.dipfit.coord_transform | 選択したヘッドモデルでユーザーデータセットチャネル位置構造(*EEG.chanlocs*)を揃えるために、Talairach変換行列が含まれています。 これは長さ9ベクトル*\[シフトシフトシフトシフトピッチロールyawスケーラシースケール\]*です。 Type *\>\> は、MATLAB の伝統的な dipfit* をより多くの情報に助けてくれます。 お問い合わせ
+> | EEG.dipfit.chansel | 選択したチャンネルのインデックスの配列(例えば、ECGやEYEチャンネルは除外される場合があります)。 お問い合わせ
+> | EEG.dipfit.model | ダイポール情報を含む構造配列 お問い合わせ
+> | EEG.dipfit.model.posxyz | ダイポールの3次元位置を保持します。 与えられたコンポーネントに 2 ダイポール モデルが使用される場合、この配列の各行には 1 つのダイポールの場所が含まれています。 お問い合わせ
+> | EEG.dipfit.model.momxyz | ダイポールの3D瞬間が含まれています。 与えられたコンポーネントに 2 ダイポール モデルが使用される場合、この配列の各行には 1 つのダイポールの瞬間が含まれています。 お問い合わせ
+> | EEG.dipfit.model.rv | ダイポールのポテンシャル分布とコンポーネントのポテンシャル分布の間の相対残留差を0から1に及ぼす お問い合わせ
+> | EEG.dipfit.model.active | 部品モデルが最後に装着された際のダイポールが有効だったことを覚えておいてください。 お問い合わせ
+> | EEG.dipfit.model.select | コンポーネントモデルが最後に装着された際にダイポールが選ばれるものを忘れないでください。                             
+> | EEG.dipfit.current | 現行のコンポーネントのインデックス お問い合わせ
 
-The main DIPFIT functions which can be called from the command line in batch mode are:
-- [pop_dipfit_settings.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_settings.m): Specify DIPFIT parameters, i.e. head model details.                                                                                                                          
-- [pop_multifit.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_multifit.m): Command the DIPFIT modeling process from a single function. This function allows the user to set parameters, initialize locations on a coarse grid, then perform non-linear optimization. This function can be used to automate batch fitting of components from one or more subjects.
+バッチモードのコマンドラインから呼び出すことができる主要なDIPFIT関数は次のとおりです。
+- [pop_dipfit_settings.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_settings.m): DIPFITパラメータ、すなわちヘッドモデルの詳細を指定します。                                                                                                                          
+- [pop_multifit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_multifit.m): DIPFIT モデリングプロセスを単一関数からコマンドします。 この関数は、ユーザーがパラメータを設定したり、粗いグリッド上の場所を初期化したり、非線形最適化を実行したりすることができます。 この関数は、コンポーネントのバッチフィッティングを1つ以上から自動化するために使用できます。
 
-Auxiliary DIPFIT functions used by the functions above:
-- [dipfitdefs.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=dipfitdefs.m): Defines a set of default values used in DIPFIT.
+上記の機能によって使用される補助DIPFIT機能:
+- [ディップフィットdefs.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=dipfitdefs.m): DIPFIT で使用されるデフォルト値のセットを定義します。
 
-Literature references
+文献参照
 --------
 
-M. Scherg, "Fundamentals of dipole source potential analysis". In:
-"Auditory evoked magnetic fields and electric potentials" (eds. F.
-Grandori, M. Hoke and G.L. Romani). Advances in Audiology, Vol. 6.
-Karger, Basel, pp 40-69, 1990.
+M. Scherg、「ダイポールソースの潜在的解析のファンダメンタル」。 で:
+「Auditoryは磁場と電位を進化させた」 (eds. F.)
+Grandori、M. Hoke、G.L.ロマニ。 オーディオロジーの進歩、Vol.6
+カルガー、バーゼル、pp 40-69、1990。
 
-R. Kavanagh, T. M. Darcey, D. Lehmann, and D. H. Fender. "Evaluation of
-methods for three-dimensional localization of electric sources in the
-human brain." *IEEE Trans Biomed Eng,* 25:421-429, 1978.
+R. Kavanagh、T. M. Darcey、D. Lehmann、D. H. フェンダー。 「評価」
+電力源の三次元ローカリゼーションのための方法
+人間の脳」 *IEEEトランスバイオメディカルエング、* 25:421-429、1978年
 
-T.F. Oostendorp and A. van Oosterom, "Source parameter estimation in
-inhomogeneous volume conductors of arbitrary shape", IEEE Trans Biomed
-Eng. 36:382-91, 1989.
+T.F. OostendorpとA. van Oosterom、「ソースパラメータ推定で
+IEEE Trans Biomed の任意形の非均質な容積のコンダクター、
+1989年3月31日

@@ -7,4 +7,4 @@ has_children: true
 has_toc: true
 nav_order: 15
 ---
-The pages under this section contain concepts and theories useful for EEG analysis. 
+このセクションの下のページには、EEG分析に役立つ概念と理論が含まれています。 

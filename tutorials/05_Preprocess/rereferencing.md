@@ -5,116 +5,116 @@ long_title: b. Re-referencing
 parent: 5. Preprocess data
 grand_parent: Tutorials
 ---
-Re-referencing the data
+データを再参照する
 ======
-For detailed background theory on re-referencing EEG data, please refer to the [Appendix](/tutorials/ConceptsGuide/rereferencing_background.html). We describe below how to specify the reference electrode(s) in EEGLAB and to (optionally) re-reference the data.
+EEGデータを再参照する詳細な背景理論については、 [アレンデックス](/tutorials/ConceptsGuide/rereferencing_background.html)お問い合わせ EEGLAB で参照電極の指定方法と、(オプション)データを再参照する方法を以下に説明します。
 
-Load the sample EEGLAB dataset
+サンプル EEGLAB データセットをロードする
 -------------------------
 
-Select menu item <span style="color: brown">File</span> and press sub-menu item
-<span style="color: brown">Load existing dataset</span>. Select the tutorial file "eeglab_data.set" distributed with
-the toolbox and located in the "sample_data" folder of EEGLAB. Then press *Open*.
+メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
+<span style="color: brown">既存のデータセットをロードする</span>お問い合わせ 配布するチュートリアルファイル「eeglab_data.set」を選択します。
+EEGLABの「sample_data」フォルダにあるツールボックスです。 それから *Open*を押して下さい。
 
-![Image:Pop_loadset.png](/assets/images/Pop_loadset.png)
+![画像:Pop_loadset.png](/assets/images/Pop_loadset.png)
 
-Calculating average reference
+平均参照の計算
 -------------------------
 
-Calculating an average reference is recommended for source localization.
+ソースのローカリゼーションに平均的な参照を計算することをお勧めします。
 
-Select <span style="color: brown">Tools → Re-reference the data</span> to
-convert the dataset to average reference by calling the [pop_reref.m](https://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_reref.m) function. When you call this menu item for the
-first time for a given dataset, the following window pops up.
+選択する <span style="color: brown">ツール → データを再参照する</span> お問い合わせ
+データセットを呼び出して平均参照に変換 [ログイン](https://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_reref.m) 機能。 このメニュー項目を呼び出した場合
+指定したデータセットで、次のウィンドウがポップアップ表示されます。
 
-![Screenshot 2025-03-19 at 14 32 56](https://github.com/user-attachments/assets/8f1644a9-95a8-46b6-aada-b80698946556)
+![スクリーンショット 2025-03-19 に 14 32 56](https://github.com/user-attachments/assets/8f1644a9-95a8-46b6-aada-b80698946556)
 
-The (sample) data above were recorded using a mastoid reference. Since
-we do not wish to include this reference channel (neither in the data
-nor in the average reference), we do not click the *Add current
-reference channel in data* checkbox.
+上記(サンプル)データをマストイド参照で記録しました。 お問い合わせ
+この参照チャンネルを含まない(データに必要)
+平均参照でも、*Add currentはクリックしません。
+データ*チェックボックスの参照チャネル。
 
-Press the *Ok* button to compute the average reference. This step will
-then be recorded in the main EEGLAB window (not shown). As in the
-previous step, a dialogue box will appear asking for the new dataset's name.
+*Ok*ボタンを押して平均参照を計算します。 このステップは
+その後、メインの EEGLAB ウィンドウに記録されます(表示されません)。 お問い合わせ
+前のステップでは、新しいデータセットの名前を求めるダイアログボックスが表示されます。
 
-After the data have been average referenced, calling the
-<span style="color: brown">Tools → Re-reference the data</span> menu still
-allows re-referencing the data to any channel or group of channels (or
-undoing an average reference transform -- as long as you chose to
-include the initial reference channel in the data when you transformed
-to average reference).
+データが平均参照された後、
+<span style="color: brown">ツール → データを再参照する</span> メニュー
+データをチャネルまたはチャネルのグループ(または)に再参照できます。
+平均的な参照変換を解除する -- 選択した限り
+変換時にデータ内の初期参照チャンネルを含める
+平均参照)。
 
-The Huber mean is a robust estimator of central tendency that reduces the impact of outliers by iteratively optimizing Huber’s loss function. This function acts quadratically for small errors, much like the arithmetic mean, but switches to a linear treatment for larger deviations, effectively down-weighting extreme values. The threshold, measured in microvolts, specifies the deviation from the mean at which channel values are treated linearly rather than quadratically. This approach uses the same type of reference as the PREP pipeline. However, the PREP pipeline iteratively removes channels with excessive deviations and recomputes the reference—a step that isn’t necessary in EEGLAB if bad channels have already been eliminated using clean_rawdata. It is important to note that the Huber mean should not be used before ICA because it violates the linearity assumption; it is best applied after ICA.
+Huber は、ハッカーの損失機能を反復的に最適化することにより、アウトイヤーの影響を削減する中央傾向の堅牢な推定器です。 この関数は、運動的な意味のように、小さなエラーに対して定性的に機能しますが、より大きな偏差のための線形治療に切り替え、効果的に極端な値を下げます。 マイクロボルトで測定されたしきい値は、四角形ではなく線形に処理されるチャネルの値の手段からの偏差を指定します。 このアプローチは、PreP パイプラインと同じ種類の参照を使用します。 しかし、PREPパイプラインは、過度な偏差でチャネルを反復し、参照を再計算します。EEGLABでは、悪いチャネルがすでにclean_rawdataを使用して排除されていない場合、EEGLABでは必要ではありません。 Huberの意味は、それが線形の前提に違反しているため、ICAの前に使用すべきではないことに注意することが重要です。それはICAの後に最も適しています。
 
-Note that the re-referencing function also re-references the stored
-ICA weights and scalp maps, if they exist.
+re-referencing 関数は、保存されたリフェレンシング機能も再参照することに注意してください。
+ICAの重みとスカルプマップ、それらが存在する場合。
 
-Retaining the reference channel
+参照チャネルの保持
 -------------------------
 
-Re-referencing data can be more complicated. For instance, say you
-recorded data referenced to Cz and wish to re-reference the data to
-average reference. You may also want to add Cz back to your data under the
-average reference assumption (the assumption that the average of all
-electrodes is 0). The first step is to compute average reference and
-declare Cz as the reference in the channel editor.
+データを再参照することは、より複雑になります。 例えば、
+Cz に参照されたデータを記録し、データを再参照したい
+平均参照。 また、Cz をデータに追加することもできます。
+平均参照仮定(すべての平均値の仮定)
+電極は 0 です。 最初のステップは平均参照を計算することです。
+宣言 チャンネルエディタの参照としてCz.
 
-For this example, we will use the [TEST.CNT](https://sccn.ucsd.edu/eeglab/download/TEST.CNT) dataset. Save the file on your hard drive and import it in EEGLAB using menu item <span style="color: brown">File → Import data → Using EEGLAB functions and plugins → From Neuroscan .CNT file</span>.
+この例では、 [試験.CNT](https://sccn.ucsd.edu/eeglab/download/TEST.CNT) データセット。 ハードドライブ上のファイルを保存し、メニュー項目を使用してEEGLABにインポート <span style="color: brown">ファイル → インポートデータ → EEGLAB関数とプラグインを使用して → Neuroscan .CNT ファイルから</span>.
  
-To declare Cz as a reference, call the channel editor window using the <span style="color: brown">Edit → Channel location</span> menu item, go to the last
-channel and press the *Append* button. An empty channel is created.
-Fill up the channel label (enter "Cz" in the *Channel label* edit box)
-and enter the position of the channel if you have it. You may enter the X, Y, Z locations and press the *XYZ -→ Polar &
-Sph.* to convert the 3-D Cartesian coordinates to polar and spherical
-coordinates. In the channel
-editor, references are placed after all the data channels (note that
-the checkbox *Channel in data array* is unchecked since these are
-not actual data channels associated with this electrode location).
+宣言する Czは参照として、チャンネルエディタウィンドウを呼び出します。 <span style="color: brown">編集 → チャンネルの場所</span> メニュー項目は、最後に行きます
+*Append*ボタンを押します。 空のチャンネルが作成されます。
+*Channel label* の編集箱のチャネルのラベル(内部「Cz」)を満たして下さい
+あなたがそれを持っている場合は、チャンネルの位置を入力します。 X、Y、Z の場所を入力し、 *XYZ - → ポーラ &
+Sph.* は 3 D のカルチェシアン座標を極端および球面に転換します
+座標。 チャネルで
+エディタ、参照はすべてのデータ チャネルの後で置かれます(それに注意して下さい
+データ配列*のチェックボックス *Channel は、これらはそのままチェックされていない
+この電極位置に関連した実際のデータチャネルではありません。
 
-If you do not have the electrode location, you may simply
-press the *Look up locs* button to automatically look it up based on
-the 10-20 channel label (note that this will look up the location of all
-electrodes).
+電極の位置がない場合は、単に電極の位置がない場合
+*Look up locs* ボタンを押して、自動で表示します。
+10-20チャンネルのラベル(これはすべての場所を見上げることに注意してください)
+電極)。
 
-![Image:Pop_reref3.png](/assets/images/Pop_reref3.png)
+![画像:Pop_reref3.png](/assets/images/Pop_reref3.png)
 
-Then press the *Set reference* pushbutton to set the reference to all
-channels to Cz ("Cz" needs to be typed into the checkbox and the channel
-range needs to be entered manually).
+次に、*Set reference* pushbutton を押して参照を全て設定します。
+Cz("Cz")へのチャンネルは、チェックボックスとチャンネルに入力する必要があります
+手動で入力する必要があります。
 
-![Image:Pop_reref5.png](/assets/images/Pop_reref5.png)
+![画像:Pop_reref5.png](/assets/images/Pop_reref5.png)
 
-Press OK to validate your new reference channel, close the channel editor window.
+OK を押して新しいリファレンスチャンネルを検証し、チャンネルエディタウィンドウを閉じます。
 
-Now go back to the re-referencing interface using menu item <span style="color: brown">Tools → Re-reference the data</span>. Now click on the *Retain old reference* button and select the Cz electrode.
+メニュー項目を使用してインターフェイスを再参照するようになりました <span style="color: brown">ツール → データを再参照する</span>お問い合わせ *Retain 古いreference* ボタンをクリックし、Cz 電極を選択します。
 
-![Image:Pop_reref6.png](/assets/images/Pop_reref6.png)
+![画像:Pop_reref6.png](/assets/images/Pop_reref6.png)
 
-Press OK. The re-referencing interface should look like the one below.
+プレスOK 再会議インターフェイスは、以下のいずれかのように見えるはずです。
 
-![Image:Pop_reref7.png](/assets/images/Pop_reref7.png)
+![画像:Pop_reref7.png](/assets/images/Pop_reref7.png)
 
-Then press *Ok* to actually re-reference your data. Your data is now average referenced and you have added back Cz (the original reference) to the data. The reason for this overly complex procedure is that the reference
-channel can have a location and that this location needs to be
-declared in the channel editor so it can be plotted along with other
-channels.
+次に、*Ok*を押して、実際にデータを再設定します。 データは平均参照され、Cz(元の参照)をデータに追加しました。 この過度に複雑な手順の理由は、参照である
+チャネルは場所があり、この場所は
+チャンネルエディタで宣言されているので、他のユーザーと一緒にプロットすることができます
+チャンネル.
 
-If you wanted to further re-reference your data to another reference (linked mastoid, for example), you may call the <span style="color: brown">Tools → Re-reference the data</span>  menu item again. 
+データを別の参照(リンクされたマストイドなど)に再参照したい場合は、 <span style="color: brown">ツール → データを再参照する</span>  メニュー項目は再び。 
 
-Re-referencing to multiple electrodes
+複数の電極への再搬送
 -------------------------
-Say you collected data with reference M1 (mastoid) and want to process
-your data using linked mastoid (M1 and M2) as reference. The process is
-as follow:
--   Specify M1 as a reference channel as described in the previous section and
-    compute average reference *while keeping electrode M1* (how to
-    keep the reference channel is also described in the previous
-    section)
--   Re-reference a second time the data selecting both electrodes M1 and
-    M2 as reference (you may then either select to keep the reference
-    channels or have them deleted)a
+参照M1(マストイド)でデータを収集し、処理したいと言う
+参照としてリンクされたマストイド(M1およびM2)を使用してあなたのデータ。 プロセスは
+フォロー:
+-   前のセクションで説明する参照チャンネルとしてM1を指定する
+    計算平均参照 *電極M1*を維持している間(方法)
+    参照チャンネルは、前のチャンネルにも記述されている
+    セクション)
+-   両方の電極 M1 を選択したデータを 2 度再参照
+    M2 参照として (参照を保つために選ぶことができます)
+    チャンネルまたは削除した)
 
-Re-reference at infinity
+インフィニティでのリリファレンス
 -------------------------
-REST (Reference Electrode Standardization Technique) is a re-reference technique for translating multichannel EEG to a new dataset with reference at Infinity where the potential is zero/constant. It is implemented in the [REST](https://github.com/sccn/REST) EEGLAB plugin available on the EEGLAB plugin manager using the <span style="color: brown">File → Manage EEGLAB extension</span> menu item.
+REST(Reference Electrode Standardizationテクニック)は、マルチチャネルEEGをインフィニティで参照して新しいデータセットに翻訳するための再設定技術です。 それはで実装されます [ログイン](https://github.com/sccn/REST) EEGLAB プラグインは EEGLAB プラグインマネージャで利用可能 <span style="color: brown">ファイル → EEGLAB 拡張機能の管理</span> メニュー項目。

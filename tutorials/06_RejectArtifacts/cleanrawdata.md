@@ -5,40 +5,40 @@ long_title: c. Automated artifact rejection
 parent: 6. Reject artifacts
 grand_parent: Tutorials
 ---
-Automated artifact rejection
+自動アーティファクト拒絶
 =====
 
-Load the sample EEGLAB dataset
+サンプル EEGLAB データセットをロードする
 -------------------
 
-Select menu item <span style="color: brown">File</span> and press sub-menu item
-<span style="color: brown">Load existing dataset</span>. Select the tutorial file "eeglab_data.set" distributed in the "sample_data" folder of EEGLAB. Then press *Open*.
+メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
+<span style="color: brown">既存のデータセットをロードする</span>お問い合わせ EEGLABの「sample_data」フォルダに配布されているチュートリアルファイル「eeglab_data.set」を選択します。 それから *Open*を押して下さい。
 
-![Image:Pop_loadset.png](/assets/images/Pop_loadset.png)
+![画像:Pop_loadset.png](/assets/images/Pop_loadset.png)
 
-Automated artifact rejection with Clean Rawdata plugin
+Clean Rawdataプラグインによる自動アーティファクト拒否
 -------------------
 
-<a href="https://github.com/sccn/clean_rawdata">Clean_rawdata</a> is an EEGLAB plugin installed by default with EEGLAB. It can remove both bad data channels and bad portions of data. Select menu item <span style="color: brown">Tools</span> and press sub-menu item
-<span style="color: brown">Reject data using Clean Rawdata and ASR</span>.
+<a href="https://github.com/sccn/clean_rawdata">Clean_rawdata(クリーンデータ)</a> EEGLABでデフォルトでインストールされているEEGLABプラグインです。 悪質なデータチャネルと不良部分の両方のデータを削除できます。 メニュー項目を選択 <span style="color: brown">ツール</span> サブメニュー項目を押します
+<span style="color: brown">Clean Rawdata と ASR を使用してデータを注入する</span>.
 
-![Image:pop_clean_rawdata_new.png](/assets/images/pop_clean_rawdata_new.png)
+![画像:pop_clean_rawdata_new.png](/assets/images/pop_clean_rawdata_new.png)
 
-There are several sections to this menu indicating different sequential processes:
-- The top section is about high-pass filtering your data. By default, this option is not selected since EEGLAB assumes that you might have already filtered your data. However, if this is not the case, you may select that option. The frequency limits indicate the transition bandwidth for the high pass filter (so 0.25 to 0.75 Hz indicate a high-pass filter at 0.5 Hz).
+異なるシーケンシャルプロセスを示すこのメニューにはいくつかのセクションがあります。
+- 上部のセクションは、データをフィルタリングするハイパスについてです。 デフォルトでは、このオプションは、EEGLABが既にデータをフィルタリングしている可能性があると仮定しているため選択されません。 しかし、もしそうでない場合は、そのオプションを選択することができます。 周波数制限は、ハイパスフィルタのトランジション帯域幅(0.25〜0.75Hz)を示しています。
 
-- The second option deals with removing bad channels. There are three methods to remove bad channels. Flat channels may be removed. Channels with a large amount of noise may be removed based on their standard deviation, and channels, which are poorly correlated with other channels, may be removed. The rejection threshold for channel correlation is set to 0.8. Note that channel rejection based on their correlation is performed differently if you have imported channel locations (a different heuristic that takes into account channel location is used in case you have them - and we strongly advise importing channel locations before automated artifact rejection).
+- 2番目のオプションは、悪いチャンネルを削除して取引します。 悪いチャンネルを削除するには3つの方法があります。 フラットチャンネルを削除できます。 標準偏差に基づいて大量のノイズを除去することができ、他のチャネルと相関するチャネルが削除される場合があります。 チャネル相関の拒絶しきい値が0.8に設定されます。 チャンネルの場所(アカウントチャンネルの場所を取る異なるヒューリスティックは、それらを持っている場合に使用されます - そして、我々は強く、自動化されたアーティファクト拒絶前にチャネルの場所をインポートする助言)、チャネルの拒否が異なることに注意してください。
 
-- The third section deals with rejecting bad portions of data using the Artifact Subspace Reconstruction (ASR) algorithm. The full description of this algorithm is outside the scope of this tutorial. For more information, we refer to this <a href="broken link">Appendix</a>. ASR may be used to correct bad portions of data or to remove them. For offline EEG processing, we advise to remove them, which corresponds to the default options. First, ASR finds clean portions of data (calibration data) and calculates PCA-extracted components' standard deviation (ignoring physiological EEG alpha and theta waves by filtering them out). It rejects data regions if they exceed 20 times (by default) the standard deviation of the calibration data. The lower this threshold, the more aggressive the rejection is. The Riemannian distance is an experimental metric published in this <a href="https://www.frontiersin.org/articles/10.3389/fnhum.2019.00141/full">article</a> that claims superior performance -- ASR's author C. Kothe disputes its claims.
+- 3番目のセクションでは、Artifact Subspace Reconstruction (ASR) アルゴリズムを使用して、データの悪い部分を拒否します。 このアルゴリズムの完全な説明は、このチュートリアルの範囲外です。 詳しくはこちらをご覧ください。 <a href="broken link">アレンデックス</a>お問い合わせ ASRは、データの悪い部分を修正したり、それらを削除したりするために使用できる場合があります。 オフライン EEG 処理では、デフォルトオプションに対応する、それらを削除することをお勧めします。 まず、ASR はデータのクリーンな部分(キャリブレーションデータ)を見つけ、PCA 抽出コンポーネントの標準的な偏差(生理学的 EEG アルファとそれらをフィルタリングすることにより、β 波を無視する)を計算します。 校正データの標準的な偏差が20回を超える場合、データ領域を拒否します。 このしきい値の下、拒絶反応がより攻撃的である。 Riemannian 距離は、実験的なメトリックで公開されています。 <a href="https://www.frontiersin.org/articles/10.3389/fnhum.2019.00141/full">ニュース</a> 優れたパフォーマンスを主張する - ASRの著者C.コテーは、その主張を争います。
 
-- The fourth option deals with the additional rejection of bad portions of data based on a set number of channels passing a standard deviation threshold in a given time window. The time window size can be fine-tuned when running the function from the command line. This allows rejecting bad portions of data that ASR might have missed.
+- 4つ目のオプションは、特定の時間ウィンドウに標準偏差のしきい値を渡るチャネルのセット番号に基づいて、データの悪い部分の追加拒否を処理します。 コマンドラインから関数を実行すると、タイムウィンドウサイズを微調整できます。 これにより、ASRが見逃した可能性のあるデータの不良部分を拒絶することができます。
 
-- The last option allows plotting results of the rejection with rejected data highlighted.
+- 最後のオプションは、拒否されたデータを強調した結果をプロットすることができます。
 
-The result of rejecting data on the tutorial dataset are shown below. We can see the rejected channels in red and the rejected data portion when all channels are marked in red in a given time segment. If correcting data using the ASR algorithm (not shown here), the old and new (corrected) data will be overlaid. We do not recommend using ASR correction (as opposed to rejection) on pre-recorded data because this functionality was primarily developed for real-time applications. The consequences of using ASR on EEG post-processing are not clearly understood -- although an increasing number of articles are being published on this subject.
+チュートリアルデータセットのデータを拒否する結果は以下に示します。 すべてのチャネルが指定された時間セグメントで赤でマークされると、拒否されたチャンネルが赤で表示されます。 ASRアルゴリズムを使用してデータを訂正する場合(ここでは表示されません)、古いデータと新しい(修正済み)データをオーバーレイします。 この機能は、主にリアルタイムアプリケーション用に開発されたため、事前に記録されたデータに対して、ASR補正(拒絶反対)を使用することはお勧めしません。 EEGポストプロセッシングでASRを使用する結果は明らかに理解されていない - この主題で記事が増えているが。
 
-![Image:pop_clean_rawdata_new2.png](/assets/images/pop_clean_rawdata_new2.png)
+![画像:pop_clean_rawdata_new2.png](/assets/images/pop_clean_rawdata_new2.png)
 
-Automated artifact rejection using other methods
+他の方法による自動アーティファクト拒絶
 -------------------
-The are several EEGLAB plugins and legacy EEGLAB menus to reject bad data and bad channels. Use menu item <span style="color: brown">File → Preference</span> and check the checkbox to *If set, show all menu items from previous EEGLAB versions*. Restart EEGLAB for this change to take effect. A collection of menu items for rejecting bad portions of data become available. These involve <span style="color: brown">Tools → Automatic channel rejection</span> (see the help message of the [pop_rejchan.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejchan.m) function) and <span style="color: brown">Tools → Automatic continuous rejection</span> (see help of the [pop_rejcont.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejcont.m) function), which were the default methods used in previous versions of EEGLAB. A collection of menus to reject bad data epochs is also described in [this section of the tutorial](/tutorials/misc/Rejecting_Artifacts_Legacy_Menus.html).
+EEGLAB のプラグインとレガシー EEGLAB のメニューは、悪いデータと悪いチャネルを拒否します。 メニュー項目を使用する <span style="color: brown">ファイル → 環境設定</span> チェックボックスを *If に設定すると、以前の EEGLAB バージョン* のすべてのメニュー項目が表示されます。 EEGLABを再起動して効果を発揮します。 データの不良部分を拒絶するメニュー項目の集合が可能。 これらの関与 <span style="color: brown">ツール → 自動チャンネル拒否</span> (ヘルプメッセージを参照してください) [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejchan.m) 関数)および <span style="color: brown">ツール → 自動連続拒絶</span> (ヘルプを参照してください) [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejcont.m) 関数)、EEGLABの以前のバージョンで使用されるデフォルトメソッドでした。 悪質なデータのエポックを拒否するメニューのコレクションも記載されています [このチュートリアルのセクション](/tutorials/misc/Rejecting_Artifacts_Legacy_Menus.html).

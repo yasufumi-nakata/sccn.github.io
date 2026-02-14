@@ -6,37 +6,37 @@ parent: Concepts guide
 grand_parent: Tutorials
 nav_order: 5
 ---
-# EEGLAB electrode coordinate systems
+# EEGLAB電極座標系
 
-EEGLAB supports electrode coordinate systems with the nose pointing towards the direction +X (the origin - loosely defined - is situated at the center of the head, and the top of the head points towards the direction +Z). Electrode coordinate formats where the nose points in another direction are automatically converted, so the nose points toward +X. In terms of distance units or fiducial definition or position, EEGLAB is quite flexible. Nevertheless, for BIDS compatibility, the EEGLAB coordinate system for scanned electrodes is equivalent to the CTF MEG coordinate system, with the center of the head being situated between the left pre-auricular (LPA) and right pre-auricular (RPA) fiducials (see below).
+EEGLABは、電極座標系を、方向+X(原点 - 緩やかな定義 - ヘッドの中央に位置し、方向+Zに向かうヘッドポイントのトップ)に向かって指しています。 別の方向の鼻ポイントが自動的に変換されるので、鼻は+Xに向かってポイントを調整します。 距離単位または法的な定義または位置の面では、EEGLABは非常に柔軟です。 それにもかかわらず、BIDSの互換性のために、スキャンされた電極のためのEEGLABの座標系は、CTF MEGの座標系と、左の前方(LPA)と右前方(RPA)の図形(以下参照)の間に位置している頭の中心と同等です。
 
-Three fiducial or anatomical landmark points (i.e., nasion, LPA, and RPA) are typically used to define a system. See this FieldTrip [FAQ page](https://www.fieldtriptoolbox.org/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/#details-of-the-mni-coordinate-system) for details on how the origin and the axes are defined in different systems.
+一般的に、システムを定義するために使用される3つの条件的または解剖的ランドマークポイント(すなわち、ナション、LPA、およびRPA)が使用されます。 このフィールドトリップを見る [よくある質問](https://www.fieldtriptoolbox.org/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/#details-of-the-mni-coordinate-system) オリジンと軸が異なるシステムで定義される方法の詳細。
 
-We recommend importing the BEM template electrode file (default) to assign electrode locations based on 10-5 channel labels, if digitized electrode locations are not recorded. If digitized electrode locations are imported into EEGLAB, make sure that the orientation of the coordinate system is correct, with 'LPA' on the left (+Y), 'RPA' on the right (-Y), and the nasion facing forward (+X; up). If necessary, electrodes may be rotated in the horizontal plane using the *Rotate Axis* push button of the EEGLAB channel editor (menu item <span style="color: brown">Edit → Channel locations</span>).You may use scanned electrode coordinates and EEGLAB's [get_chanlocs](https://github.com/sccn/get_chanlocs/wiki) for electrode digitization and [MRI images](../09_source/Custom_head_model.md) for custom head models and localizing EEG sources.
+BEMテンプレートの電極ファイル(デフォルト)を10-5チャンネルラベルに基づいて電極の位置を割り当てることをお勧めします。デジタル化した電極の位置が記録されていない場合。 EEGLABにデジタイズされた電極の位置がインポートされている場合は、座標系の向きが正しいことを確認してください。左(+Y)、右(-Y)の「RPA」、および直面するナション(+X;上)。 必要に応じて、EEGLABチャンネルエディタの*Rotate Axis*プッシュボタンを使用して、水平平面に電極を回転させることができます(メニュー項目) <span style="color: brown">編集 → チャネルの場所</span>)。 スキャンされた電極の座標とEEGLABの [get_chanlocs ディレクティブ](https://github.com/sccn/get_chanlocs/wiki) 電極のデジタル化と [MRI画像](../09_source/Custom_head_model.md) カスタムヘッドモデルとEEGソースをローカライズします。
 
-## EEGLAB template files
+## EEGLABテンプレートファイル
 
-EEGLAB uses the BESA electrode montage for 2-D representation and the standard MNI BEM source localization. These electrode systems are based on a sphere that best matches the geometry of the human head. The coordinate system is shifted upward compared to the coordinate system defined as nasion, left, and right fiducials (LPA and RPA). It is also tilted forward, so Cz is defined as vertical. The reason for shifting the coordinate system up is to best fit the sphere to the head; the sphere would not match the head well if we used a sphere centered at the origin of the nasion, LPA, and RPA coordinate frame.
+EEGLAB は、BESA 電極モンタージュを 2 D 表現と標準 MNI BEM ソースローカリゼーションに使用します。 これらの電極システムは、人間の頭の幾何学に最も適した球に基づいています。 座標系は、nasion, left, right fiducials (LPA, RPA) と定義された座標系と比較して上方に移動します。 また、前方に傾いたので、Czは縦に定義されます。 座標系をシフトする理由は、球を頭に合わせるのが最善です。 球は、陰イオン、LPA、RPA座標フレームの起源を中心に球を中央に使用した場合、頭に一致しません。
 
-![Screen Shot 2022-12-13 at 12 44 11 AM](https://user-images.githubusercontent.com/1872705/207268589-53f5e8f4-9138-4273-ade5-c8d8ee8729f9.png)
+![スクリーンショット 2022-12-13 に 12 44 11 AM](https://user-images.githubusercontent.com/1872705/207268589-53f5e8f4-9138-4273-ade5-c8d8ee8729f9.png)
 
-This is the reference frame when you use spherical coordinates for your 10-20 channel montage. The channel coordinates from the BEM template also use the same reference frame.
+10-20チャンネルモンタージュの球面座標を使うと参考フレームです。 BEMテンプレートからチャンネル座標も同じ参照フレームを使用します。
 
-### 2-D representation biases
+### 2-D表現バイアス
 
-When plotting 2-D scalp maps, Fpz is situated at the outer limit of the head. This might seem biased as FPz is clearly not located in the middle of the forehead in actual caps. Yet, considering the view below (from [Chatrian et al., 1988](https://pubmed.ncbi.nlm.nih.gov/3250964/)), this keeps Cz at the vertical of the reference frame. 
+2Dのスカルプマップをプロットすると、Fpzは頭の外側の限界に位置しています。 これは、FPzが明らかに実際のキャップの額の真ん中にないように偏ったように見えるかもしれません。 しかし、次のビューを検討してください(から [チャタリアンら., 1988](https://pubmed.ncbi.nlm.nih.gov/3250964/))、これは保ちます 参照フレームの縦のCz。 
 
-![Screen Shot 2022-12-12 at 6 35 29 PM](https://user-images.githubusercontent.com/1872705/207267890-43c43a92-53c8-483a-95f1-8c9483d57310.png)
+![スクリーンショット 2022-12-12 6 35 29 PM](https://user-images.githubusercontent.com/1872705/207267890-43c43a92-53c8-483a-95f1-8c9483d57310.png)
 
-### Building your ideal 2-D layout
+### あなたの理想を築く 2-Dレイアウト
 
-In general, if you want to perform source localization with 10-20 montage and do not have scanned electrode locations, we advise that you use the electrode of the BEM template EEGLAB location file (the default when you select *Look up locs* in the channel editing window. This file is well-validated.
+一般的に、10-20 montage でソースのローカリゼーションを実行し、スキャンされた電極の場所を持っていない場合は、BEM テンプレート EEGLAB 位置ファイルの電極を使用することをお勧めします(チャンネル編集ウィンドウで *Look up locs* を選択したときにデフォルトです。 このファイルは十分に有効です。
 
-It does not mean you are stuck with the associated 2-D electrode layout, though. To achieve the desired 2-D effect, you may apply any linear transformation of the 3-D electrode coordinates. These transformations may be compensated by the co-registration of the electrodes with the head model. For example, if you want to place the fiducials close to the outer limit of the head plot, you can transform the BEM template coordinates by shifting the center of the sphere down by 40 millimeters (*Opt. head center* in the channel editing window). The result is shown below. The figure below shows 81 electrodes in the original BEM coordinate system, the change in the origin of the 3-D coordinate frame, and the resulting 2-D project. 
+関連する2D電極のレイアウトに固執しているわけではありません。 目的の2D効果を達成するために、3D電極座標の任意の線形変換を適用することができます。 これらの変換は、ヘッドモデルと電極の共同登録によって補正される場合があります。 たとえば、ヘッドプロットの外側の限界に近いファイザーを配置したい場合は、40ミリメートル(*Opt. チャンネル編集ウィンドウのヘッドセンター*)で球の中心をシフトすることにより、BEMテンプレート座標を変換することができます。 結果は以下です。 下の図は、元のBEM座標系における81電極、三次元座標フレームの由来の変化、その結果2次元プロジェクトを示しています。 
 
-![Screen Shot 2022-12-13 at 2 00 53 PM](https://user-images.githubusercontent.com/1872705/207454927-54e15856-bead-4ff3-948d-639240449b15.png)
+![スクリーンショット 2022-12-13 に 2 00 53 PM](https://user-images.githubusercontent.com/1872705/207454927-54e15856-bead-4ff3-948d-639240449b15.png)
 
-This is not an ideal layout, as electrodes near the outer head limit are more spaced than electrodes near the center. A better option is to ask EEGLAB to change the head limit (the default is 0.5). Once you make these changes, it will affect all the 2-D plots for this dataset (EEGLAB 2023.0 and later versions only). To change the head limit, type the following on the command line:
+外側のヘッドの限界付近の電極が中心付近の電極よりも多く配置されているため、理想的なレイアウトではありません。 より良いオプションは、EEGLAB にヘッドの制限(デフォルトは0.5)を変更するように要求することです。 これらの変更を行うと、このデータセット(EEGLAB 2023.0以降バージョンのみ)のすべての2Dプロットに影響します。 ヘッドリミットを変更するには、コマンドラインで以下を入力します。
 
 ```matlab
 EEG.saved = 'no';
@@ -44,50 +44,50 @@ EEG.chaninfo.topoplot = { 'headrad' 0.68 };
 [ALLEEG, EEG, CURRENTSET] = eeg_store(ALLEEG, EEG); % save data in ALLEEG
 ```
 
-You may actually add any [topoplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m)) options (for example 'electrodes', 'on' to show electrodes on all the plots). The screen captures below show a head radius of 0.4 (left), the default 0.5 value (center) and 0.68 (right).
+あなたは実際に何かを追加することができます [topoplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m))オプション(例えば、'electrodes'、'on' はすべてのプロットで電極を表示する)。 下のスクリーンキャプチャは、0.4(左)、デフォルト0.5値(中央)と0.68(右)のヘッド半径を示しています。
 
-![Screen Shot 2022-12-13 at 3 09 37 PM](https://user-images.githubusercontent.com/1872705/207464956-99339d9d-e163-443d-8720-5f3add67a6c1.png)
+![スクリーンショット 2022-12-13 に 3 09 37 PM](https://user-images.githubusercontent.com/1872705/207464956-99339d9d-e163-443d-8720-5f3add67a6c1.png)
 
-### Other EEGLAB template files
+### その他のEEGLABテンプレートファイル
 
-There is an extensive collection of EEGLAB template files when you look up electrode coordinates. For example, we import an EGI 128 channel file below and show the layout. It is fine to perform source localization with this file as using the template BEM location file is impossible for the EGI setup (EGI channels are not defined in the 10-20 system). If FieldTrip is installed, the available [electrode files](https://www.fieldtriptoolbox.org/template/electrode/) within the FieldTrip toolbox are also shown.
+電極座標を調べる際、EEGLABテンプレートファイルの広範なコレクションがあります。 例えば、以下のEGI 128チャンネルファイルをインポートしてレイアウトを表示します。 テンプレート BEM 位置ファイルを使用して、このファイルを使用してソース ローカリゼーションを実行することは、EGI セットアップ (EGI チャネルは 10-20 システムで定義されていません) 不可能です。 FieldTripがインストールされている場合、利用可能な [電極ファイル](https://www.fieldtriptoolbox.org/template/electrode/) FieldTripツールボックス内も表示しています。
 
-![Screen Shot 2022-12-13 at 12 07 31 AM](https://user-images.githubusercontent.com/1872705/207260856-073113fb-cf7f-488a-8a5c-d118fccec67b.png)
+![スクリーンショット 2022-12-13 に 12 07 31 午前](https://user-images.githubusercontent.com/1872705/207260856-073113fb-cf7f-488a-8a5c-d118fccec67b.png)
 
-## Create and optimize your own montage
+## 独自のモンタージュの作成と最適化
 
-Sometimes you might want to create your own montage. For example, you might want to add some electrodes in specific locations, and cap manufacturers will usually accommodate these changes. You might also want to maximize head coverage, including adding electrodes as low as possible (see this [project](https://github.com/arnodelorme/optimize_montage), as an example). We recommend maximum head coverage instead of dense coverage in the upper head region. Because of volume conduction, the bottom electrodes capture a lot of depth information and are useful for source localization.
+自分のモンタージュを作りたいと思うこともあります。 たとえば、特定の場所にいくつかの電極を追加したい場合があり、キャップメーカーはこれらの変化に対応します。 電極をできるだけ低く追加するなど、ヘッドカバレッジを最大限に活用したい(これを参照してください) [プロジェクト](https://github.com/arnodelorme/optimize_montage)例) 頭上領域の密なカバレッジの代わりに、最大ヘッドカバレッジをお勧めします。 ボリューム伝導のため、ボトム電極は多くの深さ情報をキャプチャし、ソースのローカリゼーションに役立ちます。
 
-## Other 2-D layout
+## その他の2次元レイアウト
 
-If you are persistent about using a specific electrode layout for 2-D representation, you may do so. However, you should not use the electrode locations for source localization or 3-D plotting as they are defined for 2-D plotting only (even though EEGLAB will automatically infer 3-D coordinates for them).
+特定の電極レイアウトを2次元表現に使用するのが永続的である場合、そうすることができます。 ただし、2Dプロットのみで定義されているため、電極位置をソースローカリゼーションや3Dプロットに使用しないでください(EEGLABが自動的に3D座標を誘導する場合でも)。
 
-EEGLAB allows importing a variety of layouts. For example, after importing the tutorial dataset *eeglab_data.set*, we load the *eeglab_montage11_layout.loc* layout. To do so, call the channel editor using menu item <span style="color:brown">*Edit > Channel locations*</span>, then click on the *Look up locs* button. Depending on the layout, you may have to adjust the plotting radius in the channel editor interface, so the entire head is visible. EEGLAB also allows importing FieldTrip's [layouts](https://www.fieldtriptoolbox.org/template/layout/) if it is installed. The figure below shows some of types of 2-D electrode layouts available.
+EEGLABでは様々なレイアウトをインポートすることができます。 たとえば、チュートリアルデータセット *eeglab_data.set* をインポートした後、 *eeglab_montage11_layout.loc* レイアウトを読み込みます。 そのためには、メニュー項目を使用してチャンネルエディタを呼び出す <span style="color:brown">*編集 > チャンネルの場所*</span>*Look up locs* ボタンをクリックします。 レイアウトに応じて、チャンネルエディタインターフェイスでプロット半径を調整する必要があるため、ヘッド全体が見える。 EEGLABでは、FieldTripのインポートも可能です。 [レイアウト](https://www.fieldtriptoolbox.org/template/layout/) インストールされている場合 下記の図は、2D電極レイアウトの2種類をご用意しました。
 
-![Screen Shot 2022-12-13 at 3 16 02 PM](https://user-images.githubusercontent.com/1872705/207465671-1327aaf3-be3f-4185-81a2-6cbdef29bfe0.png)
+![スクリーンショット 2022-12-13 に 3 16 02 PM](https://user-images.githubusercontent.com/1872705/207465671-1327aaf3-be3f-4185-81a2-6cbdef29bfe0.png)
 
-## Considerations about fiducials
+## 財務に関する考察
 
-The left and right pre-auricular (LPA & RPA) points are commonly used as ear anatomical points (also known as fiducials). Unfortunately, they are poorly defined in different electrode montages, although errors in defining fiducial locations can systematically change source localization results [(reference)](https://doi.org/10.1109/NER.2019.8717065).
+左と右前方(LPA&RPA)のポイントは、耳の解剖学的ポイント(また、顔として知られている)として一般的に使用されます。 残念ながら、それらは異なる電極モンタージュではほとんど定義されていませんが、表面的な場所を定義するエラーは、ソースのローカリゼーション結果を体系的に変更することができます [(参考)](https://doi.org/10.1109/NER.2019.8717065).
 
-The default EEGLAB electrode coordinate system for datasets with anatomical landmarks labeled 'LPA' and 'RPA' as shown in the figure below. For backward compatibility purposes, this coordinate system is used regardless of whether the points labeled 'LPA' and 'RPA' are marked according to their formal definition (points on the posterior root of the zygomatic arch, see [here](https://www.fieldtriptoolbox.org/faq/how_are_the_lpa_and_rpa_points_defined/) for more details).
+デフォルトの EEGLAB 電極は、以下の図のように 'LPA' と 'RPA' をラベル付けした分析ランドマーク付きのデータセットのためのシステムを調整します。 後方互換性の目的のために、この座標システムは「LPA」と「RPA」が正式な定義に従ってマークされているかどうかに関係なく使用されます(zygomatic アーチの後方ルートのポイントを参照してください) [詳しくはこちら](https://www.fieldtriptoolbox.org/faq/how_are_the_lpa_and_rpa_points_defined/) 詳細はこちら)
 
-The exact ear anatomical landmark may be included with the EEG or MEG data (e.g., in the AnatomicalLandmarkCoordinateSystemDescription field of *_coordsystem.json for [BIDS specification](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/03-electroencephalography.html#coordinate-system-json-_coordsystemjson)). It is identical to the [CTF coordinate system](https://www.fieldtriptoolbox.org/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/#details-of-the-ctf-coordinate-system) for MEG. Please note the following consideration when including the fiducial locations within the datasets:
-- Units are in millimeters
-- The origin is exactly between the points labeled as 'LPA' and 'RPA'
-- The X-axis points towards and goes through the nasion
-- The Y-axis points approximately towards the 'LPA,' orthogonal to the X-axis
-- The Z-axis points from inferior to superior, orthogonal to X and Y
+正確な耳の解剖学的ランドマークは、EEGまたはMEGデータ(AnatomicalLandmarkCoordinateSystemDescriptionフィールドの *_coordsystem.json に含まれています。 [BIDS仕様](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/03-electroencephalography.html#coordinate-system-json-_coordsystemjson))。 それは同じです [CTF座標系](https://www.fieldtriptoolbox.org/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/#details-of-the-ctf-coordinate-system) MEGについて データセット内の場所を含む場合、次の考慮事項に注意して下さい:
+- 単位はミリメートルにあります
+- 原点は、'LPA' と 'RPA' と 'LPA' と ' と 'LPA' と ' と 'RPA' と ' と ' と ' と ' と 'LPA' と ' と ' と '
+- X軸のポイントを向き、ナシオンを通過
+- Y軸は「LPA」の直角をX軸へ向かう
+- Z軸は、劣悪から優れ、オルトゴナルからXおよびYまでの点
 
-As shown below, even when properly defined, the 3 points LPA, RPA, and nasion may not represent a perfectly orthogonal reference frame. Only one plane passes through these 3 points. The Z direction is set to be orthogonal to this plane. The center of the reference frame is defined (in this plane) as the intersection of a line passing through the nasion (+X direction) and an orthogonal line whose distance is equal for LPA and RPA (we define the distance as the length of the segment for the orthogonal projection of these points on the line). 
+以下に示すように、適切に定義された場合でも、3ポイントLPA、RPA、およびnasionは完全に直角的な参照フレームを表すことはできません。 飛行機が3点通過するだけ。 Z方向は、この平面に直角するように設定されます。 参照フレームの中心は(この平面で)陰イオン(+X方向)を通るラインの交差として定義され、LPAとRPA(私達はラインのこれらのポイントの直角投影のための区分の長さとして間隔を定義します)。 
 
-![Screen Shot 2022-12-13 at 12 29 36 AM](https://user-images.githubusercontent.com/1872705/207265225-94db3e70-3dab-48db-950d-230d9cc9b93b.png)
+![スクリーンショット 2022-12-13 12 29 36 AM](https://user-images.githubusercontent.com/1872705/207265225-94db3e70-3dab-48db-950d-230d9cc9b93b.png)
 
-Eventually, the center of the reference frame defined by the LPA, RPA, and nasion fiducials is not critical. Fiducials must be defined accurately to align head montage with MRI scans, but their relative position does not matter as much. For display purposes, it is important that electrodes be organized similarly to one of the standard 2-D layouts and that we may align them to a 3-D head model for source localization purposes. Both processes do not depend on using the reference frame defined by the LPA, RPA, and nasion fiducials.
+当然のことながら、LPA、RPA、およびnasionのfiducialsによって定義される参照フレームの中心は重要ではないです。 FiducialsはMRIスキャンでヘッドモンタージュを揃えるために正確に定義しなければなりませんが、その相対的な位置はそれほど重要ではありません。 表示目的のために、電極は標準2Dレイアウトの1つに同様に編成され、ソースローカリゼーション目的のために3Dヘッドモデルにそれらを揃えることができることが重要です。 どちらのプロセスも、LPA、RPA、および浸漬物によって定義された参照フレームを使用することに依存しません。
 
-## Use the helix-tragus junction for fiducials
+## ヘリックス・トラガス・ジャンクションを使って
 
-Pre-auricular points are palpable anatomical features but are challenging to locate in anatomical MR head images and 3D EEG electrode scans. Furthermore, some experiment protocols call for using other anatomical points on the ears (e.g., ear canal, ear lobes, etc.) while retaining the inaccurate pre-auricular labels. While consistency is critical when gathering data for a study, collaborative or data mining projects are undermined when accurate labels or descriptions are not used. With photogrammetry improving the availability of electrode localization, we strongly recommend using the helix-tragus junction (LHJ & RHJ) as the ear fiducials: these points are identifiable in 3-D head models as well as MR head images. This is the coordinate system we recommend for [<i>get_chanlocs</i>](https://github.com/sccn/get_chanlocs/wiki), an EEGLAB plug-in for photogrammetric electrode localization using 3-D head models.
+プレオーラルポイントは、触発可能な解剖学的機能ですが、解剖学的MRヘッド画像と3D EEG電極スキャンで見つけるのは困難です。 さらに、いくつかの実験プロトコルは、耳の他の解剖ポイント(例、耳の運河、耳のロブなど)を使用して、不正確な事前のラベルを保持している間呼びます。 正確なラベルや説明が使用されていないときに、研究、共同またはデータマイニングプロジェクトのデータ収集が不足しているときに一貫性が重要である。 電極のローカリゼーションの可用性を向上させるフォトグラメトリーでは、ヘリックス・トラガス・ジャンクション(LHJ&RHJ)をイヤー・ファイザーとして使用することを強くお勧めします。これらのポイントは、3DヘッドモデルやMRヘッド・イメージで識別できます。 おすすめの座標系です。 [<i>get_chanlocs ディレクティブ</i>](https://github.com/sccn/get_chanlocs/wiki)3Dヘッドモデルを用いたフォトグラメト電極ローカリゼーション用EEGLABプラグイン。
 
-![Image:preferences.png](/assets/images/helixTragus.PNG)
+![画像:preferences.png](/assets/images/helixTragus.PNG)
 

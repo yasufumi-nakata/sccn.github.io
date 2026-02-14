@@ -7,147 +7,147 @@ grand_parent: Tutorials
 nav_order: 1
 ---
 
-In this section, we describe how to set up your EEG lab, with a strong emphasis on obtaining good EEG high-density data quality. 
+このセクションでは、EEGラボをセットアップする方法を記述し、良好なEEG高密度データ品質を取得することに重点を置いています。 
 
-![Screen Shot 2023-10-05 at 5 02 02 PM](https://github.com/sccn/sccn.github.io/assets/1872705/9245aecd-dd9b-4b14-a551-0c4e89051248)
+![スクリーンショット 2023-10-05 に 5 02 02 02 PM](https://github.com/sccn/sccn.github.io/assets/1872705/9245aecd-dd9b-4b14-a551-0c4e89051248)
 
-Data quality is crucial for EEG research. Researchers depend on clean and precise data to draw valid conclusions about brain function and behavior.
-If the collected EEG data contains artifacts or noise, it can introduce errors and bias, leading to invalidation of the hypothesis or misleading results. 
-EEG recordings are susceptible to various artifacts, including muscle activity, eye blinks, environmental interference, and electrode impedance problems. These artifacts can introduce confounding factors, masking or distorting the true brain signals of interest. High-quality data minimizes the presence of artifacts, enhancing the accuracy of the observed brain activity and reducing confounds.
+EEGの研究ではデータ品質が重要である。 研究者は、脳機能と行動に関する有効な結論を描画するために、クリーンで精密なデータに依存します。
+収集したEEGデータにアーティファクトやノイズが含まれている場合は、誤差や誤った結果の無効化につながるエラーやバイアスを紹介します。 
+EEGの録音は筋肉活動、目の点滅、環境の干渉および電極のインピーダンス問題を含むさまざまなアーティファクトに敏感です。 これらのアーティファクトは、関心の真の脳信号を隠蔽したり、隠蔽したりする要因を紹介します。 高品質のデータは、観察された脳活動の精度を高め、混乱を減らす、アーティファクトの存在を最小限に抑えます。
 
-Cleaning up bad data or removing artifacts is a time-consuming and complex task. Poor data quality increases the workload on researchers, as they have to spend significant time and effort identifying and removing unwanted signals. Importantly, very often, it is not even possible to remove artifacts from EEG data, and doing so can [decrease statistical power](https://www.nature.com/articles/s41598-023-27528-0). By ensuring high-quality data from the beginning, the analysis process becomes more efficient, saving time and resources. 
+悪いデータをクリーンアップしたり、アーティファクトを削除したりすることは、時間がかかります。複雑な作業です。 貧困データ品質は、研究者のワークロードを増加させ、重要な時間と努力を費やす必要があるため、不要な信号を識別し、除去します。 重要なことに、非常に頻繁に、EEGデータからアーティファクトを削除し、そうすることができます [統計力低下](https://www.nature.com/articles/s41598-023-27528-0)お問い合わせ 高品質なデータを最初から確保することで、分析プロセスがより効率的になり、時間とリソースを節約します。 
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-# Which EEG system to use
+# EEGシステムを使用する
 
-There are several reputable EEG (electroencephalography) research systems available on the market. Most are being made by companies that have been there for decades. 
+EEG(electroencephalography)は、市場で入手可能ないくつかの評判の良い研究システムがあります。 何十年にもわたって存在している会社がほとんど作られています。 
 
-* Brain Products: The company offers various amplifier options and software solutions. Offers a convenient way to check the impedance on the cap with LEDs.
+* 頭脳プロダクト: さまざまなアンプオプションとソフトウェアソリューションを提供しています。 LED付きキャップのインピーダンスを確認する便利な方法を提供します。
 
-* BioSemi: This company offers a single active electrode system that provides excellent signal quality, low noise, and is known for its ease of use. Because this company only offers one system and provides no analysis software, it is often cheaper than other solutions. This company is known for its CMS/DRL noise reduction (see below), although other companies use it too. It is also known for not directly measuring electrode impedance (instead using a custom offset), which annoys some researchers (for good reasons).
+* バイオセミ: 同社は、優れた信号品質、低雑音を提供し、その使いやすさのために知られています単一のアクティブ電極システムを提供しています。 この会社は1つのシステムだけを提供し、分析ソフトウェアを提供しないので、他のソリューションよりも安いです。 CMS/DRLノイズリダクション(以下参照)で知られていますが、他の企業も使用しています。 また、一部の研究者(正当な理由)を迷惑にする電極インピーダンス(カスタムオフセット)を直接測定しないために知られています。
 
-* Neuroscan by Compumedics: This is the oldest company, comparable to Brainamps, with more focus on clinical research.
+* CompumedicsによるNeuroscan: これは、臨床研究に焦点を合わせ、Brainampsに匹敵する最も古い会社です。
 
-* g.tec: g.tek provides wireless and mobile EEG systems designed for neurofeedback and brain-computer interface (BCI) applications. 
+* g.tec:g.tekは、神経フィードバックおよび脳コンピュータインタフェース(BCI)アプリケーション用に設計されたワイヤレスおよびモバイルEEGシステムを提供します。 
 
-* ANT Neuro: A company created more than two decades ago. 
+* ANTの神経: 会社は2年以上前に作成しました。 
 
-* EGI/Magstim (formerly Philips Neuro): Known for its water-based electrode system (as compared to gel-based), this company has changed hands several times. The hardware is solid, and their gel caps are considered some of the best in the industry. Innovation at this company has slowed down in the past decade since it changed hands twice. However, BIOSEMI is still using the same amplifiers. EEG does not evolve that fast.
+* EGI/Magstim(旧Philips Neuro):水系電極システム(ゲルベースと比較して)で知られるこの会社は、数回手を交換しました。 ハードウェアは固体であり、ゲルキャップは業界で最高のものと考えられています。 創業10年を経ち、手が2回変化して以来、イノベーションを続けてきました。 しかし、BIOSEMIは同じアンプを使っています。 EEGは、その速度を進化させません。
 
-These are the main companies for EEG research, and we have personally worked with all of these systems. Amplifying EEG data is not rocket science, and the quality of the data is more linked to the cap than the EEG amplifier, which uses decade-old technology.
+これらは、EEG研究の主要企業であり、個人的にはこれらのシステムすべてと連携しています。 EEGデータの増幅はロケット科学ではなく、データの品質は、数十年にわたる技術を使用するEEGアンプよりもキャップにリンクされています。
 
-What about consumer-grade EEG systems, for example:
+消費者向けEEGシステムについて、例えば:
 
-* Emotiv: For example, the Epoc+ 16-channel consumer-grade EEG system offers a more affordable and accessible option. It is suitable for basic brain activity monitoring and is often used in gaming and entertainment applications. This is a water-based system. Although the EEG amplifier is probably OK (although there is one amplifier that scans each channel in sequence, in comparison to the research grade system above, which has one amplifier per electrode), the quality of the signal coming from the spongy electrodes is low (still EEG, just bad EEG). We do not recommend this system for research. 
+* 感情: 例えば、Epoc + 16チャンネルのコンシューマーグレードEEGシステムは、より手頃な価格でアクセス可能なオプションを提供しています。 基本的な脳活動の監視のために適しています、ゲームおよび催し物の適用で頻繁に使用されます。 水系システムです。 EEGアンプは、おそらくOKです(シーケンスの各チャネルをスキャンする1つのアンプがありますが、上記の研究グレードシステムと比較して、電極あたり1つのアンプがあります)、スポーニー電極から来る信号の品質は低いです(ちょうど悪いEEG)。 本システムでは研究をお勧めしておりません。 
 
-* Muse: Muse offers different headsets, but all of them have a low channel count (less than 5). Even though this is considered a dry system, the company advises wetting electrodes with water to increase signal quality. Like BIOSEMI, this system uses the CMS/DRL correction.
+* ミューズ:ミューズは異なるヘッドセットを提供していますが、それらのすべてが低いチャンネル数を持っています(5未満)。 ドライシステムと見なされますが、当社は水で濡れた電極を指示し、信号の品質を向上します。 BIOSEMIと同様に、CMS/DRLの補正を使用します。
 
-* OpenBCI: Sells an open-sourced design for low budgets. The same remark applies to the Emotiv solution.
+* OpenBCI:低予算のためのオープンソースの設計を販売します。 同じ備考は、Emotivソリューションに適用されます。
 
-The main issue with **consumer-grade EEG** is the low signal quality when recording on the scalp (when recording directly on the skin (forehead), the signal quality is likely comparable to research-grade systems). The main reason is that the signal quality on the scalp relies on using gel-based electrode systems (which these consumer systems do not want to use).
+**Consumer-grade EEG** の主な問題は、スカルプ(皮膚(額)に直接録音するとき、信号品質が研究グレードシステムに匹敵する可能性が高い低信号品質です。 主な理由は、スカルプの信号品質がゲルベースの電極システム(これらの消費者システムが使用したくない)を使用することに依存していることです。
 
-What about the **clinical EEG systems** (Nihon_Kohden and the like)? These systems offer similar signal quality as the research system, although the technology is often older (they do not use active electrodes, for example). The issue with such systems is that they are limited to low-density recordings (less than 32 channels) and make it difficult to record experimental events synchronized with the EEG.
+*clinical EEGシステムについて**(Nihon_Kohdenなど) これらのシステムは、技術がしばしば古いが、研究システムとして同様の信号品質を提供します(例えば、アクティブ電極を使用しないでください)。 このようなシステムの問題は、低密度の記録(32チャンネル未満)に限られており、EEGと同期した実験的なイベントを記録することが困難であるということです。
 
-We are not mentioning here research-level **dry electrode systems** (some of the companies listed above have a dry electrode system solution), and there are other companies that specialize in that (Cognionics, Quasar, Wearable sensing, etc.). We do not believe the data quality is on par with gel systems (see below) and, therefore, would not recommend such systems.
+私たちは、ここでの研究レベルの**ドライ電極システム**(上記の企業の中には、ドライ電極システムソリューションがあります)について言及していないし、その専門会社(Cognionics、Quasar、ウェアラブルセンシングなど)があります。 ゲルシステム(以下参照)でデータ品質が解析されているとは信じませんので、そのようなシステムを推奨しません。
 
-This is by no means an exhaustive list, and there are many other reputable EEG systems available.
+これは、排気リストを意味しず、利用可能な他の多くの評判可能なEEGシステムがあります。
 
-## Active vs. passive electrodes
+## アクティブ対パッシブ電極
 
-Active and passive EEG electrodes are two types of electrodes used in electroencephalography (EEG) to measure brain activity. Here are the key differences between active and passive EEG electrodes:
+アクティブおよびパッシブ EEG 電極は、脳活動を測定するために、電気脳図(EEG)で使用される2種類の電極です。 アクティブとパッシブ EEG 電極の重要な違いは次のとおりです。
 
-* Design. Active electrodes: These electrodes have built-in amplification circuitry, which amplifies the weak electrical signals received from the brain before transmitting them to the EEG recording system. Passive electrodes: These electrodes do not have built-in amplification circuitry and directly transmit the low-voltage electrical signals from the brain to the EEG recording system.
+* デザイン。 活動的な電極: これらの電極は、脳から受け取る弱い電気信号をEEGの記録システムに送信する前に増幅回路を内蔵しています。 受動の電極: これらの電極は、増幅回路を内蔵し、直接脳からEEG記録システムに低電圧電気信号を送信していません。
 
-* Noise Reduction. Active electrodes: Due to their built-in amplification circuitry, active electrodes can amplify the weak brain signals closer to the scalp, minimizing the effect of noise and interferences. Passive electrodes: Since they lack amplification circuitry, passive electrodes are vulnerable to picking up more noise and interference, which can affect the quality of the recorded EEG signals.
+* 騒音低減。 活動的な電極: 内蔵の増幅回路により、アクティブ電極は、頭皮に近い弱い脳信号を増幅し、騒音や干渉の影響を最小限に抑えることができます。 受動の電極: 増幅回路が不足しているため、パッシブ電極は、録画したEEG信号の品質に影響を与えることができるより多くの騒音と干渉を拾うのに脆弱です。
 
-* Input Impedance. Active electrodes: Typically have a very high input impedance, meaning they draw very little current from the scalp, reducing the contact impedance between the electrode and the scalp. Passive electrodes: These electrodes often have higher contact impedance, as they do not have amplification circuitry. This can result in a higher contact impedance and potentially lead to signal distortions.
+* 入力インピーダンス。 活動的な電極: 通常、非常に高い入力インピーダンスを持っています。つまり、それらはスキャルプから非常に少し電流を描画し、電極とスキャルプ間の接触インピーダンスを減らします。 受動の電極: これらの電極は、増幅回路を持っていないため、多くの場合、より高い接触インピーダンスを持っています。 これはより高い接触のインピーダンスおよび潜在的に信号のゆがみをもたらすことができます。
 
-* Signal Quality. Active electrodes: With their built-in amplification circuitry and low noise characteristics, active electrodes tend to provide higher signal quality and better signal-to-noise ratio compared to passive electrodes. Passive electrodes: Due to their susceptibility to noise and interferences, passive electrodes may have lower signal quality and a lower signal-to-noise ratio.
+* 信号の質。 活動的な電極: 内蔵の増幅回路と低騒音特性で、アクティブ電極は、パッシブ電極と比較して、より高い信号品質とより良い信号対ノイズ比を提供する傾向があります。 受動の電極: 騒音や干渉の影響を受けやすいため、パッシブ電極は信号品質を低下させ、ノイズ比を下げる可能性があります。
 
-* Complexity and Cost. Active electrodes: Active electrodes are typically more complex and sophisticated, as they require additional circuitry for signal amplification. This complexity can lead to higher manufacturing costs. Passive electrodes: Passive electrodes are simpler in design and do not require additional amplification circuitry, making them less complex and cheaper to manufacture.
+* 複雑さとコスト。 活動的な電極: アクティブ電極は通常、信号増幅のための追加の回路を必要とするため、より複雑で洗練されたです。 この複雑性は、より高い製造コストにつながることができます。 受動の電極: パッシブ電極は、設計がシンプルで、追加の増幅回路を必要としないため、複雑で安価で製造できます。
 
-* Scalp Preparation. Active electrodes: Since active electrodes have a higher input impedance, they typically require less scalp preparation, such as cleaning or application of conductive gel, to ensure good electrical contact. Passive electrodes: Due to a potentially higher contact impedance, passive electrodes may require more thorough scalp preparation, including cleaning and gel application, to achieve optimal electrical contact.
+* Scalpの準備。 活動的な電極: アクティブ電極は、より高い入力インピーダンスを持っているので、通常、良好な電気接触を保証するために、導電ゲルのクリーニングやアプリケーションなどのより少ないスキャルプの準備が必要です。 受動の電極: 潜在的な高接触インピーダンスのために、パッシブ電極は、最適な電気接触を達成するために、洗浄およびゲルアプリケーションを含むより徹底的なスキャルプ準備を必要とする場合があります。
 
-In summary, active electrodes have built-in amplification circuitry, provide better noise reduction, higher signal quality, and have higher input impedance compared to passive electrodes. However, they are more complex and expensive. Passive electrodes, on the other hand, lack built-in amplification circuitry and may pick up more noise and interferences, resulting in lower signal quality. They are simpler and cheaper but require more thorough scalp preparation for optimal contact.
+概要では、アクティブ電極は増幅回路を内蔵しており、ノイズ低減、高信号品質を提供し、パッシブ電極と比較してより高い入力インピーダンスを持っています。 しかし、より複雑で高価です。 パッシブ電極は、一方、内蔵の増幅回路が欠如し、より騒音と干渉を拾うことができるため、信号品質が低下します。 よりシンプルで安価ですが、より徹底的なスキャルプ準備が必要です。
 
-In practice, in the last decade, most EEG manufacturers have sold active electrode systems, which should be preferred for most applications. However, the difference in signal quality with a passive system is small (so you should continue using your passive system if you have one).
+実際には、過去10年間で、ほとんどのEEGメーカーは、ほとんどのアプリケーションに好まれる有効な電極システムを販売しています。 しかしながら、パッシブシステムによる信号品質の違いは小さい(あなたが持っている場合は、パッシブシステムを使用して続行する必要があります)。
 
-## What is CMS/DRL correction?
+## CMS/DRL補正とは?
 
-CMS/DRL correction stands for common mode sense/difference mode sense-driven reference level correction. It is a technique used to reduce the influence of common mode noise on the recorded brain signals.
+CMS/DRL補正は、一般的なモード感覚/差分モード感覚指向の参照レベル補正のスタンドです。 記録された脳信号に共通モードノイズの影響を減らすために使用される技術です。
 
-EEG signals are susceptible to various types of noise, including common mode noise, which refers to noise that is present on both the active electrode (recording electrode on the scalp) and the reference electrode. This common noise can interfere with the accurate measurement of brain activity.
+EEG信号は、一般的なモードノイズを含むさまざまなタイプのノイズに敏感であり、アクティブ電極(頭皮の電極の記録)と参照電極の両方に存在するノイズを指します。 この一般的な騒音は、脳活動の正確な測定を妨げることができます。
 
-CMS/DRL correction involves using additional electrodes placed on the subject's body (or on the scalp) to measure the common mode and difference mode signals. The common mode signal represents the noise present on both the active and reference electrodes, while the difference mode signal represents the actual brain signal of interest.
+CMS/DRL補正は、一般的なモードと差異モード信号を測定するために、被写体(またはスカルプ)に配置された追加の電極を使用して関与します。 共通のモード信号は活動的なおよび参照の電極に存在する騒音を表します、相違モード信号は興味の実際の脳信号を表します。
 
-By utilizing these extra electrodes, the CMS/DRL correction technique effectively subtracts the common mode noise from the recorded EEG signal, leaving primarily the brain activity. This correction helps improve the signal quality and increases the accuracy of EEG analysis by reducing the impact of external interference and noise sources.
+これらの余分な電極を利用することにより、CMS/DRL補正技術は、主に脳活動を残して、記録されたEEG信号から共通のモードノイズを効果的に引き下げます。 この補正は、信号の品質を改善し、外部干渉やノイズソースの影響を削減することにより、EEG分析の精度を高めることができます。
 
-Overall, CMS/DRL correction is a valuable method for enhancing the signal-to-noise ratio and obtaining more reliable EEG measurements. The Biosemi company is known for this system although it might also be used by other companies (the Muse system also uses it). This type of correction is not needed when the EEG signal is recorded in a faraday cage. 
+全体的に、CMS/DRL補正は、信号対ノイズ比を強化し、より信頼性の高いEEG測定を得るための貴重な方法です。 Biosemi社は、他の会社(マウスシステムも使用している)でも、このシステムで知られています。 EEG信号がfaradayケージに記録されると、このタイプの補正は必要ありません。 
 
-## Dry vs. wet electrodes
+## ドライ対ウェット電極
 
-Dry electrode versus "wet" cap vs. "water-based" cap. Dry electrodes and "wet" caps are both types of electrodes used in electroencephalography (EEG) to measure brain activity. However, they differ in terms of their contact with the scalp and the use of conductive materials.
+ドライ電極対「ウェット」キャップ対「水性」キャップ。 乾式電極と「湿式」キャップは、脳活性を測定するために電気脳波(EEG)で使用される電極の2種類です。 しかしながら、頭皮と導電材料の使用と接触の面では異なります。
 
-* Dry electrodes: Dry electrodes do not require the use of conductive gels or creams to establish contact with the scalp. They are typically made of carbon or metal and have a system built within the electrode to improve conductivity. *Advantages:* Easy to use and less messy compared to wet electrodes. Faster setup time as there is no need to apply conductive gels. *Disadvantages:* Generally, lower signal quality due to reduced contact with the scalp. Sometimes rigid, so heavier. More susceptible to environmental noise and movement artifacts. Reduced signal stability over long periods of time. Increased pressure to keep contact that can lead to subject headaches
+* 乾燥した電極: ドライ電極は、導電ゲルやクリームの使用を必要としません。スカルプとの接触を確立します。 それらはカーボンか金属から普通成り、伝導性を改善するために電極内で造られるシステムがあります。 *Advantages:* 湿式電極と比較して使いやすく、メッシーが少ない。 導電ゲルを適用する必要性がないのでより速いセットアップの時間。 *欠点:* 一般的には、頭皮との接触を低下させるため、信号品質が低下します。 時には硬く、重い。 環境騒音や動きのアーティファクトの影響を受けやすくなります。 長時間にわたる信号安定性を低減。 被験頭痛につながることができる接触を維持するために増加した圧力
 
-* "Wet" caps (also known as gel electrodes): "Wet" caps use conductive gels or creams to establish a good electrical connection between the electrode and the scalp. These caps consist of several electrodes embedded in a flexible cap or a headgear. *Advantages:* Better contact with the scalp, resulting in higher signal quality and reduced noise. More stable signals. *Disadvantages:* Takes time to set up (about 30 minutes to 1 hour). Subjects have gel in their hair and often need to wash their hair at the end of the experiment. Requires a time-consuming cleaning process.
+* "Wet"キャップ(ゲル電極とも呼ばれる): "Wet"キャップは導電ゲルまたはクリームを使用して、電極と頭皮間の良好な電気接続を確立します。 これらのキャップは、フレキシブルキャップまたはヘッドギアに埋め込まれた複数の電極で構成されています。 *Advantages:* 頭皮とのよりよい接触は、より高い信号の質および減らされた騒音に終ります。 より安定した信号。 *欠点:* セットアップ時間(約30分～1時間) 被験者は自分の髪にゲルを持ち、実験の最後に髪を洗う必要があります。 時間のかかる洗浄プロセスが必要です。
 
-* "Water-based" caps (e.g., EGI or Emotiv company): "water-based" caps use saline water instead of conductive gels or creams to establish an electrical connection between the electrode and the scalp. These caps consist of several electrodes embedded in a flexible cap or a headgear. *Advantages:* Quick set up time. Subjects may have slightly wet hair at the end of the experiment but might not need to wash their hair right away. *Disadvantage:* Water bridges can form (direct connection between two channels), which can create later problems during data analysis. This is especially a problem for high-density systems (128 channels or more). Electrodes dry up and may need to be re-wet every 20 minutes.
+* 「水ベースの」キャップ(例、EGIまたはエモチベーション会社):導電ゲルやクリームの代わりに「水ベースの」キャップを使用して、電極と頭皮間の電気接続を確立します。 これらのキャップは、フレキシブルキャップまたはヘッドギアに埋め込まれた複数の電極で構成されています。 *Advantages:* 速い組み立ての時間。 被験者は実験の終わりに少し濡れた髪を持っているかもしれませんが、すぐに髪を洗う必要はありません。 *割引:* ウォーターブリッジは、データ分析中に後続の問題を作成することができる(2つのチャネル間の直接接続)を形成することができます。 高密度系(128チャンネル以上)は特に問題です。 電極を乾燥させ、20分ごとに再溶接する必要があります。
 
-In general, because data quality is essential, research should be conducted with a wet gel-based system. Then, in case this is not possible, a water-based system is the second best choice (for example, in clinical applications or applications with kids where it is not possible to spend 30 minutes adjusting a cap). Dry electrodes are the last choice, although it makes sense to use them when embedded in an audio headset, a VR system, or an earbud. 
+一般的には、データ品質が不可欠であるため、ウェットゲルベースのシステムで研究を行う必要があります。 その後、これが不可能な場合には、水ベースのシステムは2番目の最良の選択です(例えば、臨床アプリケーションやキャップを調整する30分を費やすことができない子供とのアプリケーション)。 ドライ電極は、オーディオヘッドセット、VRシステム、またはイヤホンに埋め込まれたときにそれらを使用するという意味になりますが、最後の選択です。 
 
 
-# Maximizing EEG data quality - tips and grand-mother recipes
+# EEGデータの品質を最大化 - ヒントと祖母のレシピ
 
-## Environmental noise
+## 環境騒音
 
-Recording EEG data in a Faraday cage will lead to better signal quality and no line noise when done properly. In practice, most EEG experiments (>80%) are conducted outside a Faraday cage. However, when recording outside of a Faraday cage, minimizing environmental noise in the recording chamber is critical (note that this is also critical inside a Faraday cage).
+Faraday ケージの EEG データを録画すると、適切に実行したときに、より良い信号品質とラインノイズが発生しません。 実際には、ほとんどのEEG実験(>80%)は、ファラデーケージの外で行われます。 しかしながら、ファラデーケージの外で録音する場合、録画チャンバーの環境騒音を最小限に抑えることは極めて重要です(これはファラデーケージ内でも重要なことです)。
 
-* Some researchers are obsessed with the quality of the ground signal in a building. We know of at least one EEG researcher expert in signal analysis who had an electrician create a second ground just for his EEG experiment. This is especially relevant for EEG systems that do not run on battery and are plugged into the wall. 
+* 一部の研究者は、建物内の地上信号の品質を阻害しています。 EEG実験のために、電気技師が2番目の地面を作った信号分析で、少なくとも1人のEEG研究者の専門家を知っています。 これは電池で動かないEEGシステムのために特に関連し、壁に差し込まれます。 
 
-* The subject and the experimenter should be isolated in a separate room. If they communicate with an intercom, make sure the intercom is far away from the subject. Do not use an intercom that relies on the electrical circuit to transmit the signal.
+* 被写体と実験者は別の部屋で隔離されるべきです。 インターコムと通信する場合、インターホンが被写体から遠く離れていることを確認してください。 信号を送信するために電気回路に依存するインターコムを使用しないでください。
 
-* Remove metal objects touching the subject (or very close). For example, the subject should not be sitting on a metal chair. If the subject needs to respond to stimuli, make sure the button press or mouse pad is nonmetallic.
+* 被写体(または非常に近い)に触れる金属オブジェクトを削除します。 例えば、被写体は金属の椅子に座ってはいけません。 被写体が刺激に反応する必要がある場合は、ボタンプレスまたはマウスパッドが非金属であることを確認してください。
 
-* Remove any non-shielded battery or backup power. Non-shielded batteries can create very large noise artifacts, especially when plugged into the wall. Laptops, if held far away from the subject, are probably OK. Laptops should not be plugged into the wall and run on battery if present with the subject in the recording room.
+* 保護されていない電池かバックアップ力を取除いて下さい。 非保護された電池は壁に差し込まれるとき非常に大きい騒音のアーティファクト、特に作成できます。 ノートパソコンは、被写体から遠ざけばOKです。 ノートパソコンは、録画室に被写体を提示した場合、壁に差し込まれて電池で実行しないでください。
 
-* It is probably a good idea for the subject to remove anything that could be used as an antenna on his body (e.g., a metal watch). 
+* おそらく彼の体にアンテナとして使用できるものを取除くという主題のための良い考えです(例えば、金属製の時計)。 
 
-* Computer screens and light are the major sources of 50 Hz noise in the EEG. These should be placed as far as possible from the subject. Reduction of the 50 Hz noise is very important, as in practice, the lower the 50 Hz noise is, the lower the noise is at other frequencies. One technique we have used is to have one electrode on a pole and go around the room to try to detect the source of noise (outlet, screen, etc.). EMF detectors can probably also be used. 
+* コンピュータ画面と光は、EEGの50Hzノイズの主要なソースです。 被写体からできるだけ遠くに置く必要があります。 50Hzの騒音の低減は非常に重要で、実際には50Hzの騒音が低く、騒音が他の周波数で低い。 私たちが使用した1つの技術は、棒に1つの電極を持ち、騒音(出口、スクリーンなど)の源を検出しようとする部屋の周りに行くことです。 EMF のディテクタはおそらくまた使用することができます。 
 
-## Applying gel
+## ゲルの適用
 
-Using the syringe filled with gel, push down on the electrode well (so the gel doesn't spread to other parts of the cap), and part the participant's hair with the needle until you reach the skin. Then squeeze a small amount of gel into each well. Press firmly but not so firmly that the subject experiences pain. DO NOT PUT TOO MUCH GEL IN, otherwise, the gel will spread between electrode wells across the scalp, merging multiple distinct EEG signals into one.
+ゲルで満たされた注射器を使用して、電極をよく押し下げます(従ってゲルは帽子の他の部分に広がりません)、そしてあなたが皮に達するまで針が付いている参加者の毛を分けて下さい。 ゲルを少量ずつ絞っていきます。 被写体が痛みを及ぼすのではなく、しっかりとプレスしてください。 そうでなければ、ゲルは、複数の異なるEEG信号を1つに結合し、頭皮を渡る電極の井戸間で広がります。
 
-Slightly irritating the scalp of the subject by asking them to brush their hair for 5 minutes may decrease electrode impedance and increase signal quality. 
+被写体の頭皮をわずかに刺激し、5分間髪を磨くように依頼すると、電極のインピーダンスが減少し、信号の品質が増加する可能性があります。 
 
-## Checking impedances
+## インピーダンスの確認
 
-Decreasing electrode impedance and maximizing data quality (even for high-impedance systems using active electrodes) is critical. The extra 10 minutes you will spend making sure each electrode has a good connection is critical. In addition, ensuring that the reference electrode has the best possible is important. If there is noise in this electrode, it will reflect on all others. 
+電極インピーダンスの減少とデータ品質の最大化(アクティブ電極を用いた高インピーダンスシステムでも)が重要である。 各電極が良好な接続が重要であることを確認してください。 また、参照電極が可能な限り最善であることを保証することは重要です。 この電極にノイズがあると、他のすべての電極に反映されます。 
 
-## Scanning electrode position
+## 走査の電極の位置
 
-Scanning electrode position is easy (a smartphone and an app can construct detailed 3-D models) and can improve source location (even in the absence of the subject MRI). It should be done systematically even if you are not sure you are going to use that information (see this [page](https://github.com/sccn/get_chanlocs/wiki) for more information). 
+電極の位置をスキャンするのは簡単です(スマートフォンとアプリは3Dモデルを詳細に構築することができます)、ソースの場所を改善することができます(被写体MRIがない場合であっても)。 あなたがその情報を使用するつもりがない場合でも、体系的に行われるべきです(これを参照してください) [サイトマップ](https://github.com/sccn/get_chanlocs/wiki) 詳しくはこちら 
 
-## EEG synchronization
+## EEG同期
 
-Synchronizing EEG with experimental events is critical and needs to be performed with millisecond precision (in psychophysics, a 10-millisecond difference in reaction time is considered large). Here are a few tips.
+実験的なイベントで EEG を同期することは重要であり、ミリ秒の精度で実行する必要があります(心理学では、反応時間の 10 ミリ秒の差が大きいと見なされます)。 ここではいくつかのヒントがあります。
 
-* If you are using visual stimuli, check the screen you are using. You should likely be using a low-latency, high-frequency (200 Hz or so) gaming screen. Standard LCD screens at 60 Hz can have all types of strange behavior: for example, the screen may be divided into 4 in hardware with the 4 sections of the screen shown in sequence -- which is invisible to the eye but not to the retina or visual system). Most psychophysics software allows to check the latency of stimuli presentation. However, researchers should still check with a photodiode that the visual stimulus is synchronized with the experimental event signal (coming out of the experimental computer and entered into the EEG event box).
+* ビジュアル刺激を使用している場合は、使用している画面を確認してください。 低レイテンシ、高周波数(200Hz以上)のゲーミング画面を使用する可能性があります。 60 Hzの標準的な液晶画面には、見知らぬ動作のすべての種類があります。例えば、画面は4つのハードウェアに分割され、画面の4つのセクションは、目の見えないが網膜や視覚システムに見えない)。 ほとんどの心理物理ソフトウェアは、刺激的なプレゼンテーションのレイテンシーを確認することができます。 しかしながら、研究者は、実験的なイベント信号(実験的なコンピュータから出て、EEGイベントボックスに入った)と視覚刺激が同期していることをフォトダイオードで確認する必要があります。
 
-* Wireless EEG systems are subject to buffering, and this needs to be taken into account. This is partially handled by systems like the lab-streaming layer (LSL, developed in our lab).
+* ワイヤレスEEGシステムはバッファリングの対象であり、これは考慮に入れる必要があります。 ラボストリーミングレイヤー(LSL)のようなシステムによって部分的に処理されます。
 
-* Only rely on experimental event signals directly sent to the EEG system. For example, the LSL event stream will only offer a precision of a few milliseconds, which is considered substandard for EEG (this is OK when the event does not need to be precisely timed). Even if you are using LSL, make sure the subject responses are logged as an additional channel in the EEG (or directly logged along with the EEG depending on the system). For event-related studies, EEG should also always be recorded with at least a 1Khz sampling rate for that reason (otherwise, events will not be recorded with 1kHz precision). 
+* EEGシステムに直接送信された実験イベント信号のみに依存します。 たとえば、LSLイベントストリームは、EEG(イベントが正確に時間を費やす必要はありません)のサブスタンダードと見なす、いくつかのミリ秒の精度のみを提供します。 LSL を使用している場合でも、EEG (またはシステムに応じて EEG と直接ログオン) の追加のチャネルとして、被写体応答が記録されていることを確認してください。 イベント関連の研究では、EEGは、その理由の少なくとも1Khzサンプリングレートで常に記録されるべきです(それ以外の場合は、1kHz精度でイベントを記録しません)。 
 
-*Note: This page only reflects Arnaud Delorme's personal opinion*
+*注意:このページはArnaud Delormeの個人的な意見だけを反映しています*
 
 <!--
 # Pre-registration

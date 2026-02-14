@@ -6,116 +6,116 @@ parent: Reference Topics
 grand_parent: Tutorials
 nav_order: 12
 ---
-A quick tutorial on ICA artifact rejection
+ICAアーティファクト拒絶に関する簡単なチュートリアル
 ====================
-{: .no_toc }
+お問い合わせ
 
-EEGLAB is a powerful tool for eliminating
-several important types of non-brain artifacts from EEG data. EEGLAB allows the user to reject many such artifacts in an efficient and
-user-friendly manner. This minimalist guide is for non-EEGLAB users to import their EEG data, reject artifacts, then export the data back to a software package of their choice. For more comprehensive documentation on using EEGLAB, refer to the main sections of the EEGLAB tutorial.
+EEGLABは、排除するための強力なツールです
+EEGデータから非ブレインアーティファクトのいくつかの重要なタイプ。 EEGLABは、ユーザーは、このようなアーティファクトを効率的かつ効率的に拒否することができます。
+ユーザーフレンドリーな方法。 このミニマリストガイドは、EEGLAB以外のユーザーがEEGデータをインポートし、アーティファクトを拒否し、選択したソフトウェアパッケージにデータをエクスポートするためのものです。 EEGLAB の使用に関するより包括的なドキュメントについては、EEGLAB チュートリアルの主なセクションを参照してください。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
 
-## 1. Start MATLAB and EEGLAB, then import your data
-Type \>\> eeglab to start EEGLAB under MATLAB. 
+## 1。 MATLABとEEGLABを起動し、データをインポートします。
+タイプ \>\> eeglab MATLAB で EEGLAB を起動します。 
 
-Select menu item
-<span style="color: brown">File → Import data</span> to import your data file
-in any of a variety of file formats. See the [Import data](/tutorials/04_Import/Importing_Continuous_and_Epoched_Data) section for
-more details.
+メニュー項目を選択
+<span style="color: brown">ファイル → インポートデータ</span> データファイルをインポートする
+さまざまなファイル形式で。 詳細はこちら [インポートデータ](/tutorials/04_Import/Importing_Continuous_and_Epoched_Data) セクション
+詳細情報。
 
-Scroll and check data using menu item <span style="color: brown">Plot → Channel data (scroll)</span>.
+メニュー項目を使用してデータをスクロールしてチェックする <span style="color: brown">Plot → チャンネルデータ(スクロール)</span>.
 
-## 2. Import a channel location file
+## 2。 チャンネルの場所ファイルをインポートする
 
-Importing a channel location file is critical for visualizing the
-independent components of your data. Select <span style="color: brown">Edit → Channel locations</span> menu item.
+チャンネルの場所ファイルをインポートすることは、視覚化のために不可欠です
+データの独立したコンポーネント。 選択する <span style="color: brown">編集 → チャネルの場所</span> メニュー項目。
 
-- Solution 1. If channel labels are present in your dataset, EEGLAB will try to look up channel locations based on their labels. Simply press *Ok* to look up locations.
+- ソリューション1. データセットにチャネルラベルが存在する場合、EEGLABはラベルに基づいてチャネルの位置を調べます。 *Ok*を押すだけで、場所を調べることができます。
 
-- Solution 2. If channel labels are not present, press the button *Read locations* in the bottom right corner of the channel edit window.
-Press *Ok* after selecting the file and
-then press *Ok* to have EEGLAB recognize the file format automatically
-from the file extension. 
+- ソリューション 2。 チャンネルラベルが存在しない場合は、ボタンを押します *チャンネル編集ウィンドウの右下隅にある場所を読み込みます。
+ファイルを選択した後に*Ok*を押して下さい
+EEGLABがファイルフォーマットを自動的に認識するために*Ok*を押します
+ファイル拡張子から。 
 
-Press *Ok* in
-the channel edit window to import the channel locations into EEGLAB.
+プレス *Ok*
+チャンネル編集ウィンドウでチャンネルの場所を EEGLAB にインポートします。
 
-To check that your channel locations have been imported correctly, use
-menu item <span style="color: brown">Plot → Channel locations → By name</span>
+チャンネルの場所が正しくインポートされていることを確認するには、
+メニュー項目 <span style="color: brown">Plot → チャンネルの場所 → お名前</span>
 
-## 3. Reject artifact-laden data
+## 3。 アーティファクト・ラデンデータをレジェクト
 
-The quality of the data is critical for obtaining a good ICA
-decomposition. ICA can separate out certain types of artifacts -- only
-those associated with fixed scalp-map projections. 
+良いICAを得るためのデータの品質は重要です
+分解します。 ICAは特定の種類のアーティファクトを分離することができます。
+固定スカルプマップの予測に関連付けられているもの。 
 
-These include eye
-movements and eye blinks, temporal muscle activity, and line noise. ICA
-may not be used to efficiently reject other types of artifacts -- those
-associated with a series of one-of-a-kind scalp maps.
+これらは目を含む
+動きおよび目の点滅、気道筋肉活動およびライン騒音。 アメリカ
+他の種類のアーティファクトを効率的に拒否するためには使用できません。
+1種類のスカルプマップのシリーズに関連付けられています。
 
-For example, if
-the subject were to scratch their EEG cap for several seconds, the
-result would be a long series of slightly different scalp maps
-associated with the channel and wire movements, etc. Therefore, such
-types of "non-stereotyped" or "paroxysmal" noise need to be removed by
-the user before performing ICA decomposition.
+例えば、
+被写体は、数秒間EEGキャップをスクラッチし、
+結果はわずかに異なるスカルプマップの長いシリーズになります
+チャネルおよびワイヤー動き、等に関連付けられて。 そのため、
+"non-stereotyped" または "paroxysmal" ノイズの種類は、
+ICAの分解を実行する前にユーザー。
 
-You have two solutions to reject bad data:
+悪いデータを拒否する2つのソリューションがあります。
 
-- Automated solution: Select menu item <span style="color: brown">Tools → Reject data using Clean Rawdata and ASR</span>. Press the first checkbox to high pass filter the data and press *Ok*. A new window pops up to ask for a name
-for the new dataset. Press *Ok*.
+- 自動化された解決: メニュー項目を選択 <span style="color: brown">ツール → Clean Rawdata と ASR を使用してデータを抽出する</span>お問い合わせ 最初のチェックボックスを押して、データをハイパスフィルタリングし、*Ok*を押します。 新しいウィンドウがポップアップして名前を尋ねます
+新しいデータセットのため。 プレス *Ok*.
 
-- Manual solution: 
-> - To reject “noisy channels“ of either continuous or epoched data, select
-menu item <span style="color: brown">Edit → select data</span>. 
+- 手動解決: 
+> - - - 連続的または露出したデータの「ノイズチャネル」を拒否するには、選択します
+メニュー項目 <span style="color: brown">データの編集 → 選択</span>. 
 
-> - To reject noisy portions of “continuous data”, select menu item
-<span style="color: brown">Tools → Inspect/Reject data by eye</span>.
- Then mark noisy portions of continuous data for
-rejection by dragging the mouse horizontally with the left button held
-down. Press *Reject* when done. A new window pops up to ask for a name
-for the new dataset. Press *Ok*.
+> - - - 「連続データ」の騒々しい部分を拒絶するには、メニュー項目を選択します。
+<span style="color: brown">ツール → 目でデータを調べる</span>.
+ 次に、連続したデータのノイズ部分をマークします。
+マウスを水平方向にドラッグして、左ボタンで解除
+ダウン。 *Reject*を押してください。 新しいウィンドウがポップアップして名前を尋ねます
+新しいデータセットのため。 プレス *Ok*.
 
-## 4. Run ICA and reject artifactual components
+## 4。 ICAを実行し、アーティファクチュアルコンポーネントを拒否
 
-Although optional, we advise re-referencing the data to average reference using the <span style="color: brown">Tools → Re-reference the data</span> menu item.
+オプションですが、データを再参照して平均的な参照にしておくことをお勧めしています。 <span style="color: brown">ツール → データを再参照する</span> メニュー項目。
 
-Use menu <span style="color: brown">Tools → Decompose data by ICA</span> to run the ICA
-algorithm. To accept the default options, press *Ok*.
+メニュー <span style="color: brown">ツール → ICAによるデータの分解</span> ICAを運営する
+アルゴリズム。 デフォルトオプションを受け入れるには、*Ok* を押します。
 
-You then have two solutions to reject bad ICA components:
+悪いICAコンポーネントを拒否する2つのソリューションがあります。
 
-- Automated solution: 
-> - Label components using the <span style="color: brown">Tools → Classify components using IClabel → Label components</span> menu item.
-> - Classify components using the <span style="color: brown">Tools → Classify components using IClabel → Flag components as artifact</span> menu item.
-> - Select menu item <span style="color: brown">Tools → Remove components</span>
-to actually remove the selected component from the data.
+- 自動化された解決: 
+> - ラベルコンポーネントを使用して <span style="color: brown">ツール → IClabel → ラベルコンポーネントを使用してコンポーネントを分類する</span> メニュー項目。
+> - コンポーネントの分類 <span style="color: brown">ツール → IClabel → フラグコンポーネントを使用してコンポーネントをアーティファクトとして分類する</span> メニュー項目。
+> - メニュー項目を選択 <span style="color: brown">ツール → コンポーネントを削除</span>
+データから選択したコンポーネントを実際に削除します。
 
-- Manual solution:
-> - Use menu <span style="color: brown">Tools → Reject data using ICA → reject component by maps</span> to select artifactual components. See the [Data
-analysis (running
-ICA)](/tutorials/06_RejectArtifacts/RunICA.html) tutorial for
-more details.
-> - Select menu item <span style="color: brown">Tools → Remove components</span>
-to actually remove the selected component from the data.
+- 手動解決:
+> - メニュー <span style="color: brown">ツール → ICA → コンポーネントをマップで拒否する</span> 実際のコンポーネントを選択する。 [データを見る]
+解析(実行)
+ICA)](/tutorials/06_RejectArtifacts/RunICA.html)チュートリアル
+詳細情報。
+> - メニュー項目を選択 <span style="color: brown">ツール → コンポーネントを削除</span>
+データから選択したコンポーネントを実際に削除します。
 
-See the [Data analysis (running
-ICA)](/tutorials/06_RejectArtifacts/RunICA.html) tutorial for
-more details and some hints on how to select artifactual components.
+[データ解析(実行)]を参照してください。
+ICA)](/tutorials/06_RejectArtifacts/RunICA.html)チュートリアル
+詳細な情報と、アーティファクチュアルコンポーネントを選択する方法のヒント。
 
-## 5. Further processing of and/or exporting the cleaned data
+## 5。 5。 洗浄されたデータのさらなる処理および/またはエクスポート
 
-You may also apply a similar procedure to groups of datasets from the EEGLAB GUI, as explained in [this tutorial](/tutorials/10_Group_analysis/multiple_subject_proccessing_overview.html).
+EEGLAB GUIからのデータセットのグループに同様の手順を適用することもできます。 [このチュートリアル](/tutorials/10_Group_analysis/multiple_subject_proccessing_overview.html).
 
-Your data has now hopefully been pruned of its major artifacts. You may now proceed with further EEGLAB processing. You may also choose to [export your data](/tutorials/misc/Exporting_Data.html) to the format of your choice.
+あなたのデータは、現在、その主要なアーティファクトの剪定を望んでいます。 EEGLAB処理をさらに進めることが出来ます。 あなたも選ぶことができます [データをエクスポートする](/tutorials/misc/Exporting_Data.html) あなたの選択のフォーマットに。
 

@@ -7,75 +7,75 @@ parent: Tutorials
 nav_order: 1
 ---
 
-Installing and starting EEGLAB
+EEGLABのインストールと開始
 ==============================
 
-First, download [EEGLAB](https://sccn.ucsd.edu/eeglab/download.php),  
-which contains the tutorial dataset in the _sample_data_ subfolder of the EEGLAB distribution.  
-When you decompress EEGLAB, you will obtain a folder named "eeglabxxxx"  
-(note: the current version number 'xxxx' will vary).
+ダウンロード [エッグラボ](https://sccn.ucsd.edu/eeglab/download.php),  
+EEGLAB分布の_sample_data_ subfolderにチュートリアルデータセットが含まれています。  
+EEGLABを解凍すると、「eeglabxxxx」というフォルダが取得されます。  
+(注:現在のバージョン番号 'xxxx' は異なります)。
 
-Under Windows, MATLAB usually recommends but does not require that you place toolboxes  
-in the *Application/MATLABRxxxx/toolbox/* folder (note: this name should  
-vary with the MATLAB version 'xxxx'). In Linux, the MATLAB toolbox  
-folder is typically located at */usr/local/pkgs/MATLAB-rxxxx/toolbox/*. In **macOS**, it is in */Applications/MATLAB_Rxxxx/*. You may also place the folder anywhere else on your path.
+Windows では、MATLAB は通常推奨しますが、ツールボックスを置く必要はありません。  
+*Application/MATLABRxxxx/toolbox/* フォルダ (注: この名前は、  
+MATLABバージョン 'xxxx' と異なる。 Linux では、MATLAB ツールボックス  
+フォルダは通常、 */usr/local/pkgs/MATLAB-rxxxx/toolbox/* にあります。 **macOS** では、*/Applications/MATLAB_Rxxxx/* にあります。 また、あなたのパスに他の場所でフォルダを配置することもできます。
 
-Now, we will start MATLAB and EEGLAB.
+MATLAB と EEGLAB を始めます。
 
-Start MATLAB
+MATLABを起動する
 ------------
 
-- **Windows**: Go to Start, find MATLAB, and run it.  
-- **macOS**: Start from the MATLAB icon in the Dock or the Applications folder.  
-- **Linux**: Open a terminal window and type *matlab*, then hit Enter.
+- **Windows**: スタートに移動し、MATLABを見つけて実行します。  
+- **macOS**: Dock または Application フォルダ内の MATLAB アイコンから起動します。  
+- **Linux**:ターミナルウィンドウを開き、*matlab*と入力し、[Enter]を押します。
 
-Switch to the EEGLAB directory
+EEGLABディレクトリへの切り替え
 ------------------------------
 
-You may browse for the directory by clicking on the button marked *"…"* in the upper right of the screen.
+画面右上の「*」のボタンをクリックすることで、ディレクトリを閲覧できます。
 
 ![](/assets/images/MATLAB_main_screen.png)
 
-This opens the window below. Double-click on a directory to enter it.  
-Double-clicking on ".." in the folder list takes you up one level. Hit *OK* once you find the folder or directory you wish to be in.  
-Alternatively, from the command line, use *cd* (change directory) to get to the desired directory.
+下のウィンドウを開きます。 ディレクトリをダブルクリックして入力します。  
+フォルダリストの ".." をダブルクリックすると、1 つのレベルが上がります。 フォルダやディレクトリを見つけたら、*OK*を押します。  
+あるいは、コマンドラインから、*cd*(変更ディレクトリ)を使用して、目的のディレクトリに移動します。
 
-Start EEGLAB
+EEGLABを始める
 ------------
 
-Type *eeglab* at the MATLAB command line and hit Enter. EEGLAB will  
-automatically add itself to the MATLAB path.
+MATLAB コマンドラインで *eeglab* を入力して Enter を押します。 EEGLABは  
+MATLABパスに自動的に追加します。
 
 ![](/assets/images/MATLAB_Command_Line.png)
 
-The blue main EEGLAB window below should pop up, with its seven menu  
-headings: <span style="color:brown">File, Edit, Tools, Plot, Study, Datasets, Help</span> arranged in typical (left-to-right) order of use.
+下の青いメインEEGLABウィンドウがポップアップし、7つのメニューで  
+見出し: <span style="color:brown">ファイル、編集、ツール、プロット、スタディ、データセット、ヘルプ</span> 典型的な(左から右)の注文で配置。
 
 ![](/assets/images/Eeglab20191.png)
 
-Adding EEGLAB to the MATLAB path
+EEGLABをMATLABパスに追加
 --------------------------------
 
-You may want to add the EEGLAB folder to the MATLAB search path so the  
-next time you start MATLAB, you will be able to directly open EEGLAB.
+EEGLABフォルダをMATLAB検索パスに追加したいので、  
+MATLABを起動すると、EEGLABを直接開くことができます。
 
-If you started MATLAB through its graphical interface, go to the  
-<span style="color: brown">File</span> menu item and select <span style="color: brown">Set Path</span>. This will open the following window.
+グラフィカルなインターフェースでMATLABを始めると、  
+<span style="color: brown">ファイル</span> メニュー項目および選択 <span style="color: brown">セットパス</span>お問い合わせ 以下の画面を開きます。
 
-![MATLAB set path gui](/assets/images/MATLAB_set_path_gui_2.png)
+![MATLABセットパス gui](/assets/images/MATLAB_set_path_gui_2.png)
 
-Or, if you are running MATLAB from the command line, type *pathtool* at the command line  
-and hit Enter; this will also call up this window.
+または、コマンドラインからMATLABを実行している場合は、コマンドラインで*pathtool*を入力  
+Enterを押すと、このウィンドウも呼び出します。
 
-Click on the button marked *Add Folder* and select the folder  
-"eeglabxxxx", then hit *OK* (EEGLAB will take care of adding its  
-subfolders itself).
+*Add Folder*のボタンをクリックし、フォルダを選択します。  
+"eeglabxxxx" を押して、*OK* (EEGLAB は、その追加を処理します)  
+サブフォルダ自体)。
 
-Hit *Save* in the *pathtool* window. This will make the EEGLAB call-up  
-function *eeglab* available in future MATLAB sessions. Note that if  
-you are installing a more recent version of EEGLAB, it is best to  
-remove the old version from the MATLAB path (select it, then hit  
-*Remove*) to avoid the possibility of calling up outdated routines. It  
-is preferable **not** to add the *eeglab* path with its subfolders manually—let  
-EEGLAB manage paths (when you start EEGLAB, it automatically adds  
-the paths it needs).
+*pathtool*ウィンドウで*Save*を押します。 EEGLABのコールアップを行います  
+機能 *eeglab*は将来のMATLABセッションで利用できます。 お問い合わせ  
+EEGLABの最新バージョンをインストールしています。  
+MATLABパスから古いバージョンを削除(選択してからヒット)  
+*Remove*)は、古いルーチンを呼び出しる可能性を回避します。 お問い合わせ  
+*eeglab* パスを手動でサブフォルダに追加するために好ましい ****  
+EEGLAB はパスを管理します(EEGLAB を起動すると、自動的にパスを追加します。  
+必要なパス。

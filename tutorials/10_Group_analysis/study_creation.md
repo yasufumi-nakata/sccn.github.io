@@ -6,227 +6,227 @@ parent: 10. Group analysis
 grand_parent: Tutorials 
 ---
 
-Creating a STUDY
+STUDYの作成
 ====================
-{: .no_toc }
+お問い合わせ
 
-This part of the tutorial will demonstrate how to create an EEGLAB
-STUDY and perform simple plotting. 
-An EEGLAB STUDY (or study) contains descriptions of and links to data
-contained in many epoched or continuous datasets, for example, a set of
-datasets from a group of subjects in one or more conditions of the
-same task or performing different tasks in the same or different
-sessions. We use a *STUDY* to manage and process data recorded from multiple subjects, sessions, and/or conditions of an experimental study. 
+チュートリアルのこの部分は、EEGLABを作成する方法を示しています
+STUDYは簡単なプロットを実行します。 
+EEGLAB STUDY(または研究)には、データの記述とリンクが含まれています
+多数のepochedか連続的なデータセット、例えば、セットに含まれている
+1 つ以上の条件で被験者のグループからのデータセット
+同じタスクまたは異なるタスクの実行
+セッション。 *STUDY*を使用して、実験的研究の複数の科目、セッション、および/または条件から記録されたデータを管理および処理します。 
 
-In addition to the tutorial sections below, you may want to watch the short video below on multiple subjects processing in EEGLAB (hosted on Youtube):
+以下のチュートリアルセクションに加えて、EEGLAB(Youtubeでホストされている)で処理する複数の被写体で以下の短いビデオを見たい場合があります。
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/kofJh7biGsE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Getting ready for group-level analysis
+グループレベルの分析の準備
 --------------------------
 
-### Description of the 5-subject experiment tutorial data
+### 5-subject実験チュートリアルデータの記述
 
-In this tutorial, we will use a [5-subject STUDY](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (450Mb). These data were acquired by Peter Ullsberger and colleagues from five subjects
-performing an auditory task in which they were asked to distinguish
-between synonymous and non-synonymous word pairs (the second word
-presented 1 second after the first). 
+このチュートリアルでは、 [5-サブジェクトSTUDY](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (450Mb)。 これらのデータは、Peter Ullsbergerと5つの被験者から取得されました。
+彼らが区別するように求められた監査タスクを実行する
+同義語と非同義語の単語のペアの間で (第二の単語
+最初の1秒後に提示しました。 
 
-Data epochs were extracted from 2
-sec before the second-word onset to 2 sec after the second-word onset.
+データエポックは2から抽出されました
+2 番目の単語が 2 秒の単語のオンセットの後の 2 秒の前の秒。
 
-After decomposing each subject's data by ICA, two EEG datasets were
-extracted, one (Synonyms) comprising trials in which the second word was
-synonymous with the first one, and one (Non-synonyms) in which the
-second-word was not a synonym of the first. 
+ICAで各被験者のデータを解読した後、2つのEEGデータセットが
+抽出された 1 (Synonyms) は、2 番目の単語が行われた試験を作曲する
+最初の1と同義語で、その中の1(非同義語)
+2番目の単語は最初の代名詞ではありませんでした。 
 
-Thus the study includes 10
-datasets, two condition datasets for each of five subjects. Since both
-datasets of each subject were recorded in a single session, the
-decompositions and resulting independent component maps are the same
-across both conditions for each subject.
+したがって、研究には10が含まれています
+データセット、各5件ごとに2つの条件データセット。 両方から
+各被写体のデータセットは、単一のセッションで記録され、
+分解と独立したコンポーネントマップは同じです
+それぞれの被験者に対する両方の条件を渡します。
 
-After downloading the sample STUDY data, unzip it in a folder of your
-choice (preferably in the 'sample_data' sub-folder of the EEGLAB release
-you are currently using). This will
-create a sub-folder *STUDY5subjects*. Then open
-a MATLAB session and run *\>\> eeglab*.
+サンプルSTUDYデータをダウンロードした後、フォルダーに解凍します
+EEGLAB リリースの 'sample_data' サブフォルダで、
+現在使用している) これは、
+サブフォルダを作成する *STUDY5subjects*. それから開いた
+MATLABセッションと実行 *\>\> eeglab*.
 
-In other EEGLAB *STUDY* tutorials, we will also use the [STERN task data](http://sccn.ucsd.edu/eeglab/download/STUDYstern_125hz.zip) (0.9Gb) and  the [animal/non-animal categorization task data](https://sccn.ucsd.edu/eeglab/download/animal_study.zip) (0.4Gb).
+他のEEGLAB *STUDY*チュートリアルでは、我々はまた、使用します [STERNタスクデータ](http://sccn.ucsd.edu/eeglab/download/STUDYstern_125hz.zip) (0.9Gb) および [動物/非動物分類タスクデータ](https://sccn.ucsd.edu/eeglab/download/animal_study.zip) (0.4Gb).
 
-### Data organization
+### データ組織
 
-The term *STUDY* indicates that datasets
-should originate from a single experimental STUDY and have comparable
-structure and significance. 
+*STUDY* という用語は、データセットであることを示しています。
+単一の実験的なSTUDYから発信し、比較可能でなければなりません
+構造および意義。 
 
-The tutorial data is already optimally organized. However, when creating
-a new STUDY, it is preferable to organize your data before running the
-STUDY functions. 
+チュートリアルデータは既に最適に整理されています。 しかし、作成するとき
+新しいSTUDYは、実行前にデータを整理することが望ましい
+STUDYの機能。 
 
-We suggest creating one directory or folder per
-subject, then storing the EEG dataset (".set") files for that subject in
-this folder. Even better, use the [BIDS EEGLAB plugin](https://github.com/sccn/bids-matlab-tools/wiki) to organize your data and make it BIDS compliant. The STUDY functions will then automatically add measure
-files to the same subject directories.
+1つのディレクトリまたはフォルダーを1つ作成することをお勧めします。
+対象の EEG のデータセット (.set") ファイルを格納します。
+このフォルダ。 より良いものでも、 [BIDS EEGLABプラグイン](https://github.com/sccn/bids-matlab-tools/wiki) データを整理し、BIDSに準拠させる。 STUDY 関数は自動的に測定を追加します。
+同じ被写体ディレクトリへのファイル。
 
-### EEGLAB memory settings
+### EEGLABメモリ設定
 
-We also advise modifying the default EEGLAB memory options. Call menu item <span style="color: brown">File → Preferences</span>. 
-The first option determines if more than one dataset may be stored in memory. We will be selecting this option when performing group analysis, as it is often not possible to hold all datasets in memory.
+また、デフォルトの EEGLAB メモリオプションを変更することをお勧めします。 コールメニュー項目 <span style="color: brown">ファイル → 環境設定</span>. 
+最初のオプションは、複数のデータセットがメモリに保存されているかどうかを決定します。 グループ分析を実行すると、メモリ内のすべてのデータセットを保持できないため、このオプションを選択します。
 
-![Image:preferences.png](/assets/images/preferences.png)
+![画像:preferences.png](/assets/images/preferences.png)
 
-When in use, *STUDY* datasets are
-partially or totally loaded into EEGLAB. They thus may also be
-accessed and modified individually, when desired, through the main
-EEGLAB graphic interface or using EEGLAB functions within
-custom dataset processing scripts. Dataset data arrays are then read from disk whenever
-EEGLAB requires access to the data, but without cluttering memory. This
-will allow MATLAB to load and hold a large number of dataset structures (2,300 is the all-time record), forming a large STUDY. 
+使用時 *STUDY* データセットは
+部分的にまたは完全に EEGLAB にロード。 このようにして、
+必要に応じて、メインを通して、個別にアクセスおよび変更
+EEGLAB のグラフィック インターフェイスか EEGLAB の機能を使用して内の
+カスタムデータセット処理スクリプト。 データセットのデータ配列はディスクからいつでも読み込まれます
+EEGLABはデータへのアクセスを要求しますが、メモリを乱すことなく。 お問い合わせ
+MATLABは、大量のデータセット構造をロードおよび保持することを可能にします(2,300は全時間記録です)。 
 
-Quick STUDY creation
+迅速なSTUDY作成
 ---------------------------------------------
-After uncompressing the [5-subject tutorial data](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip), select the
- <span style="color: brown">File → Create study → Simple ERP STUDY</span> menu item to create a *STUDY*. The interface below pops up. Enter two for the number of conditions and five for the number of subjects, then press *Ok*.
+解凍した後 [5-subjectチュートリアルデータ](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip), 選択
+ <span style="color: brown">ファイル → 研究の作成 → シンプルなERP STUDY</span> *STUDY*を作成するメニュー項目。 下のインターフェイスは現れます。 条件の数と被験者数の5つを2つ入力し、*Ok*を押します。
 
 ![](/assets/images/simplestudy1.png)
 
-Then enter the following information in the interface below. There are two columns of data files, one for the condition *synonym* (files *synXX-s253-clean.set) and one for the condition *non-synonym* (files *synXX-s254-clean.set*) with one row per subject. You may use the browse ("...") button to select the files. Name the *STUDY* "N400" and press *Ok*.
+次に、以下のインターフェイスに次の情報を入力します。 データファイルの2列、条件の1つ *synonym* (files *synX-s253-clean.set)と条件の1つ *non-synonym* (files *synXX-s254-clean.set*)と1列あたりの1列。 参照(「...」)ボタンを使用してファイルを選択します。 *STUDY* "N400" の名前をつけ、 *Ok* を押して下さい。
 
 ![](/assets/images/simplestudy3.png)
 
-The following interfaces pop up. One is the grand average ERP across conditions for all electrodes. You may click on a trace to pop up a new figure. The other interface is the *STUDY* plotting graphic GUI. This interface is described in detail in the [STUDY visualization tutorial](/tutorials/10_Group_analysis/study_data_visualization_tools.html).
+次のインターフェイスがポップアップ表示されます。 1つは、すべての電極のための条件を渡る壮大な平均ERPです。 トレースをクリックすると、新しい数字がポップアップ表示されます。 他のインターフェイスは*STUDY*の写実的なGUIです。 このインターフェイスは細部で記述されます [STUDY視覚化チュートリアル](/tutorials/10_Group_analysis/study_data_visualization_tools.html).
 
 ![](/assets/images/simplestudy2.png)
 
-This is how simple it is to create a *STUDY*. In the rest of this tutorial page, we will describe an alternative method for *STUDY* creation. This other method is more involved but allows setting additional parameters.
+*STUDY*を作成するのは簡単です。 このチュートリアルページの残りの部分では、*STUDY*作成の代替方法について説明します。 この他の方法は、より関与していますが、追加のパラメータを設定することができます。
 
-Creating a new STUDY
+新しいSTUDYを作る
 -----------------
-To create a *STUDY*, select the
- <span style="color: brown">File → Create study → Browse for datasets</span> menu item.
+*STUDY*を作成するには、
+ <span style="color: brown">ファイル → 研究の作成 → データセットの閲覧</span> メニュー項目。
 
-Another option is to load into
-EEGLAB all the datasets you want to include in the study and select
-the 
-<span style="color: brown">File → Create study → Using all loaded datasets</span> menu item. 
-A blank interface similar to the one described below
-will appear. In this window, enter a name for the *STUDY*
-('N400'), and a short description of the study ('Auditory task:
-Synonyms Vs. Non-synonyms, N400'). 
+別のオプションは、
+EEGLAB 研究に含めるすべてのデータセットと選択
+お問い合わせ 
+<span style="color: brown">ファイル → 研究の作成 → 読み込まれたすべてのデータセットを使用する</span> メニュー項目。 
+下記のものと同様の空白インターフェイス
+が表示されます。 *STUDY*の名前を入力してください。
+('N400')、および研究の短い説明('Auditory タスク:
+同義語Vs。非同義語、N400')。 
 
-Here, we do not add notes about the
-study, but we recommend that you do so for your own studies. The
-accumulated notes will always be loaded with the study, easing later
-analyses, and re-analyses. Note that here the fields *Subject* and *Condition* (above) have been filled
-automatically. This is because the datasets already contained this
-information. For instance, if you were to load this dataset into
-EEGLAB by selecting the <span style="color: brown">Edit → Dataset info</span> menu item, you would be able to edit the *subject*, *condition*, *group*, *session*, and *run* for this dataset. You may also edit this information within the study itself. The dataset information and study dataset information may be different to ensure maximum flexibility, although we recommend checking the checkbox *Update dataset info...* to keep them consistent.
+ここでは、メモを書いていません。
+勉強しますが、自分の研究のためにそうすることをお勧めします。 ふりがな
+蓄積されたメモは、研究で常に読み込まれ、後で増加します
+分析・再分析 フィールド *Subject* と *Condition* (above) が埋め込まれていることに注意してください。
+自動的に。 既にデータセットが含まれているためです。
+インフォメーション たとえば、このデータセットをロードする
+EEGLABを選ぶことによって <span style="color: brown">編集 → データセット情報</span> メニュー項目は、*subject*、*condition*、*group*、*session*、および*run*をこのデータセットのために編集できます。 また、この情報を研究自体で編集することもできます。 データセット情報と学習データセット情報は、最大限の柔軟性を確保するために異なっているかもしれませんが、チェックボックス *更新データセット情報...* をチェックして一貫性を保つことをお勧めします。
 
-Click on the *Browse* button in the first blank location and select a dataset name. Do so for other datasets as well. 
+最初の空白の場所にある *Browse* ボタンをクリックし、データセット名を選択します。 他のデータセットも同様です。 
 
-The interface window should then look like the following:
+インターフェイスウィンドウは次のようになります。
 
 ![](/assets/images/studycreate.png)
 
-Below, we detail what the *STUDY* terms *subject*, *session*, *run*, *condition*, and *group* mean.
+以下は、*STUDY* の用語 *subject*、*session*、*run*、*condition*、および*group* の意味を詳しく説明します。
 
-- The top of the window contains information about the STUDY, namely its
-running name, the extended task name for the STUDY, and some notes.
-- The next section contains information about the 10 datasets that are
-part of the STUDY. For each dataset, we have specified a subject code
-and condition name. 
-- For each file, you may assign a session and run number. A run is when there are blocks in an experiment, and the data from each block is stored in a separate file. Sessions are used when the data is collected on different days or when there is a break that involves removing the EEG cap. We chose to leave the session and run empty since there are irrelevant for this *STUDY* (there is only one session and one run per subject).
-- The *condition* column contains the condition associated with each file. Note that we have two files here per subject. However, it is also possible to have a single file per subject and to define conditions using EEGLAB event trial types. For more information on this topic, read the [STUDY design tutorial](/tutorials/10_Group_analysis/working_with_study_designs.html).
-- The *group* column indicates the group a subject belongs to. This is irrelevant for this STUDY since there
-was only one subject group.
-- We will come back later to the *Select by r.v.* (select ICA component by residual variance) and the *Comp...* button when we perform ICA component clustering.
-- Pressing the *Clear* button clears the information on a given row.
+- ウィンドウの上部には、STUDYに関する情報が含まれています。
+実行名、STUDY の拡張タスク名、およびいくつかのノート。
+- 次のセクションには、10つのデータセットに関する情報が含まれています。
+STUDYの部分。 各データセットでは、サブジェクトコードを指定しています。
+条件名。 
+- 各ファイルでは、セッションを割り当て、番号を実行できます。 実験中のブロックが存在し、各ブロックのデータが別々のファイルに保存されます。 セッションは、データが異なる日に収集されるか、EEGキャップを除去することを含む休憩がある場合に使用されます。 この *STUDY* が 1 つのセッションと 1 件ずつ実行されるので、セッションを離れ、空に走ることを選択しました。
+- *condition* 列には、各ファイルに関連する条件が含まれています。 ここに2つのファイルがあります。 ただし、対象のファイルとEEGLABイベントの試用型を使用して条件を定義することも可能です。 このトピックの詳細については、こちらをご覧ください [STUDYの設計チュートリアル](/tutorials/10_Group_analysis/working_with_study_designs.html).
+- *group* カラムは、グループが属する項目を示します。 このSTUDYの関連性はあります
+1つのグループのみでした。
+- ※r.v.*(残留分散でICAコンポーネントを選択)と、ICAコンポーネントのクラスタリングを実行すると、*Comp...*ボタンが後に戻ってきます。
+- *Clear*ボタンを押すと、指定した行の情報が消去されます。
 
-In general, we prefer the dataset information to be consistent with
-the *STUDY* information -- thus, we may check the first checkbox. The second checkbox removes all current cluster information and will be explained when we perform ICA component clustering.
+一般的には、データセットの情報を一貫したものにすることを好む
+*STUDY*情報 -- したがって、最初のチェックボックスをチェックします。 2番目のチェックボックスでは、現在のクラスター情報をすべて削除し、ICAコンポーネントのクラスタリングを実行したときに説明されます。
 
-After you have finished adding datasets to the study, press *Ok* in the [pop_study.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_study.m) GUI to import all the datasets.
+研究にデータセットを追加した後、*Ok*を押してください。 [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_study.m) すべてのデータセットをインポートするGUI
 
-We strongly recommend that you also save the *STUDY* by selecting the EEGLAB
-menu item <span style="color: brown">File → Save study as</span> after closing the [pop_study.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_study.m) window.
+EEGLABを選択することで、*STUDY*も保存しておくことを強くお勧めします
+メニュー項目 <span style="color: brown">ファイル → 学習をそのまま保存する</span> 閉鎖の後で [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_study.m) ウィンドウ。
 
-Loading an existing STUDY
+既存のSTUDYを読み込む
 -------------------------------
 
-Either use the studyset created in the previous section or load
-another studyset. To load a studyset, select the <span style="color: brown">File → Load existing study</span> menu item. Select the file
-*N400.study* in the folder *STUDY5subjects*. After loading or creating a
-study, the main EEGLAB interface should look like this:
+前のセクションまたはロードで作成したスタディセットを使用する
+別のスタディセット。 スタディセットをロードするには、 <span style="color: brown">ファイル → 既存の研究をロードする</span> メニュー項目。 ファイルを選択します。
+*STUDY5subjects*のフォルダ内のN400.study*。 ローディングまたは作成の後で
+研究では、メインの EEGLAB インターフェイスはこのようになります。
 
-![Study Window](/assets/images/guistudy.png)
+![研究窓](/assets/images/guistudy.png)
 
-In the EEGLAB GUI (above): 
-- *Epoch consistency* indicates whether or
-not the data epochs in all the datasets have the same lengths and
-limits.
-- *Channels per frame* indicates the number of channels in each
-of the datasets (*It is possible to process datasets with different
-numbers of channels*).
-- *Channel location* indicates whether or not
-channel locations are present for all datasets. 
-- *Clusters*  indicates the number of component clusters associated
-with this STUDY. There is always at least one cluster associated with
-a STUDY. This contains all the pre-selected ICA components from all
-datasets.
-- *Status* indicates the current status of the
-STUDY. In the case above, this line indicates that the STUDY is ready
-for pre-clustering. 
+EEGLAB GUI では、 
+- *Epochの一貫性*はかどうかを示します
+すべてのデータセットのデータエポックが同じ長さを持ち、
+制限事項
+- *フレームごとのチャネル*は各チャネルの数を示します
+データセットの (*異なるデータセットを処理することは可能です)
+チャンネル数*
+- *チャネルの場所*はかどうかを示します
+すべてのデータセットでチャンネルの場所が公開されます。 
+- *Clusters* は、関連するコンポーネントクラスターの数を示します。
+このSTUDYを使って。 関連する少なくとも1つのクラスターが常にあります
+スタディ これらは、すべての選択済みICAコンポーネントからすべて含まれています
+データセット。
+- *Status* は現在のステータスを示します。
+スチュディ。 上記の場合、この行はSTUDYが準備完了していることを示しています
+プリクラスタ 
 
-To list the datasets in the STUDY, use the
-<span style="color: brown">Study → Edit study info</span> menu item. The interface described in the previous section will pop up.
+STUDYにデータセットをリストするには、
+<span style="color: brown">学習 → 学習情報編集</span> メニュー項目。 前のセクションで説明したインターフェイスがポップアップ表示されます。
 
-### Editing STUDY datasets
-Selecting an individual dataset from the
-<span style="color: brown">Datasets</span> menu item allows editing individual
-datasets in a *STUDY*. 
+### STUDYデータセットの編集
+個々のデータセットを選択する
+<span style="color: brown">データセット</span> メニュー項目は個人を編集することを可能にします
+*STUDY*のデータセット 
 
-Note, however, that creating new datasets or
-removing datasets will also remove the *STUDY* from memory since the
-study must remain consistent with datasets loaded in memory (EEGLAB will prompt you to save the *STUDY* before it is deleted).
+ただし、新しいデータセットを作成するか、
+データセットを削除すると、メモリから*STUDY*も削除されます。
+メモリに読み込まれたデータセット(EEGLAB では削除される前に *STUDY* を保存するよう求められます) と一致しなければなりません。
 
-### Reviewing the STUDY design
+### STUDYデザインのレビュー
 
-Another [section of the tutorial](/tutorials/10_Group_analysis/working_with_study_designs.html) describes *STUDY* designs in detail, but it uses a different tutorial dataset. Our design is simple here, with only two conditions.
+その他 [チュートリアルのセクション](/tutorials/10_Group_analysis/working_with_study_designs.html) *STUDY*のデザインを詳細に記述しますが、異なるチュートリアルデータセットを使用します。 私達の設計は2つの条件だけと、ここに簡単です。
 
-To edit the STUDY design, select
-the second STUDY menu item <span style="color: brown">Study → Select/Edit study design(s)</span>.
+STUDY デザインを編集するには、
+2番目のSTUDYメニュー項目 <span style="color: brown">研究 → 選択/編集研究設計(s)</span>.
 
-![Image:Studydesignmenu.jpg](/assets/images/Studydesignmenu.jpg)
+![画像:Studydesignmenu.jpg](/assets/images/Studydesignmenu.jpg)
 
-This will pop up the following interface.
+以下のインターフェイスをポップアップします。
 
-![Image:Studydesign.jpg](/assets/images/studydesign1.png)
+![画像:Studydesign.jpg](/assets/images/studydesign1.png)
 
-The top panel contains the list of designs (in this case, a single design), and the bottom panel contains the variables used in a specific design.
+トップパネルには、デザインのリスト(この場合、単一デザイン)、下部パネルには、特定の設計で使用される変数が含まれています。
 
-Let's rename the default design by pressing the *Rename* button to *Synonym vs non-synonym*. The following GUI pops up. Press *Ok*.
+*Rename* ボタンを *Synonym と non-synonym* に押すことで、デフォルトのデザインの名前を変更してみましょう。 次のGUIがポップアップ表示されます。 プレス *Ok*.
 
-![Image:Studydesign.jpg](/assets/images/studydesign2.png)
+![画像:Studydesign.jpg](/assets/images/studydesign2.png)
 
-Now, in the bottom panel, click on the *Edit* button. The following GUI pops up. We can see that the *condition* independent variable is selected. We can also see that the two conditions are *non-synonyms* and *synonyms*.
+下のパネルで、*Edit* ボタンをクリックします。 次のGUIがポップアップ表示されます。 *condition*の独立した変数が選択されていることを見ることができます。 また、2つの条件が*non-synonyms*と*synonyms*であることを確認することができます。
 
-![Image:Studydesign.jpg](/assets/images/studydesign3.png)
+![画像:Studydesign.jpg](/assets/images/studydesign3.png)
 
-### What to do after creating your STUDY
+### あなたのSTUDYを作成した後に何をするか
 
-We have already seen in this tutorial how to create a simple *STUDY* and plot the grand average ERP using the <span style="color: brown">File → Create study → Simple ERP STUDY</span> menu item. This procedure bypass the standard *STUDY* pipeline, which consists of creating the *STUDY*, preprocessing the data, and plotting it, as we describe in the [group analysis visualization tutorial](/tutorials/10_Group_analysis/study_data_visualization_tools.html).
+このチュートリアルでは、単純な *STUDY* を作成して、壮大な平均 ERP をプロットする方法を既に見てきました。 <span style="color: brown">ファイル → 研究の作成 → シンプルなERP STUDY</span> メニュー項目。 この手順は、*STUDY*の作成から構成される標準の*STUDY*パイプラインをバイパスし、データを事前処理し、それをプロットします。 [グループ分析の可視化チュートリアル](/tutorials/10_Group_analysis/study_data_visualization_tools.html).
 
-If you are impatient, select the <span style="color: brown">Study → Precompute channel measures</span> menu item, click the *ERPs* checkbox, and press *Ok*. Then select the <span style="color: brown">Study → Plot channel measures</span> menu item and press the *Plot ERPs* pushbutton to plot the ERP for the first channel in the list. The following plot showing the grand-average ERP for each condition will pop up.
+不当な場合、選択して下さい <span style="color: brown">研究 → プレコプトチャネル対策</span> メニュー項目は、*ERPs*チェックボックスをクリックし、*Ok*を押します。 それから選択して下さい <span style="color: brown">研究 → プロットチャネル対策</span> メニュー項目は、*Plot ERPs* pushbutton を押して、リストの最初のチャネルのERPをプロットします。 各条件のグランド平均ERPを示す次のプロットがポップアップ表示されます。
 
 ![](/assets/images/simplestudyplot.png)
 

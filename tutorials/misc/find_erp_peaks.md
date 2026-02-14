@@ -5,26 +5,26 @@ long_title: How to find ERP peaks
 parent: Reference Topics
 grand_parent: Tutorials
 ---
-Finding ERP peak latencies
+ERPピークレイテンシーの検索
 ===
-Peaks of activity in the subject or grand average ERPs may arise from complex processes due to partial phase synchronization. We urge researchers to go beyond this simplified measure. Nevertheless, we include this tutorial section because this approach remains popular in the community.
+被験者またはグランド平均ERPにおける活動のピークは、部分的な相同期による複雑なプロセスから発生する可能性があります。 研究者がこの単純化措置を超えて行くように促します。 それにもかかわらず、このアプローチはコミュニティで人気が残っているため、このチュートリアルセクションが含まれています。
 
-ERP peak characteristic using Matlab zoom
+Matlabズームを用いたERPピーク特性
 ----
 
-Although EEGLAB currently does not have tools for automatically finding
-ERP peak amplitudes and latencies, one can use the convenient MATLAB
-zoom facility to visually determine the exact amplitude and latency of a
-peak in any MATLAB figure.
+EEGLABは現在、自動的に検索するためのツールはありませんが、
+ERPピーク振幅とレイテンシー、便利なMATLABを使用できます
+ズーム機能により、正確な振幅とレイテンシを視覚的に判断
+どのMATLAB図でもピーク。
 
-For example, in the figure above, select the magnifying-glass icon having the **+** sign. Then, zoom in on the red curve's peak, as shown below (click on the left mouse button to zoom in and on the right button to zoom out). Read the peak latency and amplitude to any desired precision from the axis scale.
+たとえば、上の図では、**+**記号を持つ拡大眼鏡アイコンを選択します。 その後、下の図のように赤い曲線のピークにズームインします(左マウスボタンを押してズームアウトします)。 ピークレイテンシと振幅を軸スケールから任意の目的の精度に読みます。
 
 ![](/assets/images/Pop_comperp5.gif)
 
-ERPLAB and EEGLAB bioelectromag plugin
+ERPLAB と EEGLAB の Bioelectromag プラグイン
 ---------------
-EEGLAB extensions, including [bioelectromag](https://sccn.ucsd.edu/eeglab/plugins/eeg_toolbox1.01.zip) and [ERPLAB](https://github.com/lucklab/erplab/releases), allow performing more advanced ERP peak detection. These extensions are available from the EEGLAB extension manager, which may be invoked by selecting the <span style="color: brown">File → Manage EEGLAB extensions</span> menu item.
+EEGLABエクステンション(EEGLABエクステンション) [バイオエレクトロマー](https://sccn.ucsd.edu/eeglab/plugins/eeg_toolbox1.01.zip) そして、 [ERPラボ](https://github.com/lucklab/erplab/releases)は、より高度ERPのピークの検出を実行できます。 これらの拡張子は、EEGLAB拡張マネージャから入手できます。 <span style="color: brown">ファイル → EEGLAB 拡張機能の管理</span> メニュー項目。
 
-Below is a plot showing the [bioelectromag] interface after loading the EEGLAB tutorial epoched dataset "eeglab_data_epochs_ica.set".
+以下は、EEGLABチュートリアルのeeglab_data_epochs_ica.setをロードした後に[bioelectromag]インターフェイスを示すプロットです。
 
 ![](/assets/images/bioelec.png)

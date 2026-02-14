@@ -7,7 +7,7 @@ grand_parent: Tutorials
 has_toc: true
 ---
 
-Using custom measures
+カスタム対策の使用
 =====================
-{: .no_toc }
-Let's assume you are using an EEGLAB plugin or custom code to compute some measure of interest. For the sake of this example, we will assume, we want to compare alpha asymmetry for two groups of subjects using the 
+お問い合わせ
+EEGLABプラグインやカスタムコードを使用して、いくつかの興味の測定を計算します。 この例の日本酒については、被験者の2つのグループに対してアルファアシムネトリーを比較したいと考えています。 

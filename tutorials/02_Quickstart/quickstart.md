@@ -6,87 +6,87 @@ categories: tutorial
 parent: Tutorials
 nav_order: 2
 ---
-Quickstart guide
+クイックスタートガイド
 ================
 
-This page lets you import and visualize an EEG dataset. It is a way  to get started quickly.
+このページでは、EEGデータセットをインポートして可視化することができます。 早速始めよう。
 
-Load the sample EEGLAB dataset
+サンプル EEGLAB データセットをロードする
 ---------------------------
 
-Select menu item <span style="color: brown">File</span> and press sub-menu item
-<span style="color: brown">Load existing dataset</span>.
+メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
+<span style="color: brown">既存のデータセットをロードする</span>.
 
-In the rest of the tutorial, we will use the convention:
-<span style="color: brown">Menu_item → Submenu_item</span> to refer to a menu
-selection (e.g., here select submenu item <span style="color: brown">Load
-existing dataset</span> under the top-level
-<span style="color: brown">File</span> submenu).
+チュートリアルの残りの部分では、コンベンションを使用します。
+<span style="color: brown">Menu_item → サブメニュー</span> メニュー
+選択(例:サブメニュー項目を選択) <span style="color: brown">ログイン
+既存のデータセット</span> トップレベルの下
+<span style="color: brown">ファイル</span> サブメニュー
 
-In Unix, the following window will pop up (the aspect ratio of this
-window may differ in Windows and MacOS):
+Unixでは、次のウィンドウがポップアップ表示されます(このアスペクト比)
+ウィンドウは、WindowsとMacOSで異なる場合があります。
 
-![Image:Pop_loadset.png](/assets/images/Pop_loadset.png)
+![画像:Pop_loadset.png](/assets/images/Pop_loadset.png)
 
-To learn how to create EEGLAB datasets from your data, see the
-tutorial on [Importing data and data
-events](/tutorials/04_Import/Importing_Continuous_and_Epoched_Data.html).
+データからEEGLABのデータセットを作成する方法を学ぶには、
+[データのインポートとデータ
+イベント](/tutorials/04_Import/Importing_Continuous_and_Epoched_Data.html)
 
-Select the tutorial file "eeglab_data.set", which is distributed with
-the toolbox, located in the "sample_data" folder of EEGLAB. Then press *Open*.
+配布されているチュートリアルファイル「eeglab_data.set」を選択します。
+EEGLABの「sample_data」フォルダにあるツールボックス。 それから *Open*を押して下さい。
 
-After EEGLAB loads the dataset, the main EEGLAB window shows
-relevant information about it -- its number of channels, sampling rate,
-etc.
+EEGLAB がデータセットをロードした後、メイン EEGLAB ウィンドウが表示されます。
+関連情報 -- チャンネル数、サンプリングレート、
+など。
 
 ![](/assets/images/Eeglab_window_continuous_data.jpg)
 
-Exploring event values
+イベントの値を探索する
 ----------------------
 
-In the tutorial dataset, the EEG.event structure fields *type*,
-*position*, and *latency* are specified for each of the 154 events
-marked in the dataset.
+チュートリアルデータセットでは、EEG.event構造フィールド*type*、
+*position* および *latency* は 154 イベントごとに指定されます。
+データセットにマークされています。
 
-Select menu <span style="color: brown">Edit → Event Values</span> to call up a
-window where we can read and edit these values:
-
-
-![Image:Figure pop editeventvals3.png](/assets/images/Figure_pop_editeventvals3.png)
+メニュー <span style="color: brown">編集 → イベント値</span> コールアップ
+これらの値を読み、編集できるウィンドウ:
 
 
-
-Scroll through each event by pressing the *\<* and *\>* buttons, or in steps of 10 using *\<\<*
-and *\>\>*.
+![画像:Figure ポップアップ editeventvals3.png](/assets/images/Figure_pop_editeventvals3.png)
 
 
-We will now briefly describe the experiment that produced the sample
-dataset to motivate the analysis steps we demonstrate in the rest of the
-tutorial.
 
-About this dataset
+*\を押すと各イベントをスクロール<* and *\>*\<\<* を使用して 10 のステップでボタン、または
+と *\>\>*。
+
+
+サンプルを制作した実験を簡潔に説明します
+データセットは、残りの部分で実証する分析のステップを動機付けます
+チュートリアル。
+
+このデータセットについて
 ------------------
 
-Here we describe how to edit and view the text field, which describes the
-current dataset and is stored as a part of that dataset.
+ここでは、テキストフィールドを編集し、表示する方法を説明します。
+現在のデータセットは、そのデータセットの一部として保存されます。
 
-Select <span style="color: brown">Edit → About this dataset</span>. A
-text-editing window pops up, which allows the user to edit a
-description of the current dataset. For the sample data, we entered
-the following description of the task. Press *SAVE* when done.
+選択する <span style="color: brown">編集 → このデータセットについて</span>お問い合わせ ツイート
+テキスト編集ウィンドウがポップアップし、ユーザーが編集できるようにします
+現在のデータセットの説明。 サンプルデータの入力
+タスクの次の記述。 *SAVE*を押してください。
 
 
-![Image:I15about_this_dataset.png](/assets/images/I15about_this_dataset.png)
+![画像:I15about_this_dataset.png](/assets/images/I15about_this_dataset.png)
 
-Scrolling through the data
+データをスクロールする
 --------------------------
 
-Here we learn how to visualize and to reject selected portions of
-continuous EEG channel data.
+ここでは、選択した部分を視覚化し、拒否する方法を学びます
+連続EEGチャネルのデータ。
 
-To scroll through the channel data of the current dataset, select
-<span style="color: brown">Plot → Channel data (scroll)</span>. This pops up
-the [eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)
-the scrolling data display window below.
+現在のデータセットのチャネルデータをスクロールするには、
+<span style="color: brown">Plot → チャンネルデータ(スクロール)</span>お問い合わせ このポップアップ
+お問い合わせ [eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)
+下のスクロールデータ表示ウィンドウ。
 
-![Image:Scrollchannelactivities1.png](/assets/images/Scrollchannelactivities1.png)
+![画像:Scrollchannelactivities1.png](/assets/images/Scrollchannelactivities1.png)

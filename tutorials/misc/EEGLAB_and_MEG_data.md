@@ -5,123 +5,123 @@ long_title: EEGLAB and MEG data
 parent: Reference Topics
 grand_parent: Tutorials
 ---
-EEGLAB and MEG data
+EEGLABとMEGデータ
 ====================
 
-EEGLAB supports reading most MEG data formats through the File-IO
-extension. Therefore MEG data from all the major manufacturers may be imported (CTF, Neuromag, Neuroimaging 4-D, BTi). There is also a native *ctfimport* EEGLAB plugin to import CTF data, although we recommend using the File-IO extension first.
+EEGLAB は、File-IO によるほとんどの MEG データのフォーマットを読み込みます。
+エクステンション。 そのため、主要メーカーからのデータがインポートされる(CTF、Neuromag、Neuroimaging 4-D、BTi)。 ネイティブ *ctfimport* EEGLAB プラグインは CTF データをインポートしますが、File-IO 拡張機能を使用することをお勧めします。
 
-The [BIDS-matlab-tools](https://github.com/sccn/bids-matlab-tools) EEGLAB plugin also supports importing BIDS-formated MEG data. You may install this plugin from the EEGLAB plugin manager (menu item <span style="color: brown">File > Manage EEGLAB extensions</span>). 
+ふりがな [BIDS-matlab-toolsの使い方](https://github.com/sccn/bids-matlab-tools) EEGLABプラグインは、BIDS-formated MEGデータのインポートにも対応しています。 EEGLABプラグインマネージャ(メニュー項目)からこのプラグインをインストールできます <span style="color: brown">ファイル > マネージング EEGLABエクステンション</span>). 
 
-Below, we show how to import and plot Neuromag MEG and CFT MEG data. For further processing, you should use the EEG tutorial. We recommend using the [clean_rawdata](https://github.com/sccn/clean_rawdata) EEGLAB plugin to clean data (find bad channels and bad portions of data). We also recommend using Independent Component Analysis (ICA) to remove artifacts. Unfortunately, artifactual ICA components need to be manually labeled. Automated methods such as [ICLabel](https://github.com/sccn/ICLabel) and [MARA](https://irenne.github.io/artifacts/) that automatically detect ICA artifacts do not apply to MEG data (they were trained with EEG data, and would need to be retrained with MEG data).
+以下では、Neuromag MEGとCFT MEGデータをインポートしてプロットする方法を紹介します。 さらなる処理のために、EEGチュートリアルを使用する必要があります。 おすすめの使い方 [clean_rawdata(クリーンロード)](https://github.com/sccn/clean_rawdata) EEGLAB プラグインでデータをクリーンアップ(悪いチャンネルやデータが悪い部分を見つける) また、独立したコンポーネント分析(ICA)を使用して、アーティファクトを削除することをお勧めします。 残念ながら、実際のICAコンポーネントは手動でラベル付けする必要があります。 自動化された方法のような [ICラベル](https://github.com/sccn/ICLabel) そして、 [マーラ](https://irenne.github.io/artifacts/) ICAのアーティファクトが自動的にMEGデータに反映されないこと(EEGデータで訓練され、MEGデータで再訓練される必要があります)。
 
-Importing Neuromag MEG data
+Neuromag MEGデータのインポート
 ---------------------------
 
-For Neuromag data, as an example, we will use the popular "multisubject, multimodal face processing" [dataset](https://nemar.org/dataexplorer/detail?dataset_id=ds000117). Instead of downloading the entire dataset, you may download the file *sub-01_ses-meg_task-facerecognition_run-01_meg.fif* in the *sub-01/ses-meg/meg* folder. After starting EEGLAB, select menu item <span style="color: brown">File > Import data > Using the File-IO interface</span>. You are then asked if you want to import a file or a folder. Select the button to import a file and select the file above on your computer.
+例えばNeuromagデータでは、一般的な「multisubject,multimodal Face Processing」を使用します。 [データセット](https://nemar.org/dataexplorer/detail?dataset_id=ds000117)お問い合わせ データセット全体をダウンロードする代わりに、 *sub-01_ses-meg_task-facerecognition_run-01_meg.fif* を *sub-01/ses-meg/meg* フォルダにダウンロードできます。 EEGLABを起動した後、メニュー項目を選択 <span style="color: brown">ファイル > インポートデータ > File-IO インターフェイスの使用</span>お問い合わせ ファイルやフォルダをインポートしたい場合は、 ボタンを選択してファイルをインポートし、コンピュータ上のファイルを選択します。
 
-![Screen Shot 2022-12-22 at 11 47 49 PM](https://user-images.githubusercontent.com/1872705/209294989-34f958d5-6cc9-4639-9662-c96cf4217204.png)
+![スクリーンショット 2022-12-22 11 47 49 PM](https://user-images.githubusercontent.com/1872705/209294989-34f958d5-6cc9-4639-9662-c96cf4217204.png)
 
-Leave all the import options as default and press OK. Next, we will select the MEG channel we want to process and plot. Use menu item <span style="color: brown">Edit > Select data</span>. Click the button to browse channel types and select *megmag* to select the magnetometer channel type. Press OK and then OK again to select these channels and remove other channels.
+すべてのインポートオプションをデフォルトのままにしてOKを押します。 次に、処理し、プロットしたいMEGチャネルを選択します。 メニュー項目を使用する <span style="color: brown">編集 > データの選択</span>お問い合わせ ボタンをクリックすると、チャンネルの種類をブラウズし、*megmag* を選択して、マグノメータチャンネルタイプを選択します。 OK を押し、もう一度 OK を押して、これらのチャンネルを選択し、他のチャンネルを削除します。
 
-![Screen Shot 2022-12-22 at 10 56 53 PM](https://user-images.githubusercontent.com/1872705/209293499-5f5a06c4-7cf4-45a8-8d89-e323e888cddc.png)
+![スクリーンショット 2022-12-22 に 10 56 53](https://user-images.githubusercontent.com/1872705/209293499-5f5a06c4-7cf4-45a8-8d89-e323e888cddc.png)
 
-Let's now make a simple plot, for example, the MEG data spectrum. Use menu item <span style="color: brown">Plot > Channel spectra and maps</span>. Change the frequency to plot spectral power to 7 and 15 Hz. You may also change the option to plot the electrodes. Press OK, and the following spectrum appears. For further preprocessing, see the EEG tutorial. 
+MEGデータスペクトラムなど、単純なプロットを作ってみよう。 メニュー項目を使用する <span style="color: brown">パロット > チャネルのスペクトルおよび地図</span>お問い合わせ スペクトル電力を7および15 Hzにプロットする頻度を変えて下さい。 電極をプロットするオプションを変更することもできます。 OKを押し、次のスペクトルが表示されます。 EEGチュートリアルを参照してください。 
 
-![Screen Shot 2022-12-22 at 11 42 39 PM](https://user-images.githubusercontent.com/1872705/209294152-ee22cc89-46d5-429d-a0de-31fa31a83d37.png)
+![スクリーンショット 2022-12-22 11 42 39 PM](https://user-images.githubusercontent.com/1872705/209294152-ee22cc89-46d5-429d-a0de-31fa31a83d37.png)
 
-Importing CTF MEG data
+CTF MEGデータのインポート
 ----------------------
-For CTF, we will use a more challenging dataset than the one above. Some CTF datasets have sensor locations associated with them, but this is not always the case. We will use the [tutorial data](https://nemar.org/dataexplorer/detail?dataset_id=ds000246) for Brainstorm, which has the advantage of being small in size and easy to download. However, this dataset does not have sensor locations. 
+CTFでは、上記1つよりも、より困難なデータセットを使用します。 一部のCTFデータセットにはセンサーの位置が関連付けられていますが、必ずしもそうではありません。 ご利用にあたって [チュートリアルデータ](https://nemar.org/dataexplorer/detail?dataset_id=ds000246) Brainstormでは、サイズが小さく、ダウンロードが簡単です。 しかし、このデータセットにはセンサーの場所はありません。 
 
-First, download the data, and then let's first import the data. After starting EEGLAB, select menu item <span style="color: brown">File > Import data > Using the File-IO interface</span>. You are then asked to import a file or a folder. Select the button to import a folder and select the folder *sub-0001_task-AEF_run-01_meg.ds* located in the *sub-0001/meg* subfolder. We recommend you check the checkbox *Convert data trials to continuous data*. CTF data is sometimes stored as trials because it is large and may not all be processed in the computer memory. Storing the data as trials allows data to be loaded one trial at a time. This made sense one or two decades ago, but this limitation is obsolete since most computers can now load and process an entire dataset. MEG data trials are often contiguous, so we may convert the data trials back to continuous data. We recommend using that option since filtering data trials can lead to [a decrease in statistical power](https://www.biorxiv.org/content/10.1101/2022.12.03.518987v1). Press OK when done.
+まず、データをダウンロードし、最初にデータをインポートしてみましょう。 EEGLABを起動した後、メニュー項目を選択 <span style="color: brown">ファイル > インポートデータ > File-IO インターフェイスの使用</span>お問い合わせ ファイルやフォルダをインポートするように求められます。 フォルダをインポートし、*sub-0001/meg*サブフォルダにある*サブ-0001_task-AEF_run-01_meg.ds*を選択します。 チェックボックス*データを連続データ*へ変換します。 CTFデータは実験として保存されることがあります。なぜなら、大きめでコンピューターメモリ内で処理されることはありません。 データを試用として保存することで、データを一度に1つのトライアルをロードすることができます。 これは1〜2年前に意味しましたが、ほとんどのコンピューターがデータセット全体をロードして処理できるため、この制限は廃止されます。 MEGデータ試行はしばしば関連性があります。そのため、データの試行を連続データに変換できます。 データ試用をフィルタリングすることで、そのオプションを使用することをお勧めします。 [統計力の減少](https://www.biorxiv.org/content/10.1101/2022.12.03.518987v1)お問い合わせ 完了したらOKを押して下さい。
 
-![Screen Shot 2022-12-23 at 12 26 48 PM](https://user-images.githubusercontent.com/1872705/209402761-fcce17a6-aac0-47cb-8bb6-a5b501edf7f0.png)
+![スクリーンショット 2022-12-23 12 26 48 PM](https://user-images.githubusercontent.com/1872705/209402761-fcce17a6-aac0-47cb-8bb6-a5b501edf7f0.png)
 
-Let's then remove non-MEG channels. Unlike the Neuromag dataset, we cannot select channels by type in this dataset, so we will select channels by name (note that some CTF datasets have channel types, but this is not one of them). Use menu item <span style="color: brown">Edit > Select data</span>. Click the button to browse channels and select channels *MLC11-4408* to *MZP01-4408*. Press OK and then OK again to select these channels and remove other channels. You should be left with 274 channels.
+その後、非MEGチャンネルを削除してみましょう。 Neuromag のデータセットとは異なり、このデータセットでタイプ別にチャネルを選択することはできませんので、名前でチャンネルを選択(一部の CTF のデータセットにはチャンネルタイプがありますが、これはそのうちの 1 つではありません)。 メニュー項目を使用する <span style="color: brown">編集 > データの選択</span>お問い合わせ チャネルをブラウズし、チャネル*MLC11-4408*を*MZP01-4408*に選ぶためにボタンを押して下さい。 OK を押し、もう一度 OK を押して、これらのチャンネルを選択し、他のチャンネルを削除します。 274チャンネルで残しておく必要があります。
 
-![Screen Shot 2022-12-23 at 11 52 43 AM](https://user-images.githubusercontent.com/1872705/209402624-82ab9561-a4a7-4631-8b39-da69bb81d449.png)
+![スクリーンショット 2022-12-23 に 11 52 43](https://user-images.githubusercontent.com/1872705/209402624-82ab9561-a4a7-4631-8b39-da69bb81d449.png)
 
-Next, we need to assign sensor locations. To do so, call menu item <span style="color: brown">Edit > Channel locations</span>, then press the *Look up locs* button. Select the file *CTF275_helmet.mat*, a layout file for 2-D plotting (this type of file must not be used for 3-D plotting or source localization), and check the checkbox to import the file instead of looking up channel locations. Looking up channel locations would be fine except for the channels' names, which have the "-4480" postfix. To look up channel locations, we would first need to remove the postfix on the MATLAB command line, then EEGLAB would be able to look up the channel in the layout files. But let's instead import the layout file. So press OK to import the layout file.
+次にセンサーの位置を割り当てる必要があります。 そのためには、メニュー項目を呼び出します <span style="color: brown">編集 > チャネルの場所</span>*Look up locs*ボタンを押します。 2Dプロット用のレイアウトファイル*CTF275_helmet.mat*を選択します(このタイプのファイルは3Dプロットやソースローカリゼーションに使用する必要はありません)、チェックボックスを選択して、チャンネルの場所を調べる代わりにファイルをインポートします。 「-4480」の接尾辞を持つチャンネル名を除き、チャンネルの位置を調べるのは良いでしょう。 チャンネルの場所を調べるには、まずMATLABコマンドラインでpostfixを削除する必要があります。その後、EEGLABはレイアウトファイル内のチャンネルを調べることができます。 しかし、代わりにレイアウトファイルをインポートしてみましょう。 そのため、OKを押してレイアウトファイルをインポートします。
 
-![Screen Shot 2022-12-23 at 12 31 38 PM](https://user-images.githubusercontent.com/1872705/209403077-a3abcf6b-104a-43fe-aecc-7b19bf7b237c.png)
+![スクリーンショット 2022-12-23 12 31 38 PM](https://user-images.githubusercontent.com/1872705/209403077-a3abcf6b-104a-43fe-aecc-7b19bf7b237c.png)
 
-For some reason, the current dataset is missing channel MRT27, so we need to remove it from the layout. We also need to remove the last 2 channels, *COMNT* and *SCALE*, which are no longer in the dataset. Find channel MRT27, and press the *delete* button. Then find the last two channels and delete them as well. You should be left with 274 channels which is the number of data channels. If you do not have 274 channels, EEGLAB will complain and ignore the channel location you have imported (the number of channels having data must correspond to the number of channel locations).
+何らかの理由で、現在のデータセットはチャンネルMRT27を欠いているので、レイアウトから削除する必要があります。 また、データセットにない最後の2チャンネル、*COMNT*、*SCALE*を削除する必要があります。 チャンネル MRT27 を見つけて、 *delete* ボタンを押します。 次に、最後の2つのチャンネルを見つけて、それらを削除します。 データチャネルの数である 274 チャネルで残しておく必要があります。 274チャンネルを持っていない場合、EEGLABはインポートしたチャンネルの場所を疑って無視します(データを持つチャネルの数がチャンネルの場所に対応しなければなりません)。
 
-![Screen Shot 2022-12-23 at 12 40 57 PM](https://user-images.githubusercontent.com/1872705/209403788-6ef250ea-ff64-416f-872c-5648fd6e1bd6.png)
+![スクリーンショット 2022-12-23 12 40 57 PM](https://user-images.githubusercontent.com/1872705/209403788-6ef250ea-ff64-416f-872c-5648fd6e1bd6.png)
 
-Now use menu item <span style="color: brown">Plot > Channel spectra and maps</span> to plot the spectrum. Change the frequency at which to plot spectral power to 10 Hz. You may also change the option to plot the electrodes. Press OK, and the following spectrum appears.
+メニュー項目 <span style="color: brown">パロット > チャネルのスペクトルおよび地図</span> スペクトルをプロットする。 スペクトル力を10Hzにプロットする周波数を変更します。 電極をプロットするオプションを変更することもできます。 OKを押し、次のスペクトルが表示されます。
 
-![Screen Shot 2022-12-23 at 12 05 21 PM](https://user-images.githubusercontent.com/1872705/209403909-5cef619b-86db-481a-baad-f8a750f2bd25.png)
+![スクリーンショット 2022-12-23 12 05 21 PM](https://user-images.githubusercontent.com/1872705/209403909-5cef619b-86db-481a-baad-f8a750f2bd25.png)
 
-To perform source localization with this data, you would need to obtain the 3-D location from the sensor (instead of a 2-D layout). These may be obtained from other datasets recorded with the same system (for example, the [NIMH Intramural Healthy Volunteer Dataset](https://openneuro.org/datasets/ds004215/versions/1.0.1) has it; The [Mother of unification studies](https://data.donders.ru.nl/collections/di/dccn/DSC_3011020.09_236?0) dataset has them as well). Once you have imported these datasets, you may use menu item <span style="color: brown">Edit > Dataset info</span>, and for the channel locations, use the button *From other datasets*. You will need to check that the two datasets have the same number of data channels and the same channel labels.
+このデータでソースローカリゼーションを実行するには、センサーから3Dの場所を取得する必要があります(2Dレイアウトの代わりに)。 これらは、同じシステム(例えば、 [NIMH内外周ヘルシーなボランティアデータセット](https://openneuro.org/datasets/ds004215/versions/1.0.1) それを持っています。 [統一研究の母](https://data.donders.ru.nl/collections/di/dccn/DSC_3011020.09_236?0) データセットはそれらも持っています)。 これらのデータセットをインポートしたら、メニュー項目を使うことができます。 <span style="color: brown">編集 > データセット情報</span>、およびチャネルの場所については、ボタン *他のデータセット*から。 2つのデータセットが同じデータチャネルと同じチャネルラベルを持っていることを確認する必要があります。
 
-EEGLAB will automatically detect that you are processing MEG data and adjust the topographic plots. However, if this is not the case, you may manually change the plotting settings on the MATLAB command line. To do so, type:
+EEGLABは、MEGデータを処理し、トポグラフィプロットを調整する自動検出を行います。 しかし、もしそうでなければ、手動でMATLABコマンドラインのプロット設定を変更することができます。 そのためには、タイプ:
 
 ```matlab
 EEG.chaninfo.topoplot = { 'headrad' 0.3 'conv' 'on'};
 eeglab redraw
 ```
 
-These commands change the size of the head and use a convex hull to determine the channel plotting limit. 
+これらのコマンドは、ヘッドのサイズを変更し、コンベックスのハブを使用して、チャンネルのプロット限界を決定します。 
 
-Source localization using MEG
+MEGを使用したソースローカリゼーション
 -----------------------------
-Unlike EEG, MEG source localization usually uses the subject anatomical MRI, and these are usually available. In this tutorial, we will use the popular [Henson-Wakeman dataset](https://nemar.org/dataexplorer/detail?dataset_id=ds000117). We will only use some files from the first subject, available [here](https://sccn.ucsd.edu/eeglab/download/ds000117_sub-01.zip). The MRI overlay plots shown below are from FieldTrip. DIPFIT is an extension of EEGLAB that leverages FieldTrip functions for equivalent dipole source model localization. This tutorial is very similar to [the one using EEG](../09_source/Custom_head_model.md) on the same data.
+EEG とは異なり、MEG のソース ローカリゼーションは通常、対象の anatomical MRI を使用します。これらは通常利用可能です。 このチュートリアルでは、我々は人気のある [Henson-Wakeman データセット](https://nemar.org/dataexplorer/detail?dataset_id=ds000117)お問い合わせ 最初の被写体から一部のファイルのみが使用可能です。 [詳しくはこちら](https://sccn.ucsd.edu/eeglab/download/ds000117_sub-01.zip)お問い合わせ 以下に示すMRIオーバーレイプロットはFieldTripです。 DIPFITはEEGLABの拡張機能で、FieldTrip機能を利用して、同等のダイポールソースモデルのローカリゼーションを実現します。 このチュートリアルは、非常に似ています [EEGを使っているもの](../09_source/Custom_head_model.md) 同じデータで。
 
-## Aligning MRI with fiducials
+## MRIをファイズシャルと関連付ける
 
-We first import the data using menu item <span style="color:brown">*File > Import data > Using the File-IO interface*</span>, and select the *sub-01_ses-meg_task-facerecognition_run-01_meg.fif* file in the *ses-meg* folder. The fiducials are stored in the *sub-01_ses-meg_coordsystem.json*. EEGLAB will automatically detect this file and import the fiducials. When using other data formats, fiducials will usually be defined along with electrode locations. You may add the fiducials manually using menu item <span style="color:brown">*Edit > Channel locations*</span>.
+メニュー項目を使用してデータをインポートする <span style="color:brown">*ファイル > インポートデータ > File-IO インターフェイスを使用する*</span>*ses-meg*フォルダ内の*sub-01_ses-meg_task-facerecognition_run-01_meg.fif*ファイルを選択します。 *sub-01_ses-meg_coordsystem.json* に保存されます。 EEGLAB は、このファイルを自動検出し、そのファイルを読み込みます。 他のデータフォーマットを使用する場合は、通常は電極の位置と定義されます。 メニュー項目を手動で追加することができます <span style="color:brown">*編集 > チャンネルの場所*</span>.
 
-Then we select MEG channels since this dataset contains both EEG and MEG data. Use menu item <span style="color:brown">Edit > Select data</span> and select all the *megplanar* channel type.
+このデータセットにはEEGとMEGデータの両方が含まれているため、MEGチャネルを選択します。 メニュー項目を使用する <span style="color:brown">編集 > データの選択</span> *megplanar* チャンネルタイプをすべて選択します。
 
-![Screen Shot 2022-12-23 at 3 37 38 PM](https://user-images.githubusercontent.com/1872705/209413866-4c6d647c-26da-465c-8527-db09ffc2e4ea.png)
+![スクリーンショット 2022-12-23 に 3 37 38](https://user-images.githubusercontent.com/1872705/209413866-4c6d647c-26da-465c-8527-db09ffc2e4ea.png)
 
-Then call menu item <span style="color:brown">Tools > Source localization using DIPFIT > Create a head model from an MRI</span>. A window asks you to choose an MR head image, and the following GUI appears. In this example, we use file name "sub-01_ses-mri_acq-mprage_T1w.nii.gz" from the anat folder.
+メニュー項目の呼び出し <span style="color:brown">ツール > DIPFITを用いたソースローカリゼーション > MRIからヘッドモデルを作成する</span>お問い合わせ MRヘッドのイメージを選択し、次のGUIが表示されます。 この例では、atフォルダーからファイル名 "sub-01_ses-mri_acq-mprage_T1w.nii.gz" を使用します。
 
-![Screenshot 2025-10-28 at 13 53 16](https://github.com/user-attachments/assets/95e421ef-18c1-49c1-a3fb-f32beb3e8722)
+![スクリーンショット 2025-10-28 に 13 53 16](https://github.com/user-attachments/assets/95e421ef-18c1-49c1-a3fb-f32beb3e8722)
 
-This will first pop up the fiducials. The fiducials are automatically aligned with the MR head image in this example. However, it is always good to check the alignment. We can see below that the fiducials are where we would expect them to be (the thin blue lines indicate their positions).
+これは、まず第一弾をポップアップします。 この例では、MR ヘッドイメージと自動整列されます。 しかし、アライメントをチェックするのはいつも良いです。 私たちがそれらが期待する場所(薄い青い線が自分の位置を示す)の下の図を見ることができます。
 
-![Screen Shot 2022-12-11 at 3 37 03 PM](https://user-images.githubusercontent.com/1872705/206935920-b0f5e662-8571-40af-bba3-709eed80e306.png)
+![スクリーンショット 2022-12-11 に 3 37 03](https://user-images.githubusercontent.com/1872705/206935920-b0f5e662-8571-40af-bba3-709eed80e306.png)
 
-Then the MRI is segmented into the brain, skull, and scalp, and meshes are extracted. It is important to note that it is better to use Freesurfer to segment MRI and create meshes, as it is a more precise (albeit more time-consuming process). The [pop_dipfit_headmodel.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_headmodel.m) uses the "bemcp" method, a module external to FieldTrip, to extract meshes. Again, this is the most cross-platform compatible solution but might not be the best one.
+それからMRIは脳、頭蓋骨および頭皮に分けられ、網は抽出されます。 MRIをセグメント化し、メッシュを作成するためにFreesurferを使用する方が良いことに注意することが重要です。それはより正確です(より時間がかかりますプロセス)。 ふりがな [pop_dipfit_headmodel.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_headmodel.m) "bemcp" メソッド、FieldTrip の外部モジュールを使用してメッシュを抽出します。 繰り返しますが、これは最もクロスプラットフォーム互換ソリューションですが、最高のものではないかもしれません。
 
-![Screenshot 2025-10-28 at 13 54 28](https://github.com/user-attachments/assets/149060b8-ec2e-4c98-b8c6-26de5691ddd2)
+![スクリーンショット 2025-10-28 に 13 54 28](https://github.com/user-attachments/assets/149060b8-ec2e-4c98-b8c6-26de5691ddd2)
 
-Once this is done, call menu item <span style="color:brown">Tools > Source localization using DIPFIT > Head model and settings</span>. We can see that the head model, MRI, and associated coordinate landmarks are blanked out. The graphic interface also shows that we are editing a custom head model in the FieldTrip format.
+これが完了したら、メニュー項目を呼び出します <span style="color:brown">ツール > DIPFITを用いたソースローカリゼーション > ヘッドモデルと設定</span>お問い合わせ ヘッドモデル、MRI、および関連する座標ランドマークがブランクアウトされていることがわかります。 グラフィックインターフェイスは、FieldTrip形式でカスタムヘッドモデルを編集していることも示しています。
 
-![Screen Shot 2022-12-11 at 7 43 48 PM](https://user-images.githubusercontent.com/1872705/206956553-435a3f9f-48db-4bff-b714-4fddc37aa3f6.png)
+![スクリーンショット 2022-12-11 7 43 48 PM](https://user-images.githubusercontent.com/1872705/206956553-435a3f9f-48db-4bff-b714-4fddc37aa3f6.png)
 
-Press the *Co-register* button, and then in the co-registration window, select *Align fiducials*, and press OK in the window, allowing you to select the pairs of channels. *Align fiducials* applies a rigid transformation, which is what we want because the fiducials in the MRI and the fiducials in channel space should not be stretched along any dimension (they are the same). The coregistration window will show a nonperfect alignment (left), which we can then adjust manually (right) by changing scaling and offsets. The electrodes should be above the scalp. The misalignment is due to uncertainty associated with [selecting fiducials](https://eeglab.org/tutorials/ConceptsGuide/coordinateSystem.html#eeglab-electrode-coordinate-systems). 
+*Co-register*ボタンを押し、コリベーションウィンドウで、*Align fiducials*を選択し、ウィンドウでOKを押すと、チャンネルのペアを選択できます。 *具体的な図形*は堅い変形を加えます。これは私達がMRIのfiducialsおよびチャネル スペースのfiducialsがあらゆる次元(同じです)に沿って伸びるべきではないので望むものです。 coregistration ウィンドウは、スケーリングとオフセットを変更することで、手動で(右)調整できる非パーフェクトアライメント(左)を表示します。 電極は頭皮の上にあるべきです。 誤差は、関連する不確実性によるものです [フィデューシャルの選択](https://eeglab.org/tutorials/ConceptsGuide/coordinateSystem.html#eeglab-electrode-coordinate-systems). 
 
-![Screen Shot 2022-12-11 at 11 06 22 PM](https://user-images.githubusercontent.com/1872705/206982193-92e59b82-90b9-43c5-8e7a-d551a90d66d1.png)
+![スクリーンショット 2022-12-11 に 11 06 22 PM](https://user-images.githubusercontent.com/1872705/206982193-92e59b82-90b9-43c5-8e7a-d551a90d66d1.png)
 
-Press 'OK' to close the co-registration graphic interface and then 'OK' again to close the dipole settings graphic interface. We are now ready to localize some [ICA component scalp projection maps](DIPFIT.md) - or any other [EEG source projection maps](EEG_sources.md).
+'OK'を押して、共同登録グラフィックインターフェイスを閉じ、ダイポール設定グラフィックインターフェイスを閉じるために再び'OK'を押します。 現地化の準備ができました。 [ICAコンポーネントスカルププロジェクションマップ](DIPFIT.md) ・その他 [EEGソースプロジェクションマップ](EEG_sources.md).
 
 
 
-When the anatomical MRI is not available, not all is lost. For example, this [publicly available dataset](https://openneuro.org/datasets/ds004330/versions/1.0.0) does not contain MRI. What is important is to properly align the template head model with the subject head position in the MEG. This may be done with the fiducials but these are usually not sufficient. Using the fiducials, below we show alignment of the MEG sensors to the template head or to the subject's head extracted from the anatomical MRI. We can see a large difference between the two, even though the template head is stretched to match the subject's fiducial (this was not a rigid transformation). In other words, the fiducials capture the head position, but not the head geometry. If they did, we would expect the template head model to be stretched to match the subject's head.
+解剖学的MRIが利用できない場合は、すべて失われません。 例えば、 [公開可能なデータセット](https://openneuro.org/datasets/ds004330/versions/1.0.0) MRIが含まれていません。 重要なのは、MEGの対象ヘッド位置でテンプレートヘッドモデルを適切に揃えることです。 これらは通常十分ではありません。 下の図形を使用して、MEGセンサーをテンプレートヘッドに合わせたり、anatomical MRIから抽出された被写体のヘッドに合わせます。 テンプレートヘッドが被写体と一致して伸びているにもかかわらず、2つの大きな違いを見ることができます(これは硬変ではありませんでした)。 言い換えれば、フィデューシャルはヘッドポジションをキャプチャしますが、ヘッドジオメトリではありません。 もしそうしたなら、被写体の頭にマッチするテンプレートのヘッドモデルを伸ばすことが期待されます。
 
-![Screen Shot 2022-12-23 at 2 26 26 PM](https://user-images.githubusercontent.com/1872705/209410775-d9e51fab-6bff-44fd-a05c-6506e3fcbd18.png)
+![スクリーンショット 2022-12-23 に 2 26 26 PM](https://user-images.githubusercontent.com/1872705/209410775-d9e51fab-6bff-44fd-a05c-6506e3fcbd18.png)
 
-One way to fix this and use a template head model is to use the location of the EEG channels when they are available. EEG channels are usually scanned in the same coordinate space as the MEG sensors, so aligning and stretching the MEG head model to match the channel coordinates should be able to fix the problem above. A *headshape.pos* file is also sometimes available along with the MEG. It contains data points lying on the head of the subject and may be used to align the MEG sensor space to the anatomical MRI. However, this file may also be used to align and stretch the EEGLAB template MEG boundary element model to match the subject's head. To use this file, create a random data array on the MATLAB command line with the same number of scanned positions *a=rand(150, 1000);* and import it as a MATLAB array. Then, call the channel editor and import the *headshape.pos* file as an *SFP* file. You can then align the scanned position with the BEM head model. Write down the homogeneous transformation matrix and reuse it for the MEG model alignment.
+これを修正し、テンプレートヘッドモデルを使用する方法は、利用可能なときにEEGチャンネルの場所を使用することです。 EEG チャネルは通常、MEG センサーと同じ座標空間でスキャンされます。そのため、MEG ヘッドモデルを揃えて、チャネル座標に合わせると、上記の問題を解決できるはずです。 *headshape.pos* ファイルが MEG と共に利用できることもあります。 被写体の頭部に横たわるデータポイントが含まれており、メグセンサー空間を解剖MRIに整列させることができる。 しかし、このファイルは、被験者の頭に合わせて、EEGLABテンプレートMEG境界要素モデルを揃えてストレッチするためにも使用できます。 このファイルを使用するには、MATLAB コマンドラインでランダムなデータ配列をスキャンした位置の同じ数で作成します。 *a=rand(150, 1000);* および MATLAB 配列としてインポートします。 その後、チャンネルエディタを呼び出して、*headshape.pos*ファイルを*SFP*ファイルとしてインポートします。 スキャンした位置をBEMヘッドモデルと整列できます。 均質な変換行列を書いて、MEGモデルアライメント用に再利用します。
 
-Using template head models for MEG
+MEGのテンプレートヘッドモデルを使用する
 ---------------------------------
-Although it is preferable to use the subject's MRI, it is possible to use the template MNE head model with MEG data. The alignment between the head model and the sensors may be performed using Fiducials. EEG and MEG will use the same boundary element model. For MEG, only the inner surface of the model is being used. Model fitting is performed using FieldTrip.
+被写体MRIを使うのが好ましいのですが、MEGデータでMNEヘッドモデルを使うことができます。 ヘッドモデルとセンサーのアライメントをFiducialsで行います。 EEGとMEGは同じ境界要素モデルを使用します。 MEGでは、モデルの内面のみが使用されます。 フィールドトリップでモデルフィッティングを行います。
 
-Sensor vs model coordinate space for sources
+センサーとモデルがソースのスペースを調整
 ----------------------------------
-Unlike EEG, where source localization is performed in the model space (usually MNI), source localization of MEG is performed in the sensor space. This means that the model is projected to the sensor space. In practice, the EEG.dipfit structure will contain sources in the sensor instead of the model space. The reason for this choice is that it is the way FieldTrip handles MEG data. 
+EEGとは異なり、モデルスペース(通常MNI)でソースローカリゼーションが行われ、センサースペースでMEGのソースローカリゼーションが行われます。 センサー空間にモデルを投影することを意味します。 練習では、EEG。 dipfit構造は、モデルスペースの代わりにセンサーのソースが含まれています。 この選択肢の理由は、FieldTrip が MEG データを扱う方法です。 
 
-MEG pipeline
+MEGパイプライン
 ------------
-We have demonstrated MEG pipelines for the PracticalMEEG workshop. The code for the pipeline is available [here](https://github.com/sccn/practical_MEEG). In all of the scripts, including source localization, users can toggle between using the EEG and MEG data.
+実践的なMEEGワークショップのMEGパイプラインを実証しました。 パイプラインのコードは利用可能です [詳しくはこちら](https://github.com/sccn/practical_MEEG)お問い合わせ ソースのローカリゼーションを含むすべてのスクリプトでは、ユーザーはEEGとMEGデータを使用しての間で切り替えることができます。
 
-Other MEG resources
+その他のMEGリソース
 --------------------
-MEG source localization in EEGLAB leverage FieldTrip capabilities. Any head model designed in FieldTrip may be used for source localization in EEGLAB. We invite you to check the other MATLAB-based MEG software tools below, which may be used along with EEGLAB from the MATLAB command line.
+EEGLABのMEGソースローカリゼーションは、フィールドトリップ機能を活用しています。 FieldTrip で設計されたヘッドモデルは、EEGLAB のソースローカリゼーションに使用できます。 MATLAB のコマンドラインから EEGLAB と一緒に使用できる MATLAB ベースの MEG ソフトウェアツールをチェックしてください。
 
 -   <http://www.nitrc.org/projects/fieldtrip>
 -   <http://www.nitrc.org/projects/cuda_sphere_fwd>

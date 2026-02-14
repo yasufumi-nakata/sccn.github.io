@@ -7,4 +7,4 @@ has_children: true
 has_toc: true
 nav_order: 9
 ---
-Localizing and studying EEG-derived brain sources can be challenging. Nevertheless, researchers agree that one should only analyze channel data that sum activities from different simultaneously active brain areas. This series of tutorials shows you to localize EEG sources associated with your data.
+EEG由来の脳源のローカリゼーションと研究は、挑戦することができます。 それにもかかわらず、研究者は、同時に活動的な脳領域からの活動を要するチャネルデータだけを分析する必要があることに同意します。 この一連のチュートリアルでは、データに関連するEEGソースをローカライズすることができます。

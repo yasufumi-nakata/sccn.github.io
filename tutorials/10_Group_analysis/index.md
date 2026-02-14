@@ -7,4 +7,4 @@ has_children: true
 has_toc: true
 nav_order: 10
 ---
-These sections of the tutorial describes how to perform group analysis in EEGLAB. EEGLAB allows managing, processing, and computing statistics on data recorded from multiple subjects, sessions, and/or conditions of an experimental study.
+これらのチュートリアルでは、EEGLABでグループ分析を実行する方法について説明します。 EEGLABは、実験的研究の複数の科目、セッション、および/または条件から記録されたデータの管理、処理、および計算統計を可能にします。

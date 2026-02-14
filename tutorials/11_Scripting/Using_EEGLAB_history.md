@@ -5,96 +5,96 @@ long_title: a. Using EEGLAB history
 parent: 11. Write scripts
 grand_parent: Tutorials
 ---
-Using EEGLAB history
+EEGLABの歴史
 =====
-{: .no_toc }
+お問い合わせ
 
-This section is intended for users who have learned at least the basics
-of MATLAB scriptwriting and wish to use EEGLAB and its many functions
-to automate and/or customize data analyses.
+このセクションは、少なくとも基礎を学んだユーザーのために意図されています
+MATLABのスクリプト作成とEEGLABとその多くの機能を使用したい
+データの分析を自動化および/またはカスタマイズするため。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'eeglab_history.m'));">Show MATLAB command</button>
+<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'eeglab_history.m'));">MATLABコマンドを表示する</button>
 
-Why write EEGLAB MATLAB scripts?
+なぜ EEGLAB MATLAB スクリプトを書くのですか?
 --------------------------------
 
-EEGLAB is a collection of MATLAB functions, many of which can be called
-from a main graphic interface. Writing EEGLAB MATLAB scripts
-involves calling these functions from a script file or from the command
-line instead of calling them interactively from the EEGLAB GUI. EEGLAB's
-history mechanism keeps track of all operations performed on datasets
-from the EEGLAB graphic interface and eases the transition from
-menu-based to script-based computing. It allows the user to perform
-exploratory signal processing on a sample dataset, then use the
-accumulated commands issued from the EEGLAB window in a script file,
-which can then be modified using any text editor.
+EEGLABはMATLAB関数のコレクションで、その多くが呼び出すことができる
+主なグラフィックインターフェイスから。 EEGLAB MATLABスクリプトを書く
+これらの関数をスクリプトファイルまたはコマンドから呼び出す
+EEGLAB GUI から対話的に呼び出す代わりに行します。 EEGLABの
+歴史メカニズムは、データセットで実行されるすべての操作の追跡を維持します
+EEGLABのグラフィックインターフェイスから移行を容易にし、
+メニューベースでスクリプトベースのコンピューティング ユーザーが実行できるようにします。
+サンプルデータセットで説明信号処理を行い、
+スクリプトファイルで EEGLAB ウィンドウから発行されたコマンドを蓄積し、
+テキストエディタを使用して変更することができます。
 
-Writing MATLAB scripts to perform EEGLAB analyses allows the user to
-largely automate the processing of one or more datasets. Because
-advanced analyses may involve many parameter choices and require fairly
-lengthy computations, it is often more convenient to write a custom
-script, particularly to process multiple datasets in the same way or to
-process one dataset in several ways.
+MATLAB スクリプトを書くことで、EEGLAB の分析を実行できます。
+1 つ以上のデータセットの処理を大幅自動化します。 なので
+高度な分析は、多くのパラメータの選択肢を伴って、かなり必要です
+長い計算、それは頻繁に習慣を書くことは便利です
+スクリプト、特に複数のデータセットを同じ方法で処理するか、または
+複数の方法で1つのデータセットを処理する。
 
-Note: Writing EEGLAB MATLAB scripts requires some understanding of the
-EEGLAB data structure (EEG) and its substructures (principally
-*EEG.data*, *EEG.event*, *EEG.urevent*, *EEG.epoch*, *EEG.chanlocs*, and
-*EEG.history*). We will introduce these data structures as needed for
-the tutorial examples and will discuss some of the reserved variable names
-used by EEGLAB and their uses:
+Note: EEGLAB MATLABスクリプトを書くには、いくつかの理解が必要です
+EEGLABのデータ構造(EEG)とそのサブ構造(主に)
+*EEG.data*、*EEG.event*、*EEG.urevent*、*EEG.epoch*、*EEG.chanlocs*、および
+*EEG.history* は必須です。 これらのデータ構造を必要に応じて導入します。
+チュートリアルの例は、予約された変数名の一部を議論します
+EEGLABとその使用:
 
-- EEG: the current EEG dataset
-- ALLEEG: array of all loaded EEG datasets
-- CURRENTSET: the index of the current dataset
+- EEG: 現在のEEGデータセット
+- AllEEG:すべての読み込まれたEEGデータセットの配列
+- CURRENTSET: 現在のデータセットのインデックス
 
-You may refer at any time to [EEGLAB Data Structures](/tutorials/ConceptsGuide/Data_Structures.html) for a more complete
-description of the EEG structures, and the [EEGLAB functions](/tutorials/ConceptsGuide/EEGLAB_functions.html) documentation to learn about the different types of EEGLAB function, and how to use them.
+いつでも参照できます [エッグラボ データ構造](/tutorials/ConceptsGuide/Data_Structures.html) 詳しくはこちら
+EEG構造の説明と [EEGLABの機能](/tutorials/ConceptsGuide/EEGLAB_functions.html) EEGLAB関数の異なる種類について学習するためのドキュメント、およびそれらを使用する方法。
 
-There are two main differences between EEGLAB “dataset history” and
-“session history.” As the names imply, “session history” saves all the
-function calls issued for all the datasets in the current EEGLAB
-session. By contrast, “dataset history” saves only the function calls that
-modified the current dataset. Session history is available only during
-the current session of EEGLAB -- starting a new EEGLAB session will
-create a new session history -- whereas dataset history is saved in the
-*EEG.history* field of the EEG dataset structure when you save the
-dataset at the end of the session. Therefore, it will be retrieved when
-the dataset is re-loaded in future EEGLAB sessions (assuming, of course,
-that you save the dataset at the end of the current session).
+EEGLABの「データセット履歴」との違いは2つあります。
+「セッション歴」 つまり「セッション履歴」は、すべて保存されます。
+現在の EEGLAB のすべてのデータセットで発行された関数呼び出し
+セッション。 対照的に、「データセット履歴」は、その関数呼び出しのみを保存します。
+現在のデータセットを修正しました。 セッション履歴は、期間中のみご利用いただけます。
+EEGLAB の現在のセッション -- 新しい EEGLAB セッションを開始する
+データセット履歴が保存されるように、新しいセッション履歴を作成します。
+*EEG.history* 保存時に EEG データセット構造のフィールド
+セッション終了時のデータセット。 そのため、いつか回収されます。
+データセットは、将来のEEGLABセッションで再読み込みされます(もちろん、
+現在のセッションの最後にデータセットを保存します)。
 
-EEGLAB session history
+EEGLABセッション履歴
 ---------------------------------------------
 
-This section explains how to take advantage of the history of
-modifications of the current dataset for writing scripts.
+このセクションでは、歴史の活用方法を説明します
+スクリプトを書くための現在のデータセットの変更。
 
-Let's start EEGLAB, load a dataset, and simply call the data scrolling window.
-- Call <span style="color: brown">File → Load dataset</span>. Select the tutorial file "eeglab_data.set" in the "sample_data" folder of the EEGLAB distribution. Then press *Open*.
-- Use menu item <span style="color: brown">Plot → Channel data (scroll)</span>. This pops up
-the [eegplot](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)
-scrolling data display below.
+EEGLAB を起動し、データセットをロードし、データスクロールウィンドウを呼び出します。
+- 電話番号 <span style="color: brown">ファイル → データの読み込み</span>お問い合わせ EEGLAB分布の「sample_data」フォルダにある「eeglab_data.set」を選択します。 それから *Open*を押して下さい。
+- メニュー項目を使用する <span style="color: brown">Plot → チャンネルデータ(スクロール)</span>お問い合わせ このポップアップ
+お問い合わせ [エッグロット](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)
+下にデータをスクロールする。
 
-![Image:Scrollchannelactivities1.png](/assets/images/Scrollchannelactivities1.png)
+![画像:Scrollchannelactivities1.png](/assets/images/Scrollchannelactivities1.png)
 
-Now use menu item <span style="color: brown">File → History script → Save session history script</span> to save the command history into an ascii-text MATLAB
-script file. Save the file into the current directory or into a
-directory in the MATLAB command path (i.e., in the list returned by
-*\>\> path*). Save the session command
-history into the MATLAB script file *doitagain.m* (you can
-choose any name for this file, as long as it ends in the standard MATLAB
-script file extension, “.m”).
+メニュー項目 <span style="color: brown">ファイル → 履歴スクリプト → セッション履歴スクリプトを保存</span> コマンド履歴をascii-text MATLABに保存する
+スクリプトファイル。 ファイルを現在のディレクトリに保存するか、
+MATLAB コマンドパスのディレクトリ (すなわち、リストで返された
+*\>\> パス* セッションコマンドを保存する
+MATLABスクリプトファイルへの履歴 *doitagain.m*(可能)
+標準のMATLABで終わる限り、このファイルの名前を選択します。
+スクリプトファイルの拡張子「.m」。
 
-Now open the script file *doitagain.m* in any text editor so you may
-modify function calls. For example, open the script *doitagain.m* in the MATLAB editor using the <span style="color: brown">Open</span> button on the MATLAB graphical interface. The script should look like this.
+これで、任意のテキストエディタでスクリプトファイル *doitagain.m* を開きます。
+関数呼び出しを変更します。 たとえば、MATLABエディタでスクリプト *doitagain.m* を開きます。 <span style="color: brown">オープン</span> MATLABのグラフィカルインターフェイスのボタン。 スクリプトはこのように見えるはずです。
 
 ```matlab
 % EEGLAB history file generated on the 20-Dec-2020
@@ -107,74 +107,74 @@ pop_eegplot( EEG, 1, 1, 1);
 eeglab redraw;
 ```
 
-The first two lines are comments. They are followed by 6 commands:
-- The first command starts EEGLAB
-- The second command loads the tutorial dataset
-- The third command saves the dataset in EEGLAB memory
-- The fourth command check the dataset consistency
-- The fifth command plots the data
-- The sixth command refreshes the EEGLAB graphical interface (in case the current dataset was modified)
+最初の2行はコメントです。 続いて6コマンドを実行します。
+- 最初のコマンドは EEGLAB を起動します。
+- 2番目のコマンドは、チュートリアルデータセットを読み込む
+- 3番目のコマンドは、EEGLABメモリにデータセットを保存します
+- 4番目のコマンドは、データセットの一貫性をチェックします
+- 第5コマンドはデータをプロットする
+- 第6回コマンドは、EEGLABのグラフィカルインターフェイス(現在のデータセットが変更された場合)を更新します。
 
-Note: When the file was saved, an extra command, *\>\> eeglab redraw*
-was added at the end to ensure that the main graphic interface would be
-updated after the dataset was processed. 
+Note: ファイルが保存されたとき、追加のコマンド *\>\> eeglab 再描画*
+メインのグラフィックインターフェイスが確実になるように、最後に追加されました。
+データセットが処理された後更新される。 
 
-Now press the <span style="color: brown">Run</span> button in the MATLAB editor. The script is being executed, and the data scrolling window pops up. Alternatively, you may use EEGLAB menu item <span style="color: brown">File → History script → Run script</span> to execute the script (this menu item is most relevant for compiled versions of EEGLAB for which the MATLAB graphical interface is not accessible). You may also type the script's name on the MATLAB command line to execute it (assuming the folder in which you saved it is in your path).
+今すぐプレス <span style="color: brown">ログイン</span> MATLABエディタのボタン。 スクリプトが実行され、データスクロールウィンドウがポップアップ表示されます。 あるいは、EEGLABメニュー項目を使うこともできます。 <span style="color: brown">ファイル → 履歴スクリプト → スクリプトを実行</span> スクリプトを実行する(このメニュー項目は、MATLAB グラフィカルインターフェイスがアクセスできない EEGLAB のコンパイル済みバージョンに最も関連しています)。 また、MATLAB コマンドラインでスクリプトの名前を入力して実行することもできます(保存したフォルダをパスに割り当てます)。
 
 ``` matlab
 doitagain
 ```
 
-The script may be modified as needed and executed again. Using EEGLAB graphical interface and saving command history is a simple way to learn to write EEG analysis scripts. Now, to process another dataset
-using the same commands you used for processing the current dataset, try
-closing the current MATLAB session. Then restart MATLAB, load the script
-*doitagain.m*, modify the dataset's name (use one of your own for example)
-and run the script again.
+スクリプトは必要に応じて変更され、再び実行することができます。 EEGLAB グラフィカルインターフェイスとコマンド履歴を保存することで、EEG 解析スクリプトを書くための簡単な方法です。 これで、別のデータセットを処理する
+現在のデータセットを処理するために使用した同じコマンドを使用して、試します
+現在のMATLABセッションを閉じます。 MATLABを再起動し、スクリプトを読み込みます
+*doitagain.m* は、データセットの名前を変更します(例えば、自分の1つを使用してください)。
+再びスクリプトを実行します。
 
-Most of the commands in the history field call EEGLAB *pop_* functions.
-These are functions that take as input the EEG structure. The [EEGLAB functions](/tutorials/ConceptsGuide/EEGLAB_functions.html) documentation discusses how to use these functions in EEGLAB scripts.
+履歴フィールドのほとんどのコマンドは EEGLAB *pop_* 関数を呼び出します。
+EEG構造を入力する関数です。 ふりがな [EEGLABの機能](/tutorials/ConceptsGuide/EEGLAB_functions.html) これらの関数を EEGLAB スクリプトで使用する方法について説明します。
 
-For more detailed information, you
-must study the MATLAB help messages for these functions via the following EEGLAB menu selections.
-For [pop_loadset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m), via <span style="color: brown"> Help → EEGLAB
-functions → Interactive pop_functions</span> or via <span style="color: brown"> Help → EEGLAB menus</span>. For [eeg_store.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m), via <span style="color: brown"> Help → EEGLAB advanced → Admin functions</span>. You may also use the MATLAB command line help, as shown below:
+詳細については、
+MATLABは、以下のEEGLABメニューからこれらの機能に対するメッセージのヘルプを学習しなければなりません。
+お問い合わせ [pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m)、ビア <span style="color: brown"> ヘルプ → EEGLAB
+関数 → インタラクティブなポップアップ関数</span> または <span style="color: brown"> ヘルプ → EEGLABメニュー</span>お問い合わせ お問い合わせ [eeg_store.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m)、ビア <span style="color: brown"> ヘルプ → EEGLAB 高度な → 管理者機能</span>お問い合わせ 以下に示すように、MATLABコマンドラインヘルプも使用できます。
 
 ``` matlab
 help pop_loadset
 help eeg_store
 ```
 
-EEGLAB dataset history
+EEGLABのデータセット履歴
 -----------------------
 
-In EEGLAB, the data structure describing the current dataset can be
-accessed at all times from the MATLAB command line by typing *\>\> EEG*.
-The variable *EEG* is a MATLAB structure used by EEGLAB to store all the
-information about a dataset. This includes the dataset name and
-filename, the number of channels and their locations, the data sampling
-rate, the number of trials, information about events in each of the
-trials/epochs, the data itself, and much more. For a complete
-description of the *EEG* fields along with examples on sample data, see
-[EEGLAB Data Structures](/tutorials/ConceptsGuide/Data_Structures.html). The contents of any
-field of the *EEG* structure may be accessed by typing *EEG.fieldname*.
-For instance, typing *\>\> EEG.nbchan* on the MATLAB command line
-returns the number of channels in the current dataset.
+EEGLABでは、現在のデータセットを記述するデータ構造は、
+*\>\>\> を入力することで、MATLABコマンドラインから常にアクセス お問い合わせ
+変数 *EEG* は EEGLAB が使用する MATLAB 構造で、全て保存します。
+データセットに関する情報 データセット名と
+filename, チャンネル数とその場所, データサンプリング
+料金、試行回数、各イベントに関する情報
+トライアル/エポック、データ自体など。 完了のため
+*EEG* フィールドの説明とサンプルデータに関する例
+[エッグラボ データ構造](/tutorials/ConceptsGuide/Data_Structures.html)お問い合わせ コンテンツ
+*EEG*構造のフィールドは、*EEG.fieldname* を入力することでアクセスすることができます。
+例えば、MATLABコマンドラインで*\>\> EEG.nbchan*を入力
+現在のデータセットのチャンネル数を返します。
 
-EEGLAB commands issued through the EEGLAB menu that have affected the
-current EEG dataset are preserved in the *EEG.history* field. The
-contents of the history field include those function calls that
-modified the current dataset, as well as calls to plotting functions. 
+EEGLAB コマンドは、EEGLAB のメニューで発行され、影響を受ける
+現在のEEGデータセットは、*EEG.history*フィールドに保存されます。 ふりがな
+履歴フィールドの内容には、その関数呼び出しを含む
+現在のデータセットを修正し、関数をプロットする呼び出し。 
 
-Making use of the *EEG.history* field is the easiest way to start learning
-about EEGLAB scripting. For example, import a binary dataset (for
-instance, [TEST.CNT](http://sccn.ucsd.edu/eeglab/download/TEST.CNT)), we used the following menu items:
-1. Use menu item <span style="color: brown">File → Import data → Using EEGLAB functions and plugins → From Neuroscan .CNT file</span> to import the file (use all  defaults)
-2. Use menu item <span style="color: brown">Tools → Change sampling rate</span> and change the sampling rate to 250 Hz, keep all defaults to create a new dataset
-3. Use menu item <span style="color: brown">Tools → Filter the data → Basic FIR filter</span> and high pass filter at 1 Hz (first edit box), keep all defaults to create a new dataset
-4. Use menu item <span style="color: brown">Plot → Channel data (scroll)</span> to visualise the data
+*EEG.history*フィールドの使用は、学習を開始するための最も簡単な方法です
+EEGLABスクリプトについて 例えば、バイナリデータセット(for)をインポートします。
+インスタンス, [試験.CNT](http://sccn.ucsd.edu/eeglab/download/TEST.CNT)) 以下のメニュー項目を使用しました。
+1. メニュー項目を使用する <span style="color: brown">ファイル → インポートデータ → EEGLAB関数とプラグインを使用して → Neuroscan .CNT ファイルから</span> ファイルをインポートする(すべてのデフォルトを使用する)
+2. メニュー項目を使用する <span style="color: brown">ツール → サンプリング速度の変更</span> サンプリングレートを250に変更 Hzは、すべてのデフォルトを新しいデータセットを作成するために保ちます
+3. メニュー項目を使用する <span style="color: brown">ツール → データをフィルタリング → 基本 FIR フィルター</span> 1 Hz (最初の編集箱)のハイ パス フィルターは、すべてのデフォルトを新しいデータセットを作成するために保ちます
+4. メニュー項目を使用する <span style="color: brown">Plot → チャンネルデータ(スクロール)</span> データの視覚化
 
-Then type *\>\> EEG.history* on the
-command line. You should obtain the following text:
+それからタイプして下さい*\>\> EEG.history* について
+コマンドライン 次のテキストを取得する必要があります。
 
 ```matlab
 EEG.history
@@ -189,22 +189,22 @@ ans =
      EEG = eeg_checkset( EEG )
 ```
 
-Alternatively, you can save the current dataset history by selecting the menu
-item <span style="color: brown">File → Save history → Save dataset history script</span>.
+また、メニューを選択することで、現在のデータセット履歴を保存できます。
+アイテム <span style="color: brown">ファイル → 履歴を保存 → データセット履歴スクリプトを保存</span>.
 
-These are all the commands executed in EEGLAB after importing the raw data file.
-Note that the *session* history we saved in the previous section is the history
-since EEGLAB was last started and contains modifications of multiple datasets.
-The *EEG.history* field only contains the modification to the current dataset.
+これらは、生データファイルをインポートした後、EEGLABで実行されるすべてのコマンドです。
+前のセクションで保存した *session* の履歴は歴史です
+EEGLAB が起動し、複数のデータセットの変更が含まれているため。
+*EEG.history* フィールドは、現在のデータセットの変更のみが含まれています。
 
-In this case, we should have three datasets in EEGLAB, and this is the history field of dataset number three. If you
-switch to dataset one (the original continuous dataset), by selecting menu
-item <span style="color: brown">Datasets → Dataset 1</span>, and then type *\>\>
-EEG.history* on the command line (as shown below), you will retrieve the same list of
-commands as above except for the last four. Dataset one is a copy saved in memory just
-after the dataset was loaded. Dataset three
-is derived from dataset one, so it inherits all the history of
-modifications that were applied to it.
+この場合、EEGLABに3つのデータセットがあり、データセット番号3の履歴フィールドです。 お問い合わせ
+メニューを選択することにより、データセットに切り替える(元の連続データセット)
+アイテム <span style="color: brown">データセット → データセット 1</span>, と入力します。 *\>\>
+コマンドラインの EEG.history*(以下に示すように)、同じリストを取得します
+最後の4を除いて上記のコマンド。 データセット1はメモリに保存されたコピーです
+データセットが読み込まれた後。 データセット 3
+データセットから派生するので、すべての歴史を継承
+それに適用される変更。
 
 ```matlab
 EEG.history
@@ -215,7 +215,7 @@ ans =
      EEG = eeg_checkset( EEG );
 ```
 
-Repeating the process after selecting <span style="color: brown">Datasets → Dataset 2</span>, we obtain
+選択の後でプロセスを繰り返す <span style="color: brown">データセット → データセット 2</span>、私達は得ます
 
 ```matlab
 EEG.history
@@ -228,237 +228,237 @@ ans =
      EEG = eeg_checkset( EEG );
 ```
 
-Note: EEGLAB loading (and saving) dataset commands are not stored in the dataset history. The reason
-for this is that if you were to load a dataset repeatedly, you would not
-want the repeated load command to be in your dataset history.
+注意: EEGLAB の読み込み (および保存) データセットのコマンドは、データセット履歴に保存されません。 理由
+そのため、データセットを繰り返し読み込むと、
+繰り返しロードコマンドをデータセット履歴にしたい。
 
-The *EEG.history* command can be very useful when you have several
-datasets (for example, from several subjects) and wish to apply the same
-processing to all of them. The *EEG.history* field is a part of the
-dataset EEG structure, so you can use it in any EEGLAB session. For
-example, when you have new dataset you wish to process the same way as a
-previous dataset, just load the old dataset into EEGLAB and type *\>\>
-EEG.history* to see the list of commands to execute on the new dataset.
-A basic method for writing EEGLAB scripts is simply to save or copy and paste these
-history commands into a MATLAB script file.
+*EEG.history*コマンドは、いくつかあるときに非常に便利です。
+データセット(例えば、複数の被験者から)と同一を申請したい
+それらすべてへの処理。 *EEG.history* フィールドは、
+dataset EEG構造なので、EEGLABセッションで利用できます。 お問い合わせ
+例えば、新しいデータセットがあれば、同じように処理したい
+以前のデータセットは、古いデータセットを EEGLAB に読み込み、*\>\>\>\>\>
+EEG.history* では、新しいデータセットで実行するコマンドのリストが表示されます。
+EEGLABスクリプトを書くための基本的な方法は、これらを保存またはコピーして貼り付けるだけです。
+MATLABスクリプトファイルへの履歴コマンド。
 
-More specifically, to process the first
-dataset, you can use EEGLAB graphic interface. To process subsequent
-similar datasets, you may simply copy or save the history from the first
-dataset into a script file (a text file with the extension "*.m*", for
-example, *doitagain.m*), load a different dataset, and then run the
-script from the MATLAB command line. Note that the script file
-*doitagain.m* must be in your current MATLAB path, which usually
-includes the current working directory. Read the help messages for
-MATLAB functions *path.m* and *addpath.m* to learn more about the MATLAB
-path. Step by step instructions are provided below:
+具体的に、最初に処理するために
+データセットは、EEGLABのグラフィックインターフェイスを使用できます。 処理する
+同様のデータセットは、最初に履歴をコピーまたは保存するだけです。
+スクリプトファイルへのデータセット(拡張子「*.m*」のテキストファイル)
+例: *doitagain.m*) は、異なるデータセットをロードして実行します。
+MATLAB コマンドラインからのスクリプト。 スクリプトファイル
+*doitagain.m*は、通常、現在のMATLABパスにある必要があります。
+現在の作業ディレクトリを含みます。 ヘルプメッセージを読む
+MATLAB の機能 *path.m* と *addpath.m* が MATLAB について詳しく知る
+パス。 ステップバイステップの手順は以下の通りです。
 
-1.  Load all the datasets you wish to process into EEGLAB.
-2.  Perform the processing you wish from the MATLAB menu on the first
-    dataset.
-3.  Ask for the command history (type *\>\> EEG.history*) and copy the
-    data processing commands.
-4.  Switch (via the EEGLAB menu) to the second dataset and paste the
-    buffered commands onto the MATLAB command line to execute them again
-    on the new dataset.
-5.  Go on like this till the last dataset is processed.
+1.  EEGLABに処理したいすべてのデータセットをロードします。
+2.  最初にMATLABメニューから望む処理を実行します
+    データセット。
+3.  コマンド履歴(type *\>\>EEG.history*)を尋ね、コピーします。
+    データ処理コマンド。
+4.  EEGLABメニューから2番目のデータセットに切り替えて貼り付ける
+    MATLAB コマンドラインにバッファされたコマンドで、再度実行します。
+    新しいデータセットで。
+5.  最後のデータセットが処理されるまで、このように進みます。
 
-More advanced scripting examples will be presented in the following
-sections.
+より高度なスクリプト例を以下に提示します。
+セクション。
 
-Dataset history is often more convenient to use than session history
-because it does not contain all the commands to manipulate datasets.
+データセット履歴は、セッション履歴よりも使いやすいことが多い
+データセットを操作するためのすべてのコマンドは含まないので。
 
-Refreshing the main EEGLAB window
+メインの EEGLAB ウィンドウをリフレッシュ
 ------
 
-Whenever you wish to switch back from interacting with the EEG dataset
-on the command line to working with the EEGLAB graphic interface, you
-should perform one of the two commands below:
+EEGデータセットとのやり取りから切り替えたい時
+EEGLAB のグラフィックインターフェイスと連携するコマンドラインで、
+以下の2つのコマンドのいずれかを実行してください。
 
-- If no EEGLAB window is running in the background, type:
+- EEGLABウィンドウがバックグラウンドで実行されていない場合、タイプ:
 ``` matlab
 eeglab redraw;
 ```
 
 ![](/assets/images/eeglab20191.png)
 
--  If there is an open EEGLAB session and you have modified the current dataset type the following to overwrite the current dataset:
+-  開いた EEGLAB セッションがある場合、現在のデータセットタイプを以下のように変更して、現在のデータセットを上書きします。
 
 ``` matlab
 [ALLEEG EEG CURRENTSET] = eeg_store(ALLEEG, EEG, CURRENTSET);
 eeglab redraw;
 ```
 
-Or type the following to create a new dataset:
+新しいデータセットを作成するには、以下を入力します。
 
 ``` matlab
 [ALLEEG EEG CURRENTSET] = eeg_store(ALLEEG, EEG);
 eeglab redraw;
 ```
 
-Then your changes are reflected in the EEGLAB window.
+EEGLABウィンドウで変更が反映されます。
 
-Manipulating EEGLAB data structures
+EEGLABのデータ構造の操作
 -------------------------------------------------------------------
 
-There are two main EEGLAB MATLAB data structures, *EEG* and *ALLEEG*.
-The *ALLEEG* array contains all the dataset structures that are currently
-loaded in the EEGLAB session. The *EEG* structure contains all the
-information about the current dataset being processed. See the [EEGLAB Data Structures](/tutorials/ConceptsGuide/Data_Structures.html) for more information.
+EEGLAB MATLABのデータ構造は2つあります。*EEG*と*ALLEEG*。
+*ALLEEG* 配列には、現在存在する全てのデータセット構造が含まれています。
+EEGLABセッションで読み込まれる。 *EEG*構造は、すべて含まれています
+処理中のデータセットに関する情報。 詳細はこちら [エッグラボ データ構造](/tutorials/ConceptsGuide/Data_Structures.html) 詳細については、.
 
-As we have seen in previous sections, EEGLAB session history allows you to manipulate and process several
-datasets simultaneously. To view the session history for the current EEGLAB session, use the
-*eegh* (history) command. Typing:
+前のセクションで見てきたように、EEGLAB セッション履歴では、複数の操作と処理ができます。
+同時にデータセット。 現在の EEGLAB セッションのセッション履歴を表示するには、
+*eegh* (履歴) コマンド。 タイピング:
 
 ``` matlab
 eegh
 ```
 
-under MATLAB prints the EEGLAB session history in the MATLAB command
-line window. For instance, after opening an existing dataset (Call <span style="color: brown">File → Load dataset</span>; Select the tutorial file "eeglab_data.set" in the "sample_data" folder of the EEGLAB distribution; Then press *Open*)
-, typing *eegh* on the
-command line should return the following text:
+MATLAB では、MATLAB コマンドで EEGLAB セッション履歴を出力します。
+ラインウィンドウ。 例えば、既存のデータセット(Call)を開くと <span style="color: brown">ファイル → データの読み込み</span>;;; EEGLAB分布の "sample_data" フォルダにある "eeglab_data.set" のチュートリアルファイルを選択します。 その後、 *Open* を押します。
+、入力 *eegh* の
+コマンドラインは、次のテキストを返す必要があります。
 
 ``` matlab
 [ALLEEG EEG CURRENTSET ALLCOM] = eeglab;
 EEG = pop_loadset( 'eeglab_data.set', '/matlab/eeglab/sample_data');
 [ALLEEG EEG CURRENTSET] = eeg_store(ALLEEG, EEG);
 ```
-The first command ([eeglab.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m)) runs EEGLAB and initializes
-several EEGLAB variables listed in the function output. Except for
-modifying these variables and adding the path to EEGLAB functions (if necessary), the [eeglab.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m) call will not modify anything else
-in the MATLAB workspace (there is no global variable in EEGLAB). The second command ([pop_loadset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m)) loads the dataset into the
-*EEG* structure, and the last ([eeg_store.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m)) stores the
-dataset in the *ALLEEG* structure. 
+最初のコマンド ([eeglab.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m)) EEGLAB を実行し、初期化
+関数出力にリストされている複数の EEGLAB 変数。 対象外
+これらの変数を変更し、EEGLAB関数(必要に応じて)にパスを追加し、 [eeglab.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m) 呼び出しは他の何も変更しません
+MATLABワークスペース(EEGLABではグローバル変数はありません) 2番目のコマンド ([pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m)) データセットを
+*EEG*の構造および最後の()[eeg_store.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m)) ストア
+*ALLEEG*構造内のデータセット。 
 
-The type of scripting illustrated in the previous sections might involve going back and
-forth between EEGLAB graphic interface and the MATLAB command line. To
-maintain consistency between the two main EEGLAB structures (*EEG* and
-*ALLEEG*), you need to update the *ALLEEG* every time you modify the
-*EEG* structure. To add or directly modify
-*EEG* structure values from a script or the MATLAB command line, one
-must respect some simple rules.
+前のセクションで示されているスクリプトの種類は、戻ってくる可能性があり、
+EEGLAB のグラフィックインターフェイスと MATLAB のコマンドラインとの間の お問い合わせ
+2つの主要なEEGLABの構造間の一貫性を維持して下さい(*EEG*および
+*ALLEEG*)は変更するたびに*ALLEEG*を更新する必要があります
+*EEG*の構造。 追加または直接変更
+*EEG* はスクリプトまたは MATLAB コマンドラインからの値を設定します。
+簡単なルールを尊重する必要があります。
 
-If the EEGLAB option to store more than one dataset may in memory is selected, selected via the <span style="color: brown">File → Preferences</span> menu item (first checkbox), then all current EEGLAB datasets are
-stored in the structure array *ALLEEG,*. If you modify a dataset, you
-should take care to copy the modified EEG dataset into *ALLEEG*.
+複数のデータセットを格納する EEGLAB オプションを選択した場合、 <span style="color: brown">ファイル → 環境設定</span> メニュー項目(最初のチェックボックス)、すべての現在の EEGLAB データセットは
+構造の配列*ALLEEG、*で貯えられる。 データセットを変更した場合、
+変更されたEEGデータセットを*ALLEEG*にコピーするために注意を払って下さい。
 
-Thus, after loading and then modifying an *EEG* structure to create a
-new dataset, one might simply type:
+従って、ローディングの後でそして作成するために*EEG*の構造を変更して下さい
+新しいデータセットは、単にタイプするかもしれません:
 
 ``` matlab
 ALLEEG(2) = EEG;
 CURRENTSET = 2;
 ```
 
-This command 'might' work as expected (if the new dataset is
-internally consistent with the previous one). However, it is better to use the command [eeg_store.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m)', which performs extensive
-dataset consistency checking before storing the modified dataset.
-Either use the following command to set the new dataset to be dataset
-number 2,
+このコマンドは 'might' が期待どおりに動作します (新しいデータセットが新しい場合)
+過去のものとは内部的に一貫しています。 しかし、コマンドを使用する方が良い [eeg_store.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m)', 広範囲を実行します。
+変更されたデータセットを保存する前に、データセットの一貫性をチェックします。
+次のコマンドを使用して、新しいデータセットをデータセットに設定します。
+番号2
 
 ``` matlab
 [ALLEEG EEG] = eeg_store(ALLEEG, EEG, 2);
 ```
 
-or
+または
 
 ``` matlab
 [ALLEEG EEG CURRENTSET] = eeg_store(ALLEEG, EEG);
 ```
 
-to create a new dataset at the next available free space in the
-*ALLEEG* variable. The dataset number will then be available in the
-variable *CURRENTSET*. Note that if a previous dataset is already
-assigned as dataset 2, then only the last command (above) will not
-overwrite it. To view the changes in the main EEGLAB window, use the
-command: *\>\> eeglab redraw;*
-Another command that can be used to modify the *ALLEEG* structure is [pop_newset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m). This command, which also performs extensive
-dataset consistency checks, has more useful advanced options. To
-modify the current dataset with its accumulated changes type:
+次の空きスペースで新しいデータセットを作成する
+*ALLEEG*変数。 データセット番号は、その後、
+変数 *CURRENTSET*。 以前のデータセットが既にある場合
+dataset 2 に割り当てられた後、最後のコマンド (above) だけは、
+それを上書きします。 メインの EEGLAB ウィンドウの変更を表示するには、
+コマンド: *\>\> eeglab 再描画;*
+*ALLEEG*構造を変更するために使用できる別のコマンドは、 [pop_newset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m)お問い合わせ このコマンドは、広範な機能を実行します。
+データセットの一貫性は、より有用な高度なオプションを持っています。 お問い合わせ
+蓄積された変更タイプで現在のデータセットを変更します。
 
 ``` matlab
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, CURRENTSET,'overwrite', 'on');
 ```
 
-If you wish to create a new dataset to hold the modified structure, 
-use:
+変更された構造を保持するために新しいデータセットを作成する場合は、 
+使用:
 
 ``` matlab
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, CURRENTSET);
 ``` 
 
-The returned argument *CURRENTSET* holds the set number of the new
-dataset stored in EEGLAB.
-Note: the *EEG* contains only the current dataset, so you must use
-extra caution whenever updating this structure. e.g., be sure it
-contains the dataset you want to process.
-The functions above call the function [eeg_checkset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m) to
-check the internal consistency of the modified dataset.
+返された引数 *CURRENTSET* は新しいセット番号を保持します
+EEGLABに保存されているデータセット。
+注意: *EEG* には現在のデータセットのみが含まれているため、使用する必要があります。
+この構造を更新するときに余分な注意。 e.g. 必ず確認してください
+処理したいデータセットが含まれています。
+上記関数は関数を呼び出します [eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m) お問い合わせ
+変更されたデータセットの内部の一貫性を確認してください。
 
 ``` matlab
 EEG = eeg_checkset(EEG);
 ```
 
-or
+または
 
 ``` matlab
 EEG = eeg_checkset(EEG, 'eventconsistency');
 ```
 
-The second command above runs extra checks for event consistency
-(possibly taking some time to complete) and regenerates the
-*EEG.epoch* structures from the *EEG.event* information. This command
-is only used when the event structure is being altered. See the [Event
-scripting tutorial](/tutorials/11_Scripting/Event_Processing_command_line.html) to learn how to
-work with EEG events.
+上記2つ目のコマンドは、イベントの一貫性のための追加のチェックを実行します
+(完成までに時間がかかることもあります)
+*EEG.event*情報からEEG.epoch*の構造。 このコマンド
+イベント構造が変更される場合にのみ使用されます。 イベントを見る
+スクリプトのチュートリアル](/tutorials/11_Scripting/Event_Processing_command_line.html)
+EEGイベントと連携
 
-The commands above are handy if the option to maintain multiple
-datasets is on. If the option to maintain multiple datasets is off
-(via the <span style="color: brown">File → Preferences</span> menu item),
-the *ALLEEG* variable is not used, and *EEG* is the only variable that
-contains dataset information. When using this option, you can only
-process one dataset at a time (the goal here is to use less memory and
-being able to process bigger datasets). Any changes made by the user
-to the *EEG* structure are thus applied instantaneously and are
-irreversible. For consistency, all the commands above will work.
-However, the *ALLEEG* variable will be empty.
+上記のコマンドは、複数のコマンドを維持するオプションがある場合に便利です。
+データセットがオンになっています。 複数のデータセットを維持するオプションがオフの場合
+(ビア・ザ・ <span style="color: brown">ファイル → 環境設定</span> メニュー項目)
+*ALLEEG* 変数は使用されません。*EEG* は変数だけです
+データセット情報が含まれています。 このオプションを使用する場合は、
+一度に1つのデータセットを処理する(ここでの目標は、より少ないメモリを使用することです。
+より大きなデータセットを処理することができる。 ユーザーによる変更
+*EEG*構造は即刻適用され、あります
+不可逆。 一貫性のために、上記のすべてのコマンドが機能します。
+ただし、*ALLEEG*変数は空になります。
 
-New fields added to the *EEG* structure by users will not be
-removed by EEGLAB functions. Any additional information about a dataset
-might be stored in the user-added field:
+ユーザによる*EEG*構造に追加された新しいフィールドは、
+EEGLAB関数で削除します。 データセットに関する追加情報
+user-added フィールドに格納される可能性があります。
 
 ``` matlab
 EEG.analysis_priority = 1;
 ```
 
-As mentioned at the beginning of this page following are the reserved variable names used by EEGLAB (EEG: the current EEG dataset; ALLEEG: array of all loaded EEG datasets; CURRENTSET: the index of the current dataset; LASTCOM: the last command issued from the EEGLAB menu; ALLCOM: all the commands issued from the EEGLAB menu; STUDY: the EEGLAB group analysis structure; CURRENTSTUDY: 1 if EEGLAB performing group analysis, 0 otherwise).
-Note that EEGLAB does not use global variables (the variables above are
-accessible from the command line, but they are not used as global
-variables within EEGLAB). The above variables are ordinary variables in
-the global MATLAB workspace. All EEGLAB functions except the main interactive window function [eeglab.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m) (and a few other
-display functions) process one or more of these variables explicitly as
-input parameters and do not access or modify any global variable. This
-ensures that they have a minimum chance of producing unwanted 'side
-effects' on the dataset.
+このページの冒頭で述べたように、EEGLAB(EEG: 現在のEEGデータセット;ALLEEG:すべての読み込まれたEEGデータセットの配列; CURRENTSET: 現在のデータセットのインデックス; LASTCOM: EEGLABメニューから発行された最後のコマンド; ALLCOM: EEGLABメニューから発行されるすべてのコマンド; STUDY: EEGLABグループ解析構造; CRENURTSTUDY: EEGLABグループ解析が0の場合、グループ解析が1EGLABの場合)。
+EEGLABはグローバル変数を使用しないことに注意してください(上記の変数は、
+コマンドラインからアクセス可能ですが、グローバルでは利用できません。
+EEGLAB内の変数。 上記の変数は通常の変数です
+グローバルなMATLABワークスペース。 主要な相互窓機能を除いてすべてのEEGLAB機能 [eeglab.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m) (その他)
+display関数) は、これらの変数の1つ以上を明示的に処理します。
+入力パラメータは、グローバル変数にアクセスしたり変更したりしません。 お問い合わせ
+望ましくない 'side を生産する最小チャンスがあることを確認してください。
+データセットのエフェクト
 
-Basic scripting example
+基本的なスクリプト例
 ------------------------
-Building and running short or long EEGLAB MATLAB scripts saved by EEGLAB
-history can be that simple. Simply perform any EEGLAB processing desired
-via the EEGLAB menu, save the EEGLAB command history, and re-run the
-saved script file. MATLAB will repeat all the steps you performed
-manually.
+EEGLABが保存したショートまたはロングEEGLAB MATLABスクリプトの構築と実行
+歴史は、そのシンプルにすることができます。 EEGLAB の処理を目的と実行するだけです。
+EEGLABメニューからEEGLABコマンド履歴を保存し、再実行
+保存されたスクリプトファイル。 MATLABは、実行した全てのステップを繰り返します。
+手動で。
 
-Below is an example following the first several steps of the main
-tutorial of MATLAB script copied from the history. It includes some of the
-first basic manipulations that must be performed on a dataset. This
-example works with the tutorial dataset *eeglab_data.set* and the
-corresponding channel location file *eeglab_chan32.locs*. We have added a
-few lines of code to locate the data files on your computer and MATLAB-style
-comments, but otherwise, 
-the script is directly copied from the EEGLAB history. The script in this section is available [here](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_history.m). Typing the command ''\>\> eegh'' would return.
+以下は、メインの最初のいくつかのステップの次の例です。
+歴史からコピーしたMATLABスクリプトのチュートリアル。 一部が含まれています
+データセットで実行しなければならない最初の基本的な操作。 お問い合わせ
+チュートリアルデータセット *eeglab_data.set* と、
+対応するチャンネルの場所ファイル *eeglab_chan32.locs*. 追加しました
+コンピュータとMATLABスタイルのデータファイルを見つけるためのコードの数行
+コメントはありません。 
+EEGLABの歴史から直接スクリプトをコピーします。 このセクションのスクリプトは利用できます [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_history.m)お問い合わせ コマンドのタイピング ''\>\> eegh は戻ります。
 
 
 
@@ -507,12 +507,12 @@ EEG.comments = pop_comments(EEG.comments,'','Extracted ''square'' epochs [-1 2] 
 eeglab redraw % Update the EEGLAB window to view changes
 ```
 
-Note that some commands such as *eeg_store* and *pop_newset* are meant to manage multiple datasets.
-If you are simply interested in processing the current dataset, they can be safely ignored. Below is the same script
-compactified, without the comments and the additional data managing commands.
+*eeg_store* や *pop_newset* などのコマンドは、複数のデータセットを管理するためのものです。
+現在のデータセットの処理に興味がある場合は、安全に無視できます。 以下は同じスクリプトです。
+コメントや追加のデータ管理コマンドなしで、コンパクト化。
 
-*Important note:* As briefly mentioned previously, functions called
-from the main EEGLAB interactive window display the name of the underlying *pop_* function in the window title bar. For instance, selecting <span style="color: brown">File → Load an existing dataset</span> to read in an existing dataset uses EEGLAB function [pop_loadset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m).
+*注意事項:* 以前述べたように、関数は
+メインの EEGLAB インタラクティブウィンドウから、ウィンドウタイトルバーのアンダーリング *pop_* 関数の名前を表示します。 例えば、選択 <span style="color: brown">ファイル → 既存のデータセットをロードする</span> 既存のデータセットで読み込むには、EEGLAB関数を使用します。 [pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m).
 
 ```matlab
 eeglab_path = fileparts(which('eeglab.m'));
@@ -530,8 +530,8 @@ EEG.comments = pop_comments(EEG.comments,'','Extracted ''square'' epochs [-1 2] 
 eeglab redraw 
 ```
 
-Another example from the EEGLAB history with added comments is copied below (see the function help messages for
-more details). Below, we resample the current dataset, then select back the original dataset in the EEGLAB graphic interface.
+追加コメント付きの EEGLAB 履歴からの別の例は以下にコピーされます(機能ヘルプメッセージを参照してください)
+詳細情報)。 以下では、現在のデータセットを再サンプルし、EEGLAB のグラフィックインターフェイスで元のデータセットを選択します。
 
 ``` matlab
 %% Reduce sampling rate
@@ -545,10 +545,10 @@ EEG = pop_resample( EEG, 128);
 EEG = eeg_retrieve(ALLEEG, 1); CURRENTSET = 1;
 ```
 
-Using pop_ functions vs low-level signal processing functions
+pop_ 関数と低レベルの信号処理関数を使用する
 -------
 
-First, we plot ERP scalp maps from 0 ms to 500 ms using the [pop_topoplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m) function. This part may be copied from the EEGLAB history. You must run the script in the previous section before running this one to load a dataset in EEGLAB. The script in this section is available [here](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_history.m).
+まず、ERPのスカルプマップを0msから500msまで作成します。 [pop_topoplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m) 機能。 EEGLABの歴史からこの部分をコピーすることができます。 EEGLABでデータセットをロードするために、このコマンドを実行する前に、前のセクションでスクリプトを実行する必要があります。 このセクションのスクリプトは利用できます [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_history.m).
 
 ``` matlab
 %% Plot ERP maps 
@@ -559,10 +559,10 @@ pop_topoplot(EEG,1, [0:100:500] , 'ERP scalp topographies',[2:3] ,0, 'electrodes
 
 ![](/assets/images/topoplot_history2.png)
 
-Below, instead of calling a pop_ function, we will directly call a lower-level EEGLAB data
-processing function. Note that this script was not generated by EEGLAB and copied from EEGLAB history.
-It was written from scratch by us for illustrative purposes. The command above [pop_topoplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m) can be executed by directly calling the signal processing function [topoplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m)
-as shown below:
+pop_ 関数を呼び出す代わりに、EEGLAB データを直接呼び出します。
+処理機能。 EEGLABで生成されたスクリプトはEEGLABで生成されず、EEGLABの履歴からコピーされます。
+イラストの目的で弊社から書いていただきました。 上記のコマンド [pop_topoplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m) 信号処理機能を直接呼び出して実行できます。 [topoplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m)
+以下に示すように:
 
 ``` matlab
 %% Topographic plot
@@ -591,10 +591,10 @@ end
 cbar; % A more flexible version of MATLAB colorbar
 ```
 
-The topographic plot is virtually identical to the previous one, except for the scale.
+トポグラフィのプロットは、スケールを除いて、以前のものとほぼ同じです。
 
 ![](/assets/images/topoplot_history1.png)
 
-The next steps in learning to write EEGLAB MATLAB scripts involve
-learning to change EEGLAB function parameters and adding loops to
-perform multiple analyses. We advise you to look at some of the example scripts.
+EEGLAB MATLABスクリプトを書くための次のステップ
+EEGLAB関数パラメータを変更し、ループを追加する学習
+複数の分析を行います。 スクリプトの例をいくつか紹介します。

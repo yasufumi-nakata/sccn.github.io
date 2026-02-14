@@ -6,100 +6,100 @@ parent:  Concepts guide
 grand_parent: Tutorials
 ---
 
-Background on ERP images
+ERP画像の背景
 ==========================================
 
-Here is some useful background information on ERP images. 
-To learn how to display ERP images please refer to the 
-[ERP image tutorial](/tutorials/08_Plot_data/Plotting_ERP_images.html).
+ERPイメージに関する有用な背景情報をご紹介します。 
+ERPイメージの表示方法を学ぶには、 
+[ERPイメージチュートリアル](/tutorials/08_Plot_data/Plotting_ERP_images.html).
 
-ERPs and ERP images
+ERPとERP画像
 --------------------
 
-The field of electrophysiological data analysis has been dominated by
-the analysis of 1-dimensional event-related potential (ERP) averages.
-Various aspects of the individual EEG trials that make up an ERP may
-produce nearly identical effects. For example, a large peak in an ERP
-might be produced by a single bad trial, an across-the-board increase in
-power at the same time point, or a coherence in phase across trials
-without any noticeable significance within individual trials. To better understand the causes of observed ERP effects, EEGLAB allows
-many different *ERP image* trial-by-trial views of a set of data epochs.
+電気生理学的データ解析の分野は、
+1次元イベント関連ポテンシャル(ERP)平均の解析
+ERPを構成する個々のEEG試験のさまざまな側面
+ほぼ同じ効果を生成します。 例えば、ERPの大きなピーク
+単一の悪い試験によって生成されるかもしれない, 全体のボードの増加
+同時にパワーポイント、または試験のフェーズでの一貫性
+個々の試験内で顕著な意義なし。 観察されたERP効果の原因をよりよく理解するために、EEGLABは、
+多くの異なる *ERPイメージ* 試してみると、一連のデータエポックのビュー。
 
-ERP-image plots are a related, but more general 2-D (values at
-times-by-epochs) view of the event-related data epochs. ERP-image plots
-are 2-D transforms of epoched data expressed as 2-D images in which data
-epochs are first sorted along some relevant dimension (for example,
-subject reaction time, alpha-phase at stimulus onset, etc.), then
-(optionally) smoothed (cross adjacent trials) and finally color-coded
-and imaged. As opposed to the average ERP, which exists in only one
-form, the number of possible ERP-image plots of a set of single trials
-is nearly infinite -- the trial data can be sorted and imaged in any
-order -- corresponding to epochs encountered traveling in any path
-through the *space of trials*. However, not all sorting orders will give
-equal insights into the brain dynamics expressed in the data. It is up
-to the user to decide which ERP-image plots to study. By default, trials
-are sorted in the order of appearance in the experiment.
+ERP-imageプロットは関連していますが、一般的な2-D(値)は関連しています。
+イベント関連のデータ epochs の time-by-epochs のビュー。 ERP-image プロット
+2-D は、データが 2 D の画像として表現されたデータを変換します。
+epochs は、関連する次元に沿って最初にソートされます(例えば、
+主題の反作用の時間、stimulusのonset、等でアルファ段階、それから
+(オプション)スムース(隣接する試験)とついにカラーコード
+そしてイメージしました。 平均ERPとは対照的に、1つだけに存在する
+フォーム、可能なERP-imageのプロットの1組のトライアル数
+ほぼ無限です - 試験データをソートし、任意の中に画像化することができます
+順序 -- 任意のパスで旅行に遭遇するエポックに対応する
+*トライアルスペース* しかし、すべての並べ替え注文は与えません
+データで表現された脳の動的に等しい洞察。 アップ
+どのERP-imageが勉強するのかを決めるユーザーに。 デフォルトでは、トライアル
+実験中の外観の順番でソートされます。
 
-It is also easy to misinterpret or over-interpret an ERP-image plot. For
-example, using phase-sorting at one frequency may
-blind the user to the presence of other oscillatory phenomena at
-different frequencies in the same data. Again, it is the responsibility
-of the user to correctly weight and interpret the evidence that a 2-D
-ERP-image plot presents, in light of to the hypothesis of interest --
-just as it is the user's responsibility to interpret 1-D ERP time series correctly.
+ERP-image プロットを誤解したり、解釈したりするのは簡単です。 お問い合わせ
+例えば、1つの頻度で相ソルトを使うと、
+他の振動現象の存在にユーザーをブラインド
+同じデータの異なる周波数。 再び、それは責任です
+2 D の証拠を正しく重み、解釈するためにユーザーの
+ERP-image のプロットは、興味の仮説に光る -
+1-D ERPタイムシリーズを正しく解釈するユーザーの責任であるだけ。
 
-Constructing ERP-images
+ERP-imagesの構成
 ------------------------
 
-The figure below (not an ERP image) explains the process of constructing ERP-image
-plots. Instead of plotting activity in single trials such as
-left-to-right traces in which potential is encoded by the height of
-the trace, we color-code their values in left-to-right straight lines,
-the changing color value indicating the potential value at each time
-point in the trial. For example, in the following image, three
-different single-trial epochs (blue traces) would be coded as three
-different colored lines (below).
+下の図(ERPイメージではなく)はERPイメージの構築プロセスを説明します。
+プロット。 そのような単一の試験で活動をプロットするのではなく
+左から右に続くトレースで、そのポテンシャルは高さによってエンコードされます。
+トレースは、左から右行の値をカラーコードします。
+変化するカラー値で、毎回潜在的な値を示す
+試験のポイント。 例えば、次の画像では3
+別の単一trialのepochs (青い跡)は3つとしてコードされます
+異なる色ライン(下)。
 
 
 ![](/assets/images/Erpimagedemo.jpg)
 
-By stacking above each other the color-sequence lines for all trials
-in a dataset, we produce an ERP image:
+上記各々のカラーシーケンス線を重ねることにより、すべての試験
+データセットでは、ERPイメージを生成します。
 
 ![](/assets/images/1ERPimagesmooth.gif)
 
 
-Do ERPs arise through partial phase synchronization of the EEG?
+EEGの部分的な相同期によってERPは発生しますか?
 ------------------------------------------------
-In a 'pure' case of (partial) phase synchronization:
+(部分的)相同期の「純粋な」場合:
 
--   EEG power (at the relevant frequencies) remains constant in the
-    post-stimulus interval.
--   The ITC value is significant during the ERP, but less than 1
-    (complete phase locking).
+-   EEGパワー(関連する周波数で)は、一定の状態で残っています
+    ポスト刺激間隔。
+-   ITC は、ERP が 1 未満のときに重要である。
+    (完全なフェーズ ロック)。
     
     
  ![](/assets/images/I84Coher_freq.jpg)
    
 
-In our case, the figure (above) shows a significant post-stimulus
-increase in alpha ITC accompanied by a small (though non-significant)
-increase in alpha power. In general, an ERP could arise from partial
-phase synchronization of ongoing activity combined with a
-stimulus-related increase (or decrease) in EEG power.
+私たちの場合、数字(平均)は重要なポスト刺激を示しています
+アルファ ITC に小さいと伴って増加して下さい(十分な非重要な)
+アルファ力の増加。 一般的に、ERPは部分から発生する可能性がある
+進行中の活動の段階の同時性はと結合しました
+EEGパワーの刺激関連増加(または減少)。
 
-It is important not to overinterpret the results of phase sorting in
-ERP-image plots. For example, the following calls from the MATLAB
-command line simulate 256 1-s data epochs using Gaussian white noise,
-low-pass filters this below (simulated) 12 Hz, and draw the following
-10-Hz phase sorted ERP-image plot of the resulting data. The figure
-appears to identify temporally coherent 10-Hz activity in the (actual)
-noise. The (middle) amplitude panel below the ERP-image plot shows,
-however, that amplitude at (simulated) 10 Hz does not change
-significantly through the (simulated) epochs, and the lowest panel shows
-that inter-trial coherence is also nowhere significant (as confirmed
-visually by the straight diagonal 10-Hz wavefronts in the center of the
-ERP image).
+フェーズソートの結果を解釈しないことが重要です。
+ERP-image プロット。 例えば、MATLABの次の呼び出し
+コマンドラインはGaussianの白い騒音を使用して256 1-sのデータepochsを模倣します、
+下記の低パスフィルタ(同時) 12Hz以下を描きます
+10Hz 段階は結果データの ERP-image プロットを分類しました。 数字
+一時的なコヒーレント10Hzのアクティビティを(実際の)識別するために表示されます。
+ノイズ。 ERP-imageのプロットショーの下の(中間)広さのパネル、
+しかし、その振幅(同時) 10Hzは変更しません
+(同時) のエポック、および最も低いパネルのショーを通して著しく
+一方的なコヒーレンスも重要でない(確認通り)
+中心のまっすぐな対角10Hzの波面によって視覚的に
+ERPイメージ
 
 ``` matlab
 % Simulate 256 1-s epochs with Gaussian noise
@@ -117,46 +117,46 @@ erpimage(data,zeros(1,256),1:256,'Phase-sorted Noise',1,1,...
 ![](/assets/images/Noisesort.jpg)
 
 
-Taking epochs of white noise (as above) and adding a strictly
-time-locked 'ERP-like' transient to each trial will give a phase-sorted
-ERP-image plot showing a sigmoidal, not a straight diagonal wavefront
-signature. How can we differentiate between the two interpretations of
-the same data (random EEG plus ERP versus partially phase reset EEG)?
-For simulated one-channel data, there is no way to do so since both are
-equally valid ways of looking at the same (simulated) data - no matter
-how it was created. After all, the simulated data themselves do not
-retain any impression of how they were created - even if such an
-impression remains in the mind of the experimenter!
+白色ノイズ(上記)のエポックをとり、厳密に追加する
+各試験へのタイムロックされた 'ERP-like' トランジェントは、フェーズソート
+直角の波面ではなく、シグモイダルを示すERP-imageプロット
+署名。 二つの解釈と異なる方法
+同じデータ(random EEGとERP対部分的にフェーズリセットEEG)?
+1チャンネルのデータをシミュレートするには、両方がないので、そうする方法はありません
+同じ(同時)データを見るのに等しく有効な方法 - 問題ありません
+作成方法 結局のところ、シミュレートされたデータ自体はそうしない
+彼らが作成する方法の任意の印象を保持 - そのような場合でも
+実験者の想いに感動が残る!
 
-For real data, we must use convergent evidence to bias our
-interpretation towards one or the other (or both) interpretations. The
-partial phase resetting model begins with the concept that the physical
-sources of the EEG (partial synchronized local fields) may *also* be the
-sources of or contributors to average-ERP features. This supposition may
-be strengthened or weakened by examination of the spatial scalp
-distributions of the ERP features and of the EEG activity. However, here
-again, a simple test may not suffice since many cortical sources are
-likely to contribute to both EEG and averaged ERPs recorded at a single
-electrode (pair). An ERP feature may result from partial phase resetting
-of only one of the EEG sources, or it may have many contributions, 
-including truly 'ERP-like' excursions with fixed latency and polarity
-across trials, monopolar 'ERP-like' excursions whose latency varies
-across trials, and/or partial phase resetting of many EEG processes.
-Detailed spatiotemporal modeling of the collection of single-trial data
-is required to parcel out these possibilities. For further discussion of
-the question in the context of an actual data set, see [Makeig et al.
-(2002)](http://sccn.ucsd.edu/science2002.html). In that paper, phase
-resetting at alpha and theta frequencies was indicated to be the
-predominant cause of the recorded ERP (at least at the indicated scalp
-site, POz). How does the ERP in the figure above differ?
+実際のデータについては、コンバージェント証拠を使用して、当社に偏見する必要があります。
+1つまたは他(または両方)の解釈に対する解釈。 ふりがな
+部分的なフェーズリセットモデルは、物理的な概念から始まります
+EEG(部分的に同期されたローカルフィールド)のソースは *also* が
+平均ERP機能のソースまたはコントリビューター。 この投稿の RSS
+空間スカルプの検査で強化または弱まる
+ERPの機能およびEEG活動の分布。 しかし、ここに
+また、多くのコルテラルソースが残っているので、単純なテストは十分ではないかもしれません
+EEG と 1 つの ERP で記録された平均的な ERP の両方に貢献する可能性が高い
+電極(ペア)。 ERPの特徴は部分的なフェーズの調整から起因するかもしれません
+EEG ソースの 1 つだけ、または多くの貢献があるかもしれません。 
+固定レイテンシーと極性を備えた真の「ERP-like」エクスカーションを含む
+トライアル全体で、単極 'ERP-like' のエクスカーションでレイテンシが変化する
+試験全体、および/または複数のEEGプロセスの部分的なフェーズのリセット。
+単一trialデータの収集の詳細な空間モデリング
+これらの可能性を推測する必要があります。 さらなる議論のために
+実際のデータセットのコンテキストにある質問は、[Makeig et al] を参照してください。
+(2002)](http://sccn.ucsd.edu/science2002.html)。 その紙では、フェーズ
+アルファおよびベータ周波数でリセットすると、
+記録されたERPの予備的な原因(少なくとも示された頭皮の
+サイトマップ 上記図のERPはどのように異なりますか?
 
-The Makeig et al. (2002) paper dealt
-with non-target stimuli, whereas for the sample EEGLAB dataset, we used
-epochs time-locked to target stimuli from one subject (same experiment).
-The phase synchronization might be different for the two types of
-stimuli. Also, the analysis in the paper was carried out over 15
-subjects and thousands of trials, whereas here, we analyze only 80 trials
-from one subject. (The sample data we show here are used for tutorial
-purposes. We are now preparing a full report on the target responses in
-these experiments.)
+Makeig ら. (2002) 紙の処理
+非ターゲット stimuli で、サンプル EEGLAB のデータセット、私達は使用しました
+epochs は 1 つの被験者 (same 実験) からターゲット stimuli にタイムロックされます。
+相同期は2つのタイプのために異なっているかもしれません
+stimuli. また、論文の分析は15件以上を上回りました。
+被験者数と数千件の試験が、ここでは80件の試験のみを分析します。
+1つの主題から。 (ここに示すサンプルデータはチュートリアルに使用されます)
+目的。 ターゲット応答に関するフルレポートを準備中です。
+これらの実験。)
 

@@ -9,147 +9,147 @@ grand_parent: Tutorials
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-# Back to the basics
+# 基本に戻る
 
-To perform source localization, one needs
+ソースのローカリゼーションを実行するには、1つのニーズ
 
-1. A **head model** describing how electrical or magnetic fields propagate through the head
-     * It may be a simple model made of spheres having different conductances
-     * It may be a more complex model made of geometrical 3-D mesh describing the cortex surface, skull, skin, as well as change in conductance at the interface of these surfaces.
-     * It may be a volumetric model (Finite Element Model, FEM) describing how the current flows in each voxel. FEM models are, in theory, more precise, although they take longer to compute.
-2. A **source model** describing the position of the source generating these fields
-     * It may be a single dipole. 
-     * It may be dipoles distributed in a 3-D grid (i.e., volumetric source model for distributed source localization such as in [eLoreta](https://doi.org/10.1098/rsta.2011.0081)).
-     * It may be dipoles distributed on a surface. For example, we may force dipoles to be on the cortical surface.
-3. The EEG or MEG **sensor positions** and a way to align them with both the head model and source model
+1. A **ヘッド モデル** ヘッドを通る電気または磁場の伝搬方法を説明する
+     * 異なる導電率を持つ球で作られたシンプルなモデルかもしれません
+     * 皮質の表面、頭皮、皮を記述する幾何学的3次元の網から成っているより複雑なモデル、またこれらの表面のインターフェイスの伝導の変化であるかもしれません。
+     * ボリュームトリカルなモデル(Finite Element Model、FEM)は、各バクセルの電流の流れを記述することができます。 FEMモデルは、理論的には、より正確です。しかし、彼らは計算に時間がかかる。
+2. A **ソースモデル** これらのフィールドを生成するソースの位置を記述する
+     * シングルダイポールになる場合があります。 
+     * 3Dグリッド(例えば、分散ソースのローカリゼーションのためのボリュームトリカルなソースモデルなど)で配布されるダイポールかもしれません。 [eロレタ](https://doi.org/10.1098/rsta.2011.0081)).
+     * 表面に分散するダイポールがあるかもしれません。 例えば、異方性面にあるダイポールを強制する場合があります。
+3. EEGまたはMEG **センサー位置**とヘッドモデルとソースモデルの両方でそれらを整列する方法
 
-Once we have all three, we need an algorithm to find the activity of the sources. Unfortunately, there is often an infinite number of solutions that can generate the observed activity at the surface of the scalp, so we need to impose constraints on the sources. The constraints may be:
+3つすべてを持っていると、ソースのアクティビティを見つけるためのアルゴリズムが必要です。 残念ながら、スキャルプの表面で観察されたアクティビティを生成できる無限のソリューションがありますので、ソースの制約を課す必要があります。 制約は次のようになります。
 
-* Force to model the scalp activity with a single dipole. In this way, there is usually a unique optimal solution.
-* Force sources to be smooth, so the activity of the neighboring sources are correlated. This is the eLoreta solution.
-* Force the activity of neighboring sources to be uncorrelated using linearly constrained minimum variance (LCMV) also known as [Beamforming](https://doi.org/10.1109/10.623056).
-* Any other constraint on the activity of our sources...
+* 単一のダイポールでスカルプ活動をモデル化させる力。 この方法では、通常、ユニークな最適なソリューションがあります。
+* 電源を円滑にするため、隣接するソースの活性が相関しています。 これは eLoreta ソリューションです。
+* 隣接するソースの活動を線形に制約された最低の分散(LCMV)を使用して無関係であるように強制して下さい [ビームフォーミング](https://doi.org/10.1109/10.623056).
+* 私たちのソースの活動に対する他の制約...
 
-The figure below illustrates the process described above. After aligning electrodes, head model and source model, we provide the information along with EEG data to the source reconstruction algorithm (single dipole, eLoreta, Beamforming, etc...). Based on the electrode positions, head model and source model, often, a transformation matrix is computed. This matrix indicates how a given source (described in the source model) influence the activity of individual EEG channels. Its size is *source x EEG channels*, and it is called the **Leadfield matrix**. Once we have this matrix, we can ignore the electrode position, head model and source model. The same Leadfield matrix may be used for single dipole, eLoreta, and Beamforming source reconstruction.
+以下の図は、上記の手順を説明します。 電極、ヘッドモデル、ソースモデルを揃えた後、EEGデータをソース再構築アルゴリズム(単一ダイポール、eLoreta、ビームフォーミングなど)に提供します。 電極の位置、ヘッドモデル、ソースモデルに基づいて、多くの場合、トランスフォーメーションマトリックスが計算されます。 この行列は、特定のソース(ソースモデルで記述)が個々のEEGチャネルの活動を影響する方法を示します。 そのサイズは*source x EEGチャンネル*で、**Leadfield行列**と呼ばれます。 この行列があれば、電極の位置、ヘッドモデル、ソースモデルを無視できます。 同じリードフィールド行列は、単一のダイポール、eLoreta、およびビームフォーミングソース再構成に使用できます。
 
 ![](https://user-images.githubusercontent.com/1872705/206873268-edbf713f-962d-4e74-a608-e915b3441b84.png)
 
-# Selecting a head model
+# ヘッドモデルの選択
 
-The first step for source localization is choosing a head model, which defines different regions of conductivities. In this section we demonstrate the steps to choose a head model in EEGLAB and to align the head model with the electrode locations. Other steps are described in subsequent sections of the tutorial.
+ソースローカリゼーションの最初のステップは、導電性の異なる領域を定義するヘッドモデルを選択します。 このセクションでは、EEGLABのヘッドモデルを選択し、電極の位置でヘッドモデルを揃える手順を説明します。 他の手順は、チュートリアルの次のセクションで記述されています。
 <!-- Second, choosing a source model: The source model is the type of source you will use. This may be a single dipole, which position you optimize. This could also be  -->
 <!-- a distributed model, with one dipole per brain voxel, such as when using Loreta. The source model is independent of the head model. Third, you will perform inverse source localization and plot the source results. -->
 
-## Setting up DIPFIT head model
+## DIPFITヘッドモデルの設定
 
-In this section, we use the tutorial dataset after [extracting data epochs](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html). Select menu item <span style="color: brown">File</span> and press sub-menu item
-<span style="color: brown">Load existing dataset</span>. Select the tutorial file "eeglab_data_epochs_ica.set" located in the "sample_data" folder of EEGLAB. Then press *Open*.
+このセクションでは、後にチュートリアルデータセットを使用します。 [データエポック抽出](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html)お問い合わせ メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
+<span style="color: brown">既存のデータセットをロードする</span>お問い合わせ EEGLABの「sample_data」フォルダにある「eeglab_data_epochs_ica.set」のチュートリアルファイルを選択します。 それから *Open*を押して下さい。
 
-DIPFIT is a single (or couple) dipole fitting algorithm to attribute the signals at the channel level to one (or two) single source in the brain. EEGLAB historically has implemented DIPFIT as its main source localization algorithm, but support for beamforming and eLoreta are also available within EEGLAB. Here, we use DIPFIT GUI to select head model and align the electrode locations with the head model.
+DIPFITは、チャネルレベルの信号を1つ(または2つ)単一のソースに1つ(または2つ)1つに分類する単一(またはカップル)ダイポールフィッティングアルゴリズムです。 EEGLABは、DIPFITを主流のローカリゼーションアルゴリズムとして導入しましたが、EEGLAB内でのビームフォーミングやeLoretaのサポートも行っています。 ここでは、ヘッドモデルを選択し、ヘッドモデルで電極の位置を合わせるDIPFIT GUIを使用しています。
 
-To access DIPFIT head model seetings, select the EEGLAB menu item <span style="color: brown"> Tools → Source localization using DIPFIT → Head model and settings</span>. This will pop up the window below:
+DIPFITヘッドモデルのシーティングにアクセスするには、EEGLABメニュー項目を選択します。 <span style="color: brown"> ツール → DIPFIT → ヘッドモデルと設定を使用したソースローカリゼーション</span>お問い合わせ 以下のウィンドウが表示されます。
 
 ![](../../assets/images/dipfit_settings_besa.png)
 
-The top edit box, *Model (click to select)*, specifies the type of head
-model -- spherical model, template boundary element model (BEM), or custom model. 
+上部の編集箱、*モデル(選択するためにかちりと言う音)*は、頭部のタイプを指定します
+モデル -- 球面モデル、テンプレート境界要素モデル(BEM)、またはカスタムモデル。 
 
-The **template Spherical Four-Shell (BESA)** uses four spherical surfaces (skin, skull, CSF, cortex) to
-model the head. The spherical head model is kept for backward compatibility purposes and should not be used for publication. The spherical model has been tested against versions of the BESA software and shown to return similar results as detailed [here](https://github.com/sccn/sccn.github.io/files/10201215/DIPFIT.vs.BESA.study.using.the.spherical.head.model.pdf).
+※4面(皮、頭皮、CSF、皮質)を4面に使用
+ヘッドをモデル化します。 球面ヘッドモデルは後方互換性の目的のために保持され、出版物に使用するべきではありません。 球面モデルはBESAソフトウェアのバージョンに対してテストされ、同様の結果を詳細に返すために示されています [詳しくはこちら](https://github.com/sccn/sccn.github.io/files/10201215/DIPFIT.vs.BESA.study.using.the.spherical.head.model.pdf).
 
-The **template boundary element model** is composed of three 3-D surfaces (skin, skull, cortex) extracted from the MNI (Montreal Neurological Institute) canonical template brain is also used in Statistical Parametric Mapping (SPM). The BEM model is more realistic than the four concentric spheres model and will return more accurate results. The description of how the BEM model was generated is available [here](https://pubmed.ncbi.nlm.nih.gov/11222970/). Although it was first made available in DIPFIT, this standard BEM model is the same as the model in FieldTrip when you type *ft_read_headmodel('standard_bem.mat');*. As authors of the original BEM head model [paper](https://pubmed.ncbi.nlm.nih.gov/11222970/) indicated: "This template consists of a high-quality anatomical MRI of a single representative subject, with a voxel size of 1 x 1 x 1 mm, created by the McConnell Brain Imaging Centre of the Montreal Neurological Institute. It was created by registering 27 T1-weighted scans of the same individual in stereotactic space, where they were subsampled, and intensity averaged. After the generation of this averaged MRI, an expert-guided semi-automatic segmentation was performed to identify the tissue type of each voxel. This segmentation of the averaged brain was used for the construction of a noiseless MRI of the brain using an MR simulator. This noiseless MRI is used in this paper for visualizing the results; the segmentation of the original MRI was used to create the realistically shaped volume conduction model of the head. The motivation for using this specific MRI was that it forms the template brain of the Statistical Parametric Mapping package (SPM, 1999)."
+**template 境界要素モデル** は、MNI (Montreal Neurological Institute) の正式なテンプレートの脳から抽出された 3 D 表面 (皮、頭皮、皮質) から構成されています。 BEMモデルは4つの同心球モデルより現実的であり、より正確な結果を返します。 BEMモデルの生成方法の説明が利用可能 [詳しくはこちら](https://pubmed.ncbi.nlm.nih.gov/11222970/)お問い合わせ DIPFITで最初に使用していたが、この標準のBEMモデルは、*ft_read_headmodel('standard_bem.mat');*を入力すると、FieldTripのモデルと同じです。 オリジナルのBEMヘッドモデルの作者として [ペーパー](https://pubmed.ncbi.nlm.nih.gov/11222970/) 「このテンプレートは、単一の代表的な主題の高品質の分析MRIから構成され、1 x 1 x 1 mmのvoxelサイズで、モントリオール神経科学研究所のMcConnell Brain Imaging Centreによって作成されます。 27 T1級のスキャンをステレオタクティックスペースで登録することで作成され、サブサンプリングされ、強度が平均化しました。 この平均化されたMRIの生成後、各Voxelの組織タイプを識別するために、エキスパートガイド付きセミオートセグメンテーションが行われました。 MRシミュレータを用いた脳のノイズレスMRIの構造に平均脳のこのセグメンテーションが使われました。 このノイズレスMRIは、結果の視覚化のために、この紙で使用されます。元のMRIのセグメンテーションは、頭の実際の形状の容積伝導モデルを作成するために使用されます。 この特定のMRIを使用する動機は、統計的なパラメトリックマッピングパッケージ(SPM、1999)のテンプレートの脳を形成していたことです。
 
-The **custom model and MRI files from FieldTrip** allow users to take advantage of custom head models designed in FieldTrip. The instructions to create a BEM head model from a subject MRI is described [here](https://www.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/). Once you have created a model, the electrode alignment may be performed in EEGLAB, so the second part of the FieldTrip tutorial, regarding electrode alignment, may be skipped.
+FieldTrip**の**カスタムモデルとMRIファイルにより、ユーザーはFieldTripで設計されたカスタムヘッドモデルを利用することができます。 被写体 MRI から BEM ヘッドモデルを作成する指示は記述されます [詳しくはこちら](https://www.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/)お問い合わせ モデルを作成したら、電極アライメントはEEGLABで実行されるので、電極アライメントに関するFieldTripチュートリアルの2番目の部分はスキップされます。
 
-For this example, select *Boundary element model*. Clicking on the model name updates some fields below the dropdown menu:
+この例では、*Boundary 要素モデル*を選択します。 モデル名をクリックすると、ドロップダウンメニューのフィールドが更新されます。
 
-* The entry *Head model file* contains the head model parameters (surface information, conductances, etc...). These are MATLAB files and may be edited. See the FieldTrip documentation for more information on the head model files. 
-* The edit box *Matrix to align channel locations with head model* is automatically updated to align the current electrode coordinates with the current head model. We co-registered the MNI average brain MRI with landmark electrode positions. For the average MRI image, we used a publicly available average brain image (average of 152 T1-weighted stereotactic volumes made available by the ICBM project) from the MNI database (Montreal Neurological Institute (MNI), Quebec). Co-registration of the MNI brain and the standard EEG landmarks was accomplished automatically using fiducials and the Cz (vertex) electrode position, then slightly adjusted manually. Using template channel locations is not ideal, and it is better to use the actual electrode locations compatible with the head model (see next section). The automatic update of the transformation matrix is not always performed, and sometimes you may need to align electrode coordinates and the head model manually, as explained in a later section.
-* The entry *Associated MRI file for plotting* contains the name of the MRI image to use for plotting. You may enter a custom or individual subject MR image file, assuming this file has first been normalized to the MNI brain. The [SPM software](https://www.fil.ion.ucl.ac.uk/spm/) will take a raw subject MRI as input and normalize it to the MNI brain template.
-* The entry *Associated channel locations if any* contains the name of the template channel location file associated with the head model. This information is critical, as your dataset channel location file may be different from the template. If so, a co-registration transform is required to align your channel locations using the template locations associated with the model.
-* Edit box *Channel to omit channels from dipole fitting*. By pressing "*...*", a list of channels appears that allows users to exclude eye channels (or other, possibly non-head channels) from the dipole fitting procedure. For example, non-scalp channels should be removed prior to running dipole fitting. We advise excluding peri-ocular channel values from inverse source models because of poor conductance model geometry at the front of the head.
+* エントリー *ヘッドモデルファイル*にはヘッドモデルパラメータ(表面情報、導電性など)が含まれています。 これらはMATLABファイルであり、編集される可能性があります。 ヘッドモデルファイルの詳細については、FieldTrip のドキュメントを参照してください。 
+* 編集ボックス *Matrix は、ヘッドモデルでチャンネルの位置を揃える* が自動的に更新され、現在のヘッドモデルと並列する。 ランドマーク電極の位置でMNI平均脳MRIを共同登録しました。 平均的なMRIイメージでは、MNIデータベース(Montreal Neurological Institute(MNI)、ケベック)のMNIデータベース(Montreal Neurological Institute(MNI)から利用できる、152 T1級のステレオ戦術的なボリュームの平均的な脳画像(平均)を使用しました。 MNI 脳と標準 EEG ランドマークの共同登録は、ファイズルと Cz (vertex) 電極の位置を使用して自動的に達成され、手動で調整されます。 テンプレートのチャンネルの場所は理想的ではなく、ヘッドモデルと互換性のある実際の電極の位置を使用する方が良いでしょう(次のセクションを参照してください)。 トランスフォーメーションマトリクスの自動更新は、常に実行されず、後で説明するように、電極座標とヘッドモデルを手動で整列する必要がある場合があります。
+* エントリ * 関連する MRI ファイルをプロットする* には、MRI のイメージの名前が含まれています。 このファイルが最初にMNI脳に正規化されていると仮定して、カスタムまたは個々のMR画像ファイルを入力することができます。 ふりがな [SPMソフトウェア](https://www.fil.ion.ucl.ac.uk/spm/) MNI脳のテンプレートに入力して正規化として生の主題MRIをとります。
+* エントリ * 関連するチャンネルの場所 * 任意の * は、ヘッドモデルに関連付けられているテンプレートチャンネル位置ファイルの名前が含まれています。 この情報は、データセットのチャンネルの場所ファイルがテンプレートとは異なる可能性があるため、重要です。 もしそうなら、モデルに関連付けられているテンプレートの場所を使用してチャンネルの位置を合わせるには、共同登録変換が必要です。
+* ダイポールフィッティング*からチャンネルを省略するチャンネルを編集する*。 "*...*" を押すと、チャンネルのリストが表示されるので、ユーザーはダイポールフィッティング手順からアイチャネル(または他の、おそらく非ヘッドチャネル)を除外することができます。 例えば、ダイポールフィッティングを実行する前に、ノンスカルプチャネルを削除する必要があります。 頭の前面での導電性モデルの悪い形状のため、逆のソースモデルからperi-ocularチャンネル値を排除することをお勧めします。
 
-## Co-registration of head model and electrode locations
+## ヘッドモデルと電極の位置の調整
 
-Next is the co-registration, which is aligning the electrode locations with the head model. Co-registration will be slightly different if you have the electrode locations for each individual, based on the previously "**digitized**" electrode locations. Here, we first explain the co-registration process for the "**template**" electrode locations.
+次は、電極の位置をヘッドモデルと整列するコリギスです。 従来の「**digitized**」の電極の位置に基づいて、各個々の電極の位置を持っている場合は、調整が若干異なります。 ここでは、まず「**template**」電極の位置の共同登録プロセスについて説明します。
 
 <!-- ### The default headmodels
 
 The first default head model for FieldTrip is a spherical head model. This is the  -->
 
-### Co-registration by choosing appropriate *template* channel locations
+### 適切な *template* チャネルの場所の選択による共同登録
 
-It is ideal if the channel locations are the same as the ones associated with the head model. In the dataset we are using here, the channel locations are in the spherical coordinate system, while we want to use a BEM head model. If all the electrode locations are within the International 10-20 System (which is the case here), you may use the standard channel coordinates associated with the head model. Close the current head model settings window and go to the channel editing window
-(select menu item <span style="color: brown">Edit → Channel location</span>). The resulting channel editor window is shown below:
+チャネルの場所がヘッド モデルに関連付けられているものと同じである場合、それは理想的です。 ここではデータセットでは、BEM ヘッドモデルを使いたい時に、チャンネルの位置は球面座標系にあります。 すべての電極の位置が国際10-20システム(この場合です)内にある場合、ヘッドモデルに関連付けられている標準チャンネル座標を使用する場合があります。 現在のヘッドモデル設定ウィンドウを閉じ、チャンネル編集ウィンドウに移動します
+(メニュー項目を選択) <span style="color: brown">編集 → チャンネルの場所</span>)。 結果のチャンネルエディタウィンドウは以下のとおりです。
 
-![600px\|border](../../assets/images/Dipfit_pop_chanedit2.png)
+![600px\|ボーダー](../../assets/images/Dipfit_pop_chanedit2.png)
 
-Press the *Look up locs* to look up your channel locations (by matching the channel labels) in the template channel location file. Select *Use MNI coordinate file for the BEM DIPFIT model*.
+*Look up locs* を押して、テンプレートのチャンネル位置ファイルでチャンネルの位置(チャンネルラベルのマッチング)を調べます。 ※BEM DIPFITモデルのMNI座標ファイルを使用してください。
 
 ![](../../assets/images/chanlocs_bem.png)
 
-Press *Ok* on the window above and the channel editor window. Then go back to the head model settings using the <span style="color: brown"> Tools → Source localization using DIPFIT → Head model and settings</span> menu item. The window below will pop up. You can see that the matrix to align the electrode coordinate to the head model (edit box *Matrix to align chan. locs with head model*) mainly contains -pi/2 (-1.5708), which correspond to a 90-degree rotation in the axial plane (also known as the transverse or horizontal plane). This is because EEGLAB assumes that the nose direction is along a specific axis, while the head model uses a different convention. The Talairach transformation matrix, a vector comprised of nine fields *\[shiftx shifty shiftz pitch roll yaw scalex scaley scalez\]*, is organized as follows:
+上記のウィンドウとチャンネルエディタウィンドウで *Ok* を押します。 その後、ヘッドモデルの設定に戻ります <span style="color: brown"> ツール → DIPFIT → ヘッドモデルと設定を使用したソースローカリゼーション</span> メニュー項目。 下のウィンドウがポップアップ表示されます。 電極の座標をヘッドモデル(edit box *Matrix)に整列する行列が確認できます。ヘッドモデル*を主として位置します。同軸平面の90度回転に対応する -pi/2 (-1.5708) が主に含まれています。 EEGLABは、ヘッドモデルが異なる慣習を使用している間、鼻の方向が特定の軸に沿っていると仮定しているためです。 Talairach変換行列、9つのフィールド*\[shiftxshiftyshiftzピッチロールyaw scalex scaley scalez\]*で構成されたベクトルは、次のように編成されます。
 
-* The first 3 numbers *\[shiftx shifty shiftz\]* are the offset (in millimeters) along the x, y, and z axes. When equal to 0, no shift is applied.
-* The next 3 numbers *\[pitch roll yaw\]* are rotations along different planes in radian. *Yaw* means rotation in the horizontal plane around the z axis. *Pitch* and *Roll* are rotations around the x and y axes, respectively. When equal to 0, no rotation is applied.
-* The last 3 numbers *\[scalex scaley scalez\]* are scaling factors along the x, y, and z axes. When equal to 1, no scaling is applied.
+* 最初の3つの数字*\[shiftxshiftyshiftz\]*は、x、y、z軸に沿ってオフセット(ミリメートル)です。 0に等しい場合、シフトは適用されません。
+* 次の3つの数字 *\[pitch Roll yaw\]*は、ラジアンの異なる平面に沿って回転します。 *Yaw*はz軸周りの水平平面の回転を意味します。 *Pitch* と *Roll* はそれぞれ x と y 軸の周りの回転です。 0に等しい場合、回転は適用されません。
+* 最後の 3 数字 *\[scalex scaley scalez\]* は x, y, z 軸に沿ってスケーリングする要因です。 1に等しい場合、スケーリングは適用されません。
 
-In this case, the only alignment required is a 90-degree rotation between the electrode coordinates and the coordinate system of the head model. In case no co-registration/alignment is required, you may also select the *No coreg* checkbox.
+この場合は、電極座標とヘッドモデルの座標系の間の90度回転のみのアライメントが必要です。 共同登録・整列が不要の場合、*コアグなし*チェックボックスを選択することもできます。
 
 ![](../../assets/images/dipfit_settings_bem.png)
 
-*Important note:* If you change your channel locations, make sure to go back to DIPFIT settings to update the coordinate transformation settings.
+*注意事項:* チャンネルの場所を変更する場合は、必ずDIPFIT設定に戻り、座標変換の設定を更新してください。
 
-### Manual co-registration of the *template* channel locations
+### *template* チャネルの場所の手動調整
 
-If you are using channel locations and/or labels *not* in the International 10-20 System -- for example, a commercial high-density electrode cap file -- you will need to align or co-register your electrode locations with the selected head model. The co-registration interface does not automatically allow you to align your electrode locations to the head model. Instead, it allows you to automatically align your electrode locations to matching template electrode locations associated with the head model.
+チャネルの場所および/またはラベルを使用している場合は、国際10-20システム内の*not* - たとえば、商用の高密度電極キャップファイル - 選択したヘッドモデルで電極の位置を揃えまたは共同登録する必要があります。 調整インターフェイスは、電極の位置をヘッドモデルに自動的に整列することができません。 代わりに、電極の位置を自動的に整列して、ヘッドモデルに関連付けられているテンプレート電極の位置をマッチングすることができます。
 
-Again, use the <span style="color: brown"> Tools → Source localization using DIPFIT → Head model and settings</span> menu item. Click on *Co-register* in the DIPFIT settings window. A window appears. Change the *resize* values to 1.5 for all axes to see the electrodes (we are undoing the alignment for illustrative purposes).
+繰り返します。 <span style="color: brown"> ツール → DIPFIT → ヘッドモデルと設定を使用したソースローカリゼーション</span> メニュー項目。 DIPFIT設定画面の*Co-register*をクリックします。 ウィンドウが表示されます。 *resize* 値が 1.5 に変化し、すべての軸が電極を見るようにします(照合目的のアライメントを解除します)。
 
 ![](../../assets/images/coregister_new1.png)
 
-Here, the electrode locations are plotted on the head model. Each small red or green sphere indicates an electrode location, with fiducial locations (conventionally, the nasion and pre-auriculars) drawn as slightly bigger and darker spheres.
+ここでは、ヘッドモデルに電極の位置をプロットします。 各小さな赤または緑色の球は、電極の場所を示しています。, 表面的な場所 (conventionally, nasion and pre-auriculars) わずかに大きく、暗い球として描画.
 
-Use the *Warp* button to align and scale your electrode locations (green) so that it becomes best aligned with the template electrode locations (brown) associated with the head model.
+*Warp*ボタンを使用して、電極の位置(緑色)を整列し、ヘッドモデルに関連付けられているテンプレートの電極位置(茶色)に最も適したようにします。
 
-A channel correspondence window will pop up:
+チャンネル対応ウィンドウがポップアップ表示されます。
 
-![Image:Pop_chancoresp.gif](../../assets/images/Pop_chancoresp.gif)
+![画像:Pop_chancoresp.gif](../../assets/images/Pop_chancoresp.gif)
 
-The channel labels from your dataset electrode structure are shown in the right column, while the left column shows channel labels from the template channel file associated with the head model. Arrows in both columns indicate electrodes with the same labels in the other column. If your channels' labels do not correspond to the International 10-20 System labels used in the template montage, press the *Pair channels* button and choose the nearest channel to each of your dataset channels in the template montage.
+データセット電極構造のチャンネルラベルは右列に表示され、左列はヘッドモデルに関連付けられているテンプレートチャンネルファイルからチャンネルラベルを表示します。 両方の列の矢印は、他の列の同じラベルを持つ電極を示しています。 チャンネルのラベルがテンプレートモンタージュで使用される国際10-20システムラベルに対応していない場合は、*Pairチャンネル*ボタンを押し、テンプレートモンタージュの各データセットチャネルに最も近いチャンネルを選択します。
 
-When you press *Ok*, the function will perform the optimal linear 3-D warp (translation, rotation, and scaling) to align your channel montage to the template montage associated with the head model. The result will be shown in the channel montage window (see below). You may press the *Labels on* button to toggle the display of your channels' label (green) or the template channels associated with the head model (red). You may also restrict the display to subsets of channels using the *Electrodes* buttons.
+*Ok*を押すと、ヘッドモデルに関連付けられているテンプレートのモンタージュにチャンネルモンタージュを合わせるために、最適なリニア3Dワープ(変換、回転、スケーリング)を実行します。 結果はチャンネルモンタージュウィンドウ(以下参照)に表示されます。 *Labels on*ボタンを押して、チャンネルのラベル(緑色)またはヘッドモデル(赤)に関連するテンプレートチャンネルの表示を切り替えることができます。 *Electrodes*ボタンを使ってチャンネルのサブセットに表示を制限することもできます。
 
-<u>Manual fine-tuning:</u> To finely tune the alignment manually, repeatedly edit the values in the edit boxes, which correspond to the *\[shiftx shifty shiftz pitch roll yaw scalex scaley scalez\]* transformation mentioned previously. The resulting co-registration window should look something like this:
+<u>手動微調整:</u> 手動でアライメントを細かく調整するには、*\[shiftxshiftyshiftz ピッチロール yaw scalex scaley scalez\]* に対応する編集ボックスの値を繰り返し編集します。 結果の共同登録ウィンドウはこのようになります。
 
-![Image:coregister_new2.png](../../assets/images/coregister_new2.png)
+![画像:coregister_new2.png](../../assets/images/coregister_new2.png)
 
-If you want to retain your modifications, press *Ok* to update the DIPFIT settings window. This will display the resulting Talairach transformation matrix in the edit box *Matrix to align chan. locs with head model*. In this specific case, you may press the *Cancel* button in the co-registration interface since no further alignment was necessary (we performed co-registration for illustrative purposes on a dataset that did not require further alignment). Then press *Ok* in the DIPFIT settings window and proceed to localization in the next section of the tutorial.
+変更を保持したい場合は、*Ok*を押してDIPFIT設定画面を更新します。 これにより、生成されたTalairach変換行列を編集ボックス*Matrixに表示し、チャンを整列します。 ヘッドモデル*で移動します。 この特定のケースでは、さらなるアライメントが不要になったため、共同登録インターフェースの*Cancel*ボタンを押下することができます(さらなるアライメントを必要としなかったデータセットのイラストの共同登録を行いました)。 その後、DIPFIT設定ウィンドウで*Ok*を押して、チュートリアルの次のセクションでローカリゼーションに進みます。
 
-<u>Note about fiducials:</u> Your channel structure may contain standard fiducial locations (nasion and pre-auricular points). If you import a channel file with fiducial locations into the channel editor, give them the standard *fiducial* channel type *FID*, and they will be stored in the channel information structure, *EEG.chaninfo*. This will also be done automatically if your fiducials have the standard names, *Nz* (nasion), *LPA* (left pre-auricular point), and *RPA* (right pre-auricular point ). There is also considerable confusion about fiducials, and we have created new fiducial labels in an attempt to
-disambiguate exact fiducial locations (see this [slide](https://sccn.ucsd.edu/eeglab/download/Fiducials.pdf)). Note that fiducial locations are stored outside the standard channel location structure, *EEG.chanlocs*, for compatibility with other EEGLAB plotting functions.
+<u>財務情報:</u> チャンネル構造には、標準の局所(nasionとpre-auricular point)が含まれる場合があります。 チャンネル ファイルをチャンネル エディターに忠実な場所にインポートすると、標準の *fiducial* チャンネル タイプ *FID* を指定し、チャンネル情報構造、 *EEG.chaninfo* に保存されます。 *Nz*(nasion)、*LPA*(左前方点)、*RPA*(右前方点)の基準名が記載されている場合、自動的に行います。 ファイズルについてのかなりの混乱があり、新しいファイズラルラベルを作成しました
+密接な正確な場所(これを参照してください) [スライド](https://sccn.ucsd.edu/eeglab/download/Fiducials.pdf))。 *EEG.chanlocs*は、他のEEGLABのプロット機能との互換性のために、通常のチャンネル位置構造の外部に保存されます。
 
-Thereafter, fiducial locations will appear in the channel co-registration window (above) and may be used (in place of location-matched scalp channels) to align your electrode montage to the template locations associated with the head model. Use the *Align fiducials* button to do this.
+その後、チャンネルの共同登録ウィンドウ(above)に忠実な場所が現れ、ヘッドモデルに関連付けられているテンプレートの場所に電極のモンタージュを合わせるために(位置一致したスカルプチャネルの代わりに)使用することができます。 *Align fiducials*ボタンを使用してこれを行います。
 
-### Co-registration of *digitized* electrode locations
+### *digitized*電極の位置の調整
 
-Individualized electrode locations significantly improves source localization accuracy [by as much as 40%](https://doi.org/10.3389/fnins.2019.01159), when the accuracy is defined as quantifying the correct Brodmann Area of the cortical activity. Using custom electrode locations for each individual requires a 3D digitization methods. Traditionally, [Polhemus](https://polhemus.com/scanning-digitizing/digitizing-products/) and [Zebris](https://www.zebris.de/en/) systems have been used to provide the relative 3D locations of the electrodes with respect to the fiducials. With the abundance of access to the infra-red 3D scanners and, including smartphone face unlock cameras, 3D scans with millimeter accuracy can be obtained from the head. The scan takes ~5 minutes of the subject's time and the digitization can be done afterwards using available toolboxes such as EEGLAB's [get_chanlocs](https://github.com/sccn/get_chanlocs/wiki). Using smartphones for scanning is the most affordable method for electrode digitization and requires and additional $50 investment to purchase the software application and 3D print a contraption for easier scanning. We will provide a detailed tutorial for a smartphone-based 3D scanner soon via the [get_chanlocs](https://github.com/sccn/get_chanlocs/wiki) wiki page.
+個別化された電極の位置は、ソースのローカリゼーション精度を大幅に向上させます [40%以上](https://doi.org/10.3389/fnins.2019.01159), 精度が正しいブロドマン領域の皮質活性を定量化すると定義されるとき. 各々の電極の位置を使用して、3Dデジタル化方法が必要です。 伝統的に、 [ポリヘムス](https://polhemus.com/scanning-digitizing/digitizing-products/) そして、 [ゼブリス](https://www.zebris.de/en/) 電極の相対的な3D位置を図表から提供するために使用されるシステム。 赤外線3Dスキャナへのアクセスが豊富で、スマートフォンの顔のロック解除カメラを含む3Dスキャナは、ミリメートルの精度を持つ3Dスキャンをヘッドから得ることができます。 スキャンは対象の時間から5分かかります。EEGLABなどの利用可能なツールボックスを使用して、デジタル化を実行できます。 [get_chanlocs ディレクティブ](https://github.com/sccn/get_chanlocs/wiki)お問い合わせ スキャン用のスマートフォンを使用して、電極のデジタル化のための最も手頃な価格の方法です。また、ソフトウェアアプリケーションを購入するために50ドルの投資が必要であり、3Dプリントは簡単にスキャンするためのコントラプションをプリントします。 スマートフォンベースの3Dスキャナの詳細なチュートリアルをすぐに提供いたします。 [get_chanlocs ディレクティブ](https://github.com/sccn/get_chanlocs/wiki) wikiページ。
 
-Electrode locations for each individual are often saved as `.sfp` files, which can be easily imported to EEGLAB using `pop_chanedit` function, or from the GUI by selecting <span style="color: brown">Edit → Channel location</span> and selecting the *Read locations* button. Afterwards, a similair approach to the [manual co-registration process](#manual-co-registration-of-the-template-channel-locations) above should be performed, but with **only** using the **Align fiducials** option. Note that warping the montage will remove any subjectivity within the digitized electrode locations and forces the locations to match to the template electrode locations.
+各個々の電極の場所は、多くの場合、保存されます `.sfp` EEGLABに簡単にインポートできるファイル `pop_chanedit` 機能、または選択によってGUIから <span style="color: brown">編集 → チャンネルの場所</span> *Read Location*ボタンを選択します。 その後、シミリアのアプローチ [手動調整プロセス](#manual-co-registration-of-the-template-channel-locations) 上記は、**Align fiducials**オプションを使用してのみ**で実行する必要があります。 モンタージュを警戒すると、デジタイズされた電極の場所内の任意の主観性を削除し、テンプレートの電極の場所に合わせて場所を強制することに注意してください。
 
-## Head model and custom MRI
+## ヘッドモデルとカスタムMRI
 
-When plotting dipole sources in the next [section of the tutorial](/tutorials/09_source/DIPFIT.html), you may plot the head model head surface and the MRI. 
+次にダイポールソースをプロットするとき [チュートリアルのセクション](/tutorials/09_source/DIPFIT.html)ヘッドモデルヘッド面とMRIをプロットできます。 
 
-![Image:model_align.png](../../assets/images/head_mesh.png)
+![画像:model_align.png](../../assets/images/head_mesh.png)
 
-In this case, we are using the tutorial data and the standard BEM model described in the previous sections. The BEM head model mesh was extracted from the average MRI used for plotting, so the alignment is perfect. When using participants' MRI and transformed them to MNI space (for example, using SPM), this allows checking the alignment between the MRI and the head model. 
+この場合、前のセクションで説明するチュートリアルデータと標準BEMモデルを使用しています。 BEMヘッドモデルメッシュは、プロットに使用される平均MRIから抽出されたため、アライメントは完璧です。 参加者のMRIを使ってMNI空間に変身させる(例えばSPMを使う)と、MRIとヘッドモデル間のアライメントを確認できます。 
 
-It is also possible to compute extract 3-D meshes from your participants' MRI and use them to create head models as described in this [FieldTrip tutorial](http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem/). If you have a custom head model, use the dropdown menu *Custom model files from other template or individual subject* in the head model settings. A custom head model for MEG is also possible and described in the next section of the tutorial.
+参加者のMRIから抽出物3次元メッシュを計算し、これを記述したようにヘッドモデルを作成することも可能です。 [FieldTripチュートリアル](http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem/)お問い合わせ カスタムヘッドモデルをお持ちの場合は、ヘッドモデルの設定で、他のテンプレートまたは個々のサブジェクト*からドロップダウンメニュー*カスタムモデルファイルを使用します。 MEG用のカスタムヘッドモデルも、チュートリアルの次のセクションで記述できます。

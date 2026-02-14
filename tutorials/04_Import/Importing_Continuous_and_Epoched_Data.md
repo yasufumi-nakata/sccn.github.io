@@ -5,59 +5,59 @@ long_title: a. Continuous data
 parent: 4. Import data
 grand_parent: Tutorials
 ---
-Importing continuous and epoched data
+連続したデータをインポートする
 =======
-{: .no_toc }
+お問い合わせ
 
-Refer to the [quickstart guide](/tutorials/02_Quickstart/quickstart.html) to load an EEG data file, and scroll data. This section of the tutorial deals with importing raw data files in different formats, some of them only available through EEGLAB plugins. 
+参照して下さい [クイックスタートガイド](/tutorials/02_Quickstart/quickstart.html) EEGデータファイルを読み込み、データをスクロールします。 チュートリアルのこのセクションでは、EEGLABプラグインでのみ利用可能な原材料のファイルを異なるフォーマットでインポートすることに対処します。 
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Four steps to easily import continuous raw data files
+連続した生データファイルを簡単にインポートする4つのステップ
 ------------------
 
-First, if you have a raw EEG data file, determine the file format (for files with extension .cnt might be Neuroscan or ANT raw files, which are two different formats). Then follow these four steps.
-1. Look if a menu item is available in <span style="color: brown">File → Using EEGLAB functions and plugins</span>. If it does, select the menu and import the file.
+まず、元の EEG のデータファイルがある場合、ファイルの形式を決定します(拡張子 .cnt のファイルについては、Neuroscan または ANT の生ファイルであり、2 つの異なるフォーマットです)。 その後、次の4つのステップに従ってください。
+1. メニュー項目が利用可能かどうかを調べる <span style="color: brown">ファイル → EEGLAB関数とプラグインの使用</span>お問い合わせ メニューを選択し、ファイルをインポートします。
 
-2. Use menu item <span style="color: brown">File → Using the File-IO interface</span>. EEGLAB might install the File-IO plugin if you do not have it installed already. If the function does not return an error, your file will be imported. File-IO is a FieldTrip module that imports a variety of data formats. Refer to the [File-IO documentation](https://www.fieldtriptoolbox.org/development/module/fileio/) for more information. 
+2. メニュー項目を使用する <span style="color: brown">ファイル → ファイル IO インターフェイスの使用</span>お問い合わせ EEGLABは、既にインストールされていない場合は、File-IOプラグインをインストールすることがあります。 関数がエラーを返さないと、ファイルがインポートされます。 File-IOは、さまざまなデータフォーマットをインポートするFieldTripモジュールです。 参照して下さい [ファイルIO文書](https://www.fieldtriptoolbox.org/development/module/fileio/) 詳細については、. 
 
-3. Use menu item <span style="color: brown">File → Using the BIOSIG interface</span>. The Biosig toolbox ([biosig.sf.net](http://biosig.sf.net)) contains
-links to functions to read other EEG data formats in MATLAB. EEGLAB might install the BIOSIG plugin if you do not have it installed already. If the function does not return an error, your file will be imported.
+3. メニュー項目を使用する <span style="color: brown">ファイル → BIOSIG インターフェイスの使用</span>お問い合わせ バイオシグツールボックス (Biosig Toolbox)[バイオシグ.sf.net](http://biosig.sf.net)) 含まれる
+MATLABの他のEEGデータフォーマットを読む機能へのリンク。 EEGLABは既にインストールされていない場合は、BIOSIGプラグインをインストールすることがあります。 関数がエラーを返さないと、ファイルがインポートされます。
 
-4. Use menu item <span style="color: brown">File → Manage EEGLAB extensions</span> and search for plugins (use the magnifier on the top right corner). Use the name of the amplifier you are using, for example. Once the plugin is installed, call the newly created sub-menu item in <span style="color: brown">File → Using EEGLAB functions and plugins</span>.
+4. メニュー項目を使用する <span style="color: brown">ファイル → EEGLAB 拡張機能の管理</span> プラグインの検索(右上のマニファイアを使用する)。 使用しているアンプの名前を例に使用します。 プラグインをインストールしたら、新しく作成したサブメニュー項目を呼び出します。 <span style="color: brown">ファイル → EEGLAB関数とプラグインの使用</span>.
 
-In 90% of the cases, the solution above will import the EEG data file. If it does not work, then the rest of this page contains documentation on importing other file formats.
+90%の場合、上記のソリューションはEEGデータファイルをインポートします。 動作しない場合は、このページの残りの部分には、他のファイル形式をインポートするためのドキュメントが含まれています。
 
-Acquiring EEG data from within EEGLAB
+EEGLAB内のEEGデータを取得
 --------------------
 
-EEGLAB and LabStreamingLayer (LSL) are tightly tied as they both originated at the SCCN laboratory at UCSD. By installing the [*lsl_app_MATLABViewer*](https://github.com/labstreaminglayer/App-MATLABViewer/) extension, a menu item <span style="color: brown">File → MATLAB LSL Viewer</span>, not only allows visualizing EEG LSL streams available on the network (Mac and Windows) but also to record them as EEGLAB .set data files. Note that this extension only allows recording one stream at a time. To fuse streams, record data as XDF using the LabRecorder python application, and import the XDF file in EEGLAB using the Mobilab plugin.
+EEGLAB と LabStreamingLayer (LSL) は、UCSD の SCCN ラボで発起点したと密接に結び付けられます。 インストールすることで [*lsl_app_MATLABビューア*](https://github.com/labstreaminglayer/App-MATLABViewer/) 拡張子、メニュー項目 <span style="color: brown">ファイル → MATLAB LSL ビューア</span>EEG LSL ストリームをネットワーク (Mac と Windows) で可視化するだけでなく、EEGLAB .set データファイルとして録画することもできます。 この拡張子は、一度に1回のストリームを記録できるだけに注意してください。 ストリームをヒューズするには、LabRecorder python アプリケーションを使用して XDF としてデータを記録し、Mobilab プラグインを使用して EEGLAB ファイルに XDF ファイルをインポートします。
 
-List of supported Data Formats
+サポートされているデータフォーマットのリスト
 --------------------
 
-The [plugin](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php) page contains all import plugin. Search for a given file extension or amplifier name. The same list of plugins is available through the EEGLAB plugin manager by invoking the <span style="color: brown">File → Manage EEGLAB extensions</span> menu item. If you encounter any problem with a plugin, we suggest you contact the plugin authors. Plugins also often have their own documentation.
+ふりがな [プラグイン](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php) ページには、すべてのインポートプラグインが含まれています。 特定のファイル拡張子またはアンプ名を検索します。 プラグインの同じリストは、EEGLABプラグインマネージャを介して利用可能です。 <span style="color: brown">ファイル → EEGLAB 拡張機能の管理</span> メニュー項目。 プラグインに問題が発生した場合は、プラグインの作者に連絡することをお勧めします。 プラグインには、独自のドキュメントもあります。
 
-Some rare EEGLAB plugins might not be available on the EEGLAB plugin manager and might be instead distributed as zip file by amplifier manufacturers. If you do not see a plugin for your data format, ask your EEG amplifier manufacturer.
+EEGLABプラグインマネージャでは珍しいEEGLABプラグインが利用できず、代わりにアンプメーカーのzipファイルとして配布される場合があります。 データフォーマットのプラグインが見つからない場合は、EEGアンプメーカーにお問い合わせください。
 
-Data import plugins and custom import
+データインポートプラグインとカスタムインポート
 --------------------
 
-### Importing data using command line mexSload of BIOSIG
+### BIOSIGのコマンドラインmexSloadを使用してデータをインポートする
 
-Note that BIOSIG has separate C functions to import data. These functions can be interfaced in MATLAB through the *mexSload* function. There is no graphic interface for that function. However, you may use the *mexSload* function to import data on the MATLAB command line, and then use the documentation in the next section to import the MATLAB array into EEGLAB.
+BIOSIG は、データをインポートするための C 関数を分離しています。 これらの関数は、*mexSload* 関数を介してMATLABでインターフェイスできます。 その機能のグラフィックインターフェイスはありません。 ただし、*mexSload* 関数を使用して、MATLAB コマンドラインでデータをインポートし、次のセクションで MATLAB 配列を EEGLAB にインポートします。
 
-### Importing a MATLAB array
+### MATLAB配列のインポート
 
-We first construct a 2-D MATLAB array 'eegdata' containing simulated EEG
-data in which rows are channels and columns are data points:
+EEG をシミュレートした 2 D MATLAB 配列 'eegdata' を最初に構築します。
+チャネルと列がデータポイントであるデータ:
 
 ``` matlab
 eegdata = rand(32, 256*100);
@@ -65,85 +65,85 @@ eegdata = rand(32, 256*100);
 ```
 
 
-To import these data, select the menu item <span style="color: brown">File →
-Import data → from ASCII/float file or MATLAB array</span>. Click on option MATLAB variable from the list and set the
-name to *eegdata*. Set the sampling frequency to 256 Hz, press *Ok*. Other
-dataset parameters will be automatically adjusted.
+これらのデータをインポートするには、メニュー項目を選択します。 <span style="color: brown">ファイル →
+ASCII/floatファイルまたはMATLAB配列からデータをインポートする</span>お問い合わせ リストからオプションMATLAB変数をクリックし、設定します。
+*eegdata* の名前。 サンプリング周波数を256Hzに設定し、*Ok*を押します。 その他
+データセットパラメータは自動的に調整されます。
 
 
 ![](/assets/images/pop_importdata12.png)
 
 
 
-Note on importing data from other file formats: To import continuous
-data from a MATLAB *.mat* file instead of a MATLAB array, scroll the
-list of choices in the box above that shows MATLAB *.mat* file.
+他のファイル形式からデータをインポートすることに注意してください。 連続輸入
+MATLABの配列ではなくMATLAB *.mat*ファイルからデータをスクロール
+MATLAB *.mat*ファイルを表示するボックスの選択肢のリスト。
 
-Note: When reading a MATLAB *.mat* file, EEGLAB assumes it contains only
-one MATLAB variable. For reading a (32-bit) binary float-format data
-file, two choices are available: *float le* (little-endian) and *float
-be* (big-endian) The correct choice here depends on the operating system. In
-case the bit ordering is unknown, try each of them. Note that the
-toolbox command line function [shortread.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=shortread.m) can also be used
-to read data from a (16-bit) short-integer file. The resulting MATLAB
-array may then be imported into EEGLAB, as shown above.
+注意: MATLAB *.mat* ファイルを読み込むとき、EEGLAB はそれだけを含んでいると仮定します
+1つのMATLAB変数。 (32ビット)バイナリフロート形式のデータを読み込みます
+*float le* (little-endian) と *float の2つの選択肢があります。
+be* (大英) ここで正しい選択は、オペレーティングシステムによって異なります。 お問い合わせ
+ビット注文が不明な場合は、それぞれを試してください。 注意:
+ツールボックスコマンドライン機能 [ショートレッド。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=shortread.m) また、
+(16ビット) 短整数ファイルからデータを読み込みます。 MATLAB の実績
+上記のように、配列は EEGLAB にインポートできます。
 
-Once the data is imported, refer to the [quickstart guide](/tutorials/02_Quickstart/quickstart.html) to scroll the data.
+データをインポートしたら、参照してください。 [クイックスタートガイド](/tutorials/02_Quickstart/quickstart.html) データをスクロールする。
 
-### Importing a file containing a MATLAB structure
+### MATLAB構造を含むファイルをインポートする
 
-MATLAB files may have many different formats. They are simply containers
-(like Excel files may contain data organized in many different ways in
-different tabs). EEGLAB cannot guess the MATLAB file's internal format, so you need to do this step yourself. MATLAB files are best
-imported on the MATLAB command line
+MATLABファイルにはさまざまなフォーマットがあります。 彼らは単に容器です
+(Excelファイルとは異なる方法で整理されたデータが含まれる場合があります)
+異なるタブ)。 EEGLABはMATLABファイルの内部フォーマットを推測できませんので、このステップを自分で行う必要があります。 MATLABファイルが最適
+MATLABコマンドラインでインポート
 
 ``` matlab
 mydata = load(‘-mat’, ‘your_file.mat’)
 ```
 
-Then see where the data is in the “mydata” structure, for example 
-*mydata.eeg* might contain an array that contains raw EEG data (channels
-by samples). Put this data in a MATLAB variable.
+たとえば、データが「mydata」構造にある場所を参照してください。 
+*mydata.eeg* には、生EEGデータ(チャンネル)を含む配列が含まれる場合があります。
+サンプルによって)。 このデータをMATLAB変数に置きます。
 
 ``` matlab
 myeeg = mydata.eeg; % This is an example, the name of the field "eeg" might differ for you
 ```
 
-Then select EEGLAB the <span style="color: brown">File → Import data →
-from ASCII/float file or MATLAB array</span> menu item and enter “myeeg” in the
-first edit box (the previous section has more details on importing
-MATLAB arrays).
+次に、EEGLABを選択 <span style="color: brown">ファイル → インポートデータ →
+ASCII/floatファイルまたはMATLAB配列から</span> メニュー項目に「myeeg」を入れて下さい
+最初の編集ボックス(前のセクションにはインポートの詳細があります)
+MATLAB配列)。
 
-### Importing sets of data averages
+### データ平均のインポートセット
 
-EEGLAB was made to process and visualize single-trial data. <b>Despite this section in the tutorial, we strongly advise against processing and importing data averages</b>. Instead, one should import single-trial data from which event averages may be extracted.
-Event-related potential (ERP) averages can also be processed and
-visualized, but they should not be imported directly.
+EEGLAB は、単一の検索データを処理し、視覚化するために作られました。 <b>チュートリアルのこのセクションにもかかわらず、データ平均の処理とインポートを強くお勧めします</b>お問い合わせ 代わりに、イベントの平均値が抽出される可能性がある単一trialデータをインポートする必要があります。
+イベント関連の潜在能力(ERP)の平均も処理し、
+視覚化されるが、直接輸入してはならない。
 
-However, for old data, only data averages might be available. It is possible to process the three average-ERP epochs as if they were
-single-trial epochs (although in this case, some EEGLAB functions may not
-be meaningful). To import grand-average epochs into EEGLAB, stack the different conditions in
-a single array as explained below.
+ただし、旧データの場合、データ平均のみが利用可能です。 3つの平均ERPのエポックを処理できるのは、
+単一trial epochs (この場合は EEGLAB の機能の一部ではない)
+意味のある)。 EEGLABに壮大なエポックをインポートするには、さまざまな条件をスタック
+以下に説明する配列の1つ。
 
-First, the data averages for different conditions must be imported to
-MATLAB. For example, one may export these averages in text format and
-then use the standard MATLAB function
+まず、異なる条件のデータ平均をインポートする必要があります
+マトラボ たとえば、これらの平均値をテキスト形式でエクスポートすることができます。
+それから標準的なMATLAB機能を使用します
 
 ```matlab
 >> load -ascii filename.txt
 ```
 
-Note that to import ASCII files to MATLAB, all column names and row
-names must be removed.
+ASCIIファイルをMATLAB、すべてのカラム名、行にインポートすることに注意してください。
+名前は削除されなければなりません。
 
-Then you will need to concatenate data averages. For example, from a
-three-condition experiment, we may derive three ERP averages with a
-sampling rate of 1000 Hz, covering from -100 to 600 ms with respect to
-stimulus onsets (Note that we always process each subject individually
-and then compare the results across subjects at the end of the
-analysis).
+データ平均を連結する必要があります。 例えば、
+3つの条件実験では、3つのERP平均を導き出すことができます。
+1000のサンプリング率 Hz、-100から600のmsへのカバーへの
+stimulusのオンセット (各被写体を個別に処理する)
+その後、被写体全体で結果を比較します。
+分析)。
 
-For instance typing *>> whos* under MATLAB might return:
+たとえば、MATLAB で入力 *>> whos* が返される可能性があります。
 
 ``` matlab
 Name                       Size               Bytes                 Class
@@ -154,24 +154,24 @@ avgcond3                   31x600             14880                 double array
 Grand total is 55800 elements using 446400 bytes
 ```
 
-Note: If necessary, transpose the arrays (so rows=channels,
-colunmns=data samples, i.e. chan\*samp) like this (not required for
-this example). Then concatenate the arrays.
+Note: 必要であれば、配列をtranspose(そう rows=channels)
+colunmns=data サンプル, つまり chan\*samp (必須ではありません)
+この例です。 その後、配列を連結します。
 
 ```matlab
 >> allcond = [ avgcond1 avgcond2 avgcond3 ];
 ```
 
-Finally, you will need to import concatenated data averages into EEGLAB as MATLAB arrays.
-Select menu item <span style="color: brown">File → Importing data → From
-ascii/float file or MATLAB array</span> as shown in one of the previous sections.
+最後に、MATLAB 配列として EEGLAB に連結されたデータの平均値をインポートする必要があります。
+メニュー項目を選択 <span style="color: brown">ファイル → データのインポート → から
+ascii/floatファイルまたはMATLAB配列</span> 前のセクションの1つに示すように。
 
-### Other/unsupported data formats
+### その他/非対応のデータ形式
 
-The EEGLAB discussion list archive also contains messages from users for
-importing specific data formats. You may search the list archive (and
-the rest of the EEGLAB web site) archive using Google and adding the keyword *eeglablist*.
+EEGLABのディスカッションリストアーカイブには、ユーザーからのメッセージも含まれています。
+特定のデータフォーマットをインポートします。 リストアーカイブを検索できます。
+Googleを使用してEEGLAB Webサイトの残りの部分とキーワードを追加*eeglablist*.
 
-We are eager to add
-other data importing functions to EEGLAB, so please write a plugin and submit it on this [page](http://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php). We are also in contact with consultants that can create EEGLAB plugins to import unsupported data format, so feel free to contact us.
+追加する意欲
+EEGLABに関数をインポートする他のデータなので、プラグインを書いてこれを提出してください。 [サイトマップ](http://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)お問い合わせ EEGLABプラグインを作成して、サポートされていないデータフォーマットをインポートできるコンサルタントとの連絡も行っていますので、お気軽にお問い合わせください。
 

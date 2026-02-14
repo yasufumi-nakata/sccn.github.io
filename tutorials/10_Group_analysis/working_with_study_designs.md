@@ -5,160 +5,160 @@ work_title: c. How to work with STUDY designs
 parent: 10. Group analysis
 grand_parent: Tutorials 
 ---
-Working with STUDY design
+STUDYの設計と作業
 ===========================
-{: .no_toc }
+お問い合わせ
 
-STUDY designs allow performing statistical comparisons of multiple trial and dataset
-subsets of a STUDY without creating and storing the STUDY more than
-once. All the statistical designs are contained in the STUDY structure
-as (STUDY.design) sub-structures. 
+STUDYの設計により、複数の試験とデータセットの統計的比較を実行できます。
+STUDYのサブセットは、STUDYをより多く作成および保存せずに
+一度。 STUDY構造にすべての統計的設計が含まれている
+(STUDY.design) サブ構造 
 
-For instance, In an oddball paradigm comprising trials time-locked to oddball, distractor, and standard stimuli, a user might want
-to contrast oddball and distractor responses, considered together, with
-responses to standard stimuli. One might also want to look for
-differences between responses to oddball and distractor stimuli. You may handle this by
-defining a single STUDY structure with multiple STUDY designs.
+例えば、 オッズボールパラダイムでは、オッズボール、ディトラクタ、標準刺激、ユーザーが望むかもしれません
+対比オッズボールとディストラクターの応答, 一緒に考慮, と
+標準的な刺激への応答。 探してみることもできます。
+オッズボールとディストラクター刺激への応答の違い。 これを処理することができます
+複数のSTUDY設計で単一のSTUDY構造を定義します。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-One-way STUDY design
+片道STUDYデザイン
 -------------------
 
-For this tutorial, we will use the [STERN STUDY](http://sccn.ucsd.edu/eeglab/download/STUDYstern_125hz.zip) (0.9 Gb). Please download the data on your computer.
+このチュートリアルでは、 [スタンスチュディ](http://sccn.ucsd.edu/eeglab/download/STUDYstern_125hz.zip) (0.9 Gb)。 パソコン上のデータをダウンロードしてください。
 
-### Description of STERN experiment tutorial data
+### STERN実験チュートリアルデータの説明
 
-The classic Sternberg working memory task involves presenting a list of seven letters to memorize, presented one at a time. These letters, colored in green, are interspaced with letters to ignore, colored in red, and followed by a memory maintenance period during which the subject must maintain the list of letters to remember in memory. The maintenance period is terminated by the onset of a *probe* letter and the subject must respond whether the letter was in their memorized list of letters or not.
+古典的なSternberg作業メモリタスクは、7つの文字のリストを記憶に提示することを含みます。 これらの文字は、緑で色付けされ、無視する文字と赤で色付けされ、その後、被写体が記憶に覚える文字のリストを維持しなければならないメモリメンテナンス期間で続いています。 メンテナンス期間は、*probe* の文字の発音によって終了し、その文字が文字の記憶されたリストにあるかどうか、被写体は応答しなければなりません。
 
-Trials contained varying numbers of *ignore* letters (either 1, 3, or 5), and the order of *memorize* and *ignore* letters in a given trial was randomized.
+*ignore* 文字(1、3、5 文字)と *memorize* 文字と *ignore* 文字の文字を区別する試験はランダム化しました。
 
-Event codes are the following:
-- Memorize letters: *uppercase letter*, for example, B, H, W, F, etc...
-- Ignore letters: *lowercase ‘g’, uppercase letter*, for example, gB, gH, gW, gF, etc... (*g* stands for *green*, see above explanation)
-- Probe letters: *lowercase ‘r’, uppercase letter*, for example, rB, rH, rW, rF, etc... (*r* stands for *red*, see above explanation)
+イベントコードは以下の通りです。
+- 文字を記憶: *uppercase 手紙*、例えば B、H、W、F、等...
+- 無視する文字: *lowercase ‘g’、大文字*、例えば、gB、gH、gW、gFなど... (*g* は *green* の略で、上記の説明を参照してください)
+- プローブレター: *lowercase ‘r’、大文字*、例えば、rB、rH、rW、rFなど... (*r* は *red* の略で、上記の説明を参照してください)
 
-The PDF document within the zip archive contains additional details about the task.
+zipアーカイブ内のPDF文書には、タスクに関する追加の詳細が含まれています。
 
-### Reviewing STUDY information
+### STUDY情報のレビュー
 
-Use menu item <span style="color: brown">File → Load existing study</span> and select the *stern.study* file. After the *STUDY* is loaded in EEGLAB,  select the <span style="color: brown">Study → Edit study info</span> menu item. The following interface will pop up.
+メニュー項目を使用する <span style="color: brown">ファイル → 既存の研究をロードする</span> *stern.study*ファイルを選択します。 EEGLABに*STUDY*が読み込まれた後、 <span style="color: brown">学習 → 学習情報編集</span> メニュー項目。 次のインターフェイスがポップアップ表示されます。
 
-![Image:studydesign6.png](/assets/images/studydesign6.png)
+![画像:studydesign6.png](/assets/images/studydesign6.png)
 
-This interface contains information about the *STUDY*, in particular, the list of datasets, conditions, sessions, and runs associated with them. It is described in detail in the [STUDY creation tutorial](/tutorials/10_Group_analysis/study_creation.html). In this case, it shows that for each subject, we have three epoched datasets, one containing letters to *memorize*, one containing letters to *ignore* letters data epochs, and one containing *probe* letters.
+このインターフェイスには、特に、データセット、条件、セッションの一覧、およびそれらに関連する実行に関する情報が含まれています。 それは細部で記述されます [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html)お問い合わせ この場合、各被写体に対しては、*memorize* に文字を含む3つのepochedデータセット、*ignore* 文字データエポックを含む1つ、*probe* 文字を含む1つがあります。
 
-### Looking at current STUDY design
+### 現在のSTUDYデザインを見る
 
-To edit the *STUDY* design, select
-the second *STUDY* menu item <span style="color: brown">Study → Select/Edit study design(s)</span>. This will pop up the following interface.
+*STUDY* デザインを編集するには、選択します
+2番目の*STUDY*メニュー項目 <span style="color: brown">研究 → 選択/編集研究設計(s)</span>お問い合わせ 以下のインターフェイスをポップアップします。
 
-![Image:Studydesign.jpg](/assets/images/studydesign7.png)
+![画像:Studydesign.jpg](/assets/images/studydesign7.png)
 
-The three push buttons on the top panel may be used to:
- - Add a new design ("Add
-design")
-- Rename a given design ("Rename design")
-- Or delete a given
-design ("Delete design")
+上部パネルの3つの押しボタンは、以下に使用できます。
+ - 新しいデザインを追加(「追加」)
+デザイン
+- 指定されたデザインの名前を変更します(「名前のデザイン」)
+- または指定された削除
+デザイン(「デザイン削除」)
 
-Note that the first design cannot be deleted.
-The design does not have a name because it was automatically generated when importing the data. You press the *Rename* button and name the design *Comparing memorize, ignore, and probe letters*.
+最初の設計は削除できませんのでご注意ください。
+データをインポートする際に自動的に生成されたため、設計は名前を持っていません。 *Rename*ボタンを押し、デザイン名*の比較、メモ、無視、プローブ文字*を名付けます。
 
-The four push buttons on the bottom panel may be used to:
-- Add a new independent variable to the current design
-- Edit an independent variable
-- Delete and independent variable
-- List independent variables
+下部パネルの4つの押しボタンは以下に使用できます。
+- 現在の設計に新しい独立した変数を加えて下さい
+- 独立した変数を編集する
+- 削除と独立した変数
+- 独立した変数のリスト
 
-Press the *Edit* button in the lower panel. The following GUI pops up. We can see that the *condition* independent variable is selected. We can also see that the two conditions are *ignore* (letters), *memorize* (letters), and  *probe* (letters).
+下部パネルの*Edit*ボタンを押します。 次のGUIがポップアップ表示されます。 *condition*の独立した変数が選択されていることを見ることができます。 また、2つの条件が*ignore*(レター)、*memorize*(レター)、*probe*(レター)であることを見ることができます。
 
-![Image:Studydesign.jpg](/assets/images/studydesign8.png)
+![画像:Studydesign.jpg](/assets/images/studydesign8.png)
 
-When using standard EEGLAB statistics, up to two categorical independent variables may be defined (two rows on lower panel). When using the *LIMO* plugin to perform statistics, an arbitrary number of continuous and categorical variables may be used.
-- Categorical variables are variable that takes discrete values, such as conditions (in this case *ignore* vs *memorize* vs *probe* letters)
-- Continuous variables are variable that takes continuous values, such as reaction time.
+標準の EEGLAB の統計を使用する場合は、2 つのカテゴリの独立した変数が定義される(2 列の下のパネル)。 *LIMO*プラグインを使用して統計を実行する場合、連続および分類変数の任意の数が使用される場合があります。
+- Categorical変数は条件(この場合*ignore*対*memorize*対*の*probe*の手紙)のようなdiscreteの価値を、取る変数です
+- 連続変数は、反応時間などの連続値を取る変数です。
 
-Once an independent variable is selected, it is possible to
-select only a subset of its values. All the datasets or trials not
-selected will simply not be included when plotting measures for that design. For instance, in this specific example, the independent variable *condition*
-may take the values *ignore* and *memorize* only to compare between the two types of letters. 
+独立した変数を選択したら、
+値のサブセットだけを選択します。 すべてのデータセットまたはトライアルは、
+その設計の対策をプロットするときは、単に含まれません。 例えば、この特定の例では、独立した変数 *condition*
+*ignore* と *memorize* の値を 2 つのタイプの文字を比較するだけ取るかもしれません。 
 
-Press *Ok* to go back to the *STUDY* design interface. Now press the *List factor* button. These are the list of independent variable values (or beta parameters) if you use a general linear model in the LIMO plugin hierarchical analysis. Refer to the [LIMO plugin documentation](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) for more information.
+*STUDY*の設計インターフェイスに戻るために*Ok*を押して下さい。 *リストファクター*ボタンを押します。 これらは、LIMOプラグイン階層分析で一般的なリニアモデルを使用する場合、独立した変数値(またはベータパラメータ)のリストです。 参照して下さい [LIMOプラグインのドキュメント](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) 詳細については、.
 
 ![](/assets/images/studydesign30.png)
 
-### Creating a new STUDY design
+### 新しいSTUDYデザインを作成する
 
-To illustrate how to manipulate *STUDY* designs, we are going to create an equivalent design using event types instead of dataset conditions. 
-Press the *New* design button. Then, press the *Rename* button and rename the new design *Same as first design but using event types*. 
+*STUDY*のデザインを操作する方法を説明するには、データセットの条件ではなくイベントタイプを使用して、同等のデザインを作成するつもりです。 
+*New*デザインボタンを押します。 それから、*Rename*ボタンを押し、新しい設計*Sameを最初の設計として名前を変更して下さい、でき事のタイプ*を使用して下さい。 
 
-Then, select the *New* button in the independent variable panel (lower panel). The following window pops up. Select *type* for the independent variable. 
-- Select all the letters not preceded by *g* or *r*. These are the *memorize* letters. Press the *combine* button to combine these letters.
-- Select all letters preceded by *g*. These are the *ignore* letters. Press the *combine* button to combine these letters.
-- Select all letters preceded by *r*. These are the *probe* (recall) letters. Press the *combine* button to combine these letters.
-Go down to the bottom of the letter list and select the three sets of combined event types. 
+それから、独立した変数パネル(より低いパネル)の*New*ボタンを選んで下さい。 次のウィンドウがポップアップ表示されます。 独立した変数の *type* を選択します。 
+- *g* または *r* で規定されていないすべての文字を選択します。 これらは *memorize* 文字です。 *combine*ボタンを押してこれらの文字を結合します。
+- *g* で優先されるすべての文字を選択します。 *ignore* 文字です。 *combine*ボタンを押してこれらの文字を結合します。
+- *r* で優先されるすべての文字を選択します。 *probe*(recall)の文字です。 *combine*ボタンを押してこれらの文字を結合します。
+文字リストの下部に移動し、組み合わせたイベントタイプの3セットを選択します。 
 
-![Image:Studydesign.jpg](/assets/images/studydesign9.png)
+![画像:Studydesign.jpg](/assets/images/studydesign9.png)
 
-This selection is equivalent to selecting the three conditions in the previous design. However, it is conceptually quite different. In the first case, we are comparing trials contained in different datasets (i.e., EEGLAB data files). In the second case, we are only selecting event types, which may be in one dataset or several datasets.
+この選択は、以前の設計で3つの条件を選択することと同じです。 しかし、それは概念的にかなり異なります。 最初のケースでは、異なるデータセット(EEGLABデータファイル)に含まれる試行を比較しています。 2番目のケースでは、データセットまたは複数のデータセットにあるイベントタイプのみを選択します。
 
-The list of independent variables is automatically generated
-based on the STUDY definition information and also based on events from
-each of the datasets. Every single event field (as visible in the <span style="color: brown">Edit → Event values</span>) is automatically made visible. Note that only information about the time-locking event is shown, and other events within data epochs are ignored. However, EEGLAB populates empty fields within data epochs with information from other events within the same epochs. For example, events might have a field *correct* belonging to *reaction time* events (not the time-locking event) containing true or false. All events have the same fields so other events will also have a *correct* event field, which will be empty since it is not defined for these events. If this is the case, then the value (true or false) is automatically copied to all events within a given epoch, and may be selected as an independent variable in the GUI above. For details on what information is
-being extracted from datasets, refer to the [STUDY design structure](/tutorials/ConceptsGuide/Data_Structures.html#the-studydesign-sub-structure)
-tutorial. 
+独立した変数のリストは自動的に生成されます
+STUDYの定義情報に基づいており、またからのでき事に基づく
+各データセット。 単一のイベントフィールド(表示されているように) <span style="color: brown">編集 → イベントの値</span>)は自動的に表示されます。 タイムロックイベントに関する情報のみが表示され、データエポック内の他のイベントは無視されます。 しかしながら、EEGLABは同じエポック内の他のイベントからの情報で、データエポック内の空のフィールドを出力します。 たとえば、イベントには、*reaction time* イベント (タイムロックイベントではなく) のフィールド *correct* が含まれている場合があります。 全てのイベントは同じフィールドを持っているので、他のイベントも *correct* イベントフィールドを持っています。これらのイベントでは定義されていないため、空になります。 この場合、指定したエポック内のすべてのイベントに値(trueまたはfalse)が自動的にコピーされ、上記のGUIで独立した変数として選択できます。 情報の内容について
+データセットから抽出され、参照して下さい [STUDYの設計構造](/tutorials/ConceptsGuide/Data_Structures.html#the-studydesign-sub-structure)
+チュートリアル。 
 
-You may also read the [event scripting tutorial](/tutorials/11_Scripting/Event_Processing_command_line.html#adding-event-information-for-group-analysis) for defining new independent variables based on event context.
+読むこともできます。 [イベントスクリプトチュートリアル](/tutorials/11_Scripting/Event_Processing_command_line.html#adding-event-information-for-group-analysis) イベントコンテキストに基づいて新しい独立した変数を定義する。
 
-### Plotting ERPs for two designs
+### 2つの設計のためのPlotting ERPs
 
-We describe in detail data plotting in the group analysis data [visualization tutorial](/tutorials/10_Group_analysis/study_data_visualization_tools.html). However, we will plot and compare the ERPs for these two designs. 
+グループ分析データの詳細なデータプロットを記述 [可視化チュートリアル](/tutorials/10_Group_analysis/study_data_visualization_tools.html)お問い合わせ しかし、これらの2つのデザインに対してERPをプロットして比較します。 
 
-First, we need to precompute measures. Select menu item <span style="color: brown">Study → Precompute channel measures</span>, click the *ERP* checkbox, and press *Ok* (interface not shown). Then select menu item <span style="color: brown">Study → Plot channel measures</span>. The following interface pops up. Select electrode *Oz*.
+まずは、対策を優先する必要があります。 メニュー項目を選択 <span style="color: brown">研究 → プレコプトチャネル対策</span>*ERP*チェックボックスをクリックし、*Ok*(インターフェイスは表示されません)を押します。 メニュー項目を選択 <span style="color: brown">研究 → プロットチャネル対策</span>お問い合わせ 次のインターフェイスがポップアップ表示されます。 電極を選択 ※Oz*
 
 ![](/assets/images/studydesign13.png)
 
-Press the *Params* button and select the central checkbox to plot the first independent variable on the same panel as shown below. Press *Ok* to come back to the *STUDY* plotting GUI.
+*Params*ボタンを押し、中央のチェックボックスを選択して、下と同じパネルで最初の独立した変数をプロットします。 ニュース *STUDY*のプロットGUIに戻るOk*。
 
 ![](/assets/images/studydesign12.png)
 
-Press the *Plot ERPs* pushbutton to plot the ERP for the first channel in the list. The following plot showing the grand-average ERP for each condition will pop up. Then in the upper part of the *STUDY* plotting GUI, switch to the other design and again press the *Plot ERPs* button. The two plots are shown below side by side.
+*Plot ERPs* pushbuttonを押して、リストの最初のチャンネルでERPをプロットします。 各条件のグランド平均ERPを示す次のプロットがポップアップ表示されます。 その後、GUIをプロットする*STUDY*の上部に、他の設計に切り替えて、再度*Plot ERPs*ボタンを押します。 横に2つのプロットが表示されます。
 
 ![](/assets/images/studydesign10.png)
 
-The conditions are assigned different colors, but the ERPs are identical in both conditions. This illustrates that the two designs are equivalent.
+条件は異なる色を割り当てられますが、ERPは両方の条件で同一です。 2つのデザインが同等であることを表しています。
 
-Two-way STUDY design
+ツーウェイSTUDYデザイン
 --------------------------
 
-Each letter is preceded by other letters. Thus, when each letter is presented, there is a memory load from 0 (no other letter to remember yet) to 7. For memory load 7, there is no condition memorize (the load for the memorize letters goes from 0 to 6, which correspond to the number of letters already memorized). Note that the number of letters for condition 6 is low (a total of 31 for the *ignore* condition), which is why we will only select memory load from 0 to 5 below.
+各文字は他の文字で優先されます。 したがって、各文字が提示されると、0(まだ覚えていない他の文字)から7へのメモリ負荷があります。 メモリーロード7の場合、条件の記憶はありません(記憶文字の負荷は0〜6で、既に記憶されている文字の数に対応します)。 条件6の文字数が低い(*ignore*条件の合計31)であることに注意してください。そのため、以下の0から5までのメモリ負荷のみが選択されます。
 
-Again select
-the second *STUDY* menu item <span style="color: brown">Study → Select/Edit study design(s)</span>. Create a third design called *2-way design, letter type x load*.
+繰り返し選択
+2番目の*STUDY*メニュー項目 <span style="color: brown">研究 → 選択/編集研究設計(s)</span>お問い合わせ *2ウェイ設計、レタータイプ×ロード*と呼ばれる3番目のデザインを作成します。
 
 ![](/assets/images/studydesign21.png)
 
-For this design, use two independent variables, one is the type of letter and we select *ignore* and *memorize* (since *load* is irrelevant for *probe* letters). We also select the memory load from 0 to 5 and change the type of variable to *categorical* instead of *continuous* (it would also be possible to select *continuous*, but this would require using the LIMO plugin to compute statistics and plot results).
+この設計では、2つの独立した変数を使用し、1つは文字の型で、*ignore*と*memorize*(*load*は*probe*の手紙のために無関係です)を選択します。 また、0から5までのメモリ負荷を選択し、*continuous*の代わりに*categorical*に変数のタイプを変更します(*連続*を選択することもできますが、これはLIMOプラグインを使用して統計を計算し、結果をプロットする必要があります)。
 
 ![](/assets/images/studydesign22.png)
 
-Since we have precomputed measure in the previous section, there is no need to do that again - before EEGLAB 2019, one had to recompute measures for each design, but this is no longer necessary. Select menu item <span style="color: brown">Study → Plot channel measures</span>. Select electrode *Oz* and press the *Plot ERPs* button. The following plot pops up.
+前のセクションでは、事前に計算された測定値を持っているので、EEGLAB 2019の前に、EEGLAB 2019の前に、それぞれの設計に対する措置を再計算する必要がありましたが、これはもはや必要ではありません。 メニュー項目を選択 <span style="color: brown">研究 → プロットチャネル対策</span>お問い合わせ 電極*Oz*を選択し、*Plot ERPs*ボタンを押します。 以下のプロットがポップアップします。
 
 ![](/assets/images/studydesign23.png)
 
-Here we have one panel per memory load. To interpret this plot, we would need to select a shorter frequency range, overlay loads for both the *memorize* and *ignore* conditions, and compute statistics. See the [group analysis statistic tutorial](/tutorials/10_Group_analysis/study_statistics.html) for further details.
+ここでは、メモリ負荷ごとに1つのパネルがあります。 このプロットを解釈するためには、より短い周波数範囲、*memorize* と *ignore* 条件の両方のオーバーレイ負荷、および計算統計を選択する必要があります。 詳細はこちら [グループ分析統計チュートリアル](/tutorials/10_Group_analysis/study_statistics.html) 詳しくはお問い合わせください。
 
-This simple example shows that the range of possibilities for STUDY
-designs is large. More details about STUDY.design structure is available
-in the [STUDY structure](/tutorials/ConceptsGuide/Data_Structures.html#the-study-structure)
-part of the tutorial.
+この単純な例は、STUDY の可能性の範囲を示しています
+設計は大きいです。 STUDYの詳細はこちら 設計構造は利用できます
+お問い合わせ [STUDY構造](/tutorials/ConceptsGuide/Data_Structures.html#the-study-structure)
+チュートリアルの一部。
 
-For more complex designs, one must use the LIMO EEGLAB plugin. Refer to the [LIMO plugin documentation](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) for more information. 
+より複雑な設計については、LIMO EEGLABプラグインを使用する必要があります。 参照して下さい [LIMOプラグインのドキュメント](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) 詳細については、. 

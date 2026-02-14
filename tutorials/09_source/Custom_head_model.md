@@ -5,73 +5,73 @@ long_title: d. Using a custom head model
 parent: 9. Source analysis
 grand_parent: Tutorials
 ---
-Use scanned electrode locations
+スキャンされた電極の位置の使用
 ===========================
-The use of a custom head model can improve source localization. For
-EEG, scanned electrode positions contain information about the subject's head geometry
-and may be used to deform/adapt a template head model. This is not as accurate as co-registering
-the measured electrode locations to an individual MR head image - when available - but
-is more accurate than fitting template electrode positions to a template head model [Akalin Acar & Makeig, 2013](https://pubmed.ncbi.nlm.nih.gov/23355112/).
-Building an electrical forward model for each subject based on their individual MR head image also allows inverse more accurate and meaningful source modeling to the individual convoluted cortical surface. This is not possible using a template forward model as each participant's cortical convolutions cannot be well determined by knowing their skull shape (e.g., based on measured electrode positions).
+カスタムヘッドモデルの使用は、ソースのローカリゼーションを向上させることができます。 お問い合わせ
+EEG、スキャンされた電極の位置は、被写体のヘッドジオメトリに関する情報が含まれています
+テンプレートヘッドモデルを変形/アダプトするために使われます。 これは、共同登録として正確ではありません
+測定された電極の位置を個々の MR の頭部のイメージに-利用できるとき-しかし
+テンプレートヘッドモデルにテンプレートの電極位置を合わせるよりも正確です [アカリン・アカー&マディグ2013](https://pubmed.ncbi.nlm.nih.gov/23355112/).
+個々のMRヘッドイメージに基づいて、各被写体に電気的フォワードモデルを構築することで、個々の複雑な形状面へのより正確で有意義なソースモデリングが可能になります。 各参加者の相関関係は、頭蓋骨形状(例、測定された電極位置)を知ることで決定できないため、テンプレートフォワードモデルを使用することはできません。
 
-Even without having the participant's MR head image, having measured 3D positions of the scalp electrodes
-will significantly improve the accuracy of source localization, because we may deform the template head model to adapt to the subject head geometry.
-Template electrode locations (even for montages based on The International 10-20 System) may differ greatly between manufacturers. 
-But scanning the actual 3D positions (relative to head landmarks and one another) has become easy and inexpensive. 
-For this we may use modern smartphones that include 3-D scanners
-(iPhone 13 pro, Samsung Galaxy S20 Ultra, etc...), or relatively cheap 3D-camera attachments (Structure.io) to standard computer tablets.  
+参加者のMRヘッドイメージを持たなくても、スカルプ電極の3D位置を測定
+テンプレートヘッドモデルを変形させ、対象ヘッドジオメトリに適応させるため、ソースローカリゼーションの精度が大幅に向上します。
+テンプレートの電極の位置(国際10-20システムに基づいても)はメーカー間で大きく異なる場合があります。 
+しかし、実際の3D位置をスキャン(頭のランドマークともう1つの関係)は簡単で安価になりました。 
+3Dスキャナを含むモダンなスマートフォンをご使用いただけます。
+(iPhone 13 Pro、Samsung Galaxy S20 Ultraなど)、または標準的なコンピュータタブレットに比較的安い3Dカメラアタッチメント(Structure.io)。  
 
-We are further developing the EEGLAB function to assist in recording 3D electrode positions acquired by a 3D camera. 
-The [get_chanlocs plug-in](https://github.com/sccn/get_chanlocs/wiki),  based on functions
-implemented in [FieldTrip](https://www.fieldtriptoolbox.org/tutorial/electrode/), assists the data analyst in ascertaining 3D electrode positions from a 3D scanned head image, thus relieving experiment participants of the need to sit through a long period of waiting while technicians use a magnetic or other stylus to record the electrode positions one by one, as was formerly necessary with the Polhemus system for example. 
+3Dカメラで取得した3D電極位置の記録を支援するためのEEGLAB機能を開発しています。 
+ふりがな [get_chanlocs プラグイン](https://github.com/sccn/get_chanlocs/wiki)、機能に基づいて
+導入事例 [フィールドトリップ](https://www.fieldtriptoolbox.org/tutorial/electrode/)3Dスキャンされたヘッドイメージから3D電極の位置を把握するデータアナリストを支援します。そのため、技術者が磁気または他のスタイラスを使用して、Polhemusシステムで以前必要だったように、1つの電極の位置を1つずつ記録する間、待機期間を通して座る必要性の実験参加者を取り除きます。 
 
-After 3-D scanning, you may use the [get_chanlocs](https://github.com/sccn/get_chanlocs/wiki) EEGLAB plugin to measure the same electrode positions (one by one) in the scanned head image. This requires a few minutes, and can be further reduced by first saving and thereafter reusing a montage template. It should be possible to use machine vision methods to further automate this process, a feature we hope to introduce during 2023.
+3Dスキャンの後、あなたは使用することができます [get_chanlocs ディレクティブ](https://github.com/sccn/get_chanlocs/wiki) EEGLABプラグインは、スキャンされたヘッドイメージで同じ電極位置(一つずつ)を測定します。 これを数分間必要とし、保存後、モンタージュのテンプレートを再利用することでさらに削減できます。 2023年頃に導入したい機能で、機械ビジョンの仕組みを更に自動化できるはずです。
 
-![Screen Shot 2022-12-10 at 12 26 58 PM](https://user-images.githubusercontent.com/1872705/206874056-8a2e646e-aff5-4a8b-b342-292725f6ae88.png)
+![スクリーンショット 2022-12-10 12 26 58 PM](https://user-images.githubusercontent.com/1872705/206874056-8a2e646e-aff5-4a8b-b342-292725f6ae88.png)
 
-If you have scanned electrode positions and wish to use them for source localization, you may follow the [DIPFIT settings](Model_Settings.md) tutorial. If you also have an MR head image for each participant, you may use EEGLAB's [Neuroelectromagnetic Forward head modeling Toolbox (NFT)](https://github.com/sccn/NFT) to create individual electrical head models that you can either import into DIPFIT or use NFT to fit either equivalent dipole or distributed cortical surface models of effective EEG sources identified in your data by independent component analysis (ICA). In this tutorial, however, we will use the FieldTrip-related tools to build head models from MR head images.
+電極の位置をスキャンし、ソースのローカリゼーションのためにそれらを使用したい場合は、次のことができます [DIPFITの設定](Model_Settings.md) チュートリアル。 各参加者にMRヘッドイメージがある場合には、EEGLABの使い方もできます。 [神経電磁気 フォワードヘッドモデリングツールボックス(NFT)](https://github.com/sccn/NFT) DIPFITにインポートしたり、NFTを使用して、個々の電気ヘッドモデルを作成したり、独立したコンポーネント分析(ICA)によってデータで識別された効果的なEEGソースの同等のダイポールまたは分散コルテ面モデルに収まることができます。 このチュートリアルでは、フィールドトリップ関連のツールを使用して、MRヘッドイメージからヘッドモデルを構築します。
 
-Custom head models
+カスタムヘッドモデル
 =================
-If you have the scanned 3D electrode positions and also have subject MR head images, then you may build a custom electrical head model for each subject. This model specifies how potentials generated anywhere in the brain volume (by one or more theoretical 'tiny battery' current dipoles) are propagated by volume conduction to the scalp. Often, researchers remove the face of the subject from shared MR head images for privacy purposes. It is preferable to use the non-defaced MRI for electrical head modeling. First, it may not be possible to precisely measure the skull fiducial points in the MRI, as the nasion is often missing. Even if the position of the nasion is available, the structure of the upper face and facial bones of the subject influences volume conduction to the frontal scalp, so it is important to have it when extracting the scalp and skull surfaces. Nevertheless, we will use a defaced MRI in this tutorial -- here with the positions of the nasion and other fiducials provided separately by the data authors.
+スキャンされた3Dの電極の位置があり、またMRの頭部のイメージを写し出せば、各主題のための注文の電気ヘッド モデルを造ることができます。 このモデルは、脳のボリューム(単一または複数の理論的な「tiny電池の現在のダイポール」によって)のどこに発生する可能性がスカルプへのボリューム伝導によって伝播されるかを規定しています。 多くの場合、研究者は、共有されたMRヘッド画像から被写体の顔をプライバシー目的のために削除します。 電動ヘッドモデリング用の非面MRIを使用するのが望ましいです。 まず、ネジョンがしばしば欠落しているので、MRIの頭蓋骨の点を正確に測定することはできません。 吐き気の位置が入手可能な場合でも、被写体の上部の顔と顔の骨の構造は、正面の頭皮への容積伝導に影響を及ぼすので、頭皮と頭皮の表面を抽出するときにそれを持っていることが重要です。 それにもかかわらず、このチュートリアルでは、このチュートリアルでは、データ作成者によって個別に提供される陰影や他の文書の位置をここに使用します。
 
-In this tutorial, we will use the popular [Henson-Wakeman dataset](https://nemar.org/dataexplorer/detail?dataset_id=ds000117). We will only use some files from the first subject, available [here](https://sccn.ucsd.edu/eeglab/download/ds000117_sub-01.zip). The MRI overlay plots shown below are from FieldTrip. DIPFIT is an extension of EEGLAB that leverages FieldTrip functions for equivalent dipole source model localization.
+このチュートリアルでは、我々は人気を使用することができます [Henson-Wakeman データセット](https://nemar.org/dataexplorer/detail?dataset_id=ds000117)お問い合わせ 最初の被写体から一部のファイルのみが使用可能です。 [詳しくはこちら](https://sccn.ucsd.edu/eeglab/download/ds000117_sub-01.zip)お問い合わせ 以下に示すMRIオーバーレイプロットはFieldTripです。 DIPFITはEEGLABの拡張機能で、FieldTrip機能を利用して、同等のダイポールソースモデルのローカリゼーションを実現します。
 
-## Aligning MRI with fiducials
+## MRIをファイズシャルと関連付ける
 
-We first import the data using menu item <span style="color:brown">*File > Import data > Using the File-IO interface*</span>, and select the *sub-01_ses-meg_task-facerecognition_run-01_meg.fif* file in the *ses-meg* folder. The fiducials are stored in the *sub-01_ses-meg_coordsystem.json*. EEGLAB will automatically detect this file and import the fiducials. When using other data formats, fiducials will usually be defined along with electrode locations. You may add the fiducials manually using menu item <span style="color:brown">*Edit > Channel locations*</span>.
+メニュー項目を使用してデータをインポートする <span style="color:brown">*ファイル > インポートデータ > File-IO インターフェイスを使用する*</span>*ses-meg*フォルダ内の*sub-01_ses-meg_task-facerecognition_run-01_meg.fif*ファイルを選択します。 *sub-01_ses-meg_coordsystem.json* に保存されます。 EEGLAB は、このファイルを自動検出し、そのファイルを読み込みます。 他のデータフォーマットを使用する場合は、通常は電極の位置と定義されます。 メニュー項目を手動で追加することができます <span style="color:brown">*編集 > チャンネルの場所*</span>.
 
-Then we select EEG channels since this dataset contains both EEG and MEG data. Use menu item <span style="color:brown">Edit > Select data</span> and select all the channels whose channel labels begin with 'EEG'. Note that you may omit channels 367 to 370 (labels EEG061 to EEG064) which are EOG and ECG channels, and should not be included in EEG-related analyses.
+次に、EEGとMEGの両方のデータが含まれているため、EEGチャネルを選択します。 メニュー項目を使用する <span style="color:brown">編集 > データの選択</span> チャンネルラベルが「EEG」で始まるすべてのチャンネルを選択します。 EOG および ECG チャネルである EEG061 に 367 から 370 (ラベル EEG061 から EEG064) へのチャネルを省略し、EEG 関連の分析に含まれるべきではないことに注意してください。
 
-![Screen Shot 2022-12-12 at 9 50 23 AM](https://user-images.githubusercontent.com/1872705/207117594-941ad9e9-5599-4208-89a7-48a93e41bcdc.png)
+![スクリーンショット 2022-12-12 に 9 50 23](https://user-images.githubusercontent.com/1872705/207117594-941ad9e9-5599-4208-89a7-48a93e41bcdc.png)
 
-Then call menu item <span style="color:brown">Tools > Source localization using DIPFIT > Create a head model from an MRI</span>. A window asks you to choose an MR head image, and the following GUI appears.
+メニュー項目の呼び出し <span style="color:brown">ツール > DIPFITを用いたソースローカリゼーション > MRIからヘッドモデルを作成する</span>お問い合わせ MRヘッドのイメージを選択し、次のGUIが表示されます。
 
-![Screen Shot 2022-12-11 at 3 35 19 PM](https://user-images.githubusercontent.com/1872705/206955411-513057c1-46e4-4f7c-ab77-c11493feedb0.png)
+![スクリーンショット 2022-12-11 に 3 35 19 PM](https://user-images.githubusercontent.com/1872705/206955411-513057c1-46e4-4f7c-ab77-c11493feedb0.png)
 
-This will first pop up the fiducials. The fiducials are automatically aligned with the MR head image in this example. However, it is always good to check the alignment. We can see below that the fiducials are where we would expect them to be (the thin blue lines indicate their positions).
+これは、まず第一弾をポップアップします。 この例では、MR ヘッドイメージと自動整列されます。 しかし、アライメントをチェックするのはいつも良いです。 私たちがそれらが期待する場所(薄い青い線が自分の位置を示す)の下の図を見ることができます。
 
-![Screen Shot 2022-12-11 at 3 37 03 PM](https://user-images.githubusercontent.com/1872705/206935920-b0f5e662-8571-40af-bba3-709eed80e306.png)
+![スクリーンショット 2022-12-11 に 3 37 03](https://user-images.githubusercontent.com/1872705/206935920-b0f5e662-8571-40af-bba3-709eed80e306.png)
 
-Then the MRI is segmented into the brain, skull, and scalp, and meshes are extracted. It is important to note that it is better to use Freesurfer to segment MRI and create meshes, as it is a more precise (albeit more time-consuming process). The other added advantage is that various Atlases are defined, which may be used with the EEGLAB [ROIconnect](https://github.com/arnodelorme/roiconnect) plug-in. The [pop_dipfit_headmodel.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_headmodel.m) uses the "bemcp" method, a module external to FieldTrip, to extract meshes. Again, this might not be the best solution -- the default in FieldTrip is to the "dipoli" method, although currently this only works on Linux and Windows. You may change these settings by changing the parameter of the [pop_dipfit_headmodel.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_headmodel.m) function when calling it from the command line.
+それからMRIは脳、頭蓋骨および頭皮に分けられ、網は抽出されます。 MRIをセグメント化し、メッシュを作成するためにFreesurferを使用する方が良いことに注意することが重要です。それはより正確です(より時間がかかりますプロセス)。 その他の追加の利点は、様々なことです アトラスを定義します。, EEGLAB で使用できます。 [ROIconnectについて](https://github.com/arnodelorme/roiconnect) プラグイン。 ふりがな [pop_dipfit_headmodel.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_headmodel.m) "bemcp" メソッド、FieldTrip の外部モジュールを使用してメッシュを抽出します。 繰り返しますが、これは最高のソリューションではないかもしれません。FieldTrip のデフォルトは "dipoli" メソッドです。現在、これは Linux と Windows でのみ動作します。 パラメータを変更することで、これらの設定を変更することができます。 [pop_dipfit_headmodel.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_headmodel.m) コマンドラインから呼び出すときの関数。
 
-![Screen Shot 2022-12-11 at 7 39 20 PM](https://user-images.githubusercontent.com/1872705/206955695-e1522efe-793e-4fcc-a3ed-4b8573db67cf.png)
+![スクリーンショット 2022-12-11 7 39 20 PM](https://user-images.githubusercontent.com/1872705/206955695-e1522efe-793e-4fcc-a3ed-4b8573db67cf.png)
 
-Once this is done, call menu item <span style="color:brown">Tools > Source localization using DIPFIT > Head model and settings</span>. We can see that the head model, MRI, and associated coordinate landmarks are blanked out. The graphic interface also shows that we are editing a custom head model in the FieldTrip format.
+これが完了したら、メニュー項目を呼び出します <span style="color:brown">ツール > DIPFITを用いたソースローカリゼーション > ヘッドモデルと設定</span>お問い合わせ ヘッドモデル、MRI、および関連する座標ランドマークがブランクアウトされていることがわかります。 グラフィックインターフェイスは、FieldTrip形式でカスタムヘッドモデルを編集していることも示しています。
 
-![Screen Shot 2022-12-11 at 7 43 48 PM](https://user-images.githubusercontent.com/1872705/206956553-435a3f9f-48db-4bff-b714-4fddc37aa3f6.png)
+![スクリーンショット 2022-12-11 7 43 48 PM](https://user-images.githubusercontent.com/1872705/206956553-435a3f9f-48db-4bff-b714-4fddc37aa3f6.png)
 
-Press the *Co-register* button, and then in the co-registration window, select *Align fiducials*, and press OK in the window, allowing you to select the pairs of channels. *Align fiducials* applies a rigid transformation, which is what we want because the fiducials in the MRI and the fiducials in channel space should not be stretched along any dimension (they are the same). The coregistration window will show a nonperfect alignment (left), which we can then adjust manually (right) by changing scaling and offsets. The electrodes should be above the scalp. The misalignment is due to uncertainty associated with [selecting fiducials](https://eeglab.org/tutorials/ConceptsGuide/coordinateSystem.html#eeglab-electrode-coordinate-systems). 
+*Co-register*ボタンを押し、コリベーションウィンドウで、*Align fiducials*を選択し、ウィンドウでOKを押すと、チャンネルのペアを選択できます。 *具体的な図形*は堅い変形を加えます。これは私達がMRIのfiducialsおよびチャネル スペースのfiducialsがあらゆる次元(同じです)に沿って伸びるべきではないので望むものです。 coregistration ウィンドウは、スケーリングとオフセットを変更することで、手動で(右)調整できる非パーフェクトアライメント(左)を表示します。 電極は頭皮の上にあるべきです。 誤差は、関連する不確実性によるものです [フィデューシャルの選択](https://eeglab.org/tutorials/ConceptsGuide/coordinateSystem.html#eeglab-electrode-coordinate-systems). 
 
-![Screen Shot 2022-12-11 at 11 06 22 PM](https://user-images.githubusercontent.com/1872705/206982193-92e59b82-90b9-43c5-8e7a-d551a90d66d1.png)
+![スクリーンショット 2022-12-11 に 11 06 22 PM](https://user-images.githubusercontent.com/1872705/206982193-92e59b82-90b9-43c5-8e7a-d551a90d66d1.png)
 
-Press 'OK' to close the co-registration graphic interface and then 'OK' again to close the dipole settings graphic interface. We are now ready to localize some [ICA component scalp projection maps](DIPFIT.md) - or any other [EEG source projection maps](EEG_sources.md).
+'OK'を押して、共同登録グラフィックインターフェイスを閉じ、ダイポール設定グラフィックインターフェイスを閉じるために再び'OK'を押します。 現地化の準備ができました。 [ICAコンポーネントスカルププロジェクションマップ](DIPFIT.md) ・その他 [EEGソースプロジェクションマップ](EEG_sources.md).
 
-## Scripting it
+## スクリプト
 
-<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'source_reconstruction_custom_mri.m'));">Show MATLAB command</button>
+<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'source_reconstruction_custom_mri.m'));">MATLABコマンドを表示する</button>
 
-The script in this section assumes that you have installed the following plug-ins from the EEGLAB plug-in manager: *File-IO*, *FieldTrip*, *Picard*, and *bids-matlab-tools*. We first assume you have defined the following file names for the raw data and anatomical MRI.
+このセクションのスクリプトは、EEGLABプラグインマネージャから次のプラグインをインストールしたと仮定します。 *File-IO*、 *FieldTrip*、 *Picard*、および*bids-matlab-tools*。 最初に、生データと分析MRIの次のファイル名を定義したとします。
 
 ```matlab
 dataPath = 'xxx/sub-01';
@@ -79,7 +79,7 @@ filenameEEG = fullfile( dataPath, 'ses-meg','meg','sub-01_ses-meg_task-facerecog
 filenameMRI = fullfile( dataPath, 'ses-mri','anat','sub-01_ses-mri_acq-mprage_T1w.nii.gz');
 ```
 
-The first step is to import the data. In the script below, we assume that you select EEG channels. However, you may select MEG channels as well as shown in the tutorial script. Source localization will work with both EEG and MEG channels, although not simultaneously. The coordinates of the fiducials are stored in the *coordsystem* JSON file and are automatically detected and imported. However, if you use another file format, they may be included in your data file. 
+最初のステップはデータをインポートすることです。 以下のスクリプトでは、EEG チャネルを選択することとします。 しかし、チュートリアルスクリプトで示されているだけでなく、MEGチャンネルを選択することができます。 ソースのローカリゼーションは、EEGとMEGの両方のチャネルで動作します。 *coordsystem* JSONファイルに保存され、自動的に検出され、インポートされます。 ただし、別のファイル形式を使用する場合は、データファイルに含まれている場合があります。 
 
 ```matlab
 EEG = pop_fileio(filenameEEG); % import data
@@ -87,7 +87,7 @@ EEG = pop_select(EEG, 'chantype', 'eeg'); % select EEG channels
 EEG = pop_select(EEG, 'rmchannel', { 'EEG061' 'EEG062' 'EEG063' 'EEG064' }); % remove EOG and EKG channels
 ```
 
-Then we preprocess the data to generate some ICA components which may be used for source localization. This involves resampling the data, filtering it, re-referencing it, and running ICA. Note that we have not performed proper artifact rejection here. Our tutorial goal is only to quickly obtain some ICA components to demonstrate the equivalent dipole source localization process - this subject's EEG data have sufficiently low noise to allow the ICA decomposition to find component scalp maps that truly resemble the projection of a single equivalent dipole (an oriented model dipole whose scalp projection is 'equivalent' to that of synchronous local field activity across a suitably located and oriented cortical patch). Also, to speed the tutorial process we reduce the dimension of the data to only 20 using PCA, a practice we advise against using unless the data rank is less than the number of channels (*EEG.nbchan*) [see Artoni et al., 2018](https://pubmed.ncbi.nlm.nih.gov/29526744/).
+それから私達は源のローカリゼーションに使用するかもしれないあるICAの部品を発生させるためにデータを前処理します。 これは、データを再サンプリングし、それをフィルタリングし、それを再参照し、ICAを実行することを含みます。 ここでは、適切なアーティファクト拒絶を行わないことに注意しましょう。 私たちのチュートリアルの目標は、ほぼ同じダイポールソースのローカリゼーションプロセスを実証するために、ICAコンポーネントを迅速に取得することです。この対象のEEGデータは、ICAの分解がコンポーネントのスカルプマップを見つけることを可能にするために十分な低騒音を持っています。これは、本当に単一の同等ダイポール(スカルプの投影が「等価」である指向モデルダイポールが、適切な場所と指向の相関パッチを横断する同期ローカルフィールドアクティビティのことです)。 また、チュートリアルプロセスを高速化するため、PCA を使用するだけで、データランクがチャネルの数よりも少ない場合を除き、使用をお勧めする練習(*EEG.nbchan*) [Artoni ら., 2018](https://pubmed.ncbi.nlm.nih.gov/29526744/).
 
 ```matlab
 % Preprocess and run ICA (so one may be localized)
@@ -98,7 +98,7 @@ EEG = pop_reref(EEG, []);
 EEG = pop_runica( EEG , 'picard', 'maxiter', 500, 'pca', 20); % NOTE: In practice, PCA dimension reduction prior to ICA decomposition is NOT recommended
 ```
 
-Finally, we import the MRI and the associated file with the coordinates of the fiducials in MRI space (the file containing fiducials is automatically detected and imported). Alternatively, [pop_dipfit_headmodel.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_headmodel.m) will accept fiducials. If you have the subject's MR head image and have not selected the fiducials, you may use the FieldTrip function *ft_volumerealign.m* interactive method to provide estimates of their positions relative to the head image, and then provide them as input to the [pop_dipfit_headmodel.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_headmodel.m) function.
+最後に、MRI と関連ファイルを MRI 空間のファイザーの座標にインポートします(図を含むファイルは自動的に検出され、インポートされます)。 あるいは、 [pop_dipfit_headmodel.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_headmodel.m) 提出書類を受領します。 対象の MR ヘッドイメージを持ち、ファイザーを選択していない場合は、FieldTrip 関数 *ft_volumerealign.m* のインタラクティブなメソッドを使用して、ヘッドイメージに相対的な位置の推定値を提供し、その後、それらを入力として提供します [pop_dipfit_headmodel.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_headmodel.m) 機能。
 
 ```matlab
 EEG = pop_dipfit_headmodel( EEG, filenameMRI, 'plotmesh', 'scalp');
@@ -107,17 +107,17 @@ EEG = pop_multifit(EEG, 1:10,'threshold', 100, 'dipplot','off');
 pop_dipplot(EEG, [], 'normlen', 'on');
 ```
 
-The first command creates the head model from the MRI, segmenting it using FieldTrip functions, which itself uses SPM functions. The second command aligns EEG or MEG electrodes with the head model and MRI. This is based on aligning fiducials which are both defined for the MRI and for the sensors. The alignment is performed automatically above, but it is always a good idea to check that the alignnment is correct. You may use the *plotalignment* option of the [pop_dipfit_settings.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_settings.m) to check the alignment.
+最初のコマンドは、MRIからヘッドモデルを作成し、FieldTrip関数を使用してセグメント化します。これはSPM関数を使用します。 2 番目のコマンドは、EEG または MEG 電極をヘッドモデルと MRI と整列します。 これは、MRIとセンサーの両方で定義されるファイザーの整列に基づいています。 上記のアライメントは自動で行われますが、アライメントが正しいことを確認することは常に良い考えです。 *plotalignment*オプションを使用できます。 [pop_dipfit_settings.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_settings.m) アライメントをチェックします。
 
-Now the hard part of aligning all head model and electrodes has been accomplished. Next, we perform dipole search as in regular DIPFIT by calling the [pop_multifit.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_multifit.m) and plot them using the [pop_dipplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipplot.m). The plot below shows one of the component equivalent dipole.
+すべてのヘッドモデルと電極を揃える硬い部分が達成されました。 次に、通常DIPFITでダイポール検索を実行します。 [pop_multifit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_multifit.m) それらをプロットする [pop_dipplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipplot.m)お問い合わせ 以下のプロットは、コンポーネントの同等のダイポールの1つを示しています。
 
-![Screen Shot 2022-12-12 at 3 17 09 PM](https://user-images.githubusercontent.com/1872705/207180247-82dfc1cc-afd3-4e64-a70a-94ff67d51b49.png)
+![スクリーンショット 2022-12-12-12 3 17 09 PM](https://user-images.githubusercontent.com/1872705/207180247-82dfc1cc-afd3-4e64-a70a-94ff67d51b49.png)
 
-It is also possible to define a source model to perform eLoreta or LCMV Beamforming, as described [here](https://eeglab.org/tutorials/09_source/EEG_sources.html). A biologically plausible ICA component is shown below.
+eLoreta または LCMV Beamforming を実行するためのソースコードモデルを定義することもできます。 [詳しくはこちら](https://eeglab.org/tutorials/09_source/EEG_sources.html)お問い合わせ 以下に生物学的に可塑性ICA成分を示します。
 
-## Other head models
+## その他のヘッドモデル
 
-The EEGLAB functions interface FieldTrip, so you may also use FieldTrip and place a file containing the head model, the MR head image, and the fiducials (associated with the MR image) in the respective DIPFIT structures. Note that the file containing the fiducials must have their coordinates transformed to match the MRI-modified coordinate frame. Any data format for the electrode locations that the [readlocs.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=readlocs.m) function can read is acceptable. The FieldTrip tutorials used for this section are available here for [EEG](https://www.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/), here for [MEG](https://www.fieldtriptoolbox.org/tutorial/headmodel_meg/). Another [MEG tutorial](https://www.fieldtriptoolbox.org/workshop/practicalmeeg2022/handson_anatomy/) uses the same data as in this tutorial.
+EEGLAB は、FieldTrip をインターフェイスしているため、各 DIPFIT 構造の MR ヘッドイメージ、および MR ヘッドイメージを含むファイルを配置することもできます。 MRI-modified座標フレームに一致するように変更された座標が変換される必要があります。 電極の位置の任意のデータ形式 [読み込み場所 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=readlocs.m) 機能は読みます受諾可能です。 このセクションで使用されるFieldTripチュートリアルは、こちらで利用可能です [エッグ](https://www.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/)お問い合わせ [メニュー](https://www.fieldtriptoolbox.org/tutorial/headmodel_meg/)お問い合わせ その他 [MEGチュートリアル](https://www.fieldtriptoolbox.org/workshop/practicalmeeg2022/handson_anatomy/) このチュートリアルでは同じデータを使用します。
 
 ```matlab
 EEG.dipfit.hdmfile = 'headmodel.mat';
@@ -127,7 +127,7 @@ EEG.dipfit.coordformat = ''; % may be MNI, this field may be left blank as well
 EEG = pop_dipfit_settings(EEG, 'coord_transform', 'alignfiducials'); % align MEEG fiducials with the MRI fiducials. Use EEG = pop_dipfit_settings(EEG) to  perform manual alignment
 ```
 
-To update the EEGLAB graphic user interface (menu), use the following command sequence.
+EEGLAB グラフィックユーザーインターフェイス(メニュー)を更新するには、次のコマンドシーケンスを使用します。
 
 ```
 EEG.saved = 'no';

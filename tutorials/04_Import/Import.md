@@ -7,4 +7,4 @@ has_children: true
 has_toc: true
 nav_order: 4
 ---
-Importing your data is often the first and most crucial step to get started in EEG analysis. And because of the variety of data format, channel location file, an event data file that needs to be synchronized with the EEG data, it can be challenging. This series of tutorials guides you through importing EEG data and supplementary files. 
+データのインポートは、多くの場合、EEG分析で開始する最初の最も重要なステップです。 様々なデータフォーマット、チャンネル位置ファイル、EEGデータと同期する必要があるイベントデータファイルなど、チャレンジングに繋がることができます。 この一連のチュートリアルでは、EEGデータと補足ファイルをインポートすることであなたを導きます。 
