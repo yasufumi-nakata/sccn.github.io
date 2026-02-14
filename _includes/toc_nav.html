@@ -1,30 +1,30 @@
-{%- comment -%}_includes/nav.html からのコピー{%- endcomment -%}
-{%-titled_pages =include.nav を割り当てる
-        |where_exp:「item」・「item.title != nil」 -%の}
+{%- comment -%}Copied from _includes/nav.html{%- endcomment -%}
+{%- assign titled_pages = include.nav
+        | where_exp:"item", "item.title != nil" -%}
   {%- comment -%}
-    `title` と `nav_order` の値は数値または文字列です。
-    Jekyllは、異なるタイプの混合物をソートする際にビルドの失敗を与えます。
-    数値と文字列は別にソートする必要があります。
+    The values of `title` and `nav_order` can be numbers or strings.
+    Jekyll gives build failures when sorting on mixtures of different types,
+    so numbers and strings need to be sorted separately.
 
-    ここで、数値は値によってソートされ、すべての文字列の前に来ます。
-    省略された `nav_order` 値がページの `title` 値と同等です。
-    (数値 `title` の値が文字列として扱われる場合を除きます)。
+    Here, numbers are sorted by their values, and come before all strings.
+    An omitted `nav_order` value is equivalent to the page's `title` value
+    (except that a numerical `title` value is treated as a string).
 
-    文字列ソートのケース感度は `site.nav_sort` で決定されます。
+    The case-sensitivity of string sorting is determined by `site.nav_sort`.
   {%- endcomment -%}
   
-  {%- 文字列を割り当てる_ordered_pages = titled_pages
-        |where_exp:「item」・「item.nav_order == nil」 -%の}
-  {%- nav_ordered_pages = titled_pages を割り当てる
-        |where_exp:「item」・「item.nav_order != nil」 -%の}
+  {%- assign string_ordered_pages = titled_pages
+        | where_exp:"item", "item.nav_order == nil" -%}
+  {%- assign nav_ordered_pages = titled_pages
+        | where_exp:"item", "item.nav_order != nil"  -%}
 
   {%- comment -%}
-    nav_ordered_pages は number_ordered_pages に追加され、
-    string_ordered_pages は nav_order の値に依存します。
-    jsonify 結果の最初の文字は ```` です。文字列のみです。
+    The nav_ordered_pages have to be added to number_ordered_pages and
+    string_ordered_pages, depending on the nav_order value.
+    The first character of the jsonify result is `"` only for strings.
   {%- endcomment -%}
-  {%- nav_ordered_groups = nav_ordered_pages を割り当てる
-        | group_by_exp:「item」・「item.nav_order」 | jsonify | スライス: 0" -%}
+  {%- assign nav_ordered_groups = nav_ordered_pages
+        | group_by_exp:"item", "item.nav_order | jsonify | slice: 0" -%}
   {%- assign number_ordered_pages = "" | split:"X" -%}
   {%- for group in nav_ordered_groups -%}
     {%- if group.name == '"' -%}
@@ -37,13 +37,13 @@
   {%- assign sorted_number_ordered_pages = number_ordered_pages | sort:"nav_order" -%}
   
   {%- comment -%}
-    string_ordered_pages は nav_order によってソートされなければならず、そうでなければ title
-    (空の文字列を数値タイトルに追加すると文字列に変換されます)。
-    これらの値でそれらをグループ化した後、グループはソートされ、その後、項目
-    各グループが集約されます。
+    The string_ordered_pages have to be sorted by nav_order, and otherwise title
+    (where appending the empty string to a numeric title converts it to a string).
+    After grouping them by those values, the groups are sorted, then the items
+    of each group are concatenated.
   {%- endcomment -%}
-  {%-割り当て string_ordered_groups = string_ordered_pages ディレクティブ
-        | group_by_exp:「item」・「item.nav_order」 | デフォルト: item.title | append:」 -%の}
+  {%- assign string_ordered_groups = string_ordered_pages
+        | group_by_exp:"item", "item.nav_order | default: item.title | append:''" -%}
   {%- if site.nav_sort == 'case_insensitive' -%}
     {%- assign sorted_string_ordered_groups = string_ordered_groups | sort_natural:"name" -%}
   {%- else -%}
@@ -59,9 +59,9 @@
 <ul>
   {% for item in pages_list %}
 	{% if item.long_title %}
-    	    <li><a href="">{{ item.url }}">{{ item.long_title }}</a></li>
+    	    <li><a href="{{ item.url }}">{{ item.long_title }}</a></li>
   	{%- else -%}
-    	    <li><a href="">{{ item.url }}">{{ item.title }}</a></li>
+    	    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
   	{%- endif -%}
   {% endfor %}
 </ul>
