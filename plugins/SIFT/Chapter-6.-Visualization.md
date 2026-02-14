@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-6.-Visualization
+nav_title: "第6章 仮想化"
 long_title: Chapter-6.-Visualization
 ---
 接続の見積もりを計算し、潜在的に計算されると

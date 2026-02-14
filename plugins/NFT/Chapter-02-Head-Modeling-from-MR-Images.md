@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-02-Head-Modeling-from-MR-Images
+nav_title: "第2章-MR-Imagesからヘッドモデリング-"
 long_title: Chapter-02-Head-Modeling-from-MR-Images
 ---
 ヘッドモデリングのステップは、セグメント化、メッシュ生成、および

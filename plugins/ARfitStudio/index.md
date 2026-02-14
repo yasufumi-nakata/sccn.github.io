@@ -1,6 +1,7 @@
 ---
 layout: default
 title: ARfitStudio
+nav_title: "アルフィットスタジオ"
 long_title: ARfitStudio
 parent: Plugins
 render_with_liquid: false

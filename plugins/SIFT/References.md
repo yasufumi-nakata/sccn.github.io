@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: References
+nav_title: "参考文献"
 long_title: References
 ---
 アンダーソンBDO、ムーアJB(1979)最適フィルタリング。 Englewoodの崖、NJ:

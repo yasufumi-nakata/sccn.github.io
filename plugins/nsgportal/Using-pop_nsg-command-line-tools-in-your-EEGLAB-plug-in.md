@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Using-pop_nsg-command-line-tools-in-your-EEGLAB-plug-in
+nav_title: "使用-pop_nsg-command-line-tools-in-your-EEGLAB-plug-in"
 long_title: Using-pop_nsg-command-line-tools-in-your-EEGLAB-plug-in
 ---
 # あなたの EEGLAB プラグインで pop_nsg コマンドラインツールを使用する

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: c. Spectra
+nav_title: "c. スペックトラ"
 long_title: c. Spectra
 longtitle:
 parent: 8. Plot data

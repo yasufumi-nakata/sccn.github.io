@@ -1,6 +1,7 @@
 ---
 layout: default
 title: e. Automated pipeline
+nav_title: "e. 自動パイプライン"
 parent: 11. Write scripts
 grand_parent: Tutorials 
 ---

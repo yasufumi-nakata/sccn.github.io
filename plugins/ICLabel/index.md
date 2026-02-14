@@ -1,6 +1,7 @@
 ---
 layout: default
 title: ICLabel
+nav_title: "ICラベル"
 long_title: ICLabel
 parent: Plugins
 render_with_liquid: false

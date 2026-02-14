@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB and HPC
+nav_title: "EEGLABとHPC"
 long_title: EEGLAB and High Performance Computing
 parent: Interoperability
 ---

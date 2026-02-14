@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Support
+nav_title: "サポート"
 long_title: Support
 has_children: true
 has_toc: false

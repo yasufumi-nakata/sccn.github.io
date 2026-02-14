@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: _Sidebar
+nav_title: "_サイドバー"
 long_title: _Sidebar
 ---
 # NSGのEEGLAB

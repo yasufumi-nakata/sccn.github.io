@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2014 Rio
+nav_title: "EEGLAB 2014出展のお知らせ ログイン"
 parent: Past workshops
 grand_parent: Workshops
 ---

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: PowPowCAT
+nav_title: "PowPowCATの特長"
 long_title: PowPowCAT
 parent: Plugins
 render_with_liquid: false

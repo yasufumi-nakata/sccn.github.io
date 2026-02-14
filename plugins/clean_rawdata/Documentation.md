@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Documentation
+nav_title: "ドキュメント"
 long_title: Documentation
 ---
 歴史背景

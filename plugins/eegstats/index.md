@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGstats
+nav_title: "エグスタット"
 long_title: EEGstats
 parent: Plugins
 render_with_liquid: false

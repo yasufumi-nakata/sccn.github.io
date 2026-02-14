@@ -1,6 +1,7 @@
 ---
 layout: default
 title: NWB-io
+nav_title: "NWB-ioの特長"
 long_title: NWB-io
 parent: Plugins
 render_with_liquid: false

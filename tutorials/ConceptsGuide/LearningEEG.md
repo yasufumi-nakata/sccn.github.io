@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Learning EEG
+nav_title: "EEGを学ぶ"
 long_title: Learning EEG
 parent: Concepts guide
 grand_parent: Tutorials

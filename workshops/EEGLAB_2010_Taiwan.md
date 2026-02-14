@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2010 Taiwan
+nav_title: "EEGLAB 2010 台湾"
 parent: Past workshops
 grand_parent: Workshops
 ---

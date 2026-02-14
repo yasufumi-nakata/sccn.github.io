@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2011 Mallorca
+nav_title: "EEGLAB 2011 マヨルカ"
 parent: Past workshops
 grand_parent: Workshops
 ---

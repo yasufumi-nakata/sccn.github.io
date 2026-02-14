@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB References
+nav_title: "EEGLAB 参考文献"
 parent: Download EEGLAB
 ---
 EEGLABを引用する方法

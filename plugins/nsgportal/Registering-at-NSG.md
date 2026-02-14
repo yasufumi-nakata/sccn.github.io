@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Registering-at-NSG
+nav_title: "会員登録 - NSG"
 long_title: Registering-at-NSG
 ---
 NSGポータル経由でNSGにアクセスし、コマンドラインインターフェイスNSG-Rを介して2つの方法があります。 後者は、そのコアカールコマンドを使用して、NSG と通信し、nsgportal プラグインで使用されるインタフェースです。 NSG のインターフェイスは両方なので、既に NSG に登録された場合、NSG-R のログインとパスワードは同じです。 REST インターフェイスについては、 [NSG REST ドキュメント](https://nsgr.sdsc.edu:8443/restusers/documentation).

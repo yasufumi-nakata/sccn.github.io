@@ -1,6 +1,7 @@
 ---
 layout: default
 title: e. ICA components
+nav_title: "e. ICAコンポーネント"
 long_title: e. ICA components
 parent: 8. Plot data
 grand_parent: Tutorials

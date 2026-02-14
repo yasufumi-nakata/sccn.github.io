@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2021 UCSD Asia
+nav_title: "エグラボ2021 UCSD アジア"
 long_title: EEGLAB 2021 UCSD Asia workshop
 parent: Past workshops
 ---

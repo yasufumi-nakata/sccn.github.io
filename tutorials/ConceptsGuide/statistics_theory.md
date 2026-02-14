@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Statistics
+nav_title: "統計データ"
 long_title: Statistics
 parent: Concepts guide
 grand_parent: Tutorials

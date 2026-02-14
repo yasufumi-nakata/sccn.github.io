@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 10. Group analysis
+nav_title: "10. グループ分析"
 long_title: 10. Group analysis
 parent: Tutorials
 has_children: true

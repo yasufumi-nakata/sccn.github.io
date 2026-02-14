@@ -1,6 +1,7 @@
 ---
 layout: default
 title: c. Resampling
+nav_title: "c. リサンプリング"
 long_title: c. Resampling
 categories: preproc
 parent: 5. Preprocess data

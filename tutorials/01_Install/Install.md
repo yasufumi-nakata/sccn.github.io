@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 1. Installing EEGLAB
+nav_title: "1. EEGLABのインストール"
 long_title: 1. Installing EEGLAB
 categories: tutorial
 parent: Tutorials

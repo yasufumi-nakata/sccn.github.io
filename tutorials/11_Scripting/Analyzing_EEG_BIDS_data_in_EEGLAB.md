@@ -1,6 +1,7 @@
 ---
 layout: default
 title: f. BIDS pipeline
+nav_title: "f. BIDSパイプライン"
 long_title: e. BIDS pipeline
 parent: 11. Write scripts
 grand_parent: Tutorials 

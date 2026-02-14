@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Plugins
+nav_title: "プラグイン"
 has_children: true
 has_toc: true
 nav_order: 7

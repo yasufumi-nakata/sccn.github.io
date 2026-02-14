@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Creating-and-managing-an-NSG-job-using-pop_nsg-from-the-command-line
+nav_title: "作成と管理-an-NSG-job-using-pop_nsg-from-the-command-line"
 long_title: Creating-and-managing-an-NSG-job-using-pop_nsg-from-the-command-line
 ---
 このチュートリアルでは、_pop_nsg_ のコマンドラインオプションを使用してジョブの送信と管理のプロセスについて説明します。 

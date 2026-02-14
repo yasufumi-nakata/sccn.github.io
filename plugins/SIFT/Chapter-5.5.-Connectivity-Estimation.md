@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-5.5.-Connectivity-Estimation
+nav_title: "第5.5章-Connectivity-Estimation"
 long_title: Chapter-5.5.-Connectivity-Estimation
 ---
 モデルが合っているので、いくつか計算したい

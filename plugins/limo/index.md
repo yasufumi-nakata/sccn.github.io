@@ -1,6 +1,7 @@
 ---
 layout: default
 title: LIMO
+nav_title: "リモ"
 long_title: LIMO
 parent: Plugins
 render_with_liquid: false

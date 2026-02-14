@@ -1,6 +1,7 @@
 ---
 layout: default
 title: FirFilt
+nav_title: "フリル"
 long_title: FirFilt
 parent: Plugins
 render_with_liquid: false

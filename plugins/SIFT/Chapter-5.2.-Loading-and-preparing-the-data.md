@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-5.2.-Loading-and-preparing-the-data
+nav_title: "Chapter-5.2.-Loading-and-preparing-the-data"
 long_title: Chapter-5.2.-Loading-and-preparing-the-data
 ---
 MATLAB®コマンドプロンプトからEEGLABを起動します。

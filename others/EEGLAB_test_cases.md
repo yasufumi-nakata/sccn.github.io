@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB test cases
+nav_title: "EEGLABテストケース"
 parent: Support
 ---
 EEGLABテストケース

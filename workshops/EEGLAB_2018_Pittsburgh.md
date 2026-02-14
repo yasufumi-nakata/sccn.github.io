@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2018 Pittsburgh
+nav_title: "EEGLAB 2018に出展します。 ピッツバーグ"
 parent: Past workshops
 grand_parent: Workshops
 ---

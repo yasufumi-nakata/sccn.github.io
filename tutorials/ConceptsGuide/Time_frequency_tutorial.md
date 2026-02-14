@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Spectral analysis
+nav_title: "分光解析"
 long_title: Spectral analysis and time-frequency decompositions
 parent: Concepts guide
 grand_parent: Tutorials

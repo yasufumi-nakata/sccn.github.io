@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: EEGLAB-plug-ins-on-NSG
+nav_title: "EEGLAB-plug-ins-on-NSGの特長"
 long_title: EEGLAB-plug-ins-on-NSG
 ---
 NSGのEEGLABインストールは、EEGLABプラグインのほとんどへのアクセスを提供します。 NSGのEEGLABから入手可能なプラグインの下の表、およびこれらのプラグインの使用に関する重要なリンクを参照してください。

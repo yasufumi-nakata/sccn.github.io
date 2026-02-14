@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: EEG‐BIDS-docs
+nav_title: "EEG-BIDS-ドキュメント"
 long_title: EEG‐BIDS-docs
 ---
 # ドキュメントとチュートリアルビデオ

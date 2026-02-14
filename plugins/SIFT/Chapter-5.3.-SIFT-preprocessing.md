@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-5.3.-SIFT-preprocessing
+nav_title: "Chapter-5.3.-SIFTの処理"
 long_title: Chapter-5.3.-SIFT-preprocessing
 ---
 パイプラインの最初のステップは、データを事前処理することです。 [**SIFT] > [Pre-processing**] を選択して、前処理 GUI を起動します。 コマンドラインから次のコマンドで開くこともできます。

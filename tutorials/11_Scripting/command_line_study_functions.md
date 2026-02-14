@@ -2,6 +2,7 @@
 layout: default
 title: c. Group level
 title: c. Group-level analysis
+nav_title: "c. グループレベルの分析"
 parent: 11. Write scripts
 grand_parent: Tutorials 
 ---

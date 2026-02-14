@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEG-BIDS
+nav_title: "EEG-BIDSについて"
 long_title: EEG-BIDS
 parent: Plugins
 render_with_liquid: false

@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Re-referencing
+nav_title: "再会議"
 long_title: Re-referencing EEG data
 parent: Concepts guide
 grand_parent: Tutorials
 categories: concepts
-
 ---
 EEG時計
 =====

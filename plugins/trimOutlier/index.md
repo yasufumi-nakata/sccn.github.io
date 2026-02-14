@@ -1,6 +1,7 @@
 ---
 layout: default
 title: trimOutlier
+nav_title: "トリムアウター"
 long_title: trimOutlier
 parent: Plugins
 render_with_liquid: false

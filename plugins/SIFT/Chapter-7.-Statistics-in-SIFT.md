@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-7.-Statistics-in-SIFT
+nav_title: "第7章-統計-in-SIFT"
 long_title: Chapter-7.-Statistics-in-SIFT
 ---
 情報の流れやニューラルの注意点を推測するとき

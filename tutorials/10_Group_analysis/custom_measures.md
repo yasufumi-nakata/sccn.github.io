@@ -1,6 +1,7 @@
 ---
 layout: default
 title: g. Custom measures
+nav_title: "g. カスタム対策"
 long_title: g. Custom measures
 parent: 10. Group analysis
 grand_parent: Tutorials 

@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-5.4.-Model-Fitting-and-Validation
+nav_title: "Chapter-5.4.-モデル-フィッティングと検証"
 long_title: Chapter-5.4.-Model-Fitting-and-Validation
 ---
 データの処理が完了したら、**Model Fittingに進みます。

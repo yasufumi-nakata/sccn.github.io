@@ -1,6 +1,7 @@
 ---
 layout: default
 title: d. Time-Frequency
+nav_title: "d. 時間頻度"
 long_title: d. Time-Frequency decompositions
 parent: 8. Plot data
 grand_parent: Tutorials

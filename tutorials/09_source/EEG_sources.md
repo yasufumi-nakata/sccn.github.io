@@ -1,6 +1,7 @@
 ---
 layout: default
 title: c. EEG source model
+nav_title: "c. EEGソースモデル"
 long_title: c. EEG source model
 parent: 9. Source analysis
 grand_parent: Tutorials

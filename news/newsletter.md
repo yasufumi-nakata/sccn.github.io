@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB newsletter
+nav_title: "EEGLABニュースレター"
 long_title: EEGLAB newsletter
 parent: EEGLAB news
 has_children: false

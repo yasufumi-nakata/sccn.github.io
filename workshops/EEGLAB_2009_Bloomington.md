@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2009 Indiana
+nav_title: "EEGLAB 2009 インディアナ"
 parent: Past workshops
 grand_parent: Workshops
 ---

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2025 UCSD
+nav_title: "エグラボ2025 UCSD"
 long_title: EEGLAB 2025 UCSD workshop
 parent: Workshops
 ---

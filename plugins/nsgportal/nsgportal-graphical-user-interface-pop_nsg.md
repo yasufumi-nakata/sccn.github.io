@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: nsgportal-graphical-user-interface:-pop_nsg
+nav_title: "nsgportal-graphic-user-interface:-pop_nsg"
 long_title: nsgportal-graphical-user-interface:-pop_nsg
 ---
 

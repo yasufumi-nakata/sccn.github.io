@@ -1,6 +1,7 @@
 ---
 layout: default
 title: c. Channel Locations
+nav_title: "c. チャネルの場所"
 long_title: c. Importing channel locations
 parent: 4. Import data
 grand_parent: Tutorials

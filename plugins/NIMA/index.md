@@ -1,6 +1,7 @@
 ---
 layout: default
 title: NIMA
+nav_title: "ニマ"
 long_title: NIMA
 parent: Plugins
 render_with_liquid: false

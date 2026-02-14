@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-04-NFT-Examples
+nav_title: "第4章4章NFT-例"
 long_title: Chapter-04-NFT-Examples
 ---
 このセクションでは、2つのヘッドモデリング例を紹介します。 これらの両方

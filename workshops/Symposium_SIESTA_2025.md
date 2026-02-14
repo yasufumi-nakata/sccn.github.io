@@ -1,6 +1,7 @@
 ---
 layout: default
 title: SIESTA Symposium 2025
+nav_title: "SIESTAシンポジウム 2025"
 long_title: SIESTA Symposium 2025
 parent: Workshops
 ---

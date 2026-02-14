@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Clean_rawdata
+nav_title: "Clean_rawdata(クリーンデータ)"
 long_title: Clean_rawdata
 parent: Plugins
 render_with_liquid: false

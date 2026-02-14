@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB Bugs
+nav_title: "EEGLAB バグ"
 long_title: EEGLAB Bugs
 parent: Support
 ---

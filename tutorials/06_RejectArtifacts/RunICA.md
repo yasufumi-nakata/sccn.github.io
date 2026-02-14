@@ -1,6 +1,7 @@
 ---
 layout: default
 title: d. Indep. Comp. Analysis
+nav_title: "d. Indep. 解析"
 long_title: d. Independent Component Analysis
 parent: 6. Reject artifacts
 grand_parent: Tutorials

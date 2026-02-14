@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB revision history
+nav_title: "EEGLABリビジョンの歴史"
 parent: Download EEGLAB
 ---
 EEGLABリビジョンの歴史

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2010 San Diego
+nav_title: "エグラボ2010 サンディエゴ"
 parent: Past workshops
 grand_parent: Workshops
 ---

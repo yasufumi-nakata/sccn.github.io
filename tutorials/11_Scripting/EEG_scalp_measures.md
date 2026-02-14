@@ -1,6 +1,7 @@
 ---
 layout: default
 title: d. Advanced plots
+nav_title: "d. 高度なプロット"
 long_title: d. Scripts for advanced plots
 parent: 11. Write scripts
 grand_parent: Tutorials

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: CleanLine
+nav_title: "クリーンライン"
 long_title: CleanLine
 parent: Plugins
 render_with_liquid: false

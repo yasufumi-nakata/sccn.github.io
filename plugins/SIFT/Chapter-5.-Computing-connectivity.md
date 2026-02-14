@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-5.-Computing-connectivity
+nav_title: "第5章 コンピューティング接続性"
 long_title: Chapter-5.-Computing-connectivity
 ---
 このセクションでは、SIFT の使用のデモを見積もり、

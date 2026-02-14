@@ -1,6 +1,7 @@
 ---
 layout: default
 title: c. Automated rejection
+nav_title: "c. 自動拒絶反応"
 long_title: c. Automated artifact rejection
 parent: 6. Reject artifacts
 grand_parent: Tutorials

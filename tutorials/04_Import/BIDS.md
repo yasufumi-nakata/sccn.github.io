@@ -1,6 +1,7 @@
 ---
 layout: default
 title: d. BIDS
+nav_title: "d. ビット"
 long_title: d. Brain Imaging Data Structure data
 parent: 4. Import data
 grand_parent: Tutorials

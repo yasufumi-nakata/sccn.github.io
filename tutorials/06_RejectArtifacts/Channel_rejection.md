@@ -1,6 +1,7 @@
 ---
 layout: default
 title: a. Remove bad channels
+nav_title: "a. 悪いチャンネルを削除"
 long_title: a. Remove bad channels by visual inspection
 categories: artifact
 parent: 6. Reject artifacts

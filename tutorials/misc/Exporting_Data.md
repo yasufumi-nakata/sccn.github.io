@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Exporting Data
+nav_title: "データのエクスポート"
 long_title: How to export data?
 parent: Reference Topics
 grand_parent: Tutorials

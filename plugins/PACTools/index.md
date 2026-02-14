@@ -1,6 +1,7 @@
 ---
 layout: default
 title: PACTools
+nav_title: "パックツール"
 long_title: PACTools
 parent: Plugins
 render_with_liquid: false

@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-8.-Conclusions-and-Acknowledgements
+nav_title: "第8章-結論と認識"
 long_title: Chapter-8.-Conclusions-and-Acknowledgements
 ---
 このチュートリアルでは、新しいオープンソース(Matlab-based)を導入しました。

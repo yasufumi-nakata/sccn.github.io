@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Function-Reference
+nav_title: "機能参照"
 long_title: Function-Reference
 ---
 下表は、SIFT関数の部分的な参照です。 このリストですべての機能が文書化されていない。

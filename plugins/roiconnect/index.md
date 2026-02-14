@@ -1,6 +1,7 @@
 ---
 layout: default
 title: ROIconnect
+nav_title: "ROIconnectについて"
 long_title: ROIconnect
 parent: Plugins
 render_with_liquid: false

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 3. Dataset management
+nav_title: "3. データセット管理"
 long_title: 3. Dataset management
 parent: Tutorials
 nav_order: 3

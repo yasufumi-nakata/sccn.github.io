@@ -1,6 +1,7 @@
 ---
 layout: default
 title: d. Custom head model
+nav_title: "d. カスタムヘッドモデル"
 long_title: d. Using a custom head model
 parent: 9. Source analysis
 grand_parent: Tutorials

@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: NFT-Appendix-C
+nav_title: "NFT-付録C"
 long_title: NFT-Appendix-C
 ---
 EEGソースローカリゼーションに対する脳対頭脳伝導率推定の影響

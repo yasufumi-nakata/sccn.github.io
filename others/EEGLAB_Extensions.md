@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB Extensions
+nav_title: "EEGLAB エクステンション"
 long_title: EEGLAB Extensions
 parent: Download EEGLAB
 ---

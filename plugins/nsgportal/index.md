@@ -1,6 +1,7 @@
 ---
 layout: default
 title: NSGportal
+nav_title: "NSGポータル"
 long_title: NSGportal
 parent: Plugins
 render_with_liquid: false

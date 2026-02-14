@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2012 Beijing
+nav_title: "エグラボ2012 ベイジン"
 parent: Past workshops
 grand_parent: Workshops
 ---

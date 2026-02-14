@@ -1,6 +1,7 @@
 ---
 layout: default
 title: SIFT
+nav_title: "シャフト"
 long_title: SIFT
 parent: Plugins
 render_with_liquid: false

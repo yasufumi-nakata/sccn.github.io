@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Online EEGLAB workshop
+nav_title: "オンラインEEGLABワークショップ"
 long_title: Online EEGLAB workshop
 parent: Workshops
 nav_order: 1

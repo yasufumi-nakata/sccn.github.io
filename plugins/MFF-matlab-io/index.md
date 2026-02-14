@@ -1,6 +1,7 @@
 ---
 layout: default
 title: MFF-matlab-io
+nav_title: "MFF-matlab-ioの特長"
 long_title: MFF-matlab-io
 parent: Plugins
 render_with_liquid: false

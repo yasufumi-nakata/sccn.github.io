@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2023 Aspet
+nav_title: "EEGLAB 2023 アスペット"
 long_title: EEGLAB 2023 Aspet workshop
 parent: Past workshops
 grand_parent: Workshops

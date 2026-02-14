@@ -1,6 +1,7 @@
 ---
 layout: default
 title: g. Advanced statistics
+nav_title: "g. 高度な統計"
 long_title: e. Advanced statistics
 parent: 10. Group analysis
 grand_parent: Tutorials 

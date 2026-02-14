@@ -1,6 +1,7 @@
 ---
 layout: default
 title: General FAQ
+nav_title: "よくある質問"
 long_title: General frequently asked questions
 parent: Support
 nav_order: 1

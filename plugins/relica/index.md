@@ -1,6 +1,7 @@
 ---
 layout: default
 title: RELICA
+nav_title: "リリカ"
 long_title: RELICA
 parent: Plugins
 render_with_liquid: false

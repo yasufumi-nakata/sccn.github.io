@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: NFT-Appendix-B
+nav_title: "NFT-付録B"
 long_title: NFT-Appendix-B
 ---
 bem_create_model(ビーエムクリエイト)

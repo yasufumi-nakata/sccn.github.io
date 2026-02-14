@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-03-Forward-Model-Generation
+nav_title: "Chapter-03-Forward-モデル生成"
 long_title: Chapter-03-Forward-Model-Generation
 ---
 フォワードの問題: 境界要素法

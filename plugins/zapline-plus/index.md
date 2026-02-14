@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Zapline-Plus
+nav_title: "Zaplineプラス"
 long_title: Zapline-Plus
 parent: Plugins
 render_with_liquid: false

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: a. ERPs
+nav_title: "a. 採用情報"
 long_title: a. Event Related Potentials
 parent: 8. Plot data
 grand_parent: Tutorials

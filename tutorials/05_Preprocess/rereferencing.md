@@ -1,6 +1,7 @@
 ---
 layout: default
 title: b. Re-referencing
+nav_title: "b. 再会議"
 long_title: b. Re-referencing
 parent: 5. Preprocess data
 grand_parent: Tutorials

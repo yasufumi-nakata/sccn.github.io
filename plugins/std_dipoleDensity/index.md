@@ -1,6 +1,7 @@
 ---
 layout: default
 title: std_dipoleDensity
+nav_title: "std_dipole密度"
 long_title: std_dipoleDensity
 parent: Plugins
 render_with_liquid: false

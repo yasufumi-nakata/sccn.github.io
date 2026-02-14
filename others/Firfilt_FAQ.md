@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Filtering FAQ
+nav_title: "フィルタリングFAQ"
 long_title: Filtering frequently asked questions
 parent: Support
 nav_order: 2

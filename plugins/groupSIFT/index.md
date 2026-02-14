@@ -1,6 +1,7 @@
 ---
 layout: default
 title: groupSIFT
+nav_title: "グループSIFT"
 long_title: groupSIFT
 parent: Plugins
 render_with_liquid: false

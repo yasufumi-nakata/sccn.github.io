@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-1.-Downloads
+nav_title: "Chapter-1.-ダウンロード"
 long_title: Chapter-1.-Downloads
 ---
 ## SIFT ダウンロード

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB on Octave
+nav_title: "オクターブのEEGLAB"
 long_title: EEGLAB on Octave
 parent: Interoperability
 ---

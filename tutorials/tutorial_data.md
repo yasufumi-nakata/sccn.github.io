@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Tutorial data
+nav_title: "チュートリアルデータ"
 long_title: Tutorial data and publicly available EEG data
 parent: Tutorials
 ---

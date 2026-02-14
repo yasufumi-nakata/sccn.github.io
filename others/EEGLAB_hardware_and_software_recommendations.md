@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Hard/software requirements
+nav_title: "堅い/ソフトウェア条件"
 long_title: EEGLAB hardware and software recommendations
 parent: Download EEGLAB
 ---

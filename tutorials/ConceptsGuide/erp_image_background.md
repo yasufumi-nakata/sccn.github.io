@@ -1,6 +1,7 @@
 ---
 layout: default
 title: ERP image
+nav_title: "ERPイメージ"
 long_title: How to construct ERP images
 parent:  Concepts guide
 grand_parent: Tutorials

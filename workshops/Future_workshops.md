@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Future workshops
+nav_title: "今後のワークショップ"
 long_title: Future EEGLAB workshop
 parent: Workshops
 nav_order: 4

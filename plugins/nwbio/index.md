@@ -1,6 +1,7 @@
 ---
 layout: default
 title: nwbio
+nav_title: "ログイン"
 long_title: nwbio
 parent: Plugins
 nav_order: 13

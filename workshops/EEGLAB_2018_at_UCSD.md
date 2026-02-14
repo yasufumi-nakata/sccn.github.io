@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2018 UCSD
+nav_title: "エグラボ2018 UCSD"
 parent: Past workshops
 grand_parent: Workshops
 ---

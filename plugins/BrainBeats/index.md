@@ -1,6 +1,7 @@
 ---
 layout: default
 title: BrainBeats
+nav_title: "ブラインビート"
 long_title: BrainBeats
 parent: Plugins
 render_with_liquid: false

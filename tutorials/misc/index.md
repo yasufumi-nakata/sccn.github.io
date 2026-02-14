@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Reference Topics
+nav_title: "参考トピック"
 long_title: Reference Topics
 parent: Tutorials
 has_children: true

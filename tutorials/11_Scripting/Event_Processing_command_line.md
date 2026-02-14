@@ -1,10 +1,10 @@
 ---
 layout: default
 title: b. Event Processing
+nav_title: "b. イベント処理"
 long_title: b. Event Processing
 parent: 11. Write scripts
 grand_parent: Tutorials
-
 ---
 イベント処理スクリプト
 =====

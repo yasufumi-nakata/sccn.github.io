@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: nsgportal-command-line-tools
+nav_title: "nsgportalコマンド・ライン・ツール"
 long_title: nsgportal-command-line-tools
 ---
 他の多くの EEGLAB 機能と同様に、ユーザーは *nsgportal* とグラフィックユーザーインターフェイスまたはコマンドラインツールを使用して対話できます。 コマンドラインツールは、ユーザーが分析を大幅自動化し、プロセスを簡単に再現できるようにします。 このセクションでは、NSG に *nsgportal* コマンドラインツールを導入しています。

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: c. STUDY designs
+nav_title: "c. STUDY デザイン"
 work_title: c. How to work with STUDY designs
 parent: 10. Group analysis
 grand_parent: Tutorials 

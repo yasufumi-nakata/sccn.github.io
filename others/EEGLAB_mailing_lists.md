@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB mailing lists
+nav_title: "EEGLABメーリングリスト"
 parent: Support
 nav_order: 3
 ---

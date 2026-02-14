@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Create an EEGLAB plugin
+nav_title: "EEGLABプラグインを作成する"
 long_title: Create an EEGLAB plugin
 parent: Contribute
 grand_parent: Tutorials

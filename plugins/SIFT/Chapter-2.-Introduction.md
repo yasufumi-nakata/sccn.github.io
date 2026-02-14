@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-2.-Introduction
+nav_title: "第2章 導入事例"
 long_title: Chapter-2.-Introduction
 ---
 脳の構造的および活動的な機能特性のマッピング

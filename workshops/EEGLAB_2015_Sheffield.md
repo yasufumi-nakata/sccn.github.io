@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2015 Sheffield
+nav_title: "EEGLAB 2015 シェフィールド"
 parent: Past workshops
 grand_parent: Workshops
 ---

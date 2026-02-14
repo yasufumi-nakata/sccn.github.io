@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Modify EEGLAB code
+nav_title: "EEGLAB コードの変更"
 long_title: Modify EEGLAB code
 parent: Contribute
 grand_parent: Tutorials

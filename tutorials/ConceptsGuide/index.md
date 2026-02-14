@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Concepts guide
+nav_title: "コンセプトガイド"
 long_title: Concepts guide
 parent: Tutorials
 has_children: true

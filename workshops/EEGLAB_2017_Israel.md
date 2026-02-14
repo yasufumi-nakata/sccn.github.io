@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2017 Israel
+nav_title: "EEGLAB 2017 イスラエル"
 parent: Past workshops
 grand_parent: Workshops
 ---

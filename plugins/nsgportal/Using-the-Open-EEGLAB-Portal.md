@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Using-the-Open-EEGLAB-Portal
+nav_title: "使い方-Open-EEGLAB-Portal"
 long_title: Using-the-Open-EEGLAB-Portal
 ---
 Open EEGLAB Portal を使用するには、NSG Web インターフェイスを介して 2 つのアプローチがあります。http://www.NSGportal.org)、またはNSGコマンドラインRESTfulインターフェイス(NSG-R)の使用によって。 このセクションでは、Webインターフェイスの使用について説明します。

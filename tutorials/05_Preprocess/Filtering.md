@@ -1,6 +1,7 @@
 ---
 layout: default
 title: a. Filtering
+nav_title: "a. フィルタリング"
 long_title: a. Filtering
 categories: preproc
 parent: 5. Preprocess data

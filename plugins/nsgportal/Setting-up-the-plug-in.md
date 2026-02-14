@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Setting-up-the-plug-in
+nav_title: "セットアップ - プラグイン"
 long_title: Setting-up-the-plug-in
 ---
 # プラグインの設定

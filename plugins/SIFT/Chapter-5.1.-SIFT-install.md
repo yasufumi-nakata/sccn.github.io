@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-5.1.-SIFT-install
+nav_title: "第5.1章-SIFT-install"
 long_title: Chapter-5.1.-SIFT-install
 ---
 ※Matlab® 2008a** 以降、シグナルをお持ちのお客様

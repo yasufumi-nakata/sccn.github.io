@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2010 Finland
+nav_title: "EEGLAB 2010 フィンランド"
 parent: Past workshops
 grand_parent: Workshops
 ---

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EEGLAB and Python
+nav_title: "EEGLABとPython"
 long_title: EEGLAB and Python
 parent: Interoperability
 ---

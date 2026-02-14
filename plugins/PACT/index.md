@@ -1,6 +1,7 @@
 ---
 layout: default
 title: PACT
+nav_title: "パクト"
 long_title: PACT
 parent: Plugins
 render_with_liquid: false

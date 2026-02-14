@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Workshops
+nav_title: "ワークショップ"
 has_children: true
 has_toc: false
 nav_order: 4

@@ -1,9 +1,9 @@
 ---
 layout: default
 title: EEGLAB 2017 Japan
+nav_title: "EEGLAB 2017 ジャパン"
 parent: Past workshops
 grand_parent: Workshops
-
 ---
 
 ![350px\|thumb\|right\|upright=2.5\|13世紀 仏教寺院の近く

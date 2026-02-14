@@ -5,6 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Creating-and-managing-a-job-from-pop_nsg-GUI
+nav_title: "作成と管理-a-job-from-pop_nsg-GUI"
 long_title: Creating-and-managing-a-job-from-pop_nsg-GUI
 ---
 # pop_nsg GUI からジョブの作成と管理

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Tutorials
+nav_title: "チュートリアル"
 long_title: Tutorials and other documentation
 has_children: true
 has_toc: false

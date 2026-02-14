@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 2. Quickstart
+nav_title: "2. クイックスタート"
 long_title: 2. Quickstart
 categories: tutorial
 parent: Tutorials

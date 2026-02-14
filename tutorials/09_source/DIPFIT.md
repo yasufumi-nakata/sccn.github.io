@@ -1,6 +1,7 @@
 ---
 layout: default
 title: b. Indep. Comp. sources
+nav_title: "b. Indep. Comp. ソース"
 long_title: b. ICA equivalent dipole sources
 parent: 9. Source analysis
 grand_parent: Tutorials

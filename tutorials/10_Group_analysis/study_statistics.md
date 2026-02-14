@@ -1,6 +1,7 @@
 ---
 layout: default
 title: e. STUDY statistics
+nav_title: "e. STUDY統計"
 long_title: e. STUDY statistics
 parent: 10. Group analysis
 grand_parent: Tutorials 
