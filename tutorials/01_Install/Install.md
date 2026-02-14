@@ -7,75 +7,77 @@ parent: Tutorials
 nav_order: 1
 ---
 
-EEGLABは、
+EEGLAB のインストールと起動
 ==============================
 
-ダウンロード [エッグラボ](https://sccn.ucsd.edu/eeglab/download.php),  
-EEGLABの分布の_sample_data_ subfolderにチュートリアルデータセットがあります。  
-EEGLAB は、Eeglabxxxx で、EEGLAB を解凍します。  
-(注:現在の数字 'xxxx' は )
+まず、[EEGLAB](https://sccn.ucsd.edu/eeglab/download.php) をダウンロードします。  
+EEGLAB 配布物の `_sample_data_` サブフォルダには、チュートリアル用データセットが含まれています。  
+EEGLAB を展開すると、`eeglabxxxx` という名前のフォルダが作成されます。  
+（注: `xxxx` はバージョン番号により異なります。）
 
-Windows では、MATLAB が推奨されます。  
-*アプリケーション/MATLABRxxxx/toolbox/* フォルダー (注記) は、  
-'xxxx' と を組み合わせる。 Linux では、MATLAB ツールボックス  
-*/usr/local/pkgs/MATLAB-rxxxx/toolbox/* . *macOS** ,*/Applications/MATLAB_Rxxxx/* . また、パスにインストールします。
+Windows では、MATLAB は通常、ツールボックスを *Application/MATLABRxxxx/toolbox/* に置くことを推奨します（必須ではありません）。  
+（注: このパス中の `xxxx` は MATLAB のバージョンにより異なります。）  
+Linux の場合、MATLAB のツールボックスフォルダは一般に */usr/local/pkgs/MATLAB-rxxxx/toolbox/* にあります。  
+**macOS** の場合は */Applications/MATLAB_Rxxxx/* です。  
+このほか、MATLAB パス上の任意の場所にフォルダを配置しても構いません。
 
-MATLAB と EEGLAB は、MATLAB と EEGLAB の近くにあります。
+それでは MATLAB と EEGLAB を起動します。
 
-MATLABは、
+MATLAB を起動する
 ------------
 
-- ※Windows**: スタート地点、MATゲートウェイ実行  
-- MacOS**: Dock または Application フォルダー の MATLAB の インストール先  
-- Linux**:Windowsウィンドウ、*matlab* と入力し、入力欄にご記入ください。
+- **Windows**: スタートメニューから MATLAB を見つけて起動します。  
+- **macOS**: Dock または Applications フォルダの MATLAB アイコンから起動します。  
+- **Linux**: ターミナルを開き、`matlab` と入力して Enter を押します。
 
-EEGLABについて
+EEGLAB のディレクトリへ移動する
 ------------------------------
 
-画面右上の「*」のボタンをクリックすることで、ディレクトリを閲覧できます。
+画面右上にある *「…」* ボタンをクリックすると、ディレクトリを参照できます。
 
 ![](/assets/images/MATLAB_main_screen.png)
 
-下のウィンドウを開きます。 ディレクトリをダブルクリックして入力します。  
-フォルダのリスト "..." は、 .....  
-や、、、、*cd*(変更されたディレクトリ) など。
+以下のウィンドウが開きます。フォルダをダブルクリックすると、そのフォルダに入れます。  
+フォルダ一覧の `..` をダブルクリックすると、1 つ上の階層に移動できます。  
+目的のフォルダに移動したら *OK* を押してください。  
+また、コマンドラインで *cd*（change directory）を使って移動しても構いません。
 
-EEGLABについて
+EEGLAB を起動する
 ------------
 
-EEGLAB は、Eeglab* の略称です。EEGLAB は、  
-MATLABパスに追加
+MATLAB のコマンドラインで *eeglab* と入力し、Enter を押します。  
+EEGLAB は自身を MATLAB パスに自動で追加します。
 
 ![](/assets/images/MATLAB_Command_Line.png)
 
-特定商取引法に基づく表示  
-見出し: <span style="color:brown">ファイル、編集、ツール、プロット、スタディ、データセット、ヘルプ</span> 典型的な(左から右)の注文で配置。
+下図の青い EEGLAB メインウィンドウが表示され、7 つのメニュー  
+<span style="color:brown">File, Edit, Tools, Plot, Study, Datasets, Help</span>  
+が一般的な使用順（左から右）に並びます。
 
 ![](/assets/images/Eeglab20191.png)
 
-EEGLABをMATLABに追加
+EEGLAB を MATLAB パスへ追加する
 --------------------------------
 
-EEGLABフォルダをMATLAB検索パスに追加する  
-MATLABは、EEGLABを直接公開する予定です。
+EEGLAB フォルダを MATLAB の検索パスに追加しておくと、  
+次回 MATLAB 起動時に EEGLAB を直接開けるようになります。
 
-グラフィカルな  
-<span style="color: brown">ファイル</span> メニュー項目および選択 <span style="color: brown">セットパス</span>お問い合わせ 以下の画面を開きます。
+GUI から MATLAB を起動している場合は、  
+<span style="color: brown">File</span> メニューから <span style="color: brown">Set Path</span> を選択します。  
+以下のウィンドウが開きます。
 
-![MATLABセットパス gui](/assets/images/MATLAB_set_path_gui_2.png)
+![MATLAB set path gui](/assets/images/MATLAB_set_path_gui_2.png)
 
-または、MATLAB で、*pathtool* に入力してください。  
-お問い合わせ
+コマンドラインから MATLAB を使っている場合は、  
+コマンドラインで *pathtool* と入力して Enter を押してください。  
+同じウィンドウが開きます。
 
-*Add Folder*'s は、  
-「eeglabxxxx」は、*OK* (EEGLAB は、その追加は )  
-サブフォルダ自体)。
+*Add Folder* ボタンを押して `eeglabxxxx` フォルダを選択し、  
+*OK* を押します（サブフォルダの追加は EEGLAB が自動で行います）。
 
-*pathtool*ウィンドウで*Save*が開きます。 EEGLABのソリューション  
-eeglab*の使い方は?  
-EEGLABのこだわり  
-MATLABパスから古いバージョンの削除(選択)  
-*Remove* は、  
-*eeglab* パス へ お気に入りに追加  
-EEGLAB は、EEGLAB が管理(EEGLAB ) を 実行する です。  
-必要なパス。
+*pathtool* ウィンドウで *Save* を押すと、以後の MATLAB セッションで  
+*eeglab* 関数を呼び出せるようになります。  
+新しい EEGLAB バージョンを入れる場合は、古いバージョンのパスを MATLAB から削除し  
+（対象を選択して *Remove*）、古いルーチンが呼ばれるのを防ぐことを推奨します。  
+*eeglab* のパスやサブフォルダを手動で追加するのではなく、  
+EEGLAB にパス管理を任せることを推奨します（起動時に必要なパスを自動追加します）。
