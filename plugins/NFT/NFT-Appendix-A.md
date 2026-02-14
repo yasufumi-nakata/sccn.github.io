@@ -7,49 +7,49 @@ render_with_liquid: false
 title: NFT-Appendix-A
 long_title: NFT-Appendix-A
 ---
-BEM Mesh Format
+ログイン メッシュ形式
 ---------------
 
-The generated BEM mesh is stored on disk as a set of three files: an
-element file, a coordinate file, and an information file. All three mesh
-files have the same base name, with the file extension specifying the
-file type. The file extensions are .bee for the element file, .bec for
-the coordinate file and .bei for the information file. All the files are
-ASCII text files for easier processing and portability.
+生成された BEM メッシュは、ディスクに 3 つのファイルのセットとして保存されます。
+要素ファイル、座標ファイル、情報ファイル。 3つのメッシュすべて
+ファイルには同じファイル名があり、ファイル拡張子が指定されている
+ファイルの種類。 ファイル拡張子は .bee で、 .bec は .bee です。
+情報ファイルの座標ファイルと.bei すべてのファイルが
+ASCIIテキストファイルにより、処理とポータビリティが容易になります。
 
-The information file (.bei) defines the high level properties of the
-mesh. Each mesh consist of one or more boundaries. Since the boundaries
-separate tissues, each boundary has an inside and outside tissue type.
-The first row of the information file contains information about the
-mesh structure. The entries of the first row are the number of
-boundaries, the number of nodes, the number of elements, and the number
-of nodes per element respectively. For linear meshes there are 3 nodes
-per element and for quadratic meshes there are 6 nodes per element. The
-following rows of the information file define the boundary information.
-Since an element can be a part of only one boundary, the elements of the
-mesh are grouped according to the boundary, and from outside to inside.
-Therefore, each boundary is a consecutive group of elements. For the
-boundary rows, the first column is the boundary index. Second column
-gives the number of elements in the boundary. The third and fourth
-columns represent the inner and outer tissue class of the boundary.
+情報ファイル(.bei)は、高レベルのプロパティを定義します。
+メッシュ。 各メッシュは1つ以上の境界で構成されます。 境界から
+別の組織、各境界は内部および外側の組織のタイプを持っています。
+情報ファイルの先頭行には、情報に関する情報が含まれています。
+メッシュ構造。 最初の行のエントリは、
+境界線、ノード数、要素数、数値
+各要素ごとのノード。 リニアメッシュには3つのノードがあります
+要素ごと、四角形のメッシュの場合、要素ごとに6つのノードがあります。 ふりがな
+情報ファイルの次の行は、境界情報を定義します。
+要素は1つの境界だけの一部になることができるので、要素の要素
+網は境界に従って、そして内部に分けられます。
+そのため、各境界は連続した要素グループです。 お問い合わせ
+境界行、最初の列は境界インデックスです。 第2コラム
+境界の要素の数を与えます。 第3と第4
+コラムは境界の内外のティッシュのクラスを表します。
 
-The tissue class is an integer representing a tissue. This number is
-defined per mesh, there is no global assignment of tissue classes at the
-moment. The purpose of tissue class is to uniquely define the various
-tissues that are represented by the mesh. Since different tissues may
-have same or similar conductivities, using a tissue class identifier
-provides a better distinction. Furthermore, this scheme makes it
-possible to solve the same mesh geometry using different tissue
-conductivity values.
+組織クラスは、組織を表す整数です。 この数字は
+メッシュごとに定義された、組織クラスのグローバル割当はありません。
+瞬間。 組織クラスの目的は、さまざまな定義を一意に定義することです。
+メッシュで表される組織。 異なる組織が異なる可能性があるため
+組織クラス識別子を使用して、同じか同様の導電性を持っています
+より良い差別を提供します。 さらに、このスキームは、
+異なる組織を使用して同じメッシュジオメトリを解決することが可能
+導電性値。
 
-The coordinate file (.bec) defines the physical coordinates of the nodes
-in the BEM mesh. There is one node per row. The first column is the node
-index, and runs from one to the number of nodes in the mesh. The next
-three columns represent the x, y, and z coordinates of the node.
+座標ファイル(.bec)は、ノードの物理的座標を定義します。
+BEMの網で。 1行に1つのノードがあります。 最初の列はノードです
+インデックスは、メッシュ内のノード数に1つから実行します。 次へ
+3つの列は、ノードのx、y、z座標を表します。
 
-The element file (.bee) defines the connectivity of the nodes for each
-element. The element file defines one element per row. The first column
-is the element index, and runs from one to the number of elements in the
-mesh. The next three (linear mesh) or six (quadratic mesh) columns
-define the node indexes for the element. Note that the order of nodes
-are important, and define the orientation of the element.
+要素ファイル(.bee)は、各ノードの接続をそれぞれ定義します。
+要素。 要素ファイルは行ごとに1つの要素を定義します。 最初の列
+要素の索引であり、要素の1つから1つの要素の数まで実行します。
+メッシュ。 次の3つの(線形網)または6つの(quadratic網)のコラム
+要素のノードインデックスを定義します。 ノードの順序に注意
+重要で、要素のオリエンテーションを定義します。

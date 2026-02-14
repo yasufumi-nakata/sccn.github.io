@@ -5,44 +5,44 @@ has_children: true
 has_toc: true
 nav_order: 7
 ---
-# EEGLAB plugin documentation
+# EEGLABプラグインのドキュメント
 
-Below is a list of plugins that have documentation copied from GitHub. Please note that this is only a small subset of all EEGLAB plugins, as not all plugin documentation is compatible with visualization and search functionalities on the EEGLAB website. The complete list of plugins can be found [here](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php).
+以下はGitHubからコピーされたドキュメントを持つプラグインのリストです。 EEGLABのプラグインは、すべてのプラグインのドキュメントは、EEGLABのウェブサイト上の視覚化と検索機能と互換性があるので、これはすべてのEEGLABプラグインの小さなサブセットです。 プラグインの完全なリストが見つかります [詳しくはこちら](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php).
 
-## Import
-* [EEG-BIDS](/plugins/EEG-BIDS): Imports and export EEG data to the BIDS format
-* [NWB-io](/plugins/NWB-io): Import and export to the NWB format
-* [BVA-io](/plugins/BVA-io): input/output for Brain Vision Analyzer format
-* [MFF-matlab-io](/plugins/MFF-matlab-io): input/output for MFF EGI file format
-* [Neuroscan-io](/plugins/Neuroscan-io): input/output for Neuroscan file format
-* [CTFimport](/plugins/CTFimport): input/output for Neuroscan file format
-* [get_chanlocs](/plugins/get_chanlocs): Import scanned channel locations
+## インポート
+* [EEG-BIDSについて](/plugins/EEG-BIDS): EEGデータをBIDS形式にインポートしてエクスポート
+* [NWB-ioの特長](/plugins/NWB-io): NWBフォーマットへのインポートとエクスポート
+* [BVA-ioの特長](/plugins/BVA-io): 脳ビジョンアナライザーフォーマットの入力/出力
+* [MFF-matlab-ioの特長](/plugins/MFF-matlab-io): MFFの入力/出力 EGIファイル形式
+* [Neuroscan-io(ネウロスキャン)](/plugins/Neuroscan-io): Neuroscanファイル形式の入力/出力
+* [CTFimportの特長](/plugins/CTFimport): Neuroscanファイル形式の入力/出力
+* [get_chanlocs ディレクティブ](/plugins/get_chanlocs): インポートスキャンされたチャンネルの場所
 
-## Processing
-* [ICLabel](/plugins/ICLabel): Classifies independent components of EEG data
-* [Viewprops](/plugins/Viewprops): Advanced ICA component property viewing for IClabel
-* [DIPFIT](/plugins/DIPFIT): Localizes independent components of EEG data
-* [ROIconnect](/plugins/ROIconnect): Computes connectivity analysis between regions of interest
-* [AMICA](/plugins/AMICA): Computes Adaptive Mixture Independent Component Analysis
-* [Clean_rawdata](/plugins/Clean_rawdata): Rejects bad channels and bad portions of data using ASR
-* [LIMO](/plugins/LIMO): Linear Modeling of EEG data
-* [SIFT](/plugins/SIFT): Computes connectivity analysis between ICA components
-* [groupSIFT](/plugins/groupSIFT): Group-level SIFT analysis
-* [BrainBeats](/plugins/BrainBeats): Joint EEG/heart analysis
-* [Zapline-Plus](/plugins/Zapline-Plus): Removes line noise
-* [CleanLine](/plugins/CleanLine): Computes mixture model independent component analysis
-* [EEGstats](/plugins/EEGstats): Compute EEG statistics (power, alpha peak and asymmetry)
-* [trimOutlier](/plugins/trimOutlier): Removes EEG outliers
-* [fMRIb](/plugins/fMRIb): Removes fMRI artifacts in EEG
-* [IMAT](/plugins/IMAT): Finds independent modulators of EEG data
-* [NIMA](/plugins/NIMA): Clustering of ICA components using Measure-projection
-* [PACT](/plugins/PACT): Computes phase-amplitude coupling for ECoG
-* [NFT](/plugins/NFT): Localizes ICs using Neuroelectromagnetic Forward Head Modeling
-* [PACTools](/plugins/PACTools): Computes phase-amplitude coupling using different methods
-* [ARfitStudio](/plugins/ARfitStudio): Computes multivariate autoregressive models of EEG
-* [PowPowCAT](/plugins/PowPowCAT): Computes cross-frequency power-power coupling of ICs
-* [RELICA](/plugins/RELICA): Computes reliable ICA using Bootstrap
-* [std_dipoleDensity](/plugins/std_dipoleDensity): Computes ICA component dipole density
-* [FirFilt](/plugins/FirFilt): Filtering of EEG data
-* [NSGportal](/plugins/NSGportal): Performs computation on the Neuroscience Gateway
+## プロセス
+* [ICラベル](/plugins/ICLabel): EEGデータの独立したコンポーネントを分類
+* [ビュープロップ](/plugins/Viewprops): IClabel の ICA コンポーネント プロパティー表示
+* [ディップフィット](/plugins/DIPFIT): EEGデータの独立したコンポーネントをローカライズ
+* [ROIconnectについて](/plugins/ROIconnect): 関心のある地域間の接続解析を計算
+* [アメリカ](/plugins/AMICA): Computes Adaptive Mixture独立したコンポーネント分析
+* [Clean_rawdata(クリーンデータ)](/plugins/Clean_rawdata): ASR を使用してデータの悪いチャンネルと悪い部分を注入する
+* [リモ](/plugins/LIMO): EEGデータのリニアモデリング
+* [シャフト](/plugins/SIFT): ICAコンポーネント間の接続解析を計算
+* [グループSIFT](/plugins/groupSIFT): グループレベルのSIFT解析
+* [ブラインビート](/plugins/BrainBeats): ジョイントEEG/ハート解析
+* [Zaplineプラス](/plugins/Zapline-Plus): ラインノイズを除去します
+* [クリーンライン](/plugins/CleanLine): 混合モデル独立したコンポーネント分析を計算
+* [エグスタット](/plugins/EEGstats): 計算 EEG 統計(パワー、アルファピーク、非対称)
+* [トリムアウター](/plugins/trimOutlier): EEG のアトリエを取除いて下さい
+* [ログイン ツイート](/plugins/fMRIb): EEGのfMRIアーティファクトを削除します。
+* [メニュー](/plugins/IMAT): : : EEGデータの独立したモジュレータを見つけます
+* [ニマ](/plugins/NIMA): 測定プロジェクトを用いたICAコンポーネントのクラスタリング
+* [パクト](/plugins/PACT): ECoG のための計算の位相差のカップリング
+* [NFTの特長](/plugins/NFT): Neuroelectromagneticを用いたICをローカライズ フォワードヘッドモデリング
+* [パックツール](/plugins/PACTools): 異なる方法を使用して相振度カップリングを計算
+* [アルフィットスタジオ](/plugins/ARfitStudio): EEGの多変性モデルを補正
+* [PowPowCATの特長](/plugins/PowPowCAT): ICの交差周波数パワーカップリングを計算
+* [リリカ](/plugins/RELICA):Bootstrapを使用して信頼できるICAを計算します
+* [std_dipole密度](/plugins/std_dipoleDensity): ICAコンポーネントのダイポール密度を計算
+* [フリル](/plugins/FirFilt): EEGデータのフィルタリング
+* [NSGポータル](/plugins/NSGportal): 神経科学ゲートウェイの計算
 

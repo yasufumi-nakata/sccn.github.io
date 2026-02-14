@@ -7,156 +7,156 @@ render_with_liquid: false
 title: Chapter-04-NFT-Examples
 long_title: Chapter-04-NFT-Examples
 ---
-In this section, two head modeling examples are presented. Both of these
-examples use the same subject. The first example generates a realistic
-head model using the MR image of the subject. The second example warps
-the template head model to 141 digitized electrode locations. Mesh
-generation and electrode registration results are given for both of
-these examples. The computational cost of each modeling stage and sizes
-of the resulting output files are also given.
+このセクションでは、2つのヘッドモデリング例を紹介します。 これらの両方
+サンプルは同じ主題を使用します。 最初の例は現実的を生成します
+被写体のMR画像を用いたヘッドモデル。 第2の例は警戒します
+テンプレートヘッドモデルから141桁の電極位置へ。 メッシュ
+生成および電極の登録結果は両方のために与えられます
+これらの例。 各モデリングステージとサイズの計算コスト
+結果の出力ファイルも与えられます。
 
-Head Model Generation
+ヘッドモデル生成
 ---------------------
 
-For the first example, a four-layer mesh is generated for the subject
-through segmentation and mesh generation steps. The mesh consists of
-scalp, skull, csf, and brain layers for a total of 16016 nodes and 32024
-elements. The individual layers can be seen in Figure 13.
+最初の例では、被写体に対して4層メッシュが生成されます。
+区分および網の生成のステップによって。 網はから成っています
+scalp、skull、csf、および合計16016ノードと32024の脳層
+要素。 個々のレイヤーは図13で見ることができます。
 
-(a) 
-![a](NFM_Toolboox_UsersManual_html_56c540a1.gif "wikilink") ...
+(a)) 
+![ツイート](NFM_Toolboox_UsersManual_html_56c540a1.gif "wikilink") ...
 (b)
-![b](NFM_Toolboox_UsersManual_html_28d79845.gif "wikilink") ...
+![ツイート](NFM_Toolboox_UsersManual_html_28d79845.gif "wikilink") ...
 (c) 
-![c](NFM_Toolboox_UsersManual19x.png "wikilink") ... 
-(d)
-![d](NFM_Toolboox_UsersManual_html_m69f7a676.gif "wikilink")
+![ツイート](NFM_Toolboox_UsersManual19x.png "wikilink") ... 
+(d) )
+![ログイン](NFM_Toolboox_UsersManual_html_m69f7a676.gif "wikilink")
 
-Figure 13: BEM model of the scalp, skull, csf and the brain obtained
-from an MR image. (a) scalp mesh, (b) skull mesh, (c) CSF mesh, (d)
-brain mesh.
+図13:頭皮、頭皮、csf、脳のBEMモデル
+MRイメージから。 (a)スカルプメッシュ、(b)スカルメッシュ、(c)CSFメッシュ、(d)
+脳の網。
 
-After mesh generation, the electrodes and the realistic mesh is
-co-registered. The result of co-registration can be seed in Figure 14.
+メッシュ生成後、電極と現実的なメッシュが
+共同登録 共同登録の結果は図14で確認できます。
 
-![Figure 14: Registered electrode locations on the scalp mesh.](NFM_Toolboox_UsersManual_html_7b73089f.gif "wikilink")
+![図14: scalpメッシュに電極の位置を登録しました。](NFM_Toolboox_UsersManual_html_7b73089f.gif "wikilink")
 
-The second example assumes that the only available subject data is the
-141 digitized electrode locations. For warping the template MNI mesh is
-used, which has three layers and 3000 nodes and 5988 elements. This is
-the standard mesh that is also used by other BEM solvers in the
-literature. The results of warping can be seen in Figure 15.
+2 番目の例では、利用可能な被写体データのみが利用できると仮定します。
+141桁の電極の位置。 テンプレートMNIメッシュを歪めるために
+3 つの層および 3000 ノードおよび 5988 要素を持つ使用される。 お問い合わせ
+他のBEMの解決者によってまた使用される標準的な網
+文献。 歪みの結果は図15で見ることができます。
 
-(a)
-![a](NFM_Toolboox_UsersManual_html_3bc436a3.gif "wikilink") ...
+(a))
+![ツイート](NFM_Toolboox_UsersManual_html_3bc436a3.gif "wikilink") ...
 (b) 
-![b](NFM_Toolboox_UsersManual23x.png "wikilink") ... 
+![ツイート](NFM_Toolboox_UsersManual23x.png "wikilink") ... 
 (c)
-![c](NFM_Toolboox_UsersManual_html_m350221ff.gif "wikilink") ...
-(d) 
-![d](NFM_Toolboox_UsersManual_html_m788a9795.gif "wikilink")
+![ツイート](NFM_Toolboox_UsersManual_html_m350221ff.gif "wikilink") ...
+(d) ) 
+![ログイン](NFM_Toolboox_UsersManual_html_m788a9795.gif "wikilink")
 
-Figure 15: BEM model of the scalp, skull, the brain obtained by warping
-a template head model to electrode locations. (a) scalp mesh, (b) skull
-mesh, (c) brain mesh, (d) electrode locations.
+図15:頭皮、頭蓋骨、歪むことによって得られる脳のBEMモデル
+電極の位置へのテンプレートヘッドモデル。 (a)スカルプメッシュ、(b)スカルプ
+メッシュ、(c) 脳メッシュ、(d) 電極の位置。
 
-Note that the realistic model, and the warped model are two different
-models for the same experiment. Since the MNI head only contains the
-half of the head above the mouth, some electrodes had to be discarded.
-While the realistic model represents the real geometry of the head much
-better than the warped model, the warped model itself is an improvement
-over the template MNI head itself.
+現実的なモデルと歪んだモデルが2つの異なることに注意してください
+同じ実験のためのモデル。 MNIヘッドのみが含まれているため
+口の上の頭の半分は、いくつかの電極が破棄されなければなりませんでした。
+現実的なモデルは頭の実際の幾何学を表します
+歪んだモデルよりも、歪んだモデル自体が改善
+テンプレートのMNIヘッド自体に。
 
-Computational Complexity
+計算の複雑さ
 ------------------------
 
-The computational cost of using a realistic head model is related to the
-size of the BEM matrices, which depend on the mesh. The aim of this
-section is to give an idea about how long different stages of the head
-modeling and forward problem solution takes.
+リアルヘッドモデルを用いた計算コストは、
+メッシュに依存するBEMのマトリックスのサイズ。 この目的
+セクションは、頭の長い異なる段階についての考えを与えることです
+モデリングとフォワードの問題ソリューションがかかる。
 
-The realistic model generated using MR image consists of 4 layers and
-has 16016 number of nodes, and 32024 number of faces in total. Local
-mesh refinement is done using LMR ratio of 2. The number of faces for
-each surface is as follows: Scalp:6944, Skull:7084, Csf: 9298,
-Brain:8698 elements.
+MRイメージで生成される現実的なモデルは4つの層で構成され、
+16016 ノード数、合計で 32024 件数。 ローカル
+2のLMRの比率を使用して網の精錬は行われます。 顔の数
+各表面は次の通りです: 頭皮:6944、頭皮:7084、Csf:9298、
+脳:8698要素。
 
-Table 1 shows the computation times for realistic head modeling and
-forward model generation when head model is obtained using MR images.
-Table 2 shows the computation times for forward model generation when
-the head model is obtained by warping a template head model. Warping of
-a template head model and source space generation takes only seconds,
-therefore, these are not given in the tables. The computations are done
-on a 64-bit Opteron processor.
+表1は現実的な頭部の模倣のための計算の時間を示します
+ヘッドモデルをMR画像で取得するとモデル生成を進めます。
+表2は、モデル生成前の計算時間を示します。
+テンプレートヘッドモデルを歪めることでヘッドモデルが得られる。 ワッピング
+テンプレートヘッドモデルとソーススペース生成は秒だけかかります。
+そのため、テーブルに当てはまりません。 計算は行われます
+64ビットOpteronプロセッサ。
 
-| Process                                         | Time       |
+| プロセス | 時間 |
 |-------------------------------------------------|------------|
-| Segmentation                                    | 25 minutes |
-| Mesh Generation                                 | 38 minutes |
-| Co-registration                                 | 25 minutes |
-| Generation of BEM matrices (16016 nodes)        | 2 hours    |
-| Calculation of transfer matrix (141 sensors)    | 3.2 hours  |
-| Calculation of Lead Field Matrix (6075 dipoles) | 1 hour     |
+| セグメント | 25分 |
+| メッシュ生成 | 38分 |
+| 参加登録 | 25分 |
+| BEMマトリックスの生成(16016ノード) | 2時間 |
+| 転送行列の計算 | 3.2時間 |
+| リードフィールドマトリックスの計算(6075ダイポール) | 1時間 |
 |                                                 |            |
 
-| Process                                          | Time       |
+| プロセス | 時間 |
 |--------------------------------------------------|------------|
-| Generation of BEM matrices (6006 nodes)          | 19 minutes |
-| Calculation of transfer matrix (135 sensors)     | 15 minutes |
-| Calculation of Lead Field Matrix (10131 dipoles) | 30 minutes |
+| BEMマトリックスの生成(6006ノード) | 19分 |
+| 転送行列の計算(135センサ) | 15分 |
+| リードフィールドマトリクスの計算 | 30分 |
 |                                                  |            |
 
-The transfer matrix computation and lead-field generation steps may be
-executed on multiple processors if the MATLAB Parallel Processing
-Toolbox is available. We have measured a 2.6x speed-up by generating the
-transfer matrix on a quad-core instead of a single core processor.
+転送行列計算とリードフィールド生成ステップは、
+MATLABの並列処理が複数プロセッサで実行される
+ツールボックスをご用意しました。 生成することで2.6倍のスピードアップを測定しました
+単一のコアプロセッサの代わりにクォードコアの行列を転送します。
 
-Output Folder
+出力フォルダ
 -------------
 
-The toolbox uses the Subject folder to save the generated meshes and
-matrices. The names of the output files are derived from the subject and
-session names. This section lists the contents of output folders and
-size of the files for the two examples discussed above.
+Toolbox は、生成されたメッシュを保存するために Subject フォルダーを使用します。
+マトリクス。 出力ファイルの名前は、対象から派生し、
+セッション名。 このセクションでは、出力フォルダの内容と
+上記の2つの例のファイルのサイズ。
 
-Table 3 shows the contents of the output folder when Subject Name is
-SubjectA and session name is Session1 for the example given in Table 1.
-Table 4 shows for the case given in Table 2, when the subject name is
-entered as SubjectB and session name as Session1.
+表3は、サブジェクト名がいるときに出力フォルダの内容を表示します
+コンテンツ Aとセッション名は、テーブル1で指定した例のセッション1です。
+表4は、被写体の名前がない場合、表2で指定された場合に示します。
+セッション1 に SubjectB とセッション名として入力します。
 
-| File                               | Size      |
+| ファイル | サイズ |
 |------------------------------------|-----------|
-| SubjectA_segments.mat              | 0.4 MB    |
-| SubjectA_filtered.mat              | 84 MB     |
-| SubjectA.bei                       | 67 bytes  |
-| SubjectA.bec                       | 1.2 MB    |
-| SubjectA.bee                       | 0.7 MB    |
-| SubjectA.model                     | 473 bytes |
-| SubjectA.cmt                       | 2.9 GB    |
-| SubjectA.dmt                       | 844 MB    |
-| SubjectA.imt                       | 939 MB    |
-| sourcespace.dip                    | 581 KB    |
-| Session1_SubjectA_headsensors.sens | 6.9 KB    |
-| Session1_SubjectA_sensorindex.mat  | 2.2 KB    |
-| Session1.session                   | 4.8 KB    |
-| Session1.tmte                      | 53.9 MB   |
-| Session1_LFM.mat                   | 6.3 MB    |
+お問い合わせ 件名A_segments.mat | 0.4 MB |
+お問い合わせ 演題A_濾過マット | 84 MB |
+| 被写体 | 67 バイト |
+| 対象A.bec | 1.2MB |
+| 件名 | 0.7 MB |
+| 件名モデル | 473 件 |
+| 件名A.cmt | 2.9 GB |
+| 件名A.dmt | 844 MB |
+| 演題募集 | 939 MB |
+| ソーススペース | 581 KB |
+| セッション1|サブジェクトA|ヘッドセンサー|6.9 KB |
+お問い合わせ セッション1_サブジェクトA_センサーインデックス_ 2.2 KB |
+| セッション1.セッション | 4.8 KB |
+| セッション1.tmte | 53.9MB |
+| セッション1|LFMマット | 6.3 MB |
 |                                    |           |
 
 |                                    |           |
 |------------------------------------|-----------|
-| SubjectB.bei                       | 52 bytes  |
-| SubjectB.bec                       | 381 KB    |
-| SubjectB.bee                       | 240 KB    |
-| SubjectB_warping                   | 2.3 KB    |
-| SubjectB.model                     | 381 bytes |
-| SubjectB.cmt                       | 432.1 MB  |
-| SubjectB.dmt                       | 136.6 MB  |
-| SubjectB.imt                       | 46.3 MB   |
-| sourcespace.dip                    | 959 KB    |
-| Session1_SubjectB_headsensors.sens | 6.4 KB    |
-| Session1_SubjectB_sensorindex.mat  | 2.1 KB    |
-| Session1.session                   | 7.6 KB    |
-| Session1.tmte                      | 32.7 MB   |
-| Session1_LFM.mat                   | 16.9 MB   |
+| 件名B.bei | 52 バイト |
+| 対象B.bec | 381 KB |
+| 被写体 | 240 KB |
+| 件名B|ワーピング | 2.3 KB |
+| 件名B.model | 381バイト |
+| 件名B.cmt | 432.1 MB |
+| 件名B.dmt | 136.6 MB |
+| 件名B.imt | 46.3 MB |
+| ソーススペース | 959 KB |
+| セッション1|サブジェクトB|ヘッドセンサー|6.4 KB |
+お問い合わせ セッション1_サブジェクトB_センサーインデックス_ 2.1 KB |
+| セッション1.セッション | 7.6 KB |
+| セッション1.tmte | 32.7 MB |
+お問い合わせ セッション1_LFMマット | 16.9 MB |
 |                                    |           |

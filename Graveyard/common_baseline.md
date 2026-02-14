@@ -1,22 +1,22 @@
 ---
 layout: default
 ---
-Common baseline across ERSP condition
+ERSP条件を渡る共通のベースライン
 =========
 
-When computing event-related spectral power (ERSP)
-transforms for sets of data epochs from two or more experimental
-conditions, the user may want to subtract the same (log) power baselinevector from all conditions. Both the [pop_newtimef.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) function
-and the [newtimef.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=newtimef.m) function it calls return spectral baseline
+計算イベント関連の分光力(ERSP)
+2つ以上の実験からのデータエポックのセットに変換
+条件、ユーザーは、すべての条件から同じ(ログ)パワーベースラインベクトルをサブトラクトする場合があります。 両方とも [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) 関数
+そして、 [newtimef.m リリース](http://sccn.ucsd.edu/eeglab/locatefile.php?file=newtimef.m) 関数は、リターンスペクトルベースラインを呼び出す
 
-values that can be used in subsequent ''newtimef() '' computations. For
-instance, assuming that three sets of data epochs from three
-experimental conditions have been stored for 10 subjects in EEGLAB
-dataset files named *subj\[1:10\]data\[1:3\].set* in directory
-*/home/user/eeglab*, and that the three datasets for each subject
-contain the same ICA weights, the following MATLAB code would plot the
-ICA component-1 ERSPs for the three conditions using a common spectral
-baseline for each of the 10 subjects:
+その後に使用できる値 ''newtimef() '' 計算。 お問い合わせ
+インスタンスは3つのデータを3つのセットから仮定します
+EEGLABで実験条件を10件保存しました
+ディレクトリの*subj\[1:10\]data\[1:3\].set*という名前のデータセットファイル
+*/home/user/eeglab* および各被写体の 3 つのデータセット
+同じ ICA の重量を含んで下さい、次の MATLAB コードはプロットします
+ICAコンポーネント1 ERSPは、一般的なスペクトルを使用して3つの条件のための
+10件ごとにベースライン:
 
 ``` matlab
 eeglab; % Start eeglab
@@ -47,26 +47,26 @@ end % End subject
 eeglab redraw  % Update the main EEGLAB window
 ```
 
-Repetitive processes, such as the computation performed above, may be
-time consuming to perform by hand if there are many epochs in each
-dataset and many datasets. Therefore it may be best performed by an
-EEGLAB MATLAB script that is left to run until finished in a MATLAB
-session. Writing scripts using EEGLAB functions makes keeping track of
-data parameters and events relatively easy, while maintaining access to
-the flexibility and power of the MATLAB signal processing and graphics
-environment.
+上記の計算などの繰り返し処理は、
+それぞれに多くのエポックがある場合、手で実行する時間がかかります
+データセットと多くのデータセット。 そのため、最高のパフォーマンスを発揮します。
+EEGLAB MATLAB スクリプトは、MATLAB で終了するまで実行する
+セッション。 EEGLAB 関数を使用してスクリプトを書くことで、
+データパラメータとイベントへのアクセスを維持しながら、比較的簡単に
+MATLAB信号処理とグラフィックスの柔軟性とパワー
+環境。
 
-<u>Notes: </u>
+<u>ノート: </u>
 
--   Normally, the user might want to accumulate and save the ERSPs and
-    other output variables returned by *newtimef.m* above to make possible
-    further quantitative comparisons between subjects.
+-   通常、ユーザーは ERSP を蓄積し、保存したいと思うかもしれません
+    上記*newtimef.m*で返された他の出力変数は可能にする
+    被験者間のさらなる定量比較。
 
--   In the current version of EEGLAB, the cross-coherence function {
-    {File\|crossf.m} } can calculate significance of differences between
-    coherences in two conditions.-   In the future, [newtimef.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=newtimef.m) will be extended to allow
+-   EEGLABの現在のバージョンでは、クロスコヒーレンス関数 {
+    {File\|crossf.m} との違いの意義を計算することができます
+    2つの条件の一貫性。- 未来に、 [newtimef.m リリース](http://sccn.ucsd.edu/eeglab/locatefile.php?file=newtimef.m) 可能にするために延長されます
 
-    comparisons between multiple ERSP and ITC transforms directly.
--   The same type of iterative normalization (illustrated above) may be
-    applied for the "baseamp" parameter returned by {
-    {File\|pop_erpimage.m} }
+    複数の ERSP と ITC の比較は、直接変換します。
+-   反復的な正規化の同じタイプ(上記のイラストレーション)は
+    { で返された "baseamp" パラメータに適用される
+    お問い合わせ

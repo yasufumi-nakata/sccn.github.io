@@ -3,36 +3,36 @@ layout: default
 title: EEGLAB test cases
 parent: Support
 ---
-EEGLAB test cases
+EEGLABテストケース
 ===
 
-## What is a unit testing test case?
+## ユニットテストケースとは?
 
-A test case is a small function call built to test a
-specific function call - here an EEGLAB function. We aim to have at
-least one test case per function, though, for many EEGLAB functions, 
-more test cases may be required to test the whole range of available GUI
-and command-line options (and their combinations).
+テストケースは、テストするために構築された小さな関数呼び出しです
+特定の関数呼び出し - ここで EEGLAB 関数. そのためには
+関数ごとの少なくとも1つのテスト ケース、しかし、多くのEEGLAB機能のために、 
+利用可能なGUIの全範囲をテストするために、より多くのテストケースが必要な場合があります
+コマンドラインオプション(およびその組み合わせ)
 
-There are different types of test cases. Some test cases only test
-that a given function does not crash when using specific combinations of
-input parameters. This constitutes the majority of EEGLAB tests for
-functions with graphical outputs. Some other test cases run a given
-function and test if the output is numerically accurate.
+異なる種類のテストケースがあります。 一部のテストケースのみのテスト
+特定の関数が特定の組み合わせを使用するときにクラッシュしません
+入力パラメータ。 これは、EEGLABのテストの大部分を構成します。
+グラフィカルな出力機能。 いくつかの他のテストケースは、与えられた
+出力が数値的に正確であるかどうか機能およびテスト。
 
-## EEGLAB test case repository
+## EEGLABテストケースリポジトリ
 
-Our test cases do not cover all the possible usage of EEGLAB functions.
-We estimate that our 5,000 test cases cover about 10% of all
-possible function call variations.
+EEGLAB の機能の全ての使用はテストケースではカバーしません。
+5,000件のテストケースがすべて約10%のカバーであることをお詫び申し上げます。
+可能な関数呼び出しのバリエーション。
 
-Please contact us if you want to run the test cases on your server. The total size of the unit testing package above is about 2 GB. After downloading the code (perhaps to a directory/folder you
-name "/unittesting"), move to this folder in MATLAB and run the
-*runlocal.m* function. This will execute all the tests. At the end of
-the testing (usually about 15 minutes), a list of any functions that
-have failed will be returned. For example, if bugs have crept into two
-functions 'decompresserpss' and 'pop_epoch', the 'runlocal' output might
-be:
+サーバでテストケースを実行したい場合は、お問い合わせください。 上記のユニットテストパッケージの合計サイズは約2 GBです。 コードをダウンロードした後(ディレクトリ/フォルダに完璧)
+名前 "/unittesting")、MATLABのこのフォルダに移動し、実行します
+*runlocal.m*機能。 すべてのテストを実行します。 終了時
+テスト(通常約15分)、任意の機能のリスト
+失敗した場合は返却されます。 例えば、バグが2つに折り込まれている場合
+'decompresserpss' と 'pop_epoch' の関数、'runlocal' の出力は、
+で:
 
 ```
 function /Users/arno/eeglab-testcases/trunk/unittesting_binary/pop_read_erpss/test_pop_read_erpss.m
@@ -46,8 +46,8 @@ function /Users/arno/eeglab-testcases/trunk/unittesting_binary/pop_read_erpss/t
 ```
 
 
-You may then go to each folder containing a function that failed and
-call the function from the command line. For instance,
+失敗した関数を含む各フォルダーに移動し、
+コマンドラインから関数を呼び出します。 例えば、
 
 ```
 
@@ -56,61 +56,61 @@ call the function from the command line. For instance,
 
 ```
 
-The function should again fail, making it possible to debug it *on the
-spot*.
+関数は再び失敗し、それをデバッグすることを可能にします*onの
+スポット*
 
-Note that the sample errors above are provided as examples. All
-the (nearly 5,000) test cases contained in the repository have been
-verified to work under several versions of MATLAB running under
-Windows, Mac OSX, and Linux.
+上記のサンプルエラーを例に示します。 すべて
+リポジトリに含まれているテストケース(5,000以上)が作成されています。
+実行中のMATLABのいくつかのバージョンで動作するように検証
+Windows、Mac OSX、Linux
 
-### EEGLAB test case sub-repositories
+### EEGLABテストケースサブリポジトリ
 
-Since the test case repository above is quite large (2 GB), we have
-separated the test cases into sub-folders that may be run independently.
-- The *unittesting_common* folder contains the shared code required to apply
-the test cases. You may then check out any of the following folders
-below.
+上記のテストケースリポジトリは非常に大きい(2 GB)なので、
+独立して実行できるサブフォルダにテストケースを分離します。
+- *unittesting_common* フォルダーには、適用に必要な共有コードが含まれています。
+テストケース。 次に、次のフォルダのいずれかをチェックすることができます
+お問い合わせ
 
-- The *unittesting_general* folder contains tests for all the signal processing
-functions in EEGLAB (90% of all tests). After
-downloading the folder, run the *runlocal.m* function contained in
-it.
-- The *unittesting_studyfunc* folder contains all the test cases for functions that deal with
-EEGLAB studies. Because it contains a test STUDY with anonymized data
-for several test subjects, this folder is larger (1.2 GB). After
-downloading this folder, run the
-*runlocal.m* function contained in it.
-- The *unittesting_binary* folder contains test cases for reading binary data files in several
-formats. Because it contains several anonymized binary test data files,
-this folder is also large (500 MB). After downloading this folder, run the <b>runlocal</b> function contained in it.
+- *unittesting_general* フォルダーには、すべてのシグナル処理のテストが含まれています。
+EEGLAB(全試験の90%)の機能。 アフター
+フォルダをダウンロードし、*runlocal.m* 関数を入力
+お問い合わせ
+- *unittesting_studyfunc* フォルダーには、対処する関数のすべてのテストケースが含まれています。
+EEGLABの研究。 匿名化されたデータでテストSTUDYが含まれているため
+複数のテスト対象では、このフォルダはより大きい(1.2 GB)。 アフター
+このフォルダをダウンロードし、実行します
+*runlocal.m* 関数はそれに含まれる。
+- *unittesting_binary* フォルダには、複数のバイナリデータファイルを読むためのテストケースが含まれています。
+フォーマット。 複数の匿名化されたバイナリテストデータファイルを含むため、
+このフォルダも大き(500 MB)です。 このフォルダをダウンロードした後、 <b>ランローカル</b> それに含まれている機能。
 
-## Adding new test cases
+## 新しいテストケースの追加
 
-Contributing new test cases is useful for EEGLAB developers and the EEGLAB user community in general because unit testing helps ensure that the EEGLAB code base remains stable. You may
-want to add test cases for your functions or scripts to ensure they
-continue to give the same output. Or you may want to add test cases for
-functions you call with non-standard combinations of options. If you
-have test cases for EEGLAB functions that you might contribute to our
-repository, contact us at eeglab@sccn.ucsd.edu.
+EEGLAB の開発者や EEGLAB のユーザーコミュニティでは、ユニットテストが EEGLAB のコードベースが安定していることを確認するのに役立つため、新しいテストケースが役立ちます。 可能です。
+関数やスクリプトにテストケースを追加して、それらを確実にするために
+同じ出力を続けてください。 またはテストケースを追加したい場合
+オプションの非標準の組み合わせで呼び出しる関数。 お問い合わせ
+EEGLABの機能に関するテストケースがあります。
+リポジトリ、eeglab@sccn.ucsd.edu までお問い合わせください。
 
-What is an ideal test case? An ideal test case runs an EEGLAB function
-with some (useful) combination of input parameters and checks that
-the function output is correct. This might involve saving
-verified-to-be-correct output data in a file and comparing the test case
-output to the data in the file. However, as the adage goes, "some test is
-better than no test." Therefore, even if your test does not yet check
-function output, we will be happy to add it to our test case suite.
-Ideally, your tests should use the same test input data provided in the
-test case repository or the tutorial data distributed with
-EEGLAB in the "sample_data" folder.
+理想的なテストケースは何ですか? 理想的なテストケースはEEGLAB関数を実行します
+入力パラメータの一部(役に立つ)の組み合わせと、そのチェック
+関数出力は正しいです。 これは節約を伴うかもしれません
+検証-to-be-correct 出力データをファイルに保存し、テストケースを比較
+ファイル内のデータを出力します。 しかし, 広告が行くように, 「いくつかのテストは、
+テストなしよりも優れています。 そのため、テストがまだチェックされていない場合でも
+機能出力は、テストケーススイートに追加して満足します。
+理想的には、あなたのテストは同じテスト入力データを使用して下さい
+テストケースリポジトリまたはチュートリアルデータを配布して
+"sample_data" フォルダ内の EEGLAB。
 
-## Adding EEGLAB scripts to unit testing
+## EEGLABスクリプトをユニットテストに追加
 
-If you have complex scripts calling standard MATLAB and EEGLAB functions
-that you want to ensure will continue to be supported in future EEGLAB
-releases, send us the script and associated data at
+標準 MATLAB と EEGLAB 関数を呼び出す複雑なスクリプトがある場合
+EEGLABでは今後も引き続きご支援を賜りますようお願い申し上げます。
+リリース、スクリプトと関連データを送ってください。
 eeglab@sccn.ucsd.edu.
 
-<i>To date, most test-case functions were contributed by Arnaud Delorme,
-Ke Tang, Andreas Romeyke, and Ronny Lindner.</i>
+<i>これまでのところ、Arnaud Delormeのほとんどのテストケース関数は、
+ケタン、アンドレアス・ロメイケ、ロニー・リンダー</i>

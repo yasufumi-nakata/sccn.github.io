@@ -2,44 +2,44 @@
 layout: default
 ---
 
-In this page, we address how to set up computational resources at SCCN
-to compile EEGLAB nightly. Notes and instructions are provided for three
-different OS: macOS, Ubuntu, and Windows. In the current setup, we are
-using a Mac computer (*delorming.ucsd.edu*) to host two virtual machines
-(VM). VMWare Fusion is used in the host machine to run Windows (Windows
-10 x64) and Linux (Ubuntu 64-bit 18.04). The compiled EEGLAB files for
-macOS and Windows are stored in a common folder synchronized through
-Google Drive. The compiled files in the Ubuntu VM are transferred to the
-Google Drive file in the host machine, where they are uploaded and
-synchronized. Compilation of EEGLAB in the three OS is performed
-nightly. For this, a system daemon
-([cron](https://help.ubuntu.com/community/CronHowto)) is used to execute
-the task in the Mac (host) and Ubuntu (VM) machines. To automate the
-compilation in the Windows VM, a job was set up in Task Scheduler. In
-the following section, details for each specific OS are provided. Before
-beginning, make sure the host Mac is connected to the Internet, and that
-you have access to the Google account used in the Google Drive app.
+このページでは、SCCNで計算リソースを設定する方法について説明します。
+EEGLABを一晩コンパイルする。 ノートと指示を3つ用意しています。
+別のOS: macOS、Ubuntu、およびWindows。 現在の設定では、
+2つの仮想マシンをホストするMacコンピュータ(*delorming.ucsd.edu*)を使用して
+(VM). VMWare Fusionは、Windows(Windows)を実行するためにホストマシンで使用されます。
+10 x64)とLinux(Ubuntu 64ビット18.04) コンパイルされた EEGLAB ファイル
+macOS と Windows は、一般的なフォルダーに同期して保存されます。
+Googleドライブ。 Ubuntu の VM のコンパイルされたファイルを転送します。
+ホストマシンのGoogleドライブファイル、アップロードされ、
+同期。 3つのOSでEGLABのコンパイルが行われる
+夜。 そのためには、システムデーモン
+([ログイン](https://help.ubuntu.com/community/CronHowto)) は実行するために使用されます
+Mac(ホスト)とUbuntu(VM)マシンのタスク。 自動化する
+Windows VM でのコンパイル、タスクスケジューラでジョブが設定されました。 お問い合わせ
+以下のセクションでは、各OSの詳細が提供されます。 前のページへ
+まず、ホストMacがインターネットに接続されていることを確認してください。
+Googleドライブアプリで使用しているGoogleアカウントにアクセスすることができます。
 
-Automated compilation notes
+自動コンパイルノート
 ===========================
 
-Automated compilation setup on macOS (Host machine: delorming)
+macOSの自動コンパイルセットアップ (ホスト機械:delorming)
 --------------------------------------------------------------
 
--   Start by installing MATLAB on the host machine. In the current setup
-    (10/18), MATLAB 2018a is installed. It is important to check and
-    install any updates released by Mathworks for the version installed.
-    E.g., for the 2018a version, the update
-    [here](https://www.mathworks.com/downloads/web_downloads/download_update?release=R2018a&s_tid=ebrg_R2018a_2_1757132)
-    is necessary for proper operation of the compiled EEGLAB.
+-   ホストマシンにMATLABをインストールして起動します。 現在の設定で
+    (10/18) MATLAB 2018a をインストールします。 チェックすることが重要です。
+    インストールされているバージョンでMathworksがリリースしたアップデートをインストールします。
+    E.g. 2018aバージョンのアップデート
+    [詳しくはこちら](https://www.mathworks.com/downloads/web_downloads/download_update?release=R2018a&s_tid=ebrg_R2018a_2_1757132)
+    コンパイルされたEEGLABの適切な操作が必要です。
 
 <!-- -->
 
--   Set up the [EEGLAB git](https://github.com/sccn/eeglab.git)
-    repository. To be consistent across all three OS, the repository
-    should be created in *\~/program_files/eeglab*. The following code
-    can be used on the terminal to create the folder and set up the
-    repository.
+-   セットアップ [エグラボ git](https://github.com/sccn/eeglab.git)
+    リポジトリ。 3つのOS全体で一貫して、リポジトリ
+    *\~/program_files/eeglab* で作成する必要があります。 次のコード
+    ターミナルでフォルダを作成し、セットアップに使用できる
+    リポジトリ。
 
 ``` powershell
 cd ~
@@ -50,49 +50,49 @@ git submodule update --init --recursive
 git pull --recurse-submodules
 ```
 
--   Add EEGLAB to the MATLAB path. You may run into issues with
-    permissions. To fix this. Locate the *pathdef.m* file and change the
-    permissions. To locate the file, type in MATLAB command window:
-    *which('pathdef.m')*. Use the output to locate the file in the
-    terminal to change the permission using: *chmod 777 path2pathdef*
+-   EEGLAB を MATLAB パスに追加します。 問題が発生する可能性があります。
+    アクセス これを修正する。 *pathdef.m* ファイルを検索し、
+    アクセス ファイルを見つけるには、MATLABコマンドウィンドウに入力します。
+    *('pathdef.m')*。 出力を使用してファイルを見つける
+    *chmod 777 path2def* を使用してパーミッションを変更する端末
 
 ``` powershell
 chmod 777 path2pathdef.m
 ```
 
--   Download and install the Google Drive App for Mac. The default name
-    of the Google Drive folder is *Google Drive*. Since in a Unix-based
-    system spaces in pathnames may raise issues (and are also
-    aesthetically dubious), the folder is renamed as *Google Drive*.
-    After renaming the folder, you need to make sure to update the link
-    to the new folder in the Google Drive App. It is probable you will
-    receive a notification from the application regarding the lost of
-    the link to the file. This is a reminder of what to do in this step.
+-   Mac用のGoogleドライブアプリをダウンロードしてインストールします。 デフォルト名
+    Googleドライブのフォルダは*Googleドライブ*です。 Unix ベースの
+    パス名のシステムスペースは問題が発生する可能性があります(また、)
+    *Google Drive* と名前を変更します。
+    フォルダの名前を変更した後、リンクを更新する必要があります
+    Googleドライブアプリの新しいフォルダへ。 可能です。
+    紛失したアプリケーションから通知を受け取る
+    ファイルへのリンク。 これは、このステップで何をすべきかの思い出です。
 
 <!-- -->
 
--   Copy the folder *eeglab_comp_daily*, located in
-    *.../program_files/eeglab/functions/adminfunc/*, to the *Google
-    Drive* folder. This folder contains three subfolders:
-    *compile_tools*, *macos*, *ubuntu* and *windows*. The folder
-    *compile_tools* contains the scripts necessary for the compilation
-    and setup of [crontab
-    job](https://help.ubuntu.com/community/CronHowto). The folders
-    *macos*, *ubuntu* and *windows* will be initially empty, but will be
-    populated with the compilation files for each OS.
+-   フォルダ *eeglab_comp_daily* をコピーします。
+    *.../program_files/eeglab/functions/adminfunc/*、*Google
+    ドライブ*フォルダ。 このフォルダには3つのサブフォルダが含まれています。
+    *compile_tools*、*macos*、*ubuntu*および*windows*。 フォルダ
+    *compile_tools* はコンパイルに必要なスクリプトが含まれています
+    [crontab] の設定
+    求人情報https://help.ubuntu.com/community/CronHowto)。 フォルダ
+    ※macos*、*ubuntu*、*windows*は初期に空になりますが、
+    各OSのコンパイルファイルでポップアップします。
 
 <!-- -->
 
--   Setup a *crontab* job to automate the daily compilation. For this,
-    create a *crontab* job from the terminal, as indicated here;
+-   毎日のコンパイルを自動化する*crontab*ジョブを設定します。 お問い合わせ
+    ここに示すように、ターミナルから*crontab*ジョブを作成します。
 
 ``` powershell
 crontab –e
 ```
 
-This will open a text editor (e.g., vim), then use the content of the
-file *crontab_task_mack_bckup.txt* in the folder *compile_tools* to
-create the job:
+これはテキストエディタを開きます(例えば、vim)、それからのコンテンツを使用します
+file *crontab_task_mack_bckup.txt* フォルダー *compile_tools* へ
+ジョブを作成する:
 
 ``` powershell
 # ┌───────────── minute (0 - 59)
@@ -107,24 +107,24 @@ create the job:
 59 23 * * * /Users/eeglab/Google_Drive/eeglab_comp_daily/compile_tools/cronjob_eeglab_mac.sh
 ```
 
-Notice this crontab job is pointing to the execution of the file
-*cronjob_eeglab_mac.sh* located on the same folder, which triggers the
-update of the EEGLAB repository and then starts the compilation,
-implemented in the file *eeglab_compile.m*.
+この crontab ジョブはファイルの実行を指しています
+*cronjob_eeglab_mac.sh* は同じフォルダーにあります。
+EEGLABリポジトリの更新を行い、コンパイルを開始します。
+*eeglab_compile.m* ファイルに実装しました。
 
-Automated compilation setup in Ubuntu (Virtual machine: delorming)
+Ubuntu で自動コンパイルセットアップ (仮想マシン: delorming)
 ------------------------------------------------------------------
 
-Start by installing Ubuntu in the host machine using VMWare Fusion. Once
-installed:
+VMWare Fusionを使用してホストマシンにUbuntuをインストールして起動します。 おすすめ
+インストール:
 
--   Install MATLAB in the Ubuntu VM. In the current setup we have
-    installed MATLAB 2018a. The MATLAB update indicated in the MAC setup
-    need to be installed as well (See section \#\#).
--   Setup up the [EEGLAB
-    git](https://github.com/eeglabdevelopers/eeglab.git) repository. The
-    repository should be created in */home/delorming/program_files*. For
-    this, the same code used in the MAC setup can be used.
+-   Ubuntu VM に MATLAB をインストールします。 現在の設定では、
+    MATLAB 2018aをインストールしました。 MAC の設定で表示される MATLAB の更新
+    同様にインストールする必要があります(セクション\#を参照してください)。
+-   [EEGLAB] セットアップ
+    ツイートhttps://github.com/eeglabdevelopers/eeglab.git) リポジトリ。 ふりがな
+    */home/delorming/program_files* でリポジトリを作成する必要があります。 お問い合わせ
+    これは、MAC設定で使用しているコードと同じです。
 
 ``` powershell
 cd ~
@@ -135,43 +135,43 @@ git submodule update --init --recursive
 git pull --recurse-submodules
 ```
 
--   Add EEGLAB to the MATLAB path. You may run into issues with
-    permissions. See details on the same step in the Mac configuration.
+-   EEGLAB を MATLAB パスに追加します。 問題が発生する可能性があります。
+    アクセス Macの設定で同じステップで詳細を参照してください。
 
 <!-- -->
 
--   Install *open-vmware-tools* and start service. This is necessary to
-    ensure the sharing of files across the *host* and virtual Ubuntu
-    machine.
+-   *open-vmware-tools*をインストールし、サービスを開始します。 これは必要です
+    *host*と仮想Ubuntu間でファイルの共有を確実にする
+    機械。
 
 ``` powershell
 sudo apt-get install open-vm-tools
 sudo /etc/init.d/vmware-tools start
 ```
 
--   Mount *delorming*, the host machine, over the network. To do this,
-    open *Files* and click in *Other locations* (see step 1 in the
-    figure below), then double-click in the *delorming* icon (see step 2
-    in the figure below).
+-   *delorming*、ネットワーク上のホスト機械。 これを行うには、
+    *Files*を開き、*Otherの場所*をクリックして下さい(ステップ1を参照してください)
+    下の図)、[*delorming*] アイコンをダブルクリックします(ステップ2参照)
+    下の図で)。
 
 ![](/assets/images/Mount_delorming_network1.jpg)
 
-After doing this, the link showing the local connection to the host
-machine has been established (see the figure below).
+これを行うと、ホストへのローカル接続を示すリンク
+機械は確立されました(下の図を見て下さい)。
 
 ![](/assets/images/Mount_delorming_network2.jpg)
 
-Once the connection is established, the folder *compile_tools* in the
-*Google_Drive* folder of the host machine can be accessed as:
+接続が確立されると、フォルダー *compile_tools* が
+*ホストマシンのGoogle_Drive*フォルダは、次のようにアクセスできます。
 
 ``` powershell
 cd /run/user/1000/gvfs/sftp:host=delorming.local/Users/eeglab/Google_Drive/eeglab_comp_daily/compile_tools
 ```
 
--   Before creating the crontab job, make sure the file
-    *cronjob_eeglab_ubuntu.sh* is executable (change file permissions if
-    necessary). For this you can use the following code (assuming as
-    your current directory *compile_tools*):
+-   crontab ジョブを作成する前に、ファイルを確認してください
+    *cronjob_eeglab_ubuntu.sh* は実行可能です(ファイル権限の変更)
+    必要)。 このためには、次のコードを使うことができます。
+    現在のディレクトリ *compile_tools*:
 
 ``` powershell
 
@@ -179,9 +179,9 @@ sudo chmod 777 cronjob_eeglab_ubuntu.sh
 sudo chmod +x cronjob_eeglab_ubuntu.sh
 ```
 
--   Then, a *crontab* needs to be created to perform the compilation
-    daily. For this, the code in the file
-    *crontab_task_ubuntu_bckup.txt* should be used (see code below).
+-   それから、*crontab*はコンパイルを実行するように作成する必要があります
+    毎日。 このために、ファイル内のコード
+    *crontab_task_ubuntu_bckup.txt* を使用する必要があります(下のコードを参照してください)。
 
 ``` powershell
 # ┌───────────── minute (0 - 59)
@@ -196,44 +196,44 @@ sudo chmod +x cronjob_eeglab_ubuntu.sh
 1 1 * * * /run/user/1000/gvfs/sftp:host=delorming.local/Users/eeglab/Google_Drive/eeglab_comp_daily/compile_tools/cronjob_eeglab_ubuntu.sh
 ```
 
-After setting up the *crontab*, the compilation will be done by the
-execution of the very same file used in the compilation on the host
-machine *delorming*. Remember that this file is located in the host
-machine and is accessed through a local sharing of its folder. After
-running the compilation, performed in the local *eeglab* folder, the
-compilation files are transferred to the host machine and stored in
+*crontab* を設定した後、コンパイルは
+ホストのコンパイルで使用される非常に同じファイルの実行
+機械 *delorming*。 このファイルがホストにあることを忘れないでください
+マシンは、そのフォルダのローカル共有を介してアクセスされます。 アフター
+コンパイルを実行し、ローカル*eeglab*フォルダで実行し、
+コンパイルファイルはホストマシンに転送され、保存されます
 *\~/Google_Drive/eeglab_comp_daily/ubuntu/*.
 
-### Network issues experienced in the Ubuntu VM
+### Ubuntu VM で経験するネットワークの問題
 
-It is possible the Ubuntu VM lose network access at some point while
-Windows VM is up and running. While the reason for this behavior is
-still unknown, a temporary solution has been to: 1-Identify the
-interface that is disconnected (down) (use command: ip a) 2-Start the
-service manually using the id for the interface, 'ens33' in this case (
-use command: sudo ifup ens33)
+Ubuntu VM がネットワークアクセスを失います。
+Windows VM が起動して実行されます。 この行動の理由は、
+未知、一時的解決策は: 1-Identify
+接続されていないインターフェイス (ダウン) (コマンド: ip a) 2-Start
+インターフェイスの id を使用して手動でサービス, 'ens33' この場合 ()
+使用コマンド: sudo ifup ens33)
 
-After this, the host machine should be mounted over the network again
-(see previous steps).
+この後、ホストマシンは再びネットワーク上にインストールする必要があります
+(前の手順を参照してください).
 
-Automated compilation setup in Windows (Virtual Machine)
+Windowsで自動コンパイルセットアップ(仮想マシン)
 --------------------------------------------------------
 
-Compilation setup in the Windows VM will repeat some of the steps for
-the host and Ubuntu VM compilations. However, some different steps are
-required, to automate the compilation process and install the git
-management software.
+Windows VM のコンパイルセットアップでは、手順の一部を繰り返します。
+ホストとUbuntu VMのコンパイル。 しかし、いくつかの異なるステップは
+コンパイルプロセスを自動化し、 git をインストールするために必要な
+管理ソフトウェア。
 
--   Start by installing MATLAB and the updates indicated for the MATLAB
-    version. As for the host and Ubuntu virtual machine, in the current
-    setup we use MATLAB 2018a with the updates indicated \[here\].
--   Download and install Google Drive, then log into it. In this VM, the
-    name of the *Google Drive* folder is not modified.
--   Download and install git and git manager software. In the current
-    setup, [Git for Windows](https://gitforwindows.org/) has been used.
--   Setup the EEGLAB git repository in the git bash. For this use, the
-    same code used as in the Mac and Ubuntu compilations -- but from the
-    Git Bash terminal.
+-   MATLABをインストールし、MATLABに示されているアップデートを開始
+    バージョン。 ホストとUbuntuの仮想マシンに関しては、現在
+    MATLAB 2018a をアップデートで使用しました。
+-   Googleドライブをダウンロードしてインストールします。 このVMでは、
+    ※Google Drive*フォルダの名前は変更されません。
+-   gitおよびgit Managerソフトウェアをダウンロードしてインストールします。 現在のところ
+    セットアップ, [Windows用のGit](https://gitforwindows.org/) 使用済みです。
+-   git bash で EEGLAB git リポジトリを設定します。 この使用のために、
+    MacとUbuntuのコンパイルと同じコード - しかし、から
+    Git Bashターミナル。
 
 ``` powershell
 cd ~
@@ -244,74 +244,74 @@ git submodule update --init --recursive
 git pull --recurse-submodules
 ```
 
--   Add EEGLAB to the MATLAB path.
--   To automate the daily compilation, the *Task Scheduler* in Windows
-    is used. Follow the instructions below to create a new task.
+-   EEGLAB を MATLAB パスに追加します。
+-   毎日のコンパイルを自動化するには、Windowsの*タスクスケジューラ*
+    使用しています。 以下の手順に従って、新しいタスクを作成します。
 
-* From the *Start Menu*, open the *Task Scheduler*. if the program is
-not listed directly in the menu, you can type **scheduler** in the
-search bar in the same menu to look for it.
+* *スタートメニュー*から、*タスクスケジューラ*を開きます。 プログラムが
+メニューに直接リストされていないので、**scheduler**を入力できます。
+同じメニューのバーを検索して見てみましょう。
 
-* Once you have opened the Task Scheduler (see figure below), click on
-**'Create task**' in the right menu (highlighted with a red dotted box).
+* タスクスケジューラを開くと(下の図を参照)、クリックしてください
+**'タスクを作成**' 右メニューで (赤いドットボックスでハイライト)。
 ![](/assets/images/Task_scheduler_main_interface_f1.jpg )
 
-* Enter the name of the task (see Step 1 in the figure below) and a
-short description (see Step 2 in the figure below). Check the options to
-allow the task to run whether the users are logged in or not (see Step 3
-in the figure below) and to give the task the highest privileges (see
-Step 4 in the figure below).
+* タスクの名前を入力してください(下の図のステップ1参照)
+短い説明(下の図のステップ2を参照してください)。 オプションをチェックする
+ユーザーがログインしているか否かをタスクを実行できるようにする(ステップ3参照)
+下の図) タスクに最も高い特権を与える(参照)
+ステップ4 下の図で)。
 ![](/assets/images/Task_scheduler_create_task_f2.jpg )
 
-* Set up the *Triggers* of the task. For this, click *Triggers* in the
-upper menu (see 1 in the figure below). Then set the option for running
-the task daily (see 2 in the figure below) and specify when the task
-should run (see 3 in the figure below). Click *OK*. The time to run the
-task should be set so as to not overlap the compilations on the host and
-Ubuntu machines.
+* タスクの*Triggers*を設定します。 そのためには、*Triggers* をクリックします。
+上部メニュー(下図1参照) 次に実行するオプションを設定します
+タスクは毎日(下の図の2参照)、タスクのタイミングを指定する
+実行する必要があります(下の図の3を参照してください)。 *OK*をクリックします。 実行する時間
+タスクは、ホストのコンパイルをオーバーラップしないように設定する必要があります。
+Ubuntuのマシン。
 
 ![](/assets/images/Task_sheduler_create_task_trigger_f3.jpg )
 
-After setting the triggers, the graphics interface will display the task
-as follows.
+トリガーを設定した後、グラフィックインターフェイスはタスクを表示します
+次のようにします。
 
 ![](/assets/images/Task_scheduler_create_task_trigger_f3b.jpg )
 
-* Now setup the menu *Action* to indicate the script that will run
-every day. We have created a *.bat* file (*batchjob_eeglab_win.bat*)
-that basically perform the same functions as the crontab jobs
-implemented in the Mac (host) and the virtual Linux machine: updating
-the git repository and then running the compilation file. To set up this
-option, click 'Actions'' in the upper menu ' (see 1 in the figure
-below). Then add a new action by clicking on the *New* button (see 2 in
-the figure below). A new window (*New action*) will pop up allowing you
-to specify the file to run. Look for and select the file
-*batchjob_eeglab_win.bat* located in *..\\Google
-Drive\\eeglab_comp_daily\\compile_tools* by clicking in the *Browse..*
-button (see 3 in the figure below). Click *OK*.
+* メニュー *Action* をセットアップして実行するスクリプトを指定します。
+毎日。 *.bat*ファイル(*batchjob_eeglab_win.bat*)を作成しました。
+基本的には crontab ジョブと同じ関数を実行します
+Mac(ホスト)と仮想Linuxマシンで実装:更新
+git リポジトリはコンパイルファイルを実行します。 これを設定する
+オプション、上部メニューの「アクション」をクリックします。 (図の1を参照してください。
+お問い合わせ 次に、*New* ボタンをクリックすることで新しいアクションを追加します(2 参照)
+下の図)。 新しいウィンドウ(*New action*)がポップアップして、
+実行するファイルを指定します。 ファイルの探しと選択
+*batchjob_eeglab_win.bat* は *.\Google にあります。
+Drive\eeglab_comp_daily\compile_tools* をクリックして *Browse. * 必須
+ボタン(下図3参照) *OK*をクリックします。
 ![](/assets/images/Task_scheduler_create_task_actions_f4.jpg )
 
-* Finally, to create the task go back to the upper menu *General* and
-click *OK*. Now the task has been created and the compilation is ready
-to run daily.
+* 最後に、上部メニューに戻るタスクを作成する *General* と
+*OK*をクリックします。 これでタスクが作成され、コンパイルが準備完了です
+日常を走る
 
-Manual compilation notes - common to all platforms
+マニュアルコンパイルノート - すべてのプラットフォームに共通
 ==================================================
 
-1\. Clone EEGLAB with default plugins
+1円 デフォルトプラグインで EEGLAB をクローンする
 
 ``` Matlab
 git clone --recurse-submodules https://github.com/sccn/eeglab.git
 ```
 
-2\. Install additional plugins (plugins that are already installed will
-be skipped). Some folders from the plug-ins clean_rawdata
-(**manopt/reference/m2html**) and FieldTrip (**compat**,
-**external/afni**, **external/spm8**, **external/spm12**,
-**external/gifti**, **external/eeglab** and **external/bemcp**) should
-be removed to avoid compilation issues. Do not use the GIT repo to
-remove these folders, it will creates many more problems. Use the
-following script to do so:
+2\。 追加のプラグインをインストールします。 (既にインストールされているプラグイン)
+スキップします。 プラグイン clean_rawdata のフォルダー
+(**manopt/reference/m2html**)とFieldTrip(**compat**)
+**外部/afni**, **外部/spm8**, **外部/spm12**,
+**外部/gifti**、**外部/eeglab**、**外部/bemcp**)
+コンパイルの問題を避けるために削除されます。 GITリポジトリを使用していない
+これらのフォルダを削除し、より多くの問題が発生します。 利用する
+次のようなスクリプトを実行します。
 
 ``` Matlab
 eeglab  % restart the fleshly installed eeglab
@@ -352,38 +352,38 @@ rmdir(fullfile(FieldTrip_folder,'external','npmk'), 's');
 rmdir(fullfile(FieldTrip_folder,'external','signal'), 's');
 ```
 
-3\. Open the Application compiler (Matlab tab "Apps" and button
-"Application compiler")
-4. Open the "eeglab.prj" file.
-5. Check the path for plugins. If a new version is available, rename the
-version in the eeglab.prj file. NEVER RESAVE THE PROJECT IN THE
-APPLICATION COMPILER.
-9. Press "Package" and wait (usually 30 minutes or so)
-10. If successful, 3 folders are created. You may test the compiled
-EEGLAB version by running the program in the "for_testing" folder.
-11. Test the compiled version for potential runtime errors (see notes on
-testing
-[here](https://sccn.github.io/others/Compiled_EEGLAB.html#how-to-check-the-integrity-of-the-compiled-version)).
-On Mac and OSX use ./run_eeglab.sh MATLAB_PATH.
+3\。 アプリケーションコンパイラ(Matlabタブ「Apps」とボタンを開きます。
+「アプリケーションコンパイラ」
+4. "eeglab.prj" ファイルを開きます。
+5. プラグインのパスを確認してください。 新しいバージョンが利用可能であれば、名前を変更してください。
+eeglab.prj ファイルのバージョン。 プロジェクトを決して残さない
+応用コンパイラ。
+9. 「パッケージ」を押して待ちます(通常30分以上)
+10. 成功すると、3つのフォルダが作成されます。 コンパイルされたテストをすることができます
+"for_testing" フォルダ内のプログラムを実行して EEGLAB バージョン。
+11. コンパイルされたバージョンをテストして、潜在的なランタイムエラーを確認します(メモを参照してください)
+テスト
+[詳しくはこちら](https://sccn.github.io/others/Compiled_EEGLAB.html#how-to-check-the-integrity-of-the-compiled-version)).
+MacとOSXでは./run_eeglab.sh MATLAB_PATHを使用します。
 
-<font color=red>Known error: running eLoreta from DIPFIT, cannot find
-precompute_dpss</font>. We need to look into it.
+<font color=red>既知のエラー: DIPFIT から eLoreta を実行して、見つけることができません
+precompute_dpss ディレクティブ</font>お問い合わせ お問い合わせ
 
-Selected for future inclusion but require testing. If you have a plugin
-you want to include, please try compiling with the plugin and testing
-the plugin in the compiled EEGLAB version. If all is functional, email
-us at eeglab_at_sccn.ucsd.edu and your plugin will be included in the
-next release.
+将来のインクルージョンを選択するが、テストが必要です。 プラグインがある場合
+プラグインとテストを組み合わせて試してみてください。
+コンパイルされた EEGLAB バージョンのプラグイン。 機能的であれば、電子メール
+eeglab_at_sccn.ucsd.edu とプラグインはプラグインに含まれています
+次のリリース。
 
-12\. Adding new plugins
+12円 新しいプラグインの追加
 
--   Download or clone plugin
--   Add to eeglab.m
--   Compile
--   Update this page
+-   ダウンロードまたはクローンプラグイン
+-   eeglab に追加します。 m 点
+-   コンパイラ
+-   このページの更新
 
-| Plugin name       | Comment                                                                                               |
+| プラグイン名 | コメント |
 |-------------------|-------------------------------------------------------------------------------------------------------|
-| Biosig            | Not necessary because included in FieldTrip                                                           |
-| MFFMatlabIO       | Issue with finding the JAR file at execution time; more debugging necessary before inclusion possible |
-| bids-matlab-tools | Not tested                                                                                            |
+| バイオシグ | フィールドトリップ |
+| MFFMatlabIO | 実行時間にJARファイルを見つけることでの問題; 含める前に、よりデバッグが必要 |
+| bids-matlab-tools | 未テスト |

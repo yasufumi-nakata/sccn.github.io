@@ -9,50 +9,50 @@ grand_parent: Workshops
 
 
 
-The 17th EEGLAB Workshop drew 104 attendees from as far away as New
-Zealand, Korea, and England. The two-track format was successful;
-workshop lectures on advanced toolboxes were attended by 10-25, while
-60-70 attended the basic EEGLAB introduction. This photo was taken the
-last morning.
+第17回 EEGLAB Workshop が 104 名の参加者を New までお迎えしました。
+ニュージーランド、韓国、イングランド 2トラックフォーマットが成功しました。
+高度なツールボックスのワークショップの講義は10-25に出席しましたが、
+60-70は基本的なEEGLAB導入に出席しました。 この写真は撮影されました
+朝ごはん
 
-Seventeenth EEGLAB Workshop
+第十七回EEGLABワークショップ
 ===========================
 
-<span style="color: blue">San Diego, USA - November 14-18, 2013 following the
-Society for Neuroscience meeting in San Diego</span>
-The 17th EEGLAB Workshop took place from Thursday evening, November 14th
-through Monday, November 18th at San Diego Supercomputer Center of the
-University of California San Diego, La Jolla, CA, USA. Participants will
-be expected to bring laptops with MATLAB installed so as to be able to
-participate in the practical sessions. The workshop will introduce and
-demonstrate the use of EEGLAB and EEGLAB plugin tools for performing
-analysis of EEG and related data, with detailed method expositions and
-practical exercises. The program begins with an open house reception and
-poster sharing session the evening (5:00-8:00 pm) of the 14th, a day
-following the Society for Neuroscience meeting in downtown San Diego, 25
-minutes away. The workshop will end at 5:00 pm on Monday, Nov. 18th.
+<span style="color: blue">サンディエゴ、米国 - 2013年11月14-18日 以後
+サンディエゴの神経科学会議</span>
+第17回EEGLABワークショップが11月14日(木)に開催されました
+11月18日(月)、サンディエゴスーパーコンピュータセンターにて
+カリフォルニア大学サンディエゴ校、アメリカ・ラ・ホラー校 参加者は、
+ノートパソコンをMATLABにインストールしてお持ちください。
+実践的なセッションに参加します。 ワークショップが紹介され、
+EEGLAB および EEGLAB プラグインツールの使用を実証
+EEGおよび関連データの分析、詳細な方法の記述および
+実用的な演習。 プログラムは、オープンハウス受付で始まり、
+ポスター共有セッション14日の夕方(5:00-8:00)
+サンディエゴのダウンタウンでの神経科学会議の後、25
+歩いて10分で行けます。 ワークショップは11月18日(月)17:00に終了します。
 
-For any questions, please contact <eeglab2013@sccn.ucsd.edu>.
+お問い合わせ <eeglab2013@sccn.ucsd.edu>.
 
-San Diego and UCSD
+サンディエゴとUCSD
 ------------------
 
-Although less than 60 years old, the [University of California San
-Diego](http://ucsd.edu/), sister to UCLA, UC Berkeley, and seven other
-UC schools, is now an American research powerhouse. Located by the
-spectacular cliffs and beaches of La Jolla, UCSD enjoys near year-round
-temperate weather.
+60歳未満のお子様は、【カリフォルニア・サン大学】
+サンディエゴ(Diego)http://ucsd.edu/)、UCLA、UC Berkeley、その他7つの姉妹
+UCの学校は、アメリカの研究の動力学です。 所在地:
+La Jollaの壮大な崖とビーチ、UCSDは年中近く楽しめます
+気温の天気。
 
-Three-track program
+3トラックプログラム
 -------------------
 
-For the first time, this workshop featured a Three-track design. Each
-morning and afternoon, lectures to the whole group were interspersed
-with sessions in three tracks. Attendees new to EEGLAB could choose the
-basic EEGLAB instruction track. Attendees who were already familiar with
-EEGLAB could join work sessions on newer, more advanced EEGLAB toolboxes
-and related software.
+初めてのワークショップでは、3つのトラックのデザインを特集しました。 詳しくはこちら
+朝と午後、グループ全体への講義が分散しました
+3つのトラックのセッションで。 EEGLABに新規参加者が選ばれる
+基本的なEEGLABの指示トラック。 既にお馴染みのある方
+EEGLAB は、より高度な EEGLAB ツールボックスで作業セッションに参加できます。
+そして関連ソフトウェア。
 
-Workshop Program
+ワークショッププログラム
 ----------------
- A [<b>program overview is available here</b>](https://sccn.ucsd.edu/githubwiki/files/programlong2013ucs_handson_v20.pdf).
+ ツイート [<b>プログラム概要はこちら</b>](https://sccn.ucsd.edu/githubwiki/files/programlong2013ucs_handson_v20.pdf).

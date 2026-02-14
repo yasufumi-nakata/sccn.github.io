@@ -6,136 +6,136 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 20
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/ARfitStudio).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/ARfitStudio).
 
-What is ARfitStudio?
+ARfitStudioとは?
 -------------------
 
-First of all, ARfit is a collection of Matlab modules developed by Tapio
-Schneider and Arnold Neumaier for estimating parameters of multivariate
-autoregressive (AR) models, diagnostic checking of fitted AR models, and
-analyzing eigenmodes of fitted AR models. This plugin, ARfitStudio, uses
-it so that one can interactively clean TMS-induced short-burst (5-10 ms)
-artifacts and so on. The nature of the artifact does not matter (could
-be spikes by artifact, could be zeros, NaNs, etc), as long as the
-artifact duration is short and they are correctly marked. It has
-strength on the following points.
+まずは、 Afit は Tapio が開発した Matlab モジュールのコレクションです。
+シュナイダーとアーノルド・ノイマイヤーは、多変量体のパラメータを推定
+オートレグレッシブ(AR)モデル、適合したARモデルの診断チェック、および
+装着したARモデルのeigenmodeを分析します。 このプラグイン、ARfitStudio、使用
+TMS 誘発のショートバースト (5-10 ms) を相互に清掃できるようにします。
+工芸品など。 アーティファクトの性質は重要ではありません(カルド)
+限りアーティファクト、ゼロス、NaNs、等であることができます)、
+アーティファクトの長さは短く、正しくマークされています。 それは持っています
+次の点の強度。
 
--   To perform quick (e.g. smart epoching & integration to continuous
-    data using mcolon(); before and after correction comparison with one
-    click, etc) and intuitive (e.g. training, correction, and blending
-    windows overlaid on grand-median ERPs) correction of spiky
-    artifacts.
--   Immediately usable after importing the continuous data; it is the
-    very first stage of the preprocess pipeline.
+-   クイックを実行する(例えば、スマートepoching & 継続的な統合
+    mcolon() を使用してデータ; 1 つとの修正前後の比較
+    クリック等、直感的(例:トレーニング、補正、ブレンド)
+    窓はspikyの壮大な媒体ERPs)の訂正でoverlaid
+    工芸品。
+-   連続データをインポートした後、すぐに使用可能です。
+    前処理パイプラインの非常に最初の段階。
 
-This plugin is dependent on ARfit and mcolon. ARfit can be installed by
-installing SIFT from EEGLAB plugin manager. To use mcolon(), users
-should compile the mex file.
+このプラグインはARfitとmcolonに依存しています。 ARfitはインストールできます
+EEGLABプラグインマネージャからSIFTをインストールします。 mcolon() を使用するには、ユーザ
+mex ファイルをコンパイルする必要があります。
 
 <http://www.mathworks.com/matlabcentral/fileexchange/174-arfit>
 <http://www.mathworks.com/matlabcentral/fileexchange/29854-multiple-colon/content/mcolonFolder/mcolon.m>
 
-Why ARfitStudio?
+なぜARfitStudioなのか?
 ---------------
 
-If there are spike artifacts with high amplitude, we cannot filter the
-data (because spikes spread in the time domain). In certain situation,
-it is more important to make them harmless for the sake of data process,
-rather than recovering the underlying signals (the latter is often
-impossible). This plugin provides a solution for it.
+高振幅でスパイクのアーティファクトがある場合、フィルタリングはできません。
+データ(タイムドメインにスパイクが広がるため) 特定の状況では、
+データプロセスの日本酒に無害に取り組むことがより重要である。
+下の信号を回復するのではなく(後者は頻繁にあります
+不可能)。 このプラグインはソリューションを提供します。
 
-How it works
+作品紹介
 ------------
 
-It learns autoregressive model from the training period (green), which
-is the past of the spike, to make a prediction to replace problematic
-spike data points (red). For smooth connection, one can also set
-optional blending period (light magenta) during which predicted signal
-and original signals are gradually mixed with a linear slope. Thus,
-*this plugin replaces the bad data points using the past information*
-(therefore temporal interpolation). It does NOT recover the signal under
-the noise. One can select multiple markers for correction. In the main
-plot, grand-median ERPs for all the channels are shown. To save the
-result, just save the EEG dataset (do not check 'restore the last data'
-for this!)
+トレーニング期間(緑)から自動進行モデルを学びます。
+スパイクの過去です, 問題の交換を予測するために
+スパイクのデータポイント(赤)。 円滑な関係のために、一つはまた置くことができます
+予測信号中のオプションブレンド期間(ライトマゼンタ)
+リニアゲレンデでオリジナルの信号を徐々に混合します。 したがって、
+*このプラグインは、過去の情報を使って悪いデータポイントを置き換える*
+(熱心な一時的な補間)。 下の信号を回復しません
+ノイズ。 複数のマーカーを補正用に選択できます。 メインページ
+すべてのチャンネルのプロット、グランドメディアERPが表示されます。 保存する
+その結果、EEGデータセットを保存します(「最後のデータを復元する」をチェックしないでください) お問い合わせ
+お問い合わせ
 
-Screenshots
+スクリーンショット
 -----------
 
-![300px\|Figure 1. interpolateSpike:
-GUI](images/Screenshot3_interpolatespike.png)
+![300px\]|フィギュア1.インターポレートスパイク:
+GUI:(画像/スクリーンショット3_interpolatespike.png)
 
-![600px\|Figure 2. interpolateSpike: Before
-correction](images/Screenshot2_interpolatespike.png)
+![600px\]|フィギュア2.インターポレートスパイク: 前のページへ
+修正:(画像/スクリーンショット2_interpolatespike.png)
 
-![600px\|Figure 3. interpolateSpike: After
-correction](images/Screenshot1_interpolatespike.png)
+![600px\]|フィギュア3.インターポレートスパイク: アフター
+修正:(画像/スクリーンショット1_interpolatespike.png)
 
-Data by courtesy of Michael Borich
+マイケル・ボリッチ氏によるデータ
 
-If you want to use ICA for the final analysis
+ICAを最終解析に使用する場合
 ---------------------------------------------
 
-Because this ARfit-based interpolation is performed for the same time
-points across channels, ICA cannot decompose this period. As a result,
-you'll see strange spikes in IC activations (i.e., EEG.icaact) during
-the correction windows. In the plots below, I show 1) ERP of IC
-activation for 33ch with ARfitStudio applied on channels (left), 2) the
-same but ARfitStudio applied on ICs (right). The noise was originally
-present within -/+10 ms relative to latency zero.
+このARfitベースの補間が同時に行われるため
+ICAは、この期間を分解することはできません。 結果として、
+ICの活発化(すなわち、EEG.icaact)の奇妙なスパイクが見られます
+修正ウィンドウ。 下のプロットでは、ICの1ERPを表示しています。
+チャンネル(左)にARfitStudioで33chの活性化、2)
+同じですが、ARfitStudioはIC(右)に適用される。 ノイズはもともと
+-/+10 ms以内に遅延ゼロに存在する。
 
-![Onchannels.png](images/Onchannels.png)
-![Onics.png](images/Onics.png)
+![Onchannels.pngの特長](images/Onchannels.png)
+![オニックス.png](images/Onics.png)
 
-Performing ARfit-interpolation for ICA properly is complicated.
+ICAのARfit-interpolationを適切に実行することは複雑です。
 
-1.  Import data.
-2.  Perform ARfitStudio on channels.
-3.  Preprocess the data (high-pass filter, CleanLine plugin,
-    clean_rawdata plugin, average referencing, AMICA plugin, DIPFIT
-    plugin, fitTwoDipoles plugin). Note that you need to exclude the
-    interpolated data from ICA process (those have no multivariate
-    property across channels, so not decomposable).
-4.  Perform ARfitStudio on IC activations.
-5.  Backproject interpolated IC activation to reconstruct channel data.
+1.  インポートデータ。
+2.  チャンネルでARfitStudioを実行します。
+3.  データ(ハイパスフィルタ、CleanLineプラグイン、
+    clean_rawdataプラグイン、平均参照、AMICAプラグイン、DIPFIT
+    プラグイン, FitTwoDipoles プラグイン). あなたが除外する必要があることに注意してください
+    ICAプロセスからの補間データ(複数の変数を持たない)
+    チャネルを越えるプロパティ, ので、分解できません).
+4.  ARfitStudioをICアクティベーションで実行します。
+5.  バックプロジェクトは、チャネルデータを再構築するためのIC活性化を補います。
 
-Note that the ARfitStudio is used twice, and the first application is
-purposed only for various filters, not even for ICA. In this way, you
-can obtain both clean channel signals and IC activations. For detail,
-see 'batchDemoForICA.m' included in the download package. I recommend
-you take a look because there are several cumbersome steps you have to
-go through.
+ARfitStudioは2回使用しており、最初のアプリケーションは
+ICAでは、様々なフィルタのみを目的としています。 このようにして、
+クリーンチャンネル信号とIC活性化の両方を得ることができます。 細部のため、
+ダウンロードパッケージに含まれている'batchDemoForICA.m'を参照してください。 おすすめ
+あなたがしなければならないいくつかの面倒なステップがあるので、あなたは見てみましょう
+お問い合わせ
 
-Note for batch users (03/11/2019 updated)
+バッチユーザー(03/11/2019更新)
 -----------------------------------------
 
-If one wants to run the process as a batch,
+プロセスをバッチとして実行したい場合は、
 
-1.  Use EEGLAB function pop_epoch() to crop out peri-event data points.
-    Note all the negative latencies will be used as a learning period
-    for ARfit.
-2.  Use arfit2interpolate(). Note that the last input
-    'last_n_pointsToBlend' does NOT specify the additional length to
-    the data points to the main interpolation window (as the GUI
-    operation indicates), but it actually specifies the last data points
-    of the main interpolation window. For example, outputData =
-    arfit2interpolate(EEG.data, \[80 95\], 5) means, \[80:90\] for 100%
-    interpolation, and \[91:95\] is blended with \[83% 67% 50% 33% 17%\]
-    interpolated data blended with \[17% 33% 50% 67% 83%\] of the
-    original data, respectively.
-3.  Use putBackEpoch2Continuous() to re-construct the corrected, epoched
-    data to the continuous data.
+1.  EEGLAB関数 pop_epoch() を使用して、peri-event のデータポイントをクロップアウトします。
+    すべての負のレイテンシーが学習期間として使用されることに注意してください
+    ARfit 用。
+2.  arfit2interpolate() を使用します。 最後の入力に注意
+    'last_n_points の一覧 ToBlend' は、追加の長さを指定しない
+    主要な補間ウィンドウにデータポイント(GUIとして)
+    操作は示します)、しかしそれは実際に最後のデータ ポイントを指定します
+    メインの補間ウィンドウ。 例えば、出力データ=
+    arfit2interpolate(EEG.data, \[80 95\], 5) は、\[80:90\] を100%
+    補間、\[91:95\] は \[83% 67% 50% 33% 17%\] とブレンドされます。
+    補間されたデータと混合される \[17% 33% 50% 67% 83%] の
+    それぞれ元のデータ。
+3.  putBackEpoch2Continuous() を使用して、修正された epoched を再構築します。
+    連続データへのデータ。
 
-Reference
+参考文献
 ---------
 
-A. Neumaier and T. Schneider, 2001: Estimation of parameters and
-eigenmodes of multivariate autoregressive models. ACM Trans. Math.
-Softw., 27, 27-57.
+A. NeumaierとT.シュナイダー、2001:パラメータの推定と
+多変復的なモデルのeigenmodes。 ACMについて トランス。 数学。
+ソフト、27-57
 
-T. Schneider and A. Neumaier, 2001: Algorithm 808: ARfit – A Matlab
-package for the estimation of parameters and eigenmodes of multivariate
-autoregressive models. ACM Trans. Math. Softw., 27, 58-65.
+T. シュナイダーとA. Neumaier, 2001: Algorithm 808: ARfit – Matlab
+多variateの変数そしてeigenmodesの推定のためのパッケージ
+自動回帰モデル。 ACMについて トランス。 数学。 ソフト、27、58-65。
 
-Authors: Makoto Miyakoshi and Tim Mullen. SCCN, INC, UCSD
+作者:宮越真琴とムレン。 SCCN株式会社、UCSD

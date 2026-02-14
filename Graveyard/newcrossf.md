@@ -1,55 +1,55 @@
 ---
 layout: default
 ---
-Computing component cross-coherences
+コンポーネントのクロスコヒーレンスを計算
 ====
 
-To determine the degree of synchronization between the activations of
-two components, we may plot their event-related cross-coherence (a
-concept first demonstrated for EEG analysis by Rappelsberger). Even
-though independent components are (maximally) independent over the whole
-time range of the training data, they may become transiently (partially)
-synchronized in specific frequency bands. To plot component
-cross-coherence, select <span style="color: brown">Plot → Time-frequency transforms → Component cross-coherence</span>, 
-which calls [pop_crossf.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_crossf.m).
-Below, we enter:
- - components *4* and *9* (Use any
-components in your decomposition), 
-- *Bootstrap significance level* to
+活発化間の同期の程度を定めるため
+2つのコンポーネントは、イベント関連のクロスコヒーレンス(a)をプロットすることができます。
+Rappelsberger による EEG 解析に最初に実証された概念。 でも、
+独立したコンポーネントは全体に独立していますが、
+トレーニングデータの時間範囲、それらは一時的なものになる可能性があります(一部)
+特定の周波数帯域で同期。 コンポーネントをプロットする
+クロスコヒーレンス、選択 <span style="color: brown">Plot → 時間周波数変換 → コンポーネントのクロス一貫性</span>, 
+コールする [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_crossf.m).
+以下に入力します。
+ - コンポーネント *4* および *9* (いずれかを使用)
+あなたの分解のコンポーネント), 
+- *Bootstrapの重要なレベル*への
 *0.01*, 
-- set *padratio* to *16*. 
+- *padratio*を*16*に設定して下さい。 
 
-We again press *Ok*.
+再度押す *Ok*.
 
 
 ![](/assets/images/Component_cross-coherence_gui.jpg)
 
 
 
-In the [crossf.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=crossf.m) window below, the two components become
-synchronized (*top panel*) around 11.5 Hz (click on the image to zoom
-in). The *upper panel* shows the coherence magnitude (between 0 and 1, 1
-representing two perfectly synchronized signals). The *lower panel*
-indicates the phase difference between the two signals at time/frequency
-points where cross-coherence magnitude (in the *top panel*) is
-significant. In this example, the two components are synchronized with a
-phase offset of about -120 degrees (this phase difference can also be
-plotted as latency delay in ms, using the minimum-phase assumption. See
-[crossf.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=crossf.m) help for more details about the function parameters
-and the plotted variables).
+お問い合わせ [クロスフ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=crossf.m) 下のウィンドウで、2つのコンポーネントが
+同期(*トップパネル*) 約11.5 Hz(画像をクリックするとズーム
+お問い合わせ *upper パネル* は、コヒーレンスの大きさ (0 と 1 の間) を示しています。
+2つの完全に同期信号を表す)。 *より低いパネル*
+2つの信号間の相差を時間/頻度で示します
+クロスコヒーレンスの大きさ(*トップパネル*)の点
+重要な。 この例では、2つのコンポーネントが同期されます。
+-120度程度の相相オフセット(この位相差も可)
+最小相仮定を使用して、msの遅延遅延としてプロット。 お問い合わせ
+[クロスフ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=crossf.m) 機能パラメータの詳細については、ヘルプ
+およびプロットされた変数)。
 
 
 ![](/assets/images/Crossf.gif)
 
 
 
-One can also use <span style="color: brown">Plot → Time-frequency transforms → Channel cross-coherence</span> 
-to plot event-related cross-coherence
-between a pair of scalp channels, but here relatively distant electrode
-channels may appear synchronized only because a large EEG source
-projects to both of them. Other source confounds may also affect channel
-coherences in unintuitive ways. 
+1つの缶はまた使用することができます <span style="color: brown">Plot → 周波数変換 → チャネルの交差一貫性</span> 
+イベント関連のクロスコヒーレンスをプロットする
+頭皮チャネルのペアの間で、しかしここに比較的遠くの電極
+チャネルは大きい EEG の源のためにだけ同期されるかもしれません
+それらの両方にプロジェクト。 他のソースの混乱もチャネルに影響を与える可能性があります
+非直感的な方法で一貫性。 
 
-Computing cross-coherences on
-independent data components may index transient synchronization between
-particular cortical domains.
+クロスコヒーレンスを計算する
+独立したデータコンポーネントは、間の一時的な同期をインデックス化できます。
+特定の角質ドメイン。

@@ -7,112 +7,112 @@ render_with_liquid: false
 title: Chapter-5.3.-SIFT-preprocessing
 long_title: Chapter-5.3.-SIFT-preprocessing
 ---
-The first step in our pipeline is to pre-process the data. Select **SIFT > Pre-processing** to bring up the Preprocessing GUI. This can also be opened from the command-line using:
+パイプラインの最初のステップは、データを事前処理することです。 [**SIFT] > [Pre-processing**] を選択して、前処理 GUI を起動します。 コマンドラインから次のコマンドで開くこともできます。
 
 ``` matlab
 EEG = pop_pre_prepData(EEG)
 ```
 
-The figure below shows the
-GUI, set to the options we will be using for this example. For most
-GUIs, help text for each menu item appears in the **Help Pane** at the
-bottom of the GUI when the menu item is selected. The **VerbosityLevel** determines how much information SIFT will
-communicate to the user, via command-window or graphical output,
-throughout the remaining pipeline (0=no (or minimal) command-window
-output, 1=full command-window output, 2=command-window and graphical
-(progress-bars, etc) output). The **Data Selection** group contains
-options for selecting ICs and re-epoching the data. The **Filtering**
-group contains options for downsampling the data, filtering,
-differencing and linear detrending. **Normalization** (removal of mean
-and division by standard deviation) can be performed across the
-ensemble (i.e., trials), across time, or both (first temporal then ensemble
-normalization). For our example, we will use the options shown in the figure
-and table below:
+下の図は、以下に示す
+GUI は、この例で使用するオプションに設定します。 ほとんどの
+GUI、各メニュー項目のヘルプテキストは、**Help Pane**で表示されます。
+メニュー項目を選択したときにGUIの下部。 **VerbosityLevel** は、 SIFT がどれだけの情報であるかを判断します。
+コマンドウィンドウまたはグラフィカル出力を介して、ユーザーに通信します。
+残りのパイプライン(0=no(または最小限)コマンドウィンドウ全体
+出力、1 =フルコマンドウィンドウ出力、2 =コマンドウィンドウとグラフィカル
+(progress-bars等)出力)。 **データ選択**グループには
+IC を選択し、データを再構築するためのオプション。 **フィルター**
+グループには、データのダウンサンプリング、フィルタリング、
+異なると線形の決定。 **ノーマライゼーション**(平均解除)
+標準偏差による分割が可能
+アンサンブル(試用)、時間を超えて、または両方(最初の仮説はアンサンブル)
+正規化)。 例として、図に示すオプションを使用します。
+そして次テーブル:
 
 
 
 <table>
 <tbody>
 <tr class="odd">
-<td><p>Option</p></td>
-<td><p>Value</p></td>
+<td><p>オプション</p></td>
+<td><p>バリュー</p></td>
 </tr>
 <tr class="even">
-<td><p><strong>Verbosity Level</strong></p></td>
+<td><p><strong>多様性レベル</strong></p></td>
 <td><p><strong>2</strong></p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>NormalizeData</strong></p></td>
-<td><p><strong>checked</strong></p></td>
+<td><p><strong>ノーマライズ データデータ</strong></p></td>
+<td><p><strong>チェックイン</strong></p></td>
 </tr>
 <tr class="even">
-<td><p><strong>Method</strong></p></td>
-<td><p><strong>time;ensemble.</strong></p></td>
+<td><p><strong>メソッド</strong></p></td>
+<td><p><strong>時間;アンサンブル。</strong></p></td>
 </tr>
 </tbody>
 </table>
 
 
 
-![Screen Shot 2023-08-24 at 10 38 56 PM](https://github.com/sccn/SIFT/assets/1872705/b9cdc357-b413-419c-982c-f1b8b81a0765)
+![スクリーンショット 2023-08-24 に 10 38 56](https://github.com/sccn/SIFT/assets/1872705/b9cdc357-b413-419c-982c-f1b8b81a0765)
 
-*Figure 9 Preprocessing GUI. Accessible through pop_pre_prepData().*
+*Figure 9 GUI の前処理 pop_pre_prepData() でアクセス可能。 * 必須
 
-Once these options have been input, click **OK**. Both datasets will be
-pre-processed using these settings, and you will be prompted to create a
-new dataset(s) or overwrite the current datasets. Check “Overwrite” and
-click OK.
+これらのオプションが入力されたら、[**OK**]をクリックします。 データセットは両方
+これらの設定を使用して事前に処理され、作成するように求められます
+新規の dataset(s) か、現在のデータセットを上書きします。 「上書き」をチェックし、
+[OK]をクリックします。
 
-The same may be achieved from the command line using the following command. Look at the function help and the function GUI above for more information on the allowable parameters.
+コマンドラインから次のコマンドで同じことが達成できます。 機能のヘルプと、許容パラメータの詳細については、上記の機能GUIを参照してください。
 
 ```matlab
 EEG = pop_pre_prepData(EEG, 'nogui', 'SignalType',{'Components'}, ...
         'NormalizeData', {'Method' {'time'  'ensemble'} }, 'verb', 1);
 ```
 
-SIFT currently allows the user access to the following pre-processing options:
-1. Component selection (command line call only)</p>
-2. Epoching (command line call only)
-3. Filtering (command line call only)
-4. Downsampling
-5. Differencing
-6. Detrending
-7. Normalization
+SIFT では、ユーザが次のプリプロセッシングオプションにアクセスすることができます。
+1. コンポーネント選択(コマンドラインコールのみ)</p>
+2. Epoching (コマンドラインコールのみ)
+3. フィルタリング(コマンドラインコールのみ)
+4. ダウンロード
+5. 拡散
+6. フォロー
+7. 正規化
 
-The first three preprocessing steps can also be performed from EEGLAB prior to starting SIFT, as we did in the previous section. Preprocessing steps 5, 6, and 7 can only be performed using the SIFT preprocessing function described above.
+前のセクションで行ったように、SIFTを開始する前に、EEGLABから最初の3つの前処理手順を実行することもできます。 前処理手順5、6、7は上記のSIFT前処理機能を使用してのみ実行できます。
 
-### 5.3.1. Component selection
+### 5.3.1. コンポーネント選択
 
-Ideally, one should fit a multivariate causal model to <em>all</em> available variables. This helps reduce the chances of false positives in connectivity (e.g., spurious causation) due to exogenous causal influences from excluded variables – i.e., “non-brain” components (Schelter et al., 2006; Pearl, 2009). However, increasing the number of variables also increases the number of parameters that we must estimate using a VAR model. For example, if we wish to fit a VAR model of order <em>p</em>, increasing the number of variables from <em>M</em> to <em>M</em>+1 requires us to estimate (2<em>M</em> + 1)<em>p</em> additional parameters. This, in turn, increases the minimal amount of data we need to adequately fit our model (see the discussion on Window Length in section 6.6.1. ). Thus, when limited data is available, it is often necessary to fit our models to a subset of relevant variables (about 10).
+理想的に、一つは多variateのcausalモデルに合うべきです <em>すべて</em> 利用可能な変数。 これは、除外された変数からの外因性因性の影響による接続(例えば、細心の注意)における偽陽性のチャンスを減らすことができます。すなわち、「非脳」コンポーネント(Schelter et al.、2006; Pearl、2009)。 ただし、VARモデルを使用して推定しなければならない変数の数が増えることもあります。 たとえば、VARモデルの注文に合うようにしたい場合 <em>ツイート</em>, から変数の数を増やす <em>ツイート</em> お問い合わせ <em>ツイート</em>+1は見積りを要求します(2)<em>ツイート</em> + 1)<em>ツイート</em> 追加パラメータ。 これにより、モデルを適切にフィットするために必要な最小限のデータ量が増加します(セクション6.6.1のウィンドウの長さに関する議論を参照してください。)。 したがって、限られたデータが利用可能な場合、モデルを関連する変数(約10)のサブセットに収まる必要があります。
 
-Variables can be selected using several approaches. One approach is to estimate the partial coherence between all variables using a non-parametric method (e.g., FFTs, or wavelets) and then only keep those variables that show significant partial coherence with at least one other variable. If one is working with ICA components, another (possibly complementary) approach is to select only a subset of ICs that are clearly related to brain activity. This can be performed manually (Onton and Makeig, 2009) or with the assistance of automation tools such as ADJUST (Mognon et al., 2010). The validity of this approach relies on the (rather strong) assumption that ICA has effectively removed all non-brain activity from brain components, such that there is no shared information between variables in the preserved set and those excluded from the set. See (Fitzgibbon et al., 2007; Onton and Makeig, 2009) for discussions on the topic. Both approaches can be performed using standard EEGLAB routines, as documented in the EEGLAB Wiki. In practice, one should apply a combination of these two approaches, selecting the largest subset of partially coherent ICs that will afford an adequate model fit given the amount of data available while giving the highest priority to those ICs that likely arise from brain sources and which demonstrate significant partial coherence with one or more other “brain” ICs.
+いくつかのアプローチで変数を選択することができます。 1つのアプローチは、非パラメータメソッド(例えば、FFT、またはウェーブレット)を使用して、すべての変数間の部分的なコヒーレンスを推定し、少なくとも1つの他の変数で重要な部分的なコヒーレンスを示すそれらの変数だけを保持することです。 ICAコンポーネントで働いている場合、別の(おそらく補完的)アプローチは、脳活動に明確に関連しているICのサブセットだけを選択することです。 ADJUST(Mognon et al., 2010)などの自動化ツールを手動で実行できます。 このアプローチの妥当性は、ICAは、保存されたセットとセットから除外された変数との間の共有情報がないため、脳コンポーネントからすべての非脳活動を効果的に削除した(むしろ強い)仮定に依存しています。 トピックに関する議論については、(Fitzgibbon et al., 2007; Onton and Makeig, 2009)を参照してください。 EEGLAB Wiki で文書化した標準の EEGLAB ルーチンを使用して両方のアプローチを実行できます。 実際には、これらの2つのアプローチの組み合わせを適用する必要があります。, 部分的にコヒーレントICの最大のサブセットを選択すると、十分なモデルが利用可能なデータ量を満たし、脳のソースから発生する可能性が高いそれらのICに最も優先順位を与えながら、適切なモデルが利用可能なデータ量を満たし、および1つ以上の他の「脳」ICとの重要な部分的な一貫性を示す.
 
-Sparse VAR estimation methods generally obviate the need to select variables by imposing additional sparsity constraints on the model coefficients. Although we may have a large number of variables and, therefore, a large number of coefficients to estimate, we assume that only a small subset of the coefficients are non-zero at any given time, effectively decreasing the amount of data required to obtain unbiased coefficients estimates (Valdés-Sosa et al., 2005; Schelter et al., 2006). Sparse methods are not currently implemented in SIFT. 
+Sparse VAR推定方法は、一般的に、モデル係数の追加の間隔制約を課すことで、変数を選択する必要があることを妨害します。 変数の数が多々ありますが、そのため、推定する係数の数が多いため、係数の小さなサブセットだけは、任意の時点でゼロであり、偏見係数の推定値(Valdés-Sosa et al., 2005;Schelter et al., 2006)を得るために必要なデータの量を効果的に減少させると仮定します。 現在、SIFTではSparseメソッドは実装されていません。 
 
-### 5.3.2. Epoching
+### 5.3.2. エッチング
 
-We have selected shorter epochs in a previous section. This simply allows the user to analyze a subset of the original epochs. When using a sliding-window AMVAR modeling approach with a window length of <em>W</em> seconds, if one wishes to analyze time-varying connectivity from T1 to T2 seconds, he should choose his epoch length to be T1-0.5<em>W</em> to T2+0.5<em>W</em> seconds. This is because the connectivity estimate at time <em>t</em> will correspond to the connectivity over the <em>W</em>-second window <em>centered at time t</em>. Thus, the earliest timepoint for which we will have a connectivity estimate is T1+0.5<em>W</em>, where T1 denotes the start of the epoch.</p>
+以前のセクションで短いエポックを選択しました。 これにより、ユーザーは元のエポックのサブセットを分析することができます。 滑走窓のAMVARのモデリングのアプローチを使用して窓の長さの <em>ツイート</em> 秒、T1からT2秒までの時間境界接続を分析したい場合、彼はT1-0.5であるために彼の画期的な長さを選択する必要があります<em>ツイート</em> に T2+0.5<em>ツイート</em> 秒数。 これは、接続が時間の経過時に推定されるためです <em>ツイート</em> 接続に応答します。 <em>ツイート</em>-秒ウィンドウ <em>時間tで集中</em>お問い合わせ したがって、接続推定がT1+0.5であるという最も初期のタイムポイント<em>ツイート</em>T1がエポックの始まりを示す場所。</p>
 
-### 5.3.3. Filtering
+### 5.3.3. フィルタリング
 
-We chose not to filter the data since it was already filtered when we imported it. However, filtering can be a useful pre-processing step if the data contains low-frequency drift or pronounced artifacts in one or more frequency bands. Removal of drift (trend) can dramatically improve data stationarity and, thereby, the quality of a VAR model fit. Since the relative phases of each time series are a key element in information flow modeling, it is critical to apply a zero-phase (acausal) filter, which introduces no phase distortion. Filtering is performed using EEGLAB’s <strong><code>eegfilt()</code></strong> function. This, in turn, calls <strong><code>filtfilt()</code></strong> from the Matlab Signal Processing Toolbox, which implements a forward-reverse (zero-phase) FIR filter.</p>
+インポート時に既にフィルタリングされたため、データをフィルタリングしないようにしました。 しかし、データが低周波数の漂流または複数の周波数帯域の顕著なアーティファクトを含んでいる場合、フィルタリングは有用な前処理ステップである場合もあります。 ドリフト(トレンド)の除去は、データ静止度を劇的に向上し、それによってVARモデルフィットの品質を向上させることができます。 各シリーズの相対的なフェーズは、情報フローモデリングの重要な要素であるため、フェーズの歪みがないことを示すゼロフェーズ(アコース)フィルタを適用することが重要です。 EEGLABのフィルタリングは、 <strong><code>エグフィルト()</code></strong> 機能。 これは、順番に、呼び出し <strong><code>フィルタ()</code></strong> フォワードレバース(ゼロフェーズ)FIRフィルタを実装するマトラボ信号処理ツールボックスから。</p>
 
-### 5.3.4. Downsampling
+### 5.3.4. ダウンサンプリング
 
-Downsampling can be an important step when fitting parametric autoregressive models. Time series with high sampling rates generally require large model orders to appropriately capture the process dynamics, particularly if interactions occur over a relatively long time lag. As in the discussion above regarding variable selection, increasing the model order increases the number of model coefficients that must be estimated, which can lead to biased estimates when limited data is available. Generally speaking, spectral and causal estimates derived from models of high order exhibit increased variability relative to those with low model order, which can complicate interpretation unless appropriate statistics are applied (Schelter et al., 2005a). In SIFT, downsampling is implemented using EEGLAB’s <strong><code>pop_resample()</code></strong> function, which employs a zero-phase antialiasing filter before downsampling. The use of a zero-phase antialiasing filter is critical for the same reasons described above for band-pass filtering.</p>
+パラメトリックオートレグレッシブモデルをフィッティングする際に、ダウンサンプリングが重要なステップになります。 高サンプリングレートを持つタイムシリーズは、一般的に、プロセスのダイナミクスを適切にキャプチャするために大きなモデルの注文を必要とします。特に、インタラクションが比較的長時間の遅延で発生する場合。 変数選択に関して上記の議論では、モデルの注文が増えると、限られたデータが利用可能な場合、偏見推定につながることができるモデル係数の数が増加します。 一般的に言えば、高注文品のモデルから派生した分光と因数見積りは、低モデルの注文と比較して分散性が増加し、適切な統計が適用されない限り、解釈を複雑にすることができます(Schelter et al.、2005a)。 SIFTでは、EEGLABのダウンサンプリングを実装しています。 <strong><code>pop_resample() ディレクティブ</code></strong> ダウンサンプリング前にゼロフェーズアンチエイリアシングフィルタを採用する機能。 ゼロフェーズアンチエイリアシングフィルタの使用は、バンドパスフィルタの上記の同じ理由で重要です。</p>
 
-### 5.3.5. Differencing
+### 5.3.5. 拡散
 
-Differencing is a standard operation for improving stationarity before fitting time-domain parametric VAR models (Chatfield, 1989). A first-order difference filter for input <em>x</em> is given by <img src="https://latex.codecogs.com/svg.latex?{ {y}_{t} }={ {x}_{t} }-{ {x}_{t-1} }=\nabla { {x}_{t} }">. This operation can be applied repeatedly to obtain an n<sup>th</sup> order difference filter: <img src="https://latex.codecogs.com/svg.latex?{ {y}_{t} }={ {x}_{t} }-{ {x}_{t-1} }=\nabla { {x}_{t} }">. Orders larger than two are rarely needed to ensure stationarity. An important point to note is that differencing is a high-pass filter and may complicate frequency-domain interpretations of connectivity (Seth, 2010). Differencing is implemented in <strong><code>pre_diffData()</code></strong>.</p><p><br />
-Recently published reports have examined the effect of different forms of downsampling, differencing, and filtering on granger-causal measures and demonstrate that, in some cases, these operations may produce spurious connectivity estimates (Florin et al., 2010; Seth, 2010). In general, if the sampling rate is not excessively high (&gt; 500 Hz) and there are not large frequency-specific artifacts in the data, it is advisable to avoid downsampling or filtering. Differencing should also be treated with great caution if one wishes to examine frequency-domain connectivity. In general, one should maintain caution when applying any transformation to their data – either to remove artifacts or improve stationarity – because it may not be well-understood how these operations affect connectivity estimates, particularly under less-than-ideal, real-world conditions. When possible, a safer alternative to stationarity-improving transformations is to instead use adaptive algorithms that either fit a model to locally stationary windows of data (e.g., sliding-window AMVAR), estimate model coefficients from spectral density matrices (e.g., minimum-phase factorization) or utilize a state-space representation (e.g., Kalman Filter). SIFT allows the user to select from several such adaptive algorithms and also provides methods for rigorously testing the stationarity and quality of the fitted model.</p>
+Differencingは、タイムドメインのパラメトリックVARモデル(1989年チャットフィールド)をフィッティングする前に、固定性を改善する標準的な操作です。 入力のための第一次違いフィルター <em>ツイート</em> によって与えられる <img src="https://latex.codecogs.com/svg.latex?{ {y}_{t} }={ {x}_{t} }-{ {x}_{t-1} }=\nabla { {x}_{t} }">お問い合わせ この操作は n を得るために繰り返し適用することができます<sup>ツイート</sup> 順序の相違フィルター: <img src="https://latex.codecogs.com/svg.latex?{ {y}_{t} }={ {x}_{t} }-{ {x}_{t-1} }=\nabla { {x}_{t} }">お問い合わせ 2つ以上の注文は、固定性を確保するためにはほとんど必要ありません。 注意すべき点は、差異はハイパスフィルタであり、接続(Seth、2010)の周波数ドメイン解釈を複雑化する可能性があることです。 Differencing は <strong><code>pre_diffデータ()</code></strong>.</p><p><br />
+最近公表されたレポートは、さまざまな形のダウンサンプリングの影響を調べました, 異なる, そして、悲観的な対策をフィルタリングし、それを実証しました, 場合によっては, これらの操作は、好ましい接続推定を生成することができます (Florin ら., 2010; Seth, 2010). 一般的に、サンプリングレートが過度に高(&gt; 500 Hz)でなく、データに大きな周波数固有のアーティファクトがない場合、ダウンサンプリングやフィルタリングを避けることをお勧めします。 周波数ドメイン接続を調べたい場合は、Differencingも大きな注意で処理する必要があります。 一般的に、これらの操作が接続推定にどのように影響するかをよく理解できない可能性があるため、アーティファクトを削除したり、文具を改善するために、データへの変換を適用するときに注意を維持する必要があります。特に、より少ない国、実際の条件下で。 可能であれば、静止画改善の変形に対するより安全な代替手段は、代わりに、データ(例えば、滑走窓AMVAR)の局所的な窓にモデルに合う適応アルゴリズム、スペクトル密度のマトリックス(例えば、最小段階の要因)からのモデル係数を推定するか、または州空間表現(例えば、カルマンフィルタ)を利用することです。 SIFT は、このような適応アルゴリズムから選択し、装着したモデルの静止度と品質を厳格にテストする方法を提供します。</p>
 
-### 5.3.6. Detrending
+### 5.3.6. 退役
 
-When only linear trend/drift is present in the data, an alternative to high-pass filtering is to linearly detrend the time series using a least-squares fit. This is a phase-preserving operation. Detrending and centering (subtraction of the temporal mean) are implemented in SIFT’s <strong><code>pre_detrend()</code></strong>.</p>
+線形傾向/漂流だけがデータに存在する場合、ハイパスフィルタリングの代替は、少なくとも正方形のフィットを使用して、時間シリーズを線形に決定することです。 これは段階保存操作です。 SIFT の実行と中心化(一時的な平均の減算)は、SIFT の <strong><code>プレ_detrend()</code></strong>.</p>
 
-### 5.3.7. Normalization
+### 5.3.7. 正規化
 
-SIFT allows you to perform two kinds of normalization: <em>ensemble normalization</em> and <em>temporal normalization</em>. In section 3.4.1., we noted that ensemble normalization (pointwise subtraction of an ensemble mean and division by ensemble standard deviation; for example, normalization across trials) is an important preprocessing step when using multi-trial sliding-window AMVAR.
+SIFTは2種類の正規化を実行することができます。 <em>エンサンブル正規化</em> そして、 <em>一時的な正規化</em>お問い合わせ セクション3.4.1.では、アンサンブル正規化(アンサンブル平均とアンサンブル標準偏差による分岐の点)が、例えば、試験中の正規化)は、マルチトリルスライディングウィンドウAMVARを使用する際に重要な前処理ステップであることを指摘しました。
 
-In contrast, when using short windows, temporal normalization (subtraction of the mean of each window and division by standard deviation) is not a good choice since the small-sample estimate of the mean and variance within each small window will be highly biased (inaccurate). As such, SIFT only allows you to perform temporal normalization across the <em>whole trial</em> before segmentation. This should be performed prior to ensemble normalization and ensures that all variables have equal weight (variance) across the trial. This is important since the units of many of our derived VAR-based causal measures, like any regression method, are not scale-free and depend highly on the units and variance of the signals. Thus, severely unbalanced variances amongst the variables will likely lead to model misspecification (e.g., the variables with the highest variance may be incorrectly indicated as causal sources). It is worth noting that scale-free measures such as renormalized PDC (rPDC) are theoretically immune to this problem. Nonetheless, temporal normalization, when possible and reasonable, is usually a good idea.
+対照的に、短いウィンドウを使用して、一時的な正規化(標準偏差による各ウィンドウと分割の平均の減算)は、各小さなウィンドウ内の平均と分散の小サンプル推定が非常に偏見されるので、良い選択ではありません。 このように、SIFT は、一時的正規化を行なうことができるだけ <em>トライアル全体</em> セグメント化前の これは、正規化をアンサンブルする前に実行され、すべての変数が試験全体に等しい重量(variance)を持っていることを確認します。 これは、任意の回帰方法のように、私たちの派生したVARベースの因果措置の多くのユニットがスケールフリーではなく、信号のユニットと分散に依存して重要である。 したがって、変数の中で重度の不均衡な分散はモデルの誤差(例えば、最も高い分散の変数は、原因として誤って示されるかもしれません)につながる可能性が高い。 再正規化 PDC (rPDC) などのスケールフリー対策は、この問題に対する理論的に免疫であることに注意してください。 不可能、一時的な正規化、可能で合理的な場合、通常は良い考えです。
 

@@ -7,33 +7,33 @@ render_with_liquid: false
 title: Chapter-5.1.-SIFT-install
 long_title: Chapter-5.1.-SIFT-install
 ---
-It is assumed that you have **Matlab® 2008a** or later, the Signal
-Processing Toolbox, Statistics Toolbox,
-[EEGLAB](http://sccn.ucsd.edu/eeglab/) and the
-[SIFT](http://sccn.ucsd.edu/wiki/SIFT#SIFT_Downloads) toolbox. SIFT should work with all versions of EEGLAB (10 and later). This version of the tutorial was tested with EEGLAB 2023.1.
+※Matlab® 2008a** 以降、シグナルをお持ちのお客様
+ツールボックス、統計ツールボックス、
+[エッグラボ](http://sccn.ucsd.edu/eeglab/) そして、
+[シャフト](http://sccn.ucsd.edu/wiki/SIFT#SIFT_Downloads) ツールボックス。 SIFT は EEGLAB (10 以降) のすべてのバージョンで動作します。 EEGLAB 2023.1でチュートリアルのこのバージョンがテストされました。
 
-To **get started**, follow these steps:
+*get が起動しました**, これらの手順に従ってください:
 
-1\) Start MATLAB
+1円 MATLABを起動する
 
-2\) [Download EEGLAB](https://sccn.ucsd.edu/eeglab/download.php). Add EEGLAB root folder to the path (**File -\> Set Path; Add
-Folder**)
+2\) [ダウンロード EEGLAB](https://sccn.ucsd.edu/eeglab/download.php)お問い合わせ パスに EEGLAB ルートフォルダーを追加します。 (**File -\> Set Path; Add
+フォルダ**
 
-3\) Type `eeglab` at the command prompt
+3円 タイプ: `eeglab` コマンドプロンプトで
 
-4\) Use EEGLAB menu item "Manage extension," select SIFT, and install it
+4円 EEGLABメニュー項目「拡張の管理」でSIFTを選択し、インストールします。
 
-5\) Optional: if you want to use the ARfit
-model-fitting algorithm.  You must manually install
-as follows: Download the free ARfit package from
-<https://climate-dynamics.org/software/#arfit>. After downloading and
-unzipping the ARfit package, place the **/arfit/** folder in
-**SIFT-path/external/** where **SIFT-path** is the full path to
-the SIFT root directory.
+5円 オプション: ARfit を使う場合
+モデルフィットアルゴリズム。 手動でインストールする必要があります
+次のようにします。 無料のARfitパッケージをダウンロード
+<https://climate-dynamics.org/software/#arfit>お問い合わせ ダウンロード後
+ARfitパッケージを解凍し、**/arfit/**フォルダを
+**SIFT-path/external/** **SIFT-path** が完全なパスである場合
+SIFTルートディレクトリ。
 
-6\) Once the EEGLAB main GUI is visible, you are good to go! You will
-find SIFT under the EEGLAB menu: **Tools-\>SIFT**. SIFT will
-automatically be made accessible whenever you start EEGLAB.
+6円 EEGLABメインGUIが見えると、行くのは良い! お問い合わせ
+EEGLABメニューでSIFTを見つけます。 **Tools-\>SIFT**. SIFTは
+EEGLABを起動すると自動的にアクセス可能になります。
 
-**Important note about SIFT GUIs:** Unfortunately, SIFT GUIs have grown unstable over the years as the Mathworks (the makers of MATLAB) has modified the function supporting it (changing some of the parameters, the function may crash or return an error). For example, on MATLAB 2023a on MAC, it is not possible to use the GUI edit boxes. Therefore, using the command line to set different options is preferable in some cases. We have included command line calls equivalent to the GUI in this tutorial.
+**SIFT GUIの重要な注意:** 残念ながら、SIFT GUI は、Mathworks (MATLAB のメーカー) がそれをサポートする機能を変更しました(パラメーターの一部を変更すると、機能がクラッシュしたり、エラーを返すことがあります)。 例えばMACのMATLAB 2023aではGUI編集ボックスは使用できません。 そのため、コマンドラインを使用して異なるオプションを設定することは、場合によっては好ましいです。 このチュートリアルでは、GUIと同等のコマンドライン呼び出しが含まれています。
 

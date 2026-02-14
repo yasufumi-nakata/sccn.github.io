@@ -7,145 +7,145 @@ render_with_liquid: false
 has_children: true
 nav_order: 29
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/arnodelorme/mffmatlabio).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/arnodelorme/mffmatlabio).
 
-# Known limitations to the EGI/Philips MFF import/export plugin
+# EGI/Philips MFFのインポート/エクスポートプラグインへの既知の制限
 ---------------------------------------------------------
-- Timing accuracy limited to 10-50 microseconds precision. Matlab 2014b time 
-  conversion is not as precise as Matlab 2017a conversion (we can loose 1ms 
-  accuracy on some events in some specific rare files). With Matlab 2018a, the
-  difference seems to be at most 10 microseconds. In most applications,
-  this limitation has no consequences as event latencies are multiple of 1000
-  microseconds (1 ms) and the events are imported and exported perfectly. 
+- 10-50秒の精密に限られるタイミングの正確さ。 Matlab 2014bの時間 
+  転換はMaatlab 2017aの転換として精密ではないです(私達は1msを緩めることができます 
+  特定のまれなファイルでいくつかのイベントの精度。 Matlab 2018aと、
+  違いは、最も10秒のマイクロ秒であるようです。 ほとんどの適用で、
+  この制限はイベントのレイテンシーが1000の複数のものとして結果をもたらしません
+  microseconds (1 ms)およびでき事は完全に輸入され、輸出されます。 
  
-- The plugin will not work with version of Matlab older than 2014a as the Java 
-  JAR file cannot be properly interfaced.
+- プラグインは、Javaとして2014aよりも古いMatlabのバージョンでは動作しません 
+  JARファイルが正しくインターフェイスできません。
 
-- When the Java Heap Memory is at its default level, few files can be imported. 
-  There is a special message guiding users how to increase the default settings 
-  in Matlab in case they encounter an error. Importantly, some large files
-  require a computer with 16Gb of RAM or more (or Java Heap of 4Gb).
+- Java Heap Memory がデフォルトレベルである場合、いくつかのファイルがインポートできます。 
+  デフォルト設定を増加する方法をユーザーに導く特別なメッセージがあります 
+  エラーが発生した場合にMaatlabで。 重要なのは、いくつかの大きなファイル
+  16Gb以上(または4GbのJava Heap)のコンピュータが必要です。
 
-- Calibration data when present is applied to the data. However, if the file
-  is exported this information is lost. Impedance data and channel status also 
-  contained in the info1.xml file is ignored.
+- 現物がデータに適用された場合の校正データ。 ただし、ファイルの場合
+  この情報が失われています。 インピーダンスデータとチャネルステータスも 
+  info1.xml に含まれているファイルは無視されます。
 
-- Importing trials of different length is not supported. This is a rare occurrence.
+- 異なる長さの試験のインポートはサポートされていません。 これはまれな出来事です。
 
-- Channel status and channel keys in category files are not imported
+- チャンネルのステータスとカテゴリファイルのチャネルキーはインポートされません
 
-- Importing filter information and calibration information is not supported
-  (except gain calibration which is applied to the data when it is imported)
+- フィルター情報をインポートし、校正情報はサポートされていません
+  (インポート時にデータに適用されるゲインキャリブレーションを除く)
 
-- The plugin will import multiple subject trial averages in EEGLAB but the 
-   export is not correct or identical. The reason is that EEGLAB consider 
-   these averages as single trials from the same subject and cannot handle 
-   participant names.
+- プラグインは、EEGLABの複数の被験試験平均をインポートしますが、 
+   輸出は正しいか同一ではないです。 EEGLABが考える理由 
+   これらの平均は、同じ主題からの単一の試験として、処理できません 
+   参加者名。
 
-- When importing in standalone mode (not as an EEGLAB plugin, if the file 
-  is exported, it will not contain event keys
+- スタンドアローンモードでインポートする場合(EEGLABプラグインではなく、ファイルの場合) 
+  エクスポートされ、イベントキーは含まれません
 
-- Video files are not imported and expoted
+- ビデオファイルは輸入されず、出ません
 
-- This plugin was tested on platforms using little-endian byte ordering. 
-  Although we do not expect big-endian to be a problem, there is a small
-  chance there could be problem
+- このプラグインは、小さなエンドバイトの注文を使用してプラットフォームでテストされました。 
+  大きなエンディアンが問題であることを期待していませんが、小さな
+  問題がある可能性
 
-# Revision history
+# 修正履歴
 ----------------
-Version 5.0
-- Fix event latency with segmented data files
-- Add aditional checks for epoch limits
-- Improve event time resolution
+バージョン5.0
+- Fix セグメント化されたデータファイルのイベントレイテンシ
+- epochの限界のための条件付きチェックを追加
+- イベント時間の解像度を改善
 
-Version 4.1
-- Avoid errors when discontinuities are present
-- Automatically detect channel location for source localization
+バージョン4.1
+- 廃棄時にエラーを回避
+- ソースのローカリゼーションのための自動的にチャネルの位置を検出して下さい
 
-Version 4.0
-- Handle removed channels for exporting
-- Fixed compilation issues
-- Remove non-handle event characters
-- Handle conflict with MFFimport plugin
+バージョン 4.0
+- ハンドルは輸出のためのチャネルを削除しました
+- コンパイルの問題の修正
+- 非ハンドルイベント文字を削除します。
+- MFFimportプラグインと競合するハンドル
 
-Version 3.7
-- Rename menu
-- Error message when MFF files contain XML characters
+バージョン 3.7
+- メニュー
+- MFFファイルにはXML文字を含むエラーメッセージ
 
-Version 3.6
-- Fix exporting datasets with no events
+バージョン3.6
+- イベントなしでデータセットをエクスポートする修正
 
-Version 3.5
-- Fixes issues associated with standalone use
-- Fix importing multiple datasets;
-- Now import subject information into EEGLAB
+バージョン 3.5
+- スタンドアローンの使用に関連する問題を修正
+- 複数のデータセットをインポートする修正
+- EEGLABに件名情報をインポートする
 
-Version 3.4
-- Fixes issues associated with reading data under FieldTrip
+バージョン3.4
+- FieldTrip の読み込みデータに関連する問題を修正
 
-Version 3.3
-- Fix reading on Windows
+バージョン3.3
+- Windowsで読み込む修正
 
-Version 3.2
-- Fix error with boundary events
+バージョン3.2
+- 境界イベントでエラーを修正
 
-Version 3.1
-- Implement auto-save for BIDS
-- Fix event track type for segmenting in Netstation
+バージョン3.1
+- BIDSの自動保存を実施
+- Fix ネットステーションのセグメント化のためのイベントトラックタイプ
 
-Version 3.0
-- Fix issue with PNS channels
-- Fix imporing rare files with custom fields
-- Fixing a variety of minor Git issues
+バージョン3.0
+- PNS チャネルで問題を修正
+- Fix カスタムフィールドでまれなファイルを置き換える
+- 様々なマイナーGitの問題の修正
 
-Version 2.02
-- Adding eeg_checkset to private folder to run in standalone mode (F. Tadel)
-- Added fix for files with no events (R. Martinez fix for https://github.com/sccn/eeglab/issues/17)
+バージョン2.02
+- eeg_checksetをプライベートフォルダに追加してスタンドアローンモードで実行します(F. Tadel)
+- イベントなしのファイルのための修正を追加(R. Martinezの修正 https://github.com/sccn/eeglab/issues/17)
 
-Version 2.01
-- Allow eegplugin_mffmatlabio to return version number
-- Remove call in mff_import that was assuming EEGLAB was present
+バージョン2.01
+- eegplugin_mffmatlabioがバージョン番号を返すようにする
+- EEGLAB を想定していた mff_import で呼び出しを削除
 
-Version 2.00
-- Octave compatibility
-- Fix issue with boundary latency when importing file mff version 0
-- Allowing to export random EEG files
-- Rescale coordinates for non-MFF channel coordinates
-- Allow exporting datasets which do not have a code field
-- Allow exporting datasets with no event duration
-- Better support for PNS channels for File-IO
-- Fix command line call not rotating channels
+バージョン2.00
+- Octaveの互換性
+- ファイルmffバージョン0をインポートする際に境界レイテンシーで問題を修正
+- ランダムなEEGファイルをエクスポートすることを可能にします
+- 非MFFチャネル座標のリスケール座標
+- コードフィールドを持たないデータセットをエクスポートできます
+- イベント期間なしでデータセットをエクスポート可能
+- ファイル IO の PNS チャネルのより良いサポート
+- Fix コマンドラインコールが回転チャネルではなく
 
-Version 1.00
-- Add file separator to EEGLAB export menu
+バージョン1.00
+- EEGLABエクスポートメニューにファイルセパレータを追加
 
-Version 0.96
-- Add license for each file
-- Clean up documentation
+バージョン 0.96
+- 各ファイルのライセンスを追加
+- ドキュメントのクリーンアップ
 
-Version 0.95
-- Fix issues when running File-io import and now importing using File-io functions direclty
-- Adding licence file
+バージョン 0.95
+- File-io インポートを実行し、File-io 関数 direclty を使用してインポートしたときに問題を修正
+- ライセンスファイルの追加
 
-Version 0.94
-- Fix EEGLAB history for pop_mffimport
-- Fix boundaries when encoding types
-- Minor documentation changes
+バージョン 0.94
+- Fix Pop_mffimportのEEGLAB履歴
+- エンコーディングタイプ時に境界を修正
+- マイナードキュメントの変更
 
-Version 0.93
-- Now import/export data files with PNS data only
-- Through the graphic interface, now allow to specify the MFF events field to
-  use for the EEGLAB event types.
-- Now allow the plugin to function in standalone mode.
-- Now check for Matlab version and issue an error for unsuported Matlab versions
+バージョン 0.93
+- PNSデータのみでデータをインポート/エクスポート
+- グラフィックインターフェイスにより、MFFイベントフィールドを指定できるようになりました。
+  EEGLABイベントタイプにご使用ください。
+- プラグインがスタンドアローンモードで機能できるようになりました。
+- Matlabのバージョンの確認と、インポートされていないMaatlabバージョンのエラーが発生します。
 
-Version 0.92
-- Renamed all the functions
-- Fix minor issue with multiple references
+バージョン 0.92
+- すべての関数の名前を変更しました
+- 複数の参照でマイナーな問題を修正
 
-Version 0.91 - Difference with previous revision
-- Fixed issue with info1.xml file which was missing some information
+バージョン 0.91 - 前のリビジョンとの違い
+- 一部の情報が見つからなかったinfo1.xmlファイルで問題を修正
 
-Version 0.9
-- Adding support for layout and subject information
+バージョン 0.9
+- レイアウトおよび主題情報のサポートを追加する
 

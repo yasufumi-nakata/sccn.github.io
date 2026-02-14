@@ -5,670 +5,670 @@ long_title: General frequently asked questions
 parent: Support
 nav_order: 1
 ---
-# EEGLAB TIPS and FAQ
-{: .no_toc }
+# EEGLAB TIPSとFAQ
+お問い合わせ
 
-This FAQ page contains questions we receive and answers we give users,
-as well as general tips we think it is important for users to know! Many
-other tips are available on the eeglablist archive. To search the list
-archive simply use Google, enter relevant keywords and add the
-"eeglablist" keyword.
+このページでは、お客様からのご質問や回答を受け付けております。
+一般的なヒントだけでなく、ユーザーが知っておくことが大切だと考えています! 詳しくはこちら
+eeglablist アーカイブで他のヒントを利用できます。 リストを検索するには
+アーカイブは単にGoogleを使用して、関連するキーワードを入力して、追加します
+"eeglablist" キーワード。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-## Basic Topics
+## 基本トピック
 
-###  Is EEGLAB of any interest for expert MATLAB users?
-**Answer:** We believe so. First, EEGLAB implements new algorithms for
-artifact rejection. Second, for the experienced MATLAB user EEGLAB is a
-fast and accurate way to start processing EEG and ERP data and to
-directly manipulate signal arrays. If you intend to use the ICA toolbox
-functions underlying EEGLAB, EEGLAB itself is a good starting point and
-introduction. EEGLAB also provides a full EEG structure to describe your
-data (signal, trials, channel location, reaction time, type of the
-trials, time limits and sampling rate) and allows you to use this structure
-either from the MATLAB command line or in MATLAB scripts.
-
-
-###  Is MATLAB too slow and does it use too much memory?
-**Answer:** Yes, to an extent, but... Because MATLAB sometimes uses large amount of RAM, we also took great care of inserting
-options in EEGLAB and in several processing functions to handle low
-memory conditions. On the other hand the MATLAB environment offers the
-advantage of stability and ease of use. Even the novice user under
-MATLAB can scale a data array by multiplying it by a scalar for instance
-(and in our software the data array is directly accessible to the user).
-MATLAB also offers the advantage of modularity. All of our functions, are
-stand-alone functions and most of them can be used independently of each
-other. Besides, MATLAB has grown much faster.
+###  エキスパートMATLABユーザーにとって、EEGLABはどのような関心がありますか?
+**回答:** 私たちはそう信じています。 EEGLABでは、新しいアルゴリズムを実装しています。
+遺物の拒絶。 2 番目に、経験豊富な MATLAB ユーザー EEGLAB は、
+EEGとERPデータの処理を開始するための迅速かつ正確な方法
+信号配列を直接操作します。 ICAツールボックスを使用するつもりなら
+EEGLAB、EEGLAB自体を根ざす関数は良い出発点であり、
+導入事例 EEGLABはまた、あなたの記述するために完全なEEG構造を提供します
+データ(信号、試験、チャンネル位置、反応時間、タイプ)
+試験、時間制限、サンプリングレート)、この構造を使用できる
+MATLAB コマンドラインまたは MATLAB スクリプトからのいずれか。
 
 
-### What type of support is offered with EEGLAB?
-**Answer:** We cannot guarantee that we will provide full support for
-this software but we will be glad to help out if someone encountered any
-problem and to correct bugs when reported to us: Write to
+###  MATLABは遅すぎるとメモリが多すぎるですか?
+**Answer:** はい。 MATLABはRAMを大量に利用することもありますので、インサートもかなりの注意を払っております。
+EEGLABのオプションと低処理機能のいくつかの処理機能
+記憶条件。 一方、MATLAB環境では、MATLAB環境が提供されている
+安定性と使いやすさの利点。 初心者でも
+MATLABは、たとえばスカラーでマルチプライすることでデータ配列をスケールアップできます。
+(そして、当社のソフトウェアでは、データ配列は直接ユーザーへアクセス可能です)。
+MATLABはモジュール性の利点も提供しています。 当社の機能はすべて、
+スタンドアローン機能とそれらの大部分は、それぞれ独立して使用することができます
+その他。 また、MATLABはより早く成長しました。
+
+
+### EEGLABではどのようなサポートがありますか?
+**住所:** 完全なサポートを提供して保証することができません
+このソフトウェアは、誰が何かに遭遇した場合、私たちは助けて喜んでいます
+問題とバグを修正するためには、当社に報告: に書き込む
 eeglab@sccn.ucsd.edu.
 
-### What type of MATLAB license should I buy to run EEGLAB?
+### MATLABのライセンスの種類は、EEGLABを実行するために購入する必要がありますか?
 
-When I ask the Mathworks salesman to sell me "only" a
-MATLAB license, he gave me prices for MATLAB, Simulink and Symbolic
-Math. Do I need all these to run EEGLAB?
-**Answer:** No, you do not need all that, you only need MATLAB. If
-possible, ask for an educational or even student version, as they are
-cheaper. For some spectral decompositions, you may also need the Signal
-Processing toolbox which has to be purchased separately.
+マスワークスセールスマンに「のみ」を売るのをお願いしたとき
+MATLAB ライセンス、MATLAB、Simulink、Simicic の価格をいただきました。
+数学。 EEGLABを実行するには、これらすべてが必要ですか?
+**回答者:** いいえ。MATLABのみが必要です。 お問い合わせ
+できる限り、教育や学生版をお願いする。
+安い。 いくつかのスペクトル分解のために、あなたはまた、信号を必要とするかもしれません
+別途購入しなければならないツールボックスの処理
 
-### Overloaded functions
+### 過負荷機能
 
-Under Unix, I often get the following message
-''Warning: One or more output arguments not assigned during call to
-'XXX'.
+Unix では、次のメッセージを受け取ることが多い
+''Warning: 呼び出し中に 1 つ以上の出力引数が割り当てられていない
+'XXX' です。
 
-??? Unable to find subsindex function for class char. ''
-
-
-**Answer:** In most cases, this error indicates that MATLAB on Unix may
-experience problems. MATLAB might return this error when you or EEGLAB
-has defined a variable of the same name as any variable in your MATLAB
-workspace or .m file in the MATLAB path. To solve the problem, clear the
-variable or rename the function.
-
-###  MATLAB/EEGLAB return an out of memory error
-
-**Answer:** 2 solutions
-
--   Buy more memory (RAM) for your computer
--   Try the memory mapping scheme (in EEGLAB options) which will allow
-    keeping the data on disk. Note that except for Neuroscan files, it
-    is still necessary to import the full data file in memory.
-
-### Multi-core use
+??????? クラス文字の subsindex 関数を見つけることができません。 お問い合わせ お問い合わせ
 
 
-Does it benefit to have a multi-core machine?
+**Answer:** ほとんどの場合、このエラーは、UNIXのMATLABがかもしれないことを示しています
+経験の問題。 MATLAB は、EEGLAB または EEGLAB でこのエラーを返す可能性があります。
+MATLAB で任意の変数と同じ名前の変数を定義しました。
+MATLABパスのワークスペースまたは.mファイル。 問題を解決するために、クリア
+変数または関数の名前を変更します。
 
-**Answer:** yes, it benefits in two ways. First, you may start in
-parallel several MATLAB sessions. Each of them is assigned one of the
-processors. Second, if you go to the MATLAB options, you may have the
-option to enable multi-core computation (General \> Multithreading).
-This option is usually set by default. This is a very efficient option
-that will speed up your code usually linearly with the number of core (2
--\> twice faster etc...).
+###  MATLAB/EEGLAB は、メモリエラーから返す
 
-Files: Import/Export/Channel
+**回答者:** 2つのソリューション
+
+-   コンピュータのメモリ(RAM)を購入
+-   メモリーマッピングスキーム(EEGLABオプション)で、
+    データをディスクに保存します。 Neuroscanファイル以外は、
+    メモリ内のフルデータファイルをインポートする必要があります。
+
+### マルチコア使用
+
+
+マルチコアマシンを持つメリットはありますか?
+
+**回答:** はい、それは2つの方法で恩恵を受ける。 まずはじめに、
+複数のMATLABセッションを並列する。 それぞれが1つを割り当てられます。
+プロセッサ。 第二に、MATLABオプションに行くと、MATLABオプションを持っているかもしれません
+マルチコア計算(一般\>マルチスレッド)を有効にするオプション。
+このオプションは通常デフォルトで設定されます。 これは非常に効率的なオプションです
+これは、通常、コアの数で線形にコードをスピードアップします(2)
+-\> 2倍高速など。
+
+ファイル: インポート/エクスポート/チャネル
 ----------------------------
 
-### Saving single epochs in ASCII files
+### ASCIIファイルで単一のepochを保存
 
-Is it possible with EEGLAB to save an EEG data sorted in
-10 epochs (for example) in 10 ascii files?
-**Answer:** you have to do this on the MATLAB command line:
+EEGLAB でソートされた EEG データの保存が可能
+10 の epochs (例えば) のファイル?
+**回答:** MATLABコマンドラインでこれを行う必要があります。
 
-> \>\> epoch1 = EEG.data(:,:,1); 
-> \>\> save -ascii epoch1.txt epoch1 
+> \>\> epoch1 = EEG.data(:,1); 
+> \>\> 保存 -ascii epoch1.txt epoch1 
 > \>\> epoch2 = EEG.data(:,:,2); 
-> \>\> save -ascii epoch2.txt epoch2 
-> \>\> epoch3 = EEG.data(:,:,3); 
-> \>\> save -ascii epoch3.txt epoch3
+> \>\> 保存 -ascii epoch2.txt epoch2 
+> \>\> epoch3 = EEG.data(:,:3); 
+> \>\> 保存 -ascii epoch3.txt epoch3
 
-### Channels with no assigned position
+### 割り当てられた位置のないチャネル
 
-I work with recordings from 30 channels + 2 EOG channels.
-Naturally while exploring the data for artifact components, I want to
-have a look at the EOG too. As soon as I want to plot maps, I liked to
-leave the EOG out. But if I want to load an electrode position file with
-less electrodes than channels in the dataset, EEGLAB doesn't accept
-that. Is there a more convenient method than creating two datasets (one
-without eog or without an electrode location file)?
-**Answer:** Simply blank out all the position fields for these channels
-using the channel editor after you have imported the channel location
-file (so they do not have an assigned position). Note: You may still
-include these channels in the ICA decomposition, even if their reference
-is different from the other scalp channels, though you should not
-attempt to plot them with a mixed reference. (We are working on a
-solution to this for other purposes).
+30チャンネル+2 EOGチャンネルから録画を操作します。
+人工成分のデータを調べながら自然に、
+EOGも見ている。 地図をプロットしたいと思えば、
+EOGを外します。 しかし、電極の位置ファイルを一緒にロードしたいなら
+データセットのチャネルよりも電極が少なく、EEGLABは受け入れません
+その。 2つのデータセットを作成するよりも便利な方法があります(一つ)
+電極位置ファイルの有無にかかわらず?
+**Answer:** これらのチャネルのすべての位置フィールドをブランクするだけで
+チャネルの編集者を使用してチャネルの場所を輸入した後
+ファイル(割り当てられた位置を持たない)。 注意: あなたはまだ
+これらのチャネルは、その参照であっても、ICAの分解に含めます。
+他のスカルプチャンネルとは違いますが、
+混合参照でそれらをプロットしようとする。 (私たちは、
+他の目的のためにこれに解決して下さい。
 
-### Importing problem
+### 問題のインポート
 
-EEGLAB does not work when I try select the type of data
-file to import under \>File \> Import data > From ASCII ...".
+EEGLABはデータの種類を選択しようとすると動作しません
+\>File \> 下にインポートするファイル インポートデータ > ASCIIから...
 
-**Answer:** Next to the importing text box there is a list box to
-indicate which type of data you want to import. Note that, not only you
-need to scroll the the list box but also to CLICK on the selected
-importing options so that they become selected.
+**回答:** インポートテキストボックスの横にはリストボックスがあります
+インポートしたいデータの種類を示します。 注意して、あなただけではありません
+リストボックスをスクロールする必要がありますが、選択した上でCLICKに
+選択されるようにオプションをインポートします。
 
-Basic Processing
+基本的な処理
 ----------------
 
-### Polhemus orientation
+### Polhemusのオリエンテーション
 
-We have been trying to input our polhemus 3-d file into
-EEGLAB. Displaying it in 2-d, the main problem is that "0 degrees" is
-towards the right ear in Polhemus and "90 degrees" is toward nasion,
-while in EEGLAB "0 degrees" is toward nasion and "90 degrees" is toward
-the right ear. In other words not only that everything is shifted 90
-degrees, but Polhemus (Neuroscan) goes counter-clockwise and EEGLAB goes
-clockwise. We are trying to develop some conversion solution for this,
-but if
+polhemus 3 d ファイルを入力しようとしています。
+エグラボ 2dで表示すると、メインの問題は「0度」が
+Polhemusと90度の右耳に向かって、
+EEGLABの「0度」は「90度」に向かっています。
+右耳。 言い換えれば、すべてが90シフトされるだけでなく、
+学位, しかし Polhemus (Neuroscan) は反時計回りに行き、EEGLAB は行きます
+時計回り。 私たちは、このためにいくつかの変換ソリューションを開発しようとしている、
+しかし、
 
-1.  you already have some experience w/ a situation like this and you may
-    have some easy solution;
-2.  you could advise us on how to get our Polhemus coordinates into EEGLAB
-    some other (easier) way, we would appreciate.
-
-
-**Answer:** It actually depends on how you recorded your Polhemus
-coordinates. To fix this problem, under EEGLAB, in the channel editing
-window, there is a button "transform axes". Press this button and enter
-"theta = 90-theta;" and that will do the trick. Note: press the "auto
-shrink" button to visualize all your electrodes. You may also manipulate
-the XYZ coordinates and reconvert them to polar.
-
-### Processing current dataset
-
-Remember that all EEGLAB graphic interface always process the current
-dataset. This means that if you use an interactive function (Data
-scrolling, Epoch rejection, Component rejection) and manually select or
-load another dataset from the EEGLAB interface, EEGLAB will apply all
-the changes or plot to the new dataset being scrolled. For instance, if
-you are scrolling data and select bad epochs, then load another data to
-look at it, then come back to your scrolling window to reject these
-epochs (and actually press the reject button), the epochs will be
-rejected in the **New** recently loaded dataset.
-
-### Epoch time limits
-
-The maximum time does not correspond to the maximum time I
-specified. For instance I asked for epochs between 0 and 3 seconds at
-125 Hz and end up with an interval of 0 to 2.992 s. There should be
-something wrong!
-**Answer:** Nothing is wrong. In your example, we must draw (125Hz \*
-3seconds = 375 points) and not 376 otherwise we would lose time
-linearity i.e. 2 epochs of 3 seconds would be 752, whereas if we draw 6
-seconds of the data we would get 751 points !), but if we assign time 0
-to the first point, then we must assign time 2.992 to the last point.
-Actually, the first point time is undetermined. Since the recording is
-made at 125 Hz, there is no possibility to know when the first point was
-recorded in between 0 or 0.08 seconds (otherwise one has to sample
-faster). By convention we take the first point to be at latency 0 and
-the last one at 2.992 (but we could choose latency 0.04 for the first
-point and 2.996 for the last one or 0.08 to 3...).
-
-### Too many events?
+1.  あなたはすでにこのような状況をw /経験を持っていると、あなたは、
+    いくつかの簡単なソリューションを持っています。
+2.   Polhemus が EEGLAB に調整する方法について教えてください。
+    その他(エイシー)のやり方、感謝します。
 
 
-Could you help me to know why :
-I have 7 events, 3 being = 2 and 4 being = 1 in a "mother" file
-why, when I extracted epochs on event = 2, I only got 3 epochs (that's
-right) and 6 events (that's wrong, isn't it?)?
+**回答:** それは実際にあなたの Polhemus を録音する方法に依存します
+座標。 この問題を解決するには、EEGLABの下で、チャネル編集
+ウィンドウに「軸をトランスフォーム」ボタンがあります。 このボタンを押して入力
+"theta = 90 Θ;" と、そのトリックを行います。 Note: "auto" を押します
+すべての電極を可視化するボタン。 あなたはまた、操作することができます
+XYZはそれらを偏光に調整し、再変換します。
+
+### 現在のデータセットの処理
+
+すべての EEGLAB グラフィック インターフェイスは、常に現在のプロセスを処理します。
+データセット。 つまり、インタラクティブ関数(データ)を使うと
+スクロール、Epochの拒絶、部品拒絶)および手動で選択するか、または
+EEGLABインターフェイスから別のデータセットを読み込む, EEGLABは、すべてを適用します
+変更またはスクロールされる新しいデータセットへのプロット。 例えば、
+データをスクロールして、悪いエポックを選択し、別のデータを読み込みます。
+その後、スクロールウィンドウに戻り、これらを拒否します
+epochs (そして実際に拒絶ボタンを押して下さい)、epochsはあります
+*New** では最近読み込まれたデータセットで拒否されました。
+
+### Epochの時間限界
+
+最大の時間は、私が最大の時間に対応していない
+指定する。 たとえば、0〜3秒間のエポックを求める
+125 Hz と 0 から 2.992 s の間隔で終わる。 お問い合わせ
+お問い合わせ
+**回答:** 何も間違っていません。 あなたの例では、描画しなければなりません(125Hz\*)
+3seconds = 375 ポイント) と 376 それ以外の場合は時間を失う
+リニアリティ 3秒の2エポックは752で、6を描画する場合
+データの秒数が751ポイント!になりますが、時間0を割り当てると
+最初のポイントに、最後のポイントに時間 2.992 を割り当てる必要があります。
+実は、最初のポイントタイムが途方もない。 録音がないので
+125年製 Hzは、最初のポイントがいつだったか知ることができません
+0 または 0.08 秒間で記録される(別の 1 つは標本に持っています
+より速く)。 コンベンションでは、レイテンシー0とレイテンシー0で最初のポイントを取る
+2.992 で最後の 1 つは (しかし私達は最初の 1 のための latency 0.04 を選ぶことができます
+最後の 1 つまたは 0.08 から 3 までのポイントと 2.996.
+
+### 多岐にわたるイベント
 
 
-**Answer:** Your 6 events are probably OK. It depends on the time window
-you used for epoching. Any event within the time window of each epoch
-will be taken into account. This means that some event outside of all
-epoch time window will be ignored and that some events within several
-time windows might be duplicated. You should look at the event latencies
-before and after epoching and you will see that it is consistent.
+お問い合わせ
+私は7つのイベント、3は= 2と4は= 1 "マザー"ファイルの中にあります
+なぜ、イベントでエポックを抽出したとき = 2、私は3エポックしか持っていません(
+右)と6つのイベント(それは間違っていますか?)
 
-### Data filtering
 
-I have a problem to filter data: we see in our EEG data a
-component with the frequency of the electronics here, 50 Hz. I would
-like to remove only this frequency... but I don't really know to do this
-with lowpass and high pass filtering. I think that this phenomenon of
-"pollution" by the electric frequency is something current in EEG?
-**Answer:** Yes, it is very common.
+**回答:** 6つのイベントはおそらくOKです。 時間ウィンドウに依存します
+epochingのために使用しました。 各エポックのタイムウィンドウ内のイベント
+口座に入金されます。 これは、すべての外部のいくつかのイベントを意味します
+epoch のタイムウィンドウは無視され、いくつかのイベントが複数
+ウィンドウが重複する可能性があります。 イベントレイテンシーを見る
+epoching前後で一貫して見られます。
 
-###  Are there advanced filter functions for EEGLAB?
-**Answer:** Check out firfilt plugin at [EEGLAB Plugins page](/others/EEGLAB_Extensions.html).
+### データフィルタリング
 
-Advanced Topics
+データをフィルタリングする問題があります。EEGデータで確認します。
+電子機器の周波数を持つコンポーネントは、50 Hzです。
+この周波数だけを削除したいのですが、これを行うのは本当に知らなかった
+ローパスとハイパスフィルタリング。 この現象は、
+電動周波数による「汚染」は、EEGの現在のところですか?
+**回答者:** はい、それは非常に一般的です。
+
+###  EEGLAB用の高度なフィルタ機能はありますか?
+**Answer:**でfirfiltプラグインをチェック [エッグラボ プラグインページ](/others/EEGLAB_Extensions.html).
+
+高度なトピック
 ===============
 
-Functions
+関数
 ---------
 
-### Missing trials in ERPimage?
+### ERPimageで試行錯誤?
 
-When using the ERP image menu item ('Plot' -'Channel ERP
-image'), the top part of the output is the window with the sorted
-trials. The number of the trials seems to be off and it appears that not
-all trials are displayed. For instance, using a file with 17 trials the
-"Sorted Trials' numbering goes from 6 to 12 with apparently 5 trials
-being displayed and two half trials on the top and at the bottom of the
-display (see attached jpg). This was also observed with another file
-that had more trials.
-
-
-**Answer:** The erpimage() output is due to the smoothing window you
-selected. If you use a 5-trial average moving window, the first output
-should be the middle of this window (e.g., trial 2.5). Use a 0-smoothing
-window (width 1) and all the trials will be shown.
-
-### ERP standard deviation
-
-Is there any way to add lines above and below the average
-voltage line to indicate +/- 1 or 2 SD to show data dispersion across
-trials?
+ERPイメージメニュー項目('Plot' -'Channel ERP)を使用する場合
+image')、出力の上部はソートされたウィンドウです
+トライアル 試用回数がオフで、そうでないと思われます
+すべてのトライアルが表示されます。 例えば、17 個の試用ファイルを使って
+「試行錯誤の番号付けは6から12まで、明らかに5つのトライアルで行きます
+上部と下部に2つのハーフトライアルが表示されます。
+表示 (添付のjpg参照)。 別のファイルでも観察された
+より多くの試用がありました。
 
 
-**Answer:** Use option 'erpstd' of erpimage() in the "More options" text
-box of the pop_erpimage() interactive window.
+**Answer:** erpimage() の出力は、スムースなウィンドウによります。
+選択します。 5-trial平均移動ウィンドウを使用する場合、最初の出力
+このウィンドウの中央(例、試用2.5)でなければなりません。 0スムースを使う
+ウィンドウ(幅1)とすべてのトライアルが表示されます。
 
-### Cross-subject analysis of spectral power and coherence?
+### ERP標準偏差
 
-Do you have any good way to across subject/patient
-analyses with respect to power and coherence, especially making
-statistical comparisons between subjects/patients? Could we somehow use
-the data output of EEGLAB?
+上記の行と平均下に追加する方法はありますか?
++/- 1か2 SDを示す電圧ラインはを渡るデータ分散を示します
+トライアル?
 
 
-**Answer:** For cross-subject comparison, tftopo() is a powerful
-function that can summarize this information (it uses stored timef() and
-crossfO() function outputs). It has to be called from the command line
-though.
+**Answer:** オプション 'erpstd' の erpimage() を "More Options" テキストで使用
+pop_erpimage() インタラクティブウィンドウのボックス。
 
-Artifacts
+### スペクトルパワーとコヒーレンスのクロスサブジェクト解析?
+
+被写体/患者を乗り越える良い方法はありますか?
+特にパワーとコヒーレンスに関して分析
+被験者/患者間の統計的比較? お問い合わせ
+EEGLABのデータ出力?
+
+
+**Answer:** クロスサブジェクト比較の場合、tftopo()は強力です。
+この情報を要約できる機能(保存された timef() および
+crossfO() 関数の出力)。 コマンドラインから呼び出す必要があります。
+でも。
+
+アーティファクト
 ---------
 
-### Recognizing artifactual components
+### 人工成分の認識
 
-It is not very difficult to find components related to
-eyeblinks, etc. In my case, there are phases during the experiment,
-where people speak and/or move their eyes. I find it quite hard to
-determine which components are related to these artifacts and I already
-wonder if it is possible et all.
-**Answer:** To determine which components are related to these artifacts,
-one approach is to isolate these trials (selecting them) and then use
-menu item "Plot \> Component ERPs \> With component maps" and select the
-time window where these event appear. This function will plot which
-components contribute to this type of artifact. However, you are correct
-in thinking that ICA cannot cleanly resolve ALL artifacts into one or a
-few components. For instance, "paroxysmal" artifacts (like the subject
-scratching their head during recording) would require a large number of
-ICA components to capture the variability of all the artifactual
-contributions in the data. Similar events and artifacts should be
-carefully pruned from the data before ICA decomposition.
+関連するコンポーネントを見つけるのは非常に困難ではありません
+アイブリンク等 私の場合、実験中にフェーズがあります。
+人が話したり、目を動かしたりする場所。 私はそれが非常に難しい見つける
+これらのアーティファクトと私はすでに関連しているコンポーネントを決定します
+できるかどうか疑問に思います。
+**Answer:** これらのアーティファクトに関連するコンポーネントを決定するため、
+1つのアプローチは、これらの試験(それらを選択)を分離し、使用することです
+メニュー項目 "Plot \> コンポーネントERP \> コンポーネントのマップで"を選択し、
+これらのイベントが表示されるタイムウィンドウ。 この機能はプロットします
+コンポーネントは、このタイプのアーティファクトに貢献します。 しかし、正しい
+ICAがすべてのアーティファクトを1つまたは1つにクリーンに解決できないと考える
+いくつかのコンポーネント。 例えば、 "paroxysmal" のアーティファクト (主題のような)
+録音中に頭を傷つける)は、数が多い
+ICAコンポーネントは、すべてのアーティファクチュアルの分散性をキャプチャします
+データへの貢献 同様のイベントやアーティファクトは、
+ICA分解前のデータから慎重に剪定。
 
-Would muscle components be seen at high frequencies?
-**Answer:** Yes, that is typically what we observe. Muscle artifacts
-have a broadband high spectral amplitude at high frequencies (20-100 Hz
-or more). Also their spectrum does not look like the standard EEG
-(exponential decrease).
+筋肉成分は高周波で見られますか?
+**回答:** はい、それは通常私たちが観察するものです。 筋肉アーティファクト
+高周波数(20〜100Hz)でブロードバンド高スペクトル振幅を持っています
+以上)。 また、そのスペクトラムは標準EEGのように見えません
+(費用削減)
 
-### Rejecting artifacts
+### 工芸品の注入
 
-I am currently using ica to correct for artifacts. In the
-past I've visually inspected each single-trial epoch separately,
-identified those trials with artifact activity, and then trained ICA on
-each trial separately to identify and remove artifactual components. As,
-you can imagine this process is extremely time consuming. Is it
-effective to train ICA on multiple or all concatenated trials at once,
-remove artifactual components, and then go back to visually inspect the
-corrected data for outlying artifacts?
+現在、ICAを使ってアーティファクトを修正しています。 お問い合わせ
+過去に、ひとつひとつひとつのエポックを別々に検査しました。
+これらをアーティファクトアクティビティで特定し、ICAを訓練
+各試験を別々に識別し、アーティファクトコンポーネントを削除します。 お問い合わせ
+このプロセスが非常に時間がかかっていると想像できます。 それは
+一度に複数のまたはすべての禁忌試験でICAを訓練するために有効,
+実際のコンポーネントを削除し、視覚的に検査するために戻って行きます
+アウトリーシングアーティファクトのデータを修正しましたか?
 
 
-**Answer:** You may not have grasped the nature of ICA, which is to
-extract data components whose activities (activations) are independent
-of the activities of other data sources. For this independence to be
-detected, it must be fully \*expressed in the data\* -- and this
-normally requires many (\>nchannels^2) data points. So separately
-decomposing individual epoch is just the wrong approach. We currently
-favor a seven-step approach:
+**回答:**ICAの性質を把握していない場合があります。
+活動(活動)が独立したデータを抽出する
+他のデータソースの活動。 この独立性のために
+検出されると、data\* で完全に \*expressed である必要があります。
+通常、多くの(\>nchannels^2)データポイントが必要です。 別途
+個々のエポックを分解することは単なる間違ったアプローチです。 現在のところ
+7ステップのアプローチを好む:
 
-1.  Visually reject unsuitable (e.g. paroxysmal) portions of the
-    continuous data.
-2.  Separate the data into suitable short data epochs.
-3.  Perform ICA to derive independent components.
-4.  Perform rejection on the derived components based on inspection of
-    their properties.
-5.  Visually inspect the raw data epochs selecting some for further
-    rejection.
-6.  Reject the marked components and data epochs.
-7.  Perform ICA a second time on the pruned data - this may improve the
-    quality of the ICA decomposition, revealing more independent
-    components accounting for neural, as opposed to mixed artifactual
-    activity.
+1.  不適切(例えば、paroxysmal)部分を視覚的に拒絶して下さい
+    連続データ。
+2.  データを適切な短いデータエポックに分離します。
+3.  ICAが独立したコンポーネントを導き出す。
+4.  誘導された部品に対する拒絶反応を検査に基づいて行う
+    自分の財産。
+5.  より詳細なデータの選択をご覧ください。
+    拒絶反応。
+6.  マークされたコンポーネントとデータエポックを注入します。
+7.  実行されたデータを ICA を 2 回実行する - これは改善する可能性があります
+    ICA分解の品質、より独立した明らかに
+    混合されたアーティファクチュアルとは対照的に、ニューラルのために会計するコンポーネント
+    活動。
 
-These steps are made easier and more efficient by EEGLAB, which also
-includes functions suggesting to the user epochs, channels and
-components suitable for rejection.
+これらの手順は、EEGLABによってより簡単かつ効率的に行われます。
+ユーザーのエポック、チャネル、およびユーザーに提案する機能を含みます。
+拒絶に適した部品。
 
-ICA
+アメリカ
 ---
 
-### Re-running ICA
+### 再実行ICA
 
 
-While trying within EEGLAB to remove artifacts using ICA,
-I had trouble in recalculating an ICA decomposition after removing
-components. I tried to follow the guidelines in the tutorial, thinking
-that with fuzzy components it might work better to remove some clear
-artifact components first and the run a new ICA. When I tried to do
-that, the second ICA always took much longer and I got also some error
-message in the end telling me, that there was something wrong with the
-result.
+ICAを使用してアーティファクトを除去するためにEEGLAB内で試みている間、
+取り消し後のICA分解の再計算に問題がありました
+コンポーネント。 チュートリアルでガイドラインに従うようにしました。
+fuzzy コンポーネントを使用すると、一部をクリアする機能が向上します。
+アーティファクトコンポーネントを最初に実行し、新しいICAを実行します。 やってみると
+その2番目のICAはいつも長くかかり、エラーも起きました
+私に言う最後のメッセージ, 何かが間違っていたこと
+結果。
 
 
-**Answer:** The standard procedure we advise is first to perform ICA on
-the data and to remove bad trials using the ICA component activities. If
-you remove ICA components, the rank of the data will decrease (to
-\<nchans). If the data have n channels, the rank of the data is (most
-probably) n. If you remove one component it will become n-1, and ICA
-will not be able to find n components in the pruned data). Thus, as a
-first step, you should only remove bad trials. This procedure will not
-alter the dimensionality of the data. As a second step, recompute ICA
-and remove bad components (the second run of ICA should result in
-clearer artifact components (for instance muscle at high frequencies),
-not contaminated by strong outlier trials. If you remove ICA components
-and want to re-run ICA, you must decompose the data with the 'pca'
-option to reduce the dimensionality of the decomposition to match the
-data rank (see below).
+**回答者:** 当社が助言する標準的な手順は、最初にICAを実行することである
+ICAコンポーネントアクティビティを使用して、データを削除し、悪意のある試験を解除します。 お問い合わせ
+ICAコンポーネントを削除し、データのランクが低下します(
+\<nchans>。 データが n チャネルを持っている場合、データの順位が (一番)
+多分) n. 1つのコンポーネントを削除するとn-1になり、ICA
+実行されたデータにn個のコンポーネントが見つかりません。 したがって、
+最初のステップは、悪いトライアルだけを削除する必要があります。 この手順は、
+データの寸法を変更します。 第二のステップとして、ICAを再入力
+悪いコンポーネントを削除 (ICA の 2 番目の実行は、
+より明確なアーティファクト コンポーネント(例えば高い頻度の筋肉のために)、
+強大な実験で汚染されていない。 ICAコンポーネントを削除した場合
+ICAを再実行し、'pca' でデータを分解する必要があります。
+一致するために分解の次元を減らすオプション
+データランク(以下参照)
 
-### Baseline removal and preparing data for ICA
-
-
-What is the rationale behind baseline zeroing the data
-before running it thru ICA, and is that always recommended?
+### ベースライン除去とICAのためのデータの準備
 
 
-**Answer:** It is recommended because the EEG might have some electrical
-artifacts (slow trends) that you want to remove. If your data is
-perfectly flat (at very low frequencies), then you shouldn't need to do
-that. You should baseline-zero each epoch, else use the continuous data
-and lowpass it if you are interested in focusing on e.g. 3-40 Hz
-activity. Also, you should prune the data of 'messy' patches (probably
-associated with a series of 1-of-a-kind, non-stationary maps). The data
-scrolling utility in EEGLAB makes this convenient, and if you perform
-this on the continuous data, records breakpoint events that guide
-subsequent epoching. Else, you can more severely prune the data to train
-the ICA model, then pass more of the data through the model (at the cost
-of somewhat higher SNR (signal to noise ratio) in the activation time
-series).
-
-### Reducing the number of ICA components
+ベースラインの背後にある合理的とは、データのゼロ
+ICAを走る前に、いつもお勧めですか?
 
 
-I don't know how to make the independent component
-dimension reduced by PCA in EEGlab4.0. For example, I want to obtain 4
-independent components from 32-channel EEG data.
+**住所:** EEGが電気を持っているかもしれないので、それは推奨されます
+削除したいアーティファクト(スロートレンド)。 あなたのデータが
+完全に平らに(非常に低い周波数で)、それからあなたがする必要がある
+その。 ベースライン・ゼロ・エポックは、連続データを使用する必要があります。
+3-40 Hz 等に焦点を合わせることに興味があるなら、それをローパスして下さい
+活動。 また、'messy' パッチのデータをプルーンする必要があります(おそらく)
+1種類の非静止画のシリーズに関連付けられている。 データ
+EEGLABのスクロールユーティリティは、この便利になり、実行する場合
+継続的なデータ、ガイドするイベントを記録する
+その後のepoching. Else は、データをより厳しく計算して訓練することができます。
+ICAモデルは、モデルを介してより多くのデータを渡す(コストで)
+活発化の時間の幾分より高いSNR (騒音の比率に署名して下さい)の
+シリーズ)。
+
+### ICAコンポーネントの数を減らす
 
 
-**Answer:** To extract 4 components, in the second text box of the
-"Tools \> Run ICA" interactive pop-up window, enter " 'pca', 4 " or
-"'ncomps', 4" and that will do it.
-Note we do not recommend using PCA (" 'pca', 4 ") unless you have some
-good reason. Using first PCA components only will truncate the data
-(irrespective of components), and then ICA may not be able to find
-relevant components. The second possibility ("'ncomps', 4") is more
-acceptable theoretically since it is a true ICA decomposition (that uses
-a rectangular matrix). In general, we advise finding as many components
-as possible (e.g. if you have enough memory on you computer to run ICA
-over all the channels).
-
-### Running Extended ICA
+独立したコンポーネントを作る方法がわからない
+EEGlab4.0 の PCA によって減少される次元。 例えば、4 を取得したい
+32チャンネルEEGデータから独立したコンポーネント。
 
 
-You mentioned that we should use the extended ICA
-algorithm to extract subgaussian components (i.e., 60-Hz noise). For our
-MEG data (using the old binica() for Windows) we get several subgaussian
-components, but there is still leakage of 60 Hz onto many of the
-supergaussian components as observed with an FFT (mutlitaper). In the
-EEGLAB tutorial (1st_readme.txt) I noticed a question mark on whether
-binica for Windows (the old one) was stable. Is it unstable? Should we
-use the extended version? Can we use the old binica() for Windows?
-**Answer:** MATLAB seems to have speeded up running runica() tenfold
-from 5.3 to 6.x ! So binica() just gives us a 30% improvement in speed
-these days (although also a 2-4-fold decrease in process size, important
-for large datasets under 32-bit memory addressing). In the future, we
-will compile the improved version of binica() for Windows. The
-improvements concerned mainly the 'pca' option, which you may not need
-to use.
+**回答:** 4つのコンポーネントを抽出するには、第二のテキストボックスの
+"ツール \> ICAのインタラクティブなポップアップウィンドウを実行し、「pca」、4 "または
+"'ncomps', 4" と、それを行います。
+PCA('pca', 4")をご使用ください。
+良い理由。 最初の PCA コンポーネントを使用して、データをトランク化します。
+(コンポーネントの妥当性)、そしてICAは見つけることができないかもしれません
+関連コンポーネント。 2番目の可能性(「ncomps」、4")は、
+それは真のICAの分解であるので受諾可能な理論的に(使用される
+長方形のマトリックス)。 一般的には、多くのコンポーネントを見つけることをお勧めします
+可能な限り(例えば、ICAを実行するためにコンピュータに十分なメモリがある場合)
+すべてのチャネルに)。
 
-### ICA applied to data epochs or continuous data
-
-I have noticed that the runica() does not include a field
-for epoch size, so how does ICA recognize the epochs? Doesn't this make
-a difference to the way ICA is handled?
-**Answer:** Epochs are concatenated before running ICA. In ICA, all time
-points of all epochs are shuffled so that epoch information is
-irrelevant.
+### ランニングエクステンドICA
 
 
-I have some continuous 32-channel EEG data on which I
-would like to apply Infomax ICA. I am primarily interested in the 100
-epochs from the data, which are 3000 frames each. There are only about
-20-40 frames between the end of one epoch and the beginning of the next.
-Should I apply ICA to the continuous data, then epoch the ICs, or apply
-ICA to the concatenated epochs?
-**Answer:** You can apply ICA to either of them. Usually, we prefer to
-apply ICA to the concatenated epochs so ICA components are more likely
-to represent activity related to the task, but continuous data are fine
-too, especially if you have few epochs or few data points, since most of
-the same EEG and artifact processes are likely to be active 'between'
-epochs.
+拡張ICAを使用するべきだと述べた
+サブガウスコンポーネントを抽出するアルゴリズム(60Hzノイズ)。 私たちについて
+MEGデータ(Windows用の古いbinica()を使用)) いくつかのサブガウスを取得
+コンポーネントは、まだ60Hzの漏れが多々あります。
+FFT(mutlitaper)で観察されるようにスーパーガウスのコンポーネント。 お問い合わせ
+EEGLABチュートリアル(1st_readme.txt) 質問マークに気付いたかどうか
+Windows用のbinica(古いもの)は安定していました。 それは不安定ですか? お問い合わせ
+拡張バージョンを使用する? Windows用の古いbinica()を使うことはできますか?
+**Answer:** MATLAB は、実行中の runica() tenfold をスピードアップしているようです
+5.3から6.xまで! なので、binica() は速度で 30% 改善します
+これらの日(プロセスサイズが2〜4倍減少しているが、重要な
+32ビットのメモリアドレスの大きいデータセットのため。 今後は、
+Windows用のbinica()の改良版をコンパイルします。 ふりがな
+主に 'pca' オプションを関連した改善, 必要ない
+使用するため。
 
-### ICA scalp map polarity
+### ICA はデータエポックや連続データに適用
 
-For multiple-epoch data, the scalp map obtained for the
-different epochs is the same for a particular component. Is this normal
-or is there some mistake that's being done in the analysis?
-**Answer:** Because the ICA algorithm is applied in the electrode space
-domain, the same scalp maps are returned for all epochs. However, the
-time course of one ICA component is different for each epoch (if its
-activation value is 0 at a given time, it means that this component is
-not expressed in the data at that particular time).
+runica() がフィールドを含まないことに気づいた
+EPOCサイズでは、ICAがEPOCKSを認識する方法は? これはそうではありません
+ICAの取り扱い方法の違いは?
+**回答者:** Epochs は、ICA を実行する前に連結されます。 ICAでは、すべての時間
+すべてのエポックのポイントはシャッフルなので、エポック情報が
+関連する。
 
-### ICA activity warning
 
-I am seeing the warning message below. What does it mean?
+私は私が持っているいくつかの連続32チャンネルEEGデータを持っている
+Infomax ICAを申請したい 私は主に100に興味を持っています
+それぞれ3000フレームのデータからのエポック。 お問い合わせ
+20-40フレームは1つのエポックの端と次の始まりの間の。
+ICAを連続データに適用し、ICを流すか、または適用すれば
+ICAは汚染されたエポックに?
+**回答者:** ICAを申請することができます。 通常、私達は好ましいです
+ICAを汚染されたエポックに適用するので、ICAコンポーネントはより可能性が高い
+タスクに関連する活動を表現するが、連続したデータは細かい
+特に、ほとんどのもの以来、いくつかのエポックやいくつかのデータポイントを持っている場合
+同じ EEG とアーティファクト プロセスは、アクティブな ' である可能性があります。 お問い合わせ
+エポック。
+
+### ICAスカルプマップ極性
+
+複数のepochデータの場合、scalpマップが取得されます。
+異なるエポックは、特定のコンポーネントと同じです。 これは正常です
+解析で行われる間違いはありますか?
+**Answer:** ICAアルゴリズムが電極空間に適用されるため
+ドメインは、すべてのエポックに対して同じスカルプマップが返されます。 しかし、
+1つのICAコンポーネントのタイムコースは、それぞれのEPOCで異なる(その場合)
+アクティベーション値は、与えられた時点で 0 であり、このコンポーネントは
+特定の時にデータを表現しない。
+
+### ICA活動警告
+
+以下の警告メッセージが表示されます。 それはどういう意味ですか?
 
 ```
 Warning: ICA activities and weights mismatch, click on the link below for more information 
 ```
 
-**Answer:** If you re-reference the data after running ICA, or if you remove channels, you might see the warning message above.
-**As a rule of thumb, never perform a lossy re-referencing or channel
-removal after running ICA.** Instead, remove the channel or re-reference the data, then run ICA again.
-When data is referenced or when channels are removed, the ICA scalp topographies are also referenced, while the ICA activity remains unchanged.
-However, this process violates the assumptions of ICA. Specifically, the relationship *ICA_activations = ICA_weights * EEG_data* no longer holds.
-Despite this, we contend that this altered representation is the closest approximation to the state before re-referencing or the removal of channel(s). 
+**回答:** ICAを実行した後、またはチャンネルを削除した場合は、上記の警告メッセージが表示されます。
+**親指の規則として、決して損失再発酵かチャネルを実行しません
+ICAを実行した後の除去。** 代わりに、チャンネルを削除したり、データを再参照したり、ICAを再び実行します。
+データが参照されるか、チャネルが取り除かれるとき、ICAの活動が変更されていない間、ICAの頭皮のトポグラフィはまた参照されます。
+しかし、このプロセスはICAの仮定に違反します。 具体的には、関係 *ICA_activations = ICA_weights * EEG_data* は保持しません。
+これにもかかわらず、この変更された表現は、再会議やチャネルの除去前に、状態への最も近い近似であることを理解しています。 
 
-The alternative approach of recomputing activities from the modified weight matrix is not ideal, as it does not constitute a standard ICA decomposition.
-It is important to note that if you save and reload the data, ICA activations are not saved by default. As a result, EEGLAB will recompute them using the ICA weights and data when you load the data again, which deviates from the standard ICA decomposition. If it is important for you to retain the ICA activities when saving the data, we
-advise that you save the data from the command line using 
+変更された重量行列からの応答活動の代替方法は、標準的なICA分解を構成するものではありません。
+保存してデータをリロードすると、ICAのアクティベーションはデフォルトでは保存されません。 その結果、EEGLABは、ICAの体重とデータを再び読み込むと、標準的なICAの分解から逸脱します。 データを保存する際にICA活動を保持することが重要です。
+コマンドラインからデータを保存しておくことをお勧め 
 
 ```
 save('-mat', 'EEG_dataset_with_ica.set', '-struct', 'EEG');
 ```
 
-Time Frequency
+時間頻度
 --------------
 
-### Timef() spectral decompositions: properties and discrepancies
+### Timef() スペクトル分解: プロパティと矛盾
 
-Is it not true that the ERP for a condition can be
-completely reconstructed from the timef() results, including ITC? One
-could write a function that takes the outputs of timef
-('times','freqs','ersp','itc') and gives as it's output the ERP. Could
-one then usefully manipulate the values in ERSP and ITC and see how the
-ERP would have looked without some aspect of the ERSP (like, take away
-the inter-trial coherence in the alpha band and leave all else the
-same). Finally, could one subtract the 'ersp' and 'itc' between two
-conditions and then reconstruct the difference ERP?
+条件のERPができることは真実ではありません
+ITC を含む timef() 結果から完全に再構築されたか? ワンポイント
+timef の出力を取る関数を書くことができる
+('times','freqs','ersp','itc') は、ERP を出力するようにします。 お問い合わせ
+一つは、ERP と ITC の値を有用な操作し、その値がどのように確認するのか
+ERP は ERSP のいくつかの側面なしで見ました( のような, 取り去りました)
+アルファ バンドの相互trial一貫性は他のすべてを残します
+同じ)。 最後に、 'ersp' と 'itc' を 2 つ間引き込みます。
+ERPの違いを再構築する
 
-I've been playing with the parameters of timef() and am surprised by the
-large differences in results dependent on the values for 'cycles',
-'winsize', etc. This even makes we insecure about previous timef()
-results ....
-
-
-**Answer:** Yes, this is possible (with some fuzziness regarding
-overlap-adding the overlapping spectral estimates, undoing the effects
-of tapering (windowing), etc. I haven't focused on strictly "invertible"
-time/frequency transforms - which tend to be restrictive, since I am
-interested in analysis rather than synthesis.
+私はtimef()のパラメータで遊んでいて、驚いた
+'cycles' の値に依存する結果の大きな違い,
+「winsize」等。 これは、以前の timef() に関しても安全です。
+結果 ....
 
 
-However, in general the answers will be like the following:
+**回答者:** はい、これが可能です(いくつかの問題について
+重複してスペクトル推定値を追加, 効果を解く
+テーピング(巻線)など 私は厳密に「見えない」に焦点を当てていない
+時間/周波数変換 - 制限される傾向がある、私は
+合成ではなく分析に興味がある。
 
 
-Removing alpha ITC would be like filtering out the alpha in single
-trials and replacing it with random-phase noise. The effect on the ERP
-would be more or less exactly like filtering out the 10 Hz from the ERP,
-plus adding some noisiness...
+ただし、一般的な回答は以下のようなものになります。
 
 
-The ERSP is a different matter, as ERSP changes can only produce a
-(stat. signif) ERP in conjunction with signif ITC. Adding an ampl.
-increase at alpha, say, to the ERSP and then going back to the time
-domain would scale up alpha band power in the ERP -- if the ITC stays
-the same.
+アルファを取り除く ITCは、単一のアルファをフィルタリングしたい
+ランダムフェーズノイズで試着して交換します。 ERPに対する効果
+ERP から 10 Hz をフィルタリングするような、あるいは、
+さらに、いくつかの騒ぎを追加...
 
 
-Changing both ERSP and ITC can be made to give any kind of mixed results
-summing those above.
+ERSP は ERSP の変更は ERSP の変更だけを作り出すことができるので異なっています
+(stat.signif) ERP は、Signif ITC と連携します。 アンプを追加します。
+アルファで増加します。, 言う, ERSPに、その後、時間に戻る
+ドメインはERPでアルファバンドパワーをスケールアップします。
+同じ。
 
 
-Re timef() variability - think of it like the focus / f-stops on a
-camera - you cannot achieve focus on every plane at once. It is also
-like Heisenbug uncertainty, I hear - you cannot localize a 'particle'
-(wavelet) in time and frequency simultaneously. Or, as in cinema you,
-where one cannot record motion in a single instant, one cannot record an
-exact power estimate at an instant. Basically, a "good" time/frequency
-method can only give an estimate within a time/frequency area whose area
-is fixed, but not its shape. i.e. Do you want long-and-thin, or
-fat-and-short, or square?
+ERSP と ITC の両方を変更して、あらゆる種類の混合結果を得ることができます
+上記をまとめる。
 
 
-So, one can make exact comparisons only across channels or components
-within the same t/f transform.
-
-### Time-frequency decomposition time range problem
-
-I am afraid that the time scale is slightly off for the
-time-frequency plots. E.g. a component time-frequency plot from a
-dataset where the epochs are from -2560 ms to +2046 ms and according to
-the plot's time scale it appears that the epoch is from slightly before
--2000 ms to slightly over +1500 ms. Do you know why?
-**Answer:** It is normal that the time limits are different from the
-original dataset, since the FFT (or wavelet) is applied over time
-windows and we consider the center of these windows. As a result, you lose half the window size on each edge of the plot (some hundred
-milliseconds depending on the window size and the sampling rate).
-
-### Spectrum using FFT, Welch or multitaper
-
-You should most likely use the pwelch method (implemented in the EEGLAB
-spectopo function). It is a windowed FFT (several FFT averaged).
-
-The Thomson method (usually known as multitaper) is good too. It is
-first projecting the data onto an orthogonal base, then performing FFT.
-
-They should all return similar results (FFT, pwelch, multitaper). I
-guess the Thomson method is less sensitive to noise but also
-more complex to use. I guess it would also be possible to use the welch
-method on top of multitaper. It is all a matter of preference. I would
-advised using the pwelch method which is easy (you just give as an
-option the length of the windows and the overlap). Multitaper would
-require you to select the number of basis vector in your orthogonal base
-and this is much less intuitive (and also has consequences on the
-frequency resolution you can achieve).
-
-### Multitaper, FFT, wavelets for time-frequency decomposition?
-
-I have been using the new EEGLAB toolbox for the past
-couple of weeks, especially timef() and crossf(). The multitaper method
-with bootstrap statistics has been giving me very nice stable results.
-Timef() with wavelets gives slightly different results, but also
-interesting. I noticed though that all the analysis has been designed to
-study coherence, phase-coherence, ITC, etc, for data organized as
-epochs. (e.g. inter-trial effects).
+Re timef() バリビリティ - フォーカス/f-stops のように見える
+カメラ - 一度にすべての平面に焦点を合わせることができません。 それはまたあります
+Heisenbugの不確実性のように、私は聞きます - あなたは「粒子」をローカライズすることはできません
+時間と頻度の同時(ウェーブレット)。 または、映画館のようにあなた、
+1 つは 1 つの瞬間に動きを記録できない、 1 つは記録しません
+瞬時に正確なパワー推定。 基本的には「良い」時間/頻度
+メソッドは、エリア内の時間/頻度エリア内でのみ推定できます。
+固定ですが、その形状ではありません。 お問い合わせ 長くて薄い、または
+脂肪と短い、または正方形?
 
 
-Is there a function for computing time-varying coherence between
-'independent' activation functions for continuous spontaneous recordings?
-(i.e., spontaneous coherence for brief windows of time, 200-300ms). J.P.
-Lachaux (from Varela's Lab) has several papers investigating this issue.
+そのため、チャネルやコンポーネント間での比較を正確に行うことができます。
+同じt/f変換内で。
+
+### 時間頻度分解の時間範囲問題
+
+私は時間スケールが少しオフであることを恐れています
+時間頻度のプロット。 例:コンポーネントのタイム頻度のプロットから
+EPOCが-2560 msから +2046 ms におよびに従ってあるデータセット
+プロットのタイムスケールは、エポックが少し前に現れます
++1500 ms 以上 2000 ms。 なぜですか?
+**住所:** 時間制限が異なることは正常です
+元のデータセットは、FFT(またはウェーブレット)が時間をかけて適用されるので、
+窓は、これらの窓の中央を考慮します。 その結果、プロットの各端にウィンドウサイズの半分を失います(百
+ウィンドウサイズとサンプリング速度に応じてミリ秒。
+
+### FFT、ウェルチ、マルチタッパーを使用したスペクトラム
+
+おそらくpwelchメソッドを使うべきでしょう(EEGLABで実装されています)
+spectopo機能)。 FFT(重度FFT平均値)のウィンドウです。
+
+トムソンメソッド(通常はマルチタッパーとして知られています)も良いです。 お問い合わせ
+最初にデータを直角ベースに投影し、FFTを実行します。
+
+それらはすべての同じような結果(FFT、pewelch、multitaper)を返すべきです。 お問い合わせ
+Thomson メソッドはノイズに敏感ではないが、また
+より複雑な使用。 welchを使うこともできると思います
+マルチタッパーの上の方法。 それはすべての好みの問題です。 お問い合わせ
+簡単な pwelch メソッドを使用することをお勧めします(あなただけとして与える)
+ウィンドウの長さとオーバーラップのオプション。 マルチテーパーは
+orthogonalベースでベースベクターの数を選択する必要があります
+そして、これはあまり直感的ではありません(そしてまた、結果が上にある)
+達成できる頻度決断)。
+
+### マルチタッパー、FFT、周波数分解のための波紋?
+
+過去に新しい EEGLAB ツールボックスを使っています
+数週間、特に timef() と interf() 。 マルチテープ方式
+ブートストラップの統計は私に非常に素晴らしい安定した結果を与えています。
+ウェーブレット付きTimef()は若干異なる結果をもたらしますが、また、
+おもしろい。 すべての分析が設計されていることに気づいた
+共同進行、フェーズコヒーレンス、ICCなど、データとして整理したデータを研究
+epochs. (例:インタートリルエフェクト)。
 
 
-**Answer:** We also programmed multitaper methods for timef(), but
-removed them from the current more flexible versions (not available yet
-on the Internet (May 23, 2003)). Note that we usually use neither the
-FFT (0) or N-cycle wavelet methods, but a compromise (0.5) setting that
-trades off frequency resolution (at low freqs) with stability at high
-freqs.
+その間の計算の時間変数の一貫性のための機能があります
+「独立した」アクティベーション機能で、連続した自発的な録音機能はありますか?
+(例:200-300msの短い窓のための自発的な一貫性)。 J.P.の特長
+Lachaux(Varela's Lab)は、この問題を調べるいくつかの論文を持っています。
 
 
-We have not yet had cause to program flexible visualization and handling
-of continuous coherence measures, though you can run timef()/crossf() on
-a continuous dataset (which is internally considered by EEGLAB to be 1
-epoch). We'd welcome suggestions and/or code.
-
-In our experience, multitaper decomposition are not very useful because
-we are interested in low frequency activities (i.e. 5 Hz) at which we
-want the maximum time resolution. So we had to use 1 multitaper only
-(using several multitapers reduces noise but also reduces the
-time/frequency resolution) which is equivalent to a standard FFT. Using
-several multitapers in the gamma band would make sense though because
-the time resolution is much higher and not critical. Multitaper has been
-removed from the newtimef() function but it is still possible to use it
-in the timef() function.
-
-### Spectrogram orientation?
-
-We normally display our chrono-spectrograms with the lower
-frequencies at the bottom of the plot, just the opposite how Eagle does
-it. Is there an easy way to change this?
+**Answer:** 私達はまた timef() のための multitaper 方法をプログラムしました、
+より柔軟なバージョンから削除(まだ使用できません)
+インターネット(2003年5月23日) 通常は使用していません
+FFT(0)またはNサイクルのウェーブレットメソッドが、妥協(0.5)設定
+高い安定性の頻度決断(低いfreqsで)を離れた貿易
+フィードバック
 
 
-**Answer:** Right now the only way to change this is to click on the
-figure and type
+柔軟な視覚化と取り扱いをプログラムする原因はまだなかった
+timef()/crossf() を実行できますが、継続的なコヒーレンス対策
+連続したデータセット(EEGLABが内部的に1と見なす)
+エポック。 提案やコードを歓迎します。
+
+私たちの経験では、マルチタッパーの分解は非常に有用ではありません
+私たちは、低周波活動に興味を持っています (すなわち5 Hz) 我々
+最大時間解像度を要求します。 そのため、マルチタッパー1個のみ使用しました。
+(複数のマルチタッパーを使用して騒音を減らしますが、また減らします
+標準的なFFTと等しい時間/頻度決断)。 使用方法
+ガンマバンドでは複数のマルチタッパーが意味するだろう。
+時間の解像度がはるかに高まり、重要ではありません。 マルチテーパーは
+newtimef() 関数から削除されますが、それを使用することは可能です
+timef() 関数で。
+
+### Spectrogramのオリエンテーションか。
+
+通常、クロノスペクトグラムを下部に表示
+プロットの下部の周波数, ちょうどイーグルが行う方法の反対
+お問い合わせ これを変更する簡単な方法はありますか?
 
 
-\>\> set(gca, 'ydir', 'normal');
+**Answer:** 今すぐ変更する唯一の方法は、クリックすることです
+数字と型
 
 
-I guess you could edit the timef() and crossf() MATLAB functions to
-change all the plots to this format. We will introduce this as an option
-in the future.
+\>\> セット(gca、'ydir'、'normal');
 
-Single Trial
+
+timef() と crossf() MATLAB の関数を編集できると思います。
+すべてのプロットをこの形式に変更します。 オプションとして紹介します。
+未来へ。
+
+シングルトライアル
 ------------
 
-### Can I sort single-trial ERPs on amplitude?
+### 単trial ERPを振幅でソートできますか?
 
-How can I sort single trial ERP in erpimage() based on
-their amplitude at a determined latency.
-**Answer:** use the 'ampsort' option of erpimage() (not separately
-queried in GUI, you have to put it into the "More options" text box at
-the bottom right of the pop_erpimage() interactive window). Erpimage()
-option 'ampsort' sorts on spectral amplitude; if you want to sort on
-potential value at some epoch time point, then use option 'valsort'.
+単一のトライアルERPをerpimage()でソートする方法
+決定されたレイテンシの広さ。
+**Answer:** erpimage() の 'ampsort' オプションを使用する (別ではなく)
+GUI でqueried, あなたはそれを "より多くのオプション" テキストボックスに置く必要があります
+pop_erpimage() インタラクティブウィンドウの右下にある。 エルプイメージ()
+オプション 'ampsort' は、分光度でソートします。ソートしたいなら
+いくつかの epoch の時間ポイントで潜在的な値, その後、オプション 'valsort' を使用します.
 
-Miscellaneous
+その他
 =============
 
-### Epoching data on custom events
+### カスタムイベントでデータをエッチングする
 
-For reasons too complex to describe, I am trying to epoch
-with respect to various latencies RELATIVE to the events in my dataset.
-For example, epoch onset = event latency + some value, so I can
-calculate the set of latencies and use them in a call to epoch.m (the
-second parameter). I couldn't specify the latencies directly using
-pop_epoch function.
+理由は複雑すぎて記述するので、私はエポックしようとしています
+様々なレイテンシーをデータセットでイベントに反映させる。
+例えば、epoch の onset = イベントレイテンシー + いくつかの値なので、
+レイテンシーのセットを計算し、epoch.m への呼び出しでそれらを使用 (
+2番目のパラメータ)。 直接使用するレイテンシーを指定できません。
+pop_epoch 関数。
 
 
-**Answer:** There are 2 solutions for this problem:
+**住所:** この問題には2つの解決策があります。
 
-1\) modify event latencies or create new events. For instance
+1\) イベントのレイテンシーを変更したり、新しいイベントを作成します。 例えば
 
 ``` matlab
 for index = 1:length(EEG.event)
@@ -679,75 +679,75 @@ end;
 % then epoch from the menus
 ```
 
-2\) use the epoch() function instead of the pop_epoch() function. The
-epoch() function processes latencies directly. You will then obtain a
-MATLAB array that you may import in EEGLAB.
+2\) は pop_epoch() 関数の代わりに epoch() 関数を使用します。 ふりがな
+epoch() 関数は直接レイテンシーを処理します。 その後、取得します
+EEGLAB にインポートできる MATLAB 配列。
 
-Figures
+プロフィール
 -------
 
-### Formatting figures for publication
+### 出版のための書式図
 
-The lines in erpimage() (e.g. 'X' axis on the average) are
-too thick. How can I control their thickness?
-
-
-**Answer:** To change the figure aspect for publication, you can go in
-the figure menu and use the MATLAB menu item "Tools \> Edit". Then you
-can select any object in the figure. The second button will display a
-contextual menu where you will be able to change line thickness, color,
-font aspects..., or even draw additional lines or add text. We also
-export figures as Postcript files and open them with Adobe Illustrator
-in vector format to fine tune it. See also this web page.
-
-### Exporting figures
-
-Could you tell me how to export figures from EEGLAB (to
-include in a "word.doc" for example, or to export to Excel)? This for
-the scroll channel data eegplot(), and for channel spectra and
-maps...and other plots....
+erpimage() の行 (例: 'X' 平均の軸線) は
+太りすぎ。 厚みを制御する方法は?
 
 
-**Answer:** For most EEGLAB figures, simply use menu item "File \>
-Export".
+**回答:** 出版物の数字の側面を変更するには、
+数値メニューを使用して、MATLABメニュー項目「ツール\>編集」を使用します。 それからあなた
+図内の任意のオブジェクトを選択できます。 2つ目のボタンは表示します
+ラインの厚さ、色を変更できるコンテキストメニュー
+フォントの面...、または追加の行を描画したり、テキストを追加したりすることもできます。 また、
+ファイルをポストクリプトとしてエクスポートし、Adobe Illustratorで開きます
+ベクターフォーマットで微調整します。 こちらのページもご覧ください。
+
+### 数字のエクスポート
+
+EEGLABから図をエクスポートする方法を教えてください。
+たとえば「word.doc」やExcelにエクスポートするには? お問い合わせ
+スクロール チャネルのデータ eegplot() およびチャネルのスペクトルのため
+地図...と他のプロット....
 
 
-For the scrolling channel data function (eegplot()), first use menu item
-"Figure \> Edit figure" to restore the default MATLAB menu. From the
-command line, you may also use the command
+**Answer:** ほとんどの EEGLAB 数値では、単にメニュー項目 "File \> を使用する
+エクスポート。
 
 
-\>'\>' print -djpeg scrollfigure.jpg %to print in jpeg
+スクロールチャネルのデータ機能(eegplot()))の場合、最初の使用メニュー項目
+「料金」> デフォルトのMATLABメニューを復元するために、図を編集します。 から
+コマンドラインでコマンドを使うこともできます。
 
-\>'\>' print -depsc scrollfigure.eps %to print in postcript color
+
+\>'\>' プリント -djpeg scrollfigure.jpg %to jpeg
+
+\>'\>' プリント -depsc scrollfigure.eps %to はポストクリプト色で印刷します
 
 
-Note: use the command "\>'\>' set(gcf, 'paperpositionmode', 'auto')"
-first to print the figure in the same aspect ratio as it is shown on
-screen.
+Note: "\>'\>' set(gcf, 'paperpositionmode', 'auto') コマンドを使用します。
+同じアスペクト比で図を最初に印刷する
+スクリーン。
 
-### Figures and printing problems
+### 図と印刷の問題
 
-When I tried to plot the channel spectrum, the axis labels
-and tick labels did not appear clearly on the screen and I've got the
-following error messages from the MATLAB command line: "Plotting scalp
-distributions: Warning: Unrecognized OpenGL version, defaulting to
+チャンネルスペクトルをプロットしようとすると、軸ラベル
+そして、チェックラベルは画面に明確に表示されなかったし、私は得ました
+MATLABコマンドラインから次のエラーメッセージ: "スキャルプをプロット
+分布: 警告: 非認識 OpenGL バージョン、デフォルト
 1.0"
-**Answer:** You may solve the problem by changing the OpenGL version on
-the MATLAB command line by typing: "feature('UseGenericOpenGL',1)".
+**回答者:** OpenGLバージョンをONに変更することで問題を解決できます
+"feature('UseGenericOpenGL',1)" と入力することで、MATLAB コマンドラインをタイプします。
 
-Sometimes MATLAB crashes when I try to print a figure. If
-I save the figure on disk, first, some parts are missing. Do you know
-how to fix this problem?
-**Answer:** You may solve the problem by changing the OpenGL version on
-the MATLAB command line by typing: "feature('UseGenericOpenGL',1)" For
-the printing error, we also experience this; it is a MATLAB problem
-which is not consistent between Windows and Linux. We always print or
-save to files (.jpg or .eps Postscript), then print the files. For
-instance, use the software
-[FreeRawPrint](http://download.com.com/3001-2088-10178995.html) to send
-the Postscript file to the printer under windows. Even with this
-strategy, some parts of complex figures may disappear, but this is rare
-(then we use screen captures, or use a Windows machine, since printing
-seems to be more reliable under Windows OS). We hope MATLAB will become
-better at this in the future (Is MATLAB listening?).
+時々 MATLAB は、図をプリントしようとするとクラッシュします。 お問い合わせ
+ディスク上の図を保存します。, 最初に, 一部が欠落しています。. お問い合わせ
+この問題を解決する方法?
+**回答者:** OpenGLバージョンをONに変更することで問題を解決できます
+MATLAB コマンドライン: "feature('UseGenericOpenGL',1)"
+印刷エラー、これも経験しています。それはMATLABの問題です
+WindowsとLinuxの間で一貫していない。 私達はいつも印刷するか、または
+ファイルを保存します。 (.jpg または .eps の投稿スクリプト), ファイルを印刷します。. お問い合わせ
+例えば、ソフトウェアを使用する
+[フリーラウプリント](http://download.com.com/3001-2088-10178995.html) 送信する
+ウィンドウの下のプリンターにポストスクリプトファイル。 これも
+戦略、複雑な数字の一部が消える可能性がありますが、これはまれです
+(そして私達は印刷以来スクリーンの捕獲を使用して、またはWindows機械を使用します、
+Windows OSではより信頼性が高いようです。 「MATLAB」が誕生する
+将来的にはこれで良い(MATLABリスニング?)。

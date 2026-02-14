@@ -9,225 +9,225 @@ parent: Workshops
 ![PXL_20250702_111152814](https://github.com/user-attachments/assets/52627702-1bc6-4b4b-a04d-3e9a70269055)
 
 
-EEGLAB Workshop
+EEGLABワークショップ
 ============================
 
-<span style="color: blue">Aspet France - June 30-July 4th, 2025
+<span style="color: blue">アペットフランス - 6月30日〜7月4日、2025
 </span>
-The 34th EEGLAB Workshop will take place at the Bois Perche, about two hours by
-chartered bus from Toulouse. Participants will be expected to bring laptops with
-MATLAB installed so as to be able to participate in the practical
-sessions. The tutorial workshop will introduce and demonstrate the use
-of the EEGLAB software environment and EEGLAB-linked tools for
-performing advanced analysis of EEG and related data, with detailed
-method expositions and practical exercises. There will be an excursion.
+第34回EEGLAB ワークショップはボイ・ペルチェで行われます。
+トゥールーズから貸切バス 参加者は、ノートパソコンを持参する予定です。
+実用的に参加することができるようにMATLABをインストール
+セッション。 チュートリアルワークショップは、使用について紹介し、実証します
+EEGLABソフトウェア環境とEEGLAB連携ツール
+EEGおよび関連データの高度な分析を実行し、詳細
+方法の分解と実践的な演習. エクスカーションがあります。
 
-A Free symposium on Cloud EEG data processing will precede the workshop in Toulouse.
+ツイート クラウドEEGデータ処理の無料シンポジウムは、トゥールーズのワークショップを優先します。
 
-Registration and cost
+登録・費用
 ---------------------
-Space at the workshop is limited to about 40 participants.
+ワークショップのスペースは40名程度です。
 
-To reimburse travel expenses of Workshop faculty and facilities rental,
-costs for the workshop will be as follows:
+ワークショップの教員と施設のレンタルの旅行費を返金するため、
+ワークショップの費用は以下の通りです。
 
-Registration cost is 280 Euros for students (plus 490 euros for accommodation) and post-docs, 380 Euros (plus 490 euros for accommodation) for
-faculty and other professionals. Professionals are 580 Euros (plus 490 euros for accommodation). These registration costs include
-conference space rental, all coffee breaks, and a short excursion. 
-When registering, participants are also expected to pay for accommodation and all meals at the Bois Perche retreat center (a total of 490 euros). Included accommodation is in a private room at the Bois Perche resort for 4 days. Because of a grant from the CNRS, registration (and accommodation) is free for participants for the first three CNRS employees (including PhD students and post-docs) -- first come, first served.
+登録費用は、学生のための280ユーロ(宿泊施設のための490ユーロ)とポストドキュメント、380ユーロ(宿泊施設のための490ユーロ)です。
+教員、その他の専門家。 専門家は580ユーロ(宿泊施設の490ユーロ以上)です。 これらの登録費用には、
+会議スペースレンタル、コーヒーブレイク、ショートエクスカーション 
+ご登録いただくと、ボイ・ペルチェ・リトリート・センター(合計490ユーロ)の宿泊料やすべての食事代の支払いも対象となります。 4日間のボイ・ペルチェ・リゾートのプライベート・ルームに宿泊施設が含まれています。 CNRSから付与されるため、最初の3人のCNRS従業員(PhDの学生とポストドキュメントを含む)の登録(および宿泊施設)は参加者に無料です。
 
-[REGISTER HERE](https://dr14.azur-colloque.fr/inscription/fr/239/inscription)
+[お申し込みはこちらから](https://dr14.azur-colloque.fr/inscription/fr/239/inscription)
 <!-- font color=red>Registration is full, but email us at eeglab@sccn.ucsd.edu for last minute cancelations.</font -->
 
-<b>Warning: </b> This workshop is <em>not</em> aimed for real beginners
-in EEG - such persons would be wasting much of their time.
-Some parts of the workshop are fairly technical. The main topics will be
-advanced methods for analyzing EEG and allied behavioral data, methods
-including spectral decomposition, independent component analysis,
-inverse source analysis, information flow, etc.. Some other parts of the
-workshop will require basic MATLAB scripting capabilities. Some basic
-web resources for learning MATLAB are discussed below. Beginners may
-also gain experience using MATLAB by applying the steps discussed in the
-EEGLAB wiki tutorial to the sample dataset which you can freely
-download.
+<b>警告: </b> このワークショップは <em>お知らせ</em> 本物の初心者を目指す
+EEG - そのような人は、自分の時間を浪費するだろう。
+ワークショップの部分はかなり技術的です。 主なトピックは
+EEGと同盟行動データ、メソッドを分析するための高度な方法
+スペクトル分解、独立したコンポーネントの分析を含む、
+逆の源の分析、情報の流れ、等。 その他の部品
+ワークショップでは、基本的なMATLABスクリプト機能が必要になります。 いくつかの基本
+MATLABを学習するためのWebリソースは以下のとおりです。 初心者は可能です
+また、MATLABを使用して経験を得るには、議論のステップを適用して
+EEGLAB wiki チュートリアルでは、自由に使用できるサンプルデータセット
+ダウンロード
 
-MATLAB tutorial
+MATLABチュートリアル
 ----------------
 
-*IMPORTANT NOTE:* A portion of the workshop will be dedicated to writing EEGLAB scripts -- Not being able
-to understand MATLAB syntax will mean you will miss out on a large
-portion of the workshop.
+*重要な注意:* ワークショップの一部は、EEGLABスクリプトを書くことに専念されます。
+MATLABの構文を理解するには、大きめで見逃せます
+ワークショップの部分。
 
-If you are new to MATLAB or need a refresher, please consult the material on the [Getting started with MATLAB page](/tutorials/misc/tutorial_matlab.html)
+MATLABに新しくなったり、リフレッシュが必要な場合は、素材にご相談ください。 [MATLABのページを立ち上げる](/tutorials/misc/tutorial_matlab.html)
 
-If you do not have MATLAB, you can obtain a 30-day trial license for free on the MathWorks website (https://www.mathworks.com/campaigns/products/trials.html).
+MATLABをお持ちでない場合は、MathWorksウェブサイトで30日間のトライアルライセンスを無料で入手できます。https://www.mathworks.com/campaigns/products/trials.html).
 
-Workshop material
+研修会材料
 -----------------
 
-Workshop materials are provided on a USB flash drive. Copy the entire contents of the drive to your computer. Locate the file eeglab.zip, extract it, and follow the setup instructions. If you are using a Mac, make sure to follow these [instructions](https://www.fieldtriptoolbox.org/faq/matlab/mex_osx/) to enable binary files for source localization.
+USBフラッシュドライブでワークショップ資料を配布しています。 ドライブの全コンテンツをコンピュータにコピーします。 ファイルの eeglab.zip を検索し、それを抽出し、セットアップの指示に従ってください。 Macを使用している場合は、必ずこれに従ってください [インフォメーション](https://www.fieldtriptoolbox.org/faq/matlab/mex_osx/) ソースローカリゼーション用のバイナリファイルを有効にします。
 
-Workshop Program (with corresponding PDFs)
+ワークショッププログラム(PDF対応)
 ------------------------------------------
 
-The presented slides will be made
-available on this page. You only need to bring a
-laptop with MATLAB installed.
+提示されたスライドはなされます
+このページの先頭へ あなただけの持参する必要があります
+MATLABをインストールしたノートパソコン
 
-<span style="color: purple">Purple lettering = lecture</span>
-<span style="color: orange">Orange lettering = tutorial</span>
+<span style="color: purple">パープルレター = 講義</span>
+<span style="color: orange">オレンジレター = チュートリアル</span>
 
-### Monday, June 30th
+### 6月30日(月)
 
-[**Free symposium: Cloud EEG/MRI/fMRI automated processing pipelines, the SIESTA project**](Symposium_SIESTA_2025.html)<br>
-(Toulouse CerCo laboratory)
+[**無料シンポジウム: クラウド EEG/MRI/fMRI 自動処理パイプライン、SIESTA プロジェクト* * 必須](Symposium_SIESTA_2025.html)<br>
+(トゥールーズ・セラコ研究所)
 
-16:30 --  Shuttle bus pick up at Toulouse train station
+16:30～ トゥールーズ駅で送迎バス
 
-17:00 -- Shuttle bus pick up at Toulouse airport
+17:00～17:00 トゥールーズ空港送迎バス
 
 <span style="color: green">
 
-20:30 -- Dinner in Aspet (included in registration). Note that the optional evening MATLAB session was canceled due to a late dinner and also because the speaker, Ramon, could not make it.
+20:30 -- アスペットでのディナー(登録) 夕食が遅くなるため、またスピーカー、ラモンが作らないため、オプションの夕方のMATLABセッションは中止となりました。
 
-### Tuesday, July 1st
+### 7月1日(火)
 
-<span style="color: green">7:00 - 8:30 Breakfast</span>
+<span style="color: green">7:00～8:30 朝食</span>
 
-**Overview and ICA Theory/Practice**
+**概要とICA理論/実践* * 必須
 
-<span style="color:purple"> 8:30 – 9:45 -- Mining event-related brain dynamics I (Scott Makeig)</span>
+<span style="color:purple"> 8:30～9:45～ 鉱業イベント関連の脳力学I(Scott Makeig)</span>
 <!--[PDF](https://github.com/sccn/sccn.github.io/files/11948460/Makeig_Aspet23_Mining_I.pdf)-->
 
-<span style="color: purple">9:45 – 10:15 -- EEGLAB overview (Arnaud Delorme)</span>
-[PDF](https://github.com/user-attachments/files/20992965/EEGLAB_overview2025.pdf)
+<span style="color: purple">9:45 – 10:15 -- EEGLABの概要 (Arnaud Delorme)</span>
+[サイトマップ](https://github.com/user-attachments/files/20992965/EEGLAB_overview2025.pdf)
 
-<span style="color: green">-- Break--</span>
+<span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">10:30 – 11:30 -- ICA theory (Scott Makeig)</span>
+<span style="color: purple">10:30-11:30 -- ICA理論(Scott Makeig)</span>
 <!--[PDF](https://github.com/sccn/sccn.github.io/files/11948490/Makeig_ICA_Aspet23._pdf.pdf)-->
 
-<span style="color: orange">11:30 – 13:00 -- Data import, Artifact rejection (Claire Braboszcz)
-[PDF](https://github.com/user-attachments/files/20995739/Preprocessing_braboszcz2025_edit.pdf)
+<span style="color: orange">11:30 – 13:00 -- データのインポート、アーティファクト拒絶(クレア・ブラボスツ)
+[サイトマップ](https://github.com/user-attachments/files/20995739/Preprocessing_braboszcz2025_edit.pdf)
 </span>
 
-<span style="color: green">13:00-14:00 Lunch --</span>
+<span style="color: green">13:00～14:00 ランチ --</span>
 
-**ICA and source analysis**
+**ICAおよびソース分析**
 
-<span style="color: orange">14:00 – 15:00 -- ICA decomposition practicum (Claire Braboszcz)</span> [ICLabel Practice](https://labeling.ucsd.edu/tutorial/practice) [PDF](https://github.com/user-attachments/files/20999025/ICLabel.pdf)
+<span style="color: orange">14:00- 15:00 -- ICA分解練習(クレア・ブラボスツ)</span> [ICLabel の練習](https://labeling.ucsd.edu/tutorial/practice) [サイトマップ](https://github.com/user-attachments/files/20999025/ICLabel.pdf)
 
-<span style="color: purple">15:00 – 16:15 -- Forward and inverse models - the Dipfit tools (Robert Oostenveld)</span> 
-[PDF](https://github.com/user-attachments/files/20999227/forward_and_inverse_models_2025.pdf)
+<span style="color: purple">15:00 – 16:15 -- フォワードとインバースモデル - Dipfitツール(Robert Oostenveld)</span> 
+[サイトマップ](https://github.com/user-attachments/files/20999227/forward_and_inverse_models_2025.pdf)
 
-<span style="color: green">-- Break--</span>
+<span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">16:30 – 17:45 -- EEGLAB Dipfit plugin (Arnaud Delorme)</span> 
-[PDF DIPFIT](https://github.com/user-attachments/files/21000200/Delorme2025_dipole_connectivity.pdf)
+<span style="color: purple">16:30 - 17:45 -- EEGLAB Dipfitプラグイン(Arnaud Delorme)</span> 
+[PDFのDIPFIT](https://github.com/user-attachments/files/21000200/Delorme2025_dipole_connectivity.pdf)
 <!-- -->
 
-<span style="color: green">19:45 -- Dinner</span>
+<span style="color: green">19:45～ ディナー</span>
 
-### Wednesday, July 2nd
+### 7月2日(水)
 
-**Group analysis and ICA clustering in EEGLAB**
+**EEGLABのグループ分析とICAクラスタリング* * 必須
 
-<span style="color: purple">8:30 - 9:15 -- The Brain Imaging Data Structure (Robert Oostenveld\)</span>
-[PDF](https://github.com/user-attachments/files/21012586/fair.and.bids.pdf)
+<span style="color: purple">8:30 - 9:15 -- 脳イメージングデータ構造(Robert Oostenveld\)</span>
+[サイトマップ](https://github.com/user-attachments/files/21012586/fair.and.bids.pdf)
 
-<span style="color: orange">9:15 - 10:30 -- Creating a STUDY and preprocessing data (Arnaud Delorme)</span>
-[PDF](https://github.com/user-attachments/files/21012603/EEGLAB2019_AD_STUDY_design_newreduced.pdf)
+<span style="color: orange">9:15 - 10:30 -- STUDYとプリプロセッシングデータを作成する(Arnaud Delorme)</span>
+[サイトマップ](https://github.com/user-attachments/files/21012603/EEGLAB2019_AD_STUDY_design_newreduced.pdf)
 
-<span style="color: green">-- Break--</span>
+<span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">11:20 – 11:50 -- PCA vs. ICA and bootstraping ICA using RELICA (Fiorenzo Artoni)
-[PDF](https://github.com/user-attachments/files/21012617/RELICA_presentation_2025.pdf)
+<span style="color: purple">11:20 – 11:50 -- PCA対ICAとRELICA(Fiorenzo Artoni)を使用してICAをブートストラップ
+[サイトマップ](https://github.com/user-attachments/files/21012617/RELICA_presentation_2025.pdf)
 
-<span style="color: purple">11:50 - 12:30 -- Why cluster ICA components? (Scott Makeig)</span>
-[PDF](https://github.com/user-attachments/files/21024507/Makeig_Aspet25_Clustering.pdf)
+<span style="color: purple">11:50～12:30～ なぜクラスターICAコンポーネント? (スコットメイク)</span>
+[サイトマップ](https://github.com/user-attachments/files/21024507/Makeig_Aspet25_Clustering.pdf)
 
-<span style="color: green">12:30-14:00 Lunch --</span>
-
-<!-- -->
-<span style="color: purple">14:00 - 14:30 -- Practical ICA clustering (Arnaud Delorme)</span>
-[PDF](https://github.com/user-attachments/files/21015560/PracticalMEEG2022_GroupAnalysis.pdf)
-
-<span style="color: purple">14:30 - 16:00 -- Statistical analysis: Hierarchical Linear Modelling of EEG data (Cyril Pernet)</span> 
-[PDF LIMO](https://github.com/user-attachments/files/20999644/2025_LIMO_QuickStarter.pdf) [PDF HLM](https://github.com/user-attachments/files/20999647/2025_HLM_LIMO_EEGLAB.pdf)
-
-<span style="color: green">-- Break--</span>
-
-<span style="color: green">16:30-18:00-- Hiking excursion</span>
+<span style="color: green">12:30～14:00 ランチ --</span>
 
 <!-- -->
+<span style="color: purple">14:00 - 14:30 -- 実践的な ICA クラスタリング (Arnaud Delorme)</span>
+[サイトマップ](https://github.com/user-attachments/files/21015560/PracticalMEEG2022_GroupAnalysis.pdf)
+
+<span style="color: purple">14:30～16:00 -- 統計解析: EEGデータの階層リニアモデリング(Cyril Pernet)</span> 
+[PDFのリモ](https://github.com/user-attachments/files/20999644/2025_LIMO_QuickStarter.pdf) [サイトマップ](https://github.com/user-attachments/files/20999647/2025_HLM_LIMO_EEGLAB.pdf)
+
+<span style="color: green">-- ブレーク--</span>
+
+<span style="color: green">16:30-18:00--- ハイキングツアー</span>
+
+<!-- -->
 
 
-<span style="color: green">19:45 -- Dinner</span>
+<span style="color: green">19:45～ ディナー</span>
 
-### Thursday, July 3rd
+### 7月3日(木)
  
-<span style="color: green">7:30 - 8:30 Breakfast</span>
+<span style="color: green">7:30 - 8:30 朝食</span>
 
-**Advanced EEG signal processing methods**
+**高度なEEG信号処理方法**
 
-<span style="color: purple">8:30 – 9:30 -- Time-frequency decompositions: Theory and practice (Scott Makeig)</span> 
+<span style="color: purple">8:30～9:30 時間頻度分解: 理論と実践(Scott Makeig)</span> 
 
-<span style="color: purple">9:30 – 10🕙0 -- Finding the best parameter for clean_rawdata/ASR (Fiorenzo Artoni)
-[PDF](https://github.com/user-attachments/files/21012611/ASRPresentation_2025.pdf)
+<span style="color: purple">9月30日〜10日 clean_rawdata/ASR (Fiorenzo Artoni) の最良のパラメータを見つける
+[サイトマップ](https://github.com/user-attachments/files/21012611/ASRPresentation_2025.pdf)
 
-<span style="color: orange">10:00 – 10:30 -- What are EEG microstates? (Fiorenzo Artoni)
+<span style="color: orange">10:00〜10:30 EEGマイクロステートとは? (フィオレンツォ・アルトーニ)
 
-<span style="color: green">-- Break--</span>
+<span style="color: green">-- ブレーク--</span>
 
-**General Linear Modeling**
+**一般リニアモデリング* * 必須
 
-<span style="color: orange">10:50 - 11:30 -- Correcting for multiple comparisons (Cyril Pernet) [PDF](https://github.com/user-attachments/files/20999665/2025_MCC_and_boot_EEGLAB_workshop.pdf)
+<span style="color: orange">10:50 - 11:30 -- 複数の比較を修正 (Cyril Pernet) [サイトマップ](https://github.com/user-attachments/files/20999665/2025_MCC_and_boot_EEGLAB_workshop.pdf)
 
-<span style="color: orange">11:30 - 12:00 -- More STUDY designs and GLM (Cyril Pernet and Arnaud Delorme)
-[PDF LIMO](https://github.com/user-attachments/files/20999644/2025_LIMO_QuickStarter.pdf) [PDF HLM](https://github.com/user-attachments/files/20999647/2025_HLM_LIMO_EEGLAB.pdf)
+<span style="color: orange">11:30 - 12:00 -- その他のSTUDYデザインとGLM(Cyril PernetとArnaud Delorme)
+[PDFのリモ](https://github.com/user-attachments/files/20999644/2025_LIMO_QuickStarter.pdf) [サイトマップ](https://github.com/user-attachments/files/20999647/2025_HLM_LIMO_EEGLAB.pdf)
 
-<span style="color: orange">12:00 – 13:00 -- Theory and practice of applying general linear models to EEG data using the LIMO EEGLAB plug-in (Cyril Pernet)</span>
-[PDF](https://github.com/user-attachments/files/21040782/2025_GLM_design.pdf)
+<span style="color: orange">12:00 – 13:00 -- LIMO EEGLABプラグイン(Cyril Pernet)を使用して、一般的なリニアモデルをEEGデータに適用するための理論と実践</span>
+[サイトマップ](https://github.com/user-attachments/files/21040782/2025_GLM_design.pdf)
 
-<span style="color: green">13:00-14:30 Lunch --</span>
+<span style="color: green">13:00-14:30 ランチ</span>
 
-**Source information flow**
+**情報源流* * 必須
 
-<span style="color: orange">14:30 – 15:40 -- Continued processing of HW dataset (STUDY design and LIMO) (Cyril Pernet and Arnaud Delorme)</span>
+<span style="color: orange">14:30～15:40 -- HWデータセット(STUDYデザインとLIMO)の継続的な処理(Cyril PernetとArnaud Delorme)</span>
 
-<span style="color: green">-- Break--</span>
+<span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">16:00 – 17:00 -- Source information flow and Granger-Causal modeling tools, SIFT and ROIconnect toolbox (Arnaud Delorme)</span>
-[PDF connectivity](https://github.com/user-attachments/files/21000181/Connectivity_lecture2025.pdf)
+<span style="color: purple">16:00 – 17:00 -- ソース情報フローとGranger-Causalモデリングツール、SIFTおよびROIconnectツールボックス(Arnaud Delorme)</span>
+[PDF接続](https://github.com/user-attachments/files/21000181/Connectivity_lecture2025.pdf)
 
-<span style="color: green">19:45 -- Dinner </span>
+<span style="color: green">19:45～ ディナー </span>
  
-### Friday, July 4th
+### 7月4日(金)
 
-<span style="color: green">7:30-8:30 -- Breakfast</span>
+<span style="color: green">7:30～8:30 朝食</span>
 
-<span style="color: purple">8:30 – 9:30 -- Deep learning and EEG (Arnaud Delorme)</span> 
-[PDF](https://github.com/user-attachments/files/21043470/workshop_DL-EEG_2025.pdf)
+<span style="color: purple">8:30～9:30 ディープラーニングとEEG(アーナド・デルロメ)</span> 
+[サイトマップ](https://github.com/user-attachments/files/21043470/workshop_DL-EEG_2025.pdf)
 
-<span style="color: purple">9:30 – 10:15 -- Mining event-related brain dynamics II (Scott Makeig)</span> 
+<span style="color: purple">9:30〜10:15 マイニングイベント関連の脳力II(Scott Makeig)</span> 
 
-<span style="color: green">-- Break--</span>
+<span style="color: green">-- ブレーク--</span>
 
-<span style="color: orange">10:30 – 11:30 -- Practicum, small group projects</span>
+<span style="color: orange">10:30-11:30 -- 練習、小グループプロジェクト</span>
 
-<span style="color: orange">11:30 – 12:00 -- General discussion</span>
+<span style="color: orange">11:30-12:00 -- 一般討論</span>
 <!-- -->
 
 
-<span style="color: green">12:15 -- Lunch</span>
+<span style="color: green">12:15 -- ランチ</span>
 
-<span style="color: black">13:00 -- Airport/train station shuttle bus leaves Bois Perche</span>
+<span style="color: black">13:00～ 空港/列車の駅のシャトルバスはボイ・ペルチェに出発します</span>
 
-<span style="color: black">Between 14:15 and 14:45 -- drop off at Toulouse/Blagnac Airport</span>
+<span style="color: black">14:15～14:45～ トゥールーズ/ブラグナック空港下車</span>
 
-<span style="color: black">Between 14:30 and 15:15 -- drop off at Toulouse Matabiau train station</span>
+<span style="color: black">14:30～15:15 トゥールーズ・マタビアウ駅下車</span>
 
 
-Further reading
+さらなる読書
 ----------------
-You can consult a list of relevant EEGLAB papers [here](/others/EEGLAB_References.html) 
+関連するEEGLAB紙のリストを調べることができます [詳しくはこちら](/others/EEGLAB_References.html) 

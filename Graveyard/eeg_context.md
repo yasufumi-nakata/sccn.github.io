@@ -1,22 +1,22 @@
-Event context (as more reliably retrieved from the 'EEG.urevent' table)
-can be valuable in data analysis. For example, one may want to study all
-events of a certain type (or set of types) that precede or follow events
-of some other types by delays within a given range. A classic ERP
-example was the demonstration by [Squires et
-al.](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=64341)
-that the P300 peak was larger when a rare stimulus followed a string of
-standard stimuli than when it followed other rare stimuli. The (v4.4)command-line function [eeg_context.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) looks for events of
-specified *target* type(s), then for preceding and/or succeeding events
-of specified *neighbor* type(s).
+イベントコンテクスト('EEG.urevent'テーブルより確実に取得)
+データ分析において価値あることができます。 たとえば、すべて勉強したい
+イベントを先行またはフォローする特定のタイプのイベント
+特定の範囲内で遅延することにより、他のタイプのもの。 古典的なERP
+例は[Squires et]によるデモンストレーションでした
+お問い合わせhttp://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=64341)
+まれな刺激が文字列に続くと、P300ピークが大きいこと
+他のまれな刺激に従うときよりも標準的な刺激。 (v4.4)コマンドライン機能 [eeg_context.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) イベントを探す
+指定した *target* 型(s) は、前および/またはイベントの成功のために
+の指定 *neighbor* の型。
 
-The script below is a simple demonstration script using [eeg_context.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) that finds target events in the sample dataset
+以下のスクリプトは、シンプルなデモンストレーションスクリプトです。 [eeg_context.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) サンプルデータセットで対象イベントを見つける
 
-that are followed by appropriate button press responses. Some response
-ambiguity is resolved by making sure the response does not follow a
-succeeding target. (In that case, we assume the response is to the
-second target). It also finds the responded targets that follow a
-non-responded target since, we expect, the EEG dynamics time-locked to
-these targets may differ in some way from those not following a 'miss'.
+その後、適切なボタンを押して応答を押します。 いくつかの応答
+応答が従わないことを確かめることによって曖昧さは解決されます
+ターゲットを成功させる。 (その場合、その応答は、
+第2ターゲット)。 また、反応したターゲットをフォローするのも見つかります
+EEG ダイナミクスは、非対応のターゲットを想定しています。
+これらのターゲットは、'miss' に従わないものとは異なる可能性があります。
 
 ``` matlab
 % For each target 'square' event, find the succeeding 'rt' and 'square' events

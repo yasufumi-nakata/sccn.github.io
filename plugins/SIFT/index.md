@@ -7,76 +7,76 @@ render_with_liquid: false
 has_children: true
 nav_order: 7
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/SIFT).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/SIFT).
 
-![263416749-1abc1d2d-36bb-4cfb-9328-b57a96044f55](https://github.com/user-attachments/assets/b45a5caa-6b39-4291-b137-125132e5ade0)
+![263416749-1abc1d2d-36bb-4cfb9328-b57a96044f55](https://github.com/user-attachments/assets/b45a5caa-6b39-4291-b137-125132e5ade0)
 
-## The Source Information Flow Toolbox
+## ソース情報フローツールボックス
 
-Developed by: Tim Mullen 2009-
-Maintained: Tim Mullen and Arnaud Delorme
+開発:ティム・ムレン2009-
+維持: ティム・ムレンとアルナード・デローム
 
-SIFT is an EEGLAB-compatible toolbox for the analysis and visualization of
-multivariate causality and information flow between sources of
-electrophysiological (EEG/ECoG/MEG) activity. It consists of a suite of
-command-line functions with an integrated Graphical User Interface for
-easy access to multiple features. There are currently six modules: data
-preprocessing, model fitting and connectivity estimation, statistical
-analysis, visualization, group analysis, and neuronal data simulation.
+SIFTは、EEGLAB対応のツールボックスです。
+ソース間の多variateの因性および情報の流れ
+電気生理学的(EEG/ECoG/MEG)活動。 スイートから構成される
+統合されたグラフィカルユーザーインターフェイスを備えたコマンドライン機能
+複数の機能への容易なアクセス。 現在6つのモジュールがあります:データ
+前処理、モデルフィッティング、コネクティビティ推定、統計
+解析、可視化、グループ解析、神経データシミュレーション
 
-Methods currently implemented include:
+現在の実装方法は次のとおりです。
 
--   Preprocessing routines
--   Time-varying (adaptive) multivariate autoregessive modeling
-    -   Granger causality
-    -   directed transfer function (DTF, dDTF)
-    -   partial directed coherence (PDC, GPDC, PDCF, RPDC)
-    -   multiple and partial coherence
-    -   event-related spectral perturbation (ERSP)
-    -   and many other measures...
--   Bootstrap/resampling and analytical statistics
-    -   event-related (difference from baseline))
-    -   between-condition (test for condition A = condition B)
--   A suite of programs for interactive visualization of information
-    flow dynamics across time and frequency (with optional 3D
-    visualization in MRI-coregistered source-space).
+-   プリプロセスルーチン
+-   時給(適応型)多品種オートレガシーモデリング
+    -   グランガー因果
+    -   ダイレクト転送機能(DTF、dDTF)
+    -   部分的な指示された一貫性(PDC、GPDC、PDCF、RPDC)
+    -   複数の部分的な一貫性
+    -   イベント関連の分裂(ERSP)
+    -   その他多くの対策
+-   Bootstrap/resamplingおよび分析統計
+    -   イベント関連(ベースラインからの差)
+    -   間条件(条件A =条件Bのためのテスト)
+-   インタラクティブな情報可視化のためのプログラム
+    時間および頻度を渡る流れの動的(任意3Dと)
+    MRI-coregistered source-spaceの可視化
 
-## Acknowledgements
+## アクノレッジメント
 
-- Arnaud Delorme was instrumental in the development of the SIFT framework and integration into EEGLAB as well as contributing initial BrainMovie3D code.
-- Christian Kothe contributed the arg() framework for function I/O and auto-GUI generation
-- Wes Thompson consulted on statistics and methods for bayesian smoothing and multi-subject analysis
-- Alejandro Ojeda contributed routines for fast ridge regression
+- Arnaud Delorme は、SIFT フレームワークの開発と EEGLAB への統合に尽力し、初期の BrainMovie3D コードに貢献しました。
+- クリスチャン・コテは、機能I/Oと自動GUI生成のためのarg()フレームワークに貢献しました
+- Wes Thompsonはベイジアンスムースとマルチサブジェクト解析のための統計と方法に相談しました
+- Alejandro Ojedaは高速リッジ回帰のためのルーチンに貢献しました
 
-SIFT makes use of routines from (or is inspired by) the following open-source packages:
+SIFT では、以下のオープンソースパッケージ(またはインスパイアされた)からルーチンを利用しています。
 
-- [ARFIT](https://github.com/tapios/arfit) (Schneider et al)
-- [TSA/Biosig](http://octave.sourceforge.net/tsa/) (Schlögl et al)
-- [Chronux](https://chronux.org) (Mitra et al)
-- [DAL/SCSA](https://ttic.uchicago.edu/~ryotat/softwares/dal/) (Tomioka / Haufe et al)
-- [BCILAB](http://sccn.ucsd.edu/wiki/BCILAB) (Kothe et al)
+- [アフィット](https://github.com/tapios/arfit) (シュナイダーら)
+- [TSA/バイオシグ](http://octave.sourceforge.net/tsa/) (Schlögl ら)
+- [ログイン](https://chronux.org) (Mitra ら)
+- [ダル/SCSA](https://ttic.uchicago.edu/~ryotat/softwares/dal/) (富岡 / ハウフェ ら)
+- [BCILAB株式会社](http://sccn.ucsd.edu/wiki/BCILAB) (コテら)
 
 
-## Documentation
+## ドキュメント
 
-See the [SIFT wiki](http://sccn.ucsd.edu/wiki/SIFT) or use the submenus if you are looking at this page on the EEGLAB website.
+詳細はこちら [SIFT ウィキ](http://sccn.ucsd.edu/wiki/SIFT) またはEEGLABのウェブサイトでこのページを閲覧している場合は、サブメニューを使用します。
 
-## Citation
+## インフォメーション
 
-If you find this toolbox useful for your research, PLEASE include the following citations with any publications and/or presentations which make use of SIFT:
+このツールボックスがあなたの研究に有用であるならば、PLEASEは、SIFTを使用するあらゆる出版物および/またはプレゼンテーションで次の引用を含みます。
 
-1. Mullen, T. R. (2014). The dynamic brain: Modeling neural dynamics and interactions from human electrophysiological recordings (Order No. 3639187). Available from Dissertations & Theses @ University of California; ProQuest Dissertations & Theses A&I. (1619637939)
-2. Delorme, A., Mullen, T., Kothe C., Akalin Acar, Z., Bigdely Shamlo, N., Vankov, A., Makeig, S. (2011) "EEGLAB, SIFT, NFT, BCILAB, and ERICA: New tools for advanced EEG/MEG processing." Computational Intelligence and Neuroscience vol. 2011, Article ID 130714, 12 pages.
+1. ムレン、T.R.(2014)。 ダイナミックな脳:人間の電気生理学的記録(第3639187号)からのニューラル・ダイナミクスと相互作用のモデル化。 カリフォルニア大学(カリフォルニア大学)、ProQuest Dissertations&I. (1619637939)
+2. Delorme、A.、Mullen、T.、Kothe C.、Akalin Acar、Z.、Bigdely Shamlo、N.、Vankov、A.、Makeig、S.(2011) "EEGLAB、SIFT、NFT、BCILAB、ERICA: 高度なEEG/MEG処理のための新しいツール。 計算インテリジェンスと神経科学 vol.2011、記事ID130714、12ページ。
 
-## License
+## ライセンス
 
-SIFT is licensed under the GPL-2, see LICENSE.txt
-ANY USE OF SIFT IMPLIES THAT YOU HAVE READ AND AGREE WITH THE TERMS AND CONDITIONS OF THE SIFT LICENSE AS STATED BELOW:
+SIFT は GPL-2 の下でライセンスされ、 LICENSE を参照してください。 ログイン
+あなたが読み、同意する権利の条項と合意した権利の任意の使用:
 
-## ADDITIONAL NOTE
+## 追加ノート
 
-SIFT is designed and distributed for research purposes only. SIFT should not be used for medical purposes. The authors accept no responsibility for its use in this manner.
+SIFTは研究目的だけのために設計され、配られます。 SIFTは医療目的で使用しないでください。 著者は、この方法での使用について一切の責任を負いません。
 
-## Verions
+## バージョン
 
-v1.6 - fix conflict with BrainMovie plugin. Fix minor GUI issues.
+v1.6 - BrainMovieプラグインとの競合を修正します。 マイナーなGUIの問題を修正しました。

@@ -3,302 +3,302 @@ layout: default
 title: EEGLAB revision history
 parent: Download EEGLAB
 ---
-EEGLAB revision history
+EEGLABリビジョンの歴史
 ===
-EEGLAB downloads in MATLAB and executable formats are available [here](https://sccn.ucsd.edu/eeglab/download.php). 
-These include the latest release as well as older versions of EEGLAB.
+MATLABおよび実行可能フォーマットでEEGLABのダウンロードが利用可能です [詳しくはこちら](https://sccn.ucsd.edu/eeglab/download.php). 
+これらには、EEGLABの最新バージョンだけでなく、最新のリリースが含まれます。
 
-As of 2019, we are using the year of the release as the main revision number. 
-Minor revisions are indicated using a second number; thus,
-2019.0 is version 2019, first release; 2019.1 is version 2019, second release, etc...
-There will usually be one or two releases per year. 
-Previous major EEGLAB versions (e.g., versions 13, 14, etc.) did not use this naming scheme and did observe a regular release schedule.
+2019年以降、本年をメインリビジョンナンバーとして使用しております。 
+マイナーリビジョンは秒番号で示されます。したがって、
+2019.0は、バージョン2019、最初のリリースです。 2019.1はバージョン2019、第2リリースなどです。
+通常、1年2回のリリースとなります。 
+以前の主なEEGLABバージョン(バージョン13、14など)は、このネーミングスキームを使用しなかったため、定期的なリリーススケジュールを観察しました。
 
-## EEGLAB version 2025.1.0
+## EEGLAB バージョン 2025.1.0
 
-- Issue date: 9/26/2025; GIT tag: 2025.1.0
-- **Version statistics**: 39 files changed with 862 additions and 551 deletions.
-- **Summary of changes:** EEGLAB 2025.1.0 introduces broad compatibility updates for MATLAB 2025, including fixes in eegplot rendering, font scaling, pophelp modernization, and automatic renderer adjustments to prevent darkened figures on Windows. It also corrects the representation of two-way ANOVA designs in STUDY functions, fixing factor ordering, labeling, and p-value mapping for more accurate visualization of 2×2 designs.
-- **MATLAB compatibility:** MATLAB 2025 visual adjustments in many functions, including eegplot, to decrease font size and ensure visibility.  
-- **STUDY and statistics:** std_limo adds a verbose noGUI mode for pipeline use and writes chanlocs under derivatives when appropriate. Contrast construction updated to handle one categorical factor with multiple conditions alongside continuous factors. FieldTrip stats on averaged channels fixed. Same color scale enforcement corrected. Corrects the representation of two-way ANOVA designs in STUDY functions, fixing factor ordering, labeling, and p-value mapping for more accurate visualization of 2×2 designs (labels were misleading).
-- **Referencing and ICA:** New Huber average reference added to reref.m and exposed in pop_reref UI. Automatic recomputation of ICA activities now occurs on rereference unless backwardcomp is selected. AMICA path switched to runamica15 with guidance to install and use the AMICA plugin GUI.  
-- **Interpolation and channel handling:** eeg_interp accepts bad channel lists as cell arrays and supports sphericalCRD. eeg_checkchanlocs removes stale urchan when urchanlocs is empty and avoids creating a new urchan field spuriously. pop_chanedit avoids showing urchan when urchanlocs are unset. pop_rmbase now operates strictly on the selected channel list.  
-- **Event and epoching fixes:** biosig2eeglabevent and pop_biosig improve EDF+ decoding logic, including handling CodeDesc for extended event codes and importing EDF annotations into EEG.event when requested.  
-- **Import/export and I/O:** pop_writeeeg now tolerates empty filename while letting users pick format and warns about known BDF header issues.  
-- **GUI and UX:** pophelp substantially reworked for MATLAB 2025.  
-- **EEGLAB integrity checks:** eeg_checkset large refactor and cleanups across warnings and edge cases.  
-- **BIDS and pipeline:** EEG-BIDS submodule updated; lookups now search directly for derivatives folder. pop_exportbids and related scripts refreshed; bids_reexport streamlined. Fix issues with using samples when importing event latencies.  
-- **Dipfit:** Update compatibility atlas mapping and LORETA source localization.  
-- **Known behavior changes:** Re-referencing now recomputes ICA activities by default in 2025.1.0; use backwardcomp to preserve previous versions’ behavior.  
-- Use this [Github link](https://github.com/sccn/eeglab/compare/2025.0.0..2025.1.0) to see all changes compared to the previous EEGLAB version.
+- 発行日: 9/26/2025; GIT タグ: 2025.1.0
+- **バージョン統計**: 39 ファイルが 862 の追加と 551 削除で変更されました。
+- **変更の要約:** EEGLAB 2025.1.0は、eegplotのレンダリング、フォントのスケーリング、ポップアップヘルプの近代化、およびWindows上で暗くされた図を防ぐための自動レンダラー調整の修正を含むMATLAB 2025のための広範な互換性の更新を紹介します。 また、STUDY機能の双方向ANOVA設計の表現を修正し、ファクターオーダー、ラベリング、および2×2設計のより正確な視覚化のためのp値マッピングを修正しました。
+- **MATLABの互換性:** eegplot を含む多くの機能の MATLAB 2025 の視覚調節は、壷のサイズを減らし、可視性を保障します。  
+- **STUDYと統計:** std_limo は、パイプラインの使用のための動詞 noGUI モードを追加し、適切なときに派生物の下で chanlocs を記述します。 構造を対照的に、1つの分類因子を連続因子と一緒に複数の条件で処理するために更新しました。 FieldTrip は、平均的なチャンネルで固定されています。 同じ色のスケールの執行は訂正しました。 STUDY関数の2方向のANOVA設計の表現を修正し、ファクターのオーダー、ラベリング、および2×2設計のより正確な視覚化のためのp値マッピングを修正しました(ラベルは誤解しました)。
+- **参考文献とICA:** reref.m に新しい Huber 平均参照を追加し、 pop_rereref UI で公開しました。 バックワードコンプが選択されていない限り、ICAアクティビティの自動再入力が再設定されます。 AMICAパスは、AMICAプラグインGUIをインストールして使用するためのガイダンスでrunamica15に切り替えました。  
+- **インターポレーションとチャネル処理:** eeg_interpは、セル配列として悪いチャンネルリストを受け入れ、sphericalCRDをサポートしています。 eeg_checkchanlocs は urchanlocs が空で、新しい urchan フィールドを spuriously に作成することを避けた場合、屋台を 取除きます。 pop_chanedit は urchanlocs が設定されていないときに urchan を示すことを避けます。 pop_rmbase は選択したチャンネルリストで厳密に動作します。  
+- **でき事およびepochingの修正:**のbiosig2eeglabeventおよびPOP_biosigは要求される場合延長でき事コードのためのCodeDescの処理およびESFのアノテーションをEEG.eventに輸入するを含むEDF+の解読の論理を改善します。  
+- **Import/export と I/O:** pop_writeeeg は、既知の BDF ヘッダーの問題について、ユーザーが形式を選択し、警告する時に空のファイル名を許容します。  
+- **GUI と UX:** MATLAB 2025 のために大幅に再処理された pophelp.  
+- **EEGLABの完全性チェック:** eeg_checksetは、警告やエッジケースを横断して大規模なリファクタとクリーンアップを行います。  
+- **BIDSとパイプライン:** EEG-BIDSサブモジュールの更新; 今すぐ検索 デリバティブフォルダ. pop_exportbids と関連するスクリプトが更新されました。bids_reexport が合理化されました。 イベントレイテンシーをインポートするときにサンプルを使用して問題を修正しました。  
+- **Dipfit:** 互換性アトラスマッピングとLORETAソースローカリゼーションの更新。  
+- **Known の挙動は変わります:** 2025.1.0 でデフォルトで ICA アクティビティを再コンパイルできるようになりました。 以前のバージョンの動作を維持するために backwardcomp を使用します。  
+- これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/2025.0.0..2025.1.0) 以前の EEGLAB バージョンと比較して、すべての変更が表示されます。
 
-## EEGLAB version 2025.0.0
+## EEGLAB バージョン 2025.0.0
 
-- Issue date: 2/17/2025; GIT tag: 2025.0.0
-- **Version statistics**: 45 files changed with 697 additions and 234 deletions.
-- **Minor Code Adjustments:** Several functions have undergone minor tweaks. These include functions related to checking channel locations (eeg_checkchanlocs), dataset integrity (eeg_checkset), retrieving datasets (eeg_retrieve), updating EEGLAB (eeglab_update), adjusting event latencies (pop_adjustevents), editing channel information (pop_chanedit), selecting channels (pop_chansel), file I/O (pop_fileio), re-referencing data (pop_reref), running ICA (pop_runica), plotting data (eegplot), and statistical tests (ttest2_cell). These changes address specific edge cases, improve error handling, and enhance functionality.
-- **UI bug**: input GUI (input UI) was fixed, and all functions that depend on it will now behave properly. This may include coregister.m, pop_editeventvals.m.
-- **Plugin Updates:** Several plugins have been updated, including EEG-BIDS, ICLabel, clean_rawdata, and dipfit. EEG-BIDS is now one of the default plugins included in EEGLAB.
-- Use this [Github link](https://github.com/sccn/eeglab/compare/2024.2.1..2025.0.0) to see all changes compared to the previous EEGLAB version.
+- 発行日: 2/17/2025; GIT タグ: 2025.0.0
+- **バージョン統計**: 697追加と234削除で45ファイルを変更しました。
+- **マイナーコード調整:** いくつかの関数はマイナーな微調整を受けています。 これらは、チャネルの場所(eeg_checkchanlocs)、データセットの整合性(eeg_checkset)、データセット(eeg_retrieve)の取得、EEGLAB(eeglab_update)の更新、イベントレイテンシー(pop_adjustevents)の調整、チャネル情報(pop_chanedit)の取得、チャネル(pop_chansel)の選択、I/O(pop_fileio)のファイル、Re-referencingデータ(pop_adjustevents)の調整、チャンネル(pop_chanedit)、チャンネル(pop_chanedit)、I/O(pop_chansel)、I/O/O(pop_cam)、I/O(pop_file)、Re-re-referencing data_prot)、および、データ(Report_proport_prot_prot_prot_prot_prot_prot_prot_prot_prot_)、および、およびreport_prot_prot_prot_prot_prot_prot_prot_prot_prot_prot_prot_ これらの変更は、特定のエッジケースに対処し、エラー処理を改善し、機能性を高めます。
+- **UIバグ**:GUI(入力UI)の入力が修正され、依存する全ての機能が正しく動作します。 これは、coregister.m, pop_editeventvals.m を含めることができます。
+- **プラグインの更新:** EEG-BIDS、ICLabel、clean_rawdata、およびdipfitを含むいくつかのプラグインが更新されました。 EEG-BIDS は EEGLAB に含まれるデフォルトプラグインの 1 つになりました。
+- これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/2024.2.1..2025.0.0) 以前の EEGLAB バージョンと比較して、すべての変更が表示されます。
 
-## EEGLAB version 2024.2.1
+## EEGLAB バージョン 2024.2.1
 
-- Issue date: 11/12/2024; GIT tag: 2024.2.1
-- **Version statistics**: 3 files changed with 8 additions and 4 deletions.
-- **Bug fix**: Fix crashes when EEGLAB is offline, WIFI is on and Biosig is installed.
-- **Bug fix**: Minor fix crash to channel location field.
-- Use this [Github link](https://github.com/sccn/eeglab/compare/2024.2..2024.2.1) to see all changes compared to the previous EEGLAB version.
+- 発行日: 11/12/2024; GIT タグ: 2024.2.1
+- **バージョン統計**: 8追加と4削除で3ファイル変更。
+- **バグ修正**: EEGLAB がオフラインの場合、WIFI がオンで、Biosig がインストールされているときにクラッシュを修正しました。
+- **バグ修正**: マイナーは、チャネルの位置フィールドにクラッシュを修正します。
+- これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/2024.2..2024.2.1) 以前の EEGLAB バージョンと比較して、すべての変更が表示されます。
 
-## EEGLAB version 2024.2.0
+## EEGLAB バージョン 2024.2.0
 
-- Issue date: 08/28/2024; GIT tag: 2024.2
-- **Version statistics**: 7 files changed, 21 additions and 12 deletions.
-- **Bug fix**: Fix the issue with the Edit Event Value menu item (which was not functional).
-- Use this [Github link](https://github.com/sccn/eeglab/compare/2024.1..2024.2) to see all changes compared to the previous EEGLAB version.
+- 発行日: 08/28/2024; GIT タグ: 2024.2
+- **バージョン統計**:7ファイルの変更、21追加、12削除。
+- **バグ修正**: 編集イベント値メニュー項目(機能しない)で問題を修正しました。
+- これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/2024.1..2024.2) 以前の EEGLAB バージョンと比較して、すべての変更が表示されます。
 
-## EEGLAB version 2024.1 
+## EEGLAB バージョン 2024.1 
 
-- Issue date: 08/06/2024; GIT tag: 2024.1
-- **Version statistics**: 70 files changed, 1,480 additions, and 228 deletions.
-- **New feature**: EEGLAB colormap changed. See this [post](https://sccn.ucsd.edu/pipermail/eeglablist/2024/017887.html) for more details.
-- **New feature**: EEGLAB compiled version can now execute scripts given on the command line.
-- **New feature**: Allowing plugins to have critical updates.
-- **New feature**: New option to cluster components (thanks Yahya Shirazi).
-- **New feature**: Allowing to better process ICA clusters when a subject is split into multiple EEG datasets (so study designs with multiple sessions can be considered)
-- **bids-matlab-tools plugin:** Renamed EEG-BIDS. New options to export eye-tracking data.
-- **Bug fix**: Fix the issue with not clearing the STUDY cache when editing a STUDY.
-- **Bug fix**: Better detection of a dataset modified by users.
-- **Bug fix**: Fix issue with STUDY [ICA component clustering](https://github.com/sccn/eeglab/issues/767). This is also related to the ICLabel bug below.
-- <font color=red><b>ICLabel plugin:</b> The ICLabel version (1.5) released in the previous EEGLAB version had the same problem as described above. Make sure to use this EEGLAB distribution or update to ICLabel 1.6 if you are using EEGLAB 2024.0</font>
-- Use this [Github link](https://github.com/sccn/eeglab/compare/2024.0..2024.1) to see all changes compared to the previous EEGLAB version.
+- 発行日: 08/06/2024; GIT タグ: 2024.1
+- **バージョン統計**:70ファイル、480追加、228削除。
+- **新機能**: EEGLABカラーマップが変更されました。 お問い合わせ [ニュース](https://sccn.ucsd.edu/pipermail/eeglablist/2024/017887.html) 詳しくはこちら
+- **新機能**: EEGLABコンパイルされたバージョンは、コマンドラインで与えられたスクリプトを実行できるようになりました。
+- **新機能**: プラグインが重要なアップデートを持っていることを許可します。
+- **新機能**: クラスターコンポーネント(thanks Yahya Shirazi)の新しいオプション。
+- **新機能**: 被験者が複数のEEGデータセットに分割されると、ICAクラスターの処理をより良くすることを可能にします(また、複数のセッションで設計を検討することができます)
+- **bids-matlab-tools プラグイン:** EEG-BIDSの名前を変更しました。 目追跡データをエクスポートするための新しいオプション。
+- **バグ修正**: STUDY を編集するときに STUDY キャッシュをクリアしていない問題を修正しました。
+- **バグ修正**: ユーザーが変更したデータセットの検出を改善します。
+- **バグ修正**: STUDYでの問題を修正 [ICAコンポーネントクラスタリング](https://github.com/sccn/eeglab/issues/767)お問い合わせ また、以下のICLabelのバグにも関連しています。
+- <font color=red><b>ICLabel のプラグイン:</b> 以前の EEGLAB バージョンでリリースされた ICLabel バージョン (1.5) は、上記と同じ問題でした。 EEGLAB 2024.0 を使用している場合は、この EEGLAB の配布や ICLabel 1.6 への更新を必ず使用してください。</font>
+- これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/2024.0..2024.1) 以前の EEGLAB バージョンと比較して、すべての変更が表示されます。
 
-## EEGLAB version 2024.0
+## EEGLABバージョン2024.0
 
-- Issue date: 02/23/2024; GIT tag: 2024.0
-- **Version statistics**: 199 files changed, 113 commits, 2,422 additions and 1,448 deletions.
-- **New feature**: New custom measures for STUDY as illustrated [here](https://github.com/sccn/eegstats) and exporting results in table format.
-- **New feature**: Code reformated to be more legible.
-- **New feature**: New channel spherical interpolation method in eeg_interp.
-- **New feature**: Now import Neuralinx data and associated events.
-- **New feature**: Infomax Runica always returns the same result (backward compatible).
-- **New feature**: Now selecting events for a group of datasets in STUDY.
-- **Interoperability**: Improved Octave 8.4 compabitlity.
-- **Bug fix**: Fix looking up channel locations in STUDY.
-- **Bug fix**: Fix importing BIDS coordsystem file for MEG data when using File-IO.
-- **DIPFIT plugin**: STUDY level leadfield matrix computation.
-- **bids-matlab-tools plugin:** Version 8 has been released. Now handles behavioral data and many small improvements.
-- **ROIconnect plugin:** Improved compatibility. This plugin has been released, although the documentation is not complete.
-- <font color=red><b>ICLabel plugin:</b> The ICLabel version (1.5) released with this version has a bug. Make sure to upgrade to version 1.6 of the plugin</font>
-- Use this [Github link](https://github.com/sccn/eeglab/compare/2023.1..2024.0) to see all changes compared to the previous EEGLAB version.
+- 発行日: 02/23/2024; GIT タグ: 2024.0
+- **バージョン統計**: 199 ファイルが変更され、113 コミット、2,422 追加、1,448 削除。
+- **新機能**: STUDYのための新しいカスタム対策を図形に [詳しくはこちら](https://github.com/sccn/eegstats) テーブル形式で結果をエクスポートします。
+- **新機能**: コードは、より適格であることを改良しました。
+- **新機能**: eeg_interp の新しいチャンネル球面補間法。
+- **新機能**: Neuralinxのデータと関連イベントをインポートします。
+- **新機能**: Infomax Runicaは常に同じ結果(後方互換性)を返します。
+- **新機能**: STUDYでデータセットのグループイベントを選択します。
+- **相互運用性**:Octave 8.4の互換性を改善しました。
+- **バグ修正**: STUDY のチャネルの場所を探し上げる Fix。
+- **バグ修正**: File-IO を使用するときに MEG データの BIDS coordsystem ファイルのインポートを修正しました。
+- **DIPFITプラグイン**:STUDYレベルのリードフィールド行列計算。
+- **bids-matlab-tools プラグイン:** バージョン8をリリースしました。 行動データと多くの小さな改善を処理するようになりました。
+- **ROIconnectプラグイン:** 互換性の向上 このプラグインは公開されていますが、ドキュメントは完了していません。
+- <font color=red><b>ICLabel のプラグイン:</b> このバージョンでリリースされたICLabelバージョン(1.5)にはバグがあります。 プラグインのバージョン1.6にアップグレードしてください</font>
+- これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/2023.1..2024.0) 以前の EEGLAB バージョンと比較して、すべての変更が表示されます。
 
-## EEGLAB version 2023.1
+## EEGLABバージョン2023.1
 
-- Issue date: August 23rd 2023; GIT tag: 2023.1
-- **Version statistics**: 50 files changed, 99 commits, 957 additions, and 395 deletions.
-- **New feature**: EEGLAB redraw detects dataset changes. There is no more need to store the current dataset in the ALLEEG structure if you modify it on the command line.
-- **New feature**: New option "scatter" for control electrode size and color in topoplot.
-- **New feature**: Computing custom features for STUDY and retrieving field content using std_readeegfield.
-- **Interoperability**: Now support ERPLAB new menu status and new variables, and better support for -99 boundary event.
-- **Interoperability**: Now support the version of LIMO with updated GUI (LIMO version 4 not yet released).
-- **Bug fix**: Update a variety of functions to process MEG datasets, including source localization function (see [tutorial](https://eeglab.org/tutorials/misc/EEGLAB_and_MEG_data.html)). 
-- **Bug fix**: Parallel option fixed when processing multiple datasets from the EEGLAB menu.
-- **Bug fix**: Fixed issue with detecting removed channels when re-referencing the data.
-- **Bug fix**: Fixed issue with saving large EEG files when the option is not selected (>2Gb).
-- **SIFT plugin**: Fixed some minor GUI issues and rewrote the tutorial, including new sections to compute [statistics](https://github.com/sccn/SIFT/wiki/Chapter-7.-Statistics-in-SIFT).
-- **DIPFIT plugin**: Fix handling non-EEG channels when computing Loreta and Leadfield matrix.
-- **bids-matlab-io plugin:** Better import of MEG data, and many more small bug fixes and improvements.
-- **ROIconnect plugin:** Improved compatibility. This plugin is still in beta and will be released soon.
-- Use this [Github link](https://github.com/sccn/eeglab/compare/2023.0..2023.1) to see all changes compared to the previous EEGLAB version.
+- 発行日: 8月23日 2023; GIT タグ: 2023.1
+- **バージョン統計**:50ファイル、99コミット、957追加、および395削除。
+- **新機能**: EEGLAB がデータセットの変更を検出します。 コマンドラインで変更する場合は、ALLEEG 構造で現在のデータセットを保存する必要はありません。
+- **新機能**: topoplotの電極サイズと色を制御するための新しいオプション「スキャッター」。
+- **新機能**: STUDYのカスタム機能とstd_readeegfieldを使用してフィールドコンテンツを取得する。
+- **相互運用性**: ERPLAB の新しいメニューの状態と新しい変数をサポートし、 -99 境界イベントのより良いサポートをサポートします。
+- **相互運用性**: LIMOのバージョンをアップデートしたGUI(LIMOバージョン4はまだリリースされていない)でサポートします。
+- **バグ修正**: ソースローカリゼーション機能を含むMEGデータセットを処理するさまざまな機能を更新(参照) [チュートリアル](https://eeglab.org/tutorials/misc/EEGLAB_and_MEG_data.html)). 
+- **バグ修正**: EEGLABメニューから複数のデータセットを処理する際のパラレルオプションを修正しました。
+- **バグ修正**: データを再参照する際に削除されたチャンネルを検出する問題を修正しました。
+- **バグ修正**: オプションが選択されていないときに大きなEEGファイルを保存する問題を修正しました(>2Gb)。
+- **SIFTプラグイン**: いくつかのマイナーなGUIの問題を修正し、チュートリアルをrewrote、新しいセクションを含む計算 [統計情報](https://github.com/sccn/SIFT/wiki/Chapter-7.-Statistics-in-SIFT).
+- **DIPFITプラグイン**: Loreta と Leadfield の行列を計算する際に、EEG 以外のチャネルを処理する問題を修正しました。
+- **bids-matlab-io プラグイン:** MEGデータのインポートが向上し、より小さなバグ修正や改善が進んでいます。
+- **ROIconnectプラグイン:** 互換性の向上 このプラグインはまだベータ版でリリースされます。
+- これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/2023.0..2023.1) 以前の EEGLAB バージョンと比較して、すべての変更が表示されます。
 
-## EEGLAB version 2023.0
+## EEGLABバージョン2023.0
 
-- Issue date: March 3rd 2023; GIT tag: 2023.0
-- **Version statistics**: 654 files changed, 230 commits, 11,585 additions and 3,248 deletions.
-- **Major changes**: Update a variety of functions to process MEG datasets, including source localization (see [tutorial](https://eeglab.org/tutorials/misc/EEGLAB_and_MEG_data.html)). 
-- **New feature**: Limit the number of displayed datasets to speed up display when processing more than 200 datasets.
-- **New feature**: Change all function headers for better MATLAB interoperability (capitalize all function names, etc...).
-- **Interoperability**: New function brainstorm2eeglab.m to import Brainstorm data epochs.
-- **Interoperability**: Improved function fieldtrip2eeglab.m to convert FieldTrip data structures. Update to pop_fileio to import MEG metadata.
-- **Interoperability**: More command-line options to import files using BIOSIG.
-- **Bug fix**: Better handling of boundary events (especially the ones at the beginning and end of the data).
-- **Bug fix**: Better detection when a dataset is modified by the user in the global workspace.
-- **Bug fix**: Better EEGLAB help menus and GUI formatting.
-- **SIFT plugin**: Fix the issue with Picard ICA (SIFT was overloading the Picard function).
-- **Clean_rawdata plugin**: New option to fuse channels rejected by clean_rawdata on multiple runs of the same subject.
-- **DIPFIT plugin**: MEG source localization and custom MRI source localization (see [tutorial](https://eeglab.org/tutorials/09_source/Custom_head_model.html))
-- **bids-matlab-io plugin:** support for behavioral information and motion capture. Better support to import iEEG and MEG data.
-- Use this [Github link](https://github.com/sccn/eeglab/compare/eeglab2022.1..2023.0) to see all changes compared to the previous EEGLAB version.
+- 発行日:2023年3月3日 GITタグ:2023.0
+- **バージョン統計**: 654ファイルの変更、230コミット、11585追加、3,248削除。
+- **主な変更**: ソースローカリゼーションを含むMEGデータセットを処理するさまざまな機能を更新(参照) [チュートリアル](https://eeglab.org/tutorials/misc/EEGLAB_and_MEG_data.html)). 
+- **新機能**: 200以上のデータセットを処理するときに表示されたデータセットの数を制限します。
+- **新機能**: MATLABの相互運用性を向上させるために、すべての関数ヘッダーを変更します(すべての関数名をキャパライズするなど)。
+- **相互運用性**:Brainstorm2eeglab.mをインポートする新しい関数。
+- **Interoperability**:FieldTripのデータ構造を転換する機能fieldtrip2eeglab.mを改善しました。 MEGメタデータをインポートするためにポップアップ_fileioに更新します。
+- **相互運用性**: BIOSIGを使用してファイルをインポートするためのコマンドラインオプション。
+- **バグ修正**: 境界イベントのより良い処理(特にデータの先頭と最後に)。
+- **バグ修正**: グローバルなワークスペースでユーザーによってデータセットが変更された場合、より良い検出。
+- **バグ修正**: EEGLABのヘルプメニューとGUIのフォーマットを改善します。
+- **SIFTプラグイン**: Picard ICA (SIFT は Picard 関数をオーバーロードしていた) の問題を修正しました。
+- **Clean_rawdataプラグイン**: 同じサブジェクトの複数の実行で clean_rawdata によって拒否されたチャネルをヒューズする新しいオプション。
+- **DIPFITプラグイン**:MEGソースローカリゼーションとカスタムMRIソースローカリゼーション(参照) [チュートリアル](https://eeglab.org/tutorials/09_source/Custom_head_model.html))
+- **bids-matlab-io プラグイン:** 行動情報とモーションキャプチャのサポート。 iEEGとMEGデータをインポートするためのより良いサポート。
+- これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/eeglab2022.1..2023.0) 以前の EEGLAB バージョンと比較して、すべての変更が表示されます。
 
-## EEGLAB version 2022.1
+## EEGLAB バージョン 2022.1
 
-- Issue date: Aug 2nd 2022; GIT tag: 2022.1
-- **Version statistics**: 104 files changed, 4,411 insertions, 421 deletions.
-- **Major interoperability change**: Allow using event type -99 for discontinuities and improve ERPLAB compatibility (20 functions modified). The default is still to use 'boundary' for event boundary, but the default can be changed in the EEGLAB preferences when processing numerical event types.
-- **Interoperability**: Added 4 new parameters to import data with BIOSIG toolbox, in particular for EDF and BDF files.
-- **Interoperability**: Increased compatibility for FieldTrip dataset conversion back and forth, in particular for electrode coordinates.
-- **Interoperability**: Fix processing data from multiple sessions for LIMO.
-- **Group analysis**: Allow fusing channel rejection across datasets of the same subject and session.
-- **Bug fix**: Fix concatenating datasets of the same size.
-- **Bug fix**: Fix editing channel locations in groups of datasets (STUDY) - datasets were not resaved.
-- **Bug fix**: Fix separating multiple sessions when precomputing data for STUDY - sessions were fused.
-- **Minor bug fix**: Fix remembering the data was average referenced.
-- **Plugins**: Minor updates to ICLabel, dipfit, and firfilt default plugins. Major update to clean_rawdata to fuse data channel rejections within subjects for group processing.
-- **Testing**: New testing framework using Github [actions](https://github.com/sccn/eeglab_tests/actions). New binary test files are now included in the sample_data folder for quick testing of compiled EEGLAB versions.
-- Use this [Github link](https://github.com/sccn/eeglab/compare/eeglab2022.0..eeglab2022.1) to see all changes from the previous EEGLAB version.
+- 発行日: 8 月 2 日 2022; GIT タグ: 2022.1
+- **バージョン統計**:104ファイル変更、4,411インサート、421削除。
+- **主な相互運用性変更**: イベント型 -99 を使用して、中止やERPLAB の互換性を改善できます(20 機能修正)。 デフォルトはイベント境界で 'boundary' を使うのにまだ使われますが、数値イベント型を処理する際の EEGLAB 設定ではデフォルトは変更できます。
+- **相互運用性**:EDFおよびBDFファイルのために特にBIOSIGツールボックスでデータをインポートするための4つの新しいパラメータを追加しました。
+- **相互運用性**:特に電極の座標のためのFieldTripのデータセットの転換の背部およびforthのための高められた両立性。
+- **相互運用性**:LIMOの複数のセッションからデータを処理する修正。
+- **グループ分析**: 同じ主題とセッションのデータセットを渡るチャネルの拒否を許可します。
+- **バグ修正**: 同じサイズのデータセットを連結することを修正しました。
+- **バグ修正**: データセット(STUDY)のグループでチャネルの場所を編集する修正 - データセットは再保存されませんでした。
+- **バグ修正**: STUDY - セッションが溶かされたときに複数のセッションを分離する修正。
+- **マイナーバグ修正**: データを覚えている修正は平均参照された。
+- **Plugins**: ICLabel、dipfit、およびfirfiltのデフォルトプラグインへのマイナーアップデート。 グループ処理の対象内でのデータチャネル拒否を fuse するために clean_rawdata のメジャーアップデート。
+- **テスト**:Githubを使用した新しいテストフレームワーク [アクション](https://github.com/sccn/eeglab_tests/actions)お問い合わせ コンパイルされた EEGLAB のバージョンの迅速なテストのために、sample_data フォルダに新しいバイナリテストファイルが追加されました。
+- これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/eeglab2022.0..eeglab2022.1) 以前の EEGLAB バージョンからすべての変更を表示する。
 
-## EEGLAB version 2022.0
+## EEGLABバージョン2022.0
 
-- Issue date: Feb 11th 2022; GIT tag: 2022.0
-- **Version statistics**: 73 commits and 269 files changed, 988 insertions, 781 deletions.
-- **Bug fix**: Fix study issue when parallel toolbox is absent (GCP error)
-- **Bug fix**: Fix rare bug when writing two files for an EEGLAB dataset (old default; the new default since 2021 is to write a single .set file)
-- **Bug fix**: Fix plotting ERPimage for ICA component clusters
-- **Interoperability**: Improved FieldTrip bidirectional conversion for data trials
-- **Interoperability**: Improved LIMO compatibility issues when processing a study with multiple sessions
-- **Speed increase**: Speed up IDing user profile and speed up eeg_checkset by 2 orders of magnitude
-- **EDF files**: Exporting EDF files now use a common limit for all channels; fix importing channel labels with EEG prefix in EDF files
-- **MEG**: Allow importing MEG gradiometers from FIF files
-- **Artifact rejection using ASR**: Clean_rawdata plug-in now allows processing a subset of channels
-- **Multiple dataset processing**: Now channel editor can process multiple datasets in a STUDY
-- Use this [Github link](https://github.com/sccn/eeglab/compare/eeglab2021.1..eeglab2022.0) to see all changes from the previous EEGLAB version.
+- 発行日:2022年2月11日 GITタグ:2022.0
+- **バージョン統計**: 73 コミットと 269 ファイルの変更, 988 インサート, 781 削除.
+- **バグ修正**: 並列ツールボックスが不在(GCPエラー)の場合、学習問題の修正
+- **バグ修正**: EEGLABのデータセット(旧デフォルト; 2021年以来の新しいデフォルトは単一の.setファイルを作成することです)のために2つのファイルを記述するときにまれなバグを修正しました
+- **バグ修正**: Fix ICAコンポーネントクラスタ用のERPimageをプロットする
+- **相互運用性**:FieldTripの双方向変換の改善
+- **相互運用性**:複数のセッションで勉強を処理するときにLIMOの互換性の問題を改善
+- **速度増加**:IDingユーザープロファイルをスピードアップし、倍率の2注文でeeg_checksetをスピードアップ
+- **EDFファイル**: EDF ファイルをエクスポートすると、すべてのチャネルに共通限度が使用されます。 EDF ファイルの EEG プレフィックスでチャンネルラベルをインポートする問題を修正
+- **MEG**: FIFファイルからMEGのグラディオメータをインポートすることができます
+- ** ASR**を用いたアーティファクト拒絶: Clean_rawdataプラグインにより、チャネルのサブセット処理が可能
+- **複数のデータセット処理**: 今、チャンネルエディタはSTUDYで複数のデータセットを処理することができます
+- これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/eeglab2021.1..eeglab2022.0) 以前の EEGLAB バージョンからすべての変更を表示する。
 
-## EEGLAB version 2021.1
+## EEGLAB バージョン 2021.1
 
-- Issue date: July 27th 2021; GIT tag: 2021.1
-- **Version statistics**: 151 commits and 70 files changed, 3,592 additions and 1,029 deletions.
-- **STUDY**: Allowing parallel execution of most STUDY functions. Allowing menu batch processing of studies of continuous data including BIDS-imported studies. Fix handling of multiple datasets within the same session. Fix error when computing statistics for averaged channels.
-- **EEG file format**: Fix  reading newer .set files that have been moved or loading them from the command line. Allow saving in Matlab version 7.0 format.
-- **EEG scrolling**: EEGPLOT function major speedup
-- **Octave**: Improved GUI support
-- **LIMO**: Improved LIMO compatibility and allowed the possibility to use multiple sessions per subject
-- **Removed channels**: Fix interpolation when considering removed channels. Fix removed channeled list.
-- **BIDS**: Fix issue when dealing with xml files containing unicode characters
-- **DIPFIT**: Now computes Leadfield Matrices
-- Use this [Github link](https://github.com/sccn/eeglab/compare/eeglab2021.0..eeglab2021.1) to see all changes from the previous EEGLAB version.
+- 発行日: 7月27日 2021; GIT タグ: 2021.1
+- **バージョン統計**:151コミットと70ファイルの変更、3,592追加と1,029削除。
+- **STUDY**:ほとんどのSTUDY関数の並列実行を許可します。 BIDS-imported 調査を含む連続的なデータのメニューのバッチ処理を許可します。 同じセッション内で複数のデータセットの処理を修正しました。 平均チャンネルの計算統計が発生したときにエラーを修正しました。
+- **EEGファイル形式**: コマンド行から移動またはロードした新しい .set ファイルを読み込みます。 Matlabバージョン7.0フォーマットで保存できます。
+- **EEGのスクロール**:EEGPLOT機能主要な速度
+- **Octave**:GUIサポートの改善
+- **LIMO**:LIMOの互換性を改善し、主題ごとの複数のセッションを使用する可能性を可能にしました
+- **削除されたチャネル**: 削除されたチャンネルを検討するときに補間を修正しました。 Fix 削除されたチャンネルリスト。
+- **BIDS**:Unicode文字を含むxmlファイルを扱うときに問題を修正
+- **DIPFIT**:Leadfield Matricesを計算する
+- これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/eeglab2021.0..eeglab2021.1) 以前の EEGLAB バージョンからすべての変更を表示する。
 
-## EEGLAB version 2021.0
+## EEGLABバージョン2021.0
 
-- Issue date: February 1st 2021; GIT tag: 2021.0
-- **Statistics**: 159 commits, 80 files and 3,247 lines of code modified.
-- **Multiple dataset processing**: Now allowing processing of multiple datasets with most menu items, including ICLabel and clean_rawdata plug-ins
-- **File format**: Now saving all EEGLAB datasets in a single file instead of two (fully backward compatible)
-- **Version checking**: Now EEGLAB version checking uses the same system as  for plug-ins
-- **Example scripts**: New tutorial scripts are made available within EEGLAB
-- **Custom group analysis**: Now allows custom processing of EEGLAB Studies.
-- **Channel selection**: Now allows selecting channel subsets by label in all GUIs.
-- **Channel location**: Now using the BEM-model channel scalp locations as the default for looking up channel locations by labels (instead of using the BESA spherical head model)
-- **Plug-in support**: Now allowing plug-ins to be placed in the *plugins* subfolder of the current Matlab path
-- **Interoperability**: Improved support for Matlab 2020 versions and for Octave, FieldTrip, and LIMO
-- **Menu structure**: Now hiding a rarely used menu item to compare datasets by default
-- Use this [Github link](https://github.com/sccn/eeglab/compare/eeglab2020.0..eeglab2020.1) to see all changes compared to the previous EEGLAB version.
+- 発行日: 2021年2月1日; GIT タグ: 2021.0
+- **統計**:159コミット、80ファイルと3,247のコードの行を修正しました。
+- **複数のデータセット処理**: ICLabelとclean_rawdataプラグインを含むほとんどのメニュー項目で複数のデータセットの処理が可能になりました。
+- **ファイルフォーマット**: EEGLAB のデータセットを 2 の代わりに 1 つのファイルに保存します。 (完全に後方互換)
+- **検証 **: EEGLABバージョンチェックでは、プラグインと同じシステムを使用します
+- **スクリプト例**: 新しいチュートリアルスクリプトは、EEGLAB 内で利用可能
+- **カスタムグループ分析**: EEGLAB のカスタム処理が可能になりました。
+- **チャネルの選択**: これで、すべてのGUIでラベルでチャンネルサブセットを選択できるようになりました。
+- **チャネルの場所**: 今、BEM-modelチャンネルのスカルプ位置をラベルでチャンネルの位置を調べるデフォルトとして使用 (BESAの球面ヘッドモデルを使用代わりに)
+- **プラグインサポート**: 現在のMaatlabパスの*plugins*サブフォルダにプラグインを置くことを可能にします
+- **相互運用性**: Matlab 2020バージョンおよびOctave、FieldTrip、およびLIMOのサポートの改善
+- **メニュー構造**: 今、デフォルトでデータセットを比較するためにまれに使用したメニュー項目を隠す
+- これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/eeglab2020.0..eeglab2020.1) 以前の EEGLAB バージョンと比較して、すべての変更が表示されます。
 
-## EEGLAB version 2020.0
+## EEGLAB バージョン 2020.0
 
--   Issue date: July 31st, 2020; GIT tag: 2020.0
--   <b>EEGLAB Plug-in manager</b>: Fixed bugs, made plug-in detection
-    case sensitive, added plug-in search capability.
--   <b>EEGLAB auto updater</b>: Allow installation of a new version of
-    EEGLAB from within EEGLAB itself.
--   <b>Support for BIDS</b>: Now testing the EEGLAB BIDS-EEG plug-in
-    (the beta version is available at
+-   発行日:2020年7月31日; GITタグ: 2020.0
+-   <b>エッグラボ プラグインマネージャー</b>: 固定バグ、プラグイン検出
+    ケース感度、プラグイン検索機能を追加しました。
+-   <b>EEGLAB自動更新装置</b>: 新しいバージョンのインストールを許可する
+    EEGLAB から EEGLAB まで。
+-   <b>BIDSのサポート</b>: : : EEGLAB BIDS-EEGプラグインのテスト
+    (ベータ版は利用可能です)
     <https://github.com/sccn/bids-matlab-tools>).
--   <b>HED</b> Hierarchical Event Descriptors (HED): Improved tools for
-    annotating dataset events at the STUDY level in the HED-2 system,
-    and for extracting HED-tagged epochs.
--   <b>IClabel</b>: Improved support and compatibility for the IClabel
-    plug-in.
--   <b>LIMO</b>: Improved support and compatibility for the LIMO
-    plug-in.
--   <b>EDF/EDF+</b>: Better conversion of EDF and EDF+ file events.
--   <b>Scrolling data viewer</b>: Fixed issue that dramatically slowed
-    down scrolling EEG viewing when the dataset includes a large number
-    of events.
--   <b>Channel rejection</b>: EEGLAB now remembers which channels were
-    removed from a dataset.
--   <b>Test file output</b>: Fixed a resolution issue.
--   <b>LIMO STUDY statistics</b>: The STUDY interface now lists the
-    first- and second-level variables in the STUDY design
--   <b>STUDY spectrum plots</b>: Fixed the ordinate (power) scale.
--   Use this [Github link](https://github.com/sccn/eeglab/compare/eeglab2019.1..eeglab2020.0) to see all changes compared to the previous EEGLAB version.
+-   <b>お問い合わせ</b> 階層イベント記述子(HED): ツールの改善
+    HED-2システムにおけるSTUDYレベルのデータセットイベントのアノテーション
+    そしてHED-taggedのエポキシを抽出するため。
+-   <b>ICラベル</b>: ICラベルのサポートと互換性の向上
+    プラグイン。
+-   <b>リモ</b>: LIMOのサポートと互換性の向上
+    プラグイン。
+-   <b>EDF/EDF+の特長</b>: : : EDFとEDF+ファイルイベントのコンバージョンが向上しました。
+-   <b>データビューアのスクロール</b>: 劇的に遅くなる問題を修正
+    データセットに多数の数が含まれている場合、EEG表示をスクロールダウン
+    イベント
+-   <b>チャネル拒否</b>: EEGLABはチャンネルがどのチャンネルだったか記憶しています
+    データセットから削除します。
+-   <b>ファイルの出力をテストして下さい</b>: 解像度の問題を修正しました。
+-   <b>LIMO STUDYの統計情報</b>: : : STUDYインターフェイスは今リストします
+    STUDYの設計の最初のおよび第2レベルの変数
+-   <b>STUDYスペクトルプロット</b>: : : 座標(パワー)スケールを修正しました。
+-   これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/eeglab2019.1..eeglab2020.0) 以前の EEGLAB バージョンと比較して、すべての変更が表示されます。
 
-## EEGLAB Version 2019.1
+## EEGLABバージョン2019.1
 
--   Issue date: November 18th, 2019; GIT branch: 2019.1
--   <b>EEGLAB menus</b>. We have reorganized and simplified EEGLAB
-    menus, in particular the tool menus. There is still an option to
-    show all menus as in previous version by changing EEGLAB
-    preferences. The standard processing pipeline is now to import data,
-    filter, re-reference, apply artifact rejection (default is using the
-    clean\_rawdata plug-in), run ICA, detect bad components (default is
-    using ICLabel)
--   <b>Default plug-ins</b>. There are now 4 EEGLAB plug-in installed with
-    EEGLAB. Dipfit and firfilt - which were already installed by default
-    in previous EEGLAB revision - and now clean\_rawdata and ICLabel.
-    Clean\_rawdata is a powerful plug-in based on ASR (Artifact Subspace
-    Reconstruction) to automatically remove or correct artifacts.
-    ICLabel is an algorithm to automate ICA component labeling (as brain
-    or artifact).
--   We have also redesigned the plotting options at the study level to
-    make them more user friendly, and now allow to plot ERPimage, and
-    time-frequency decompositions in scalp arrays (previously this was
-    only possible for ERP and spectrum).
--   There is a <b>new plug-                                                  in manager</b> (there was a new one in 2019.0
-    but it yet a newer one) which automates plug-in release for improved
-    stability. This new manager also has a rating and feedback mechanism.
-    The old plug-in manager will be maintained for backward
-    compatibility.
--   We have improved further the compatibility with the LIMO toolbox.
--   Use this [Github link](https://github.com/sccn/eeglab/compare/eeglab2019..eeglab2019.1) to see all changes compared to the previous EEGLAB version.
+-   発行日:2019年11月18日、GITブランチ:2019年1月1日
+-   <b>EEGLABメニュー</b>お問い合わせ EEGLABをリニューアル・簡素化
+    メニュー、特にツールメニュー。 それでもオプションがあります
+    EEGLABを変更することにより、以前のバージョンですべてのメニューを表示
+    好み。 標準的な処理パイプラインはデータを輸入するために今あります、
+    フィルター、再参照、アーティファクト拒否を適用します(デフォルトは使用しています)
+    clean\_rawdata プラグイン), ICA を実行, 悪いコンポーネントを検出 (デフォルトは
+    ICLabel の使用
+-   <b>デフォルトプラグイン</b>お問い合わせ 現在4 EEGLABプラグインがインストールされています
+    エグラボ Dipfitとfirfilt - デフォルトで既にインストールされていた
+    以前の EEGLAB のリビジョン - そして今 clean\_rawdata と ICLabel.
+    Clean\_rawdataは、ASR(アーティファクトサブスペース)に基づく強力なプラグインです。
+    再構築)自動的に削除または正しいアーティファクト。
+    ICLabelは、ICAコンポーネントのラベリングを自動化するアルゴリズムです(脳として)
+    またはアーティファクト)。
+-   また、研究レベルでのプロットオプションを再設計しました。
+    ユーザをフレンドリーにし、ERPimageをプロットできるようになりました。
+    scalp 配列における時間頻度分解 (前述)
+    ERPとスペクトラムのみ対応可能
+-   そこにあります <b>マネージャーの新しいプラグイン</b> 2019年1月1日 0 の 0
+    しかし、プラグインのリリースを自動化する新しいものはまだ
+    安定性。 この新しいマネージャーは評価およびフィードバックのメカニズムを持っています。
+    古いプラグインマネージャは、後方に維持されます
+    互換性。
+-   LIMOツールボックスとの互換性を更に向上しました。
+-   これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/eeglab2019..eeglab2019.1) 以前の EEGLAB バージョンと比較して、すべての変更が表示されます。
 
-## EEGLAB Version 2019.0
+## EEGLABバージョン2019.0
 
--   Issue date: May 17th, 2019; GIT tag: 2019.0
--   <b>Single-trial processing in STUDY processing functions</b>. This
-    version includes a new STUDY framework compatible with LIMO (LInear
-    MOdeling) applied to EEG data. We reworked
-    STUDY-based computations (ERP, ERSP, ITC, mean spectra). You now
-    only need to precompute these measures once, no matter how many
-    statistical designs you want to run on the STUDY data. This is
-    because all the single-trial level measures are now stored at the
-    STUDY level. While all existing EEGLAB STUDY sets can be processed
-    using STUDY functions in v2019.0, to perform additional statistical
-    testing on an existing STUDY, the STUDY functions will need to
-    recompute the pre-computed measure files.
--   New smart cache mechanism for STUDY processing.
--   <b>Mew plugin manager</b>
--   <b>Full Octave compatibility</b> from the command line: The freely
-    available open source app will now run EEGLAB command
-    line scripts written in MATLAB (note: the EEGLAB graphic interface
-    and menu are not available in Octave).
--   <b>New license:</b> The open source license EEGLAB has been updated
-    to BSD instead of GNU to allow commercial re-use of EEGLAB
-    code (Note: each EEGLAB plugin is released under its own license).
--   The EEGLAB code repository has migrated to Github from
-    Bitbucket; code for all plugins handled by the plugin manager have
-    been placed in Github submodules
--   Support has been added for <b>data resampling and high/lowpass
-    filtering at the STUDY level</b>.
--   Support for <b>channel selection when filtering</b> has been added -
-    filters can now be applied only to selected channel subsets or
-    types.
--   The <b>data import menu</b> has been cleaned up, adding direct links
-    to some popular import plug-ins.
--   When performing source localization of independent components using
-    DIPFIT, the brain area in which the equivalent dipole is located is
-    now estimated based on direct look-up in the 40-region
-    <b>Desikan-KIlliany cortical atlas</b>.
--   Use this [Github link](https://github.com/sccn/eeglab/compare/eeglab14..eeglab2019) to see all changes compared to the previous EEGLAB version.
+-   発行日:2019年5月17日 GITタグ: 2019.0
+-   <b>STUDY処理機能における単一trial処理</b>お問い合わせ お問い合わせ
+    LIMO(LInear)と互換性のある新しいSTUDYフレームワークが含まれています
+    EEGデータに適用されるMOdeling。 お問い合わせ
+    STUDY ベースの計算 (ERP, ERSP, ITC, スペクトラを意味します). 今すぐ登録
+    これらの措置を一度に優先する必要性だけ、何
+    STUDYデータで実行したい統計設計。 お問い合わせ
+    単一致命的なレベルの対策がすべて保存されているため
+    STUDYレベル。 既存の EEGLAB STUDY セットはすべて処理できますが
+    v2019.0 で STUDY 関数を使用して、追加の統計を実行します。
+    既存のSTUDYのテスト、STUDY関数は、
+    事前に入力された測定ファイルを再入力します。
+-   STUDY処理のための新しいスマートなキャッシュ機構。
+-   <b>Mewプラグインマネージャ</b>
+-   <b>スタッフ Octaveの互換性</b> コマンドラインから: 自由に
+    オープンソースアプリが EEGLAB コマンドを実行できるようになりました
+    MATLAB(注記:EEGLAB グラフィックインターフェイス)で書かれた行のスクリプト
+    メニューはオクターブではご利用いただけません。
+-   <b>新しいライセンス:</b> オープンソースライセンス EEGLAB が更新されました
+    GNU の代わりに BSD に EEGLAB の商用リユースを許可する
+    コード(注:各EEGLABプラグインがライセンスの下に公開)
+-   EEGLABコードリポジトリはGithubに移行しました
+    Bitbucket; プラグインマネージャーが扱うすべてのプラグインのコード
+    Githubのサブモジュールに置かれました
+-   サポートを追加 <b>データリサンプリングとハイ/ローパス
+    STUDYレベルのフィルタリング</b>.
+-   サポート <b>ろ過するときチャネルの選択</b> 追加された -
+    フィルターは選択されたチャネルのサブセットだけに加えることができますまたは
+    タイプ。
+-   ふりがな <b>データインポートメニュー</b> クリーンアップされ、直接リンクを追加
+    一般的なインポートプラグイン。
+-   独立したコンポーネントのソースローカリゼーションを実行するとき
+    DIPFIT、同等のダイポールがある脳領域は
+    40-Regionの直接ルックアップに基づいて推定されるようになりました
+    <b>Desikan-KIlliany コルティカル アトラス</b>.
+-   これを使う [Githubのリンク](https://github.com/sccn/eeglab/compare/eeglab14..eeglab2019) 以前の EEGLAB バージョンと比較して、すべての変更が表示されます。
 
-Older versions of EEGLAB
+EEGLABの旧バージョン
 ---
-- [EEGLAB version 14 revision history](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_14)
-- [EEGLAB version 13 revision history](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_13)
-- [EEGLAB version 12 revision history](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_12)
-- [EEGLAB version 11 revision history](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_11)
-- [EEGLAB version 10 revision history](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_10)
-- [EEGLAB version 9 revision history](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_9)
-- [EEGLAB version 8 revision history](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_8)
-- [EEGLAB version 7 revision history](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_7)
-- [EEGLAB version 6 revision history](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_6)
-- [EEGLAB version 5 revision history](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_5)
-- [EEGLAB version 4 revision history](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_4)
+- [EEGLABバージョン14 リビジョン履歴](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_14)
+- [EEGLABバージョン13リビジョン履歴](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_13)
+- [EEGLABバージョン12リビジョン履歴](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_12)
+- [EEGLABバージョン11 リビジョン履歴](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_11)
+- [EEGLABバージョン10リビジョン履歴](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_10)
+- [EEGLABバージョン9リビジョン履歴](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_9)
+- [EEGLABバージョン8リビジョン履歴](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_8)
+- [EEGLABバージョン7リビジョン履歴](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_7)
+- [EEGLABバージョン6 リビジョン履歴](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_6)
+- [EEGLABバージョン5リビジョン履歴](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_5)
+- [EEGLABバージョン4リビジョン履歴](https://sccn.ucsd.edu/wiki/EEGLAB_revision_history_version_4)

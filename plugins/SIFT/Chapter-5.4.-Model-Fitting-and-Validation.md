@@ -7,318 +7,318 @@ render_with_liquid: false
 title: Chapter-5.4.-Model-Fitting-and-Validation
 long_title: Chapter-5.4.-Model-Fitting-and-Validation
 ---
-Once the data has been pre-processed, we can proceed to **Model Fitting
-and Validation**. SIFT currently supports parametric VAR modeling
-using the Vieira-Morf (Marple, 1987), or ARFIT algorithm (Schneider and
-Neumaier, 2001). ARFIT must be downloaded separately and installed in
-<SIFT directory>/external/arfit/). SIFT currently supports time-varying
-parametric VAR modeling either through the use of sliding-window
-adaptive VAR modeling (**`est_fitMVAR()`**) or recursive-least-squares
-Kalman filtering (**`est_fitMVARKalman()`**).
+データの処理が完了したら、**Model Fittingに進みます。
+そして検証**。 SIFTは現在、パラメトリックVARモデリングをサポートしています
+Vieira-Morf(Marple、1987)、またはARFITアルゴリズム(Schneider)
+ノイマイヤー、2001年) ARFITは別途ダウンロードしてインストールする必要があります
+<SIFT directory>/external/arfit/)。 現在、SIFT は時間管理をサポートしています
+パラメトリック 滑走窓の使用によるVARモデリング
+適応型VARモデリング(**)`est_fitMVAR()`**)または再帰的鎖角
+カルマンフィルタリング (**)`est_fitMVARKalman()`**).
 
-Model Fitting and Validation can also be started from the command line:
+モデルフィッティングとバリデーションはコマンドラインから起動することもできます。
 
 ``` matlab
 EEG = pop_est_fitMVAR(EEG);
 ```
 
-You should now see a GUI similar to that displayed in the figure below. Here we
-can select the MVAR algorithm, choose the sliding window length and step
-size, and specify the model order. ARFIT uses a modified least-squares
-approach, while Vieira-Morf uses a multichannel geometric-mean
-non-least-squares lattice approach to solve for the model coefficients.
-ARFIT includes an additional term for the process mean, whereas
-Vieira-Morf assumes a zero-mean process. The current implementation of
-ARFIT is faster than that of the Vieira-Morf algorithm, although
-Vieira-Morf returns slightly better coefficient estimates. For a
-detailed performance comparison between these and other estimators, see
-Schlögl (2006). In this example, we will use the Vieira-Morf algorithm.
-We will also use a **window length** of 0.4 sec (400 ms) with a **step
-size** of 0.01 sec (10 ms). This is approximately 1 cycle of a 2.5 Hz
-oscillation and should allow us to adequately model information flow
-from the lowest frequency band of interest (delta) up to our Nyquist
-frequency of 128 Hz. Consult the theory section below for more
-details on selecting an appropriate window length. 
+下の図に表示するようなGUIが表示されます。 お問い合わせ
+MVARアルゴリズムを選択し、スライドウィンドウの長さとステップを選択できます。
+サイズ、モデルの注文を指定します。 ARFITは、修正された少なくとも正方形を使用する
+Vieira-Morf がマルチチャネル幾何学的手段を使用する間アプローチ
+モデル係数の解決のための非端角格子アプローチ。
+ARFITは、プロセスの平均のための追加の用語が含まれています。
+Vieira-Morf はゼロ・メタプロセスを想定しています。 現在の実装
+ARFIT は Vieira-Morf アルゴリズムよりも高速ですが、
+Vieira-Morf は、わずかに優れた係数推定値を返します。 お問い合わせ
+これらの他の推定者との間の詳細なパフォーマンス比較を参照してください。
+Schlögl(2006年)。 この例では Vieira-Morf アルゴリズムを使用します。
+また、**ステップで0.4秒(400ms)**の**ウィンドウ長を使用します。
+サイズ** 0.01秒(10ms) 2.5Hzの約1サイクル
+oscillation は情報の流れを適切にモデル化し、
+私たちのNyquistまでの関心(デルタ)の最も低い周波数帯から
+128のHzの頻度。より多くののための理論セクションに相談して下さい
+適切なウィンドウの長さを選択するための詳細。 
 
-Here we can choose
-to calculate one or more of the information criteria listed in the section
-3.5. over a range of model orders (*p<sub>min</sub>* to
-*p<sub>max</sub>*). If more than one window is available, the
-information criteria are calculated for each window, and histograms will
-be generated showing the distribution of optimal model orders for all
-windows. If we have a large number of windows and are pressed for time,
-we can specify a random percentage of windows for which to calculate the
-criteria (**% windows to sample**). Bear in mind, however, that
-increasing the number of windows used will result in a better estimate
-of the empirical distribution of the information criteria across
-windows. Additionally, for a fast, approximate estimate of the
-information criteria, we can choose to **downdate** the model
-(Neumaier and Schneider, 2001). Rather than fitting p<sub>max</sub> –
-p<sub>min</sub> VAR models of increasing order, this fits a single
-VAR\[*p<sub>max</sub>*\] model, and downdates the noise covariance
-matrix to obtain approximate estimates of the information criteria.
+お問い合わせ
+セクションに記載されている情報基準の1つ以上を計算する
+3.5. モデルの注文の範囲に(*p)<sub>ツイート</sub>* まで
+*p<sub>マックス</sub>*)。 複数のウィンドウが利用できる場合、
+各ウィンドウに情報基準が計算され、ヒストグラムは
+最適なモデルオーダーの配布を生成します。
+窓。 多数の窓があり、時間のために押されていれば、
+計算するウィンドウのランダムな割合を指定できます。
+基準(**%のウィンドウでサンプル**)。 しかし、それは、
+使用されるウィンドウの数が増えると、より良い見積もりになります
+全体の情報基準の定期的な分布の
+窓。 また、高速で見積りを見積もります。
+情報基準は、モデルの**downdate**に選択できます
+(Neumaierとシュナイダー、2001年) フィッティングpよりもむしろ<sub>マックス</sub> –
+ツイート<sub>ツイート</sub> 注文が増えるVARモデルは、これは単一の
+VAR\[*p]<sub>マックス</sub>※\) モデル、ノイズコワランスの更新
+情報基準の推定値を取得する行列。
 
-Your GUI should appear as shown in the figure below with options set as in the table below:
+下記の図に示すように、以下の表に示すようにGUIが表示されます。
 
 |                           |                 |
 |---------------------------|-----------------|
-| Option                    | Value           |
-| **Select MVAR Algorithm** | **Vieira-Morf** |
-| **Window length (sec)**   | **0.4**         |
-| **Step Size (sec)**       | **0.01**        |
-| **Model Order**           | **\[1 30\]**    |
-| **Downdate**              | **True**        |
-| **Model Order**           | **\[1 30\]**    |
-| **Windows to sample**     | **100**         |
+| オプション | バリュー |
+お問い合わせ **MVARアルゴリズムを選択してください** | **Vieira-Morf ** |
+|****************************
+お問い合わせ **ステップサイズ(秒)** | **0.01** |
+|**************************************** お問い合わせ
+| マンション** |
+|**************************************** お問い合わせ
+| ※Windowsからサンプルへ** |**100** |
 
-![Screen Shot 2023-08-24 at 11 00 35 PM](https://github.com/sccn/SIFT/assets/1872705/fdffcad0-2fe5-457e-aff3-cc5ca0247f26)
+![画面ショット 2023-08-24 に 11 00 35 PM](https://github.com/sccn/SIFT/assets/1872705/fdffcad0-2fe5-457e-aff3-cc5ca0247f26)
 
-*Figure caption. AMVAR model fitting GUI generated by **`pop_est_fitMVAR()`**. We have selected a window length of 0.4 sec, a step size of 0.01 second, and specified a model order range (for order selection) of 1 to 30.*
+*充填キャプション。 AMVARモデルフィッティングGUI によって生成される**`pop_est_fitMVAR()`**。 0.01秒のステップサイズである0.4秒のウィンドウ長を選択し、1〜30秒のモデル注文範囲(注文選択用)を指定します。 * 必須
 
-Before we move forward, let's see how to select the optional window length.
+先に進む前に、オプションのウィンドウの長さを選択する方法を見てみましょう。
 
-## 5.4.1. Theory: selecting a window length
+## 5.4.1. 理論: ウィンドウの長さを選択
 
-There are several important considerations that can aid us in choosing an appropriate window length. An appropriate window length often requires a compromise between one or more of the following considerations:
-1. Local Stationarity
-2. Temporal Smoothing
-3. Sufficient amount of data
-4. Process Dynamics and Neurophysiology
+適切な窓の長さを選ぶのに役立ついくつかの重要な考慮事項があります。 適切なウィンドウの長さは、次の考慮事項の1つ以上の妥協を必要とします。
+1. 地方自治体
+2. 一時的なスムース
+3. 十分なデータ量
+4. プロセス 動的および神経生理学
 
-### 5.4.1.1. Local Stationarity
+### 5.4.1.1. 地方自治体
 
-In section 3.4., we discussed issues surrounding non-stationary EEG data and introduced the concept of using a sliding window to fit VAR models to <em>locally stationary</em> data. It is thus important that our window be small enough to ensure local stationarity. As we shall see in later in this page, validating our model and plotting the stability index for a chosen window size can give us a sense as to whether our window is sufficiently small to ensure local stationarity.</p>
+3.4. セクションでは、非静止EEGデータを取り巻く問題について議論し、VARモデルに合ったスライドウィンドウの概念を導入しました。 <em>現地局局</em> データ。 そのため、局所的な局所性を確保するために私たちの窓が十分に小さいことが重要である。 このページでは、モデルを検証し、選択したウィンドウのサイズの安定性指数をプロットすることで、当社のウィンドウが十分に小さいかのように、ローカルの文様を確保するために感心できます。</p>
 
-### 5.4.1.2. Temporal Smoothing
+### 5.4.1.2. 一時的なスムース
 
-A sliding-window analysis is inherently a temporal smoothing operation. Larger windows result in model coefficients being aggregated over increasingly longer segments of data and, therefore, result in increased temporal smoothing. If there are rapid transient changes in process dynamics, choosing a too-large window may obscure the fine temporal structure of information flow. When multiple trials are available, a useful heuristic proposed by Ding et al. (2000b) for obtaining a rough upper limit on the window length is to plot the bivariate correlation for a few pairs of variables across all trials, beginning with a 1-point window and successively averaging correlation within trials and across the window for increasingly larger windows. An illustration from Ding et al. (2000b) is reproduced in the figure below. Note that with the 1-point window, there are large fluctuations in correlation structure (covariance non-stationarity). As we increase the window length, we get increased temporal smoothing. In this case, a reasonable window length might be 10 points, since it reduces local covariance non-stationarity (local fluctuations in cross-correlation) while still preserving some of the temporal dynamics of interest (namely the changes in correlation structure). Of course, this suggested window length is completely application-specific; one should select a window tailored to their specific data.
+滑走窓の分析は本質的に気道の滑らかになる操作です。 より大きなウィンドウは、データがますます長いセグメント上に集約されるモデル係数で、したがって、一時的なスムースが増加しました。 プロセスの動的に急激な変化がある場合、大きすぎるウィンドウを選択すると、情報フローの微細な一時的な構造が失われる可能性があります。 複数の試験が利用可能な場合、Ding et al. (2000b) によって提案された有用なヒューリスティックは、ウィンドウの長さの粗大な上限の制限を得るためのものです。バイバリエートの相関をすべての試験に数組の変数をプロットすることです。1 点のウィンドウで始まり、試行中の相関を巧みに検証し、ウィンドウ全体でます。 Ding et al. (2000b) のイラストを下図に再現しました。 1点のウィンドウでは、相関構造(バランスの取れない非静電性)に大きな変動があります。 窓の長さを増加させると、気道のスムースが増加します。 この場合、合理的なウィンドウの長さは10ポイントになる可能性があります。なぜなら、ローカルの共燃性非静電性(交差相関のローカル変動)を削減するからです。しかしながら、関心の一時的な動線の一部をまだ保存している間(すなわち、相関構造の変化)。 もちろん、この提案されたウィンドウの長さは完全にアプリケーション固有のものです。特定のデータに合わせたウィンドウを選択する必要があります。
 
-![Screen Shot 2023-08-24 at 11 12 34 PM](https://github.com/sccn/SIFT/assets/1872705/6eb22833-3329-472a-8066-654a206ee285)
+![スクリーンショット 2023-08-24 に 11 12 34 PM](https://github.com/sccn/SIFT/assets/1872705/6eb22833-3329-472a-8066-654a206ee285)
 
-*Figure caption. Cross-correlation between two intracranial EEG time series averaged over increasing window lengths (1 point, 10 points, 20 points) and plotted as a function of time. Figure reproduced from Ding et al. (2000b).*
+*充填キャプション。 2つのintracranial EEGの時間シリーズ間の相互相関は増加の窓の長さ(1ポイント、10ポイント、20ポイント)に平均し、時間の機能としてプロットしました。 Ding et al. (2000b) から再現された図です。 * 必須
 
-### 5.4.1.3. Sufficient amount of data
+### 5.4.1.3. 十分なデータ量
 
-In section 3.4.1. we noted that a minimum of <em>M<sup>2</sup>p</em> data points are required to fit an <em>M</em>-dimensional VAR[p] model. We also stated that, in practice, we would like to have **ten times that many data points** to ensure an unbiased fit (if the model order is 15, we want at least 150 data points to fit the model). This leads us to the rule-of-thumb equation:
+セクション 3.4.1. 最小限のことを指摘しました。 <em>ツイート<sup>2</sup>ツイート</em> データポイントは、データポイントに収まる必要があります。 <em>ツイート</em>-次元VAR[p]モデル。 また、慣行では、多くのデータポイント**が不公平なフィット(モデルオーダーが15の場合、モデルに合った150以上のデータポイント)を確保するために、多くのデータポイント**を保有したいと思います。 これはルールの親指の式につながる:
 
 <img src="https://latex.codecogs.com/svg.latex?{ {M}^{2} }p\le \left( \frac{1}{10} \right)NW">
 
-or, equivalently, 
+または、等しく、 
 
 <img src="https://latex.codecogs.com/svg.latex?W\ge 10\left( \frac{ { {M}^{2} }p}{N} \right)">
 
-where <em>W</em> is the window length in points and <em>N</em> is the total number of trials available. SIFT performs checks on parameters (<strong><code>est_checkMVARParams()</code></strong>) and will let you know if the selected window length is sub-optimal (as well as recommend a better window length).
+どこまでも <em>ツイート</em> ポイントのウィンドウの長さです。 <em>ネクタイ</em> トライアルの合計数です。 SIFT はパラメータのチェックを実行します()<strong><code>est_checkMVARParams()</code></strong>) 選択したウィンドウの長さがサブに最適かどうかを知らせます(また、より良いウィンドウの長さをお勧めします)。
 
-### 5.4.1.4. Process dynamics and neurophysiology
+### 5.4.1.4. プロセス動的および神経生理学
 
-In section 3.5., we discussed how, when selecting an appropriate model order, one should take into account the temporal dynamics and neurophysiology of the data. The same principles hold for window length selection. Although, with a large number of trials, we could theoretically fit our model using a window length as short at <em>p+1</em> sample points long, we must consider that all interactions being modeled must occur within the selected window. In general, if we expect a maximum interaction lag of <img src="https://latex.codecogs.com/svg.latex?\tau "> seconds between any two brain processes, we should make sure to select a window length of <em>W</em> <img src="https://latex.codecogs.com/svg.latex?\tau ">.
+セクション3.5.では、適切なモデルの注文を選択すると、データの一時的な動的および神経生理学を考慮する必要があります。 窓の長さの選択のための同じ原則は握ります。 しかし、多くの試行錯誤で、窓の長さを短くすることでモデルを理論的にフィットすることができました。 <em>p+1の</em> 長いサンプルポイントは、選択したウィンドウ内で、モデル化されたすべてのインタラクションが行われる必要があることを考慮する必要があります。 一般的には、最大のインタラクションラグを期待する場合 <img src="https://latex.codecogs.com/svg.latex?\tau "> 2つの脳プロセス間の秒は、ウィンドウの長さを必ず選択するようにします <em>ツイート</em> <img src="https://latex.codecogs.com/svg.latex?\tau ">.
 
-Furthermore, if we are interested in frequency-domain quantities, we should consider the time-frequency uncertainty principle, which states that every increase in temporal resolution leads to a concomitant decrease in frequency resolution. In general, a useful rule-of-thumb is to ensure that the window is long enough to span approximately one cycle of the lowest frequency of interest.
+さらに、周波数ドメインの量に興味がある場合は、時間頻度の不確実性の原則を考慮する必要があります。これは、すべての一時的な解像度の増加が周波数分解のconcomitant減少につながる状態です。 一般的に、有用なルールの親指は、ウィンドウが関心の最低頻度の約1サイクルに及ぶのに十分な長さであることを確認することです。
 
 
-## 5.4.2. Selecting the model order
+## 5.4.2 . モデルの注文を選択する
 
-Now that we have chosen our VAR algorithm, window length, and step size,
-we can proceed to model order analysis. Upon pressing **OK** in the previous GUI. You should see a warning window pop up below. It shows
-the results of a sanity check that evaluates the ratio of parameters to
-data points, calculates the number of estimable frequencies, checks the
-time-frequency product, and performs other relevant checks. Information
-is displayed for each condition, along with suggestions on optimal
-parameters to use if your parameter selections are sub-optimal. Here,
-we are being warned that the ratio of free parameters to data points is
-greater than 0.1, which may cause concern. This is because our
-upper model order of 30 is quite large. Let’s go ahead and ignore this
-error (we are likely to use a much lower model order when we fit our
-final model). The same reasoning goes for the warning about a short window size (0.4 seconds). Simply press **OK**.
+VARアルゴリズム、ウィンドウの長さ、ステップサイズを選択しました。
+注文解析のモデル化を進めます。 前のGUIで**OK**を押すと 下の警告画面が表示されます。 ショー
+パラメータの比率を評価するサニティチェックの結果
+データポイントは、推定周波数の数を計算し、チェックします
+時間頻度プロダクトは他の関連した点検を実行し。 インフォメーション
+各条件に表示され、最適な提案
+パラメータ選択がサブに最適かどうかを使用するパラメータ。 お問い合わせ
+データポイントへの無料パラメータの比率が警告されている
+懸念を引き起こす可能性がある0.1よりも大きい。 これが私たちの理由です
+30以上のモデルオーダーはかなり大きいです。 先に進み、これを無視しましょう
+エラー(我々 は、我々 にフィットするとき、はるかに低いモデルの注文を使用する可能性があります)
+最終モデル)。 同じ理由は、短いウィンドウサイズ(0.4秒)の警告のために行きます。 単に**OK**を押します。
 
-![Screen Shot 2023-08-24 at 11 01 40 PM](https://github.com/sccn/SIFT/assets/1872705/0970316e-6302-48db-9106-becacdd37d92)
+![スクリーンショット 2023-08-24 に 11 01 40 PM](https://github.com/sccn/SIFT/assets/1872705/0970316e-6302-48db-9106-becacdd37d92)
 
-*Figure caption. This GUI shows the results of a sanity check performed on the
-specified model parameters (this is always performed before model
-fitting).*
+*充填キャプション。 この GUI は、サニティチェックの結果をオンに表示します。
+指定されたモデルパラメータ(これはモデルの前に常に実行されます)
+付属品)。 * 必須
 
-A progress bar should now indicate our progress for each
-condition (*RespCorr*, *RespWrong*). When this is complete, you should
-see the resulting figures shown below. On the left is the result of
-the model order selection for *RespWrong*, and on the right is the result for
-*RespCorr*. The top panel shows the information criteria (averaged
-across windows) plotted versus the model. The vertical lines indicate each criterion's
-average optimal model order (model order that minimizes the information
-criterion). The lower array of histograms shows the
-distribution of optimal model orders for all windows for each
-criterion. Note that, as mentioned in section 3.5., for many windows, the
-AIC and FPE criteria do not appear to exhibit a clear minimum across the
-specified model range. In contrast, SBC shows a clear minimum peaking
-around *p*=5 (which is likely too low given that we will only be able to
-estimate 2.5 spectral peaks for each pair of variables), while HQ shows a
-clear minimum around *p*=10 for *RespWrong* and *RespCorr*. Note, however, that in both *RespWrong* and *RespCorr*, the
-upper limit on the model order selection criteria is approximately
-*p*=15. If we click on the top panel of *RespCorr*, we get an expanded
-view of the panel. Likewise, clicking on the histogram for
-HQ pops up an expanded view of the histogram. The shaded region indicates the range where 90% of the optional model order lies, and the text  "20+-6" indicates the mean and standard deviation for each model order selection criteria. Note that
-although the minimum for the HQ criterion (purple) is at *p*=13, the
-upper limit of the “elbow” for the HQ criterion is around *p*=15 or
-*p*=16. It also appears that AIC/FPE indicates larger values of about 20 compared to SBC and HQ.
-From this, we might conclude that a suitable and safe model order for all
-windows and conditions is *p*=15.
+プログレッシブバーは、それぞれの進捗状況を示す必要があります
+条件(*RespCorr*、*RespWrong*)。 これが完了したら、
+以下に示す結果の数字を参照してください。 左は結果です
+※RespWrong*のモデル注文選択と、右側は結果です。
+*RespCorr* をリクエストします。 トップパネルは情報基準(平均)を示しています
+窓を渡る)モデルとモデルをプロットしました。 縦行は各基準の基準を示す
+平均最適モデルオーダー(情報を最小限に抑えるモデルオーダー)
+基準)。 ヒストグラムの下部配列は、
+各ウィンドウごとに最適なモデルオーダーの配布
+基準。 注意, セクションで述べたように 3.5., 多くのウィンドウのために,
+AICとFPEの基準は、クリアな最小限を展示することができません。
+指定されたモデル範囲。 対照的に、SBCは明確な最低のピークを示す
+*p*=5 の周り(我々 ができる限り少ない)
+HQ が示す間、変数の各ペアの 2.5 のスペクトルピークを推定して下さい
+*respWrong*および*RespCorr*の*p*=10のまわりの明確な最低。 ただし、両方の*RespWrong*と*RespCorr*では、
+モデルの注文選択基準の上限はおよそです
+*p*=15. ※RespCorr*のトップパネルをクリックすると拡大します。
+パネルの表示。 同様に、ヒストグラムをクリックして
+HQはヒストグラムの拡大された眺めを現れます。 シェード領域は、オプションのモデル順序の90%が続く範囲を示し、「20+-6」は、各モデルの注文選択基準に対する平均と標準偏差を示します。 注意:
+HQ 基準 (pleple) の最小値が *p*=13 であるが、
+HQ 基準の「肘」の上限は *p*=15 か
+*p*=16. AIC/FPE は、SBC と HQ と比較して約 20 の大きな値を示しています。
+そのためには、すべての人に適し、安全なモデルの注文をすることを結論づけるかもしれません。
+窓および条件は*p*=15です。
 
-![Screen Shot 2023-08-24 at 11 38 39 PM](https://github.com/sccn/SIFT/assets/1872705/a5f08d2a-8366-4cc2-b9af-1af5078415af)
+![スクリーンショット 2023-08-24 に 11 38 39 PM](https://github.com/sccn/SIFT/assets/1872705/a5f08d2a-8366-4cc2-b9af-1af5078415af)
 
-*Figure caption. Results of model order selection for
-**RespWrong** (left) and **RespCorr** (right). The top panel plots the
-information criteria versus model order and marks the average optimal
-model order for the selected criteria.*
+*充填キャプション。 モデルの注文選択の結果
+**RespWrong**(左)と**RespCorr**(右)。 トップパネルは、
+モデルの注文と平均最適を示す情報基準
+選択した条件のモデル注文。 * 必須
 
-![Screen Shot 2023-08-24 at 11 48 05 PM](https://github.com/sccn/SIFT/assets/1872705/d5abe97f-b9d5-4723-b189-b025ad6892e5)
+![スクリーンショット 2023-08-24 に 11 48 05 PM](https://github.com/sccn/SIFT/assets/1872705/d5abe97f-b9d5-4723-b189-b025ad6892e5)
 
-*Figure caption. Left: Close-up view of SBC (blue), HQ
-(purple), FPE (yellow), AIC (red; overlapping with FPE) information criteria plotted versus
-model order. Note that FPE and AIC plots are almost identical. Right:
-Distribution over all windows of optimal model order using HQ
-information criterion. Vertical markers denote the distribution mean. Note
-the distribution is somewhat bimodal, with one peak around 9 and another
-around 14.*
+*充填キャプション。 左:SBC(青)、HQのクローズアップビュー
+(紫色)、FPE(黄色)、AIC(赤;FPEと重複)情報基準は、対をプロット
+モデル順序。 FPEとAICのプロットはほぼ同じであることに注意してください。 右:
+HQを使用した最適なモデルオーダーのすべてのウィンドウに配布
+情報基準。 垂直マーカーは分布を意味します。 お問い合わせ
+分布は、9の周りのピークと別の1つのピークで、やや奇妙です
+14時頃*
 
-## 5.4.3. Fitting the final model
-Then, the following GUI pops up.
+## 5.4.3。 最終モデルに適合
+その後、次のGUIがポップアップします。
 
-![Screen Shot 2023-08-24 at 11 06 07 PM](https://github.com/sccn/SIFT/assets/1872705/7709ec02-78fd-4b66-bae0-e251ac394f05)
+![スクリーンショット 2023-08-24 に 11 06 07 PM](https://github.com/sccn/SIFT/assets/1872705/7709ec02-78fd-4b66-bae0-e251ac394f05)
 
-*Figure caption. GUI that pops up at the end of model order estimation.*
+*充填キャプション。 モデルオーダー推定の最後にポップアップするGUI。 * 必須
 
-We are now ready to fit the model. You may press **OK** on the previous query window, call menu item **Tools > SIFT > Model fitting and validation > Fit AMVAR model** or use the command line call below:
+モデルに合う準備ができました。 前のクエリウィンドウで**OK**を押すと、メニュー項目を呼び出します**ツール > サイズ > モデルフィッティングと検証 > AMVAR モデル** または下記のコマンドラインコールを使用します。
 
 ```matlab
 EEG = pop_est_fitMVAR(EEG);
 ```
 
-We now set the model order option to **15** as per the previous discussion. The final set of
-parameters are shown in the table below:
+前のディスカッションでは、モデルの注文オプションを**15**に設定します。 最終セット
+変数は下記の表で示されます:
 
 |                           |                  |
 |---------------------------|------------------|
-| Option                    | Value            |
-| **Select MVAR algorithm** | **Vieira-Morf**  |
-| **Window length (sec)**   | **0.4** (400 ms) |
-| **Step size (sec)**       | **0.01** (10 ms) |
-| **Model order**           | **15**           |
+| オプション | バリュー |
+お問い合わせ **MVARアルゴリズムを選択してください** | **Vieira-Morf** |
+|**窓長さ(秒)** |**0.4** (400ms) |
+お問い合わせ **ステップサイズ(秒)** | **0.01** (10ms) |
+|************************************************
 
-![Screen Shot 2023-08-25 at 1 19 50 PM](https://github.com/sccn/SIFT/assets/1872705/8168708b-bac2-4079-b22a-fb274f43a95f)
+![スクリーンショット 2023-08-25 1 19 50 PM](https://github.com/sccn/SIFT/assets/1872705/8168708b-bac2-4079-b22a-fb274f43a95f)
 
-*Figure caption. This GUI allows entering parameters for model order estimation. Our final set of selected parameters
-for model fitting. Note that we have selected the Vieira-Morf
-algorithm, a window length of 0.4 seconds with a step size of 0.01 sec,
-and a model order of 15. Upon clicking OK, a progress bar will show us
-the status of the model-fitting algorithm.*
+*充填キャプション。 このGUIでは、モデルオーダー推定のパラメータを入力することができます。 選択したパラメータの最終セット
+モデル付属品のため。 Vieira-Morf を選択しました
+アルゴリズム、0.01秒のステップサイズの0.4秒の窓の長さ、
+15のモデル注文。 OKをクリックすると、進捗バーが表示されます
+モデルフィットアルゴリズムの状態。 * 必須
 
-Click **OK** to continue. SIFT sanity check should proceed and generate
-no warnings or errors indicating we chose a valid set of model
-parameters, as shown below.
+[OK] をクリックして続行します。 SIFT の sanity チェックが進んで生成される
+モデルの有効なセットを選択したことを示す警告やエラーなし
+変数、次示すように。
 
-![Screen Shot 2023-08-25 at 1 20 24 PM](https://github.com/sccn/SIFT/assets/1872705/0b89221c-1b2a-4e0c-9246-0a9721a01da4)
+![スクリーンショット 2023-08-25 1 20 24 PM](https://github.com/sccn/SIFT/assets/1872705/0b89221c-1b2a-4e0c-9246-0a9721a01da4)
 
-*Figure caption. SIFT sanity check.*
+*充填キャプション。 SIFT サンティチェック * 必須
 
-If you do not wish to use the GUI, the same may be achieved from the command line using:
+GUI を使いたくない場合は、コマンドラインから以下のように実行できます。
 
 ```matlab
 EEG = pop_est_fitMVAR( EEG, 'nogui', 'Algorithm', 'Vieira-Morf', 'ModelOrder', 15, 'WindowLength', 0.4, 'WindowStepSize', 0.01, 'verb', 1); 
 ```
 
-For each condition, the VAR\[15\] model will now be fit for
-each of the 238 windows. We should now see a progress bar indicating the
-model fitting progress for each condition. Depending on the speed of
-your computer, this may take a while, so you might want to take a break or do a little yoga. If you have little computer memory or
-processor speed issues, you can *increase the step size to 0.03 sec*.
-This will reduce the computation time demands while still producing
-similar results as in the remainder of this tutorial.
+各条件ではVAR\[15\]モデルが適合します。
+238 ウィンドウのそれぞれ。 進捗バーが表示されるようになりました。
+各条件のためのモデル付属品の進歩。 速度によって
+コンピュータはしばらくかかることがありますので、休憩やヨガをしたりしたいかもしれません。 コンピューターメモリが少ない場合や、
+プロセッサ速度の問題は、*ステップサイズを0.03 sec*に増加できます。
+これは、まだ生産している間計算の時間要求を減らします
+このチュートリアルの残りの部分と同様に結果。
 
-## 5.4.4. Validating the fitted model
+## 5.4.4.4.4. 適合モデルの検証
 
-After you are refreshed from that Yoga session and the model has been
-fit for each condition, we will need to validate our fitted model.
-Select menu item **Tools > SIFT > Model Fitting and Validation > Validate Model** or type on the command line:
+そのヨガのセッションとモデルからリフレッシュした後
+各条件に合わせて、装着したモデルを検証する必要があります。
+メニュー項目を選択 ツール > SIFT > モデル継手と検証 > 検証 コマンドラインでモデル**またはタイプ:
 
 ```matlab
  pop_est_validateMVAR(EEG);
 ```
 
-You should now be presented with the GUI shown in the figure below. Here, we have the option to check the whiteness of the residuals, percent
-consistency, and model stability for each (or a random subset) of our
-windows. As we discussed in section 3.6., residual whiteness tests
-include portmanteau and autocorrelation tests for correlation in the
-residuals of the model (which could indicate a poor model fit). Here, we
-have the option to choose from the Ljung-Box, Box-Pierce, and Li-McLeod
-multivariate portmanteau tests and a simple autocorrelation function
-test. Percent consistency denotes the fraction of the correlation
-structure of the original data that is captured by the model, while
-model stability performs an eigenvalue test for the stability/stationarity
-of the process. The options for this GUI should be set as shown in the table below:
+下の図に示す GUI が表示されます。 ここでは、残留物の白さ、パーセントをチェックするオプションがあります
+一貫性、および各(またはランダムサブセット)のモデル安定性
+窓。 セクション3.6で議論したように、残留白度テスト
+Portmanteau と autocorrelation の相関のためのテストが含まれています
+モデルの残留物(モデルが悪いことを示すことができる)。 お問い合わせ
+Ljung-Box、Box-Pierce、Li-McLeodから選択するオプションがあります。
+多variateのportmanteauテストおよび簡単なAutocorrelation機能
+テスト。 パーセントの一貫性は、相関の分数を表します
+モデルによって捕獲される元のデータの構造、その間
+モデルの安定性は安定性/文様のためのeigenvalueテストを実行します
+プロセス。 このGUIのオプションは、以下の表に示すように設定する必要があります。
 
 
 
 |                                  |                 |
 |----------------------------------|-----------------|
-| Option                           | Value           |
-| **Check Whiteness of Residuals** | **checked**     |
-| **significance level**           | **0.05**        |
-| **Check percent consistency**    | **checked**     |
-| **Check model stability**        | **checked**     |
-| **% windows to sample**          | **100**         |
+| オプション | バリュー |
+|** レジデンシャルの白さチェック** |
+| 重要度** | 0.05** |
+| 個人情報保護方針
+| **チェックモデルの安定性** | **
+|**% 窓からサンプルまで** |**100** |
 
-![Screen Shot 2023-08-25 at 1 39 39 PM](https://github.com/sccn/SIFT/assets/1872705/de44eb6f-401e-405f-81cf-e014adf85624)
+![スクリーンショット 2023-08-25 に 1 39 39](https://github.com/sccn/SIFT/assets/1872705/de44eb6f-401e-405f-81cf-e014adf85624)
 
-*Figure caption. Model Validation GUI generated by
-`pop_est_validateMVAR()`. Here, we can choose to check the whiteness of
-residuals, percent consistency, and model stability for all (or some
-random subset) of windows. In this example, we have chosen a
-significance threshold of p\<0.05 for our whiteness tests.*
+*充填キャプション。 生成されるモデル検証GUI
+`pop_est_validateMVAR()`お問い合わせ ここでは、ホワイトネスのホワイトネスを確認するために選ぶことができます
+残留物、パーセントの一貫性、およびモデルの安定性(または一部)
+ウィンドウのランダムサブセット。 この例では、
+p\<0.05 の白さテストの意義 * 必須
 
-Click **OK** to continue. You should now see a sequence of progress bars
-for each condition. This may take a while.
+[OK] をクリックして続行します。 進捗バーのシーケンスが表示されるようになりました
+各条件のため。 しばらくお待ちください。
 
-Once the model validation routines have been completed, you should see
-the results shown for each of the two conditions, as in the figure below. The top panel of
-each figure shows the results of the whiteness tests as a function of
-the window index (sorted in order of temporal precedence). For the
-portmanteau tests, we have plotted the p-value for acceptance of the
-null hypothesis of correlated residuals (namely 1-*p* where *p* is the
-p-value for rejection of the null hypothesis). Values greater than 0.05
-(blue dashed line) indicates the residuals are white at the p\<0.05
-level. For the ACF test (red) we have plotted the probability of an
-observed ACF coefficient to be within the expected interval for white
-residuals. Values greater than 0.95 indicate the residuals are white at
-the p\<0.05 level. The fraction of windows that pass the whiteness test
-is noted in the legend. Note that the ACF tests classify all windows
-as having white residuals, while the portmanteau tests (which are much
-more conservative) indicate that most windows are white. The
-fact that a range of windows near the end of the epoch marginally fail
-the portmanteau tests may indicate that we may want to use a slightly
-larger model order (e.g., *p*=16) or perhaps a smaller window size (to
-improve local stationarity).
+モデル検証ルーチンが完了したら、参照してください
+以下の図のように、2つの条件ごとに示される結果。 トップパネル
+各図は、ホワイトネステストの結果を関数として示します
+ウィンドウインデックス(一時的な優先順位順にソート)。 お問い合わせ
+portmanteauテストでは、p-valueをプロットし、受諾を行なう
+相関残留物のヌル仮説 (例: 1-*p* は *p* が
+null 仮説の拒絶に対する p-value)。 0.05を超える価値
+(青色ライン)は残留物がp\<0.05で白であることを示します
+レベル。 ACF試験(赤)では、その確率を証明しました。
+観察される ACF 係数は白のための予想される間隔にあります
+残留資格 0.95より大きい価値は残留物がで白いです示します
+p\<0.05 レベル。 白色度テストを通過する窓のほんの一部
+伝説に記されています。 ACFテストはすべてのウィンドウを分類することに注意してください
+ポートマントーのテスト中に白い残留物を持っているように(それははるかにあります
+より保守的な)ほとんどのウィンドウが白であることを示します。 ふりがな
+エポックの端付近の窓の範囲が異常に失敗するという事実
+ポートマントーのテストは、少しでも使用したいことを示すかもしれません
+より大きいモデル順序(例えば、*p*=16)または多分より小さい窓のサイズ(へ
+局所的な局所性を改善して下さい)。
 
-The middle panel shows the percent consistency plotted versus the increasing
-window index. Note that the PC is reliably high (µ≈87%), suggesting a
-reasonable model fit.
+中間のパネルは増加する上昇の一貫性のプロットされたversusを示します
+ウィンドウインデックス。 PCが確実に高く(μ≈87%)、提案することに注意してください
+適度なモデル適合。
 
-The lower panel shows the stability index for each window. Values above
-or near 0 indicate an unstable (and possibly non-stationary) model. In
-this case, we might try some additional preprocessing or shorten the
-window length to improve the local stationarity of the data. In our example,
-the stability index is reliably low, indicating a stable/stationary
-model.
+下のパネルは各ウィンドウの安定性指数を示します。 上記値
+または 0 近くでは、不安定な (およびおそらく非静止) モデルを示します。 お問い合わせ
+この場合、追加の事前処理を試みたり、短縮したりすることもあります。
+データの局所的な文具を改善するためのウィンドウの長さ。 私たちの例では、
+安定性指数は安定/静止を示す、確実に低いです
+モデル。
 
-The validation checks all indicate a reasonably fit model (although
-there may be room for improvement of the fit). Assuming we are
-comfortable with this we can now proceed to spectral/connectivity
-estimation and visualization.
+バリデーションチェックは、合理的にフィットするモデルを示しています(ただし)
+フィット感の改善のためのお部屋がございます。 わたしたちの想い
+今、私たちは、スペクトル/コネクティビティに進むことができますこれで快適に
+推定と視覚化。
 
-![Screen Shot 2023-08-25 at 1 46 27 PM](https://github.com/sccn/SIFT/assets/1872705/738fb14a-c872-489a-a9b0-6e62ef3ebdb1)
+![スクリーンショット 2023-08-25 1 46 27 PM](https://github.com/sccn/SIFT/assets/1872705/738fb14a-c872-489a-a9b0-6e62ef3ebdb1)
 
-*Figure caption. Results of model validation for
-RespWrong (top) and RespCorr (bottom) conditions. For each condition, a
-validation statistic is plotted versus the window index (sorted in order of
-temporal precedence). If only one window is available, bar plots are
-generated instead. The top panel shows the significance level for
-rejecting the hypothesis of correlated residuals. For portmanteau
-tests (LMP, Box-Pierce, Ljung-Box), a value greater than 0.05 (dashed line) and a value greater than 0.95 indicate white residuals at the p > 0.05 level. The middle panel shows the percent consistency. The bottom panel shows the stability index.*
+*充填キャプション。 モデル検証の結果
+RespWrong(トップ)とRespCorr(ボトム)条件。 各条件のために、a
+バリデーション・スタディティスティックは、ウィンドウ・インデックス(順序でソート)をプロットしています。
+一時的な優先順位)。 1つのウィンドウのみが利用可能な場合、バーのプロットは
+代わりに生成します。 トップパネルは重要なレベルを示します
+相関残留物の仮説を拒否する。 ポートマントーのために
+テスト(LMP, Box-Pierce, Ljung-Box), 値より 0.05 (完了ライン), 値より大きい 0.95 p > 0.05 レベルの白残留物を示します. 中央パネルは、パーセントの一貫性を示しています。 ボトムパネルは、安定性指数を示しています。 * 必須

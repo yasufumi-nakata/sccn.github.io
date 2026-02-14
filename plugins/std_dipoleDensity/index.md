@@ -6,90 +6,90 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 23
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/std_dipoleDensity).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/std_dipoleDensity).
 
-![topImage.png](images/topImage.png)
+![トップイメージ.png](images/topImage.png)
 
-# STUDY dipole density EEGLAB plugin
+# STUDYダイポール密度EEGLABプラグイン
 
-DipoleDensity, called by the function std_dipplotWithDensity or in the
-EEGLAB gui under Study-\>"Plot group dipoles with density", is a
-visualization tool for dipole clusters within a study set. This function
-will present three different visualizations of selected clusters to
-better understand their distributions throughout the brain (the clusters
-must already be computed). 
+関数 std_dipplot によって呼び出される DipoleDensity withDensity または
+研究の下のEEGLAB gui-\>「密度の小ロットのグループのダイポール」は、あります
+研究セット内のダイポールクラスターの可視化ツール。 この機能
+選択したクラスターの3つの異なる視覚化を提示します
+脳全体の分布をよりよく理解する(クラスター)
+すでに計算されている必要があります。 
 
-Note that it is possible to plot Dipole Density directly from the EEGLAB Study plot. However, this plugin offers additional functionalities. 
+EEGLABスタディプロットからダイポール密度を直接プロットすることも可能です。 しかし、このプラグインは追加の機能を提供します。 
 
-The interface is shown here:
+インターフェイスはここに示されます:
 
-![Dipoledensity_ui.png](images/Dipoledensity_ui.png)
+![ディポレデンシティ_ui.png](images/Dipoledensity_ui.png)
 
-Each row of "Cluster"/"Group"/"Color" can plot a separate cluster and
-any left blank will be ignored. The inputs work as follow:
+"Cluster"/"Group"/"Color"の各行は別のクラスターをプロットできます
+左空白は無視されます。 入力は次のように動作します。
 
 |                   |                                                                                                                                                                                                                                                                                                                                                                                              |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cluster           | Select a cluster to be plotted                                                                                                                                                                                                                                                                                                                                                               |
-| Group             | Select a subgroup of the cluster to plot based on study conditions                                                                                                                                                                                                                                                                                                                           |
-| Color             | Select a color to represent the corresponding cluster in the 3D dipole plot (third image in the lower table)                                                                                                                                                                                                                                                                                 |
-| Slice orientation | Select the orientation in which the MRI is sliced for the tiled dipole density plot (first image in the tabel below)                                                                                                                                                                                                                                                                         |
-| Smoothing kernal  | Select the width in mm to blurr each dipole. Default is 20mm, although that is quite heavy. 10mm provides a nice tradeoff between resolution and cluster visability. Trying multiple values here is highly suggested. This affects both the tiled and interactive images (first and second images in the lower table).                                                                       |
-| Slice orientation | Select the orientation in which the MRI is sliced for the tiled dipole density plot                                                                                                                                                                                                                                                                                                          |
-| Color range       | Select the range of values to show in the tiled dipole density plot. To select a useful range of values, it is helpful to first plot the figures with an automatic range and then look at the colorbar. The values are quite small as the dipole density values are normalized such that the voxels of the brain sum to 1. This will affect the Interactive plot as well in a later version. |
-| Plot 1 - Plot 2   | If groups are selected in the dropdown menu, a second version of the tiled dipole density figure showing the the difference in dipole densities between the groups will be created. The difference will be thresholded by using the valuethe given Thresh. The thresholding is done using uncorrected p-valuel.                                                                              |
-| Save plot         | If checked, saves all plots excluding the interactive dipole density figures.                                                                                                                                                                                                                                                                                                                |
+| クラスター | クラスターを選択 |
+| グループ | クラスターのサブグループを選択し、研究条件に基づいてプロットする |
+| カラー | 3Dダイポールプロット(下表の立体画像)対応クラスターを表す色を選択 |
+| スライスオリエンテーション | タイルドダイポール密度のプロットにMRIをスライスするオリエンテーションを選択 |
+お問い合わせ スムース・カーナ | 各ダイポールをボラーにmmの幅を選択します。 デフォルトは20mmですが、かなり重いです。 10mm は決断およびクラスターの可視性間の素晴らしいトレードオフを提供します。 ここで複数の値を試してみると、非常にお勧めします。 これは、タイルとインタラクティブな画像(下表の最初の2番目の画像)の両方に影響を与えます。 お問い合わせ
+| スライスオリエンテーション | タイルドダイポール密度のプロットにMRIをスライスするオリエンテーションを選択 |
+お問い合わせ カラーレンジ | チルドダイポール密度プロットで表示する値の範囲を選択します。 値の有用な範囲を選択するには、最初に図を自動範囲でプロットし、カラーバーを見るのに役立ちます。 値がダイポール密度値が正常化されているため、脳の合計のボクセルは1. これは、後ほどのバージョンでもインタラクティブなプロットに影響を与えます。 お問い合わせ
+| Plot 1 - Plot 2 | グループがドロップダウンメニューで選択されている場合は、グループ間のダイポール密度の違いを示すタイルの2番目のバージョンが作成されます。 差は、与えられたStresh値を使用して保持されます。 しきい値は未修正p-valuelで行われます。 お問い合わせ
+お問い合わせ プロットを保存 | チェックした場合、対話型ダイポール密度の数値を除くすべてのプロットを保存します。 お問い合わせ
 
-The plots provided are shown below:
+以下に示します。
 
 <table>
 <tbody>
 <tr class="odd">
-<td><p>Tiled dipole density plot: Each cluster selected will create a tiled image of MRI slices showing the cluster densities. The orientation of the slices is chosen using "Slice Orientation" in the original pop-up interface.</p></td>
+<td><p>タイルを張られたダイポール密度のプロット: 選択した各クラスターは、クラスター密度を示すMRIスライスのタイル画像を作成します。 オリジナルポップアップインターフェースの「スライスオリエンテーション」を使ってスライスのオリエンテーションを選択します。</p></td>
 <td><p><img src="images/Dipoledensity_dipplottile.png"></p></td>
 </tr>
 <tr class="even">
-<td><p>Interactive dipole density plot: This figure contains the same information as in the tiled dipole density plot. the interface allows the slice locations to be shifted in real time to allow for a more intuitive egometric understanding of dipole density locations.</p></td>
+<td><p>相互ダイポール密度のプロット: この図は、タイルドダイポール密度プロットと同じ情報が含まれています。 インターフェイスにより、スライスの位置をリアルタイムでシフトし、より直感的なダイポール密度位置のegometric理解を可能にします。</p></td>
 <td><p><img src="images/Dipoledensity_dipplotinteractive.png" width="150px" height="300px"></p></td>
 </tr>
 <tr class="odd">
-<td><p>3D dipplot: All the dipoles from the selected clusters and groups are presented in 3D. Each cluster/group is marked by the color chosed in the user interface.</p></td>
+<td><p>3Dディップロット: 選択したクラスターとグループからのすべてのダイポールが3Dで表示されます。 各クラスター/グループは、ユーザーインターフェイスで選択した色によってマークされます。</p></td>
 <td><p><img src="images/Dipoledensity_dipplot3d.png"></p></td>
 </tr>
 </tbody>
 </table>
 
-Note: Another use of this function could be to estimate the number of
-clusters to group dipoles into; although, to do so you must first create
-a cluster containing all dipoles. Eventually, this will be integrated as
-an option so that the extra clustering step is not necessary for this
-initial analysis.
+注意: この関数の別の使用は、数を推定することができます
+ダイポールをグループ化するためのクラスター。ただし、最初に作成しなければならない
+すべてのダイポールを含むクラスター。 最終的には、これは次のように統合されます
+このために追加のクラスタリングステップは必要ありませんので、オプション
+初期解析。
 
-Authors: Luca Pion-Tonacini and Makoto Miyakoshi. SCCN, INC, UCSD. The function to show tiled dipole plots (mir3dplot) was written by Arnaud Delorme.
+著者:ルカ・ピオン・トナチーニ、ミヤコシマコト。 SCCN、INC、UCSD。 チルド・ディポール・プロット(mir3dplot)を示す機能はArnaud Delormeによって書かれました。
 
-# Version history
+# バージョン履歴
 
-## Version 0.40 Update (10/31/2018)
+## バージョン 0.40 更新 (10/31/2018)
 
-[Talairach daemon](http://www.talairach.org/index.html) (Lancaster et
-al., 1997; Lancaster et al., 2000) is supported, via Christian Kothe's
-function, to obtain anatomical location of the cluster centroid.
-Standard deviation of the cluster centroid (the mean across x, y, and z
-values) is used to determine the diameter of the confusion sphere. The
-cursor's initial position is set to the voxel with the maximum dipole
-density. Probabilistic dipole density is correctly scaled so that sum of
-all the voxels == 1.
+[Talairachデーモン](http://www.talairach.org/index.html) (ラncaster et)
+al.、1997;Lancaster et al.、2000)は、クリスチャン・コテーズによるサポートされます。
+機能、クラスターの遠心分離機の解剖学的な位置を得るために。
+クラスターの遠心分離機の標準的な偏差(x、yおよびzを渡る平均)
+値)は、融合球の直径を決定するために使用されます。 ふりがな
+カーソルの初期位置は、voxel に設定され、最大ダイポール
+密度。 確率的ダイポール密度が正しくスケールアップされ、その合計
+すべての voxels == 1。
 
-In using Talairach daemon, I prepared an exclusion criteria to exclude
-non-EEG-generative areas that are included by default. For the Level3
-outputs, the following list is applied. For the Level5 outputs, only
-Brodmann areas are used. Only these two levels are used. The full list
-of the Talairach daemon output can be found
-[here](http://www.talairach.org/labels.html). The probabilities for
-Level3 (anatomical names) and Level5 (Brodmann area numbers) are
-calculated separately, so the sum of probability FOR EACH is 1. If you
-add up Level3 and Level5 together, they will overlap each other and the
-sum will be 2.
+Talairachのデーモンを使用して、私は除外する除外基準を用意しました
+デフォルトで含まれている非EEG遺伝子領域。 レベル3の場合
+出力は、次のリストが適用されます。 Level5の出力は、
+ブロドマンエリアが使われています。 これらの2つのレベルのみが使用されます。 完全なリスト
+Talairachのデーモンの出力は見つけることができます
+[詳しくはこちら](http://www.talairach.org/labels.html)お問い合わせ 能力について
+Level3(名)とLevel5(Brodmann)は、
+別に計算されるので、EACHの確率の合計は1です。 お問い合わせ
+Level3 と Level5 を一緒に追加すると、それぞれが重なり、
+要約は2になります。
 
 ```
 `      % Exclusion list--'x' means to exclude.`
@@ -150,59 +150,59 @@ sum will be 2.
 `      x Uvula of Vermis`
 ```
 
-![Version0_40.png](images/Version0_40.png)
+![バージョン0_40.png](images/Version0_40.png)
 
-This is how the probabilistic labels are generated.
+これは、確率的ラベルが生成される方法です。
 
-1.  You specify one point per IC cluster (the point where peak dipole
-    probability is shown) in inside-brain space in MNI coordinate.
-2.  You expand the point to a sphere with a radius that has the length
-    of standard deviation of dipole locations (in x, y, and z--then the
-    three SD values are averaged).
-3.  The expanded 'sphere' now contains multiple spatial grid points,
-    each of which has anatomical label. Now, let's say the current
-    sphere contains 30 spatial grid points. If 10/30 points are assigned
-    with 'medial PFC', then 10/30 = 33% of the anatomical label is
-    associated with 'medial PFC'. If 7/30 points are assigned with
-    'medial OFC', then 7/30 = 23.3% of the anatomical label is
-    associated with 'medial OFC'. In this way, you list up all the
-    unique anatomical labels, then counts how many points are associated
-    with, then finally calculate the ratio against the total number of
-    the points included.
+1.  IC クラスターごとの1ポイント(ピークダイポールのポイント)
+    MNI座標の内側の領域で確率が示されます。
+2.  あなたは長さを持っている半径で球にポイントを拡大します
+    ダイポールの位置の標準的な偏差(x、y、z-then)
+    3つのSD値の平均値
+3.  拡張された 'sphere' には、複数の空間グリッドポイントが含まれています。
+    それぞれに解剖ラベルがあります。 今、現在のことを言う
+    球は30の空間の格子ポイントを含んでいます。 10/30ポイントが付与される場合
+    'medial PFC' で、10/30 = 33% の解剖ラベルは
+    'medial PFC' に関連付けられている。 7/30 ポイントが付与される場合
+    'medial OFC', その後 7/30 = 23.3% 解剖ラベルは
+    "medial OFC' に関連付けられている。 このようにして、すべてのものをリストアップします
+    独自の解剖ラベルは、いくつのポイントが関連付けられているかをカウントします
+    と、最後に比率を総数に対して計算します。
+    ポイントが含まれています。
 
-## Update (05/26/2017)
+## 更新(2017年05月26日)
 
-Used and bug in calculating dual dipole (now selects the side by
-obtaining the actual x coordinate values) fixed.
+デュアルダイポールを計算する使用とバグ(現在、サイドを選択)
+実際のx座標値を取得する)固定します。
 
-## Update (05/22/2017)
+## 更新(2017年05月22日)
 
-A cluster centroid is calculated only using one of the bilateral dipoles
-on the side the centoid of the single dipoles exists.
+クラスターの遠心分離機は両側のダイポールの1つだけを使用して計算されます
+一方のダイポールのセントイドが存在する。
 
-## Update (03/16/2017)
+## 更新(2017年3月16日)
 
-When (symmetrical) two dipoles are fit bilaterally (using Caterina's
-fitTwoDipoles plugin, for example), mean, standard deviation, and
-standard error of dipole clusters are computed only using the one on the
-same side of the cluster centroid. Visualization still uses two dipoles.
+(対称)2つのダイポールが両側に収まるとき(Cataerina'sを使用して)
+FitTwoDipoles プラグイン、例えば)、平均、標準偏差、および
+ダイポールクラスターの標準的なエラーは、上のものだけを使用して計算されます
+クラスターの遠心分離機の同じ側面。 視覚化は2つの棒を使用します。
 
-## Update (03/06/2017)
+## 更新(2017年03月06日)
 
-Now crosshair is supported on the interactive browser. Also, input for
-the 3-D Gaussian kernel size was changed from sigma in Gaussian equation
-to full-width half-maximum (FWHM) which is more standard in
-neuroimaging. FWHM = sigma\*2.355.
+対話型ブラウザでクロスヘアがサポートされています。 また、入力用
+Gaussian カーネルのサイズは Gaussian の sigma から変更されました。
+完全な幅の半分maximum (FWHM)へのより標準的なです
+神経刺激。 FWHM = シグマ\*2.355.
 
-![Crosshair2.png](images/Crosshair2.png)
+![クロスヘア2.png](images/Crosshair2.png)
 
-## Update (09/13/2016)
+## 更新(2016年09月13日)
 
-Now it returns cluster centroid standard deviation and errors as
-follows.
+今、それはクラスターの遠心分離機の標準の偏差および間違いをとして戻します
+以下。
 *Cluster: 3*
-*Centroid in MNI: \[-29 -69 8\]*
-*Standard Deviation: \[ 8 15 16\]*
-*Standard Error : \[ 2 4 5\]*
+*MNIのCentroid:\[-29-69 8\]*
+*標準偏差:\[ 8 15 16 \] * 必須
+*標準誤差 : \[ 2 4 5 \] * 必須
 
 

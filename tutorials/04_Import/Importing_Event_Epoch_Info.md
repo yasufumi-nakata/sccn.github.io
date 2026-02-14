@@ -9,14 +9,14 @@ grand_parent: Tutorials
 ===========
 お問い合わせ
 
-このチュートリアルでは、EEGLAB のグラフィックインターフェイス内の EEGLAB イベントのインポート、変更、選択、および視覚化について説明します。
+チュートリアル EEGLABは、 変更、変更、選択、および変更
 
-EEGLABは実験的なイベントの時間と性質の記録をカウントします
-EEGデータを分析します。 このセクションでは、MATLABに保存されたデータチャネルの1つに埋め込まれたイベントの情報をロードする方法について説明します。
-配列、または ASCII ファイルを分離します。 イベント情報がインポートされると、EEGLABは結果のEEG.event構造をバックアップにコピーします
-(*ur*) コピー、EEG.urevent、各イベントからリンクを作成
+EEGLABは、実験イベントの開催場所とイベントの開催場所を、
+このサイトでは、MATLABのコンテンツが公開されました。
+カンファレンスの詳細は、EeGLAB の EEG.event をご覧ください。
+(*ur*) Eメール、EeG.urevent
 対応する尿道。 これにより、ユーザーがイベントを選択できる
-前回(または将来の)イベント *context*、さらに*after*データを含む
+前回(または)イベント *context*、さらに*after*データ
 チュートリアルのイベントスクリプトセクションに記載されているように、データからいくつかのイベントが拒否されました。
 
 <details open markdown="block">
@@ -31,18 +31,18 @@ EEGデータを分析します。 このセクションでは、MATLABに保存�
 イベントのインポート
 ------------
 
-イベントは、選択することでEEGLABにインポートすることができます <span style="color: brown">ファイル → インポートイベント情報</span> メニュー項目。 イベントをインポートするさまざまな方法は以下のとおりです。
+選択する <span style="color: brown">ファイル → インポートイベント情報</span> メニュー項目。 イベントをインポートするさまざまな方法は以下のとおりです。
 
 ### データチャネルからのイベントのインポート
 
 実験的なイベントに関する情報は、しばしば1つに記録されます
-EEGデータ行の行(チャンネル)。 まずは、
+EEGデータ行の行(チャンネル)。
 データをシミュレートし、データチャネルからイベントをインポートする方法を説明します。
-EEG のデータセットを 33 行 (チャンネル) と仮定して、その最初の
+EEG のデータセットを 33 行 (チャンネル) と 仮定, その後、その
 32 はデータ チャネルであり、最後の (33) は値 1 のでき事チャネルです
 (stimulus onset), 2 (subject response), 0 (Other). MATLABコード
 そのようなデータを生成する(テスト、コピー、コードを貼り付ける)
-MATLABコマンドライン:
+MATLAB について
 
 ```matlab
 eeglab
@@ -51,27 +51,27 @@ eegdata(33,[10:256:256*100]) = 1; % simulating a stimulus onset every second
 eegdata(33,[100:256:256*100]+round(rand*128)) = 2; % simulating reaction times about 500 ms after stimulus onsets
 ```
 
-上記のコードをMATLABにコピーし、配列*eegdata*をインポートした後
-EEGLABにテストデータセットとして使用 <span style="color: brown">ファイル → インポートデータ →
-ASCII/floatファイルまたはMATLAB配列から</span> メニュー項目, 選択
+MATLABにコピーする、eegdata*をエクスポートする
+EEGLABにテストデータセット <span style="color: brown">ファイル → インポートデータ →
+ASCII/floatファイル MATLAB は、</span> メニュー項目, 選択
 <span style="color: brown">ファイル → インポートイベント情報 → データから
 チャンネル</span> 関数を呼び出すためのメニュー項目 [ポップ_chanevent.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanevent.m) .
 
-![画像:Ii21pop_chanevent.jpg](/assets/images/II21pop_chanevent.jpg)
+![Ii21pop_chanevent.jpg はコメントを受け付けていません。](/assets/images/II21pop_chanevent.jpg)
 
-*33*をイベントチャンネルとして入力し、*up にエッジエキストラタイプを設定
+*33*はイベントのチャンネルに必須項目です。 特許出願中
 (トップ)* (注記: テキストにマウスを置く * 変換 抽出する*
 コンテキストヘルプメッセージが表示されます。
 
-プレス *Ok*. 現在、イベント情報をインポートしました。
-EEGLAB データセットをテストします。 同時に、チャンネル33は削除されました
+プレス *Ok*. お問い合わせ
+EEGLAB は、EEGLAB のプログラムを準備中です。
 テストデータから。 メニュー項目を選択 <span style="color: brown">編集 → イベント
 バリュー</span> インポートされたイベントタイプとレイテンシーを検査します。
 
-### MATLAB配列またはテキストファイルからイベントをインポートする
+### MATLABをビルドするか、 テキストファイル をインポートする
 
-上記のランダムなEEGデータセットを使用して、イベント情報をインポートします。
-ASCII テキストファイルに保存されます。
+新着情報
+テキストファイル
 [チュートリアル_eventtable.txt](http://sccn.ucsd.edu/eeglab/download/tutorial_eventtable.txt).
 このテキストファイルは3つの列で構成され、最初に含まれている
 イベントの遅延(秒)、イベントの2番目のタイプ、および
@@ -121,41 +121,41 @@ ASCII テキストファイルに保存されます。
 </table>
 
 メニュー項目を選択 <span style="color: brown">ファイル → インポートイベント情報 → インポート
-MATLAB 配列または ASCII ファイル</span>
+MATLAB または ASCII ファイル</span>
 
-![画像:Pop_importevent.jpg](/assets/images/pop_importevent.png)
+![サイトマップ](/assets/images/pop_importevent.png)
 
 チュートリアルテキストファイルのためにブラウズ [チュートリアル_eventtable.txt](http://sccn.ucsd.edu/eeglab/download/tutorial_eventtable.txt)ヘッダー行数を 1 に設定します。
 (ファイルの最初の行では、列フィールド名を与えます)
 入力フィールド(すなわち、列に関連付けられている名前を)設定します。
-array) から *latency 型 position* へ。 これらのフィールド名が引用されているか、
-commasで区切って、これらの追加文字は無視されます。 (注意: それはあります
-フィールドの2つに*latency*と*type*という名前を使用する必要があります。
-EEGLABは、これらの2つのフィールド名を使用してイベントを抽出、ソート、表示します。 これらのフィールドは、MATLABがケースの機密性であるので、下方でなければなりません。) イベントのレイテンシーは、テキストファイル内の秒数、ミリ秒数、またはサンプルで、EEGLABに常に保存されます。
-このインタラクティブなウィンドウで、入力 *Event indices* とチェックボックス
+array から *latency 型 position* へ へ フィールド名が 引用符 か、
+com で で で されます されます されます されます されます
+フィールドの2つに*latency*と*type*の同時通訳。
+EEGLAB は、EEGLAB が、EEGLAB が、EEGLAB が、EEGLAB を、EEGLAB に、EEGLAB が、EEGLAB が、EEGLAB が、EEGLAB が、EEGLAB が、EEGLAB が、EEGLAB が、EEGLAB が、EEGLAB に、EEGLAB が、EEGLAB が、EEGLAB で、EEGLAB を に表示します。 MATLAB は、MitLab は、MitLab の、MitLab の、MitLab の、MitLab の、Mithub の、Mithub の、Mithub の、Mithub の、Mithub の、Mithub の、Mithub の、Mithub の、Mithub の、Mithub の、Mithub の、Mithub 、Mithub の、Mithub の、Mithub の、Mithub の、Met など、Mithub は、Mithub で、Mithub の を に に して、Mit を に に する。
+このウィンドウでは、 *イベントインデックス*とチェックボックス
 *イベントを返したいですか?* は、置換ではなく新しいイベントを投入するために使われます。これはデフォルトの動作です。サブセット
-新規イベント(例えば、大きな EEG ファイルの場合、あるかもしれない)
+最近の投稿
 複数のイベントファイル。
 
 #### イベントの整列に関する重要な注意
 
 上記の必須入力は、*データイベントへのイベントレイテンシーを一元化*です。
 既存のイベントレイテンシに最初のイベントレイテンシを揃え、チェック
-レイテンシの一貫性。 *NaN*(MATLAB)の数値
+*NaN*(MATLAB)の数値
 このオプションは無視されます(上記の例のように)。
-しかし、ほとんどのEEGデータでは、EEGは保存された基本イベントで記録されます。
+しかしながら、EEGが保存された基本イベントは、
 イベントチャンネル(上記データチャネルからのインポートイベント参照)
 インスタンス。 詳細なイベント情報はテキストに別々に記録されます
-file: その結果として、テキストファイルに記録されたイベントは、
-EEGで記録されたイベントと整列。
+そこで、このイベントは、
+EEGイベントと整列
 
-そのためには、*Alignイベントのレイテンシーをデータイベント*から0に設定します。
+とりあえず、あえず、あたたかな、あたたかな、あたたかな、あたたかな、あたたかな、あたかな、あたかな、あたたかな、あたかな、あたかな、あたたかな、あたかな、あたたかな。
 テキストファイルの最初のイベントが最初のイベントに対応する場合
-EEGで記録される(つまり、2つのオフセットが0の場合)。 セットアップ
+EEG でレコードの検索結果は、
 この値が 1 の場合、イベントのテキストファイルでイベント 1 が表示される
-EEGデータのイベント番号2に対応。 ここでは、負の値が
+EEGイベントの対応
 また、テキストファイルの開始前にイベントが始まることを示すために使用されます
-EEGで記録される。
+EEGHの記録
 
 イベントを整列するときは、次のセクションに示すように、関数
 2つのイベントタイプのレイテンシーが表示されますので、ユーザーは確認することができます
@@ -168,32 +168,32 @@ EEG(エッグ)
 
 ### プレゼンテーションファイルからイベントをインポートする
 
-EEGLABは、プレゼンテーションソフトウェアを使用して保存されたイベントをインポートすることもできます。
+EEGLAB は、EEGLAB のソフトウェアの保存を行ないます。
 サンプルファイルはこちらからダウンロードできます。
-[テスト.SMA](http://sccn.ucsd.edu/eeglab/download/TEST.SMA) (スナップマスター)
-.SMA ファイル [ダウンロード](http://sccn.ucsd.edu/eeglab/download/TEST.LOG)
-(プレゼンテーションイベントログファイル) リンクとテキストファイルが表示される場合は、リンクをクリックし、*Saveリンクを*として保存して保存してください。
+[ソリューション](http://sccn.ucsd.edu/eeglab/download/TEST.SMA) (スナップマスター)
+お問い合わせ SMAファイル [ダウンロード](http://sccn.ucsd.edu/eeglab/download/TEST.LOG)
+イベントログファイル  リンク  リンク * * *
 
-これらのサンプルファイルの使用をテストするには、最初にインポートします。 SMAデータファイル
-メニュー項目を使用して <span style="color: brown">ファイル → インポートデータ → . SMAデータ
+SMAデータファイル
+メニュー項目を使用して <span style="color: brown">ファイル → インポート → . SMAデータ
 ファイル</span>お問い合わせ それから選択して下さい <span style="color: brown">ファイル → インポートイベント情報 →
 プレゼンテーションログファイルから</span> イベントをインポートする
 以下に示すようにプレゼンテーションログファイル</span>
 
 
 
-![画像:load_presentation_file.png](/assets/images/load_presentation_file.png)
+![サイトマップ](/assets/images/load_presentation_file.png)
 
 
 
 その後、次のウィンドウがポップアップ表示されます</span>
 
 
-![画像:Pop_importpres2.jpg](/assets/images/Pop_importpres2.jpg)
+![Pop_importpres2.jpg _ プロフィール](/assets/images/Pop_importpres2.jpg)
 
 フィールドをスクロールして、どのフィールド(すなわち、ファイル列)が含まれているかを選択します。
 イベントタイプとイベントレイテンシを含むカラム。 デフォルト値は
-この特定のファイルについては、単に*Ok*を押してください。 MATLAB が返します。
+お問い合わせ MATLAB が返されます。
 
 ```matlab
 Replacing field 'Event Type' by 'type' for EEGLAB compatibility
@@ -214,15 +214,15 @@ Done.
 ```
 
 プレゼンテーションで記録された最初のイベントレイテンシを揃える機能
-SnapMasterでEEGで記録された最初のイベントレイテンシにファイル
-ファイル。 SnapMasterファイルで記録されたイベントに、
-.LOG プレゼンテーションファイルに記録されたものと同じレイテンシー。 ふりがな
+SnapMasterでEEGの記録が公開されました
+ファイル。 SnapMasterのファイル作成
+ふりがな
 関数は、最高のサンプリング速度比を計算します。これはアカウントかもしれません
 見本抽出率の小さい相違のために大きいにつながることができます
 実験終了時の差(例:0.01%クロック差)
 1時間半に360ミリ秒の差が出ます。
 修正されていない)。 イベントがシフトされている場合(敬称して)
-バイナリEEGファイルからイベントを抑制することも可能です。
+バイナリーEEGファイルについて
 手動でイベントやプレゼンテーションファイルをテキストファイルとしてインポートする
 前のセクションで説明します。 プレゼンテーションファイルの一部
 ファイルの末尾にコメントが含まれている場合、サポートできません。 お問い合わせ
@@ -232,39 +232,39 @@ SnapMasterでEEGで記録された最初のイベントレイテンシにファ�
 前のセクション。
 
 注意: プレゼンテーションファイルには、より多くのイベント(反応時間など)が含まれています。
-私たちが輸入している理由は、生EEGデータファイルよりも
+生EEGデータファイル
 お問い合わせ イベントが整列されると、自動的に重複するイベントを削除します。
 
-### E-Prime情報ファイルのインポート
+### E-Primeについて
 
-E-prime 形式は非常に設定可能ですので、ASCII を使うこともできます。
+E-prime は、 アスキー
 データをインポートするためのインポーター。 利用する <span style="color: brown">ファイル → インポートイベント情報 →
-E-Prime ASCIIファイルから</span> メニュー項目は、呼び出しと同じです <span style="color: brown">インポートデータ → ASCII/floatファイルまたはMATLAB配列から</span> メニュー項目。 設定する
-E-Prime 列の名前をインターフェイスし、イベントファイルをインポートします。 場合によっては、E-Primeをタブ区切りファイルへエクスポートする必要があります(for
+E-Prime ASCIIファイルから</span> メニュー項目は、呼び出しと同じです <span style="color: brown">株式情報 → ASCII/floatファイルまたは MATLAB は、</span> メニュー項目。 設定する
+E-Prime 列のディレクトリは、 E-Prime は、
 たとえば、スプレッドシートアプリケーションで)、列の一部を編集する
-MATLABでは正しく読み取れない情報。 お問い合わせ
-E-Primeファイル (sccn.ucsd.edu の eeglab で) なので、ASCII を仕立てるかもしれません。
-E-Primeファイルのインポートメニュー。
+MATLABでは、
+E-Primeファイル (sccn.ucsd.edu の eeglab で) は、ASCII が正常に実行されます。
+メニュー
 
-### Neuroscan .DAT情報ファイルのインポート
+### DAT情報通信
 
-サンプル。 DATファイル [TEST.DATの特長](http://sccn.ucsd.edu/eeglab/download/TEST.DAT) サンプルに関連付けられている [試験.CNT](http://sccn.ucsd.edu/eeglab/download/TEST.CNT) 連続的なファイルはテスト目的のためのダウンロードのために利用できます。 両方 . DATファイルと. CNTファイルには、同じイベントが含まれている必要があります(この場合、100)。 Neuroscan .DAT ファイルにはデータエポック情報が含まれています。そのため、CNT ファイルを EEGLAB にインポートした後、最初にデータを抽出する必要があります。 そのためには、メニュー項目を使用する <span style="color: brown">ツール → 抽出エポック</span>お問い合わせ -0.1 から 0.5 までのタイムウィンドウを選択し、100 個のエポックが生成されることを確認してください(時間ウィンドウが大きすぎると、オンセットとアウトセットが削除される場合があります)。 それからNeuroscanを輸入するため。 DATファイル、メニュー項目を使用する <span style="color: brown">ファイル → インポート エポック情報 → Neuroscan .DAT情報ファイルから</span>お問い合わせ インポートするファイルを選択すると、2番目のウィンドウが表示されます。
+DATファイル [TEST.DATの特長](http://sccn.ucsd.edu/eeglab/download/TEST.DAT) サンプルに関連付けられている [品質保証](http://sccn.ucsd.edu/eeglab/download/TEST.CNT) DATファイルとDATファイル イベント イベント イベント 100 100 100 100 100 CNTは、 に に に に に に に は は は <span style="color: brown">ツール → 抽出エポック</span>ウィンドウが大きかったので、 ウィンドウが開きます。 Neuroscan をインポートします。 メニュー <span style="color: brown">ファイル → インポート ソース ソースファイル</span>お問い合わせ インポートするファイルを選択すると、2番目のウィンドウが表示されます。
 
-![画像:Pop_loaddat.gif](/assets/images/Pop_loaddat.gif)
+![サイトマップ](/assets/images/Pop_loaddat.gif)
 
-.DATファイルでは、それぞれに反応時間(ミリ秒単位)がある必要があります
+.DATファイルでは、
 エポック。 しかし、実験設計によっては反応がない場合もございます。
 特定のエポックの時間。 その後、反応のためにコード値を使用する必要があります
 これらのエポックの時間レイテンシー。 例えば、
-*1000*(ms) の値は、被写体が応答しなかったことを示します。
+*1000*(ms) の 、 被写体 が あります。
 (実験のすべてのエポックがすでに反応時間を持っている場合は、
 お問い合わせ
 
-### EEGLABにEPOC情報(MATLAB配列またはテキストファイル)をインポートする
+### EEGLABにEPOC情報(MATLABの配列やテキストファイル)をエクスポート
 
-epoch 情報のインポートは、データ epoch が既に存在していることを意味します。
-連続した EEG データと MATLAB 配列から抽出するか、
-テキスト epoch 情報ファイルには、epoch ごとに 1 つのエントリがあります。 方法を説明する
+epoch は、 epoch は、
+EEGデータとMATLABを組み合わせて、
+テキスト epoch 情報ファイル、epoch は 1 のエントリです。
 このようなファイルや配列をインポートするには、シミュレートされたファイルを作成すると、
 EEGデータ。
 
@@ -272,15 +272,15 @@ EEGデータ。
 eegdata = rand(32, 256, 10); % 32 channels, 256 time points per epoch, 10 epochs
 ```
 
-メニュー項目を選択 <span style="color: brown">ファイル→ インポートデータ→ ascii/floatデータファイルまたはMATLAB配列から</span>お問い合わせ 参照して下さい [前のセクション](http://localhost:4000/tutorials/Import/Importing_Continuous_and_Epoched_Data.html) チュートリアルの。 
+メニュー項目を選択 <span style="color: brown">ファイル→ インポートデータ→ ascii/floatデータ MATLAB は、</span>お問い合わせ 参照して下さい [前のセクション](http://localhost:4000/tutorials/Import/Importing_Continuous_and_Epoched_Data.html) チュートリアルの。 
 
-MATLAB 配列は 3 D で、
+MATLAB は 3 D で、
 データエポックとして自動的に輸入される:最初の次元はあります
 データチャネルとして解釈され、データポイントとして2番目に、および3分の1
-データ epochs か試験(例えば、上の私達のサンプル データ マトリックスは 10 を含んでいます
-エポック シミュレーションしたEEGデータが簡単なものから来たことを想像してみましょう。
-stimulus/response タスクは、 'correct' または 'true' または 'true' のいずれかの応答を持つ。
-'wrong' とミリ秒で記録された応答レイテンシー。 それからエポック
+試験 例えば 例えば 例えば サンプル サンプル  10
+エポック シミュレーション から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から から
+stimulus/response は、 'true' または 'true' または 'true' の応答です。
+'wrong' と ミリ秒 で 録画応答 レイシー。
 イベントファイルは次のようになります。
 
 <table>
@@ -323,38 +323,38 @@ stimulus/response タスクは、 'correct' または 'true' または 'true' �
 
 このファイル [チュートリアル_epoch.txt](http://sccn.ucsd.edu/eeglab/download/tutorial_epoch.txt) かもしれません
 ダウンロード(またはテキストファイル内の上の配列からコピー) それから選択して下さい
-メニュー項目 <span style="color: brown">ファイル → インポート epoch info → MATLAB から
+メニュー項目 <span style="color: brown">ファイル → epoch 情報 → MATLAB から
 array または ascii ファイル</span>, 次のウィンドウを上げます:
 
-![画像:Ii33pop_inportepoch.jpg](/assets/images/II33pop_inportepoch.jpg)
+![Ii33pop_inportepoch.jpg はコメントを受け付けていません。](/assets/images/II33pop_inportepoch.jpg)
 
 
-上記は、*tutorial_epoch.txt*ファイルを参照し、入力フィールドを入力フィールドに設定します。
-*epoch応答rt*(rtは'reaction time'の頭字語です)。 ふりがな
-レイテンシー情報を含むこれらのフィールドの1つだけは*rt*です。
-*Field名(s)に入力して入力します。
-latencies* クエリ ボックス。 このファイル(上記参照)には1つのヘッダラインがあります。
-無視*ボックスにファイルヘッダ行の*Numberで指定する必要があります。
+は、*tutorial_epoch.txt*を参照して、フィールドに入力してください。
+*epochrt*(rtは'reaction time'の頭字語です)。ふりがな
+レイテン インフォメーション
+*Field名(s)を入力して入力してください。
+このファイルは1つのヘッダの行程です。
+無視 * * *
 最後に、反応時間はミリ秒で記録されます。
-*1E-3*(例:第2の第1位)として示します。 注意:
-最後のエントリ, *古いepochを削除 ...*, ユーザーが他のインポートすることができます
-設定されていない場合は後で情報。 ニュース *Ok* は、 今すぐ選択
+*1E-3*(例:第2回第1位)
+最後のエントリ, *古いepoch 削除 ...*, 元の投稿
+*Ok* は、
 お問い合わせ <span style="color: brown">編集 → イベントの値</span> メニュー項目は何かを点検します
 反応時間情報に起こった(矢印を使用して移動します)
 第2イベント:
 
-![画像:Ii33pop_editeventvals.jpg](/assets/images/II33pop_editeventvals.jpg)
+![Ii33pop_editeventvals.jpg _ 公式サイト](/assets/images/II33pop_editeventvals.jpg)
 
-上記に示すように、epoch情報がインポートされたとき、型付きのイベント
-*rt* が作成され、レイテンシが割り当てられました。 いくつかありましたら
+上記 とき とき とき とき とき
+*rt* が作成されます。
 レイテンシ情報を含む列、関数は作成されます
 いくつかのタイプ。 試行回数(10、この場合は、
-EEGデータセットで試用回数に一致しない)、これはあなたが持っているので
-"eegdata" 変数を正しくインポートしない。
+EEGデータセットで試用してみる
+"eegdata" 変数を呼び出します。
 
 注意: 便宜上、標準のエポック情報は
-変数 *EEG.epoch* のコマンドラインから利用できます。 イベント
-*EEG.event*で利用可能な情報はスクリプトやコマンドに使用できます。
+変数 *EEG.epoch* の現在のところ。 イベント
+*EEG.event* では、クライアントのクライアントをフォローしています。
 ラインデータ処理。 イベントスクリプトの書き込みを参照してください。
 詳細については、チュートリアル。
 
@@ -362,21 +362,21 @@ EEGデータセットで試用回数に一致しない)、これはあなたが�
 ------------------------
 
 現在のセクションでは、イベントの処理に精通するのに役立つはずです
-EEGLAB では ほとんどの EEGLAB 関数はイベントを考慮に入れます。 例えば、
+EEGLAB は、EEGLAB のプロジェクトで、EEGLAB のプロジェクトを運営しています。
 データを削除する関数()[pop_eegplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_eegplot.m), 
-[ポップアップ_select.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_select.m)) また、中に発生するイベントも削除します
+[選択する](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_select.m)) また、中に発生するイベントも削除します
 削除されたデータ(その対応するイベントではない)。
 連続データを処理する機能([pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m),
 [pop_resample.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_resample.m), [pop_mergeset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_mergeset.m)) 取ります
-'boundary' イベント (EEGLAB が追加したデータイベント) を考慮に入れる
+'boundary' イベント (EEGLAB が追加データイベント)
 削除されたデータの部分または「ハード」境界
-連結されたデータセット間の。 イベント *type* フィールドは、データエポックを抽出し、ERP-image のプロットを作るためにイベントを使用することができます。 [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) 機能。 最後に、グループレベルの解析にイベント情報を広く利用しています。
+統合データセット. イベント *type* フィールドは,データエポックを解析する,ERP-imageのプロットイベントを. [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) 機能。 最後に、グループレベルの解析にイベント情報を広く利用しています。
 
 ### プロットイベント
 
-まず、EEGLAB を起動し、データセット *eeglab_data.set* を読み込みます。
-*sample_data* フォルダーは、 <span style="color: brown">ファイル → ロード
-データセット</span> メニュー項目。 次に、 <span style="color: brown">Plot → チャネル
+Eeeglab_data.set* は、Eeglab のデータベースです。
+*sample_data* は、 <span style="color: brown">ファイル → ロード
+データセット</span> メニュー項目。 次に、 <span style="color: brown">パロット →
 データ(スクロール)</span> データと関連イベントを視覚化するためのメニュー項目。
 
 ![](/assets/images/Scroll_raw_data.png)
@@ -387,58 +387,58 @@ EEGLAB では ほとんどの EEGLAB 関数はイベントを考慮に入れま�
 
 ### 認定イベントフィールド
 
-EEGイベント構造は、実験的なイベントの記録が含まれています
+EEGイベントのレポート
 データが記録されたときに発生しました。 見るために
 イベントの情報は、 <span style="color: brown">編集 → イベント
 バリュー</span> メニュー項目(前のステップでインポートされたチュートリアルデータセットのイベントを示す下のウィンドウを参照してください)。
 
 ![](/assets/images/V1pop_editeventvals.png)
 
-*type* と *latency* フィールドは、最も重要な EEGLAB イベントです。
-フィールド(以下参照)。 これらの2つのEEGLAB関数を認識し、使用している
+*type* と *latency* は、EEGLAB の公式イベントです。
+フィールド(以下参照)。 つの つの つの
 イベントのプロット、トライアルのソートなどのためのフィールド (注)1つでも可
 これらのフィールドを欠いているプロセスイベントは、この強く制限しますが、
 イベント処理の可能性の範囲 他の分野を含む
-*epoch*、*duration*、*urevent*はEEGLABによってまた認められます(theyはあります)
-epoch の抽出、データの拒否、または
+*epoch*、*duration*、*urevent*はEEGによって作成されたLABはあります。
+epoch のエラー、または
 イベントデータの保存 ユーザー定義フィールドには、他の名前を持つことができます 
-上記例の *position* などのデータに関連する。
+*position* は、
 認定されたイベントフィールドの短い説明は以下のとおりです。 もっと詳しく
 情報は、イベントスクリプトチュートリアルで見つけることができます。
 
--   <u>タイプ:</u> - イベントの種類を指定します。 例えば、'square お問い合わせ
-上記の例では、stimulusタイプ、'rt' はサブジェクトボタンプレスです。
-(例、反応時間)イベントなど... 継続的なデータセットでは、EEGLABは
-'boundary' の型イベントを追加して、データ境界(ブレイク)を指定
+-   <u>タイプ:</u> お問い合わせ
+stimulus type、'rt' は サブジェクトボタンプレスです。
+(例、時間) 基本情報
+'boundary' の型イベントを、データ境界線( ) で指定します。
 連続データ)。
 -   <u>レイテンシー</u> - イベントレイテンシーが含まれています。 レイテンシー情報
     連続データまたはミリ秒単位で秒単位で表示
-    epochedデータのepochのタイムロックイベントに相対的。 私たちに関しては
+    epoched タイム 相対 相対 相対
     イベントスクリプトセクションでレイテンシ情報が表示されます。
     データサンプルに内部的に保存されます。 これらは僅かなサンプルかもしれません
     イベントの時間の解像度がデータ解像度を超えた場合。
 -   <u>期間</u> - イベントの期間。 お問い合わせ
     連続データとミリ秒単位で表示
-    epochedデータ。 内部的には、データサンプルに保存されます。
--   <u>エクステンション</u> - 元のイベント('ur' in')のインデックスが含まれています
+    epochedデータ。 は、
+-   <u>エクステンション</u> - 'ur' in' は、
     ドイツ)イベント構造。 最初のイベントはインポートされ、
-    'urevent' 構造と呼ばれる別の構造にコピーされます。
-    このフィールドはグラフィックインターフェイス(above)で隠されています
+    'urevent' は、
+    このフィールドは、Uncovery で、
     適度に修正しないでください。 このフィールドは詳細に記載されています
     イベントスクリプトチュートリアルで。
 -   <u>エポック</u> - イベントが落ちるデータエポック(もしあれば)のインデックス
-    お問い合わせ このフィールドは、データepochsのデータのみが公開されます。
+    このフィールドは、データ通信のみが公開されます。
     データが抽出されているので(ここにいない場合ではない)
     連続的な)。
 
 注意: すべてのイベントフィールドには、数字または文字列が含まれている場合があります。
-*レイテンシ*、*duration*、*urevent*および*epoch*は、含まなければなりません
-数字)。 たとえば、*type* フィールドには、数(例、1、2、2)を含むことができます。 
-等)または文字列(例、'square'、'rt'など)。 使用時注意
-お問い合わせ [ERPラボ](https://github.com/lucklab/erplab) プラグイン、イベント *type* フィールドは数値値を含むと予想されます。 EEGLABができない
+*レイテンシ*、*duration*、*urevent***、*epoch*は、
+数字)。 * * * * * * * 
+等)または文字列(例、'square'、'rt'etc)。 使用時間に注意
+お問い合わせ [ERPラボ](https://github.com/lucklab/erplab) フィールドは、値が値と予想されます。 EEGLABは、
 1つのフィールドに両方のフォーマット(数値と文字列)の混合物を処理します。 ツイート
 イベント構造をチェックする機能([eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m)
-フラグ *eventconsistency* で、データセットが変更されるたびに呼び出されます。
+*eventconsistency* では、データセットが変更されます。
 各フィールドのコンテンツが一貫性を維持し、自動的に強制されます。
 必要に応じて数値値を文字列に変換します。 この機能も自動的に 
 レイテンシーの増加によるリゾートイベント。 
@@ -446,19 +446,19 @@ epoch の抽出、データの拒否、または
 ### イベントの追加、変更
 
 新しいイベントを手動で入力するには、 <span style="color: brown">編集
-→ イベントの値</span> メニュー項目。 *Insertイベント*ボタンをクリックし、新規追加
+→ イベントの値</span> メニュー項目。 *Insertイベント*ボタン、追加追加
 イベント前のイベント。 ※イベント*ボタンはイベントを追加
 *その後*現在のイベント。 新規イベントの投入後、または
 イベントフィールド情報は、すぐに変更できます。
-対応ボックス たとえば、型*new*500のでき事を差し込むため
-タイムロックの刺激の開始の後でmsは、*new*をで入れます
-イベント *type* の編集箱およびイベント *latency* の編集箱の 500。
-注意: *cancel* ボタンをクリックすると、新しいものはありません。
+対応ボックス , 型 *new*500 の リリース
+タイムロックの開始時刻
+*type* の編集ボックスイベント *latency* の編集ボックスの 500.
+注意: *cancel* ボタン、新しいボタン。
 情報は保存されます。
 
 ![](/assets/images/V121pop_editeventvals_2.png)
 
-※Ok*を押すと、イベントが離脱されることがあります(必ず必ず必ずご持参ください)。
+※Ok* と、イベントが離脱したあとは、
 レイテンシーを増加させるため)、フィールドの内容は変更される場合があります。
 前回の最後に示されているように、一貫性を確保するために
 セクション。
@@ -467,54 +467,54 @@ epoch の抽出、データの拒否、または
 それぞれの編集ウィンドウに新しい値を入力するだけで変更
 フィールド。 イベントも削除できます(*イベント削除*ボタン)。
 
-ふりがな [EEGLABプラグイン](https://github.com/jadesjardins/vised_marks)
-EEGLABプラグインマネージャから利用可能なユーザーは手動で追加することができます
-EEGブラウザで直接イベントを行い、イベントをマークするのに便利です。
-興味(例えばblinksのような)。
+ふりがな [EEGLABのプラグイン](https://github.com/jadesjardins/vised_marks)
+EEGLAB プラグイン
+EEGブラウザで直接イベントを開催する
+例えば(例えば)
 
 ### 一括でイベントを変更する
 
-新しいイベントを変更する別の方法は、それらをエクスポートし、Excelの下にそれらを変更し、EEGLABにそれらをインポートすることです。 可能です。
-チュートリアルデータをインポートする *eeglab_data.set* で
-※EEGLABのsample_data*はメニュー項目を呼び出します。 <span style="color: brown">ファイル → エクスポート → テキストファイルへのイベント</span> 保存
+ 新しい  新しい  新しい  新しい  新しい  新しい に に に に に に に に に に に に に に に 。 に に に 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。
+eeglab_data.set* の使い方
+*EEGLABのsample_data*はメニューの項目です。 <span style="color: brown">ファイル → エクスポート → テキストファイルへのイベント</span> 保存
 データファイル。 このデータファイルを使用して、すべてのイベントの名前を変更する方法を示します。
-Excel の "response" 型でイベントに "rt" をタイプします。 ふりがな
+Excel の "response" の型でイベントに "rt" の型になります。
 以下の図は、エクスポートされたファイル(左)と編集されたファイル(右)を示しています。
 
 ![](/assets/images/Spreadsheet_event.png)
 
 それから、使用して下さい <span style="color: brown">ファイル → インポートイベント情報 → から
-ASCIIファイルのMATLAB配列</span> メニュー項目は変更されたファイルを選択します。 お問い合わせ
+ASCII は、</span> メニュー項目は変更されたファイルを選択します。 お問い合わせ
 列名は、ヘッダの 1 行があることを示し、
-ユニットレイテンシをNaNに(時間情報変換が必要であることを示す)。 お問い合わせ
+ユニットレイテンシをNaNに(時間情報交換)
 また、アライメントオプションのチェックを外します(チェックしたままにしても、何もありません)
 効果)。 今、すべてのイベントが名前を変更しました (インターフェイスに注意)
 次のセクションで提示されたイベントを選択すると、名前を変更することができます
-イベント型の値なので、これはdactic例としてのみ表示されます。
+イベント名は、
 
 ![](/assets/images/Event_reimport.png)
 
 ### 選択/取消/催し物
 
 可能です。
-チュートリアルデータをインポートする *eeglab_data.set* で
-※EEGLAB では、 特定のイベントを選択するには、 <span style="color: brown">編集 →
+eeglab_data.set* の使い方
+※EEGLABでは、イベントの開催、 <span style="color: brown">編集 →
 エポックやイベントを選択</span>メニュー項目。 大切なイベントを除去したり、イベントの名前を変更したりすることができます。 
 
 たとえば、「正方形」イベントだけを保持するには、以下に示すようにイベントタイプに「正方形」を入力します。
 
-![画像:pop_select_events_new2.png](/assets/images/pop_select_events_new2.png)
+![投稿ナビゲーション](/assets/images/pop_select_events_new2.png)
 
-また、2つのイベントタイプ(「スクエア」と「rt」)のみなので、すべての反応時間イベントを削除することもできます。 そのためには、イベントタイプに「rt」を入力し、チェックボックスをチェックして、以下に示すように他のイベントをすべて選択します。
+また、イベントの種類は「スクエア」と「rt」のみです。イベントの種類は「rt」に変わります。
 
-![画像:pop_select_events_new3.png](/assets/images/pop_select_events_new3.png)
+![投稿ナビゲーション](/assets/images/pop_select_events_new3.png)
 
-以下の例では、前のセクションで行なったように、 "rt" 型で "response" イベントに名前を変更します。
-イベントタイプの「rt」を選択し、名前変更イベントテキストボックスに「response」を入力します。 チェックを外すことを確認してください 
+とりあえず、あえず、とりあえず、とりあえず、とりあえず。
+タイトルイベント テキストボックスに「response」をつけます。 お問い合わせ 
 オプション *選択したイベントのみを選択して、他のイベントをすべて削除します*。 それ以外の場合は、タイプされていないすべてのイベント
 "rt" は削除されます。
 
-![画像:pop_select_events_new.png](/assets/images/pop_select_events_new.png)
+![投稿ナビゲーション](/assets/images/pop_select_events_new.png)
 
 注意: 指定した範囲外のイベントを選択するには、*イベントを選択してください
 フィールド範囲のエントリの右側に上記の*ボックスを選択していません。 お問い合わせ
@@ -524,7 +524,7 @@ ASCIIファイルのMATLAB配列</span> メニュー項目は変更されたフ�
 
 より複雑なものを指定することもできます。
 イベントフィールドの選択と範囲の組み合わせは、
-トライアルを選択 たとえば、"rt" の型イベントを選択できます。
-0〜400ミリ秒間のレイテンシーを持ち、「fast_rt」として名前を変更します。
+の の の
+0〜400ミリミリ秒でレイテンシーを呼びます。
 イベント選択インターフェイスを秒間使用し、残りの名前を変更します
 "slow_rt" としてイベント

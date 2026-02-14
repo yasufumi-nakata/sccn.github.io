@@ -1,291 +1,291 @@
 ---
 layout: default
 ---
-Statistics discussion TO REDO AS Q/A
+Q/AとしてREDOへの統計議論
 
-Below is a discussion between Robert Oostenveld, Guillaume Rousselet,
-Tim Mullen and Arnaud Delorme about proper (advanced) statistical
-methods. The discussion starts on using log or absolute values for
-statistics and visualization and then deal with general statistical
-guidelines.
+以下はロバート・オオステンド、ギョーム・ルーゼレット、
+Tim Mullen と Arnaud Delorme について 適切な (詳細) 統計
+メソッド。 議論は、ログまたは絶対値を使用して開始します。
+統計と可視化を行い、一般的な統計処理に対応
+ガイドライン
 
-### Testing for H1 instead of H0
+### H0の代わりにH1のテスト
 
-<b>A. Delorme:</b> I have a question about the bootstrap H1 test
-performed in the LIMO EEGLAB plugin. When I talk about this, people
-usually have never heard about it -- they have heard about testing H0
-(the null hypothesis) but not about testing H1 (the presence of an
-effect). Also what is the relation between type I and type II error when
-testing H0 compared to type I and type II error when testing H1?
+<b>お問い合わせ デルロメ:</b> ブートストラップH1テストに関する質問があります
+LIMO EEGLABプラグインで実行します。 これについて話したら、
+通常、それについて聞いたことがない - 彼らはH0のテストについて聞いた
+(null 仮説) しかし、H1 のテストについて (a の存在)
+効果)。 また、タイプIとタイプIIのエラー間の関係は何か
+H1をテストするとき、タイプIとタイプIIエラーと比較してH0をテストしますか?
 
-<b>G. Rousselet:</b> Most tests in Wilcox's book (see end of this page)
-assess H1, i.e. they are based on confidence intervals around the
-effects. The goal remains to provide confidence intervals with high
-power and type I error rate at the nominal level. In brain imaging we
-are not so much interested in estimating H1, because people don't care
-about effect sizes in my experience, but rather care about controlling
-the type I error rate, which is best done by cluster statistics or the
-new TFCE method (see end of this page). So in LIMO, H1 bootstrap is used
-to provide confidence intervals around the effects, mostly for
-illustrations. Beyond controlling the type I error, I think we should
-look at effect sizes more carefully. I've been working on porting some
-of Wilcox's R code to MATLAB, with very interesting results - currently
-working on a paper in which I apply non-parametric (robust and
-informative!) measures of effect sizes to face and object ERPs. The new
-tools will be released in LIMO eventually.
+<b>G. ルーセーレット:</b> Wilcox のほとんどのテスト (このページの最後に参照)
+H1の評価、すなわち、彼らは周りの自信の間隔に基づいている
+効果。 目標は、高い信頼性の間隔を提供するまま
+力およびタイプ わずかなレベルのIの間違い率。 脳イメージングでは、
+人は気にしないので、H1を推定することに興味がない
+私の経験で効果のサイズについて、むしろ制御を心配します
+クラスター統計やクラスター統計によって最もよく行われるタイプIエラーレート
+新しい TFCE メソッド(このページの末尾を参照)。 LIMO では、H1 のブートストラップが使用されます。
+効果の周りの自信の間隔を提供するために、主に
+イラスト エラーの型をコントロールするのではなく、
+効果のサイズをもっと注意深く見て下さい。 私はいくつかのポートに取り組んできました
+WilcoxのRコードをMATLABに、非常に興味深い結果 - 現在
+私は非パラメトリックを適用した紙に取り組んでいる(強烈で、
+通知!) 対面およびオブジェクトERPに対する効果サイズの対策。 新着記事
+ツールは、最終的にはLIMOでリリースされます。
 
-### Transforming data (taking the log in spectral decompositions)
+### データの変換(スペクトル分解におけるログの取得)
 
-<b>A. Delorme:</b> Another question. When computing spectrum of EEG/MEG
-data, statistics (parametric or permutation) on averaged absolute
-spectrum across subjects are not stable. This is because of outliers and
-the fact that some subjects have much larger power than others.
+<b>お問い合わせ デルロメ:</b> 別の質問。 EEG/MEGの計算スペクトル
+平均的な絶対値のデータ、統計(パラメトリックまたはパーマテーション)
+被写体を渡るスペクトルは安定しません。 これは、アウターのためであり、
+被写体が他の人よりもはるかに大きい力を持っているという事実。
 
-In practice, we need to take the log of the spectrum for each subjects
-before computing the stats. However, this account to taking the log of
-the product of the subjects' spectrum. What do you make of that?
+練習では、各被験者のスペクトラムのログを取る必要があります
+ステータスを計算する前に。 しかし、このアカウントはログを撮る
+被写体のスペクトルの製品。 それではどんなことがありますか?
 
-<b>R. Oostenveld:</b> If you have paired measurements (i.e. a baseline
-and an active condition in each subject), then log transforming is not
-required (although it still might help). So I don't disagree that it may
-help, I do disagree with the statement "need to take".
+<b>ツイート オオステンド:</b> ペアリングされた測定値(ベースラインなど)がある場合
+そして、各被写体内のアクティブ状態)、その後のログ変換は、
+必須(ただし、まだ助けになる可能性があります)。 ですから、お気をつけません。
+助けて、私は「取るべき」という声明に不一致させます。
 
-Intermezzo: with MEG we have the same issues related to the source
-activity that differs over subjects, but on top of that we have
-between-subject differences that are due to some subjects simply sitting
-closer or further away from the sensors in the MEG helmet.
+Intermezzo: MEG では、ソースに関連する同じ問題があります
+被験者とは異なる活動が、その上にある
+いくつかの被写体が単に座っているので、対流の違い
+MEG ヘルメットのセンサーからさらに遠ざけます。
 
-Now continued:
+続行:
 
-If you want to perform statistical inference (i.e. a decision about a
-H0) on the level of multiple subjects, that it often called a
-second-level test. The first level is that of individuals (where you
-have variance in your observations) and the second is at the group
-(where you also have variance in your observations). What you do for the
-2nd level is that you compute a summary measure for the 1st level and
-base your 2nd level inference on that summary measure. That summary
-measure is often the mean, which is a descriptive statistic. It is
-descriptive because it describes something about the distribution(s) of
-the data. Variance, median, skewness and many others descriptive
-measures exist.
+統計的なインフェレンスを実行したい場合(例:決定書)
+H0) 複数の被験者のレベルでは、多くの場合、
+第2レベルのテスト。 最初のレベルは、個人(あなた)のことです
+あなたの観察に分散を持っている)と第二は、グループにある
+(また、観察中に分散している場所)。 あなたがのために何をするか
+第2レベルは、第1レベルのサマリー測定を計算し、
+その要約測定に2番目のレベルの推論をベースします。 その概要
+測定は記述的な統計的である平均です。 お問い合わせ
+配布について何かを記述するので、記述的
+データ。 バリエーション、メディアン、スキューネス、その他多くの記述
+対策が存在します。
 
-So I guess you are considering to take subject means and test them at
-the group level to make an inference about the population from which you
-sampled the group. I also guess that you are doing a paired test (i.e.
-using the observation of the two conditions in each individual subject).
+そのため、被験者の手段をとり、それらをテストすることを検討しています
+あなたから人口についての推論を行うグループレベル
+グループのサンプル ペアリングされたテスト(つまり、ペアリングされたテストをしている)
+個々の被験者の2つの条件の観察を使ってください。
 
-Rather than means, you can also take other 1st level descriptive
-statistics into your 2nd level test. One that is often used in fMRI is
-normalized regression coefficients (beta weights) from a GLM. Another
-one that we use frequently is single-subject t-scores. Another one we
-use often are average ratio's (i.e. the ratio between averages).
+意味よりもむしろ、他の1stレベルの記述を取ることもできます
+2ndレベルテストへの統計。 fMRIでよく使われているもの
+GLMから正規化された回帰係数(ベータ重量)。 その他
+よく使うのは、シングルサブジェクトのtスコアです。 別の 1 つ
+使用頻度は平均比率(平均間の比率)です。
 
-The 2nd level hypothesis for which you are stating the H0, computing the
-probability and hopefully rejecting the H0 because the probability is
-too small, is that of a difference of whatever descriptive (statistical)
-measures you determined. So you can test whether the XXX is
-significantly different, where for XXX you can fill in: mean, skewness,
-ratio, .... If you use a paired t-test, then you are making the
-assumption that the errors (the non-modelled variance) in XXX are
-normally distributed. The assumption of normal distributions is one
-potential issue (1). But let's first turn to another:
+H0 をスタンディングする第 2 レベルの仮説, 計算する
+確率が高まるため、H0 を強制的に拒否する
+あまりにも小さい、どんな記述的(統計的)の違いのことです
+決定した措置。 ですから、xxx かどうかをテストできます。
+かなり異なっている、あなたが満たすことができる XXX の場合: 意味, 串,
+比率、...。 ペアのt-testを使うと、
+XXX のエラー (非モデル化分散) が
+通常分布。 通常の分布の仮定は1つです
+潜在的な問題 (1). しかし、最初に別の方向へ向かうようにしましょう:
 
-The problem (2) you run into with the single-subject-averaged power is
-that power is non-uniformly distributed over subjects, hence the
-increased variance of the subject-average-differences. That reduces the
-statistical sensitivity. So the question is how to make the 1st level
-statistics more uniform over subjects. Taking the log makes it slightly
-more normal. Taking the ratio as 1st/subject level descriptive and
-determining whether it is consistently different from 1 is another way
-of conducting the test.
+問題(2) 単一のサブジェクト平均電力で実行する
+その力は非均一に被写体に分散され、それ故に
+被験者平均差の分散性が増加しました。 それは減らします
+統計的な感受性。 そのため、質問は1stレベルを作る方法です
+被写体の上により均一な統計量。 ログを撮ると少しずつ
+より正常な。 1st/subject レベルの記述として比率をとること
+1と全く異なるかを判断する別の方法
+試験の実施
 
-Depending on the descriptive measure, taking the log will improve the
-statistical homogeneity (2) or uniformity. Taking the log might also
-improve the normality of the non-modelled variance (1). In the case of
-averaged power in each condition at the single-subject level, the log
-does both. In the case of ratio A/B, the log also does both. Now think
-of what happens with the log for the activity and baseline in one
-subject:
+記述的な測定によって、ログを取ることは改善します
+統計的均質性(2)または均一性。 ログを取ることもできます。
+非モデル化された分散の正常性を改善して下さい (1)。 場合の場合
+単一サブジェクトレベル、ログの各条件の平均電力
+両方。 比率A/Bの場合、ログも両方行います。 今考える
+1つのアクティビティとベースラインのログで何が起こるか
+対象:
 
 log(A/B) = log(A) - log(B)
 
-So testing the log-transform of the ratio's between power is the same as
-testing the difference between log-transformed power. Consequently the
-t-test (ttest in MATLAB) on log-ratio's is the same as a paired t-test
-(ttest2 in MATLAB) on the log of the differences.
+そのため、電力間の比率のログトランスフォームをテストするのと同じです。
+ログトランスフォームされた電力の違いをテストします。 その結果、
+log-ratio の t-test (MATLAB でテスト) は、 t-test のペアリングテストと同じです。
+(MATLABのttest2) の違いのログに.
 
-The interpretation of the 2nd level statistic does not change. You
-compute the probablily of the null hypothesis that states: a) the mean
-power over the two conditions is not different, or stated otherwise: the
-mean-difference is not different from zero b) the log-transformed mean
-power over the two conditions is not different (the mean-difference of
-the low-transformed power is not different from zero) c) the ratio
-between the two conditions is not different from 1 d) the log of the
-ratio between the two conditions is not different from zero
+第2レベルの統計の解釈は変更されません。 お問い合わせ
+状態のヌル仮説の確率を計算する: a) 平均
+2つの条件上の力は異ならず、または別段に述べられます:
+ログトランスフォームされた平均差分はゼロbとは違いません)
+2つの条件上の力は異なっていません(意味差)
+低トランスフォーメーション電力はゼロとは違いません) c)の比率
+2つの条件の間には1つのdと異なっていません)のログ
+2つの条件間の比率はゼロとは違っていません
 
-a has the problem of non-normal errors and of inhomogeneity c has the
-problem of non-normal errors b and d don't have these two problems. In
-fact, they are mathematically the same, so the probabilities and H0s are
-also identical.
+a は非正常な間違いおよびinhomogeneity cの問題に持っています
+異常でないエラーbとdの2つの問題はありません。 お問い合わせ
+実際、それらは数学的に同じです、従って確率およびH0sはあります
+同じ。
 
-Taking GLM betas, t-scores or another single subject measure to the 2nd
-level is also fine (but keep in mind that the H0 and H1 pertain to the
-single-subject statistic, so the inference might be slightly different).
-So that is why the statement "you must take logs" does not always hold,
-but for testing the difference in mean power it is indeed a good idea.
+GLM のベータ、t のスコアまたは 2 への別の単一の主題の測定を取ること
+レベルも問題ありません(ただし、H0とH1が関係することに注意してください)
+単一サブジェクトの統計, したがって、推論は少し異なるかもしれません).
+そのため、「ログを取らなければならない」というステートメントが常に保持されないため、
+しかし、平均力の違いをテストするために、それは確かに良い考えです。
 
-The consequence of taking the log and it representing power is something
-I would not worry about. Statistical inference is about H0 something
-being the same, or H1 something being different. What that "something"
-is does not really matter too much (in general). There might be cases
-where it does, but a monotonous transformation such as the log does not
-change the inference obn the similarity or difference of the underlying
-mean-power values. Or short: if the power is different, then log-power
-is also different. And if the power is the same, then log-power is also
-the same. The probability of making these statements however is
-different (due to the homogeneity and non-normal variance affecting the
-test sensitivity).
+ログをとってパワーを表す結果は何か
+お問い合わせ 統計的推論は H0 について何か
+同じ、または H1 が異なる。 「何か」とは
+それほど重要ではありません(一般的には)。 場合によっては
+しかし、ログなどの単調な変換は、
+アンダーリングの類似性または違いを阻害する推論を変更する
+平均電力値。 またはショート: 電源が異なる場合は、ログパワー
+違います。 電源が同じであれば、ログパワーも
+同じ。 しかし、これらのステートメントを作る確率は
+異なる(均質性および非常態の分散に対するデュー)
+テストの感受性)。
 
-<b>G. Rousselet</b>
+<b>G. ルーゼレット</b>
 
-A few thoughts:
+いくつかの考え:
 
-In general, there is absolutely no guarantee that transforming your
-data, log or other, will get rid of skewness problems. In some
-situations a transformation can actually make things worse. In
-psychophysics, people often log transform some of their data because
-many measurements become linear after log transformations. So it makes
-sense in that context. This is different from log transformation to
-reduce skewness.
+一般的に、あなたの変換を絶対に保証はありません
+データ、ログ、その他、スキュースの問題を取り除く。 いくつか
+トランスフォーメーションが実際に物事を悪化させることができる状況。 お問い合わせ
+心理学、人々は、多くの場合、自分のデータの一部を変換するログ
+多くの測定はログ変換後に線形になります。 なので、
+その文脈で感じます。 これはログ変換とは異なる
+串を減らす。
 
-However, what most researchers forget when they interpret their results,
-is that you can only conclude about what you have measured: so in your
-case you should only conclude about differences in means of log
-transformed data. Indeed, using other transformations, or no
-transformations, and different estimators of different aspects of your
-distributions might lead to different results. I find particularly
-annoying when people don't get a significant effect and then conclude
-that 2 conditions don't differ: because most people only test means,
-they should not conclude about entire distributions.
+しかし、その成果を解釈する際に最も多くの研究者が忘れてしまうこと
+あなたが測定したものだけについて結論づけることができることです。
+ログの手段での違いだけを結論づけるべき場合
+データを変換しました。 確かに、他の変換を使用して、またはいいえ
+あなたのさまざまな側面の変形、そして異なった推定者
+分布は異なる結果につながる可能性があります。 私は特に見つける
+人々が重要な効果を得ないし、それから結論を出すとき迷惑
+その2つの条件は違いません:ほとんどの人はテスト手段だけなので、
+分布全体について結論づけるべきではありません。
 
-As an alternative to log transformation, and according to Wilcox, a
-bootstrap-t test can help alleviate skewness issues. If you have
-outliers, a t-test on a trimmed mean might help boost your power (check
-the LIMO EEG functions with 'yuen' in the name). You could also
-normalise the results within subjects, as people do with single-neuron
-recordings: because single-neurons can vary dramatically in their
-maximum firing rates, group comparisons require normalisation. It would
-seem fair to do the same with your subjects if they differ a lot in
-their maximum power.
+ログ変換の代替として、ウィルコックスによると、
+boottrap-t のテストは、スキューネスの問題を軽減するのに役立ちます。 お問い合わせ
+outliers, t-test は、あなたの力を高めることができます。 (チェック)
+LIMO EEGは名前の'yuen'と機能します。 あなたも
+人が単一ニューロンとするので、被写体内の結果を正規化します
+録音: 単一ニューロンが劇的に変化する可能性があるため
+最大撮影速度、グループ比較では正規化が必要です。 お問い合わせ
+自分の被写体と同じことをする公正に思える
+最大のパワー。
 
-The median is a special case, it requires special adjustments. if the
-tails of the distributions are a problem, outliers or not, a 20% trimmed
-mean is a good choice in a lot of situations. the standard error of the
-trimmed mean is computed by using the winsorised variance in the yuen
-ttest - that's the name of the statistician who extended the ttest to
-trimmed means. only drawback of trimmed means: they take time to compute
-because you need to sort the values, so that makes for slower
-bootstraps.
+メディアは特別なケースで、特別な調整が必要です。 もし
+分配の尾は問題、outliersまたはないです、20%のトリミング
+つまり、多くの状況で良い選択です。 標準的なエラー
+トリムされた平均はユエンのwinsorised分散を使用することによって計算されます
+ttest - ttestを拡張する統計者の名前です
+トリミングされた手段。 トリミングされた手段の欠点だけ: 彼らは計算する時間を取る
+値をソートする必要があるため、値が遅くなります
+ブーツストラップ。
 
-As Wilcox would say: it depends what you're trying to do. In his book,
-there is a special technique handling medians for each sort of tests.
-For a ttest equivalent, Wilcox does not recommend to use a 50% trimmed
-mean, because 'As the amount of trimming approaches 0.5, Yuen's method
-breaks down; the method for estimating the standard error becomes highly
-inaccurate' - i.e. poor confidence intervals and poor control of type i
-error rate. Instead, if there are no tied values, Wilcox suggest using
-the McKean-Schrader estimates of the standard-error (page 159 of his
-2012 book). No code is provided though. If there are tied values then it
-seems only the percentile bootstrap works. When I compare medians at the
-group level, I've settled on a percentile bootstrap of the harrell-davis
-estimator of the 5th decile, which provides better median estimations in
-some situations.
+ウィルコックスが言うように:それはあなたが何をしようとしているかによって異なります。 自分の本で、
+各試験のメディアを扱う特殊な技術があります。
+ttest 等価のために、Wilcox は 50% のトリミングを使用する推薦しません
+つまり「トリミングの量が0.5に近づいているので、ユンの方法
+標準エラーを推定するための方法は、非常に破壊される
+inaccurate' - i.e. 悪い自信の間隔とタイプiの悪い制御
+エラー率。 代わりに、縛られた値がない場合、Wilcoxは使用することを提案します
+McKean-Schrader が標準エラーの推定値 (159ページ)
+2012年本 しかし、コードは提供されていません。 tied値がある場合、それ
+パーセンシーブーツトラップ作品だけ。 媒体を比較するとき
+グループレベル、私はハーレル・デービスのパーセンシャル・ブーツトラップに落ち着きました
+5番目のデシルの推定器は、より良いメディアン推定を提供します
+いくつかの状況。
 
-Anyway: whatever you do will need to be validated or at least you need
-to warn users that you cannot make universal recommendations. Also, with
-small samples most techniques will be inappropriate. How small i don't
-know.
+とにかく:あなたが何をすべきか、または少なくともあなたが必要とする
+普遍的な勧告をしないようにユーザーに警告する。 また、
+小さなサンプルのほとんどの技術は不適切です。 どのように小さな私はない
+お問い合わせ
 
-<b>A. Delorme</b>: Thanks Guillaume, what kind of special adjustment
-does the median require?
+<b>A. デルロメ</b>: : : Guillaumeの感謝、特別な調整
+メディアは必要ですか?
 
-<b>G. Rousellet</b>: As Wilcox would say: it depends what you're trying
-to do. In his book, there is a special technique handling medians for
-each sort of tests. For a ttest equivalent, Wilcox does not recommend to
-use a 50% trimmed mean, because 'As the amount of trimming approaches
-0.5, Yuen's method breaks down; the method for estimating the standard
-error becomes highly inaccurate' - i.e. poor confidence intervals and
-poor control of type i error rate. Instead, if there are no tied values,
-Wilcox suggest using the McKean-Schrader estimates of the standard-error
-(page 159 of his 2012 book). No code is provided though. If there are
-tied values then it seems only the percentile bootstrap works. When I
-compare medians at the group level, I've settled on a percentile
-bootstrap of the harrell-davis estimator of the 5th decile, which
-provides better median estimations in some situations.
+<b>G. ルーセルレット</b>:ウィルコックスが言うように:それはあなたが試しているものに依存します
+お問い合わせ 本書では、メディアの特製技術が使われています。
+各テストの項目 同じテストのために、Wilcoxはお勧めしません
+「トリミングのアプローチの量として」ので50%のトリムされた平均を使用して下さい
+0.5、ユンの方法は分解します;標準を推定するための方法
+エラーが非常に不正確になります' - i.e. 悪い自信の間隔と
+タイプiの誤り率の悪い制御。 代わりに、tied値がない場合、
+Wilcoxは標準エラーのMcKean-Schraderの推定値を使用して提案します
+(159ページ目) しかし、コードは提供されていません。 お問い合わせ
+tied 値で、パーセンシー ブーツトラップのみが動作します。 いつか
+グループレベルでのメディアを比較し、パーセンシーで解決しました
+5番目のデシルのハール・ダビス・エシメターのブーツストラップ、
+いくつかの状況でより良いメディア推定を提供します。
 
-Anyway: whatever you do will need to be validated or at least you need
-to warn users that you cannot make universal recommendations. Also, with
-small samples most techniques will be inappropriate. How small i don't
-know.
+とにかく:あなたが何をすべきか、または少なくともあなたが必要とする
+普遍的な勧告をしないようにユーザーに警告する。 また、
+小さなサンプルのほとんどの技術は不適切です。 どのように小さな私はない
+お問い合わせ
 
-<b>T. Mullen</b>: I often recommend yuen t-tests to people as well (and
-point to LIMO). However, in cases where the number of observations is
-already quite low, removing 10-20% of the data may have undesirable
-effects on statistical power. The reduction in variance may increase
-effect size and thus power, but the reduced sample size may outweigh
-these benefits...do you still advise this approach under small-sample
-conditions?
+<b>T. ムレン</b>: : : 私は多くの場合、人だけでなく、人々にyuen t-testsをお勧めします(と
+LIMOへのポイント ただし、観察回数が少ない場合
+既にかなり低く、データを10〜20%除去することは望ましくないかもしれません
+統計的な力の影響。 分散の減少は増加するかもしれません
+効果のサイズおよび従って力、しかし減らされたサンプル サイズはoutweighかもしれません
+これらの利点...あなたはまだ小サンプルの下でこのアプローチを助言する
+条件?
 
-About Guillaume's sentence "In general, there is absolutely no guarantee
-that transforming your data, log or other, will get rid of skewness
-problems". I agree -- and disagree. I fully agree that
-log-transformations cannot be used "in general" to eliminate skewness
-and, if used inappropriately, can make things worse. However, if a
-distribution is log-normal, than by definition, taking the log is
-guaranteed to produce a normal distribution with zero skewness. The
-log-normal distribution has (positive) skewness given by: (exp(sigma^2)
-+ 2) \* sqrt(exp(sigma^2) - 1). Since our random variables of interest
-have asymptotic chi^2 distributions, which can be approximated by
-log-normal distributions (i.e. Jouini et al, 2011
-<http://bit.ly/Q4rD9C>), should we not assume that the log will at least
-reduce skewness? Since I'm lazy and don't want to bother with proofs on
-a saturday, I tried a quick empirical test: I generated 10K random
-samples from a chi^2 distribution for varying degrees of freedom
-(1-300). For each d.o.f I checked skewness and 'normality' (as measured
-by the Lilliefors test statistic) for both original and log-transformed
-data. Results are plotted below. On average, the log transformation
-reduces skewness by a factor of 2. Excess kurtosis is also reduced for
-d.o.f.\<50 (not shown). The Lilliefors test statistic for rejecting the
-null hypothesis of normality is likewise reduced by about a factor of 2.
-The impact of the log transform is most pronounced for fewer d.o.f., as
-expected, since Chi2(V) --\> Norm(0,1) as V --\> Inf.
+Guillaumeの文章について 「一般的には、絶対に保証はありません
+あなたのデータを変換する, ログまたは他の, 骨格を取り除く
+問題。 同意する -- 同意する 私は完全に同意する
+ログトランスフォーメーションは、「全般的に」を使用して、スキューネスを排除できません。
+そして、不適切に使用した場合、物事が悪化する可能性があります。 しかし、もしあれば
+ディストリビューションは、定義によるものではなく、ログを撮るログは
+通常の分布をゼロスキューネスで生成することを保証しました。 ふりがな
+log-normal ディストリビューションには (positive) のスキューネスが与えられる: (exp(sigma^2)
++ 2) \* sqrt (exp(sigma^2) - 1)。 利益のランダムな変数から
+アスンプトチックchi^2分布を持ちます。
+log-normal分布(Jouini et al, 2011)
+<http://bit.ly/Q4rD9C>), ログが少なくとも少なくともなると仮定すべき
+串を減らすか。 お問い合わせ 私は怠け者であり、証拠と相続したくない
+昨日、私は迅速な帝国テストを試してみました: ランダム10K生成
+異なる自由度のためのchi^2分布のサンプル
+(1-300)。 各d.o.fでは、スキューネスと「normality」(測定値として)をチェックしました。
+Lilliefors のテスト スタディスティック) オリジナルのログトランスフォーメード
+データ。 結果は以下に記載されています。 平均して、ログ変換
+2の要因によって骨格を減らします。 過剰なkurtosisはまたのために減ります
+d.o.f.\<50 (未表示)。 Lilliefors は、拒否のための statistic をテストします。
+正規性のnullの仮説は、同様に2の要因によって減少されます。
+ログ変換の影響は、d.o.f の少ないために最も顕著です。
+期待通り、Chi2(V) --\> Norm(0,1)をV --\> インフ
 
-<b>G. Rousselet</b>: So as long as you are clear that your
-recommendations apply only to this context, then i have no objections.
-You just don't want people to start messing about with log or other
-transforms in the hope that they will get a significant effect. People
-will do that anyway, it's out of your control.
+<b>G. ルーゼレット</b>: : : あなたのことをクリアしている限り
+推奨事項は、この文脈だけに適用され、異議はありません。
+ログや他人でメッセージを始めたくない
+彼らが重要な効果を得るという希望の変化。 スタッフ
+とにかく、それはあなたの制御の外です。
 
-<b>G. Rousselet</b>: I was thinking of group analyses, in which few
-subjects with strong power across conditions would increase
-inter-subject variance and therefore decrease power. You could normalise
-within subjects, by the max mean power across all frequencies and
-conditions - assuming you have one mean value for every frequency and
-condition. That way the results of each subject would be expressed
-between 0 and 1, but you preserve the within-subject variance.
+<b>G. ルーゼレット</b>: : : グループ分析を考えると、その数
+条件を渡る強い力が付いている主題は増加します
+断続的な分散性のため、電力を低下させます。 あなたは正規化することができます
+被写体内では、すべての周波数と最大平均電力で、
+条件 - すべての頻度のための1つの平均値があると仮定し、
+条件。 それぞれの主題の結果が表現されるように
+0 と 1 の間では、内線の分散を保存します。
 
-In my experience, and from reading Wilcox, with small samples everything
-falls apart. In that case, the key is probably to describe your data
-faithfully, for instance by showing each subject, without trying to make
-big claims about the brain in general.
+私の経験で、そしてWilcoxを読んでから、すべての小さなサンプルで
+離れて落ちます。 その場合、キーはおそらくあなたのデータを記述することです
+忠実に、例えば各被写体を表示することによって、
+一般的に脳についての大きな主張。
 
-<i>References from G.Rousselet</i>
+<i>G.Rousseletからの参照</i>
 
-[Multivariate measures of
-location](http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.ss/1215441287)
+【多品種対策】
+位置:()http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.ss/1215441287)
 
-[Cluster method derived from fMRI
-analysis](http://www.ncbi.nlm.nih.gov/pubmed/23123297)
+[fMRIから派生するClusterメソッド
+分析:()http://www.ncbi.nlm.nih.gov/pubmed/23123297)
 
-[Wilcox reference
-book](http://www.amazon.com/Introduction-Estimation-Hypothesis-Statistical-Modeling/dp/0127515429/ref=la_B000APCI5U_1_3?ie=UTF8&qid=1353092305&sr=1-3)
+[Wilcoxリファレンス]
+書籍名:()http://www.amazon.com/Introduction-Estimation-Hypothesis-Statistical-Modeling/dp/0127515429/ref=la_B000APCI5U_1_3?ie=UTF8&qid=1353092305&sr=1-3)

@@ -1,27 +1,27 @@
 ---
 layout: default
 ---
-Using custom MRI from individual subjects
+個々の被験者からカスタムMRIを使用する
 ==========================================
 
-To visualize dipoles (DIPFIT plugin) or distributed source activity
-(LORETA plugin) within subject's individual MRI, it is first necessary
-to normalize them to the MNI brain template. The procedure is relatively
-simple and is explained below.
+ダイポール(DIPFITプラグイン)または分散ソースアクティビティを可視化する
+(LORETAプラグイン) 被写体の個々のMRI内では、まず必要
+MNI脳テンプレートにそれらを正規化するには. 手順は比較的
+シンプルでわかりやすく説明しています。
 
-Normalizing an MR head image to the MNI brain template
+MNI脳テンプレートにMRヘッドイメージを正規化
 ------------------------------------------------------
 
-Normalizing an anatomical MR brain image to the standard MNI brain is
-quite simple and does not require specialized knowledge about MRI or
-fMRI data. 
+標準MNI脳に解剖MR脳イメージを正規化
+MRIに関する専門的な知識を必要としない、または
+fMRIデータ 
 
-First, download the
-[SPM MATLAB toolbox](https://www.fil.ion.ucl.ac.uk/spm/software/download/),
-uncompress, add path in MATLAB. 
+まず、ダウンロード
+[SPM MATLABツールボックス](https://www.fil.ion.ucl.ac.uk/spm/software/download/),
+MATLAB にパスを追加 
 
-Start spm by typing *\>\> spm* on the
-MATLAB command line.
+*\>\> を入力することでspm を起動します。 spm* に
+MATLABコマンドライン
 
 
 
@@ -29,10 +29,10 @@ MATLAB command line.
 
 
 
-Next, click on the *fMRI time series* button. 
+次に、*fMRIタイムシリーズ*ボタンをクリックします。 
 
-The following menu will
-appear (along with other screens).
+次のメニューは、
+出現(他のスクリーンと)。
 
 
 
@@ -40,25 +40,25 @@ appear (along with other screens).
 
 
 
-Click on the display button and select your anatomical MR image file by
-clicking on it. Then press, *Done* as shown below.
+表示ボタンをクリックし、解剖MR画像ファイルを選択します。
+お問い合わせ 次に、下記のように*Done*を押して下さい。
 
 
 
 ![](/assets/images/Spm_selectdisplay.gif)
 
 
-A display screen as shown below will appear. 
+下記の表示画面が表示されます。 
 
-Your MR image must be
-oriented as the one shown below. 
+MR画像は必須
+以下に示すものとして方向づけられます。 
 
-If it is otherwise oriented, use the
-edit boxes: *Pitch*, *Roll* and *Yaw* to rotate it in 3-D until it
-matches the template below. 
+そうでない場合は、
+編集箱:*Pitch*、*Roll*および*Yaw*は3-Dでそれまで回します
+以下のテンプレートにマッチします。 
 
-Then press the *Reorient image* button on
-the bottom.
+それから *Reorient Image*ボタンを押して下さい
+一番下。
 
 
 
@@ -66,26 +66,26 @@ the bottom.
 
 
 
-The next step is to normalize your MRI to the standard MNI brain image.
+次のステップは、標準のMNI脳イメージにMRIを正規化することです。
 
-To do this, press the *Normalize* button in the main menu below. A blue
-tab will appear below the main menu. 
+これを行うには、下のメインメニューの*Normalize*ボタンを押します。 ブルー
+メインメニューの下のタブが表示されます。 
 
-Select *Determine Parameters &
-Write Normalized*.
+選択 *パラメーターを決定 &
+正規化*を書く。
 
 
 
 ![](/assets/images/Spm_normalize.gif)
 
 
-The following file selection window will appear. 
+以下のファイル選択画面が表示されます。 
 
-Select *T1.mnc*, the
-most common MRI format - see the SPM manual for other formats. 
+選択してください *T1.mnc*,
+最も一般的なMRIフォーマット - 他のフォーマットのSPMマニュアルを参照してください。 
 
-Then
-press *Done*.
+それから
+*Done*を押して下さい。
 
 
 
@@ -94,51 +94,51 @@ press *Done*.
 
 
 
-Then reselect MRI data file (the same one you selected originally).
+それからMRIデータファイル(最初に選択した同じもの)を再選択します。
 
-Press *Done*.
+プレス *ドン*。
 
 
 
 ![](/assets/images/Spm_selectsource.gif)
 
 
-Another file selection window will appear asking for the name of the
-file to write. 
+別のファイル選択ウィンドウは、名前の要求が表示されます
+書き込むファイル。 
 
-Reselect once more the same MRI data file as the output
-file. SPM will not overwrite it but will use its name. 
+出力と同じMRIデータファイルをもう一度選択する
+ファイル。 SPM は上書きしませんが、その名前は使われます。 
 
-Press *Done*.
+プレス *ドン*。
 
-A
-final window will appear asking for data for a second subject. Simply
-press *Done* again. 
+ツイート
+最後のウィンドウは、第2の主題のためのデータを求める表示されます。 シンプル
+*Done*を再度押して下さい。 
 
-SPM will take a few minutes to normalize your MRI
-to the MNI brain - it first segments your image and then compares the
-segmentation to the segmented MNI brain. 
+SPMはMRIを正規化するために数分かかります
+MNIの脳に - それは最初にあなたのイメージを区分し、そして比較します
+セグメント化されたMNI脳へのセグメンテーション。 
 
-The output file will have the
-same name as your original file, but with the prefix "w". You may use
-this file in the DIPFIT interface as the background image. 
+出力ファイルには、
+元のファイルと同じ名前ですが、プレフィックス "w" を使ってください。 利用する
+背景画像としてDIPFITインターフェイス内のこのファイル。 
 
-An example is
-shown below:
+例は
+以下に示す:
 
 
 
 ![](/assets/images/Dipplot_spm.gif)
 
 
-Note that the resolution of this MR image is relatively low and appears
-noisy because of the renormalization process used in SPM2. 
+このMR画像の解像度が比較的低く、表示されることに注意してください。
+SPM2で使用される再正規化プロセスのためにnoisy。 
 
-If you use
-other software to perform the normalization, EEGLAB should be able to
-read the output image using the FieldTrip function *read_fcdc_mri.m* to
-import various MRI data formats.
+ご利用の場合
+正規化を実行する他のソフトウェア, EEGLABは、
+出力イメージを FieldTrip 関数 *read_fcdc_mri.m* で読み込む
+さまざまなMRIデータフォーマットをインポートします。
 
 
-*Thanks to J-R Duann for helpful advice - Arnaud Delorme, March 2005*.
+※J-R Duannへのお問い合わせは、Arnaud Delorme、2005年3月*にて承っております。
 

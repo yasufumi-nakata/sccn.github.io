@@ -7,100 +7,100 @@ render_with_liquid: false
 has_children: true
 nav_order: 5
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/clean_rawdata).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/clean_rawdata).
 
-# Clean_rawdata EEGLAB plug-in
+# Clean_rawdata EEGLABプラグイン
 
-The Clean Rawdata plug-in (version 2.0) interface has been redesigned and will soon become the default EEGLAB method for removing artifacts from EEG and related data. The plug-in detects and can separate low-frequency drifts, flatline and noisy channels from the data. It can also apply ASR (automated subspace removal) to detect and reject or remove high-amplitude non-brain ('artifact') activity (produced by eye blinks, muscle activity, sensor motion, etc.) by comparing its structure to that of known artifact-free reference data, thereby revealing and recovering (possibly smaller) EEG background activity that lies outside the subspace spanned by the artifact processes.
+Clean Rawdata プラグイン (バージョン 2.0) インターフェイスが再設計され、EEG および関連データからアーティファクトを削除するためのデフォルトの EEGLAB メソッドになります。 プラグインは、データから低周波数のドリフト、フラットライン、ノイズチャネルを分離することができます。 また、ASR(自動化されたサブスペース除去)を適用して、既知のアーティファクトフリー参照データへの構造を比較し、(「アーティファクト」)活動(アイリンク、筋肉活動、センサー運動などによって生成)を明らかにし、回復させることにより、アーティファクトフリー参照データを分離することで、EEGの背景活性を外部に取り込むことができます。
 
-**Note:** This plug-in uses the Signal Processing toolbox for pre- and post-processing of the data (removing drifts, channels and time windows); the core ASR method (clean_asr) does not require this toolbox but you will need high-pass filtered data if you use it directly.
+**注意:** このプラグインは、データ(ドリフト、チャンネル、タイムウィンドウの削除)の前処理と後処理のために、シグナル処理ツールボックスを使用します。コアASRメソッド(clean_asr)は、このツールボックスを必要としませんが、直接使用すると、ハイパスフィルタデータが必要になります。
 
-# This project needs you
+# このプロジェクトでは、
 
-We need community maintain to this project. Please review existing issues and issue pull requests. A section in this documentation with link to all the existing methodological papers is also needed.
+コミュニティがこのプロジェクトに維持する必要があります。 既存の課題を調べ、プルリクエストを発行してください。 すべての既存の方法論論文へのリンクが付いたセクションも必要です。
 
-# Credit
+# クレジット
 
-This plug-in, clean_rawdata uses methods (e.g., Artifact Subspace 
-Reconstruction, ASR) by Christian Kothe from the BCILAB Toolbox 
-(Kothe & Makeig, 2013), first wrapped into an EEGLAB plug-in by 
-Makoto Miyakoshi and further developed by Arnaud Delorme with 
-Scott Makeig.
+このプラグイン、clean_rawdata はメソッド(例、アーティファクトサブスペース)を使用します。 
+BCILAB ToolboxのChristian Kotheによる復元、ASR) 
+(Kothe & Makeig, 2013), 最初にEEGLABプラグインにラップ 
+宮越真琴とArnaud Delormeが開発した 
+スコット・マディグ。
 
-This plug-in cleans raw EEG data. Methods from the BCILAB toolbox
-are being used (in particular Artifact Subspace Reconstruction)
-designed by Christian Kothe.
+このプラグインは、生EEGデータをクリーンアップします。 BCILABツールボックスのメソッド
+使用される(特にアーティファクトサブスペース復元)
+クリスチャン・コテのデザイン
 
-These functions were wrapped up into an EEGLAB plug-in by Makoto
-Myakoshi, then later by Arnaud Delorme with input from Scott
-Makeig.
+これらの機能は、MakotoのEEGLABプラグインに巻き込まれました
+Myakoshi, その後、Arnaud Delorme スコットから入力
+マディグ。
 
-The private folder contains 3rd party utilities, including:
-- findjobj.m Copyright (C) 2007-2010 Yair M. Altman
-- asr_calibrate.m and asr_process.m
- Copyright (C) 2013 The Regents of the University of California
- Note that this function is not free for commercial use.
-- sperhicalSplineInterpolate.m Copyright (C) 2009 Jason Farquhar
-- oct_fftfilt Copyright (C) 1996, 1997 John W. Eaton
-- utility functions from the BCILAB toolbox Copyright (C) 2010-2014 Christian Kothe
+プライベートフォルダには、次の3rdパーティユーティリティが含まれています。
+- Findjobj.m 著作権 (C) 2007-2010 Yair M. アルトマン
+- asr_calibrate.m と asr_process です。 m 点
+ Copyright (C) 2013 カリフォルニア大学のリージェント
+ 商用利用には、この機能は無料です。
+- sperhicalSplineInterpolate.m 著作権 (C) 2009 Jason Farquhar
+- oct_fftfilt 著作権 (C) 1996, 1997 John W. Eaton
+- BCILABツールボックスの著作権(C)2010-2014 クリスチャン・コテー
 
-The folder "manopt" contains the Matlab toolbox for optimization on manifolds.
+"manopt" フォルダには、マニホールドの最適化のための Matlab ツールボックスが含まれています。
 
-# Graphic interface
+# グラフィックインターフェイス
 
-Below we detail the GUI interface. Individual function contain additional help information.
+以下では、GUIインターフェイスの詳細を説明します。 個々の機能には追加のヘルプ情報が含まれています。
 
 ![](gui_interface.png)
 
-## High pass filter the data
+## 高いパス フィルターはデータをろ過します
 
-Check checkbox **(1)** if the data have not been high pass filtered yet. If you use this option, the edit box in **(2)** allows setting the transition band for the high-pass filter in Hz. This is formatted as[transition-start, transition-end]. Default is 0.25 to 0.75 Hz.
+チェックボックス**(1)** データがまだハイパスフィルタされていない場合。 このオプションを使用する場合は、**(2)**の編集ボックスで、Hzのハイパスフィルタのトランジションバンドを設定できます。 これは[transition-start,transition-end]としてフォーマットされます。 デフォルトは0.25〜0.75Hzです。
 
-## Reject bad channels
+## 悪いチャンネルを注入する
 
-Check checkbox **(3)** to reject bad channels. Options **(4)** allows removal of flat channels. The edit box sets the maximum tolerated (non-rejected) flatline duration in seconds. If a channel has a longer flatline than this, it will be considered abnormal and rejected. The default is 5 seconds. Option **(5)** sets the Line Noise criterion: If a channel has more line noise relative to its signal than this value (in standard deviations based on the total channel signal), it is considered abnormal. The default is 4 standard deviations. Option **(6)** sets the minimum channel correlation. If a channel is correlated at less than this value to an estimate based on other nearby channels, it is considered abnormal in the given time window. This method requires that channel locations be available and roughly correct; otherwise a fallback criterion will be used. The default is a correlation of 0.8.
+悪いチャンネルを拒否するためにチェックボックス**(3)**をチェックしてください。 オプション**(4)**はフラットチャンネルの除去を可能にします。 編集ボックスは、最大許容(非拒否)を秒単位で設定します。 チャネルがこれよりも長いフラットラインを持っている場合は、異常かつ拒否されます。 デフォルトは5秒です。 Option **(5)**はライン騒音のcriterionを置きます: チャネルがこの値(全チャネル信号に基づく標準偏差)よりも、その信号に相対的な線ノイズが複数ある場合、異常と見なされます。 デフォルトは4つの標準偏差です。 Option **(6)** 最小チャンネル相関を設定します。 チャネルが他の近辺のチャンネルに基づいて推定するこの値より少し相関している場合、指定された時間ウィンドウで異常と見なされます。 この方法は、チャンネルの場所が利用可能で大まかに正しい必要があります。そうしないとフォールバックの基準が使用されます。 デフォルトは0.8の相関です。
 
-## Artifact Subspace Reconstruction
+## アーティファクト・サブスペースの復興
 
-Check checkbox **(7)** to use Artifact Subspace Reconstruction (ASR). ASR is described in this [publication](https://www.ncbi.nlm.nih.gov/pubmed/26415149). In edit box **(8)** you may change the standard deviation cutoff for removal of bursts (via ASR). Data portions whose variance is larger than this threshold relative to the calibration data are considered missing data and will be removed. The most aggressive value that can be used without losing much EEG is 3. For new users it is recommended to first visually inspect the difference between the aw and the cleaned data (using eegplot) to get a sense of the content the is removed at various levels of this input variable. Here, a quite conservative value is 20; this is the current default value. Use edit box **(9)** to use Riemannian distance instead of Euclidian distance. This is a beta option as the advantage of this method has not yet been clearly demonstrated. Checkbox **(10)** allows removal instead of correction of artifact-laden portions of data identified by ASR. One of the strength of ASR is its ability to detect stretches of 'bad data' before correcting them. This option allows use of ASR for data-period rejection instead of correction, and is the default for offline data processing. ASR was originally designed as an online data cleaning algorithm, in which case 'bad data' correction may be used.
+チェックボックス**(7)**アーティファクトサブスペース復元(ASR)を使用する。 ASRはこれで記述されます [ニュース](https://www.ncbi.nlm.nih.gov/pubmed/26415149)お問い合わせ 編集ボックス**(8)**では、バースト(ASR)の除去のための標準偏差カットオフを変更することができます。 口径測定データに対するこのしきい値よりも分散が大きいデータ部分は、不足しているデータとみなされ、削除されます。 EEGを失うことなく使用できる最も積極的な価値は3です。 新しいユーザーにとって、まず、この入力変数のさまざまなレベルで削除されるコンテンツの感覚を得るために、awとクリーンなデータ(eegplotを使用して)の違いを視覚的に検査することをお勧めします。 ここでは、かなり保守的な値が20です。これは現在のデフォルト値です。 Euclidian の間隔の代りに Riemannian の間隔を使用するために編集箱** (9)** を使用して下さい。 この方法の利点がまだ明らかに実証されていないため、ベータオプションです。 Checkbox **(10)** は、ASR によって識別されるデータのアーティファクト・ラデン部分の修正の代わりに除去を可能にします。 ASRの強みの1つは、それらを修正する前に「悪いデータ」のストレッチを検出する能力です。 このオプションは、補正の代わりに、ASR の使用を可能にし、オフラインのデータ処理のデフォルトです。 ASRはもともとオンラインデータクリーニングアルゴリズムとして設計されていました。この場合、'bad data'補正が使用される場合があります。
 
-## Additional removal of 'bad data' periods
+## 「悪いデータ」期間の追加削除
 
-Check checkbox **(11)** to perform additional removal of bad-data periods. Edit box **(12)** sets the maximum percentage of contaminated channels that are tolerated in the final output data for each considered window. Edit box **(13)** sets the noise threshold for labeling a channel as contaminated.
+checkbox **(11)** で不良データ期間の追加削除を実行します。 編集ボックス**(12)**は、各考慮されたウィンドウの最終出力データに許容される汚染されたチャネルの最大割合を設定します。 編集ボックス**(13)**は、チャネルを汚染するようにラベル付けするためのノイズのしきい値を設定します。
 
-## Display rejected and corrected regions
+## 拒否された地域の表示
 
-Check checkbox **(14)** plots rejection results overlaid on the original data. This option is useful to visually assess the performance of a given ASR method.
+チェックボックス**(14)** は、元のデータに対する拒絶結果のオーバーレイをプロットします。 このオプションは、特定の ASR メソッドのパフォーマンスを視覚的に評価するのに便利です。
 
-Additional parameters are accessible through the command line interface of the clean_artifacts function.
+追加のパラメータは、clean_artifacts 関数のコマンドラインインターフェイスを介してアクセス可能です。
 
-## Additional documentation
+## 追加文書
 
-Makoto Miyakoshi wrote a page in the [wiki section](https://github.com/sccn/clean_rawdata/wiki) of this repository discussing ASR.
+宮越真琴がページを書いてみた [wikiセクション](https://github.com/sccn/clean_rawdata/wiki) ASRに関するこのリポジトリ。
 
-# Version history
-v0.34 and earlier - original versions
+# バージョン履歴
+v0.34 以降 - 元のバージョン
 
-v1.0 - new default values for some of the rejection tools, new GUI
+v1.0 - 拒絶ツールのいくつかの新しいデフォルト値、新しいGUI
 
-v2.0 - new improved GUI, compatibility with studies
+v2.0 - 新しい改良されたGUI、研究との互換性
 
-v2.1 - fix issue with 'distance' variable for burst detection
+v2.1 - 破裂検出のための 'distance' 変数で問題を修正
 
-v2.2 - fix history call for pop_clean_rawdata
+v2.2 - pop_clean_rawdata の履歴呼び出しを修正
 
-v2.3 - add maxmem to asr_calibrate to ensure reproducibility of results
+v2.3 - 結果の再現性を確保するためにasr_calibrateにmaxmemを追加
 
-v2.4 - fixing issue with running function in parallel for Matlab 2020a
+v2.4 - Matlab 2020aの並行して実行機能で問題を修正
 
-v2.5 - move asr_calibrate out of the private folder so it can be used directly
+v2.5 - プライベートフォルダからasr_calibrateを外に移動して、直接使用できる
 
-v2.6 - allowing to exclude channels and a variety of small bug fixes
+v2.6 - チャネルとさまざまな小さなバグの修正を除外することができます
 
-v2.7 - allowing to fuse channel rejection for datasets with same subject and session (STUDY processing)
+v2.7 - 同じ被写体とセッション(STUDY処理)でデータセットのチャンネル拒否を無効にすることができます。
 
-v2.8 - better error messages, and fix excluding channels (there was a rare crash)
+v2.8 - より良いエラーメッセージ、チャネルを除く修正(まれにクラッシュしていた)
 
-v2.9 - fix bug when ignoring channels and removing channels at the same time, fix plotting issue with vis_artifact
+v2.9 - チャンネルを無視してチャンネルを削除したときにバグを修正し、vis_artifactで問題を解決する
 
-v2.91 - add support for fractional sampling rate; fix too many splits with high sampling frequencies
+v2.91 - 僅かなサンプリング速度のサポートを追加します。高サンプリング周波数であまりにも多くの分割を修正

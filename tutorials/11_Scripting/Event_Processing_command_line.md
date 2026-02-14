@@ -10,11 +10,11 @@ grand_parent: Tutorials
 =====
 お問い合わせ
 
-このセクションは、EEGLAB/MATLAB を記述したいユーザーにとって不可欠です。
+この投稿は、EEGLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/ お問い合わせ
 指定したタイプにデータタイムロックされた、または処理するスクリプト
-イベントの組み合わせ。 EEGLABユーザーにとっても重要である
-EEGLABのデータとイベントが実際に保存されているか知りたい
-操作。 まず、説明するチュートリアルのセクションを読みたいと思うかもしれません [EEGLABイベント構造](/tutorials/ConceptsGuide/Data_Structures.html#eegevent).
+イベント EEGLABは、
+EEGLABデータとイベントは、
+操作。 まず、説明するチュートリアルのセクションを読みたいと思うかもしれません [EEGLABイベント](/tutorials/ConceptsGuide/Data_Structures.html#eegevent).
 
 <details open markdown="block">
   <summary>
@@ -28,13 +28,13 @@ EEGLABのデータとイベントが実際に保存されているか知りた�
 
 イベントを作成または変更するためのスクリプト
 ---------------------------
-<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'event_processing_single_dataset.m'));">MATLABコマンドを表示する</button>
+<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'event_processing_single_dataset.m'));">MATLABコマンド</button>
 
-以下のスクリプトは、比較的高度な EEGLAB/MATLAB スクリプトです。 ふりがな
-[EEGLABスクリプトチュートリアル](/tutorials/11_Scripting/Using_EEGLAB_history.html)
-EEGLAB を使用して MATLAB スクリプトを書く方法に関する基本的な詳細が含まれています。 
+ふりがな
+[EEGLAB チュートリアル](/tutorials/11_Scripting/Using_EEGLAB_history.html)
+EEGLAB は、MATLAB の Script の 方法 について 詳しく 説明しています。 
 まず、継続的なチュートリアルデータセットをインポートします。 以下のコード
-EEGLAB パスを自動的に検出するため、MATLAB にコピーして貼り付けることができます。
+EEGLAB ゲートウェイ MATLAB にほんごに。
 コマンドウィンドウ。
 
 ``` matlab
@@ -58,10 +58,10 @@ end
 ```
 
 次のスクリプトは、データセットイベントリストを操作する方法を示しています
-新しいクラス(pseudo)を追加することにより、チュートリアルデータセットを使用して
+チュートリアルデータセット
 既存のデータセットへのイベント。 ここでは、新しいイベントを追加したい
-既存の'square'タイプのイベントの前に、レイテンシーは100msです。 (注) わたしたちは言う
-これを行うと、相対的なデータのepochingを許可するかもしれません
+' ' ' '
+ これ 相対  これ
 新規イベント
 
 ``` matlab
@@ -82,47 +82,47 @@ EEG = eeg_checkset(EEG, 'eventconsistency'); % Check all events for consistency
 eeglab redraw % Redraw the main EEGLAB window
 ```
 
-EEGLAB 'urevent' 構造により、研究者がポイントを探索することができます。
+EEGLAB の 'urevent' 構造により、
 ※実験中の2つのイベント無し*は実際に
-各イベントが異なる *context* で発生したため等価です。 しかし、
+各イベントは必須です。
 問題に苦しむ、脳機能への洞察は、これから一目瞭然
 ダイナミクスがすべてのイベントにタイムロックされたときにビューのポイントが犠牲になります
-特定のタイプは、単に *averaged* です。 特に、EEGLAB [エルプイメージ。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) そして、 [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m)
+特にEEGLABは、 [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) そして、 [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m)
 関数は、潜在的な時間コースやスペクトルの違いを視覚化することができます
-epochsの振幅は、いくつかの機能によってソートされたイベントにタイムロックされています
-コンテキスト。 単純な例は、stimulus-locked epoch を並べ替える
-その後の応答時間('rt')が、これは単純で簡単な例です。
+epochs の振動幅は、関数によって書かれたイベントを時間にロックする
+を を を を を
+'rt' は、
 関数 [eeg_urlatency.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_urlatency.m)
 元のデータでイベントの遅延を得るのに便利です。 
 
 グループ分析のためのイベント情報の追加
 --------------
-<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'event_processing_study.m'));">MATLABコマンドを表示する</button>
+<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'event_processing_study.m'));">MATLABコマンド</button>
 
 エッグラボ [データ構造](/tutorials/ConceptsGuide/Data_Structures.html) チュートリアルのセクションでは、イベントがどのように行われるかを示します。
 グループ分析の処理 すべてのデータセットからイベント情報を引き出す
-*STUDY.datasetinfo.trialinfo*構造で保存します。
+*STUDY.datasetinfo.trialinfo*の構造は保存します。
 
 特定のトライアルの場合、タイムロックイベントの情報のみが
 保存される。 その他のイベントへの関心の他の情報がある場合
 与えられた試験(例えば反応時間のような)、それはとして加える必要があります
-イベントをロックするフィールド(例えば、EEG.events(1).rt = 1231)
-1231 ms の反応時間を示します。 お問い合わせ
+イベントをロックする(例えば、EEG.events(1).rt = 1231)
+このサイトについて
 スクリプトを使用して実行し、グラフィック上ではまだ実行できません
 インターフェイス。
 
 独立した変数を追加したい場合は、単にスクリプトを書くだけです。
-各データセットの EEG.event 構造をスキャンし、関連するフィールドを追加します。
+各データセットの EEG.event は、
 各データトライアルのタイムロックイベント(0時以降) お問い合わせ
-例えば、 フィールド 'previous_event_type' を追加しても構いません。
-前のイベントの種類。 *STUDY* を作成したら、このフィールドは
-※STUDY*の設計に自動的に考慮され、表示されます
+フィールド 'previous_event_type' は、
+お問い合わせ *STUDY* は、
+※STUDY*は、
 インターフェイス。 以下は、単純なスクリプトスキャンイベントの例であり、追加します。
-'square'タイムロックイベントへの新しい分野としての反応。 この方法
-STUDYレベルで表示します。
+'square' のタイムロックイベントに注目してください。
+STUDYを視聴する
 反応時の注意
 与えられた試験のために時間が欠落している、それは適切に対処されます
-*STUDY*レベルで。 *STUDY*は単一のデータセットで作成されますが、
+*STUDY* は、STUDY* は、
 一般の場合、複数のデータセットから作成されます。 スクリプト 
 お問い合わせ [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=event_processing_study.m).
 
@@ -170,6 +170,6 @@ eeglab redraw
 % You should be able to select event field 'rt' for creating designs
 ```
 
-上記のスクリプトを実行した後、メニュー項目を使用して <span style="color: brown">研究 → 選択/編集 STUDY デザイン</span>、セクションの下の*New*ボタンを押して下さい*この設計*のための独立した変数を編集して下さい。 *rt* を選択して、新しい統計デザインを作成することができます(これは連続変数であるため、LIMO EEGLAB プラグインを使用して、単一のtrial EEG アクティビティを繰り返します)。 *STUDY* が既にある場合は、ディスクからトライアル情報を更新するか(または関数を呼び出します) [std_maketrialinfo.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_maketrialinfo.m from the MATLAB command line)).
+上記のスクリプトを実行した後、メニュー項目を使用して <span style="color: brown">研究 → 選択/編集 STUDYデザイン</span>. . ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ?? ? ? ? ? ? ? ? ? ? ? ?? ? ? ? ? ? ? ? ? *STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* が、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* より、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY [std_maketrialinfo.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_maketrialinfo.m from the MATLAB command line)).
 
-各データセットのイベントを変更するのではなく、*STUDY.datasetinfo.trialinfo* フィールドを変更したい場合に注意してください。 ただし、STUDYを保存しても、EEGLABを再起動し、STUDYをリロードすると、変更が消去されます。 これは、EEGLABが個々のデータセットのイベントで*STUDY.datasetinfo.trialinfo*構造の内容を一貫して保持しているからです。
+STUDY.datasetinfo* は、 STUDY.datasetinfo@gmail.com では、Egglabのドキュメント、STUDYリロード、STUDYリロード、STUDYリロード、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STUDY、STR、S、S、S、STUDY、S、S、STUDY、STUDY、STUDY、S、STUDY、S、S、S、S、STUDY、S、STUDY、S、S、STUDY、S、S、S、S、S、S、S、S、S、STUDY、S、S、STUDY、S、STUDY、S、S、S

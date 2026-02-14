@@ -7,46 +7,46 @@ nav_order: 1
 ---
 <img width="296" height="297" align="right"  style="float:right; margin:20px;" alt="Screenshot 2025-11-16 at 16 08 33" src="https://github.com/user-attachments/assets/77258ef7-c340-4660-bb93-a1c7a358088c" />
 
-# Complete Course Material
+# 完全なコース材料
 
-This [repository](https://github.com/sccn/EEGLAB_course) contains materials for EEGLAB course sessions. This course was originally conducted at the [practical MEEG 2025 workshop](https://cuttingeeg.org/practicalmeeg2025/). Although this course is centered on EEGLAB, 90% of the material is not EEGLAB-specific.
+お問い合わせ [リポジトリ](https://github.com/sccn/EEGLAB_course) EEGLABコースセッションの教材が含まれています。 このコースはもともと行われていました。 [実用的なMEEG 2025の研修会](https://cuttingeeg.org/practicalmeeg2025/)お問い合わせ このコースはEEGLABに集中していますが、材料の90%はEEGLAB固有のものではありません。
 
-You may adapt the materials as needed for your own course, although please acknowledge the authors of the materials.
+教材の作者を承諾してくださいが、あなた自身のコースに必要な資料を適応させることができます。
 
-## Prerequisites
+## 前提条件
 
-### Step 1 – Download and install MATLAB
+### ステップ1 - MATLABをダウンロードしてインストールする
 
-If you are organizing a course, you can usually obtain a [MATLAB trial version](https://www.mathworks.com/support/contact_us.html) for your participants by contacting the licensing department. Please have your participants install MATLAB in advance so you're ready to run EEGLAB during the course.
+コースを整理する場合、通常は取得できます [MATLABトライアル版](https://www.mathworks.com/support/contact_us.html) ライセンシング部門に連絡することで、参加者の皆さまへ 参加者は事前にMATLABをインストールしてくださいので、コース中にEEGLABを実行できます。
 
-### Step 2 – Download the course scripts
+### ステップ2 - コーススクリプトをダウンロード
 
-During the course, participants will follow along and do hands-on work using the EEGLAB graphical interface. However, they can also run the scripts provided in this repository.
+コース中に、参加者はEEGLABのグラフィカルインターフェイスを使用して、ハンズオン作業を行います。 しかし、このリポジトリで提供されるスクリプトを実行することもできます。
 
-Clone this repository:
+このリポジトリをクローンする:
 
 ```bash
 git clone https://github.com/sccn/EEGLAB_course.git
 ```
 
-Or download the ZIP on GitHub. Then run all the scripts one of by one starting with the first script.
+GitHubでZIPをダウンロードしたり、 その後、最初のスクリプトから始まる1つのスクリプトをすべて実行します。
 
-### Step 3 – Download the data
+### ステップ3 - データのダウンロード
 
-This course uses data from the multimodal face recognition BIDS dataset, a pruned version of the OpenNeuro dataset ds000117.
+このコースでは、OpenNeuro のデータセット ds000117 の pruned バージョン、マルチモーダルフェイス認識 BIDS のデータセットからデータを使用します。
 
-**Download the pruned single-subject dataset (ds000117_pruned):**
+**剪定されたシングルサブジェクトデータセットをダウンロード (ds000117_pruned):**
 [https://zenodo.org/record/7410278](https://zenodo.org/record/7410278)
 
-This dataset contains only one subject and is used in Sessions 1, 2, 3, and 5.
+このデータセットは1件のみ含まれており、セッション1、2、3、5で使用されます。
 
-**For group-level analyses, also download the BIDS dataset (ds002718):**
+**グループレベルの分析では、BIDSデータセット(ds002718):**をダウンロード
 [https://nemar.org/dataexplorer/detail?dataset_id=ds002718](https://nemar.org/dataexplorer/detail?dataset_id=ds002718)
-(download the ZIP file on that page)
+(このページのZIPファイルをダウンロード)
 
-### Folder Structure Setup
+### フォルダ構造セットアップ
 
-The scripts expect the following folder structure:
+スクリプトは、次のフォルダー構造を期待します。
 
 ```
 EEGLAB_course/
@@ -68,278 +68,278 @@ EEGLAB_course/
 └── ... (other scripts)
 ```
 
-**Setup instructions:**
-1. Clone or download this repository to create the `EEGLAB_course` folder
-2. Download and extract the `ds000117_pruned` folder **inside** the `EEGLAB_course` folder
-3. Download and extract the `ds002718` folder **inside** the `EEGLAB_course` folder
+**セットアップの指示:**
+1. このリポジトリをクローンまたはダウンロードして作成します `EEGLAB_course` フォルダ
+2. ダウンロードと抽出 `ds000117_pruned` フォルダ**内部** `EEGLAB_course` フォルダ
+3. ダウンロードと抽出 `ds002718` フォルダ**内部** `EEGLAB_course` フォルダ
 
-### Step 4 – Download EEGLAB
+### ステップ4 - ダウンロード エッグラボ
 
-Now it's time to clone the EEGLAB Git repository on your computer.
+EEGLAB Gitリポジトリをコンピュータにクローンする時間です。
 
-**Warning:** Do not download the ZIP file directly from GitHub, as it does not include EEGLAB submodules.
+**警告:** EEGLABサブモジュールは含まないため、GitHubから直接ZIPファイルをダウンロードしないでください。
 
-Instead, use the following command to clone the repository and pull its submodules:
+代わりに、リポジトリをクローンし、サブモジュールをプルするために、次のコマンドを使用します。
 
 ```bash
 git clone --recurse-submodules https://github.com/sccn/eeglab.git
 ```
 
-Or download from the [EEGLAB website](https://sccn.ucsd.edu/eeglab/download.php).
+またはダウンロードから [EEGLABホームページ](https://sccn.ucsd.edu/eeglab/download.php).
 
-### Step 5 – Check that EEGLAB runs
+### ステップ5 - EEGLABが実行されていることを確認してください
 
-1. Start MATLAB
-2. In MATLAB, navigate to the folder containing the EEGLAB repository
-3. At the MATLAB command prompt (>>), type: `eeglab`
-4. The EEGLAB main interface should appear
+1. MATLABを起動する
+2. MATLABでは、EEGLABリポジトリを含むフォルダに移動します。
+3. MATLABコマンドプロンプト(>>)で、タイプ: `eeglab`
+4. EEGLABメインインターフェイスが表示されるはずです
 
-If it opens without errors, you're all set for the workshop!
+エラーなしで開くと、ワークショップにすべてセットされます!
 
-### Step 6 – Download EEGLAB plugins
+### ステップ6 - ダウンロード EEGLABプラグイン
 
-This is step is critical or a lot of the excercises will not run. This is the list of plugins to downlaod:
-* File-IO
-*  Fieldtrip-lite
-* LIMO
+これは、ステップが重要であるか、または多くの演習が実行されません。 これは、downlaodへのプラグインのリストです。
+* ファイルIO
+*  フィールドトリップライト
+* リモ
 
-It is best to use the EEGLAB plugin manager (EEGLAB menu item **File > Manage extension** and to select the plugins to install).
+EEGLABプラグインマネージャ(EEGLABメニュー項目**ファイル>)を使用するのが最善です。 拡張** を管理し、インストールするプラグインを選択します。
 
-## Course Content Overview
+## コース内容 概要
 
-The course materials are organized into several sessions, each focusing on different aspects of EEG/MEG data analysis using EEGLAB. Some sesisons are longer than others.
+EEGLABを用いたEEG/MEGデータ解析の異なる側面を中心に、いくつかのセッションでコース資料を編成しています。 一部のセシソンは他のものよりも長くなっています。
 
-### Session_1.1_overview.pptx
+### セッション_1.1_overview.pptx
 
-The 18-slides presentation introduces EEGLAB, its history, capabilities, ecosystem, and practical setup steps. It also highlights preprocessing pipeline comparisons and key reference articles.
+18枚のスライドプレゼンテーションでは、EEGLAB、その歴史、能力、生態系、実用的なセットアップ手順を紹介します。 また、前処理パイプラインの比較と主要な参照記事を強調表示します。
 
-* EEGLAB origins and development timeline
-* Usage statistics and ecosystem scale
-* Plugin manager and plugin count
-* MATLAB version and toolbox requirements
-* Advantages and limitations of MATLAB based EEGLAB
-* Operating system and compilation options
-* Automated preprocessing pipeline comparison
-* EEGLAB minor performance advantage explanation
-* Links to tutorial videos and test data
-* Key EEGLAB reference publications
-* Installation instructions and datasets
-* Git setup and cloning repositories
+* EEGLABの起源と開発タイムライン
+* 利用統計と生態系のスケール
+* プラグインマネージャーとプラグインのカウント
+* MATLABバージョンとツールボックスの要件
+* MATLABベースのEEGLABの利点と制限
+* オペレーティングシステムとコンパイルオプション
+* 自動加工パイプラインの比較
+* EEGLABマイナーなパフォーマンス優位性の説明
+* チュートリアル動画とテストデータへのリンク
+* キー EEGLAB 参照出版物
+* インストール手順とデータセット
+* Gitのセットアップとクローニングリポジトリ
 
-### Session_1.2_BIDS_and_NEMAR_data_repository.pptx
+### セッション_1.2_BIDS_and_NEMAR_data_repository.pptx
 
-The 31 slides present the principles of open and FAIR data, the structure and purpose of BIDS, and the components of BIDS-EEG. They also introduce NEMAR resources, available tools, and computational infrastructure. This presentation is optional; however, since the data is in BIDS format, it is beneficial to introduce the format.
+31枚のスライドは、オープンとフェアのデータ、BIDSの構造と目的、BIDS-EEGのコンポーネントの原則を示します。 また、NEMAR リソース、利用可能なツール、計算インフラも導入しています。 このプレゼンテーションはオプションです。ただし、データがBIDS形式であるため、フォーマットを導入することは有益です。
 
-* Drivers of increased data sharing
-* FAIR data principles and requirements
-* BIDS purpose and scope
-* Components of a BIDS-EEG dataset
-* Examples of dataset organization
-* Supported raw EEG formats
-* Event and task description structure
-* Tools for BIDS import and export
-* NEMAR repository overview
-* Manuscripts describing NEMAR tools
-* Available GPU and CPU compute resources
-* EEGDash platform introduction 
+* 増加したデータ共有のドライバー
+* 公平なデータ主義および条件
+* BIDSの目的とスコープ
+* BIDS-EEGデータセットのコンポーネント
+* データセット組織の例
+* 支えられた未加工EEGのフォーマット
+* イベントとタスクの説明構造
+* BIDSの輸入および輸出のための用具
+* NEMARリポジトリの概要
+* NEMARツールを記述する原稿
+* 利用可能なGPUとCPUコンピューティングリソース
+* EEGDashプラットフォームの紹介
 
-### Session_1.3_preprocessing.pptx
+### セッション_1.3_preprocessing.pptx
 
-The 67 slides explain the full EEG preprocessing pipeline from raw data to analysis, including filtering, referencing, artifact handling, ICA, and evaluation of preprocessing choices. They also present evidence on how preprocessing steps influence statistical outcomes and describe practical EEGLAB workflows.
+67のスライドは、フィルタリング、参照、アーティファクト処理、ICA、および前処理の選択の評価を含む、未加工データから分析までの完全なEEGの前処理パイプラインを記述します。 また、前処理の手順が統計的な結果に影響を及ぼし、実用的なEEGLABワークフローを記述する方法についても実証しています。
 
-* Reasons for preprocessing EEG data
-* Overview of the full preprocessing pipeline
-* BIDS support in major MEEG toolboxes
-* Event import and raw data inspection
-* Hands on data loading and visualization
-* HED tagging and NEMAR BIDS experiments
-* Channel location scanning and alignment
-* Influence of reference choice on ERPs
-* Effects of downsampling decisions
-* High pass filtering and ERP significance
-* Artifact types and identification methods
-* Bad channel detection via correlation
-* Line noise handling and interpolation
-* ASR performance and human rater comparison
-* Automated rejection methods and limitations
-* ICA decomposition and quality criteria
-* ICLabel classification and component removal
-* Clean_rawdata preprocessing workflow
-* Baseline effects on ERP significance
-* Comparison of automated preprocessing pipelines
+* EEGデータを処理する理由
+* 全処理パイプラインの概要
+* 主要なMEEGツールボックスでのBIDSサポート
+* イベントの輸入および未加工データ点検
+* データの読み込みと可視化の手
+* HEDタグ付けとNEMAR BIDS実験
+* チャネルの場所のスキャンおよび直線
+* ERPsに関する参照の選択の影響
+* ダウンサンプリングの決定の影響
+* 高いパスフィルタリングとERPの重要性
+* アーティファクトの種類と識別方法
+* 相関による悪いチャネルの検出
+* ラインノイズ処理と補間
+* ASR性能と人格の比較
+* 自動拒絶方法と制限
+* ICA分解と品質基準
+* ICLabelの分類および構成の取り外し
+* Clean_rawdata の事前処理ワークフロー
+* ERPの意義に対するベースライン効果
+* 自動加工パイプラインの比較
 
-### Session_2.1_ERP.pptx
+### セッション_2.1_ERP.pptx
 
-The 48 slides introduce ERP analysis at the sensor level, covering conceptual foundations, visualization methods, preprocessing influences, and EEGLAB based workflows. They illustrate how ERPs arise, how to inspect them, and how ICA components contribute to ERP features.
+センサーレベルでERP分析、概念基盤、視覚化方法、前処理の影響、EEGLABベースのワークフローについて説明します。 ERPs がどのように上昇するか、それらを検査する方法、および ICA コンポーネントが ERP の機能にどのように貢献するかを説明します。
 
-* Historical context and ERP foundations
-* ERP experiment structure and data flow
-* Examples of ERP morphology
-* ERP images and trial sorting
-* Phase synchronization as ERP mechanism
-* Time, frequency, and time frequency approaches
-* Epoch extraction and baseline handling
-* Artifact rejection and ICA influence on ERPs
-* Scalp distribution and topographic visualization
-* Three dimensional channel registration and warping
-* Component level ERP envelopes and contributions
-* Difference ERPs across conditions
-* Hands on ERP analysis steps
+* 歴史の文脈とERPの基礎
+* ERP実験構造とデータフロー
+* ERP形態学例
+* ERP画像と試用ソート
+* ERPメカニズムとしての相同期
+* 時間、頻度および時間の頻度はアプローチします
+* エポック抽出とベースライン処理
+* アーティファクト拒絶とICAがERPに与える影響
+* スカルプ分布とトポグラフィ可視化
+* 三次元チャンネル登録と警告
+* コンポーネントレベルのERPの封筒と貢献
+* 条件全体で異なるERP
+* ERP分析手順の手
 
-### Session_2.2_TimeFrequencyAnalysis.pptx
+### セッション_2.2_TimeFrequencyAnalysis.pptx
 
-The 55 slides present the theory and practice of time frequency analysis for biophysical signals, from Fourier methods to wavelets. They explain key trade offs, practical spectral estimation techniques, and EEGLAB based ERSP and ITC analysis.
+55スライドは、FourierメソッドからWaveletsまで、生物物理信号のタイム周波数解析の理論と実践を提示します。 主要な取引オフ、実用的なスペクトル推定技術、およびEEGLABベースのERSPおよびITC分析について説明します。
 
-* Biophysics of EEG and brain oscillations
-* Stationary versus non stationary signals
-* Fourier theorem and frequency decomposition
-* Discrete Fourier Transform and FFT basics
-* Zero padding and spectral interpolation limits
-* Tapering, windowing, and Gibbs phenomenon
-* Window trade offs and Welch spectral estimation
-* Trial averaging and variance reduction in spectra
-* Spectrograms and ERSP for non stationary activity
-* Absolute versus relative power and normalization
-* Time frequency uncertainty and Heisenberg limit
-* Wavelet construction and Morlet convolution
-* Time frequency trade off in wavelet families
-* Comparing FFT based and wavelet approaches
-* Phase resetting, induced versus evoked responses
-* Inter trial coherence and phase visualization
-* IC level ERSP and ITC plots in EEGLAB
-* Hands on steps for channel time frequency analysis
+* EEGと脳の振動の生体物理学
+* 静止した対非静止信号
+* フーリエ理論と周波数分解
+* フーリエ変換とFFTの基本を分離
+* ゼロパディングとスペクトルの補間制限
+* テーパーリング、ウィンドウング、およびGibbbs現象
+* ウィンドウトレードオフとウェールズのスペクトル推定
+* スペクトラの試食と分散削減
+* 非固定活動のためのSpectrogramsおよびERSP
+* 絶対対比力と正規化
+* 時間の頻度不確実性およびHeisenbergの限界
+* ウェーブレットの構造およびモルレのconvolution
+* ウェーブレット家族で取引する時間頻度
+* FFTベースとウェーブレットの比較
+* フェーズリセット, 誘発 versus 進化した応答
+* インタートライアルの一貫性とフェーズの可視化
+* IC レベル ERSP と ITC が EEGLAB にプロット
+* チャネル時間の頻度分析のためのステップの手
 
-### Session_3.1_Source_Localization_ICA.pptx
+### セッション_3.1_Source_Localization_ICA.pptx
 
-The 53 slides explain how ICA contributes to source estimation, covering the forward and inverse problems, ICA theory, and practical DIPFIT based localization. They describe how IC scalp projections relate to dipolar sources and how to fit anatomical models in EEGLAB.
+ICAがソース推定にどのように貢献するか、フォワードと逆の問題、ICA理論、および実用的なDIPFITベースのローカリゼーションをカバーするかを53スライドで説明します。 IC のスカルプの予測は、ダイポーラのソースと EEGLAB の解剖モデルに合致する方法について説明します。
 
-* Forward and inverse modeling principles
-* Ill posed nature of EEG source reconstruction
-* Dipole and distributed inverse methods
-* Role of ICA in separating cortical sources
-* ICA versus PCA and key ICA algorithms
-* Applications of ICA to biomedical data
-* Two step workflow for IC source localization
-* Dipole fitting and residual variance evaluation
-* Co registration of electrodes and head models
-* BEM models and transformation parameters
-* Autofit options and dual dipole fitting
-* Distributed localization with eLORETA and beamforming
-* Leadfield computation and component modeling
-* Hands on DIPFIT localization procedures
+* フォワードと逆モデリング原理
+* EEGソース再建の性質を置いたイル
+* ダイポールと分散型インバース方式
+* 核源を分離するICAの役割
+* ICA 対 PCA とキー ICA アルゴリズム
+* ICAのバイオメディカルデータへの応用
+* ICソースローカリゼーションのための2つのステップワークフロー
+* ダイポールフィッティングと残留分散評価
+* 電極・ヘッドモデルの共同登録
+* BEMモデルと変換パラメータ
+* オートフィットオプションとデュアルダイポールフィッティング
+* eLORETAとビームフォーミングによる分散ローカリゼーション
+* リードフィールド計算とコンポーネントモデリング
+* DIPFITローカリゼーション手順の手
 
-### Session_3.2_connectivity.pptx
+### セッション_3.2_connectivity.pptx
 
-The 54 slides introduce dynamic brain connectivity analysis in EEG, covering VAR modeling, Granger causality, non stationarity handling, ROI based source space connectivity, and SIFT workflows. They explain key pitfalls, model selection principles, and visualization of causal interactions, with an accompanying brain movie illustrating connectivity dynamics.
+54スライドは、VARモデリング、Grangerキャサリティ、非静止処理、ROIベースのソーススペース接続、およびSIFTワークフローをカバーする、EEGで動的脳接続解析を導入しています。 彼らは、キーの落とし穴、モデル選択原則、および原因相互作用の視覚化を説明し、同行の脳映画が接続の動的を照らす。
 
-* Goals and challenges of EEG connectivity analysis
-* Spurious connectivity and common input problems
-* Granger causality principles and VAR modeling
-* Model order selection and information criteria
-* Handling non stationarity with sliding windows
-* Connectivity during visually guided movement
-* ICA based source space analysis and ROI extraction
-* SIFT workflow and causal network reconstruction
-* Influence of atlas choice and number of nodes
-* Coherence and phase relationships between regions
-* Channel versus source space considerations
-* Hands on steps for ROI connectivity computation
+* EEG接続分析の目標と課題
+* クリーンな接続と一般的な入力の問題
+* グランガー因性原理とVARモデリング
+* モデルの注文選択と情報基準
+* 滑走窓との非固定性を扱う
+* 視覚的にガイドされた動きの間の接続性
+* ICAベースのソース空間分析とROI抽出
+* SIFTワークフローとネットワーク再構築
+* アトラス選択とノード数の影響
+* 地域間の相関関係と相関関係
+* チャネル対ソース空間検討
+* ROIコネクティビティ計算のためのステップの手
 
-(see also the associated brain movie: Session_3.2_connectivity_brain_movie.mov)
+(関連する脳映画:Session_3.2_connectivity_brain_movie.mov参照)
 
-### Session4_IC_Clustering.pptx
+### セッション4_IC_Clustering.pptx
 
-The 51 slides describe how to cluster ICA components across subjects in EEGLAB, from STUDY setup and measure precomputation to K-means clustering and interpretation. They also show how clustering validates ICA solutions and helps identify functionally meaningful source groups.
+51のスライドは、STUDYセットアップからEEGLABの被験者全体でICAコンポーネントをクラスターする方法を説明し、事前入力をK-meansクラスタリングと解釈を測定します。 彼らはまた、クラスタリングがICAソリューションを検証し、機能的に有意義なソースグループを識別するのに役立ちます。
 
-* Steps of IC clustering workflow
-* STUDY loading and dataset information editing
-* Residual variance computation and IC selection
-* Precomputation of spectra, ERSP, dipoles, and moments
-* PCA based preclustering and singular value selection
-* K means clustering in feature space of IC measures
-* Choice of measures based on scientific question
-* Examples of within subject and across subject clusters
-* Validation of ICA dipolarity and algorithm reliability
-* Visualization and manual editing of IC clusters
-* Identification of frontal midline theta and occipital alpha clusters
-* Hands on protocol for clustering and outlier removal
+* ICクラスタリングワークフローのステップ
+* STUDYローディングとデータセット情報編集
+* 残留分散計算とIC選択
+* スペクトラ、ERSP、ダイポール、および瞬間の事前入力
+* PCAをベースとした非推奨値と単価選択
+* Kとは、IC対策の特徴空間のクラスタリングを意味します。
+* 科学的な質問に基づく措置の選択
+* 被写体および被写体クラスター内の例
+* ICAの分極性およびアルゴリズムの信頼性の検証
+* ICクラスターの可視化とマニュアル編集
+* 正面のミッドラインのセタおよびoccipitalアルファ クラスターの同一証明
+* クラスタリングおよびアウターの取り外しのための議定書の手
 
-### Session_5.1_univariate_statistics.pptx
+### セッション_5.1_univariate_statistics.pptx
 
-The 72 slides present robust statistical methods for EEG, covering parametric and nonparametric inference, bootstrap and permutation strategies, multiple comparison corrections, and GLM based analysis at single subject and group levels. They emphasize robust estimation, visualization, and principled control of false positives.
+72 スライドは、EEG の堅牢な統計手法を提示し、パラメトリックと非パラメトリックの推論、ブートストラップ、パーマテーション戦略、複数の比較補正、GLM ベースの分析を単一の被験者とグループレベルで行います。 堅牢な推定、視覚化、および偽陽性の原則的な制御を強調しています。
 
-* Parametric and nonparametric hypothesis testing
-* Power, effect size, and sample size considerations
-* Robust central tendency and trimmed means
-* Bootstrap confidence intervals and inference
-* Bootstrap versus permutation logic
-* Corrections for multiple comparisons
-* Bonferroni, Holm, FDR, cluster, and TFCE methods
-* Cluster based permutation for EEG time series
-* Strengths and limitations of correction strategies
-* Introduction to GLMs for EEG data
-* Design matrices and modeling factors
-* Level one and level two GLM analysis
-* Mixed effects modeling and random effects
-* Software implementations in MATLAB, Python, and R
+* パラメトリックおよび非パラメトリック仮説テスト
+* パワー、効果サイズ、サンプルサイズ検討
+* 堅牢な中央傾向とトリムされた手段
+* ブーツストラップの信頼区間と推論
+* ブートストラップ対permutationロジック
+* 複数の比較修正
+* ボンフェロニ, ホルム、FDR、クラスター、およびTFCEメソッド
+* EEGタイムシリーズのクラスタベースパーミュテーション
+* 補正戦略の強みと限界
+* EEGデータのGLM導入
+* マトリクスとモデリング因子の設計
+* レベル1とレベル2のGLM分析
+* 混合効果モデリングとランダム効果
+* MATLAB、Python、Rでのソフトウェア実装
 
-### Session_5.2_univariate_statistics_practicum.pptx
+### セッション_5.2_univariate_statistics_practicum.pptx
 
-The 23 slides give a hands on walkthrough of GLM based univariate statistics in EEGLAB/LIMO, using the ds002718 face dataset. They focus on STUDY design setup, single trial modeling, and running first and second level analyses with appropriate corrections.
+23スライドは、Ds002718顔データセットを使用して、EEGLAB/LIMOのGLMベースの比類のない統計のウォークスルーに手を与えます。 STUDY設計のセットアップ、シングルトライアルモデリング、および1次および2次レベルの分析を適切な補正で実行することに焦点を当てています。
 
-* Overview of the ds002718 face repetition dataset
-* Level one GLM and beta significance estimation
-* Experimental factors and condition structure
-* BIDS import, cleaning, ICA, and epoching steps
-* STUDY creation and design specification
-* Precomputation of single trial measures
-* Standard EEGLAB statistics and corrections
-* Exercises on ERP comparison across conditions
-* LIMO plugin based model estimation
-* Group level ANOVA and contrast interpretation
-* Practical workflow for GLM based EEG statistics
+* ds002718 顔の繰り返しデータセットの概要
+* レベル1 GLMとβの重要性推定
+* 実験的要因と条件構造
+* BIDSのインポート、クリーニング、ICA、およびエッチング手順
+* STUDY作成と設計仕様
+* 単一試験対策の事前入力
+* 標準EEGLAB統計と修正
+* 条件全体のERP比較に関する演習
+* LIMOプラグインベースモデル推定
+* グループレベルのANOVAとコントラスト解釈
+* GLM ベースの EEG 統計のための実用的なワークフロー
 
-(see also the associated movies referenced in the presentation: Session_5.2_movie_1.mp4 and Session_5.2_movie_2.mp4; distributed separately because of GitHub 100mb limit)
+(プレゼンテーションで参照される関連映画も参照してください:Session_5.2_movie_1.mp4とSession_5.2_movie_2.mp4;GitHub 100mbの制限のために別途配布)
 
-## Exercices
+## ニュース
 
-* **Session_1.1_overview.pptx** – No Exercice
-* **Session_1.2_BIDS_and_NEMAR.pptx** – No Exercice
-* **Session_1.3_preprocessing.pptx** – Load raw data, apply cleaning, run ICA with ICLabel, and compare preprocessing choices.
-* **Session_2.1_ERP.pptx** – Create epochs, compute ERPs, visualize scalp maps and ERPimages, and examine ICA contributions.
-* **Session_2.2_TimeFrequencyAnalysis.pptx** – Compute ERSP and ITC, compare baseline strategies, and study induced versus evoked activity.
-* **Session_3.1_Source_Localization_ICA.pptx** – Fit ICA dipoles, assess residual variance, and perform distributed source localization.
-* **Session_3.2_connectivity.pptx** – Compute ROI activity, estimate VAR based connectivity, and interpret connectivity dynamics.
-* **Session_4_IC_Clustering.pptx** – Precompute IC measures, run PCA based preclustering, apply K means, and interpret IC clusters.
-* **Session_5.1_univariate_statistics.pptx** – No Exercice
-* **Session_5.2_univariate_statistics_practicum.pptx** – Perform full GLM analysis on a multi subject dataset, including model specification and correction.
+* **Session_1.1_overview.pptx** – ノーエクセサイス
+* **Session_1.2_BIDS_and_NEMAR.pptx** – 試験なし
+* **Session_1.3_preprocessing.pptx** – 生データをロードし、クリーニングを適用し、ICAをICLabelで実行し、前処理の選択肢を比較します。
+* **Session_2.1_ERP.pptx** – EPOCKSの作成、ERPの計算、スカルプマップとERPimageの可視化、ICAの貢献を検討する。
+* **Session_2.2_TimeFrequencyAnalysis.pptx** – Compute ERSP と ITC を比較し、ベースライン戦略を比較し、誘発された活動を研究します。
+* **Session_3.1_Source_Localization_ICA.pptx** – ICAダイポールに適合し、残留差を評価し、分散ソースローカリゼーションを実行します。
+* **Session_3.2_connectivity.pptx** – ROI アクティビティを計算し、VAR ベースの接続を推定し、接続を解釈します。
+* **Session_4_IC_Clustering.pptx** – Precompute IC 対策, PCA ベースの前処理を実行します。, K 手段を適用します。, IC クラスターを解釈.
+* **Session_5.1_univariate_statistics.pptx** - Exerciceなし
+* **Session_5.2_univariate_statistics_practicum.pptx** – モデルの仕様と補正を含む複数の被写体データセットで完全なGLM解析を実行します。
 
-## Scripts
+## スクリプト
 
-The scripts accompany the presentations, although they are not required for students to complete the course. The material is aimed primarily at beginners who may not yet know how to script, so the presentations do not explicitly describe these files. The scripts nevertheless mirror the workflow shown in each session and can be used to reproduce the results demonstrated during the lectures. Students who wish to explore further can consult the help messages of the functions used in each script.
+生徒がコースを修了するために必要とされていないにもかかわらず、スクリプトはプレゼンテーションに同行しています。 素材は、主にスクリプトの使い方がわからない初心者を対象としていますので、プレゼンテーションはこれらのファイルを明示的に記述しません。 スクリプトは、各セッションで示されたワークフローをミラーリングし、講義中に実証された結果を再現するために使用できることがありません。 さらなる探求を希望する学生は、各スクリプトで使用される機能のヘルプメッセージに相談することができます。
 
-* **script_01_import_data.m** - Imports raw EEG or MEG data and events into EEGLAB. Refers to Session_1.3_preprocessing.
-* **script_02_preprocess_data.m** - Runs filtering, bad channel detection, ASR, ICA and IC cleaning. Refers to Session_1.3_preprocessing.
-* **script_03_epochs_and_erp.m** - Creates epochs, computes ERPs and prepares data for ERP analysis. Refers to Session_2.1_ERP.
-* **script_04_time_frequency.m** - Computes ERSP, ITC and other time frequency measures. Refers to Session_2.2_TimeFrequencyAnalysis.
-* **script_05_source_reconstruction.m** - Runs DIPFIT, computes dipoles and distributed source models. Refers to Session_3.1_Source_Localization_ICA.
-* **script_06_connectivity.m** - Computes VAR models, Granger causality and ROI connectivity. Refers to Session_3.2_connectivity.
-* **script_07_group_analysis_preprocess.m** - Prepares multi subject datasets and STUDY structures for group analysis. Refers to Session4_IC_Clustering and Session_5.x statistics.
-* **script_08_group_analysis.m** - Runs group level STUDY measures including clustering and group ERPs. Refers to Session4_IC_Clustering.
-* **script_09_ica_clustering.m** - Performs IC clustering across subjects using STUDY. Refers to Session4_IC_Clustering.
-* **script_10_limo_erp.m** - Runs GLM based univariate statistics using LIMO EEG. Refers to Session_5.1 and Session_5.2 univariate statistics.
+* **script_01_import_data.m ** - EEGLABに生EEGやMEGデータやイベントをインポートします。 session_1.3_preprocessing を参照してください。
+* **script_02_preprocess_data.m** - フィルタリング、悪いチャンネル検出、ASR、ICA、ICクリーニングを実行します。 session_1.3_preprocessing を参照してください。
+* **script_03_epochs_and_erp.m ** - ERPのEPOCを作成し、ERPを計算し、ERPの分析のためにデータを準備します。 session_2.1_ERP を参照してください。
+* **script_04_time_frequency.m** - ERSP、ITCおよび他の時間の周波数対策を計算します。 session_2.2_TimeFrequencyAnalysis を参照してください。
+* **script_05_source_reconstruction.m** - DIPFITを実行し、ダイポールと分散ソースモデルを計算します。 セッション_3.1_Source_Localization_ICAを参照してください。
+* **script_06_connectivity.m** - VARモデル、GRANGERの因果性およびROI接続を計算します。 session_3.2_connectivity を参照してください。
+* **script_07_group_analysis_preprocess.m** - グループ分析のための多要素データセットとSTUDY構造を用意します。 セッション4_IC_ClusteringとSession_5.xの統計を参照してください。
+* **script_08_group_analysis.m** - クラスタリングとグループERPを含むグループレベルのSTUDY対策を実行します。 セッション4_IC_Clustering を参照してください。
+* **script_09_ica_clustering.m ** - STUDYを使用して被験者を渡るICのクラスタリングを実行します。 セッション4_IC_Clustering を参照してください。
+* **script_10_limo_erp.m** - LIMO EEGを使用してGLMベースの比類のない統計を実行します。 セッション_5.1とSession_5.2の比例のない統計を参照してください。
 
-## Advises on conducting the course
+## コースの実施に関するアドバイス
 
-Present the lectures for the course and run the hands on exercises that accompany the PowerPoint slides. The scripts can support the demonstrations, although relying on them too heavily can overwhelm beginners. Most participants will follow the GUI more easily, so position the scripts as a reference rather than the primary workflow.
+コースの講義を提示し、PowerPointのスライドに同行する演習で手を実行します。 スクリプトはデモンストレーションをサポートすることができますが、それらに依存しても圧倒的な初心者でも。 ほとんどの参加者はGUIをより簡単にフォローします。そのため、プライマリワークフローではなく、スクリプトをリファレンスとして位置付けます。
 
-As an intructer, we advise that you download and install the material. Then run all the scripts so the data is precomputed for participants (otherwise for session 3, participants must either run the script [script_01_import_data.m](script_01_import_data.m) and [script_02_preprocess_data.m](script_02_preprocess_data.m) or manually reproduce all import steps in the GUI, which is impractical for this dataset). The raw files require several technical adjustments made by the scripts that are not beginner friendly so it is better to have everything precomputed. Script [script_03_epochs_and_erp.m](script_03_epochs_and_erp.m) extract epoch and also need to be executed. Script 4 to 6 function mainly as optional examples. Script 7 needs to be run for the group and limo analysis. All core operations can be performed in the GUI. Instructors can choose whether to demonstrate scripts to illustrate reproducible workflows, but this should not be required for participants to progress. If you precompute all the measures for students, the scripts are simply add on that may or may not be used. We recommend that option.
+侵入者として、材料をダウンロードしてインストールすることをお勧めします。 その後、すべてのスクリプトを実行して、データが参加者に事前に入力されるようにします(セッション3の場合、参加者はスクリプトを実行する必要があります) [スクリプト_01_import_data.m](script_01_import_data.m) そして、 [スクリプト_02_preprocess_data.m](script_02_preprocess_data.m) または手動でこのデータセットのために実用的であるGUIのすべてのインポート手順を再現します。 生ファイルは初心者フレンドリーではないスクリプトによって作られたいくつかの技術的な調整が必要ですので、事前に入力されたすべてのものを持っている方が良いです。 スクリプト [スクリプト_03_epochs_and_erp.m](script_03_epochs_and_erp.m) エポックを抽出し、実行する必要があります。 Script 4 から 6 関数はオプションの例として主に機能します。 スクリプト7は、グループとリモ分析のために実行する必要があります。 すべてのコア操作はGUIで行うことができます。 インストラクターは、再現可能なワークフローを記述するためにスクリプトを実証するかどうかを選ぶことができますが、これは参加者が進行する必要はありません。 学生のすべての対策を優先する場合、スクリプトは単にそれを追加するか、または使用できないことがあります。 オプションをお勧めします。
 
-Once you have confirmed that everything runs correctly, **zip the full course folder and copy it to a USB flash drive** for distribution. This allows students to begin immediately without dealing with data downloads, EEGLAB installation, or plugin setup. We also advise that you include EEGLAB and its plugin (either as a zip archive or uncompressed) on the flash drive so all students have the latest version of EEGLAB.
+すべてが正しく実行されていることを確認したら、**フルコースフォルダをzipし、配布のためにUSBフラッシュドライブ**にコピーします。 これは、データダウンロード、EEGLABインストール、またはプラグインのセットアップを扱うことなく、学生がすぐに始めることができます。 また、フラッシュドライブにEEGLABとそのプラグイン(zipアーカイブまたは非圧縮)を含めることをお勧めいたしますので、すべての生徒はEEGLABの最新バージョンを持っています。
 
-A few additional tips to improve the course experience: Clarify early that ICA may yield slightly different outcomes across computers and that this variability is normal. Finally, alternate between explanation and hands on exploration so participants stay engaged and do not fall behind. Have a teaching assistant present throughout the session so participants who get stuck can receive prompt one to one support without interrupting the flow of the course.
+コース体験を改善するいくつかの追加のヒント: ICAがコンピュータ間で少し異なる結果をもたらす可能性があることを早期に明確化し、この変動性は正常である。 最後に, 説明と探査の手を交互に, 参加者が従事し、後ろに落ちないように. セッション全体に教育補助者を持っているので、立ち往生する参加者は、コースの流れを中断することなく、1つのサポートにプロンプトを受け取ることができます。
 
-## Contributors
+## 貢献者
 
-* Arnaud Delorme, creator of this course
-* Other contributors include Scott Makeig, Romain Grandchamp, Johanna Wagner, Ramon Martinez-Cancino, Tim Mullen, John Iversen, and Cyril Pernet.
+* このコースの作成者であるArnaud Delorme
+* その他のコントリビューターには、スコット・マケリ、ロビン・グランチャンプ、ヨハンア・ワグナー、ラモン・マルティネス・カンチーノ、ティム・ムレン、ジョン・イヴァーン、シリル・パーネットなどがあります。

@@ -6,17 +6,17 @@ parent: EEGLAB news
 has_children: false
 has_toc: false
 ---
-EEGLAB Newsletter
+エッグラボ ニュースレター
 ===
 <img class="float-right" style="margin-left:20px" width="250" height="250" src="/assets/images/newsletter_screenshot2.jpg">
-The quarterly EEGLAB newsletter, the EEGLAB News, includes:
-- Important EEGLAB news and new features
-- Brief descriptions of some new EEGLAB plug-in/extensions
-- Personal profiles of EEGLAB developers or users, including how they use EEGLAB in their research
-- Announcements of upcoming EEGLAB-relevant events
-- Brief questions and answers about EEGLAB from the eeglablist
-- Links to some recent papers using EEGLAB functions
-- Pointer to an online tutorial video.
-- Please email suggestions for future articles to eeglabnewseditors@sccn.ucsd.edu.
+EEGLABニュースレター、EEGLABニュース、以下が含まれます。
+- 重要EEGLABニュースと新機能
+- 新しい EEGLAB プラグイン/拡張の簡単な説明
+- EEGLABの開発者やユーザーの個人プロフィール、EEGLABの使い方など
+- EEGLAB関連イベントのお知らせ
+- eeglablistからのEEGLABに関する簡単な質問と回答
+- EEGLAB機能を用いた最近の論文へのリンク
+- オンラインチュートリアルビデオへのポインター。
+- eeglabnewseditors@sccn.ucsd.eduへの将来の記事の提案をメールでお送りください。
 
-[Click here to access newsletters](https://sccn.ucsd.edu/eeglab/EEGLAB_Newsletter.php)
+[ニュースレターへのアクセスはこちら](https://sccn.ucsd.edu/eeglab/EEGLAB_Newsletter.php)

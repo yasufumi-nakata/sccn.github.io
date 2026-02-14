@@ -6,83 +6,83 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 2
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/dipfit).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/dipfit).
 
-Description
+コンテンツ
 =====
-DIPFIT is an [EEGLAB](http://eeglab.org) plugin to perform inverse source localization.
+DIPFITは [エッグラボ](http://eeglab.org) 逆ソースのローカリゼーションを実行するプラグイン。
 
-A major obstacle to using EEG data to visualize macroscopic brain dynamics is the underdetermined nature of the inverse problem: Given an EEG scalp distribution of activity observed at given scalp electrodes, any number of brain source activity distributions can be found that would produce it. This is because there is any number of possible brain source area pairs or etc. that, jointly, add to the scalp data. Therefore, solving this EEG inverse problem requires making additional assumptions about the nature of the source distributions. A computationally tractable approach is to find some number of brain current dipoles (like vanishingly small batteries) whose summed projections to the scalp most nearly resemble the observed scalp distribution.
+マクロスコープの脳の動的を視覚化するためにEEGデータを使用する主要な障害は、逆の問題の根本的な性質です。 与えられた頭皮電極で観察された活性のEEGの頭皮分布を考えると、その生成する脳源活性分布の数が確認できます。 これは、任意の数の可能な脳のソース領域のペアや等があるためです, 共同で, 頭皮データに追加. そのため、このEEGの逆の問題を解決するには、ソース分布の性質について追加の仮定をする必要があります。 計算可能なアプローチは、観察されたスカルプ分布に最も似ているスカルプに投影を要するいくつかの脳電流ダイポール(驚くほど小さな電池のような)を見つけることです。
 
-Documentation
+ドキュメント
 ====
-For documentation see [https://eeglab.org/tutorials/09_source/DIPFIT.html](https://eeglab.org/tutorials/09_source/DIPFIT.html)
+ドキュメントを見る [https://eeglab.org/tutorials/09_source/DIPFIT.html](https://eeglab.org/tutorials/09_source/DIPFIT.html)
 
-Version history
+バージョン履歴
 =====
-v5.4
-- Adding Neuromag coordinate format
-- Better support to exclude channels
-- Better support for STUDY and group-level Leadfield computation
+v5.4の
+- Neuromag座標フォーマットの追加
+- チャネルを除外するためのより良いサポート
+- STUDYおよびグループレベルのリードフィールド計算のためのより良いサポート
 
-v5.3
-- Fixing ignoring channel when computing LeadField matrix
-- Fixing setting up fiducial manually
+v5.3の
+- コンピューティングのリードフィールド行列時にチャネルを無視する修正
+- 手動でfiducialの設定を固定する
 
-v5.2
-- Fixing issue with normalizing plot in dipplot
+v5.2の
+- dipplotの正規化のプロットとの問題を修正
 
-v5.1
-- Adding 3-D plot for eLoreta
+バージョン
+- eLoreta用の3Dプロットを追加
 
-v5.0
-- Adding MEG support
-- Adding custom FieldTrip model support
-- Various optimizations
+v5.0の
+- MEGサポートの追加
+- カスタムフィールドTripモデルのサポートを追加する
+- 各種最適化
 
-v4.4
-- Conversion for MFF file electrode coordinates
-- New Atlas for Loreta
-- Compute leadfield for multiple datasets
-- Add electrode O9 and O10 to template
-- Allow processing STUDY with no event
+v4.4の
+- MFFファイルの電極座標の変換
+- Loretaの新しいアトラス
+- 複数のデータセットのための計算リードフィールド
+- 電極 O9 と O10 をテンプレートに追加
+- STUDYをイベントなしで処理できる
 
-v4.3
-- Fix Leadfield matrix error for file not found and issue with FieldTrip conversion
+v4.3の
+- Fix リードフィールドの行列のエラーは、ファイルが見つからず、FieldTrip変換の問題
 
-v4.2
-- Reverting to using old file to avoid MNI coordinate conversion conflict
+v4.2の
+- MNI座標変換の競合を避けるために古いファイルを使用するのを反転
 
-v4.1
-- Updating corrupted CED file to prevent crash
+v4.1の
+- 破損したCEDファイルを更新してクラッシュを防ぐ
 
-v4.0
-- Allowing computing and storing leadfield matrix
+v4.0の
+- コンピューティングを許可し、リードフィールド行列を保存
 
-v3.7
-- Better compatibility with compiled version of EEGLAB
+v3.7の
+- EEGLABのコンパイルバージョンとの互換性が向上
 
-v3.6
-- Fix menu tag so the ERPSOURCE plugin can find the DIPFIT menu item
+v3.6の
+- ERPSOURCEプラグインがDIPFITメニュー項目を見つけることができるようにメニュータグを修正
 
-v3.5
-- Use correct MRI for multifit, reorder menus
+v3.5の
+- マルチフィット、リオーダーメニューの正しいMRIを使用する
 
-v3.4
-- Adding possiblity to run DIPFIT on EEGLAB STUDY
+バージョン3.4
+- EEGLAB STUDYでDIPFITを実行するpossiblityを追加する
 
-v3.3
-- Ensures backward compatiblity with old versions of EEGLAB
+v3.3の
+- EEGLABの旧バージョンと後方互換性を確保
 
-v3.2
-- Fix bug with missing folders
+バージョン3.2
+- 不足しているフォルダでバグを修正
 
-v3.1
-- Improved support for eeglab2fieldtrip.m
+バージョン3.1
+- eeglab2fieldtrip.m のサポートを改善しました
 
-v3.0
-- Adding support for eLoreta
+v3.0の
+- eLoretaのサポートの追加
 
-v2.0
-- Now uses FieldTrip instead of its own functions
+バージョン2.0
+- 独自の機能の代わりにFieldTripを使用する
 

@@ -4,28 +4,28 @@ title: component dipole
 grand_parent: Tutorials
 ---
 
-Our sample
-decomposition used in this tutorial is based on clean EEG data, and may
-have fewer artifactual components than decompositions of some other
-datasets. 
+私達のサンプル
+このチュートリアルで使用される分解は、クリーンなEEGデータに基づいており、
+いくつかの他の分解よりも少数の人工成分を持っている
+データセット。 
 
-The main criteria for recognizing brain-related components
-are that they have:
+脳関連コンポーネントを認識するための主な基準
+彼らが持っていることです:
 
-1.  Dipole-like scalp maps,
-2.  Spectral peaks at typical EEG frequency is (i.e., 'EEG-like'
-    spectra) and,
-3.  Regular ERP-image plots (meaning that the component does not account
-    for activity occurring in only a few trials).
+1.  ダイポールのようなスカルプマップ,
+2.  典型的なEEG周波数でのスペクトルピークは(すなわち、EEGのような)
+    スペクトル)および、
+3.  正規ERP-imageプロット(コンポーネントが考慮されないことを意味する)
+    いくつかの試験で発生する活動のため。
 
-The component below has a strong alpha band peak near 10 Hz and a scalp
-map distribution compatible with a left occipital cortex brain source.
+下のコンポーネントは、10 Hzと頭皮の近くの強いアルファ バンドピークを持っています
+左のオクシタールの皮質脳の源と互換性がある地図の配分。
 
-When we localize ICA sources using single-dipole or dipole-pair source
-localization. Many of the 'EEG-like' components can be fit with very low
-residual variance (e.g., under 5%). 
+単一ダイポールまたはダイポールペアソースを使用してICAソースをローカライズするとき
+ローカリゼーション。 'EEG-like' コンポーネントの多くは、非常に低いとフィットすることができます
+残留分散(例えば、5%未満)。 
 
-![325px]({{ site.baseurl }}/assets/images/I94component2_properties.jpg)
+![325px]{{ site.baseurl }}/assets/images/I94component2_properties.jpg リリース
  
 
 
@@ -33,10 +33,10 @@ residual variance (e.g., under 5%).
 
 
 
-The EEGLAB v4.32 <a href="http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m">topoplot.m</a> above shows an independent
-component whose bilateral equivalent dipole model had only 2% residual
-variance across all 252 electrode locations. This <a href="http://sccn.ucsd.edu/eeglab/locatefile.php?file=binica.m">binica.m</a>
-decomposition used PCA to reduce the over 700,000 data points to 160
-principal dimensions (a ratio of 28 time points per ICA weight).
+EEGLABのv4.32 <a href="http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m">topoplot.mの</a> 上記は独立したショーを示しています
+二国間同等ダイポールモデルが2%残留しかなかった部品
+全252の電極の位置の分散。 お問い合わせ <a href="http://sccn.ucsd.edu/eeglab/locatefile.php?file=binica.m">ログイン</a>
+使用したPCAを分解し、700,000以上のデータポイントを160に削減
+主要な次元(ICAの重量ごとの28時間のポイントの比率)。
 
 </details>

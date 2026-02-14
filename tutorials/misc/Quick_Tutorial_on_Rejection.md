@@ -6,13 +6,13 @@ parent: Reference Topics
 grand_parent: Tutorials
 nav_order: 12
 ---
-ICAアーティファクト拒絶に関する簡単なチュートリアル
+カリフォルニア大学卒業
 ====================
 お問い合わせ
 
-EEGLABは、排除するための強力なツールです
-EEGデータから非ブレインアーティファクトのいくつかの重要なタイプ。 EEGLABは、ユーザーは、このようなアーティファクトを効率的かつ効率的に拒否することができます。
-ユーザーフレンドリーな方法。 このミニマリストガイドは、EEGLAB以外のユーザーがEEGデータをインポートし、アーティファクトを拒否し、選択したソフトウェアパッケージにデータをエクスポートするためのものです。 EEGLAB の使用に関するより包括的なドキュメントについては、EEGLAB チュートリアルの主なセクションを参照してください。
+EEGLABは、
+EEGデータから非現実的なインティファクトの他のタイプ。 EEGLABは、偽りなく、偽りなく、偽りなく偽りを犯します。
+コンテンツ EEGLABLabでは、EEGLABに、EEGLABに、EEGLABに、EEGLABに、EEGLABに、EEGLABに、EggLabに、EggLabに、EggLabに、EggLabに、EggLabに、EEGLabに、EggLabに、EggLabに、EggLabに、EggLabに、EggLabに、EggLabに、EggLabに、EggLabに、EegLabに、EggLabに、EggLabに、EggLabに、Eggre、EggLabに、EggLabに、EggLabに、Ja、Ja、Ja、S、Ja、S、S、S、Ja、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、 最近の投稿 チュートリアル
 
 <details open markdown="block">
   <summary>
@@ -24,38 +24,38 @@ EEGデータから非ブレインアーティファクトのいくつかの重�
 </details>
 
 
-## 1。 MATLABとEEGLABを起動し、データをインポートします。
-タイプ \>\> eeglab MATLAB で EEGLAB を起動します。 
+## 1。 MATLABとEEGLABは、注文する。
+タイプ \>\> eeglab MATLAB で EEGLAB が リリースされました。 
 
 メニュー項目を選択
 <span style="color: brown">ファイル → インポートデータ</span> データファイルをインポートする
 さまざまなファイル形式で。 詳細はこちら [インポートデータ](/tutorials/04_Import/Importing_Continuous_and_Epoched_Data) セクション
 詳細情報。
 
-メニュー項目を使用してデータをスクロールしてチェックする <span style="color: brown">Plot → チャンネルデータ(スクロール)</span>.
+メニュー項目を使用してデータをスクロールしてチェックする <span style="color: brown">Plot → チャンネルデータ(有料)</span>.
 
 ## 2。 チャンネルの場所ファイルをインポートする
 
 チャンネルの場所ファイルをインポートすることは、視覚化のために不可欠です
 データの独立したコンポーネント。 選択する <span style="color: brown">編集 → チャネルの場所</span> メニュー項目。
 
-- ソリューション1. データセットにチャネルラベルが存在する場合、EEGLABはラベルに基づいてチャネルの位置を調べます。 *Ok*を押すだけで、場所を調べることができます。
+- ソリューション1 EGLabは、顧客のニーズにお応えします。 *Ok*は、
 
 - ソリューション 2。 チャンネルラベルが存在しない場合は、ボタンを押します *チャンネル編集ウィンドウの右下隅にある場所を読み込みます。
-ファイルを選択した後に*Ok*を押して下さい
-EEGLABがファイルフォーマットを自動的に認識するために*Ok*を押します
+* * *
+EEGLABは、EEGLABの略称です。
 ファイル拡張子から。 
 
 プレス *Ok*
-チャンネル編集ウィンドウでチャンネルの場所を EEGLAB にインポートします。
+チャンネル 編集ウィンドウ EEGLAB にインストールします。
 
 チャンネルの場所が正しくインポートされていることを確認するには、
-メニュー項目 <span style="color: brown">Plot → チャンネルの場所 → お名前</span>
+メニュー項目 <span style="color: brown">Plot → チャンネル →</span>
 
 ## 3。 アーティファクト・ラデンデータをレジェクト
 
-良いICAを得るためのデータの品質は重要です
-分解します。 ICAは特定の種類のアーティファクトを分離することができます。
+ 良い
+. . . .
 固定スカルプマップの予測に関連付けられているもの。 
 
 これらは目を含む
@@ -64,16 +64,16 @@ EEGLABがファイルフォーマットを自動的に認識するために*Ok*�
 1種類のスカルプマップのシリーズに関連付けられています。
 
 例えば、
-被写体は、数秒間EEGキャップをスクラッチし、
+被写体は、数秒間EEGCAPをスクラッチ、
 結果はわずかに異なるスカルプマップの長いシリーズになります
 チャネルおよびワイヤー動き、等に関連付けられて。 そのため、
-"non-stereotyped" または "paroxysmal" ノイズの種類は、
-ICAの分解を実行する前にユーザー。
+"non-stereotyped" または "paroxysmal" は、
+ICAのスタッフ
 
 悪いデータを拒否する2つのソリューションがあります。
 
-- 自動化された解決: メニュー項目を選択 <span style="color: brown">ツール → Clean Rawdata と ASR を使用してデータを抽出する</span>お問い合わせ 最初のチェックボックスを押して、データをハイパスフィルタリングし、*Ok*を押します。 新しいウィンドウがポップアップして名前を尋ねます
-新しいデータセットのため。 プレス *Ok*.
+- 自動化された解決: メニュー項目を選択 <span style="color: brown">ツール → Clean Rawdata と ASR を調べる</span> お問い合わせ チェック * * * * * * * * * * * * * * * * * * * ます * * ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます お問い合わせ
+新着情報
 
 - 手動解決: 
 > - - - 連続的または露出したデータの「ノイズチャネル」を拒否するには、選択します
@@ -83,26 +83,26 @@ ICAの分解を実行する前にユーザー。
 <span style="color: brown">ツール → 目でデータを調べる</span>.
  次に、連続したデータのノイズ部分をマークします。
 マウスを水平方向にドラッグして、左ボタンで解除
-ダウン。 *Reject*を押してください。 新しいウィンドウがポップアップして名前を尋ねます
-新しいデータセットのため。 プレス *Ok*.
+*Reject* は、Windows がリリースされます。
+新着情報
 
-## 4。 ICAを実行し、アーティファクチュアルコンポーネントを拒否
+## 4。 ICAハンドブック、IDファクチュアルコンポーネント
 
 オプションですが、データを再参照して平均的な参照にしておくことをお勧めしています。 <span style="color: brown">ツール → データを再参照する</span> メニュー項目。
 
-メニュー <span style="color: brown">ツール → ICAによるデータの分解</span> ICAを運営する
-アルゴリズム。 デフォルトオプションを受け入れるには、*Ok* を押します。
+メニュー <span style="color: brown">ICA は、</span> ICAを運営する
+デフォルトオプション お問い合わせ
 
-悪いICAコンポーネントを拒否する2つのソリューションがあります。
+ソリューション
 
 - 自動化された解決: 
-> - ラベルコンポーネントを使用して <span style="color: brown">ツール → IClabel → ラベルコンポーネントを使用してコンポーネントを分類する</span> メニュー項目。
-> - コンポーネントの分類 <span style="color: brown">ツール → IClabel → フラグコンポーネントを使用してコンポーネントをアーティファクトとして分類する</span> メニュー項目。
+> - ラベルコンポーネントを使用して <span style="color: brown">ツール → IClabel → コンポーネントのラベルを構成する</span> メニュー項目。
+> - コンポーネントの分類 <span style="color: brown">ツール → IClabel → コンポーネントを識別する</span> メニュー項目。
 > - メニュー項目を選択 <span style="color: brown">ツール → コンポーネントを削除</span>
 データから選択したコンポーネントを実際に削除します。
 
 - 手動解決:
-> - メニュー <span style="color: brown">ツール → ICA → コンポーネントをマップで拒否する</span> 実際のコンポーネントを選択する。 [データを見る]
+> - メニュー <span style="color: brown">ICA → コンポーネントをマップで拒否する</span> 実際のコンポーネントを選択する。 [データを見る]
 解析(実行)
 ICA)](/tutorials/06_RejectArtifacts/RunICA.html)チュートリアル
 詳細情報。
@@ -115,7 +115,7 @@ ICA)](/tutorials/06_RejectArtifacts/RunICA.html)チュートリアル
 
 ## 5。 5。 洗浄されたデータのさらなる処理および/またはエクスポート
 
-EEGLAB GUIからのデータセットのグループに同様の手順を適用することもできます。 [このチュートリアル](/tutorials/10_Group_analysis/multiple_subject_proccessing_overview.html).
+EEGLAB GUIからデータセットのグループへ [このチュートリアル](/tutorials/10_Group_analysis/multiple_subject_proccessing_overview.html).
 
-あなたのデータは、現在、その主要なアーティファクトの剪定を望んでいます。 EEGLAB処理をさらに進めることが出来ます。 あなたも選ぶことができます [データをエクスポートする](/tutorials/misc/Exporting_Data.html) あなたの選択のフォーマットに。
+現在 現在 その を EEGLAB の処理をさらに進める。 [データをエクスポートする](/tutorials/misc/Exporting_Data.html) あなたの選択のフォーマットに。
 

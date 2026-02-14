@@ -9,7 +9,7 @@ grand_parent: Tutorials
 =======
 お問い合わせ
 
-参照して下さい [クイックスタートガイド](/tutorials/02_Quickstart/quickstart.html) EEGデータファイルを読み込み、データをスクロールします。 チュートリアルのこのセクションでは、EEGLABプラグインでのみ利用可能な原材料のファイルを異なるフォーマットでインポートすることに対処します。 
+参照して下さい [クイックスタートガイド](/tutorials/02_Quickstart/quickstart.html) します します します チュートリアルでは、EEGLABのプラグインは、 
 
 <details open markdown="block">
   <summary>
@@ -23,40 +23,40 @@ grand_parent: Tutorials
 連続した生データファイルを簡単にインポートする4つのステップ
 ------------------
 
-まず、元の EEG のデータファイルがある場合、ファイルの形式を決定します(拡張子 .cnt のファイルについては、Neuroscan または ANT の生ファイルであり、2 つの異なるフォーマットです)。 その後、次の4つのステップに従ってください。
-1. メニュー項目が利用可能かどうかを調べる <span style="color: brown">ファイル → EEGLAB関数とプラグインの使用</span>お問い合わせ メニューを選択し、ファイルをインポートします。
+翻訳済み EEG ファイルの読み込み、ファイル .cnt のファイル、Neuroscan または ANT の生ファイル 、 次の4つの異なる。
+1. メニュー項目が利用可能かどうかを調べる <span style="color: brown">ダウンロード → EEGLAB関数とプラグイン</span>お問い合わせ メニューを選択し、ファイルをインポートします。
 
-2. メニュー項目を使用する <span style="color: brown">ファイル → ファイル IO インターフェイスの使用</span>お問い合わせ EEGLABは、既にインストールされていない場合は、File-IOプラグインをインストールすることがあります。 関数がエラーを返さないと、ファイルがインポートされます。 File-IOは、さまざまなデータフォーマットをインポートするFieldTripモジュールです。 参照して下さい [ファイルIO文書](https://www.fieldtriptoolbox.org/development/module/fileio/) 詳細については、. 
+2. メニュー項目を使用する <span style="color: brown">ファイル → IO インターフェイス</span>EEGLAB は、EEGLAB の略奪、File-IO のプラグインです。 を を を File-IO は、FieldTrip のファイルです。 [ファイルIO文書](https://www.fieldtriptoolbox.org/development/module/fileio/) 詳細については、. 
 
-3. メニュー項目を使用する <span style="color: brown">ファイル → BIOSIG インターフェイスの使用</span>お問い合わせ バイオシグツールボックス (Biosig Toolbox)[バイオシグ.sf.net](http://biosig.sf.net)) 含まれる
-MATLABの他のEEGデータフォーマットを読む機能へのリンク。 EEGLABは既にインストールされていない場合は、BIOSIGプラグインをインストールすることがあります。 関数がエラーを返さないと、ファイルがインポートされます。
+3. メニュー項目を使用する <span style="color: brown">ファイル → BIOSIG インターフェイス</span>このサイトについて[コンテンツへスキップ](http://biosig.sf.net)) 含まれる
+MATLAB のリリース EEGLAB は、EEGLAB の略称です。 を を を
 
-4. メニュー項目を使用する <span style="color: brown">ファイル → EEGLAB 拡張機能の管理</span> プラグインの検索(右上のマニファイアを使用する)。 使用しているアンプの名前を例に使用します。 プラグインをインストールしたら、新しく作成したサブメニュー項目を呼び出します。 <span style="color: brown">ファイル → EEGLAB関数とプラグインの使用</span>.
+4. メニュー項目を使用する <span style="color: brown">EEGLABの機能拡張</span> プラグインの検索(右上のマニファイアを使用する)。 使用しているアンプの名前を例に使用します。 プラグインをインストールしたら、新しく作成したサブメニュー項目を呼び出します。 <span style="color: brown">ダウンロード → EEGLAB関数とプラグイン</span>.
 
-90%の場合、上記のソリューションはEEGデータファイルをインポートします。 動作しない場合は、このページの残りの部分には、他のファイル形式をインポートするためのドキュメントが含まれています。
+90% の場合、EEGデータが生成されます。 このページの先頭へ
 
-EEGLAB内のEEGデータを取得
+EEGLAB(エグラボ)
 --------------------
 
-EEGLAB と LabStreamingLayer (LSL) は、UCSD の SCCN ラボで発起点したと密接に結び付けられます。 インストールすることで [*lsl_app_MATLABビューア*](https://github.com/labstreaminglayer/App-MATLABViewer/) 拡張子、メニュー項目 <span style="color: brown">ファイル → MATLAB LSL ビューア</span>EEG LSL ストリームをネットワーク (Mac と Windows) で可視化するだけでなく、EEGLAB .set データファイルとして録画することもできます。 この拡張子は、一度に1回のストリームを記録できるだけに注意してください。 ストリームをヒューズするには、LabRecorder python アプリケーションを使用して XDF としてデータを記録し、Mobilab プラグインを使用して EEGLAB ファイルに XDF ファイルをインポートします。
+EEGLAB と LabStrdreamingLayer (LSL) は、UCSD の SCCN ラボで発起点と接地に接近する。 [*lsl_app_MATLABビューア*](https://github.com/labstreaminglayer/App-MATLABViewer/) 拡張子、メニュー項目 <span style="color: brown">MATLAB LSLビューア</span>EEG LSL に mac と Windows の に 、 で 、 で 、 で 、 で 、 で 、 で 、 で 、 で 、 と の 、 と の 、 と の 、 と の 、 と の 、 と の 、 と の は 、 と の に 、 と の は 、 と と の と の 、 と と の と の は 、 と と と の と と と と の と の は と と と と と と の の と と の と と の と と の と と と の と と と と と の と と と は と と と と と と と と と と と と と と と と と  EEGLAB .set ファイルの読み込み  この に に に ストリーム として として として として として として として Mobilab は、EEGLAB が XDF を オープンソース に インストールします。
 
 サポートされているデータフォーマットのリスト
 --------------------
 
-ふりがな [プラグイン](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php) ページには、すべてのインポートプラグインが含まれています。 特定のファイル拡張子またはアンプ名を検索します。 プラグインの同じリストは、EEGLABプラグインマネージャを介して利用可能です。 <span style="color: brown">ファイル → EEGLAB 拡張機能の管理</span> メニュー項目。 プラグインに問題が発生した場合は、プラグインの作者に連絡することをお勧めします。 プラグインには、独自のドキュメントもあります。
+ふりがな [プラグイン](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php) お問い合わせ 外部リンク プラグインは、EEGLABのプラグインです。 <span style="color: brown">EEGLABの機能拡張</span> メニュー項目。 プラグインに問題が発生した場合は、プラグインの作者に連絡することをお勧めします。 プラグインには、独自のドキュメントもあります。
 
-EEGLABプラグインマネージャでは珍しいEEGLABプラグインが利用できず、代わりにアンプメーカーのzipファイルとして配布される場合があります。 データフォーマットのプラグインが見つからない場合は、EEGアンプメーカーにお問い合わせください。
+EEGLABのプラグインは、EEGLABのプラグインとして、 このページの先頭へ
 
 データインポートプラグインとカスタムインポート
 --------------------
 
-### BIOSIGのコマンドラインmexSloadを使用してデータをインポートする
+### BIOSIGのメリット
 
-BIOSIG は、データをインポートするための C 関数を分離しています。 これらの関数は、*mexSload* 関数を介してMATLABでインターフェイスできます。 その機能のグラフィックインターフェイスはありません。 ただし、*mexSload* 関数を使用して、MATLAB コマンドラインでデータをインポートし、次のセクションで MATLAB 配列を EEGLAB にインポートします。
+BIOSIG は、 * * * MATLABでは、 MATLABの特徴 次の記事 MATLAB に EEGLAB を組み込む
 
-### MATLAB配列のインポート
+### MATLABの実装
 
-EEG をシミュレートした 2 D MATLAB 配列 'eegdata' を最初に構築します。
+EEG は、 'eegdata' を 'eegdata' に 設定します。
 チャネルと列がデータポイントであるデータ:
 
 ``` matlab
@@ -66,8 +66,8 @@ eegdata = rand(32, 256*100);
 
 
 これらのデータをインポートするには、メニュー項目を選択します。 <span style="color: brown">ファイル →
-ASCII/floatファイルまたはMATLAB配列からデータをインポートする</span>お問い合わせ リストからオプションMATLAB変数をクリックし、設定します。
-*eegdata* の名前。 サンプリング周波数を256Hzに設定し、*Ok*を押します。 その他
+ASCII/floatファイル orMATLAB へインポートする</span>お問い合わせ MATLAB変数の設定
+*eegdata* 名 名 名 名 Ok*は、
 データセットパラメータは自動的に調整されます。
 
 
@@ -76,74 +76,74 @@ ASCII/floatファイルまたはMATLAB配列からデータをインポートす
 
 
 他のファイル形式からデータをインポートすることに注意してください。 連続輸入
-MATLABの配列ではなくMATLAB *.mat*ファイルからデータをスクロール
-MATLAB *.mat*ファイルを表示するボックスの選択肢のリスト。
+MATLABの *.mat*ファイルについて
+MATLAB *.mat*ファイルボックス
 
-注意: MATLAB *.mat* ファイルを読み込むとき、EEGLAB はそれだけを含んでいると仮定します
-1つのMATLAB変数。 (32ビット)バイナリフロート形式のデータを読み込みます
-*float le* (little-endian) と *float の2つの選択肢があります。
-be* (大英) ここで正しい選択は、オペレーティングシステムによって異なります。 お問い合わせ
+注意: MATLAB *.mat* は、MATLAB * .mat* は、MATLAB * .mat* は、MATLAB は、MATLAB は、MATLAB * .mat* は、MATLAB * .mat* は、MATLAB は、MATLAB * は、MATLAB * は、MATLAB * は、MATLAB * は、MATLAB * は、MATLAB * は、MATLAB * は、MATLAB * は、MATLAB * は、MATLAB * は、MATLAB * は、MATLAB * は、MATLABは、MATLABは、MATLAB * は、MATLABは、MATLABは、MATLABは、MATLABは、MATLABは、MATLABは、MATLABは、MATLABは、MATLABは、MATLABは、MATLABは、MATLABは、MATLABは、MATLABは、MATLABは、MATLABは、 は、
+1つのMATLAB変数。(32ビット)バイナリフロート測定値
+*float le* (little-endian) と *float の2つの異なるオプション。
+お問い合わせ
 ビット注文が不明な場合は、それぞれを試してください。 注意:
-ツールボックスコマンドライン機能 [ショートレッド。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=shortread.m) また、
-(16ビット) 短整数ファイルからデータを読み込みます。 MATLAB の実績
-上記のように、配列は EEGLAB にインポートできます。
+ツールボックスコマンドライン機能 [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=shortread.m) また、
+(日本語) 最近の投稿 MATLABの実績
+EEGLAB は、
 
 データをインポートしたら、参照してください。 [クイックスタートガイド](/tutorials/02_Quickstart/quickstart.html) データをスクロールする。
 
-### MATLAB構造を含むファイルをインポートする
+### MATLABは、
 
-MATLABファイルにはさまざまなフォーマットがあります。 彼らは単に容器です
-(Excelファイルとは異なる方法で整理されたデータが含まれる場合があります)
-異なるタブ)。 EEGLABはMATLABファイルの内部フォーマットを推測できませんので、このステップを自分で行う必要があります。 MATLABファイルが最適
-MATLABコマンドラインでインポート
+MATLABファイルについて
+とは とは とは
+タブ EEGLAB は、MATLAB のファイルとして、このフレームワークを実装しています。 MATLABは、
+MATLABは、
 
 ``` matlab
 mydata = load(‘-mat’, ‘your_file.mat’)
 ```
 
-たとえば、データが「mydata」構造にある場所を参照してください。 
-*mydata.eeg* には、生EEGデータ(チャンネル)を含む配列が含まれる場合があります。
-サンプルによって)。 このデータをMATLAB変数に置きます。
+「mydata」は、 
+*mydata.eeg* , 生EEGデータ(チャンネル)のコンパイルを解除します。
+例) このサイトでは、MATLAB の変数を、
 
 ``` matlab
 myeeg = mydata.eeg; % This is an example, the name of the field "eeg" might differ for you
 ```
 
-次に、EEGLABを選択 <span style="color: brown">ファイル → インポートデータ →
-ASCII/floatファイルまたはMATLAB配列から</span> メニュー項目に「myeeg」を入れて下さい
+代表挨拶 <span style="color: brown">ファイル → インポートデータ →
+ASCII/floatファイル MATLAB は、</span> メニュー
 最初の編集ボックス(前のセクションにはインポートの詳細があります)
-MATLAB配列)。
+MATLABの配列
 
 ### データ平均のインポートセット
 
-EEGLAB は、単一の検索データを処理し、視覚化するために作られました。 <b>チュートリアルのこのセクションにもかかわらず、データ平均の処理とインポートを強くお勧めします</b>お問い合わせ 代わりに、イベントの平均値が抽出される可能性がある単一trialデータをインポートする必要があります。
-イベント関連の潜在能力(ERP)の平均も処理し、
+エッグラボ は は は は <b>チュートリアルのこのセクションにもかかわらず、データ平均の処理とインポートを強くお勧めします</b> お問い合わせ  お問い合わせ  お問い合わせ  お問い合わせ
+緊急事態(ERP)
 視覚化されるが、直接輸入してはならない。
 
-ただし、旧データの場合、データ平均のみが利用可能です。 3つの平均ERPのエポックを処理できるのは、
-単一trial epochs (この場合は EEGLAB の機能の一部ではない)
-意味のある)。 EEGLABに壮大なエポックをインポートするには、さまざまな条件をスタック
+このページの先頭へ PereperPのエポックは、
+EEGLABの特徴
+意味する。 EEGLABにStacksを配布する
 以下に説明する配列の1つ。
 
 まず、異なる条件のデータ平均をインポートする必要があります
 マトラボ たとえば、これらの平均値をテキスト形式でエクスポートすることができます。
-それから標準的なMATLAB機能を使用します
+TLABの特徴
 
 ```matlab
 >> load -ascii filename.txt
 ```
 
-ASCIIファイルをMATLAB、すべてのカラム名、行にインポートすることに注意してください。
+ASCIIは、すべてのレコード名、行は、これらのドメインを使用することができます。
 名前は削除されなければなりません。
 
 データ平均を連結する必要があります。 例えば、
-3つの条件実験では、3つのERP平均を導き出すことができます。
-1000のサンプリング率 Hz、-100から600のmsへのカバーへの
-stimulusのオンセット (各被写体を個別に処理する)
+3つの異なる条件を実験的に実行する
+1000のサンプリング率 Hz、-100 から 600 までの ms のカバー
+stimulus のオンセット (各被写体を適切に処理する)
 その後、被写体全体で結果を比較します。
 分析)。
 
-たとえば、MATLAB で入力 *>> whos* が返される可能性があります。
+MATLAB で入力 *>> whos* が返答されます。
 
 ``` matlab
 Name                       Size               Bytes                 Class
@@ -154,24 +154,24 @@ avgcond3                   31x600             14880                 double array
 Grand total is 55800 elements using 446400 bytes
 ```
 
-Note: 必要であれば、配列をtranspose(そう rows=channels)
-colunmns=data サンプル, つまり chan\*samp (必須ではありません)
+注意: クライアント, ディレクトリをtranspose(そう)
+colunmns=サンプル, つまり chan\*samp (必須)
 この例です。 その後、配列を連結します。
 
 ```matlab
 >> allcond = [ avgcond1 avgcond2 avgcond3 ];
 ```
 
-最後に、MATLAB 配列として EEGLAB に連結されたデータの平均値をインポートする必要があります。
+最後に、 MATLAB を EEGLAB に 統合 ライセンス供与
 メニュー項目を選択 <span style="color: brown">ファイル → データのインポート → から
-ascii/floatファイルまたはMATLAB配列</span> 前のセクションの1つに示すように。
+ascii/floatファイル MATLABの配列</span> 前のセクションの1つに示すように。
 
 ### その他/非対応のデータ形式
 
-EEGLABのディスカッションリストアーカイブには、ユーザーからのメッセージも含まれています。
+EEGLAB のコメントアーカイブ、ユーザーからメッセージまで。
 特定のデータフォーマットをインポートします。 リストアーカイブを検索できます。
-Googleを使用してEEGLAB Webサイトの残りの部分とキーワードを追加*eeglablist*.
+サイトマップ Webサイトについて
 
 追加する意欲
-EEGLABに関数をインポートする他のデータなので、プラグインを書いてこれを提出してください。 [サイトマップ](http://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)お問い合わせ EEGLABプラグインを作成して、サポートされていないデータフォーマットをインポートできるコンサルタントとの連絡も行っていますので、お気軽にお問い合わせください。
+EEGLABにコメントする [サイトマップ](http://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)EEGLAB は、EEGLAB のソフトウェアを開発し、EEGLAB のソフトウェア開発を行ないます。
 

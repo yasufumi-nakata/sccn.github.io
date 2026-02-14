@@ -6,9 +6,9 @@ parent: Past workshops
 grand_parent: Workshops
 ---
 
-# 2022 EEGLAB Lublin Workshop
+# 2022 エグラボ ルブリンワークショップ
 
-See official [web page](https://eeglab2022lublin.com/) for the workshop.
+公式サイト [サイトマップ](https://eeglab2022lublin.com/) ワークショップ
 
 
 

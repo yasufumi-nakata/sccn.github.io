@@ -6,32 +6,32 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 24
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/firfilt).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/firfilt).
 
-FIRFILT EEGLAB plugin
+FIRFILT EEGLABプラグイン
 -------------
-The FIRfilt EEGLAB plugin is a tool used within the EEGLAB environment. FIRfilt is specifically designed for filtering EEG data using Finite Impulse Response (FIR) filters. Here are the key features and functionalities of the FIRfilt plugin:
+FIRfilt EEGLAB プラグインは EEGLAB 環境で使用されるツールです。 FIRfilt は Finite Impulse 応答 (FIR) フィルターを使用して EEG データをろ過するためにとりわけ設計されています。 ここでは、FIRfilt プラグインの主な機能と機能は次のとおりです。
 
-* FIR Filtering: FIRfilt provides a straightforward interface for applying FIR filters to EEG data. FIR filters are commonly used due to their stability and linear phase properties.
-* Filter Types: Users can create various types of FIR filters, including low-pass, high-pass, band-pass, and band-stop filters. This flexibility allows users to isolate specific frequency bands of interest.
-* Design Methods: FIRfilt offers several methods for designing FIR filters, such as the window method, least-squares method, and equiripple method. Each method has its own advantages depending on the specific filtering requirements.
-* Graphical Interface: The plugin integrates with the EEGLAB GUI, making it accessible for users who prefer graphical user interfaces for their data processing tasks.
-* Command Line Support: For more advanced users, FIRfilt also supports command-line operations, allowing for script-based automation and integration into larger data processing pipelines.
+* フリル フィルター: FIRfilt は EEG のデータに FIR フィルターを加えるための簡単なインターフェイスを提供します。 FIRフィルタは、安定性とリニアフェーズ特性により一般的に使用されます。
+* フィルター タイプ: ユーザーは、ローパス、ハイパス、バンドパス、バンドストップフィルタなど、さまざまな種類のFIRフィルタを作成できます。 この柔軟性により、ユーザーは特定の周波数帯域の利益を分離することができます。
+* 設計方法: FIRfilt は、window メソッド、少なくとも squares メソッド、および equiripple メソッドなどの FIR フィルターを設計するためのいくつかの方法を提供しています。 各方法に特定のろ過条件によって自身の利点があります。
+* グラフィック インターフェイス: プラグインは EEGLAB GUI と統合し、データ処理タスクのグラフィカルなユーザーインターフェイスを好むユーザーのためにアクセス可能にします。
+* コマンドラインサポート: より高度なユーザーの場合、FIRfilt はコマンドライン操作もサポートし、スクリプトベースの自動化とより大きなデータ処理パイプラインへの統合を可能にします。
  
-See [this page](https://eeglab.org/others/Firfilt_FAQ.html) or the [paper](https://home.uni-leipzig.de/biocog/eprints/widmann_a2015jneuroscimeth250_34.pdf) for additional documentation.
+お問い合わせ [サイトマップ](https://eeglab.org/others/Firfilt_FAQ.html) または [ペーパー](https://home.uni-leipzig.de/biocog/eprints/widmann_a2015jneuroscimeth250_34.pdf) 追加のドキュメント。
 
-Reference
+参考文献
 -------------
-Please cite
+お問い合わせ
 
-> Widmann, A., Schröger, E., & Maess, B. (2015). Digital filter design for electrophysiological data - a practical approach. Journal of Neuroscience Methods, 250, 34-46.
+> Widmann, A., Schröger, E., & Maess, B. (2015). 電気生理学的データのためのデジタルフィルタ設計 - 実用的なアプローチ。 神経科学法ジャーナル, 250, 34-46.
 
-if you have used functions from the EEGLAB firfilt plugin in your manuscript.
+EEGLAB の firfilt プラグインの機能を manuscript で使用している場合。
 
-Version History
+バージョン履歴
 ---------------
-v2.8 - Added usefftfilt option to pop_eegfiltnew()
+v2.8 - pop_eegfiltnew() に usefftfilt オプションを追加しました。
 
-v2.7 - handle better boundary events
+v2.7 - より良い境界イベントを処理する
 
-v2.7.1 - better handling of boundary events
+v2.7.1 - 境界イベントのより良い取り扱い

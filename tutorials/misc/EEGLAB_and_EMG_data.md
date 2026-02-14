@@ -8,28 +8,28 @@ grand_parent: Tutorials
 EEGLABとEMGデータ
 ====================
 
-EEGLABは、EEGおよびMEGデータに加えて、電子画像(EMG)データを処理する支援を行っています。 このチュートリアルでは、BIDS形式でEMGデータを分析し、EMGイベント関連の潜在能力(EMG-ERP)を計算し、異なる条件で筋肉の活性化パターンを比較する方法を説明します。
+EEGLABは、EEGMEGMEGデータ解析、電子(EMG)データ解析、電子(EMG)データ解析、EMGイベント参加者の潜在能力(EMG-ERP)を計算し、各自の課題を解決します。
 
-ご利用にあたって [emg2qwerty データセット](https://nemar.org/dataexplorer/detail?dataset_id=nm000104) NEMAR では、QWERTY キーボードのタッチタイピング時に、フェーアームの筋肉から表面 EMG の記録を含む。
+ご利用にあたって [emg2qwerty データセット](https://nemar.org/dataexplorer/detail?dataset_id=nm000104) NEMARは、QWERTYで キーボードのタッチタイで、フェーテルのストーリーから、EMG の記録まで。
 
 ## データセットの概要
 
-emg2qwerty データセットには以下が含まれます。
-- 32 双極 EMG チャネル (16 パーフォーアーム)
-- リストバンドセンサーからの表面EMGの録音
+emg2qwerty は、以下のとおりです。
+- 32 双極 EMG チャネル (16 パーフォー)
+- リストバンド
 - 正確なタイミングでキーストロークイベント
 - 見本抽出率:~2000 Hzの
 - タスク: プロンプトされたテキストを入力するタッチ
 
-このデータセットは、EMG-ERP解析のデモに最適です。
-1. イベント(keystrokes)は正確なタイミングを持っています
+このデータセットは、EMG-ERPの解析をおこないます。
+1. イベント(keystrokes)
 2. 別のキーは別の筋肉パターンを活動化させます
 3. 左対右手比較が可能
 4. 共通のキーのための高い試験の計算
 
-## EMG BIDSデータのインポート
+## EMG BIDSについて
 
-EEGLAB は、BIDS-formatted EMG データをインポートすることができます。 [bids-matlab ツール](https://github.com/sccn/bids-matlab-tools) プラグイン。 EEGLABを起動した後、メニュー項目を使用する <span style="color: brown">ファイル > インポートデータ > BIDSフォルダ構造から</span>.
+EEGLAB は、BIDS-formatted EMG の通信プロトコルです。 [bids-matlab ツール](https://github.com/sccn/bids-matlab-tools) EEGLABのメニューは、 <span style="color: brown">ファイル > インポートデータ > BIDSフォルダ構造</span>.
 
 <img src="/assets/images/emg-bids-dialogbox-shot.png" alt="BIDS Import Dialog" style="width:60%">
 
@@ -53,13 +53,13 @@ session_id = 'ses-1620588853';
 EEG = ALLEEG(1);
 ```
 
-インポート後、EEGLABはデータセット情報を表示します。
+EEGLAB は、データセットを実装しています。
 
-![BIDSインポート結果](/assets/images/emg-bidsimport-shot.png)
+![BIDS導入実績](/assets/images/emg-bidsimport-shot.png)
 
 <img src="/assets/images/emg-eeglabview-shot.png" alt="EEGLAB Interface" style="width:60%">
 
-BDFファイルを直接ロードすることもできます。
+BDF直通電話
 
 ```matlab
 % Load BDF file
@@ -88,11 +88,11 @@ EEG = eeg_checkset(EEG);
 
 ## サンティチェック: データの可視化
 
-前処理の前に、EEGLABの可視化ツールを使用してデータ品質と構造を確認することが重要です。
+前処理,EEGLABのライブラリと構造解析
 
-### 生EMGデータのプロット
+### 生EMGとは
 
-EEGLABのスクロールデータビューアを使用して、原材料EMG信号とイベントを検査します。
+EEGLABのテーマは、
 
 ```matlab
 % Use EEGLAB menu: Plot > Channel data (scroll)
@@ -101,21 +101,21 @@ pop_eegplot(EEG, 1, 1, 1);
 ```
 
 これは、あなたができるインタラクティブなウィンドウを開きます。
-- 連続したEMGデータをスクロール
+- 連続 連続
 - 縦線でマークされたキーストロークイベントを見る
 - 騒々しいチャンネルやアーティファクトを特定する
 - ディスプレイスケールとタイムウィンドウを調整する
 
-![未加工EMG データビューア](/assets/images/emg-rawdata-shot.png)
+![Eメール](/assets/images/emg-rawdata-shot.png)
 
-**EMGの注意:** スクロールビューアは EEG と同じですが、期待します。
-- 高振幅信号(μV～mV)
-- 高周波振動(20-250Hz)
+**EMG の注意:** は EEG です。
+- 高信号幅(μV～mV)
+- 振動(20-250Hz)
 - キーストロークイベントと並ぶ活動のバースト
 
 ### イベント構造の点検
 
-EEGLABのイベントビューアを使用してイベントのタイミングとタイプを確認します。
+EEGLAB では、EEGLAB のスタッフとスタッフのスタッフを募集しています。
 
 ```matlab
 % View events: Edit > Event values
@@ -129,9 +129,9 @@ keystroke_idx = find(contains({EEG.event.type}, 'keystroke_'));
 fprintf('Keystroke events: %d\n', length(keystroke_idx));
 ```
 
-### 計算力スペクトル密度(PSD)
+### 計算力荷重(PSD)
 
-EEGLABのスペクトルプロット機能を使用して、EMG周波数コンテンツを確認します。
+EEGLAB のクラウドプロット機能
 
 ```matlab
 % Use EEGLAB menu: Plot > Channel spectra and maps
@@ -143,22 +143,22 @@ figure; pop_spectopo(EEG, 1, [0 EEG.xmax*1000], 'EEG', ...
 ```
 
 この表示:
-- すべてのチャネルのoverlaidのための力のスペクトル密度
-- 500Hzまでの周波数範囲(EMGの適切な)
-- **重要**:私達は置きました `'freq', []` topoplots を無効にするには - 電極が外れ筋にあるので、EMG データは意味がありません。
+-  すべての のための
+- 500Hzの周波数範囲(EMGの頻度)
+- **重要**:私達は置きました `'freq', []` topoplots にほんご - 電極は外れ筋に、EMG データは 。
 
-![EMGについて パワースペクトラム](/assets/images/emg-spectopo-shot.png)
+![EMGとは](/assets/images/emg-spectopo-shot.png)
 
-**期待パターン:** ほとんどのEMG力は筋肉活動のための50-150 Hzのまわりのピークと20-250 Hzの範囲で集中されるべきです。
+**パターン:** EMGの力はのための50-150 Hzのまわりののののののののの効率および20-250です Hz の範囲で
 
-## EMGの前処理
+## EMG۪۫۰۰۪۫処理
 
-EMG 信号は EEG より別の前処理を要求します:
+EMG は EEG より別の前処理を要求します:
 
 ### 周波数範囲
-EMG は EEG よりも高い周波数が含まれています。
-- **EEG**:典型的に1-50のHz
-- **EMG**:典型的に20-450 Hz (モーター仕事:20-250 Hz)
+EEG は、EEG を率いて、
+- **EEG**:典型的1-50のHz
+- **EMG**:典型的20-450 Hz (仕事:20-250 Hz)
 
 ### バンドパスフィルタリング
 
@@ -172,7 +172,7 @@ EEG = pop_eegfiltnew(EEG, 'locutoff', lowcut, 'hicutoff', highcut);
 
 ### チャネルの品質チェック
 
-EMG の場合、異常な分散のチャンネルを確認します。
+EMGについて ?????????????
 
 ```matlab
 % Calculate variance for each channel
@@ -185,18 +185,18 @@ bad_chan_idx = find(channel_vars < mean_var - 3*std_var | ...
                     channel_vars > mean_var + 3*std_var);
 ```
 
-## clean_rawdata によるデータのクリーニング
+## clean_rawdata は、
 
-**重要:** EMGのデータは非常に騒々しいチャネルか悪い区分を持つことができます。 これらは、エンベロープを計算するBEFOREをきれいにする必要があります。そうしないとアーティファクトはERPに保存されます。
+** 重要:** EMG は、EMG は、EMG を、Embe に、Embe を計算します。
 
-### EMGのクリーニングが重要な理由
+### お問い合わせ
 
 - **電極の変位**:リストバンドの動きは大きい広さのアーティファクトを作成します
 - **悪いチャネル**: 一部のチャネルは、セッション全体に不接触の可能性があります
 - **モーションアーティファクト**: タイプの腕/手首の動き
 - **セッションの分散性**: いくつかのセッションは、他の人よりもはるかに悪い品質を持っている
 
-### clean_rawdataのインストール プラグイン
+### clean_rawdata がインストールされました。
 
 既にインストールされていない場合:
 
@@ -208,9 +208,9 @@ bad_chan_idx = find(channel_vars < mean_var - 3*std_var | ...
 plugin_askinstall('clean_rawdata');
 ```
 
-### ASR(アーティファクトサブスペース再構築)の使用
+### ASR(レイティファクトサブ再構築)
 
-ASRは、良いセグメントを保存しながら、悪いデータ部分を削除します。
+ASRは、
 
 ```matlab
 % Apply clean_rawdata with ASR
@@ -229,14 +229,14 @@ EEG = clean_rawdata(EEG, ...
 EEG = eeg_checkset(EEG);
 ```
 
-### EMG の ASR パラメータを理解する
+### EMG の ASR パラメーター
 
 調節する**主変数:**
 
 1. **BurstCriterion** (デフォルト: EMGの20、EEGの5)
    - より高い値=より少ない積極的なクリーニング
-   - EEGよりも自然に高い振幅
-   - Too積極的な(低値)は本物の筋肉の活動を取除きます
+   - EEGクリア
+   - は の の の
    - EMGの推奨:15-25
 
 2. **ChannelCriterion** (0.8推奨)
@@ -247,7 +247,7 @@ EEG = eeg_checkset(EEG);
    - チャンネルの >25% が悪い時間ウィンドウを削除します。
    - 複数のチャネルに影響を与える動きのアーティファクトに有用
 
-### ASRの代替:手動悪いチャネル除去
+### ASRの代替品
 
 手動制御を好む場合:
 
@@ -286,43 +286,43 @@ end
 ### ワークフローの削除
 
 **推薦されたクリーニングの発注:**
-1. バンドパスフィルタ(20-250 Hz) - 低/高周波数ノイズを除去します
+1. バンドパス(20-250Hz) 高頻度で見る
 2. 明らかに悪いチャンネルを識別します。 (ビジュアル検査)
-3. 保守的なパラメータ(BurstCriterion=20)でASRを適用
+3. パラメータ(BurstCriterion=20)
 4. クリーンなデータの外観検査
 5. 計算セッション品質メトリック
 6. セッションを維持または除外するかどうかを決定
 
 **セッション全体を除外する場合:**
-- ASRで削除されたデータの30%
+- ASRで削除された30%
 - >削除されたチャネルの50%
 - 非常に広さのアーティファクトはクリーニングの後で主張します
-- 主題レベルRMS >3 SD から 平均
+- タイトルRMS >3 SD から パープル
 
 ### 重要なメモ
 
-- **クリーンBEFORE envelope**: フィルタされたデータのアーティファクトは、封筒に保存されます
-- **EMG **のための保守的**:EMGは、EEGよりも高い振幅を持っています, オーバークリーニングしないでください
+- ** ホテル RIVERBEFORE envelope**: マネージド ティファクト , 即日
+- **EMG ** **:EMG は、EEG より一層高い評価を得ています。
 - **セッションレベルの決定**: いくつかのセッションは、サルベージにあまりにもうるさいかもしれません
 - **ドキュメント除外**: どのセッション/チャンネルが除外されたかを把握
 
-## 線形封筒の計算(EMG-ERPのためのCRITICAL)
+## 線形の計算(EMG-ERP)
 
-**重要:**標準ERP分析は、生EMGデータにうまく動作しません。 なぜですか?
+** 重要:**ERP分析は、生EMGデータによくある操作です。
 
-### なぜ生EMG ERPsが失敗するのか
+### ERPs が公開されました
 
-EMGは高周波振動信号(20-250Hz)です。 生EMGのエポックを一緒に平均すると:
+EMG は、以下のとおりです。
 - 振動の肯定的なフェーズは否定的なフェーズをキャンセルします
-- 結果:真の筋肉の活発化を反映しない弱い、騒々しいERPs
+- 結果:真の姿勢の有利化、素晴らし
 - 平均化は、私たちが気にしている広さ情報を破壊します
 
 ### ソリューション: 線形封筒
 
-**linear envelope** は、問題のある発振を除去する際の広さ情報を保持します。
+*linear envelope** は、問題の解決に始まります。
 
 1. **資格**: 絶対値を取る(すべての値が正になります)
-2. **ローパスフィルタリング**: 修正された信号(10-20 Hz)を滑らかにして下さい
+2. **ローパスリング**: 修正された信号(10-20 Hz) を
 
 ```matlab
 % Step 1: Rectify the filtered EMG
@@ -346,10 +346,10 @@ EEG.etc.envelope_cutoff = envelope_cutoff;
 
 この図は、2つの代表チャンネル(左と右リストバンド)の4つの処理段階を示しています。 赤いラインはキーストロークイベントをマークします。
 
-1. **未加工信号** (青):基線騒音および漂流が付いているろ過されていないEMG
-2. **バンド パス フィルター** (緑): 20-250 Hz は EMG をろ過しました-低頻度の漂流および高周波騒音を取除きます
+1.  ** ** ** **
+2. ** バンド** (グリーン): 20-250 Hz は、EMG を、EMG に取り除くことの頻度の残流の騒音を取り除きます
 3. **立方**(紫): フィルタされた信号の絶対値 - すべての値肯定的な
-4. **ローパス フィルター/線形封筒** (マゼンタ): 筋肉活動の広さを捕獲する滑らかな封筒(20のHzの締切り)
+4. ローパス ** ** ** ** ** ** ** ** **
 
 この可視化を生成するコード:
 
@@ -397,15 +397,15 @@ sgtitle('Linear Envelope Computation Process');
 ### 封筒の計算のための変数
 
 **封筒の低パスの締切りの頻度: メニュー
-- **5-10 Hz**: 最高の滑らかになること、遅い動きのための
-- ** 20のHz**: タイプの速い仕事のための標準(推薦される)
-- ** 30-40 Hz**: 非常に速い動きのための最低の滑らかになること、
+- **5-10 Hz**: 最高の のための のための
+- * 20 Hz**: 推薦
+- 30-40 Hz**: 最低 最低
 
-タスクを入力するために、 **20 Hz**は高周波振動を滑らかにする間急速な指の動きを捕獲する速い応答を提供するので推薦されます。
+*20 Hz** は、次の点で、より一層のパフォーマンスを発揮します。
 
-## EMGデータの取得
+## EMGデータ取得
 
-**重要**: *envelope data** を省略します。, 生の濾過EMGではありません!
+** 重要**: *envelope data** を省略します。
 
 キーストロークイベントの周りのエポックを抽出します。
 
@@ -441,9 +441,9 @@ EEG = pop_rmbase(EEG, baseline_window * 1000);  % Convert to ms
 
 ## EMG-ERPの計算
 
-**トライアルバランスに注意:** 異なる試用カウントで条件全体でERPを比較する場合(例:'e'などの一般的なキーと'x'のようなまれなキー)、ランダムにより高いカウント条件をサブサンプリングすることを検討 `pop_select(EEG, 'trial', randperm(EEG.trials, n))` 試験のカウントに一致し、等しい信号に騒音の比率を保障するため。
+** 取引条件:** 条件を満たす 条件 条件 条件 条件 条件 条件 条件 条件 条件 条件 条件 条件 条件 条件 に サブ サンプリング 条件 条件 条件 `pop_select(EEG, 'trial', randperm(EEG.trials, n))` 試験のカウントに一致し、等しい信号に騒音の比率を保障するため。
 
-EMG-ERPは、試験全体で**エンベロープデータ**を平均化することで計算されます。
+EMG-ERP は、EMG-ERP の略称です。
 
 ```matlab
 % Identify channel groups
@@ -464,9 +464,9 @@ ERP_a_left = mean(EEG_a.data(left_wristband, :, :), 3);
 ERP_k_right = mean(EEG_k.data(right_wristband, :, :), 3);
 ```
 
-### EEGLABでEMG-ERPを可視化
+### EEGLABのEMG-ERPは、
 
-EEGLABのERPプロット機能を使用して、イベント関連の筋肉の活性化を視覚化します。
+EEGLABのERPプロット機能、イベントの出発点は、
 
 ```matlab
 % Use EEGLAB menu: Plot > Channel ERPs > In rectangular array
@@ -475,59 +475,59 @@ figure; pop_plottopo(EEG_a, [1:16], 'EMG-ERP for key "a" (left channels)', ...
     0, 'ydir', 1);
 ```
 
-この図は、すべてのバースト・イニシャル・キーストロークのためのEMG-ERPを示しています, 手で分離 (左対右) そして、リストバンド. ステップ2bから封筒データを使用して、すべての32チャンネルが4つのパネルに表示されます。
+この図は、すべてのバースト・イニシャル・キーの対象となります。 Step2b は、全ての32 チャンネルが 4 個ある。
 
 ![個々のチャネル 採用情報](/assets/images/emg_all_channels.png)
 
-**トライアル選択**: 急なタイピングからエポックオーバーラップを避けるために、バースト・イニシャル・キーストロークのみ(前例:>500ms一時停止)が含まれています。 この記録セッションでは、約4,000の合計キーストロークから、バースト・イニシャル・クリテリオンは、クリーンなベースラインを確保しながら、信頼性のあるEMG-ERPに十分な1本あたり100〜300個のエポックを選択しています。 数字のタイトルに正確なエポックカウントが表示されます。
+* 選択 *: が含まれています から から から から から が含まれています が含まれています が含まれています が含まれています が含まれています が含まれています が含まれています が含まれています が含まれています が含まれています が含まれています が含まれています が含まれています が含まれています  この  この から から から から から 本 本 本 本 本 本 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 タイトルのタイトルは、
 
-**横の活性化パターン**:左キー(a、s、d、e、r、...)は左リストバンド(左上)でより強い活性化を示し、右手キー(k、l、j、i、o、...)は右リストバンド(右下)でより強い活性化を示しています。
+横の左キー(a,s,d,e,r,...)は、左上にあるリストバンド(左上)より、右手キー(k,l,j,i,o,...)は右下にあるリストバンド(右下)より。
 
 **EMGの重要:**
-- EEGLABのtopoplot(スカルプマップ)はEMGデータには意味がありません
-- チャネルERPおよび時間コースのプロットに焦点を合わせて下さい
-- 同じ肢のチャネル間でERPを比較する
+- EEGLABのtopoplot(スプカルマップ)は、EMGデータがそのままに
+- コースのプロットコース
+- 同じ の
 
-## 主な違い: EMG 対 EEG
+## EMG 対 EEG
 
 | アスペクト | EEG | EMG |
 |--------|-----|-----|
-| **周波数範囲** | 1-50 Hz | 20-450 Hz |
+| 周波数範囲** | 1-50Hz | 20～450Hz |
 |**広さ** | マイクロボルト | マイクロボルト
 |**空間分解能** | 脳領域 | 特定の筋肉 |
-|**Common artifacts** | 眼圧・筋肉張力 | 動き・電極変位 |
+|**Common artifacts** | 眼圧・姿勢張力 | 球・電極変位 |
 |**ベースライン** | 事前刺激期間 | 予報期間 |
-|**ERPの計算** | 直接的な平均作品 | 線形封筒を最初に要求して下さい! お問い合わせ
-お問い合わせ **概要措置** | ERPの振幅・遅延 | RMS、統合EMG、封筒の振幅 |
+|**ERPの計算** | 直近のパープル作品 | 直線に施された作品は、ぜひご覧ください。 お問い合わせ
+お問い合わせ ERPの振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動・振動
 
-## EEGLABによるEMG-ERP解析のヒント
+## EEGLAB による EEGLAB の解析
 
-1. **ALWAYSは線形封筒**を使用します: 生EMGの直接平均化は機能しません! Epoching および平均化の前に Rectify およびローパス フィルター (タイプのための 20 Hz)。
+1. AlwayS は、次の機能を備えています。 Epoching パーソナライゼーション およびローパス (タイプ 20 Hz)。
 
-2. **EEGLABの可視化ツールを使用する**:
+2. **EEGLABのツール**:
    - `pop_eegplot()` 生データ検査のスクロール
-   - `pop_spectopo()` 周波数解析(EMG の 500 Hz に範囲を拡張)
-   - `pop_plottopo()` または `pop_plotdata()` ERPの視覚化のために
-   - EEGLABの地理的地図(topoplot)を避ける - EMGの意味がない
+   - `pop_spectopo()` 周波数解析(EMG の 500 Hz を拡張する)
+   - `pop_plottopo()` または `pop_plotdata()` ERPの使命
+   - EEGLABの地理的地図(topoplot) - EMG について
 
-3. **適切なフィルタを選択**: EEG(モータータスク用20-250Hz)よりも高いカットオフ周波数を使用 `pop_eegfiltnew()`.
+3. 選択する EEG(自動車用20-250Hz) `pop_eegfiltnew()`.
 
 4. **ベースライン補正が重要**: 使用条件 `pop_rmbase()` プレエベントベースラインを削除します。 封筒は、ほぼゼロベースラインを持っている必要があります。
 
-5. **EEGLABでSanityチェック **:
-   - Plotの未加工データと `pop_eegplot(EEG, 1, 1, 1)`
-   - PSD を点検して下さい `pop_spectopo()` - 20-250の力を確認して下さい Hzの
+5. **EEGLABでSanity** *:
+   - Plot は、 `pop_eegplot(EEG, 1, 1, 1)`
+   - PSDは、 `pop_spectopo()` - 20-250の力 Hzの
    - メニューでイベントを調べる: 編集 > イベントの値
 
-6. **トライアルカウントのアカウント**: より多くのトライアル = より良いSNR. 使用条件 `pop_epoch()` チェックイン `.trials` フィールド。 バランス条件の使用 `pop_select()`.
+6. * ドキュメントのアカウント**: リソース = ライセンス `pop_epoch()` チェックイン `.trials` フィールド。 バランス条件の使用 `pop_select()`.
 
 7. **横方向確認**: 動きを実行する手でより強い活発化を期待して下さい。
 
 8. **個別トライアルの仮想化**: 使用条件 `pop_eegplot(EEG_epoched, 0, 1, 1)` トライアルバイトライアルの分散性を検査します。
 
-9. **マルチサブジェクト解析の場合**: EEGLABのSTUDYフレームワーク(メニュー:ファイル > グループレベルの統計データを作成する
+9. サブジェクトの場合**: EEGLABのSTUDYを継承するデータベース
 
-10. **比較封筒パラメーター**: ERPsが騒々しい場合は、封筒のカットオフ(5-20 Hz)と再エポックを調整してみてください。
+10. ** 比較する** ERPs は、ERPs は、ERPs は、ERPs は、ERPs は、ERPs は、ERPs は、ERPs は、ERPs は、ERPs は、ERPs は、Ess は、Ess は、Es は、Es は、Ess は、Es は、Es は、Es は、Es は、Es は、Es は、Es は、Es は、Es は、Es s の の は、 は、 の は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 の は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 と は、 は、 は、 
 
 ## 追加リソース
 
@@ -538,4 +538,4 @@ figure; pop_plottopo(EEG_a, [1:16], 'EMG-ERP for key "a" (left channels)', ...
 
 - [EEGLABとMEGデータ](EEGLAB_and_MEG_data.html)
 - [自動加工パイプライン](../11_Scripting/automated_pipeline.html)
-- [EEGLABのEEG BIDSデータを分析](../11_Scripting/Analyzing_EEG_BIDS_data_in_EEGLAB.html)
+- [EEGLABのEEG BIDS分析](../11_Scripting/Analyzing_EEG_BIDS_data_in_EEGLAB.html)

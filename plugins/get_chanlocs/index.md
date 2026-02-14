@@ -7,11 +7,11 @@ render_with_liquid: false
 has_children: true
 nav_order: 32
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/get_chanlocs).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/get_chanlocs).
 
-![Screenshot 2024-07-25 at 14 57 29](https://github.com/user-attachments/assets/fc3850a2-09d2-4341-aecf-a41fc39e0758)
+![スクリーンショット 2024-07-25 に 14 57 29](https://github.com/user-attachments/assets/fc3850a2-09d2-4341-aecf-a41fc39e0758)
 
-# The get_chanlocs EEGLAB plugin
-The get_chanlocs EEGLAB plug-in is built on functions in FieldTrip to locate 3-D electrode positions from a 3-D scanned head image. Robert Oostenveld, originator of the FieldTrip toolbox, alerted us in 2017 that he and his students in Nijmegen had put functions into FieldTrip to compute positions of scalp electrodes from the recorded 3-D images for one 3-D camera, the Structure scanner mounted to an Apple iPad. (Read Homölle and Oostenveld (2019) and notes on the incorporated FieldTrip functions). We at SCCN have created an EEGLAB plug-in extension, get_chanlocs, to ease the process of digitizing the positions of the electrodes from the acquired 3-D and entering them into the EEG.chanlocs data structure for use with other EEGLAB (plotting and source localization) functions that require electrode position information.
+# get_chanlocs EEGLABプラグイン
+get_chanlocs EEGLAB プラグインは、FieldTrip で 3 D の電極の位置を 3 D のスキャンされたヘッド イメージから見つけられます。 ロバートOostenveld、FieldTripツールボックスの創始者であるRobert Oostenveldは、2017年にNijmegenの生徒がFieldTripに機能を追加し、3Dカメラの記録された3D画像からスカルプ電極の計算位置を計算しました。この構造スキャナーはApple iPadに搭載しました。 (HomölleとOostenveld (2019) と、組み込みのFieldTrip関数のメモを読みます)。 SCCN では、EEGLAB プラグイン拡張、get_chanlocs を作成し、3D から電極の位置をデジタル化し、EEG に入力します。 メカニックは、電極位置情報を必要とする他のEEGLAB(plotting and source localization)機能で使用するためのデータ構造を割り当てます。
 
-See the [get_chanlocs wiki](https://github.com/sccn/get_chanlocs/wiki) for more information or use the other submenus for this plugin if you are on the EEGLAB website.
+詳細はこちら [get_chanlocs ウィキ](https://github.com/sccn/get_chanlocs/wiki) EEGLABのウェブサイト上にある場合、その他のサブメニューをこのプラグインに使用してください。

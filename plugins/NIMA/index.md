@@ -6,91 +6,91 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 16
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/NIMA).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/NIMA).
 
-![P159_separatealpha.png](images/P159_separatealpha.png)
+![P159_separatealpha.png はコメントを受け付けていません。](images/P159_separatealpha.png)
 
-The NIMA EEGLAB plugin
+NIMA EEGLABプラグイン
 -------------------------------------------------------------
 
-NIMA stands for Nima's Images from Measure-projection Analysis. Measure
-Projection Toolbox (MPT) is a published method (Bigdely-Shamlo et al.,
-2013), and for his wiki page see [this
-link](https://sccn.ucsd.edu/wiki/MPT). MPT's nice visualization
-functions are stripped and re-wrapped into a stand-alone dipole
-visualizer that does not have dependency on MPT. As a GUI, a menu item
-appears under STUDY tab. The main function, nimasImagesfromMpA() can be
-used also as a stand-alone command line function.
+NIMAは、測定投影分析からニマの画像の略です。 測定値
+投影ツールボックス(MPT)は公開方法(Bigdely-Shamlo et al.,
+2013年) ウィキページで見る
+リンクについてhttps://sccn.ucsd.edu/wiki/MPT)。 MPTの素晴らしい視覚化
+関数は、スタンドアローンダイポールに除去され、再ラップされます
+MPTに依存しない視覚化装置。 GUIとしてメニュー項目
+STUDYタブの下に表示されます。 主な機能、nimasImagesfromMpA() は
+スタンドアローンコマンドライン機能としても使用されます。
 
-What you can do with the optional inputs (12/07/2018 updated)
+オプションの入力でできること (12/07/2018 更新)
 -------------------------------------------------------------
 
--   Specifying the colors and Alpha values separately for each
-    blob/voxel clusters.
--   Specifying which MRI image and blob/voxel-cluster projections to
-    show.
+-   それぞれに色とアルファ値の指定
+    blob/voxel クラスター。
+-   MRIイメージとblob/voxel-clusterの予測を指定する
+    ショー。
 
-GUI, Blobs, and Voxels
+GUI、Blobs、Voxels
 ----------------------
-GUI image can be seen in the screenshot below. This visualization works
-on 3-D Gaussian-blurred dipole locations, called (probabilistic) *dipole
-density*, which requires two parameters to determine the spatial
-spreading, namely full-width half-maximum (FWHM) in mm and number of
-sigma to truncate the Gaussian (can be specified as optional input,
-default 3 sigma; sigma == FWHM/2.355). Also, users are requested to
-determine the spatial resolution by determining isometric voxel size,
-which could be from 2 mm to 8 mm by increment of 1 mm. The final
-visualization can be made either using blob or voxels, and the
-transparency can be specified as Alpha (0-1 as invisible-solid). As an
-optional input, the order and the RGB triplets of the color assignment
-for the selected clusters can be specified as 'blobColor', \[1 0 0; 0 1
-0; 0 0 1\] which will give you R, G, B for the specified three clusters
-in this order. In the screenshot below, compare scalp topographies, blob
-images, and voxel images of Cluster 5, 6, 16. My colleague told me the
-voxel image reminds him of Minecraft.
+下記のスクリーンショットでGUIイメージを見ることができます。 この映像作品
+に 3-D Gaussian-blurred ダイポールの場所, 呼ばれる (確率的) *dipole
+空間を決定するために2つのパラメータを必要とする密度*、
+スプレッド、すなわち全幅半径(FWHM)mmと数
+sigma は Gaussian (任意入力として指定できます、
+デフォルト 3 シグマ; シグマ == FWHM/2.355)。 また、ご利用者様へお申し出ください。
+対称のvoxelのサイズを決定することによって空間の決断を、
+2mmから8mmまで対応可能。 決勝
+視覚化はblobかvoxelsを使用して作ることができます、そして
+透明度はアルファ(見えない固体として0-1)として指定できます。 お問い合わせ
+任意入力、色の割り当ての順序そしてRGBの小冊子
+選択したクラスターは 'blobColor', \[1 0 0; 0 1
+0; 0 0 1 \] 指定された3つのクラスターのR、G、Bを与える
+この順序で。 下のスクリーンショットでは、スキャルプトポグラフィ、ブロブを比較します
+クラスター 5, 6, 16 の画像、および voxel イメージ。 私の同僚は私に言った
+voxel イメージは、Minecraft の彼を思い出させます。
 
-![Nimafigure01.png](images/Nimafigure01.png)
+![ニマフィグレ01.png](images/Nimafigure01.png)
 
-Comparison with std_dipoleDensity()
+std_dipoleDensity() との比較
 -----------------------------------
 
-std_dipoleDensity() currently allows up to 5 clusters to be plotted in
-one head space. Compared with this function, images from NIMA can embody
-transparency and more fine-tuned spatial resolution.
+std_dipoleDensity() は、現在最大 5 つのクラスターをプロットできます。
+1つのヘッド スペース。 この機能と比較すると、NIMAの画像はエンボディできます
+透明性とより微調整された空間解像度。
 
-![Dipfitcomparison.png](images/Dipfitcomparison.png)
+![Dipfitcomparison.png - 株式会社ドリテック](images/Dipfitcomparison.png)
 
-Voxel Size Comparison for Blob Images
+ブロブ画像のVoxelサイズ比較
 -------------------------------------
 
-FWHM = 8 mm, number of sigma to truncate Gaussian = 3. From top left to
-right, Voxel Size = 2 mm, 3 mm, 4 mm. From bottom left to right, 5 mm, 6
-mm, and 7 mm.
+FWHM = 8 mm, ガウスをトランクするためにシグマの数 = 3. 左上から
+右、Voxel サイズ = 2 mm、3 mm、4 mm。 左下から右下まで、5mm、6mm
+mm、および7 mm。
 
-![Blob_from2to7mm.png](images/Blob_from2to7mm.png)
+![Blob_from2to7mm.pngの特長](images/Blob_from2to7mm.png)
 
-Voxel Size Comparison for Voxel Images
+Voxel画像のVoxelサイズ比較
 --------------------------------------
 
-FWHM = 8 mm, number of sigma to truncate Gaussian = 3. From top left to
-right, Voxel Size = 2 mm, 3 mm, 4 mm. From bottom left to right, 5 mm, 6
-mm, and 7 mm.
+FWHM = 8 mm, ガウスをトランクするためにシグマの数 = 3. 左上から
+右、Voxel サイズ = 2 mm、3 mm、4 mm。 左下から右下まで、5mm、6mm
+mm、および7 mm。
 
-![Voxels_from2to7mm.png](images/Voxels_from2to7mm.png)
+![Voxels_from2to7mmの.png](images/Voxels_from2to7mm.png)
 
-FWHM Size Comparison
+フリガナ サイズ比較
 --------------------
 
-Number of sigma to truncate Gaussian = 3. From top left to right, FWHM =
-8 mm, 12 mm, 16 mm. From bottom left to right, 20 mm, 24 mm, and 28 mm.
+ガウシアンをトランクするためにシグマの数 = 3. 左上から右上まで、FWHM =
+8 mm、12 mm、16 mm。 左下から右下まで、20mm、24mm、28mm。
 
-![Voxels_fwhm8to28mm.png](images/Voxels_fwhm8to28mm.png)
+![Voxels_fwhm8to28mm.pngの特長](images/Voxels_fwhm8to28mm.png)
 
-Alpha Comparison
+アルファ比較
 ----------------
 
-FWHM = 8 mm, number of sigma to truncate Gaussian = 3. Top row, voxel
-plot. Bottom row, blob plot. From left to right, Alpha = 0.1, 0.3, 0.5,
+FWHM = 8 mm, ガウスをトランクするシグマの数 = 3. トップ行, voxel
+プロット。 ボトムライン、ブロブプロット。 左から右へ、アルファ=0.1、0.3、0.5、
 0.7, 0.9.
 
-![Alphacomparison.png](images/Alphacomparison.png)
+![アルファコンパリソン.png](images/Alphacomparison.png)

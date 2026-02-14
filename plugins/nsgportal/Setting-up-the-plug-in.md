@@ -7,17 +7,17 @@ render_with_liquid: false
 title: Setting-up-the-plug-in
 long_title: Setting-up-the-plug-in
 ---
-# Setting up the plug-in
+# プラグインの設定
 
-## Installing the plug-in
+## プラグインのインストール
 
-Generally, all plug-ins in EEGLAB, included *nsgportal*, can be installed following two different ways. For installing *nsgportal*:
+一般的に、EEGLABのすべてのプラグインは、*nsgportal*を含んでおり、2つの異なる方法でインストールすることができます。 *nsgportal*を取付けるため:
 
-1. From the EEGLAB Plug-in Manager: Launch EEGLAB and go to **File -> Manage EEGLAB extension**. The plug-in manager GUI will pop up. From this GUI look for and select the plug-in *nsgportal* from the main window, then click into the Install/Update button to install the plug-in.
-2. From the web: Download the zip file with the content of the plug-in *nsgportal*  either from this [GitHub](https://github.com/sccn/nsgportal) page (select Download Zip on Github) or from the EEGLAB wiki page for plug-ins [here](https://sccn.ucsd.edu/wiki/Plugin_list_all). Decompress the zip file in the folder *../eeglab/plugins* and the restart EEGLAB.
+1. EEGLAB プラグインマネージャから: EEGLAB を起動し、**File -> EEGLAB拡張機能**の管理 プラグインマネージャー GUI がポップアップします。 このGUIから、メインウィンドウからプラグイン*nsgportal*を選択し、[インストール/アップデート]ボタンをクリックしてプラグインをインストールします。
+2. ウェブから: プラグイン* nsgportal*のコンテンツでzipファイルをダウンロードする [GitHubで](https://github.com/sccn/nsgportal) ページ(GithubでZipをダウンロード)またはEEGLAB wikiページからプラグインを選択 [詳しくはこちら](https://sccn.ucsd.edu/wiki/Plugin_list_all)お問い合わせ フォルダ*./eeglab/plugins*でzipファイルを解凍し、EEGLABを再起動します。
 
-## Setting your NSG credentials
-Use menu item **Tools > NSG Tools > NSG portal credentials and settings**. Simply enter your NSG user name and user password (see description above on this page). Inputs **NSG key** and **NSG Url** do not need to be modified. The entry **Output folder** is the folder where NSG data will be downloaded.
+## NSG認証情報の設定
+メニュー項目の使用**ツール>NSGツール> NSGポータルの認証と設定** NSGユーザー名とユーザパスワードを入力するだけです(このページの上の説明を参照してください)。 入力**NSGキー**と**NSGウル**は変更する必要はありません。 エントリー**出力フォルダ**は、NSGデータがダウンロードされるフォルダです。
 
 <center>
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/500px-Nsgcredentials.png?raw=true" alt="drawing" width="500"/>

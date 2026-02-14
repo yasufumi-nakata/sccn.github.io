@@ -6,70 +6,70 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 14
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/fMRIb).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/fMRIb).
 
-THIS REPOSITORY IS LOOKING FOR A MAINTAINER. IF YOU USE THIS TOOL, CONSIDER MAINTAINING IT.
+このリポジトリは、メインテナーのためにロックされています。 このツールを利用する場合、コンダクタはそれを使用します。
 
-# the fMRIb EEGLAB plugin
+# fMRIb EEGLABプラグイン
 
-Removal of FMRI environment artifacts from EEG data using optimal basis sets. This plugin for EEGLAB adds a menu item under 'Tools' called
-'FMRIB Tools' for removing artifacts form EEG data collected with FMRI.
+最適なベースセットを使用してEEGデータからFMRI環境アーティファクトの除去。 EEGLAB 用のこのプラグインは 'Tools' でメニュー項目を追加します。
+'FMRIB の FMRIで収集したEEGデータを作成するツールです。
 
-## Instalation
+## インストール
 
-Use the EEGLAB plugin manager or place the folder fmribX.X (X.X depends on version) inside the 
-'plugins' folder of EEGLAB.  When you run EEGLAB the plugin  will be 
-detected and installed.  You should see the following message in Matlab 
-'eeglab: adding plugin "fmrib1.0b" (see >> help eegplugin_fmrib)'
-when you start EEGLAB.
+EEGLABプラグインマネージャを使用して、またはフォルダfmribX.X(X.Xはバージョンに依存します)を内部に配置します 
+EEGLABの'plugins'フォルダ。 EEGLABを実行すると、プラグインは 
+検出され、取付けられて。 Matlabのメッセージは以下のとおりです。 
+'eeglab: プラグイン "fmrib1.0b" を追加 (参照 >> ヘルプ eegplugin_fmrib) お問い合わせ
+EEGLABを始めるとき。
 
-## Tools
-1. FASTR (fmri artifact slice template removal):  This tool only 
-requires that EEG data in EEGLAB to have timing events for each FMRI slice 
-acquisition.  It uses this information to robustly subtract the gradient 
-artifact.  More information about the algorithm used is available in the 
-plugin documentation.
+## ツール
+1. FASTR(fmriアーティファクトスライステンプレート除去): このツールのみ 
+各FMRIスライスのタイミングイベントを持つEEGLABのEEGデータが必要 
+買収。 この情報は、グラデーションを堅牢に引き下げるために使用します。 
+アーティファクト。 使用されるアルゴリズムの詳細については、 
+プラグインのドキュメント。
 
-2. QRS detection.  This tool allows the detection of heart beat /QRS 
-complexes (to be subsequently used in removing hear-related artifact) from 
-a single channel of ECG data and stores the results as events in the EEGLAB 
-event structure.  It has been working quite robustly even with quite bad ECGs.  Again, documentation and references is included in the plugin.
+2. QRSの検出。 このツールは、心臓のビート/QRSの検出を可能にします 
+複雑化(その後、リス関連アーティファクトを除去するために使用される) 
+ECGデータの単一チャネルで、結果がEEGLABのイベントとして保存されます。 
+イベント構造 非常に悪いECGでも非常に堅く働いています。 再び、プラグインにドキュメントとリファレンスが含まれている。
 
-3. Pulse artifact removal.   Uses events from (2) to remove pulse 
-artifacts using different methods of constructing an artifact template. 
+3. 脈拍のアーティファクトの取り外し。 (2)からパルスを除去するためにイベントを使用する 
+アーティファクトのテンプレートを作成するさまざまな方法を使用してアーティファクト。 
 
-Copyright (C) 2004 Rami K. Niazy, FMRIB Centre, University of Oxford rami@fmrib.ox.ac.uk
+Rami K. Niazy, FMRIB Centre, オックスフォード大学 rami@fmrib.ox.ac.uk
 
-The FMRIB plugin is included in EEGLAB and was developed in 2005 by Rami Niazi. However, it is no longer supported.
+FMRIB プラグインは EEGLAB に含まれており、2005 年に Rami Niazi によって開発されました。 しかし、もうサポートしていません。
 
-# Reference
+# 参考文献
 
-Niazy RK, Beckmann CF, Iannetti GD, Brady JM, Smitha SM. Neuroimage. 2005, 28(3):720-737.
+Niazy RK, Beckmann CF, Iannetti GD, Brady JM, スミサ SM. 神経画像. 2005, 28(3):720-737.
 
-# See also
+# お問い合わせ
 
-* Improved quality of auditory event-related potentials recorded simultaneously with 3-T fMRI: removal of the ballistocardiogram artefact. Debener S, Strobel A, Sorger B, Peters J, Kranczioch C, Engel AK, Goebel R. Neuroimage. 2007, 34(2)587-97.
+* 3-T fMRIで同時に記録された聴覚イベント関連の潜在能力の質を改善しました:弾道のアーティファクトの除去。 Debener S, Strobel A, Sorger B, Peters J, Kranczioch C, Engel AK, Goebel R. Neuroimage. 2007, 34(2)587-97.
 
-* Other than FMRIB, BERGEN is a very nice EEGLAB plugin for fMRI-EEG. This supports a function which helps to reduce an effect of head movement.
+* FMRIB以外、BERGENはfMRI-EEG用の非常に素晴らしいEEGLABプラグインです。 ヘッドの動きの効果を減らすのに役立つ機能をサポートしています。
 
-* Realignment parameter-informed artefact correction for simultaneous EEG–fMRI recordings. Moosmann M, Schönfelder VH, Specht K, Scheeringa R, Nordby H, Hugdahl K. Neuroimage. 2009, 45(4):1144-50. http://sccn.ucsd.edu/wiki/EEGLAB_Plugins http://fmri.uib.no/tools/bergen_plugin.htm
+* 同時EEG-fMRI記録のための再アライメントパラメータ非公式アーファクト補正。 Moosmann M, Schönfelder VH, Specht K, Scheeringa R, Nordby H, Hugdahl K. Neuroimage. 2009, 45(4):1144-50. http://sccn.ucsd.edu/wiki/EEGLAB_Plugins http://fmri.uib.no/tools/bergen_plugin.htm
 
-* Another recommended application for this purpose is FASST which is a plug-in for SPM but you can still import data to EEGLAB. This works literally fast, and equipped with a constrained ICA for BCG rejection, which is one of the most sophisticated solutions for BCG rejection.
+* この目的のために別の推奨アプリケーションは、SPM用のプラグインであるFASSTですが、EEGLABにデータをインポートすることができます。 これは、文字通り高速で機能し、BCG拒絶のための最も洗練されたソリューションの1つであるBCG拒絶のための禁忌のICAが装備されています。
 
-* Rejection of pulse related artefact (PRA) from continuous electroencephalographic (EEG) time series recorded during functional magnetic resonance imaging (fMRI) using constraint independent component analysis (cICA). Leclercq Y, Balteau E, Dang-Vu T, Schabus M, Luxen A, Maquet P, Phillips C. Neuroimage. 2009, 44(3):679-91.
+* 機能磁気共鳴イメージング(fMRI)で記録された連続電気脳図(EEG)時間シリーズからのパルス関連アーティファクト(PRA)のレジェクション。 Leclercq Y, Balteau E, Dang-Vu T, Schabus M, Luxen A, Maquet P, Phillips C. Neuroimage. 2009, 44(3):679-91.
 
-* [fMRI Artefact rejection and Sleep Scoring Toolbox](http://www.montefiore.ulg.ac.be/~phillips/FASST.html)
+* [fMRIアーファクト拒絶反応と睡眠スコアリングツールボックス](http://www.montefiore.ulg.ac.be/~phillips/FASST.html)
 
-# Version history
+# バージョン履歴
 
-* V2.0 -- When the last gradient pulse sequence is too near the end of the EEG
-recording, FASTR properly generates a warning but then crashes.  2) When a flat
-reference channel is in the dataset, FASTR's adaptive noise cancellation option
-tries to correct it, resulting in NaNs.  3) Pulse artifact subtraction function
-tries to correct flat reference channels resulting in crash.  4) Pulse artifact
-subtraction function trying to correct ECG channel despite being told not to do
-so.  5) FASTR's adaptive noise cancellation option tries to correct ECG channel
-despite being told not to do so. See https://sccn.ucsd.edu/bugzilla/show_bug.cgi?id=1520
+* V2.0 -- 仕様 最後の勾配の脈拍の順序がEEGの端の近くで余りにあるとき
+録音、FASTRは正しく警告を生成しますが、クラッシュします。 2) 平らな場合
+参照チャネルはデータセット、FASTRの適応ノイズキャンセレーションオプションにあります
+それを修正しようとします。, NaNs になります。. 3) 脈拍のアーティファクトの昇華機能
+クラッシュをもたらすフラットリファレンスチャンネルを修正しようとします。 4) 脈拍のartifact
+指示されていないにもかかわらず、ECGチャネルを修正しようとする減算機能
+お問い合わせ 5) FASTRの適応ノイズキャンセルオプションは、ECGチャネルを修正しようとします
+そうしないと言われているにもかかわらず。 お問い合わせ https://sccn.ucsd.edu/bugzilla/show_bug.cgi?id=1520
 
-* V2.1 -- Fix version display issue in EEGLAB, no other changes.
+* V2.1 -- - - - - - - - - EEGLABでバージョン表示の問題を修正し、他の変更はありません。
 

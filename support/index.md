@@ -6,24 +6,24 @@ has_children: true
 has_toc: false
 nav_order: 6
 ---
-# Troubleshooting and support
+# トラブルシューティングとサポート
 
-The pages below describe how to troubleshoot EEGLAB and get answer to your questions. There are three several ways to search for existing answers.
+以下のページでは、EEGLABのトラブルシューティングと質問への回答方法について説明します。 既存の回答を検索する3つの方法があります。
 
-## Search for existing answers
+## 既存の回答を検索
 
-- [Use Google](http://google.com). Write down your query and add the keyword EEGLAB or EEGLABLIST at the beginning.
-- Use this wiki search. At the top of this page, write down your query.
-- Look at the [TIPS and FAQ](/others/TIPS_and_FAQ) page.
-- Look at the [EEGLAB filtering FAQ](/others/Firfilt_FAQ) page.
+- [Googleを使う](http://google.com)お問い合わせ EEGLAB または EEGLABLIST のキーワードを先頭に書き込む。
+- このwiki検索を使用します。 このページの一番上に、クエリを書いてください。
+- 見てみる [TIPSとFAQ](/others/TIPS_and_FAQ) サイトマップ
+- 見てみる [EEGLABフィルターFAQ](/others/Firfilt_FAQ) サイトマップ
 
-## Ask the community
+## コミュニティに問い合わせる
 
-To ask the community, the simplest way is to subscribe to the [EEGLABLIST](/others/EEGLAB_mailing_lists.html) and send a message. 
+コミュニティに尋ねるには、最も簡単な方法は、購読することです [エグラボリスト](/others/EEGLAB_mailing_lists.html) メッセージの送信 
 
-## Reproting a bug
+## バグの再現
 
-- [Reporting an EEGLAB bug](/others/EEGLAB_Bugs.html)
-- [EEGLAB test cases](/others/EEGLAB_test_cases.html)
+- [EEGLABバグ報告](/others/EEGLAB_Bugs.html)
+- [EEGLABテストケース](/others/EEGLAB_test_cases.html)
 
 

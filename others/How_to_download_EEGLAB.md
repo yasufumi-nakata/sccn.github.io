@@ -5,59 +5,59 @@ long_title: Download MATLAB version of EEGLAB
 parent: Download EEGLAB
 nav_order: 1
 ---
-Download EEGLAB
+ダウンロード EEGLAB
 ====
 
-Go to the [EEGLAB download
-page](https://sccn.ucsd.edu/eeglab/download.php) to download the latest stable version of EEGLAB. The rest of this page describes how to download the development version of EEGLAB, and is recommended for advanced EEGLAB users only. In the video, we outline the different options for running EEGLAB.
+[EEGLABのダウンロード]に移動
+ページ:()https://sccn.ucsd.edu/eeglab/download.php) EEGLABの最新バージョンをダウンロードします。 このページの残りの部分は、EEGLABの開発バージョンをダウンロードする方法を説明し、高度なEEGLABユーザーのみに推奨されます。 ビデオでは、EEGLABを実行するためのさまざまなオプションについて説明します。
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/NhKc0arEcbs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-Download the EEGLAB ZIP file archive
+EEGLAB ZIPファイルアーカイブをダウンロード
 ------------
-EEGLAB download in ZIP format is available on the [EEGLAB download
-page](https://sccn.ucsd.edu/eeglab/download.php). This includes the
-latest release as well as old versions. The [EEGLAB revision history page](/others/EEGLAB_revision_history.html) describes changes between EEGLAB versions.
+ZIP形式のEEGLABのダウンロードは、【EEGLABダウンロード】でご利用いただけます。
+ページ:()https://sccn.ucsd.edu/eeglab/download.php)。 これには、
+最新のリリースと旧バージョン。 ふりがな [EEGLABリビジョン履歴ページ](/others/EEGLAB_revision_history.html) EEGLABのバージョンの変更について説明しています。
 
-Please do NOT download the zip file from the [EEGLAB GitHub repository](https://github.com/sccn/eeglab.git) as it is missing important EEGLAB plugins not included in the EEGLAB code base. If you want to use the development version of EEGLAB, clone it and include submodules as explained below.
+zipファイルをダウンロードしないでください [エッグラボ GitHubリポジトリ](https://github.com/sccn/eeglab.git) EEGLABコードベースに含まれていない重要なEEGLABプラグインが欠落しているため。 EEGLABの開発バージョンを使用する場合は、以下の説明としてサブモジュールをクローンし、含めます。
 
-Cloning EEGLAB from GitHub
+GitHubからEEGLABをクローニング
 ------------------
-Since 2014, it is possible to use GIT to download the latest
-development version of EEGLAB from GitHub at any time - this version is
-more recent than the ZIP above. Because of our development scheme, the
-latest version of EEGLAB is usually the most stable. We recommend
-using [SourceTree](https://www.sourcetreeapp.com/) to visualize branches.
-Clone the [EEGLAB GitHub
-repository](https://github.com/sccn/eeglab.git) as you would do with any
-standard git package. When cloning, make sure you use the
-*--recurse-submodule* option. Otherwise, important EEGLAB plugins will not be downloaded and EEGLAB will not be fully functional.
+2014年以降、GITを利用して最新ダウンロードが可能
+EEGLAB の開発バージョンは GitHub からいつでも - このバージョンは
+上記ZIPよりも最新です。 開発スキームのため、
+EEGLABの最新バージョンは通常最も安定しています。 お問い合わせ
+使用方法 [ソース ツリー](https://www.sourcetreeapp.com/) ブランチを可視化する
+[EEGLAB GitHub をクローンする]
+リポジトリ(Repository)https://github.com/sccn/eeglab.git) どんなことでも
+標準 git パッケージ。 クローニング時は必ずご使用ください。
+*---recurse-submodule* オプション。 それ以外の場合、重要な EEGLAB プラグインはダウンロードされず、EEGLAB は完全に機能しません。
 
 ```
 git clone --recurse-submodules https://github.com/sccn/eeglab.git
 ```
 
-### Accessing branches
+### 支店へのアクセス
 
-The Master branch is a copy of the latest ZIP release. The *develop*
-branch is the latest stable code with updates and bug fixes. Most likely,
-you will want to use the *develop* branch, which is the branch cloned by default.
+マスターブランチは最新のZIPリリースのコピーです。 *デベロップ*
+ブランチは更新とバグ修正で最新の安定したコードです。 ほとんどの場合、
+*develop* ブランチはデフォルトでクローニングされたブランチです。
 
-All other branches refer to previous versions of EEGLAB or unstable code
-that is under intensive development. To update the EEGLAB code using the
-latest development sources, simply right click on the EEGLAB folder and
-select *git pull*.
+他のすべてのブランチは、EEGLABまたは不安定なコードの以前のバージョンを参照してください。
+それは集中的な開発下にあります。 EEGLAB コードを更新するには
+最新の開発ソース, 単に EEGLAB フォルダをクリックし、
+*git pull* を選択します。
 
-### Contributing code to EEGLAB
+### EEGLABへのコード提供
 
-To contribute code to EEGLAB, fork the code and create a pull request, as
-indicated on this [page](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository). This other
-[page](/tutorials/contribute) contains additional
-information on how to contribute to EEGLAB.
+EEGLABにコードを付与し、コードをフォークしてプルリクエストを作成する
+以下に示す [サイトマップ](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository)お問い合わせ その他
+[サイトマップ](/tutorials/contribute) 追加が含まれています
+EEGLABへの貢献について
 
-### Prior repository systems
+### リポジトリシステム
 
-EEGLAB was first under RCS (2002-2005), then under CVS (2005-2010), and
-finally under SVN (2010-2014) before migrating to GIT (2014-). All
-commit messages have been preserved in the migration process.
+EEGLABはRCS(2002-2005)で初めて、CVS(2005-2010)の下、
+GIT(2014-)への移行前のSVN(2010-2014)の下。 すべて
+移行プロセスでコミットメッセージが保存されています。
 

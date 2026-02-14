@@ -7,4 +7,4 @@ has_children: true
 has_toc: true
 nav_order: 8
 ---
-データをクリーンにすることで、行動的に関連したEEG対策を計算する時間です。 この一連のチュートリアルでは、ERP、スペクトラ、ERP-images、およびEEGデータとICA-resolved EEGソースの時間の頻度分解をプロットすることを可能にします。
+社会保険に加入し、社会保険に加入する このチュートリアルでは、ERP、スペクトラ、ERP-images、およびEEGデータとICA-resolved の手順を説明します。 EEGのリソース

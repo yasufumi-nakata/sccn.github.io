@@ -1,34 +1,34 @@
-### Installation Steps
+### インストール手順
 https://github.com/OpenNeuroOrg/openneuro/tree/master/packages/openneuro-cli
 
-1. Check to make sure bash is used (nemar-dev defaults to tcsh) and change if necessary
+1. bashが使用されていることを確認してください(nemar-devのデフォルトではtcsh)、必要に応じて変更
 ```sh
 echo $SHELL
 chsh --shell /bin/bash <username>
 ```
-2. Install nvm 
+2. nvmをインストールする 
 ```sh 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 ```
-3. Install nodejs@14 through nvm
+3. nvmでnodejs@14をインストール
 ```sh
 nvm install 14
 ```
-4. Install openneuro-cli
+4. openneuro-cliをインストール
 ```sh
 npm install -g @openneuro/cli
 ```
-5. Follow **Setup** guide [here](https://github.com/OpenNeuroOrg/openneuro/tree/master/packages/openneuro-cli) to login, then check **Usage**.
+5. フォロー**設定**ガイド [詳しくはこちら](https://github.com/OpenNeuroOrg/openneuro/tree/master/packages/openneuro-cli) ログインし、**Usage**を確認してください。
 
 
-### Troubleshoot
-* If you encounter "Error: Cannot find module 'react'", manually install react locally where openneuro-cli is located.
+### トラブルシューティング
+* "Error: モジュール 'react' が見つからない場合、手動で openneuro-cli が配置されている場所をローカルに反応します。
 ```sh
 cd /home/<username>/.nvm/versions/node/<v#>/lib/node_modules/openneuro-cli
 npm install react
 ```
 
-* To update the OpenNeuro client:
+* OpenNeuro クライアントを更新するには:
 ```sh
 npm update -g @openneuro/cli
 ```

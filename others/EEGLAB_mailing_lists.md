@@ -4,84 +4,84 @@ title: EEGLAB mailing lists
 parent: Support
 nav_order: 3
 ---
-EEGLAB mailing lists
+EEGLABメーリングリスト
 ====
 
-## The EEGLAB Discussion List (eeglablist)
+## EEGLAB ディスカッションリスト(eeglablist)
 
-This moderated mailing list is about the EEGLAB signal processing environment
-for MATLAB signal processing of EEG and related data. Feel free to post messages to this list. 
-The list moderator passes on relevant posts to the whole list.
+この中程度のメーリングリストは、EEGLAB信号処理環境について
+EEGおよび関連データのMATLAB信号処理用 このリストにメッセージを投稿してください。 
+リストモデレータは、関連する投稿をリスト全体に渡します。
 
--   To subscribe to the EEGLAB discussion list, send an (empty) email to
+-   EEGLABのディスカッションリストを購読するには、(空)メールをメールで送信してください。
     <eeglablist-subscribe@sccn.ucsd.edu>
 
 <!-- -->
 
--   To unsubscribe to the EEGLAB discussion list, send an (empty) email
-    to <eeglablist-unsubscribe@sccn.ucsd.edu>
+-   EEGLABの議論リストに退会するには、(空)電子メールを送信してください
+    お問い合わせ <eeglablist-unsubscribe@sccn.ucsd.edu>
 
 <!-- -->
 
--   If you have any mailing-list problems or requests, email
+-   メーリングリストの問題や要求がある場合は、電子メール
     <eeglablist-owner@sccn.ucsd.edu>
 
-To send a message to the list, email
+リストにメッセージを送信するには、電子メール
 <eeglablist@sccn.ucsd.edu>.
-You may not send messages to the list if you are not a subscriber. All
-messages are moderated for appropriateness.
+購読者でないと、リストにメッセージを送ることはできません。 すべて
+メッセージは適度に適しています。
 
-Browse the eeglablist message archive
-[here](http://sccn.ucsd.edu/pipermail/eeglablist/). Use Google to search
-the archive by adding "eeglablist" to your Google query.
+eeglablist メッセージのアーカイブをブラウズする
+[詳しくはこちら](http://sccn.ucsd.edu/pipermail/eeglablist/)お問い合わせ Googleを使用して検索
+Google クエリに "eeglablist" を追加してアーカイブします。
 
-### List Criteria
+### リストの基準
 
-Posts on the eeglablist include:
+eeglablistの投稿には以下が含まれます。
 
--   Questions and discussion about practices and issues in EEG data
-    collection and analysis, particularly about EEGLAB functions and
-    pipelines.
+-   EEGデータの実践と問題に関する質問と議論
+    EEGLABの機能と分析、特にEEGLABの機能について
+    パイプライン。
 
--   Announcements of EEG-related events and EEG-related research
-    positions.
+-   EEG関連イベント及びEEG関連研究発表
+    位置。
 
-The moderator will withhold from the list posts that:
+モデレータは、以下のリスト投稿から保持されます。
 
--   Are not EEG-related,
+-   EEG関連ではない、
 
--   Contain commercial advertisements,
+-   商用広告を含む
 
--   Contain personal attacks,
+-   個人的な攻撃を含む、
 
--   Contain attachments.
+-   添付ファイルが含まれています。
 
 
 
-## The EEGLAB News List (eeglabnewslist)
+## EEGLABニュースリスト(eeglabnewslist)
 
-The news list is reserved only for infrequent news releases from the
-EEGLAB development team. Do not send messages to this list; they will
-not be read.
+ニュース一覧は、不当なニュースリリースのみに予約されます。
+EEGLAB開発チーム このリストにメッセージを送信しないでください。
+読んでいません。
 
--   To subscribe to the news list, send an (empty) email to
+-   ニュースリストを購読するには、(空)メールを送信します。
     <eeglabnews-subscribe@sccn.ucsd.edu>
--   To unsubscribe to the news list, send an (empty) email to
+-   ニュースリストに退会するには、(空)メールを送信します。
     <eeglabnews-unsubscribe@sccn.ucsd.edu>
--   For any mailing-list problems or requests, email
+-   メーリングリストの問題や要求、電子メール
     <eeglabnews-owner@sccn.ucsd.edu>
 
-## Feedback
+## フィードバック
 
-Please send detailed questions you cannot find an answer ("How can I ...
-?," "Why does ... ?", etc.) to the EEGLAB discussion list (see above) to
-give other users the benefit of your Q&A -- but please look for your own
-answers by reading the EEGLAB tutorial and/or studying the relevant
-function help messages first!
+回答が見つからなかった詳細な質問(「どうすればいいのか」)を送信してください。
+?、" EEGLABの議論リスト(上記参照)への「なぜ...?」など)
+Q&Aのメリットを他のユーザーに与えてください。
+EEGLABのチュートリアルや/または関連する研究を読んで答え
+関数はメッセージを最初に助けます!
 
-To send (detailed) bug reports, use the [EEGLAB
-Github](https://github.com/sccn/eeglab/issues) interface. 
+バグ報告(詳細)を送付するには、【EEGLAB】を使用してください。
+ギトハブ(Github)https://github.com/sccn/eeglab/issues)インターフェイス。 
 
-To report
-other feedback to the EEGLAB developers directly, email
+レポートへ
+EEGLABの開発者へのその他のフィードバックは、EEGLABの開発者に直接、EEGLABの開発者に電子メールを送信してください。
 <eeglab@sccn.ucsd.edu>.

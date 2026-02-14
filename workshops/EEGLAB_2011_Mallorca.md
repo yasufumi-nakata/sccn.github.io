@@ -5,327 +5,242 @@ parent: Past workshops
 grand_parent: Workshops
 ---
 
-![300px\|thumb\|left\|upright=2](/assets/images/Mallorca2.jpg)
+![300px\|thumb\|左\|upright=2](/assets/images/Mallorca2.jpg)
 
-Fourteenth EEGLAB Workshop
+第14回 EEGLABワークショップ
 ==========================
 
 
 
-[Mallorca](http://en.wikipedia.org/Mallorca), Spain, Sept. 22-25, 2011 preceding
-[ICON](http://www.icon11mallorca.org/)
+[マヨルカ](http://en.wikipedia.org/Mallorca)2011年9月22日～25日
+[アイコン](http://www.icon11mallorca.org/)
 
-Overview
+プロフィール
 --------
 
-The 14th EEGLAB Workshop took place from Thursday, September 22 through
-Sunday, September 25, 2011 on the Spanish island of Mallorca preceding
-ICON XI. Participants in the first two parts of the Workshop were
-expected to bring laptops with MATLAB installed so as to be able to
-participate in the practical sessions. The workshops consisted of three
-parts:
+第14回EEGLABワークショップが9月22日(木)から
+2011年9月25日(日) スペインのマヨルカ島前
+アイコンXI. ワークショップの最初の2部の参加者は、
+ノートパソコンをMATLABにインストールしておけば、
+実践的なセッションに参加します。 3つのワークショップ
+部品:
 
 
-1\. On Thursday, Sept. 22 there was a full-day <b>Novice EEGLAB
-Workshop</b> for those interested in learning the basics of using EEGLAB
-and independent component analysis (ICA) to analyze their EEG (or
-related) data.
-
-
-
-
-2\. Friday, Sept. 23 through noon on Sunday, Sept. 25, the first
-<b>Advanced EEGLAB Workshop</b> introduced and demonstrated the use of
-EEGLAB-linked tools for performing advanced analyses of EEG and related
-data, with detailed method expositions and practical exercises.
+1円 9月22日(木)は終日 <b>Novice EEGLAB(エグラボ)
+ワークショップ</b> EEGLABの使い方の基礎を学びたい方
+EEG(または)を分析するための独立したコンポーネント分析(ICA)
+関連)データ。
 
 
 
 
-3\. Sunday afternoon, Sept. 25, there was a (free) <b>Open Discussion
-Session</b> of evolving directions in EEG/ECoG research and free / open
-source data analysis, collection, and archival software. All interested
-were welcome to attend or participate in this discussion.
+9月23日(金)〜9月25日(日)
+<b>上級EEGLABワークショップ</b> 導入および実証された使用
+EEGと関連する高度な分析を実行するためのEEGLABリンクツール
+データ, 詳細な方法と実用的な演習で.
 
 
-Workshop Agendas
+
+
+3\。 日曜日の午後、9月25日(日)は(無料) <b>オープンディスカッション
+セッション</b> EEG/ECoGの研究および自由/開いたの進化する方向
+ソースデータ分析、収集、アーカイブソフトウェア。 すべての興味
+ご参加・ご参加をお待ちしております。
+
+
+ワークショップアジェンダ
 ----------------
 
-Key: <span style="color: purple">Lecture</span>,
-<span style="color: darkblue">Practicum</span>,
-<span style="color: green">Break</span>
+キー: <span style="color: purple">セミナー</span>,
+<span style="color: darkblue">プラクティックム</span>,
+<span style="color: green">ブレイクアウト</span>
 
-I. Novice EEGLAB Workshop -- Thursday, Sept. 22
+I. Novice EEGLABワークショップ -- 9月22日(木)
 -----------------------------------------------
 
-This workshop is designed for researchers who would like to learn how to
-process their EEG or related datasets using the ICA, time/frequency, and
-other tools provided in the EEGLAB software environment for MATLAB
-(http://sccn.ucsd.edu/eeglab). The workshop instructor will be Julie
-Onton, Ph.D., long-time EEGLAB user and SCCN laboratory member. Scott
-Makeig, Director of the Swartz Center for Computational Neuroscience,
-UCSD, and originator of EEGLAB methods will give an introductory talk on
-evolving methods for analyzing EEG dynamics.
+このワークショップは、どのように学習したい研究者のために設計されています
+ICA, time/frequency を使用して EEG または関連データセットを処理し、
+MATLABソフトウェア環境で提供されている他のツール
+(http://sccn.ucsd.edu/eeglab)。 ワークショップインストラクターがジュリーになります
+Onton, Ph.D., 長時間 EEGLAB ユーザーと SCCN ラボメンバー. スコット
+シュワルツ・センター・フォー・コンピューティング・ニューロサイエンス ディレクター
+EEGLAB メソッドの UCSD と 発信者 は、 導入事例 について紹介します。
+EEGダイナミクスを分析するための進化方法。
 
-Novice workshop topics will include:
-• Data import and preprocessing options
+初心者ワークショップのトピックには以下が含まれます:
+・ データインポートとプリプロセスオプション
 
-• Basic independent component analysis (ICA) theory and application
+• 基本独立したコンポーネント分析(ICA)理論と応用
 
-• Methods for imaging IC activations (ERPs, time/frequency, coherence)
+・ イメージングICの活性化のための方法(ERP、時間/頻度、一貫性)
 
-• Equivalent dipole source localization of independent components
+•独立したコンポーネントの同等のダイポールソースローカリゼーション
 
-• Introduction to MATLAB scripting using EEGLAB structure
+• EEGLAB構造を用いたMATLABスクリプト入門
 
-Note: Because of time limitations, the Novice workshop will NOT
-include:
-• New, more advanced toolboxes (NFT, SIFT, BCILAB, MPT)
+注意:時間制限のため、初心者のワークショップは使用しません
+例:
+・ 新しい、より高度なツールボックス(NFT、SIFT、BCILAB、MPT)
 
-• Mathematical derivations of the algorithms discussed
+•議論されたアルゴリズムの数学的派生
 
-These topics will be covered in the Advanced EEGLAB workshop (described
-below).
+これらのトピックは、高度なEEGLABワークショップ(説明)でカバーされます
+お問い合わせ
 
-<span style="color: blue><b>Program</b"></span>
+<span style="color: blue><b>プログラム</b"></span>
 
-<span style="color: purple">08:30 -- 09:15am -- Mining event-related brain dynamics (Scott Makeig) [(PDF)](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_mallorca_i.pdf)</span>
+<span style="color: purple">08:30 -- 09:15am -- マイニングイベント関連の脳力学(Scott Makeig) [(PDF)](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_mallorca_i.pdf)</span>
 <!-- -->
 
 
-<span style="color: red">09:15 -- 10:15am -- Introduction and getting started with EEGLAB (Julie Onton) [(PDF)](https://sccn.ucsd.edu/githubwiki/files/1_gettingstarted_eeglab.pdf)</span>
+<span style="color: red">9月15日 10:15am -- EEGLAB (Julie Onton) の導入と開始 [(PDF)](https://sccn.ucsd.edu/githubwiki/files/1_gettingstarted_eeglab.pdf)</span>
 
 
-<span style="color: darkblue">Data import - Preprocessing tools and pipeline - Running ICA decomposition </span>
-
-<!-- -->
-
-
-<span style="color: green">10:15 -- 10:30 BREAK</span>
+<span style="color: darkblue">データインポート - 処理ツールとパイプライン - ICA分解を実行 </span>
 
 <!-- -->
 
 
-<span style="color: red">10:30 -- 11:15 -- Evaluating ICA components (ICs) [(PDF)](https://sccn.ucsd.edu/githubwiki/files/2_evaluatingics.pdf)</span>
-
-
-<span style="color: darkblue">Apply ICA weights - IC scalp map interpretation - Basic IC evaluation - Identify artifact ICs</span>
+<span style="color: green">10:15 - 10:30 ブレイク</span>
 
 <!-- -->
 
 
-<span style="color: red">11:15 -- 12:15 -- IC analysis tools [(PDF)](https://sccn.ucsd.edu/githubwiki/files/3_ic_analysis_tools.pdf)</span>
+<span style="color: red">10:30 -- 11:15 -- ICAコンポーネントの評価(IC) [(PDF)](https://sccn.ucsd.edu/githubwiki/files/2_evaluatingics.pdf)</span>
 
 
-<span style="color: darkblue">Removing ICs and back-projection - IC ERP envelope - IC ERP images - Time-frequency analysis - IC Event-related spectral perturbations (ERSPs) - IC Cross coherence</span>
-
-<!-- -->
-
-
-<span style="color: green">12:15 -- 13:30 LUNCH</span>
+<span style="color: darkblue">ICA の重量を適用する - IC の頭皮の地図の解釈 - 基本的な IC の評価 - 人工物 IC を識別します。</span>
 
 <!-- -->
 
 
-<span style="color: red">13:30 -- 14:30 -- EEGLAB 'EEG' structure and basic MATLAB scripting [(PDF)](https://sccn.ucsd.edu/githubwiki/files/4_basic_scripting.pdf)</span>
+<span style="color: red">11:15 -- 12:15 -- IC解析ツール [(PDF)](https://sccn.ucsd.edu/githubwiki/files/3_ic_analysis_tools.pdf)</span>
 
 
-<span style="color: darkblue">‘EEG’ structure overview - ‘EEG’ structure overview - Search EEG.event structure - MATLAB functions - Converting from ‘pop’ functions to output functions</span>
-
-<!-- -->
-
-
-<span style="color: red">14:30 -- 15:15 – Equivalent dipole modeling [(PDF)](https://sccn.ucsd.edu/githubwiki/files/5_dipolemodeling.pdf)</span>
-
-
-<span style="color: darkblue">Co-registration of electrodes with head model - Dipole fitting using FieldTrip's dipfit function - Co-registration for 3D headplots</span>
+<span style="color: darkblue">ICとプロジェクトを取除く - IC ERPの封筒 - IC ERPの画像 - 周波数解析 - ICイベント関連分光(ERSP) - ICクロスコヒーレンス</span>
 
 <!-- -->
 
 
-<span style="color: green">15:15 -- 15:30 BREAK</span>
+<span style="color: green">12:15 -- 13:30 ランチ</span>
 
 <!-- -->
 
 
-<span style="color: red">15:30 -- 16:30 -- Introduction to EEGLAB STUDY structure [(PDF)](https://sccn.ucsd.edu/githubwiki/files/6_study_intro.pdf)</span>
+<span style="color: red">13:30～ 14:30 -- EEGLAB 'EEG' 構造と基本的な MATLAB スクリプト [(PDF)](https://sccn.ucsd.edu/githubwiki/files/4_basic_scripting.pdf)</span>
 
 
-<span style="color: darkblue">Build a STUDY - Precompute, precluster, and cluster ICs across subjects - Plot and edit STUDY clusters</span>
+<span style="color: darkblue">「EEG」構造概要 - 「EEG」構造の概要 - EEG.event構造を検索 - MATLAB機能 - 「ポップ」機能から出力機能に変換する</span>
 
 <!-- -->
 
 
-<span style="color: red">15:30 -- 17:30 -- Advanced STUDY scripting [(PDF)](https://sccn.ucsd.edu/githubwiki/files/7_study_scripting.pdf)</span>
+<span style="color: red">14:30～ 15:15 – 同等のダイポールモデリング [(PDF)](https://sccn.ucsd.edu/githubwiki/files/5_dipolemodeling.pdf)</span>
 
 
-<span style="color: darkblue">Build a STUDY from the command line - STUDY structure overview - Cluster ERP image - Accessing raw STUDY data measures</span>
+<span style="color: darkblue">ヘッドモデル付き電極の共同登録 - FieldTripのdipfit機能を使用したダイポールフィッティング - 3Dヘッドプロットの共同登録</span>
+
+<!-- -->
+
+
+<span style="color: green">15:15 -- 15:30 ブレイク</span>
+
+<!-- -->
+
+
+<span style="color: red">15:30～ 16:30～ EEGLAB STUDY構造の紹介 [(PDF)](https://sccn.ucsd.edu/githubwiki/files/6_study_intro.pdf)</span>
+
+
+<span style="color: darkblue">STUDY - Precompute、precluster、およびクラスターICを被写体全体に構築 - プロットとSTUDYクラスターの編集</span>
+
+<!-- -->
+
+
+<span style="color: red">15:30 -- 17:30 -- 高度なSTUDYスクリプト [(PDF)](https://sccn.ucsd.edu/githubwiki/files/7_study_scripting.pdf)</span>
+
+
+<span style="color: darkblue">コマンドラインからSTUDYをビルド - STUDY構造の概要 - クラスタ ERPイメージ - 未加工STUDYデータ対策へのアクセス</span>
 
 <hr>
 
-II. Advanced EEGLAB Workshop -- Friday-Sunday, Sept. 23-25
+2。 上級EEGLABワークショップ -- 金曜日-日曜日、9月23-25日
 ----------------------------------------------------------
 
-This 2.5-day workshop will focus on emerging computational methods for
-EEG/ECoG analysis that have recently been made available within the
-EEGLAB environment as plugin toolboxes. The lectures and practica will
-be more technically advanced than previous EEGLAB workshops.
-Participants will be expected to have at least passing familiarity with
-concepts such as linear regression, matrix inversion and other basic
-linear algebraic operations, Fourier transforms, and basic probability
-theory.
+この2.5日間のワークショップは、新しい計算方法に焦点を当てます
+EEG/ECoG 分析 最近公開されている
+プラグインツールボックスとして EEGLAB 環境. レクチャーと実務家が
+以前の EEGLAB のワークショップよりも技術的に進んでいます。
+参加者は、少なくとも親しみを伝えなければならないと予想されます
+線形回帰、行列反転および他の基本のような概念
+線形高度の操作、Fourierの変形および基本的な確率
+理論。
 
-In addition, participants should be comfortable with using MATLAB
-including performing the following operations using EEGLAB:
-• Performing ICA decompositions and evaluating ICA component
+また、MATLABでは参加者が快適にお過ごしいただく必要があります。
+EEGLAB を使用した以下の操作を含む:
+• ICA分解とICAコンポーネントの評価を実行
 
-• Obtaining equivalent dipole models of independent components using
-DIPFIT
+・ 独立したコンポーネントの同等のダイポールモデルを取得する
+ディップフィット
 
-• Performing time-frequency transforms and coherence analysis in EEGLAB
+・ EEGLABでの時間頻度変換と一貫性解析の実行
 
-• Building an EEGLAB data STUDY
+• EEGLABのデータSTUDYの構築
 
-Advanced workshop topics will include:
-• Applying adaptive-mixture ICA (Amica) to non-stationary EEG source
-dynamics
+高度なワークショップのトピックには以下が含まれます:
+・ 適応型混合ICA(Amica)を非静止型EEGソースに適用
+ダイナミクス
 
-• Using Measure Projection analysis of multi-subject ICA-resolved EEG
-dynamics
+• 複数のサブジェクトICA-resolved EEGの測定の投射の分析を使用して下さい
+ダイナミクス
 
-• Applying statistical machine learning to EEG data analysis and
-Brain-Computer Interface design
+・ EEGデータ分析に統計機械学習を適用し、
+脳コンピュータ インターフェイス設計
 
-• Analysis of oscillatory source network dynamics including Granger
-causality
+• Gragerを含む振動源ネットワークの動的解析
+キャサリティ
 
-• Forward and inverse modeling for EEG/ECoG source localization
+• EEG/ECoG のソース ローカリゼーションのためのフォワードおよび逆のモデル化
 
-Participants are expected to bring a laptop with MATLAB and EEGLAB
-installed to work on (detailed instructions will be sent out before the
-workshop). Pairs of participants may also choose to share a laptop.
+MATLABとEEGLABでノートパソコンを持参すると参加者が期待されます
+動作するようにインストール(詳細な指示は、前に送信されます)
+ワークショップ 参加者のペアは、ノートパソコンを共有することも選択できます。
 
-<span style="color: blue><b>Preliminary Program -- Friday, Sept. 23</b"></span>
-
-
-<span style="color: purple">08:30 – 09:00 -- Welcome, introductions and brief overview (Scott Makeig)</span>
-
-<!-- -->
+<span style="color: blue><b>予備プログラム -- 9月23日(金)</b"></span>
 
 
-<b>Session A – Adaptive mixture independent component analysis (AMICA) decomposition (Jason Palmer)</b>
+<span style="color: purple">08:30 – 09:00 -- ようこそ、導入と簡単な概要(Scott Makeig)</span>
 
 <!-- -->
 
 
-
-This session will motivate, derive simply, and demonstrate the Adaptive
-Mixture ICA (Amica) algorithm of (Palmer et al., 2007) that finds more
-physiologically interpretable component processes in high-density EEG
-(or related) data and, further, detects and models changes in the
-spatial EEG source structure. Use of a set of tools and measures for
-interpreting the results of Amica decomposition will be demonstrated.
+<b>セッションA – 適応混合物独立したコンポーネント分析(AMICA)分解(Jason Palmer)</b>
 
 <!-- -->
 
 
 
-<span style="color: purple">09:00 -- 09:45 ICA methods overview, with motivation for and derivation of Amica [(PDF)](https://sccn.ucsd.edu/githubwiki/files/ica_mallorca.pdf)</span>
-
-<span style="color: darkblue">09:45 -- 10:45 Amica toolbox practicum</span>
-
-
-<span style="color: green">10:45 -- 11:00 BREAK</span>
-
-<!-- -->
-
-
-<b>Session B -- Improving EEG source estimation using the Neuroelectromagnetic Forward Head Modeling Toolbox (NFT) (Zeynep Akalin Acar)</b>
+このセッションは、単に動機づけ、導き出し、適応性を発揮します
+Mixture ICA (Amica) のアルゴリズム (Palmer et al., 2007) より詳しく調べる
+高密度EEGにおける生理学的に解釈可能な成分プロセス
+(または関連)データおよび、さらに、検出およびモデルの変更
+空間 EEG ソース構造。 ツールと対策のセットの使用
+Amica decompositionの結果を解釈することは実証されます。
 
 <!-- -->
 
 
 
-<!-- -->
+<span style="color: purple">09:00 -- 09:45 ICA メソッドの概要, アミカのモチベーションと派生 [(PDF)](https://sccn.ucsd.edu/githubwiki/files/ica_mallorca.pdf)</span>
+
+<span style="color: darkblue">09:45 -- 10:45 Amica ツールボックス practicum</span>
 
 
-
-[Both PDFs, supplementary functions and data for
-NFT](ftp://sccn.ucsd.edu/pub/julie/extra2.zip)
-
-[Supplementary functions and data ONLY, for
-practicum](ftp://sccn.ucsd.edu/pub/julie/extra.zip)
+<span style="color: green">10:45～11:00 ブレイク</span>
 
 <!-- -->
 
 
-
-<span style="color: purple">11:00 -- 12:00 -- Forward head modeling overview [(PDF)](https://sccn.ucsd.edu/githubwiki/files/akalin_acar_forward_problem_of_eeg.pdf)</span>
-<!-- -->
-
-
-
-<span style="color: green">12:00 -- 13:30 LUNCH</span>
-
-<!-- -->
-
-
-
-<span style="color: darkblue">13:30 -- 14:30 -- NFT head modeling toolbox practicum [(PDF)](https://sccn.ucsd.edu/githubwiki/files/akalin_acar_nft_practicum.pdf)</span>
-<!-- -->
-
-
-<b>Session C -- Comparing EEG dynamics across subjects using the Measure Projection Analysis (MPA) toolbox (Nima Bigdely Shamlo)</b>
-
-<!-- -->
-
-
-<!-- -->
-
-
-
-<span style="color: purple">14:30 – 15:30 – Measure projection analysis theory [(PDF)](https://sccn.ucsd.edu/githubwiki/files/measure_projection_eeglab_11_mallorca.pdf)</span>
-<!-- -->
-
-
-
-<span style="color: green">15:30 -- 15:45 BREAK</span>
-
-<!-- -->
-
-
-
-<span style="color: darkblue">15:45 -- 17:30 -- Measure projection analysis practicum [(PDF)](https://sccn.ucsd.edu/githubwiki/files/practicum_of_measure_projection_eeglab_11_mallorca.pdf)</span>
-
-<span style="color: blue><b>Preliminary Program -- Saturday, Sept.24</b"></span>
-
-
-<b>Session D -- Analyzing oscillatory EEG/ECoG source dynamics and interactions using the Source Information Flow Toolbox (SIFT) (Tim Mullen)</b>
-
-
-<span style="color: purple">8:30 -- 10:00 am -- Analyzing Oscillatory Dynamics and Effective Connectivity </span> [(PDF)](https://sccn.ucsd.edu/githubwiki/files/eeglab_icon_mullen_sift.pdf)
-
-
-
-<span style="color: green">10:00 -- 10:30 BREAK</span>
-
-<!-- -->
-
-
-
-<span style="color: darkblue">10:30 --12:00 -- Using the Source Information Flow Toolbox: practicum</span> [(PDF)](http://sccn.ucsd.edu/mediawiki/images/d/d2/SIFT_manual_0.1a.pdf)
-
-
-
-
-
-
-<span style="color: green">12:00 -- 13:30 LUNCH</span>
-
-<!-- -->
-
-
-<b>Session E -- Statistical Learning Theory and Brain-Machine Interface Design (Christian Kothe)</b>
+<b>セッションB -- Neuroelectromagnetic Forward Head Modeling Toolbox(NFT)(Zeynep Akalin Acar)を用いたEEGソース推定の改善</b>
 
 <!-- -->
 
@@ -335,68 +250,153 @@ practicum](ftp://sccn.ucsd.edu/pub/julie/extra.zip)
 
 
 
-[Slides from Christian's lecture.](ftp://sccn.ucsd.edu/pub/bcilab/mallorca/Workshop2011-Theory.pdf)
+[PDF、補足機能、データを保存する]
+NFT:(ftp://sccn.ucsd.edu/pub/julie/extra2.zip)
+
+[補足機能とデータのみ]
+practicum(ftp://sccn.ucsd.edu/pub/julie/extra.zip)
 
 <!-- -->
 
 
 
-<span style="color: purple">13:30 -- 15:00 -- Statistical machine learning and Brain-Computer Interface design </span>
+<span style="color: purple">11:00～11:00 12月12日 フォワードヘッドモデルの概要 [(PDF)](https://sccn.ucsd.edu/githubwiki/files/akalin_acar_forward_problem_of_eeg.pdf)</span>
+<!-- -->
 
 
 
-<span style="color: green">115:00 -- 15:30 BREAK</span>
+<span style="color: green">12:00 -- 13:30 ランチ</span>
 
 <!-- -->
 
 
 
-<span style="color: darkblue">15:30 -- 17:30 -- Using BCILAB to design and run BCI, cognitive monitoring, and neurofeedback experiments / applications </span> [(PDF)](https://sccn.ucsd.edu/githubwiki/files/workshop_2011_-_practicum.pdf)
+<span style="color: darkblue">13:30～ 14:30 -- NFTヘッドモデリングツールボックス練習 [(PDF)](https://sccn.ucsd.edu/githubwiki/files/akalin_acar_nft_practicum.pdf)</span>
+<!-- -->
 
 
+<b>セッションC -- 測定プロジェクション分析(MPA)ツールボックス(Nima Bigdely Shamlo)を使用して、被験者間でEEGダイナミクスを比較する</b>
 
-<b>Session F - Workshop Review, Results, and Discussion</b>
+<!-- -->
+
 
 <!-- -->
 
 
 
-<span style="color: purple">09:00 -- 10:00 -- EEG Research: Current and Future Directions (Scott Makeig)</span>
+<span style="color: purple">14:30 – 15:30 – 投影解析理論の測定 [(PDF)](https://sccn.ucsd.edu/githubwiki/files/measure_projection_eeglab_11_mallorca.pdf)</span>
+<!-- -->
+
+
+
+<span style="color: green">15:30～15:45 ブレイク</span>
 
 <!-- -->
 
 
 
-<span style="color: darkblue">10:00 -- 10:30 -- Group practica results preparation</span>
+<span style="color: darkblue">15:45～ 17:30～ 投影分析の練習器を測定して下さい [(PDF)](https://sccn.ucsd.edu/githubwiki/files/practicum_of_measure_projection_eeglab_11_mallorca.pdf)</span>
+
+<span style="color: blue><b>予備プログラム -- 9月24日(土)</b"></span>
+
+
+<b>セッションD -- ソース情報フローツールボックス(SIFT)(Tim Mullen)を使用して、発振器EEG/ECoGソースの動態と相互作用の分析</b>
+
+
+<span style="color: purple">8:30 -- 10:00 am -- 発振器動的および効果的なコネクティビティの分析 </span> [(PDF)](https://sccn.ucsd.edu/githubwiki/files/eeglab_icon_mullen_sift.pdf)
+
+
+
+<span style="color: green">10:00 - 10:30 ランチ</span>
 
 <!-- -->
 
 
 
-<span style="color: green">10:30 -- 10:45 BREAK</span>
+<span style="color: darkblue">10:30 --12:00 -- ソース情報フローツールボックスを使用する: 練習</span> [(PDF)](http://sccn.ucsd.edu/mediawiki/images/d/d2/SIFT_manual_0.1a.pdf)
+
+
+
+
+
+
+<span style="color: green">12:00 -- 13:30 ランチ</span>
+
+<!-- -->
+
+
+<b>セッションE -- 統計学習理論と脳-機械インタフェース設計(Christian Kothe)</b>
 
 <!-- -->
 
 
 
-<span style="color: darkblue">10:45 -- 12:00 -- Group practica results presentations and general discussion</span>
+<!-- -->
 
-III. EEGLAB Workshop Open Discussion Session -- Sunday, Sept. 25, 13:30 - 16:30
+
+
+[キリスト教の講義からスライド。](ftp://sccn.ucsd.edu/pub/bcilab/mallorca/Workshop2011-Theory.pdf)
+
+<!-- -->
+
+
+
+<span style="color: purple">13:30～ 15:00 -- 統計的な機械学習および脳コンピュータ インターフェイスの設計 </span>
+
+
+
+<span style="color: green">115:00～15:30 ブレイク</span>
+
+<!-- -->
+
+
+
+<span style="color: darkblue">15:30 -- 17:30 -- BCILABを使用してBCI、認知監視、および神経フィードバック実験/アプリケーションの設計および実行 </span> [(PDF)](https://sccn.ucsd.edu/githubwiki/files/workshop_2011_-_practicum.pdf)
+
+
+
+<b>セッションF - ワークショップレビュー、結果、ディスカッション</b>
+
+<!-- -->
+
+
+
+<span style="color: purple">09:00 - 09:00 - 00:00 : 00:00 : 00:00 : 00:00 : 00:00 : 00:00 : 00:00 : 00:00 : 00:00 : 00:00 : 10:00 -- EEGの研究: 現在のおよび未来の方向(Scott Makeig)</span>
+
+<!-- -->
+
+
+
+<span style="color: darkblue">10月10日 10:30～ グループ実践的な結果の準備</span>
+
+<!-- -->
+
+
+
+<span style="color: green">10:30 - 10:45 ブレイク</span>
+
+<!-- -->
+
+
+
+<span style="color: darkblue">10:45～ 12月12日 グループ実践的な成果発表と一般討論</span>
+
+3。 EEGLABワークショップオープンディスカッションセッション -- 9月25日(日)13:30～16:30
 -------------------------------------------------------------------------------
 
 
-<span style="color: purple">13:30-16:30 -- Evolving Methods and Tools for EEG/ECoG Research (preliminary agenda)</span>
+<span style="color: purple">13:30～16:30(最終受付) EEG/ECoG研究のための進化した方法とツール(予備議題)</span>
 
 
 
 
-<span style="color: darkblue">1. Introduction -- Framing remarks and EEGLAB overview (Scott Makeig)</span>
+<span style="color: darkblue">1. はじめに -- 注目と EEGLAB の概要 (Scott Makeig)</span>
 
 
 
 
 
 
-<span style="color: darkblue">2. Advanced EEGLAB-compatible tools and directions (Panel)</span>
+<span style="color: darkblue">2. 高度な EEGLAB 互換ツールと指示 (パネル)</span>
 
 

@@ -4,257 +4,257 @@ title: EEGLAB Extensions
 long_title: EEGLAB Extensions
 parent: Download EEGLAB
 ---
-EEGLAB extensions and plugins
+EEGLABエクステンションとプラグイン
 ====
-{: .no_toc }
+お問い合わせ
 
-EEGLAB extensions or plugins allow users to build and publish new data
-processing and/or visualization functions using EEGLAB data structures
-and conventions. Plug-in functions can be easily used and tested by
-selecting the new menu items they introduce into the EEGLAB menus. EEGLAB can download and install E*plugins* directly from the <span style="color: brown">File → Manage EEGLAB extensions</span> menu
-item.
+EEGLABエクステンションまたはプラグインにより、ユーザーは新しいデータをビルドして公開することができます。
+EEGLABのデータ構造を用いた処理および/または可視化機能
+そして大会。 プラグイン機能は、簡単に使用してテストすることができます
+EEGLABメニューに紹介する新しいメニュー項目を選択します。 EEGLABは、E*plugins*を直接ダウンロードしてインストールすることができます。 <span style="color: brown">ファイル → EEGLAB 拡張機能の管理</span> メニュー
+項目。
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Lists of plugins for different EEGLAB versions
+異なるEEGLABバージョン用のプラグインのリスト
 -----------------------------
-The way plugins are handled has changed through EEGLAB history, leading
-to more automation in more recent versions and different systems for
-storing and managing plugins (the plugins themselves are often the
-same across the different plugin management systems). The list of
-plugins provided below is the same as the list of plugins available
-through the EEGLAB plugin manager of the corresponding EEGLAB version.
+プラグインの処理方法は、EEGLABの履歴、リードによって変更されています
+より最近のバージョンと異なるシステムでより自動化
+プラグインの保存と管理 (プラグイン自体は多くの場合、
+異なるプラグイン管理システム間で同じ)。 リスト
+以下のプラグインは、利用可能なプラグインのリストと同じです
+EEGLAB 対応する EEGLAB バージョンの EEGLAB プラグイン マネジャーを通して。
 
--   [See the current list of plugins for EEGLAB 2019.1 and later
-    versions](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php)
--   [See the list of plugins for EEGLAB
-    2019.0](https://sccn.ucsd.edu/wiki/Plugin_list_all) (plugins on this page are no
-    longer updated)
--   See the [import](https://sccn.ucsd.edu/wiki/Plugin_list_import) and [data processing](https://sccn.ucsd.edu/wiki/Plugin_list_process) extensions for EEGLAB
-    13.x and 14.x (plugins and page no longer updated)
+-   [EEGLAB 2019.1以降のプラグインの現在のリストを参照してください。
+    バージョンhttps://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php)
+-   [EEGLABのプラグインの一覧を見る]
+    2019.0](https://sccn.ucsd.edu/wiki/Plugin_list_all)(このページのプラグインはなし
+    更新しました)
+-   詳細はこちら [インポート](https://sccn.ucsd.edu/wiki/Plugin_list_import) そして、 [データ処理](https://sccn.ucsd.edu/wiki/Plugin_list_process) EEGLABの拡張
+    13.xおよび14.x (プラグインおよびページは更新しません)
 
-To install or update a plugin
+プラグインをインストールまたは更新するには
 ------------------------------
 
-Plug-ins may be installed using the EEGLAB plugin manager, using menu
-item <span style="color: brown">File → Manage EEGLAB extensions</span>.
+プラグインは、EEGLABプラグインマネージャを使用してインストールすることができます, メニューを使用して
+アイテム <span style="color: brown">ファイル → EEGLAB 拡張機能の管理</span>.
 
-Although no longer recommended, plugins can still be installed
-manually. After downloading the zip file for a plugin, uncompress the
-downloaded plugin file in the main EEGLAB "plugins"
-sub-directory. Remove the old version of the plugin if it is
-present in the directory. Then restart EEGLAB. During start-up,
-EEGLAB should print the following on the MATLAB command line:
+もはやお勧めしませんが、プラグインはまだインストールできます
+手動で。 プラグイン用のzipファイルをダウンロードした後、
+EEGLAB "plugins" でプラグインファイルをダウンロード
+サブディレクトリ。 プラグインの古いバージョンを削除します。
+ディレクトリに存在する。 EEGLABを再起動します。 起動中、
+EEGLAB は、MATLAB コマンドラインで以下を印刷する必要があります。
 
 ``` matlab
 > eeglab: adding plugin "eegplugin_myplugin" % (see >> help eegplugin_myplugin)
 ```
 
-The plugin will typically have added one or more new items to the
-EEGLAB menus (often under the *Import data* or *Tools* headings).
+プラグインは、通常、1つ以上の新しいアイテムを追加して、
+EEGLABメニュー(*Import data* または *Tools* 見出し以下)
 
-To uninstall a plugin
+プラグインをアンインストールするには
 ----------------------
 
-Plug-ins can just as easily be removed from the EEGLAB extension
-manager. Alternatively, you may move or remove its folder from
-the EEGLAB plugins folder and restart EEGLAB.
+プラグインは EEGLAB 拡張機能から簡単に削除できます。
+マネージャー。 あるいは、フォルダーを移動したり削除したりすることもできます。
+EEGLAB プラグインのフォルダーと EEGLAB を再起動します。
 
-To contribute a new plugin
+新しいプラグインを作成する
 --------------------------------------
 
-See the simple instructions under [How to contribute to
-EEGLAB](/tutorials/contribute/) to create EEGLAB compatible code.
+簡単な手順を参照してください。 [どのように貢献するか]
+EEGLAB>(/tutorials/contribute/) EEGLAB互換コードを作成する。
 
-Then, you may add your extension to the list above so that EEGLAB users can
-download it automatically from within EEGLAB. To do this, use [this
-form](http://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php). If
-you want to upload a new version of your plugin, you can use 
-[this simplified form](http://sccn.ucsd.edu/eeglab/plugin_uploader/version_update.php).
+次に、EEGLAB ユーザが使えるように、上記のリストに拡張機能を追加できます。
+EEGLABから自動的にダウンロードします。 これを行うには、[これを使用する]
+フォームhttp://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)。 お問い合わせ
+プラグインの新しいバージョンをアップロードしたい、 
+[この単純化されたフォーム](http://sccn.ucsd.edu/eeglab/plugin_uploader/version_update.php).
 
-Administrators, these are the maintenance pages to accept [Pending
-plugin
-requests](https://sccn.ucsd.edu/eeglab/plugin_uploader/protected/pending_requests.php)
-and [Edit plugin
-information](https://sccn.ucsd.edu/eeglab/plugin_uploader/protected/edit_plugin.php).
+管理者は、これらはメンテナンスページです。
+プラグイン
+リクエストhttps://sccn.ucsd.edu/eeglab/plugin_uploader/protected/pending_requests.php)
+[プラグインの編集]
+インフォメーションhttps://sccn.ucsd.edu/eeglab/plugin_uploader/protected/edit_plugin.php).
 
-To access old versions of a plugin / extension
+プラグイン/拡張子の古いバージョンにアクセスするには
 ------------------------------------------------------
 
-In case you need them, old versions of plugins are available for direct
-download at
+必要に応じて、プラグインの古いバージョンが直接使用可能です
+ダウンロード
 [http://sccn.ucsd.edu/eeglab/plugins/](http://sccn.ucsd.edu/eeglab/plugins/).
-These cannot be installed through the EEGLAB extension manager. Simply
-download the zip file and uncompress it in the *eeglab/plugins/* folder
-(and make sure you remove any other version of the plugin you might
-have installed).
+EEGLAB拡張マネージャでインストールできません。 シンプル
+zip ファイルをダウンロードして、*eeglab/plugins/* フォルダに解凍します。
+(プラグインの他のバージョンを削除してください)
+インストール済み)
 
-Popular EEGLAB plugins
+人気の EEGLAB プラグイン
 ---------
 
-We list below popular plugins available in EEGLAB. We have not assessed the methods they make available, so we recommend that EEG researchers thoroughly
-study and consider the basis of any methods they apply to experimental
-data. The list below is not complete, as there are currently 120 plugins available in EEGLAB. If your plugin has reached 500 downloads and it is not in the list below, please let us know.
+EEGLABで利用可能な一般的なプラグインは以下の通りです。 EEG研究者が利用できる方法が評価されていないため、EEG研究者は徹底的に推奨しています。
+実験に適用するあらゆる方法の基礎を研究し、考慮して下さい
+データ。 EEGLABで利用可能な120プラグインが現在あるため、下記のリストは完了していません。 プラグインが500ダウンロードに達した場合、下記のリストに表示されない場合は、お知らせください。
 
-### EEGLAB default plugins
+### EEGLAB デフォルトプラグイン
 
-These plugins are distributed along with the EEGLAB code.
+これらのプラグインは EEGLAB コードとともに配布されます。
 
--   **[FIRfilt](https://github.com/widmann/firfilt):** Apply a variety of linear filters to EEGLAB data.
+-   **[フリル](https://github.com/widmann/firfilt):** EEGLABのデータに様々なリニアフィルタを適用します。
 
--   **[CleanRawData](https://github.com/sccn/clean_rawdata):** Cleans raw EEG data using a variety of method, including Artifact Subspace Reconstruction.
+-   **[CleanRawデータ](https://github.com/sccn/clean_rawdata):** Artifact Subspace Reconstruction を含むさまざまな方法を使用して未加工 EEG データをきれいにして下さい。
 
--   **[DIPFIT](https://github.com/sccn/dipfit):** Dipole modeling of independent data components using a
-    spherical or boundary element head model. Uses functions from the
-    FIELDTRIP toolbox.
+-   **[ディップフィット](https://github.com/sccn/dipfit):** 独立したデータコンポーネントのダイポールモデリング
+    球面または境界要素ヘッドモデル。 関数を使う
+    FIELDTRIPツールボックス
 
--   **[ICLabel](https://github.com/sccn/IClabel):** An automated EEG independent component classifier plugin for EEGLAB.
+-   **[ICラベル](https://github.com/sccn/IClabel):** EEGLAB用の自動EEG独立したコンポーネント分類プラグイン。
 
-### Data collection
+### データ収集
 
-- **[App-MATLABViewer](https://github.com/labstreaminglayer/App-MATLABViewer/)**: Record EEG LSL streams as EEGLAB .set files.
+- **[App-MATLABビューア](https://github.com/labstreaminglayer/App-MATLABViewer/)*: EEG LSL を EEGLAB .set ファイルとして記録します。
 
-### Data import
+### データインポート
 
-These extensions allow importing various types of data. Although EEGLAB
-contains native functions to import some data formats, the plugins below
-support other formats. There are many data import extension plugins.
-We only include the most popular ones below.
+これらの拡張子は、さまざまな種類のデータをインポートすることができます。 EEGLABはありますが
+いくつかのデータフォーマットをインポートするネイティブ機能、以下のプラグイン
+その他のフォーマットに対応 多くのデータインポート拡張プラグインがあります。
+以下に最も人気のあるもののみが含まれている。
 
-- **[bids-matlab-tools](https://github.com/sccn/bids-matlab-tools)**: The bids-matlab-tool repository contains a collection of functions to import and export BIDS (Brain Imaging Data Structure)-formated experiments.
+- **[bids-matlab ツール](https://github.com/sccn/bids-matlab-tools)*: bids-matlab-tool リポジトリには、BIDS (Brain Imaging Data Structure) 形式の実験をインポートおよびエクスポートする機能のコレクションが含まれています。
 
-- **[BIOSIG](http://biosig.sourceforge.net/):** Import/export data in a wide variety of data
-    formats.
+- **[ビオシグ](http://biosig.sourceforge.net/):** さまざまなデータにデータをインポート/エクスポート
+    フォーマット。
 
-- **[FileIO](https://github.com/fieldtrip/fileio):** Toolbox allowing data import in multiple data formats. It contains functions redundant with EEGLAB but also contains unique functions.
+- **[ファイルIO](https://github.com/fieldtrip/fileio):** 複数のデータフォーマットでデータをインポートできるツールボックス。 EEGLABで冗長機能も含まれていますが、ユニークな機能も含まれています。
 
-- **[ANTeepimport](https://www.ant-neuro.com/support/supporting-documentation-and-downloads)**: Import data files in the EEP format of the ANT EEG company.
+- **[ANTeepimport(アンテピムポート)](https://www.ant-neuro.com/support/supporting-documentation-and-downloads)**: ANT EEG社のEEP形式のデータをインポートします。
 
-- **[bva-io](https://github.com/arnodelorme/bva-io)**:  Import/export files from/to the Brain
-    Vision Software Analyser suite.
+- **[bva-io(ババオ)](https://github.com/arnodelorme/bva-io)**: インポート/エクスポートファイル from/ から Brain
+    ビジョンソフトウェアアナライザースイート。
 
-- **[neuroscanio](https://github.com/sccn/neuroscanio)**: Import/export files from/to the Neuroscan software.
+- **[神経癌](https://github.com/sccn/neuroscanio)**:Neuroscanソフトウェアから/へのインポート/エクスポートファイル。
 
-- **[MFFMATLABIO](https://github.com/arnodelorme/MFFMATLABIO)**: Import/export files from/to the EGI company in MFF format.
+- **[マフマトロビ](https://github.com/arnodelorme/MFFMATLABIO)**: MFF 形式の EGI 社のインポート/エクスポートファイル。
 
-- **[xdfimport](https://github.com/xdf-modules/xdf-EEGLAB)**: Import files in XDF (LSL) format (EEG stream and EEG marker stream only).
+- **[xdfimportの特長](https://github.com/xdf-modules/xdf-EEGLAB)**: XDF (LSL) 形式でファイルをインポート (EEG ストリームと EEG マーカーストリームのみ).
 
-- **[Mobilab](https://github.com/sccn/mobilab)**: Import files in XDF (LSL) format and allow fusing streams at different sampling rates for joint processing in EEGLAB.
+- **[モビラボラ](https://github.com/sccn/mobilab)*: XDF (LSL) 形式でファイルをインポートし、EEGLAB での共同処理のための異なるサンプリング速度でストリームを溶かします。
 
-### Preprocessing
+### 事前処理
 
--   **[IIRfilt](https://github.com/sccn/IIRfilt):** Apply short
-    non-linear infinite impulse response filters to EEGLAB data.
+-   **[IIRfiltの](https://github.com/sccn/IIRfilt):** 短い適用
+    EEGLABのデータに対する非線形無限衝動応答フィルタ。
 
-- **[REST](https://github.com/sccn/REST):** A method to standardize a reference of scalp EEG recordings to a point at infinity.
+- **[ログイン](https://github.com/sccn/REST):** scalp EEGの記録の参照を無限点に標準化する方法。
 
--   **[AAR](http://kasku.org/aar/):** The Automatic Artifact Removal toolbox aims to integrate several state-of-the-art methods for the automatic removal of ocular and muscular artifacts in the electroencephalogram (EEG).
+-   **[アアール](http://kasku.org/aar/):** 自動アーティファクト除去ツールボックスは、電気脳グラム(EEG)における楕円および筋肉のアーティファクトの自動除去のためのいくつかの最新の方法を統合することを目指しています。
 
--   **[VisEd](https://github.com/BUCANL/Vised-Marks):** The Vised Marks extension for EEGLAB adds editing functions to the native *eegplot* data scrolling figure. Specifically, it allows adding/editing event markers, flagging channels/components, flagging time periods, and displaying the properties of the marks structure.
+-   **[バイセッド](https://github.com/BUCANL/Vised-Marks):** EEGLABのVised Marks拡張機能は、ネイティブ*eegplot*データスクロール図に編集機能を追加します。 具体的には、イベントマーカーの追加/編集、チャネル/コンポーネントのフラグ付け、時間期間のフラグ付け、マーク構造のプロパティを表示することができます。
 
--   **[get_chanlocs](https://github.com/sccn/get_chanlocs/wiki):** The get_chanlocs EEGLAB plugin locates 3-D electrode positions from a 3-D scanned head image. A tutorial on how to acquire these images with off-the-shelf equipment is included.
+-   **[get_chanlocs ディレクティブ](https://github.com/sccn/get_chanlocs/wiki):** get_chanlocs EEGLAB プラグインは、3D のスキャンされたヘッドイメージから 3D の電極の位置を見つけます。 これらの画像をオフシェルフ機器で入手する方法に関するチュートリアルが含まれています。
 
-### EEG/fMRI artifact removal
+### EEG/fMRIアーティファクト除去
 
--   **[FMRIB](http://www.fmrib.ox.ac.uk/%7Erami/fmribplugin):** Remove fMRI-environment artifacts from EEGLAB data. This
-    extension allows the removal of scanner-related artifacts
-    from EEG data collected during fMRI scanning. See also the [GitHub repository](https://github.com/sccn/fmrib).
+-   **[FMRIBについて](http://www.fmrib.ox.ac.uk/%7Erami/fmribplugin):** EEGLABのデータからfMRI-environmentアーティファクトを削除します。 お問い合わせ
+    エクステンションにより、スキャナー関連のアーティファクトの除去が可能
+    fMRIスキャン中に収集したEEGデータから。 詳しくはこちら [GitHubリポジトリ](https://github.com/sccn/fmrib).
 
--   **[BERGEN](https://www.uib.no/en/rg/fmri/):** Removal of fMRI-related gradient artifacts from
-    simultaneous EEG-fMRI data. The BERGEN extension for EEGLAB provides
-    a GUI with different methods for gradient artifact correction.
+-   **[ベルゲン](https://www.uib.no/en/rg/fmri/):** fMRI関連の勾配のアーティファクトの除去
+    同時 EEG-fMRI データ。 EEGLABが提供するBERGEN拡張機能
+    グラデーションアーティファクト補正のための異なる方法を持つGUI。
 
-### ICA-based artifact rejection and component classification
+### ICAベースのアーティファクト拒絶とコンポーネント分類
 
--   **[MARA](http:in.de/irene.winkler/artifacts//www.user.tu-berl/):** Automatic identification of artifactual independent
-    components. MARA is a
-    linear classifier that learns from expert ratings by extracting six
-    features from the spatial, spectral, and temporal domains.
+-   **[マーラ](http:in.de/irene.winkler/artifacts//www.user.tu-berl/):** 人工の独立した自動識別
+    コンポーネント。 MARAとは
+    6つの抽出によって専門家の評価から学ぶ線形分類器
+    空間、スペクトル、およびテンポラルドメインからの機能。
     
--   **[FASTER](https://sourceforge.net/projects/faster/):** implements a fully automated, unsupervised method for
-    processing of high-density EEG data. FASTER includes common features such as data importing, epoching, re-referencing, grand average creation, automated channel, epoch, and artifact rejection based on ICA.
+-   **[ファスター](https://sourceforge.net/projects/faster/):** 完全に自動化された、監視されていないメソッドを実装
+    高密度EEGデータの処理 FASTERは、ICAに基づくデータインポート、エッチング、リレファレンス、グランド平均作成、自動チャンネル、エポック、アーティファクト拒否などの一般的な機能を含みます。
 
--   **[ADJUST](http://www.unicog.org/pm/pmwiki.php/MEG/RemovingArtifactsWithADJUST):** A completely automatic algorithm that identifies artifact-related Independent Components by combining stereotyped artifact-specific spatial and temporal features.
+-   **[ADJUSTについて](http://www.unicog.org/pm/pmwiki.php/MEG/RemovingArtifactsWithADJUST):** ステレオタイプのアーティファクト固有の空間と一時的な機能を組み合わせることで、アーティファクト関連インディペンデントコンポーネントを識別する完全自動アルゴリズム。
 
--   **[CORRMAP](https://github.com/sccn/corrmap):** Semi-automatic identification of common EEG artifacts
-    based on a template. The CORRMAP extension consists of a set of
-    MATLAB functions allowing the identification and clustering of
-    independent components representing common EEG artifacts.
+-   **[サイトマップ](https://github.com/sccn/corrmap):** 共通のEEGのアーティファクトの半自動同一証明
+    テンプレートに基づく。 CORRMAP拡張は、セットのセットで構成されています
+    MATLABの機能により、識別とクラスタリングが可能
+    一般的なEEGアーティファクトを表す独立したコンポーネント。
 
--   **[CIAC](http://www.debener.de/CIAC_tutorial/ciacplugin.html):** The cochlear implant artifact correction is a semi-automatic
-    ICA-based tool for the correction of electrical artifacts
-    originating from cochlear implants.
+-   **[CIACについて](http://www.debener.de/CIAC_tutorial/ciacplugin.html):** コクレアインプラントアーティファクト補正は半自動
+    電気アーティファクトの修正のためのICAベースのツール
+    コクレアーインプラントから発信
 
--   **[RELICA](https://github.com/sccn/relica)**: The goal of RELICA is to identify IC processes that are most stably separated from the decomposition data across many random bootstrap selections of its data frames or epochs.
+-   **[リリカ](https://github.com/sccn/relica)*: RELICAの目標は、データフレームやエポックの多くのランダムなブートストラップ選択を渡る分解データから最も安定的に分離されるICプロセスを特定することです。
 
--   **[MP_clustering](https://github.com/sccn/mp_clustering)**: A toolbox for Measure Projection Analysis for projecting EEG measures tagged by
-    source location into a common template brain space, testing local
-    spatial measure consistency, and parsing measure-consistent brain
-    areas into measure-separable domains.
+-   **[MP_クラスタリング](https://github.com/sccn/mp_clustering)*: EEG対策を計画するための予測分析のためのツールボックス タグ別
+    一般的なテンプレートの脳空間にソースの場所, ローカルのテスト
+    空間測定の整合性および測定一貫性のある脳を解析
+    測定可能なドメインへの領域。
 
--   **[REGICA](https://doi.org/10.1016/j.bspc.2011.02.001):** An extension to remove EOG artifacts by
-    regression performed on ICA components. A semi-simulated dataset
-    that might be used in any artifact rejection study is also
-    available. 
+-   **[リーガシー](https://doi.org/10.1016/j.bspc.2011.02.001):** EOGアーティファクトを除去する拡張
+    ICAコンポーネントで行われる回帰。 半同時データセット
+    いかなるアーティファクト拒絶研究でも使われるかもしれない
+    利用できる。 
 
-- **[SASICA](https://github.com/dnacombo/SASICA):** SASICA is an EEGLAB plugin to help you reject/select independent components based on various properties of these components.
+- **[サスカ](https://github.com/dnacombo/SASICA):** SASICAは、これらのコンポーネントのさまざまな特性に基づいて独立したコンポーネントを拒否/選択するのに役立つEEGLABプラグインです。
 
-- **[Automagic](https://github.com/methlabUZH/automagic):** Automagic is a MATLAB-based toolbox for preprocessing of EEG-datasets. It has been developed with the intention to offer a user-friendly pre-processing software for big (and small) EEG datasets.
+- **[オートマチック](https://github.com/methlabUZH/automagic):** Automagic は EEG-datasets の前処理のための MATLAB ベースのツールボックスです。 ビッグ(小型)EEGデータセット用のユーザーフレンドリーな事前処理ソフトウェアを提供する目的で開発されました。
 
-- **[AMICA](https://github.com/japalmer29/amica):** Adaptive Mixture Independent Component Analysis (AMICA) is a binary program and EEGLAB plugin that performs an independent component analysis (ICA) decomposition on input data, potentially with multiple ICA models. Also, consider downloading the postAmicaUtility plugin. 
+- **[アメリカ](https://github.com/japalmer29/amica):** アダプティブ・ミックスチャー・インディペンデント・コンポーネント・アナリシス(AMICA)は、インプット・データに関する独立したコンポーネント・分析(ICA)を行うバイナリ・プログラムと、複数のICAモデルとの併用が可能です。 また、postAmicaUtilityプラグインのダウンロードを検討してください。 
 
-### Statistics and signal processing
+### 統計と信号処理
 
--   **[ Fieldtrip-lite](https://github.com/fieldtrip/fieldtrip):** FieldTrip is a stand-alone toolbox but may also act as an EEGLAB extension providing source localization methods and additional statistical methods.
+-   **[ フィールドトリップライト](https://github.com/fieldtrip/fieldtrip):** フィールド トリップはスタンドアローンのツールボックスですが、ソースローカリゼーション方法と追加の統計方法を提供する EEGLAB 拡張機能として機能することもできます。
 
--   **[LIMO](https://github.com/LIMO-EEG-Toolbox/limo_tools):** The LInear MOdelling of MEEG data (LIMO MEEG) toolbox is an EEGLAB plugin dedicated to the statistical analysis of MEEG data.
+-   **[リモ](https://github.com/LIMO-EEG-Toolbox/limo_tools):** MEEGデータ(LIMO MEEG)ツールボックスのLInear MOdellingは、MEEGデータの統計解析に専用のEEGLABプラグインです。
 
--   **[ERPLAB](http://www.erpinfo.org/erplab/erplab-home/)**: The ERPLAB
-    Toolbox is a set of
-    open-source MATLAB routines for analyzing ERP data that operate as a
-    set of extensions to EEGLAB.
+-   **[ERPラボ](http://www.erpinfo.org/erplab/erplab-home/)*: ERPLABの特長
+    Toolbox はセットのセットです
+    オープンソースとして動作するERPデータを分析するためのMATLABルーチン
+    EEGLAB への拡張のセット。
 
--   **[EYE-EEG](http://www2.hu-berlin.de/eyelab/)**: The EYE-EEG Toolbox
-    is an extension of EEGLAB developed with the goal of facilitating integrated analyses
-    of electrophysiological and oculomotor data. 
+-   **[アイイー・イージー](http://www2.hu-berlin.de/eyelab/)**: EYE-EEG ツールボックス
+    統合分析を促進する目的で開発されたEEGLABの拡張
+    電気生理学的およびoculomotorデータの。 
 
--   **[mass_univ](http://openwetware.org/wiki/Mass_Univariate_ERP_Toolbox):** The Mass Univariate ERP Toolbox is a freely available set of MATLAB
-    functions for performing mass
-    univariate analyses of event-related brain potentials (ERPs), a
-    noninvasive measure of neural activity popular in cognitive
-    neuroscience.
+-   **[質量_univ](http://openwetware.org/wiki/Mass_Univariate_ERP_Toolbox):** MATLABのMass Univariate ERP ToolboxはMATLABの利用可能なセットです。
+    質量を実行するための関数
+    イベント関連の脳の潜在能力(ERPs)の分析
+    認知症で人気の神経活動の非侵襲的な測定
+    神経科学。
 
--   **[bioelectromag](http://eeg.sourceforge.net/bioelectromagnetism.html)**: The
-    bioelectromagnetism
-    MATLAB toolbox is interfaced in this extension to plot average ERPs
-    and to find their minima and maxima (peak finding). Only a few files from this toolbox are included in this extension.
+-   **[バイオエレクトロマー](http://eeg.sourceforge.net/bioelectromagnetism.html)*: ふりがな
+    バイオエレクトロマネシス
+    MATLABツールボックスは、平均ERPをプロットするために、この拡張機能でインターフェイスしています。
+    彼らのミニマとマキシマ(ピーク検索)を見つけるために。 このツールボックスからいくつかのファイルのみがこの拡張子に含まれています。
 
-### Source and connectivity analysis
+### ソースと接続分析
 
--   **[SIFT](https://sccn.ucsd.edu/wiki/SIFT)**: The Source Information Flow Toolbox and EEGLAB plugin computes a wide variety of
-    multivariate effective causal models of source-resolved EEG data.
-    Interactive visualizations and animations of event-related
-    'information flow' networks are included.
+-   **[シャフト](https://sccn.ucsd.edu/wiki/SIFT)*: ソース情報フローツールボックスとEEGLABプラグインは、さまざまな種類の計算を行います
+    ソース分解されたEEGデータの多重化効果的な因果モデル。
+    イベント関連のインタラクティブな視覚化とアニメーション
+    'information Flow' のネットワークは含まれています。
 
--   **[NFT](https://github.com/sccn/NFT/wiki)**: The Neuroelectromagnetic Forward Head Modeling Toolbox builds custom Boundary
-    Element Method (BEM) and Finite Element Model (FEM) forward head
-    models from subject MR head images and/or from an MNI template brain
-    model warps to measured electrode positions.
+-   **[NFTの特長](https://github.com/sccn/NFT/wiki)**:Neuroelectromagneticのフォワード・ヘッドのモデリングのツールボックスは注文の境界を造ります
+    要素方法(BEM)および有限要素モデル(FEM)は頭部を先に進めます
+    対象のMRヘッド画像やMNIテンプレートの脳からのモデル
+    測定された電極の位置へのモデルゆがみ。
 
-- **[PACTools](https://github.com/sccn/PACTools)**: The Event-Related PACTools is an EEGLAB plugin to compute phase-amplitude coupling in single-subject data. In addition to traditional methods to compute PAC, the plugin includes the Instantaneous and Event-Related implementation of the Mutual Information Phase-Amplitude Coupling Method (MIPAC).
+- **[パックツール](https://github.com/sccn/PACTools)**: イベント関連 PACTools は、EEGLAB プラグインで、単一サブジェクトデータの相振れを補正します。 PACを計算するための伝統的な方法に加えて、プラグインには、相互情報フェーズ振幅カップリング方法(MIPAC)の瞬間およびイベント関連の実装が含まれています。
 
--   **[PACT](https://github.com/sccn/PACT):** PACT is an EEGLAB extension for computing cross-frequency
-    phase-amplitude coupling.
+-   **[パクト](https://github.com/sccn/PACT):** PACTは、コンピューティングのクロス周波数のためのEEGLAB拡張です
+    段階振幅のカップリング。
 
-- **[erpsource](https://github.com/sccn/erpsource)**: Source localization of ERPs using eLoreta.
+- **[エルプソース](https://github.com/sccn/erpsource)*: eLoretaを使用してERPのソースローカリゼーション。
 
-### High performance computing
+### 高性能コンピューティング
 
--   **[nsgportal](https://github.com/sccn/nsgportal)**: The NSG EEGLAB portal  to High-Performance Computing may be used to run EEGLAB scripts on high-performance computing resources via the freely available Neuroscience Gateway Portal (NSG) to the NSF-sponsored Expanse supercomputer of the San Diego Supercomputer Center. 
+-   **[ログイン](https://github.com/sccn/nsgportal)*: NSG EEGLABポータルから、高性能コンピューティングリソースで、サンディエゴスーパーコンピュータセンターのNSF主催のExpanseスーパーコンピュータに、Neuroscience Gateway Portal(NSG)を自由に利用できるようにEEGLABスクリプトを実行するために、High-Performance Computingに使用することができます。 

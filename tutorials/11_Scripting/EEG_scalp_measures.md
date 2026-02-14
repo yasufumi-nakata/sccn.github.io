@@ -9,7 +9,7 @@ grand_parent: Tutorials
 ======
 お問い合わせ
 
-このセクションでは、MATLABコマンドラインからカスタムプロットを得ることができます。 EEGLABメニューからこれらのプロットを取得することはできません。
+この投稿は、MATLABからカスタムプロットを受け付けています。 EEGLABメニュー
 
 <details open markdown="block">
   <summary>
@@ -22,11 +22,11 @@ grand_parent: Tutorials
 
 すべての電極上の時間周波数プロット
 -----
-<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'time_freq_all_elec.mlx'));">MATLABコマンドを表示する</button>
+<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'time_freq_all_elec.mlx'));">MATLABコマンド</button>
 
 この例では、低レベルの電力の一部を示しています
 現在利用可能な機能の範囲を超えて行くスクリプト
-グラフィカルインターフェイスを介して。 以下では、このスクリプトをチュートリアルのepochedデータセットで実行します。
+グラフィカル 以下は、このスクリプトをチュートリアルのepochedデータセットで実行します。
 ふりがな [tftopo.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=tftopo.m) 関数は強力な機能です
 すべてのチャネルで時間の頻度分解をプロットできます。
 
@@ -67,14 +67,14 @@ tftopo(allersp,alltimes(:,:,1),allfreqs(:,:,1),'mode','ave','limits', …
 
 ![](/assets/images/tftopo.png)
 
-この関数は、異なる被験者からERSPの出力を組み合わせ、バイナリ統計を適用することもできます。
+この関数は、CenterP の出力を、バイナリ統計解析で行います。
 
 スカルプトポグラフィにおけるプロット対策
 ------------------
 
 ### プロットの時間頻度分解
 
-ふりがな [メタプロットポ.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=metaplottopo.m) 関数は強力な機能です
+ふりがな [特注品](http://sccn.ucsd.edu/eeglab/locatefile.php?file=metaplottopo.m) 関数は強力な機能です
 すべてのチャネルおよびコンポーネントのあらゆる測定をプロットできます。 お問い合わせ
 例えば、下のコードは時間頻度の分解をのためのプロットすることを可能にします
 すべてのデータチャネル。
@@ -89,13 +89,13 @@ figure; metaplottopo( EEG.data, 'plotfunc', 'newtimef', 'chanlocs', EEG.chanlocs
 
 ![](/assets/images/Newtimeftopo.png)
 
-### Plot ERPイメージ
+### PlotのERP
 
-次の例では、すべてのデータチャネルでERPimageをプロットすることができます。
-ERPimage では、各関数の軸線が表示されないことに注意してください。
+次の例では、すべてのデータをERPimage にプロットする。
+ERPimage では、各関数の軸線が点在しています。
 必要に応じて、何百ものチャンネルをプロットするのが便利です。 お問い合わせ
-ICAコンポーネントを交換することで、この方法でプロットすることもできます。
-EEG.data と EEG.icaact と *'chanlocs'* 引数を外します。
+ICA交換する
+EEGデータ と EEG.icaact と *'chanlocs'* は、外に渡します。
 
 ``` matlab
 figure; metaplottopo( EEG.data, 'plotfunc', 'erpimage', 'chanlocs', EEG.chanlocs, 'plotargs', ...
@@ -106,13 +106,13 @@ figure; metaplottopo( EEG.data, 'plotfunc', 'erpimage', 'chanlocs', EEG.chanlocs
 
 スカルプトポグラフィアニメーション制作
 ------------------
-<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'make_eeg_movie.m'));">MATLABコマンドを表示する</button>
+<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'make_eeg_movie.m'));">MATLABコマンド</button>
 
 このページで使用されるスクリプトは、 [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=make_eeg_movie.m)
 
-### eegmovie関数を使って2Dスカルプトポグラフィアニメーションを作る
+### eegmovie関数2Dspcaltopoグラフィ アニメーション
 
-scalpマップアニメーションを作成する簡単な方法は(limited)EEGLAB関数を使うことです [eegmovie。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegmovie.m) コマンドラインから。 お問い合わせ
+scalpMap アニメーション へスキップ(limited) [eegmovie。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegmovie.m) コマンドラインから。 お問い合わせ
 例えば、レイテンシー範囲のムービーを作るために-100ミリ秒から600ミリ秒、タイプ:
 
 ```matlab
@@ -144,11 +144,11 @@ close(vidObj);
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/A9HcbFtTWKc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-以下では、3DヘッドプロットでERPをプロットするために同じ機能を使用します。
+3DヘッドプロットでERPをプロットする機能
 
-### eegmovie関数を使って3Dスカルプトポグラフィアニメーションを作る
+### eegmovie関数3Dsプカルトポグラフィ
 
-上記のスクリプトを実行します。 下のスクリプトは3Dヘッドプロットムービーを作成します。
+下の 下の は は は は は は
 
 ```matlab
 %% Simple 3-D movie
@@ -175,7 +175,7 @@ close(vidObj);
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/rwo1ufsuQ6w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-上記のスクリプトでは、 "headplotparams = headplotparams1;" を "headplotparams = headplotparams2;" に改行して、ヘッドモデル間の切り替えを行います。
+「ヘッドプラム = headplotparams1;」を「headplotparams = headplotparams2;」に改行して、ヘッドモデルをモデル化します。
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/6iuGt7FzX30" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 

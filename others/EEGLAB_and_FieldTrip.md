@@ -5,173 +5,173 @@ long_title: EEGLAB and FieldTrip
 parent: Interoperability
 ---
 
-EEGLAB and FieldTrip
+EEGLABとフィールドトリップ
 =========================
-{: .no_toc }
+お問い合わせ
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-History
+プロフィール
 --------
 
-First a little bit of history. EEGLAB was created in 2000 at The Salk
-Institute (La Jolla CA) by Arnaud Delorme and Scott Makeig. EEGLAB was 
-fully released in 2002 at the Swartz Center for Computational Neuroscience, 
-UCSD (La Jolla, California, USA). 
+最初は少し歴史があります。 EEGLABは2000年にThe Salkで誕生しました。
+Arnaud DelormeとScott Makeigの研究所(La Jolla CA)。 EEGLABは 
+Swartz Center for Computational Neuroscienceにて2002年発売 
+UCSD(米国カリフォルニア州La Jolla) 
 
-In 2003-04, the EEGLAB software architect Arnaud
-Delorme worked with FieldTrip senior author Robert Oostenveld to provide
-basic source localization to EEGLAB via the EEGLAB DIPFIT plugin using
-MATLAB code Robert had developed for dipole fitting. Together with many
-other functions written at the Donders Institute for Brain, Cognition,
-and Behavior (Nijmegen, The Netherlands), the source code contributed by
-Robert Oostenveld to DIPFIT served as a basis for FieldTrip, which was
-first released by the Donders Institute in 2005. Both packages run on
-MATLAB (The Mathworks, Inc.).
+2003-04年 EEGLABソフトウェアアーキテクトArnaud
+Delormeは、FieldTripシニアライターRobert Oostenveldと協力して提供しました
+EEGLAB DIPFITプラグインによるEEGLABへの基本的なソースローカリゼーション
+MATLABコードロバートがダイポールフィッティングのために開発されました。 多岐に渡る
+ドナーズ脳研究所で書かれた他の機能, 認知,
+と Behavior(オランダ・ニジメゲン)、ソースコードが貢献
+Robert Oostenveld に DIPFIT は、フィールドトリップの基礎として機能しました。
+2005年 ドナーズ・インスティテュートより発売 パッケージの実行
+MATLAB(マツワークス株式会社)
 
-Interdependencies
+相互依存関係
 -------------------
 
-EEGLAB and FieldTrip are in part interdependent. For basic source
-localization, EEGLAB uses the DIPFIT plugin, which incorporates a
-FieldTrip source localization routine. EEGLAB also offers users the
-choice of using some FieldTrip statistical routines as well as its own.
-The FieldTrip code also includes some EEGLAB functions such as
-*topoplot.m* and *runica.m* for performing independent component analysis
-decomposition.
+EEGLABとFieldTripは、相互に依存しています。 基本的なソースのため
+ローカリゼーション、EEGLAB は DIPFIT プラグインを使用します。
+FieldTrip ソースローカリゼーションルーチン。 EEGLABは、ユーザーをユーザーに提供します
+いくつかのFieldTrip統計ルーチンと独自の使用の選択。
+FieldTrip コードには、EEGLAB の機能も含まれます。
+*topoplot.m*および独立したコンポーネントの分析を行うための*runica.m*
+分解します。
 
-EEGLAB and FieldTrip developers meet every year or every
-other year to discuss progress in the field and possible collaborations
-or new bridges between the two software. 
+EEGLABとFieldTripの開発者は、毎年、または毎年会います
+フィールドと可能なコラボレーションの進行状況について議論する年
+2つのソフトウェア間のまたは新しい橋。 
 
-In the spirit of open-source
-programming, we believe that more collaboration is better. Working from
-experience with a diversity of approaches allows us to identify and
-deal with problematic signal processing issues.
+オープンソースの精神で
+プログラミングは、よりコラボレーションが優れていると信じています。 からの仕事
+多様なアプローチで経験することで、特定・特定できる
+問題のある信号処理の問題に対処する。
 
-Development philosophies
+開発哲学
 --------------------------
 
-In practice, the philosophies of EEGLAB and FieldTrip are somewhat
-different:
+実際には、EEGLABとFieldTripの哲学はやや
+異なる:
 
--   FieldTrip is aimed mostly at advanced users and does not have a
-    graphic user interface. In contrast, EEGLAB provides a graphic user
-    interface (GUI) for data exploration plus a graded path toward
-    writing custom analysis scripts using the EEGLAB functions called by
-    the EEGLAB GUI.
+-   FieldTrip は、主に上級ユーザーを対象としたものであり、
+    グラフィックユーザーインターフェイス。 対照的に、EEGLABはグラフィックユーザーを提供します
+    データ探索のためのインターフェイス(GUI)とグレードのパス
+    EEGLAB関数を使用してカスタム分析スクリプトを書く
+    EEGLAB GUI の使い方
 
--   FieldTrip provides limited tools for handling group data. Managing
-    group data is intentionally left to the user's choice with a
-    rationale that users should not be forced to use any predefined
-    scheme for modeling the experimental design. By contrast, EEGLAB 
-    provides tools to apply a variety of statistical models and
-    sub-models to group experimental data.
+-   フィールドトリップは、グループデータを処理するための限られたツールを提供しています。 マネージング
+    グループデータは、ユーザーの選択に意図的に残されます
+    ユーザーが事前定義された使用を余儀なくされない合理的
+    実験設計をモデル化するためのスキーム。 対照的に、EEGLAB 
+    さまざまな統計モデルを適用するためのツールを提供し、
+    実験データをグループ化するためのサブモデル。
 
--   FieldTrip allows variable-length data epochs. Though EEGLAB supports
-    processing of multiple continuous data segments, it is not as
-    flexible as FieldTrip in processing data epochs of variable lengths.
-    Historically, this difference arose in part because FieldTrip was
-    developed to support animal as well as human physiological data
-    analysis, whereas EEGLAB development has always focused on the analysis
-    of human data.
+-   FieldTrip は、可変長のデータエポックを可能にします。 EEGLABのサポート
+    複数の連続データセグメントの処理は、
+    変数の長さのデータ epochs の処理の FieldTrip として適用範囲が広い。
+    歴史的に、この違いは、FieldTrip がいたので、その部分にありました
+    動物や人間の生理学的なデータをサポートする開発
+    分析、EEGLAB開発が分析に常に焦点を合わせているところ
+    人間のデータ。
 
--   FieldTrip functions provide packaged solutions in which low-level
-    processing is hidden and subject to change. Thus, a large number of
-    FieldTrip functions that change frequently are hidden in private
-    folders. By contract, there are no hidden functions in EEGLAB; users
-    have direct access to low-level processing functions, and these are
-    fully documented.
+-   FieldTrip は、低レベルのパッケージソリューションを提供します。
+    処理は隠され、変更の対象となる。 そのため、数が多い
+    頻繁に変更するFieldTrip機能はプライベートで隠されています
+    フォルダ。 契約により、EEGLABに隠れた機能はありません。
+    低レベルの処理機能に直接アクセスでき、これらは
+    十分に文書化される。
 
--   Any new contribution to FieldTrip adds to the general FieldTrip
-    package supported by the Donders Center. In practice, this makes it
-    difficult for external developers to contribute code (the FieldTrip
-    developers are open about this, though). In EEGLAB, all third party
-    contributions are made available as EEGLAB extensions (formerly
-    'plugins'). To date, there are more than 120 EEGLAB extensions
-    available from many developers, including extensive toolboxes
-    ERPLAB, SIFT, LIMO, NFT, MoBILAB, etc. Third-party
-    developers maintain full control over their extensions.
+-   一般的なFieldTripに新しい貢献を追加
+    ドナーズセンターがサポートするパッケージ。 練習では、これはそれを作る
+    外部開発者がコード(フィールドトリップ)を貢献するのは難しい
+    開発者はこれについて開いていますが。 EEGLABでは、すべての第三者
+    EEGLABの拡張機能(旧)として、コントリビュートが利用可能
+    'プラグイン' 現在、120以上のEEGLAB拡張機能があります。
+    豊富なツールボックスを含む多くの開発者から利用可能
+    ERPLAB、SIFT、LIMO、NFT、MoBILABなど サードパーティ
+    開発者は、拡張機能を完全に制御します。
 
--   When you download FieldTrip, you download the *code of the day* (the
-    head of the development code), which could contain recently added
-    bugs (this might change in the future). EEGLAB
-    remains more of a structured package for which additions to core
-    functions are carefully considered and controlled to maximize
-    stability. EEGLAB's third-party extension (plugin) facility
-    provides a free medium for new tool development and publication by
-    many groups and individuals.
+-   FieldTripをダウンロードすると、当日の*コードをダウンロードしてください*(
+    開発コードの頭)、最近追加できる
+    バグ(将来は変化する可能性があります)。 エッグラボ
+    コアに加えて、構造化されたパッケージの多くを残します
+    機能を最大限に活用するために注意深く考慮され、制御されます
+    安定性。 EEGLABのサードパーティ拡張(プラグイン)施設
+    新しいツールの開発と出版物のための無料媒体を提供
+    多くのグループと個人。
 
-Which environment should you choose to use?
+使用する環境は?
 ---------------------------------------------
 
-The choice between either (or both) environments is yours. Some
-considerations:
+どちら(または両方)の環境でも選択できます。 スタッフ
+検討:
 
--   If you have little experience with analysis script writing, we
-    definitely recommend you try EEGLAB. EEGLAB facilities and
-    documentation will also guide you through learning how to write
-    scripts, even writing scripts for you based on your menu choices.
+-   解析スクリプトの書き込み経験が少ない場合、
+    EEGLABをお試しください。 EEGLABの施設と施設
+    ドキュメントは、書き方を学ぶことであなたを導きます
+    メニューの選択肢に基づいてスクリプトを書くこともできます。
 
--   If you are an advanced programmer, FieldTrip's nested data
-    structures might appeal to you. EEGLAB data structures have
-    been kept simple on purpose, so beginners do not feel overwhelmed and
-    have easy script access to information about their data.
+-   高度なプログラマである場合、FieldTrip のネストされたデータ
+    構造はあなたにアピールするかもしれません。 EEGLABのデータ構造は、
+    目的はシンプルに保たれているので、初心者は圧倒されず、
+    自分のデータについての情報にアクセスしやすいスクリプトを持っています。
 
--   If you want maximum control over your processing pipeline, you might
-    also want to choose EEGLAB since it gives you ready access to
-    low-level processing functions and has in-depth documentation. Also,
-    if you want to maximize the probability that your code will continue
-    to work in future revisions of the software, again EEGLAB might be
-    the best option.
+-   処理パイプライン上で最大制御が必要な場合は、
+    EEGLAB を選択するには、利用可能なアクセスを提供するので、
+    低レベルの処理機能と詳細なドキュメントがあります。 また、
+    コードが続行する確率を最大化したい場合
+    ソフトウェアの将来の修正に取り組むためには、EEGLABは
+    最高のオプション。
 
--   If you want to publish MATLAB code for new functions or toolboxes,
-    EEGLAB extensions provide a sure way to make your code known and
-    available for widespread, easy use and testing -- even directly from
-    the EEGLAB GUI of users who download your extensions. The EEGLAB
-    Extension Manager will also allow you to help users maintain current
-    versions of your extensions.
+-   新しい関数やツールボックスにMATLABコードを公開したい場合、
+    EEGLABエクステンションは、あなたのコードを既知にし、
+    より広い、容易な使用およびテストのために利用できる --から直接
+    拡張機能をダウンロードするユーザーの EEGLAB GUI。 エッグラボ
+    エクステンションマネージャは、ユーザーが現在の状態を維持するのに役立ちます
+    拡張子のバージョン。
 
--   Both EEGLAB and FieldTrip can be added to the MATLAB path and run
-    together. Some functions are available to convert between data
-    structures of both toolboxes, such as the EEGLAB *eeglab2fieldtrip.m*
-    and the *fieldtrip2eeglab.m* functions - note that these functions
-    focus on converting specific structure of data (FieldTrip has
-    several of them) and are not meant to be all-purpose functions.
-    EEGLAB can also import data from FILE-IO, which is compatible with
-    MATLAB files saved by FieldTrip. There is a notable function name
-    conflict when using both EEGLAB and FieldTrip together -- the
-    *topoplot.m* function is present in both toolboxes (EEGLAB will handle the conflict for you).
+-   EEGLABとFieldTripの両方をMATLABパスに追加して実行できます。
+    一緒に。 一部の機能はデータ間で変換することができます
+    EEGLAB *eeglab2fieldtrip.mのような両方のツールボックスの構造 * 必須
+    と *fieldtrip2eeglab.m* 関数 - これらの関数に注意
+    特定のデータ構造(FieldTrip)の変換に焦点を合わせる
+    それらのいくつかは、すべての目的関数であることを意味しません。
+    EEGLABはFILE-IOからデータをインポートすることもできます。
+    フィールドトリップによって保存されたMATLABファイル。 注目すべき関数名があります
+    EEGLABとFieldTripを併用するときの競合 -
+    *topoplot.m* 関数は、ツールボックス(EEGLAB は、競合を処理します)に存在します。
 
-Converting between EEGLAB and FieldTrip data structures
+EEGLABとFieldTripのデータ構造の変換
 --------------------------------------------------------
 
-In practice, it is easy to use both EEGLAB and FieldTrip at the same
-time and to convert back and forth between data structures.
+練習では、EEGLABとFieldTripの両方を同時に使用するのは簡単です。
+データ構造間で時間と前後を変換します。
 
-To import FieldTrip data structures into EEGLAB, you may use the
-*pop_fileio* function of EEGLAB or the *fieldtrip2eeglab*  function (the
-result is the same since fieldtrip2eeglab calls *pop_fileio*).
+FieldTrip のデータ構造を EEGLAB にインポートするには、
+*pop_fileio* EEGLAB または *fieldtrip2eeglab* 関数の機能 (the
+結果は、fieldtrip2eeglab コール *pop_fileio* と同じです。
 
 ``` matlab
 EEG = pop_fileio(hdr, dat, events);
 ```
 
-or
+または
 
 ``` matlab
 EEG = fieldtrip2eeglab(hdr, dat, events);
 ```
 
-To import EEGLAB datasets in FieldTrip is to read EEGLAB datasets using
-the file File-IO interface either using the standard FILE-IO interface
-or using the low-level EEGLAB reading function of FILE-IO as below.
+FieldTrip で EEGLAB のデータセットをインポートするには、EEGLAB のデータセットを読み込みます。
+ファイル IO インターフェイスは標準の FILE-IO インターフェイスを使用して下さい
+またはFILE-IOの低レベルEEGLAB読書機能を使用して以下のようにします。
 
 ``` matlab
 hdr = ft_read_header( EEGLABFILE );
@@ -179,48 +179,48 @@ data = ft_read_data( EEGLABFILE, 'header', hdr );
 events = ft_read_event( EEGLABFILE, 'header', hdr );
 ```
 
-A legacy function *eeglab2fieldtrip* also exists although it is mostly
-used internally in EEGLAB to convert EEGLAB datasets to FieldTrip for
-source localization purposes (DIPFIT). It is not recommended to use that
-function although it might still work for your application.
+従来の関数 *eeglab2fieldtrip* は大抵ですが存在します
+EEGLAB で内部で使用して EEGLAB データセットを FieldTrip に変換
+ソースローカリゼーション目的(DIPFIT)。 使用することをお勧めしません
+アプリケーションがまだ動作する可能性がありますが、機能します。
 
-Performing advanced source localization using DIPFIT/FieldTrip
+DIPFIT/FieldTripを使用した高度なソースローカリゼーションを実行
 ---------------------------------------------------------------
 
-The [source localization section](/tutorials/09_source/EEG_sources)
-of the tutorial describes how to use FieldTrip functions to localize sources underlying EEG activity and ICA components.
+ふりがな [ソース ローカリゼーションセクション](/tutorials/09_source/EEG_sources)
+チュートリアルでは、FieldTrip関数を使用して、EEGアクティビティとICAコンポーネントをローカライズする方法について説明します。
 
-Wrap up your FieldTrip scripts into EEGLAB plugin menu items
+FieldTrip スクリプトを EEGLAB プラグイン メニュー項目にラップする
 ----------------------------------------------------------------
 
-Because of our historical collaboration,
-EEGLAB channel locations may be conveniently aligned with FieldTrip
-head models from the EEGLAB graphic interface, allowing you to leverage the full capabilities of FieldTrip source reconstruction methods on EEGLAB
-datasets as outlined in the
-[source localization section](/tutorials/09_source/EEG_sources.html#advanced-source-reconstruction-using-dipfitfieldtrip) of the tutorial.
+歴史のコラボレーションから、
+EEGLAB チャネルの場所は、FieldTrip と簡単に整列できます。
+EEGLAB のグラフィックインターフェースからヘッドモデルを生成し、EEGLAB のフィールドトリップソース再構築方法を最大限に活用できます。
+データセットは、
+[ソース ローカリゼーションセクション](/tutorials/09_source/EEG_sources.html#advanced-source-reconstruction-using-dipfitfieldtrip) チュートリアルの。
 
-We have created the template [erpsource](https://github.com/sccn/erpsource) EEGLAB plugin that takes EEGLAB data as input, performs the
-coregistration with a standard FieldTrip BEM model, and apply eLoreta
-for ERP analysis (also based on the previous
-[section](/tutorials/09_source/EEG_sources.html#advanced-source-reconstruction-using-dipfitfieldtrip)).
-We believe this template could be modified by some of you to create
-other plugins.
+テンプレートを作成しました [エルプソース](https://github.com/sccn/erpsource) EEGLAB プラグインは、EEGLAB データを入力して実行します。
+標準のFieldTrip BEMモデルによるコアギストレーション、eLoretaを適用
+ERP分析(前述に基づく)
+[セクション](/tutorials/09_source/EEG_sources.html#advanced-source-reconstruction-using-dipfitfieldtrip)).
+私たちは、このテンプレートは、あなたが作成するいくつかのあなたによって変更することができると信じています
+他のプラグイン。
 
-The long term sustainability of EEGLAB and FieldTrip relies on the
-contribution of new methods by the community for advanced MEEG
-processing. Making your FieldTrip code available as an EEGLAB plugin
-(there are more than 120 plugins to date) will make it visible to the
-EEGLAB community. 
+EEGLABとFieldTripの長期持続性は、
+先進的なMEEGのためのコミュニティによる新しい方法の貢献
+処理。 FieldTrip コードを EEGLAB プラグインとして利用できるようにする
+(現在120以上のプラグイン)が表示されるので、
+EEGLABコミュニティ 
 
-You can submit a plugin on this [web page](https://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php) and,
-once approved, it becomes instantaneously visible by all EEGLAB users
-and available directly in the EEGLAB graphic interface (according to our
-statistics on Mixpanel in 2019, 150,000 to 200,000 EEGLAB sessions are
-started each month from about 10,000 to 20,000 unique users). Plugins
-are ranked by the number of downloads, and there is also a rating/commenting
-system in place for each plugin. The quarterly EEGLAB newsletter sent to
-15,000 researchers also features new plugins upon request from their
-author.
+このプラグインを投稿することができます [サイトマップ](https://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php) そして、
+承認されると、EEGLABユーザー全員が瞬時に見えるようになります。
+EEGLAB のグラフィックインターフェース(EEGLAB による)に直接使用可能
+2019年のMixpanelの統計量、150,000〜200,000 EEGLABセッション
+毎月約1万～2万のユニークユーザーからスタート。 プラグイン
+ダウンロード数でランク付けされ、評価/コメントもあります。
+各プラグインのシステム 四半期EEGLABニュースレターが送信されました
+15,000 研究者は、新しいプラグインの要求をそれらから提供しています
+著者。
 
-Do not hesitate to contact [us](mailto:eeglab@sccn.ucsd.edu) if you have
-questions.
+お気軽にお問い合わせください。 [お問い合わせ](mailto:eeglab@sccn.ucsd.edu) お問い合わせ
+お問い合わせ

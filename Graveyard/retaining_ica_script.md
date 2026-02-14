@@ -2,13 +2,13 @@
 layout: default
 ---
 
-Retaining multiple ICA weights in a dataset
+複数のICA重量をデータセットに入れる
 ---------------------------------------------
 
-To retain multiple copies of ICA weights (e.g. EEG.weights and
-EEG.sphere), use the extendibility property of MATLAB structures. On the
-MATLAB command line, simply define new weight and sphere variables to
-retain previous decomposition weights. For example,
+ICAの重み(例えばEEG.weightsおよび
+EEG.sphere は、MATLAB 構造の拡張性プロパティーを使用します。 お問い合わせ
+MATLAB コマンドラインは、新しい重みと球変数を定義するだけです。
+前の分解の重量を保って下さい。 例えば、
 
 ``` matlab
 >> EEG.icaweights2 = EEG.icaweights; % Store existing ICA weights matrix
@@ -20,7 +20,7 @@ retain previous decomposition weights. For example,
 >> [ALLEEG EEG] = eeg_store(ALLEEG, EEG, CURRENTSET); % copy to EEGLAB memory
 ```
 
-Both sets of weights will then be saved when the dataset is saved, and
-reloaded when it is reloaded. See the [script
-tutorial](/tutorials/advanced-topics/writing-EEGLAB-scripts.html) for more
-information about writing MATLAB scripts for EEGLAB.
+データセットが保存されると重量のセットが保存されます。
+リロード時にリロードされます。 [スクリプト]を参照してください。
+チュートリアル:(/tutorials/advanced-topics/writing-EEGLAB-scripts.html)
+EEGLAB の MATLAB スクリプトの作成に関する情報。

@@ -6,18 +6,18 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 28
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/bva-io).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/bva-io).
 
-# BVA-io for Brain Vision Analyzer format
+# BVA-io for Brain Vision Analyzer フォーマット
 
-This repository is a plugin for EEGLAB to import/export
-Brain Vision Analyzer EEG data files.
+このリポジトリは、EEGLABがインポート/エクスポートするプラグインです。
+Brain Vision Analyzer EEGのデータファイル。
 
-# Version history
-v1.73 - Writing data now in MULTIPLEXED format as a new option; show warning when VMRK file is missing
+# バージョン履歴
+v1.73 - MULTIPLEXED形式のデータを新しいオプションとして書き込む; VMRKファイルが欠落しているときに警告を表示する
 
-v1.72 - Avoid crashing when event file is absent
+v1.72 - イベントファイルが存在しないときにクラッシュを避ける
 
-v1.71 - Allow to import .ahdr files
+v1.71 - .ahdrファイルをインポートすることができます
 
-v1.7 - Better handling of VMRK and EEG file non-consistant witht the header VHDR file; allow empty marker info section; allow importing truncated binary file
+v1.7 - VMRK と EEG ファイルの非一貫性のwitht ヘッダー VHDR ファイルのより良い処理; 空のマーカー情報セクションを許可; truncated バイナリファイルをインポートする

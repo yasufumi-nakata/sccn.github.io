@@ -4,11 +4,11 @@ title: e. Automated pipeline
 parent: 11. Write scripts
 grand_parent: Tutorials 
 ---
-EEGLABを用いた自動処理パイプライン
+EEGLABの電子化
 =====
 お問い合わせ
 
-STUDYで同時にすべてのデータセットを処理するスクリプトを書く必要はありません。 お問い合わせ [ビデオ](https://www.youtube.com/watch?v=-jL3PuHD3aY) EEGLABのグラフィックインターフェイスからバッチ処理を実行する方法について説明します。 このセクションでは、スクリプトを使用して同様のパイプラインを実行します。
+STUDYは、すべての言語を翻訳する [ビデオ](https://www.youtube.com/watch?v=-jL3PuHD3aY) EEGLABの特長 この投稿をお気に入りにする
 
 <details open markdown="block">
   <summary>
@@ -19,23 +19,23 @@ STUDYで同時にすべてのデータセットを処理するスクリプトを
 お問い合わせ
 </details>
 
-<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'simple_study_pipeline.m'));">MATLABコマンドを表示する</button>
+<button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'simple_study_pipeline.m'));">MATLABコマンド</button>
 
-STUDYの作成やBIDSからのインポート
+STUDYやBIDSを実装
 ------------------------------------
 
 データのダウンロード [https://openneuro.org/datasets/ds003061/](https://openneuro.org/datasets/ds003061/) そしてこのフォルダに移動し、次のセクションでスクリプトを実行します。
 
 または、利用可能ないずれかを使用する [EEGLAB研究](../tutorial_data.html)お問い合わせ これらの研究のいくつかは既にそのデータが処理済みであり、自動化された処理には適さないことに注意してください。
 
-ERPパイプラインの実行
+ERPの実行
 ----------------
 
-下のパイプラインは、すべての被験者から生データを取り、データを消去し、利益のエポックを抽出し、壮大な平均ERPをプロットします。
+下の すべての から から から から から の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の を の の の の の の の の の の の の の の の
 
-まず、データをインポートします。 その後、clean_rawdata(デフォルトパラメータはここで使用されますが、データ品質に基づいて調整が必要な場合があります)で清掃されます。 ICAはすべてのデータセットで実行され、ICLabelは悪いICAコンポーネントをフラグするために使用されます。 
+現在、CLabel は、CLabel は、CLabel は、CLabel は、CLabel は、CLabel が実行するにあたり、Casino で実行されます。 
 
-その後、オッズボールと標準の刺激エポックが抽出され、ベースラインが削除されます(-1000から0ミリ秒まで)、ERPは計算され、プロットされます。 独自の EEGLAB スタディでこのパイプラインを実行したい場合は、データエポックを抽出するための行を変更する必要があります(イベントの名前が異なる場合があります)。
+EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEG では、様々なイベントの開催を予定しています。
 
 ```matlab
 % check folder
@@ -104,14 +104,14 @@ STUDY = std_erpplot(STUDY,ALLEEG,'channels', {chanlocs.labels}, 'design', 1);
 pop_editoptions( 'option_storedisk', 0);
 ```
 
-下の図に似ている数字がプロットされます。 数値は、上記のアーティファクトと拒絶の手順の一部がランダムにデータを選択すると異なる場合があります。 パイプラインを再現できるようにするには、上記のスクリプトの先頭に「rng(1)」を追加します。 上記のスクリプトは最初の2人の参加者のみを処理することに注意してください。 *pop_importbids()* にすべての参加者を処理するコールを更新します。
+お問い合わせ とりあえず、 とりあえず、 とりあえず 「 「 「 *pop_importbids()* にすべての参加者が更新されます。
 
 ![](/assets/images/p300_simple_study.png)
 
 スペクトルパイプラインを実行
 ----------------
 
-下のパイプラインは、すべての被験者から生データを取り、データをクリーンにし、関心のあるエポックを抽出し、条件を比較するためのスペクトルをプロットします。 最初の部分は、上記のERPスクリプトと同じです。 スクリプトの終端はスペクトルを計算します。 連続データがある場合、エポックを抽出する必要はありません。 上記と同じデータセットを再利用したいので、このケースでエポックを抽出しました。
+下の に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に は、 このページの先頭へ エポックは、 このページではjavascriptを使用しています。
 
 ```matlab
 % check folder
@@ -184,7 +184,7 @@ pop_editoptions( 'option_storedisk', 0);
 
 次のようなプロットが表示されます。 上記のアーティファクトを削除するためのオプションが変更されているため、若干異なります。
 
-![スクリーンショット 2023-02-08 に 8 44 04 PM](https://user-images.githubusercontent.com/1872705/217720016-2b5573d5-5a04-46e3-ab42-ac65e37b9f1b.png)
+![2018年12月12日](https://user-images.githubusercontent.com/1872705/217720016-2b5573d5-5a04-46e3-ab42-ac65e37b9f1b.png)
 
 
 データのパイプラインの最適化
@@ -192,7 +192,7 @@ pop_editoptions( 'option_storedisk', 0);
 
 ### フィルタリング
 
-*clean_rawdata*プラグイン(楕円フィルタ)で適用されるフィルタよりも異なるフィルタを適用したい場合があります。 たとえば、標準の FIR フィルターを適用するには、次の方法で *clean_artifacts* 関数に呼び出しを置き換える必要があります。
+*clean_rawdata* のプラグインは、以下のとおりです。
 
 ```matlab
 EEG = pop_eegfiltnew( EEG,'locutoff',0.5);
@@ -202,37 +202,37 @@ EEG = clean_artifacts( EEG,'FlatlineCriterion',5,'ChannelCriterion',0.8, ...
     'WindowCriterionTolerances',[-Inf 7] ,'fusechanrej',1);
 ```
 
-*clean_rawdata* プラグインからアーティファクトをきれいにするために関数を呼び出すと、*highpass* 引数は *off* に設定され、フィルタリングを無効にします。
+*clean_rawdata* プラグインは、 *off* と *highpass* で、 *off* は、
 
 ### なぜ2回参照できますか?
 
-*clean_rawdata*を使用してアーティファクトのクリーニングは通常平均的な参照データでよりよく動作します。 このトピックに公開された記事はありませんが、データを処理する際にこの観察を行いました。 悪いチャンネルを削除した後、再度平均参照を計算する必要があります。 2 番目の平均参照計算は、この上で説明するように、最初の 1 つを undoes します。 [サイトマップ](../05_Preprocess/rereferencing.html).
+*clean_rawdata* は、よりよく参考にしてください。 この投稿をお気に入りに追加しました。 よく見る 2 . . . . . . 1 つを undoes にします。 [サイトマップ](../05_Preprocess/rereferencing.html).
 
 ### 自動洗浄パラメータ
 
-*clean_artifacts* への呼び出しはデフォルトの EEGLAB パラメータを使用します。 しかし、常に最適ではありません。 特に、*'ChannelCriterion'* は、複数のチャネルを拒否するために変更される場合があります。 *'BurstCriterion'*は別の重要な変数です。 あまりにも多くのデータ領域が拒否されていると感じた場合、例えば(または一部の人が100を推奨)40に増加します。 プラグインで詳細情報が利用可能 [wikiページ](https://github.com/sccn/clean_rawdata).
+*clean_artifacts* は、EEGLAB に あります。 特に、*'ChannelCriterion'* ????????????? *'BurstCriterion'* は別の変数です。 ???????????????????? お問い合わせ [ツイート](https://github.com/sccn/clean_rawdata).
 
 データをクリーニングするための最適なパラメータを見つけることは、パイプラインの設計に不可欠です。 被験者数を実験してみると最高でしょう。 また、すべての被験者に対してパイプラインを実行すると、各被験者に対してどれだけのデータが削除されたかを確認する必要があります。 場合によっては、データの80%は、いくつかの被験者のために削除されます。
 
-データをクリーニングするための代替ソリューションは、複数の回のデータクリーニングを実行することです。 悪いチャンネルと大規模なアーティファクトを削除したら、アーティファクトの拒否を実行します。 その後、ICAを実行した後、もう一度実行して、より小さいアーティファクトを削除することができます。 このアプローチの利点は、最初のデータクリーニングは、アイブリンクを削除しないということです(ICAは、これらのデータを保存できるようにデータを抽出することができます)。 このアプローチの例は、 [このチュートリアルのセクション](11_Scripting/Analyzing_EEG_BIDS_data_in_EEGLAB.html).
+データを データを は は は は は は は は は は は は は は は は は は は は は は は は は は は は は ことです ことです は ことです ことです ことです ことです ことです ことです は は は ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです 偽物や偽物、偽物、偽物、偽物など より、より高度なファクト処理を行ないます。 このサイトは、以下のとおりです。 この例は、 [このチュートリアルのセクション](11_Scripting/Analyzing_EEG_BIDS_data_in_EEGLAB.html).
 
-### 使用するICA
+### アメリカ
 
-上記のスクリプトは EEGLAB のデフォルトである *runica* (Infomax) を使用します。 関連するプラグインをインストールするために必要なその他の一般的な選択肢は、*Amica*、*Picard*、および*FastICA*です。 異なるICAソリューションを比較しました。 [ペーパー](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135)お問い合わせ 要するに、理想的なアルゴリズムはありません。
-- *Runica*は最も多く使用されました。 堅牢ですが遅いです。
-- *picard*は*runica*と同じ目的機能を最大限に活用します。 それはより速くそしてより低い残留物と収束します。 また、ICAの先駆者であるジャン=フランコワ・カルドソが設計しました。 それにもかかわらず、EEGデータの他のユーザーと徹底的に比較されていない新しいアルゴリズム(2022の時点で)です。
-- *FastICA*はEEGデータで広く使われているICAアルゴリズムです。 アルゴリズムの作者は、反復的なものではなく対称的なアプローチを使用して助言します(デフォルトです)。
-- *Amica*は、当社のベースで最高のICAアルゴリズムです。 [比較比較](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135)お問い合わせ それにもかかわらず、それは遅くなります。 また、単一のEEGデータセットにのみ適用できます。
+EEGLAB のデフォルトは *runica* (Infomax) です。 お問い合わせ [ペーパー](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135)お問い合わせ 要するに、理想的なアルゴリズムはありません。
+- *Runica* は、 偽物 を 使っている。
+- *picard* は、*runica* の機能を利用できるようにします。 より より より また、ICAの先駆者であるオランダジャン=フランコワ・カルドソが設計されました。  それ ユーザー ユーザー です です 20 20 20 20 です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です
+- *FastICA* はEEGデータで購入可能です。 デフォルト デフォルト デフォルト デフォルト
+- *Amica* は、ベースで英語を勉強しています。 [比較比較](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135)お問い合わせ お問い合わせ また、EyGデータセットは、
 
-### 自動化されたICAのアーティファクト拒絶のアルゴリズムは何ですか。
+### アー の の
 
-上記のスクリプトで *ICLabel* を使用します。 彼らは他の人です。 たとえば、*MARA* は、アーティファクチュアル ICA コンポーネントを検出する別の一般的な EEGLAB プラグインです。 
+上記の で で * * * * * * * * * * * * * * * です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です 
 
-※ICLabel*の場合、人工成分を検出する閾値を設定できます。 上記のスクリプトでは、目の動きのアーティファクト(点滅または横方向の目の動き)と、筋肉になる可能性の90%にしきい値を設定しています。 これは非常に保守的であり、被写体ごとに1〜5個のコンポーネントのみを拒否します。 一部の研究者は保存性が低いため、閾値が下がります。 ふりがな [ICラベル](https://github.com/sccn/ICLabel) このページには、この件に関する詳細情報が含まれています。
+※ICLabel* では、一般公開中でも可視性が向上します。 のみ のみ のみ のみ のみ ふりがな [ICラベル](https://github.com/sccn/ICLabel) このページには、この件に関する詳細情報が含まれています。
 
-### ICAコンポーネントとICAコンポーネントのクラスタリングのダイポールを見つける
+### ICAコンポーネントのクラスタリングのダイキャスト
 
-ICA コンポーネントと ICA コンポーネントのクラスタリングのダイポールを STUDY レベルで見つけることもできます。例えば、以下のコードの小さなスニペットを使用します。
+ICA コンポーネントのクラスタリングのダイキャストを スタディ ?????????????????????
 
 ```matlab
 % find dipoles for all ICA components of all subjects
@@ -249,29 +249,29 @@ EEG = pop_multifit( EEG,[],'threshold',100,'plotopt',{'normlen','on'});
 STUDY = std_dipplot(STUDY,ALLEEG,'clusters',2, 'design', 1);
 ```
 
-詳しくは、 [ICAクラスタリングセクション](../10_Group_analysis/component_clustering_tools.html) チュートリアルの。
+詳しくは、 [ICAクラスタリング](../10_Group_analysis/component_clustering_tools.html) チュートリアルの。
 
 ### より高度なパイプライン
 
-* ERPsの代わりにスペクトルをプロットしたいのは? 上記の例は ERPs にありました。 しかし、これで説明されているように他の対策をプロットするのは簡単です。 [サイトマップ](command_line_study_functions.html).
-* パイプラインで統計を実行できますか? はい、ERPや他の対策をプロットし、チュートリアルで説明する統計的に重要な領域を計算することができます [他のセクション](../10_Group_analysis/study_statistics.html)お問い合わせ また、カスタムコードを書くことで、紙の数字を生成できます。
-* パイプラインでLIMOを使うことはできますか? もちろんです。 お問い合わせ [この紙](https://www.frontiersin.org/articles/10.3389/fnins.2020.610388/full) そして、 [リモウィキ](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) 参照のため。 
+* ????? ERPs は、ERPs から、ERPs へ移行します。 [サイトマップ](command_line_study_functions.html).
+* 統計解析 Eメール:erPssssss [他のセクション](../10_Group_analysis/study_statistics.html)お問い合わせ また、カスタムコードを書くことで、紙の数字を生成できます。
+* パイプライン で お問い合わせ [この紙](https://www.frontiersin.org/articles/10.3389/fnins.2020.610388/full) そして、 [リモウィキ](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) 参照のため。 
 
-その他のEEGLABパイプライン
+ほんご
 ----------------------
 
-その他EEGLABパイプラインです。 
+お問い合わせ 
 
-* [PREPパイプライン](https://vislab.github.io/EEG-Clean-Tools/) EEGLABプラグインです。 自動化されたアーティファクト検出が潜在的であるため、古いパイプライン(2022年時点)ですが、2014年から2020年までに関連したパイプラインであり、それには根本的に誤りはありません。
-* [マコトの加工パイプライン](https://sccn.ucsd.edu/wiki/Makoto's_preprocessing_pipeline) 別の参照です。 初心者にはお勧めできません。 それにもかかわらず、EEG処理に関する重要な情報が含まれています。
-* [Danielle Gruberのパイプライン](https://medium.datadriveninvestor.com/streamline-your-eeglab-experience-8803c805c5a7)お問い合わせ Danielle Gruber は、パイプラインを共有した EEGLAB ユーザーです。 それは長く、詳細であり、また(2022の)古いです。 パイプラインの基本的なエラーは見つかりませんでした。 それは単一注入のパイプラインです。
-* [BIDSデータスクリプト](Analyzing_EEG_BIDS_data_in_EEGLAB.html) このチュートリアルの一部であり、このページに提示されたものと比較して、同様のパイプライン(より複雑なもの)です。
-* [HAPPEパイプライン](https://www.frontiersin.org/articles/10.3389/fnins.2018.00097/full)お問い合わせ EEGLABベースのパイプラインは評価していませんが、人気のあるパイプラインです。
-* [エポック](https://osf.io/cw5qv/) このプロジェクトでは、EEGLAB を使用して標準化された EEG 分析を簡単に取得できるスクリプトを提供します。 掲載情報 [神経科学のフロンティア](https://www.frontiersin.org/articles/10.3389/fnins.2021.660449/full).
-* [Apiceの前処理パイプライン](https://github.com/neurokidslab/eeg_preprocessing) 乳幼児向けデータ
-* [EEGLABベースのパイプラインを作成するGUI](https://github.com/fardinafdideh/EEG-Signal-Cleaning-Pipeline-Management-EEGLAB-based-) エッグ 信号のクリーニングのパイプライン管理。
-* [リラックス](https://github.com/NeilwBailey/RELAX) ICA と ICLabel を使用した完全自動 EEGLAB プリプロセスプラグイン。
+* [プレプ](https://vislab.github.io/EEG-Clean-Tools/) EEGLAB は、現在、現在、現在、現在、現在、現在、現在、現在、現在、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界
+* [マコトの加工パイプライン](https://sccn.ucsd.edu/wiki/Makoto's_preprocessing_pipeline) お問い合わせ お問い合わせ
+* [Danielle Gruberさん](https://medium.datadriveninvestor.com/streamline-your-eeglab-experience-8803c805c5a7)Danielle Gruber は、Danielle Gruber の略称です。Danielle Gruber は、Danielle Gruber の略称です。
+* [BIDSファイル](Analyzing_EEG_BIDS_data_in_EEGLAB.html) このチュートリアルの一部であり、このページに提示されたものと比較して、同様のパイプライン(より複雑なもの)です。
+* [お問い合わせ](https://www.frontiersin.org/articles/10.3389/fnins.2018.00097/full)EEGLABLabは、EEGLABを信頼しています。
+* [エポック](https://osf.io/cw5qv/) このプロジェクトでは、EEGLABの を使用して 分析 分析 を提供します を提供します を提供します を提供します を提供します を提供します を提供します を提供します 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載   掲載 掲載 掲載 掲載 掲載     掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 [神経科学のフロンティア](https://www.frontiersin.org/articles/10.3389/fnins.2021.660449/full).
+* [Apiceのこだわり](https://github.com/neurokidslab/eeg_preprocessing) 乳幼児向けデータ
+* [EEGLABのコンセプト](https://github.com/fardinafdideh/EEG-Signal-Cleaning-Pipeline-Management-EEGLAB-based-) エッグ 信号のクリーニングのパイプライン管理。
+* [リラックス](https://github.com/NeilwBailey/RELAX) ICA と ICLabel は、Windows で自動 EEGLAB のプリプロセスを実装しています。
 
-EEGLAB、FieldTrip、Brainstorm、MNEパイプラインを最適化したリポジトリもあります。 各ソフトウェアパッケージに最適なアーティファクト拒否しきい値を見つけるためのパラメータをスキャンしました。 どのパイプラインが最高だったかを推測します。
+EEGLAB、FieldTrip、Brainstorm、MNEは、各々の業務を担当しています。 各ソフトウェアパッケージは、偽物に誤りを許さないため、 最高 を を
 
 [https://github.com/sccn/eeg_pipelines](https://github.com/sccn/eeg_pipelines)

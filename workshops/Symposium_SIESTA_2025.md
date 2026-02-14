@@ -4,44 +4,44 @@ title: SIESTA Symposium 2025
 long_title: SIESTA Symposium 2025
 parent: Workshops
 ---
-![toulouse](https://github.com/user-attachments/assets/e4f0aa48-d37a-4c58-913e-e48068f168da)
+![トゥールーズ](https://github.com/user-attachments/assets/e4f0aa48-d37a-4c58-913e-e48068f168da)
 
-Secure NeuroImaging in the Cloud, the SIESTA project
+クラウド、SIESTAプロジェクトでNeuroImagingをセキュアに
 ============================
-SIESTA explores how cloud computing can revolutionize neuroimaging research. By leveraging scalable infrastructure and standardized workflows, we make complex MRI, EEG, and MEG analysis more accessible, reproducible, and efficient. This session will showcase how automated pipelines, containerized environments, and cloud-based data sharing streamline neuroimaging studies across different platforms and operating systems.
+SIESTAは、クラウドコンピューティングが神経イメージング研究に革命をもたらす方法を探しています。 スケーラブルなインフラと標準化されたワークフローを活用することで、複雑なMRI、EEG、MEG解析をより使いやすく、再現性、効率的な運用を実現します。 このセッションでは、自動化されたパイプライン、コンテナ化された環境、およびクラウドベースのデータ共有が、さまざまなプラットフォームとオペレーティングシステム間での神経イメージングに関する研究を合理化する方法を紹介します。
 
-Join us on June 30th in Toulouse to see how cutting-edge computing can power your research, simplify collaboration, and push the boundaries of medical imaging.
+最先端のコンピューティングがあなたの研究に電力を供給し、コラボレーションを簡素化し、医療イメージングの境界線を押し出すことができる方法を見るために、トゥールーズで6月30日に参加してください。
 
-Registration
+会員登録
 ---------------------
-There’s no fee, but if you would like to get a (free) lunch, please email [Adrien](mailto:adrien.romain.marque@gmail.com). 
+料金はありませんが、(無料)お弁当をご希望の方は、Eメールでお問い合わせください。 [アドリアン](mailto:adrien.romain.marque@gmail.com). 
 
-Location and date
+所在地と日付
 -------
-June 30th, 2025, Toulouse CerCo laboratory, [Baudot building, first floor conference room (not ground floor)](https://cerco.cnrs.fr/en/visit-us/)
+6月30日、2025日、トゥールーズCerCoラボ、 [Baudotビル1階会議室(地上階)](https://cerco.cnrs.fr/en/visit-us/)
 
-Program
+プログラム
 --------
-10:00 -- **Isabelle Berry** -- Opening statements
+10月10日 **Isabelle Berry ** お問い合わせ オープニングステートメント
 
-10:05 -- **Robert Oostenveld** -- Introduction to the SIESTA project
+10:05 -- **ロバート・オオステンド** お問い合わせ SIESTAプロジェクトのご紹介
 
-10:20 -- **Cyril Pernet** -- Data privacy & Information privacy in neuroimaging
+10:20～ **Cyril Pernet ** -- データのプライバシーと情報プライバシーを神経イメージングに
 
-11:00 -- **Marcel Zwiers** -- BIDScramble to create synthetic and anonymous neuroimaging data
+11:00～11:00 **Marcel Zwiers** -- 合成および匿名の神経イメージングデータを作成するBIDScramble
 
-11:20 -- **Adrien Marque** -- An example fMRI pipeline in the SIESTA framework
+11:20～ **Adrien Marque ** お問い合わせ SIESTAフレームワークのfMRIパイプラインの例
 
-12:00 -- **Arnaud Delorme** -- EEG databases and pipelines for cloud computing solutions
+12月12日 **Arnaud Delorme** -- EEGデータベースとクラウドコンピューティングソリューションのパイプライン
 
-12:30 -- Lunch (included for participants but email [Adrien](mailto:adrien.romain.marque@gmail.com))
+12:30～ ランチ(参加者のみ) [アドリアン](mailto:adrien.romain.marque@gmail.com))
 
-1:20 -- **Camille Maumet** (remotely) -- Reproducible NeuroImaging - a case for automated pipelines
+1:20～ **Camille Maumet** (リモート) -- Reproducible NeuroImaging - 自動パイプラインの場合
 
-1:50 -- **Scott Makeig** -- Hierarchical Event Descriptors for cloud computing solutions
+1:50～ **Scott Makeig ** お問い合わせ クラウドコンピューティングソリューションのための階層イベント記述子
 
-2:10 -- **Jan-Mathijs Schoffelen** -- Tips and tricks for implementing reproducible SIESTA pipelines
+2:10 - **Jan-Mathijs Schoffelen ** お問い合わせ 再現可能なSIESTAパイプラインを実装するためのヒントとコツ
 
-2:30 -- Round table and general discussion led by **Robert Oostenveld**
+2:30～ **ロバート・オオオステンド(Robert Oostenveld)*によるラウンドテーブルと一般的な議論 * 必須
 
-3:00 -- Close
+3:00～ 閉じる

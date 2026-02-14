@@ -1,17 +1,17 @@
-# sccn.github.io
-Host web content of EEGLAB wiki.
-Live page: https://sccn.github.io
+# ログイン
+EEGLAB wikiのWebコンテンツをホストする。
+ライブページ: https://sccn.github.io
 
-## Notes for maintainers
-* Contents of Workshops and Tutorials pages are stored in the [workshops](https://github.com/sccn/sccn.github.io/tree/master/workshops) and [tutorials](https://github.com/sccn/sccn.github.io/tree/master/tutorials) folders respectively. Use [Github markdown](https://guides.github.com/features/mastering-markdown) to edit and style page content.
-* Images are stored in [assets/images](https://github.com/sccn/sccn.github.io/tree/master/assets/images). To link an uploaded image in the page, use path "/assets/images/<image_filename>"
-* PDFs and zip files are stored in https://sccn.ucsd.edu/githubwiki/files/<file_name>. These files will be uploaded manually by @dungscout96 for now. In the future we will create a mechanism for users to upload files to sccn server themselves.
-* On the Workshops pages, if there's any broken image or file link, it's very likely that the naming of the file is wrong. For some reason file names were capitalized weirdly when exporting from Mediawiki. Check to see if the file exists in either assets/images or https://sccn.ucsd.edu/githubwiki/files and fix filename first before uploading a new file.
-* It usually takes few minutes for a pushed commit to go live. See instructions below if you want to set up Jekyll and quickly load changes locally on your laptop.
+## メンテナーのノート
+* ワークショップとチュートリアルページの内容は、保存されます [ワークショップ](https://github.com/sccn/sccn.github.io/tree/master/workshops) そして、 [チュートリアル](https://github.com/sccn/sccn.github.io/tree/master/tutorials) それぞれフォルダ。 使用条件 [Githubのマークダウン](https://guides.github.com/features/mastering-markdown) 編集とスタイルページのコンテンツ。
+* 画像は保存されます [アセット・イメージ](https://github.com/sccn/sccn.github.io/tree/master/assets/images)お問い合わせ アップロードした画像をページ内でリンクするには、パス "/assets/images/<image_filename>"
+* PDFファイルとzipファイルが保存されます https://sccn.ucsd.edu/githubwiki/files/<file_name>お問い合わせ これらのファイルは@dungscout96で手動でアップロードされます。 将来的には、ユーザがファイルをスズンサーバー自身にアップロードする仕組みを作成します。
+* ワークショップページでは、壊れた画像やファイルリンクがある場合は、ファイルの命名が間違っている可能性は非常に高いです。 何らかの理由で、Mediawiki からエクスポートする際にファイル名を weirdly に大文字化しました。 ファイルがアセット/画像に存在するか、または https://sccn.ucsd.edu/githubwiki/files ファイルをアップロードする前にファイル名を最初に修正します。
+* 通常、プッシュされたコミットがライブに行くのに数分かかります。 Jekyll をセットアップし、ノートパソコンのローカルで素早く変更をロードしたい場合は、以下の手順を参照してください。
 
-### To run the site locally on your laptop
-* Install Jekyll following the instruction: https://jekyllrb.com/docs/installation/. (See [here](https://jekyllrb.com/docs/installation/macos/) for mac)
-* Clone the repository: ``git clone https://github.com/sccn/sccn.github.io.git; cd sccn.github.io``
-* Run ``bundle install`` to download theme and its dependencies
-* Run ``bundle add webrick``
-* Run ``bundle exec jekyll serve`` and the site should be live at http://localhost:4000/
+### ノートパソコンに現地でサイトを運営する
+* 指示に従ってJekyllを取付けて下さい: https://jekyllrb.com/docs/installation/. (参照) [詳しくはこちら](https://jekyllrb.com/docs/installation/macos/) macの場合
+* リポジトリをクローンする: ``gitクローン https://github.com/sccn/sccn.github.io.git; cdのsccn.github.io``
+* ログイン ``バンドルインストール`` テーマとその依存関係をダウンロードする
+* ログイン ``バンドルは webrick を追加``
+* ログイン ``バンドexec jekyllのサーブ`` そして、サイトは生きるべきです http://localhost:4000/

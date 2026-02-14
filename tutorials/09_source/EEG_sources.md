@@ -5,7 +5,7 @@ long_title: c. EEG source model
 parent: 9. Source analysis
 grand_parent: Tutorials
 ---
-EEGまたはERPデータの同等のダイポールソースローカリゼーション
+EEG または EEGERP を交換する
 ========================================
 お問い合わせ
 
@@ -18,16 +18,16 @@ EEGまたはERPデータの同等のダイポールソースローカリゼー�
 お問い合わせ
 </details>
 
-DIPFITを使用して、EEGまたはERPスカルプマップに1つのダイポールに合うように
+DIPFIT、EEGERPスカルプマップに1つのダイキャストに
 --------
 
-EEGLABはコマンドラインの実装を提供しています。 [DIPFITプラグイン](https://github.com/sccn/dipfit) フィットする 
-原材料ERPまたはEEGのスカルプマップへのダイポールは、そうでなかった 
+EEGLABは、 [DIPFIT プラグイン](https://github.com/sccn/dipfit) フィットする 
+申し訳ありません、このコンテンツはただ今 アメリカ英語 のみです。 
 どこでも設計されている。 フィッティングのみ
 選択したタイムポイントで、タイムウィンドウ全体で実行します。 まずは、
-選択したデータセットでDIPFIT設定を指定する必要があります。 その後、
-平均 ERP 波形で 100 ms のタイムポイント (例)
-メインチュートリアルデータセットは、以下のMATLABコマンドを使用します。
+DPFITの設定で、
+パーキープ ERP で 100 ms のタイムポイント (例)
+チュートリアルデータセット
 
 ``` matlab
 eeglab; close; % add path
@@ -57,37 +57,37 @@ figure; pop_topoplot(TMPEEG,0,1, [ 'ERP 100ms, fit with a single dipole (RV ' nu
 
 クリック [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=dipfit_erpeegtest.m) 上記のスクリプトをダウンロードします。 スクリプトを実行すると、以下の2つのプロットが作成されます。
 
-![画像:scalp_topo_dipole.png](/assets/images/scalp_topo_dipole.png)
+![サイトマップ](/assets/images/scalp_topo_dipole.png)
 
-eLoreta を使用して EEG/ERP ソースを見つけることもできます。
+eLoreta ソース ソース
 シンプルに書かれている [プラグイン](https://github.com/sccn/erpsource) その目的のために。
 このプラグインはミニマルなファッションで設計されており、他のプラグインのテンプレートとして使用できます。
 そのグラフィカルな出力は、次のセクションに示すスクリプトと同じです。
 
-DIPFIT/FieldTripを使用した高度なソース再構築
+DIPFIT/FieldTrip ソース再構築
 --------
 
-背景:DIPFITはフィールドトリップに依存していますが、実際には、DIPFITも祖先でした
-フィールドトリップ: ロバート 初のフィールドトリップ開発者、Oostenveld
+「DIPFIT」は、現在、DIPFIT、DIPFIT、DIPFIT、DIPFIT、DIPFIT、DIPFIT、DIPFIT、DIPFIT、DIPFIT、DIPFIT、DIPFITなど、様々な分野で活躍しています。
+フィールドトリップ: 宇宙飛行士 オオステンド
 ソースのイメージング機能を解放することにしました。
-まずはEEGLABでDIPFITとしてパッケージ化。 いくつか
-その後、彼と彼の協力者がFieldTripをリリースしたとき(また)
-MATLAB 上で実行)、DIPFIT をリワークし、FieldTrip を使用する
+ファーストEEGLABでDIPFITでパッケージ化。
+彼 をリリース をリリース をリリース
+MATLAB は、 DIPFITをリワークし、 FieldTrip アクション
 以来、ロバートと同僚が計画し、持っている機能
-FieldTripでの使用のために維持される。 以下は、方法に関する簡単なチュートリアルです
-EEGLABのデータにフィールドトリップを適用したソースモデリングを実行
+FieldTripの使い方は?
+EEGLABデータへ
 データセット。
 
-導入: まず、DIPFITを使用して電極を揃えます
+導入事例:DIPFITの使い方
 選択のヘッド モデルが付いている位置(メニュー項目) <span style="color: brown">ツール → ロック
-DIPFIT → ヘッドモデルと設定を使用したダイポール</span>)。 結果DIPFIT
+DIPFIT → ヘッドモデルと設定</span>)。 結果DIPFIT
 情報は、ソースのローカリゼーションを実行するために使用することができる
 フィールドトリップ
 
 ### ボリュームでソースの再構築を実行
 
-下のコードの最初のスニペットは3Dのリードフィールド行列を作成します
-グリッド(例えば、eLoreta で使用する)。
+3D のフィールドライン
+グリッド(eLoreta )
 
 ``` matlab
 %% First load a dataset in EEGLAB.
@@ -106,8 +106,8 @@ EEG = pop_dipfit_settings( EEG, 'hdmfile',fullfile(bemPath, 'standard_vol.mat'),
            'chansel',[1:32] );
 ```
 
-次に、FieldTrip関数を使用してボリュームメトリックリードフィールド行列を計算します
-*ft_prepare_leadfield*. ヘッドモデルも使うので注意
+します します 行
+*ft_prepare_leadfield*. ヘッドモデルも非常に注意
 与えられたボクセルが脳内外にあるかどうかを評価します。
 
 
@@ -134,8 +134,8 @@ cfg.channel    = { 'all' };
 
 次に生成されたリードフィールド行列を使用してソースを実行します
 再構築。 以下では、シンプルな例をモデル化します。
-eLoretaを使用したERP機能のソース。 ここでは、eLoreta が置換される可能性があります。
-他のアプローチは、コヒーレントソースの動的イメージ投射のような 'dics'
+eLoreta がリリースされました。
+コ コ コ の ログイン
 (FieldTrip参照)
 ページ:()http://www.fieldtriptoolbox.org/tutorial/beamformer) から
 このセクションは、より多くの情報に触発されています。
@@ -156,12 +156,12 @@ cfg.headmodel   = vol.vol;
 source          = ft_sourceanalysis(cfg, dataAvg);  % compute the source model
 ```
 
-次に、FieldTrip関数を使用してソリューションをプロットします。 注意:
+注意:
 ソリューションは、低解像度のヘッドボリュームで生成されます。 それはない
 このボリュームを高解像度に補うために技術的に可能
-MRI in (near) リアルタイム -- オンラインで、あまりにも多く必要
+MRI in (near) レース - プレーン, プレーン
 計算リソース, オフラインながら, それはあまりにも多くのメモリが必要になります
-(全てのレイテンシーで1頭のボリューム。 fMRIデータとは異なり、EEGデータには高い仮説がありますので、低解像度のヘッドボリュームxレイテンシー
+1頭の頭の頭の頭で fMRIテンダー、EEGデータハイテン語、低速のヘッド ストラックスレイシー
 行列は既にかなり大きい - 高解像度に変換
 容積のマトリックスは非現実的です)。 クリックする必要があります。
 異なるボクセルとレイテンシーは、見た目の数字を取得する
@@ -169,9 +169,9 @@ MRI in (near) リアルタイム -- オンラインで、あまりにも多く�
 
 また、プロットされたボリュームの中断を見ることができます。 お問い合わせ
 ダイポールの方向の極性の突然の反転のためです
-最寄のボクセル。 これは正常です。 voxelの極性のプロダクトによる
+最寄のボクセル。
 空間と時間において、一時的な活動は継続的です。 それでも、
-voxel レベルの 3 D ダイポールのオリエンテーションのための投影方法、
+voxel ディレクティブ 3 D ダイキャストのオリエンテーション
 隣接するボクセルは、反対の極性を持っているかもしれません(そして、の
 コース、反対に署名された時間コースも。 理想的なソリューションは、
 スペースと時間の両方で反転を避けるためにまだ発見されていない - 持っている
@@ -200,7 +200,7 @@ figure; ft_sourceplot(cfg, sourceProj);
 ![ボーダー|500px](/assets/images/Dipfiteloreta3.png)
 
 興味の遅延が選択されたら、それらはにプロジェクトされるかもしれません
-高分解能MRIヘッドイメージ 以下は、MRIのグローバルパワーを示しています。
+高分解能MRIの強み
 テンプレートの脳のスライス。
 
 ``` matlab
@@ -226,8 +226,8 @@ ft_sourceplot(cfg, sourceInt);
 ### 表面にソースを再構築する
 
 あるいは、下のコードはリードフィールド行列を生成します。
-現実的な MNI空間の3次元メッシュ これはあなたが選ぶ必要があることに注意して下さい
-DIPFIT のヘッド モデルを選ぶとき MNI BEM の頭部モデル
+ 現実 の の して下さい
+DIPFIT のヘッドモデル
 設定メニュー 異なるメッシュバージョンが異なる
 解像度。 詳しくはこちら
 [このフィールドトリップ]
@@ -246,9 +246,9 @@ cfg.headmodel = vol.vol;        % volume conduction model
 leadfield = ft_prepare_leadfield(cfg, dataAvg);
 ```
 
-前のセクションのコードは eLoreta を使っていました。 このセクションでは、
-最小限のノーム見積(MNE)を使用します。 MNEとeLoretaの両方がソースを実行できます
-各レイテンシーでの再構築(EEG時間の使用を認める)
+前の投稿 eLoreta のコメント
+最小限のノーム(MNE) MNEとELoretaのソース
+各レイテンは、再構築(EEGtimes)を繰り返します。
 入力としてシリーズ。
 
 ``` matlab
@@ -263,7 +263,7 @@ source            = ft_sourceanalysis(cfg, dataAvg);
 ```
 
 今、私たちはグローバルパワーをプロットします。 同じアプローチで、
-MNEのソースソリューションが時間とともに進化する映画を作成する
+MNEのソリューションは、いつまでも、
 このページのトップへ
 ページ:()http://www.fieldtriptoolbox.org/tutorial/minimumnormestimate/).
 
@@ -281,7 +281,7 @@ ft_sourceplot(cfg, source);
 ![ボーダー|500px](/assets/images/FieldTrip_surface_solution2.png)
 
 ソースモデルのメッシュのアライメントを視覚的に確認することもできます。
-上の画像にBEMメッシュをオーバーレイすることにより、BEMヘッドモデルメッシュ、
+BEM デスクトップモデル
 下記の通りです。
 
 ``` matlab
@@ -294,7 +294,7 @@ hold on; ft_plot_mesh(vol.vol.bnd(1), 'facecolor', 'red', 'facealpha', 0.05, 'ed
 
 クリック [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_fieldtrip_script.m) 上記のスクリプトをダウンロードします。
 
-関連するFieldTripチュートリアル
+Tripチュートリアル
 --------
 -   [ソースを作成する方法]
     モデル:()http://www.fieldtriptoolbox.org/tutorial/sourcemodel/)と
@@ -305,11 +305,11 @@ hold on; ft_plot_mesh(vol.vol.bnd(1), 'facecolor', 'red', 'facealpha', 0.05, 'ed
     モデル:()http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem/)
 -   [ビームフォーマー]
     メソッド:()http://www.fieldtriptoolbox.org/tutorial/beamformer/) -
-    このチュートリアルでは'eloreta'によって'dics'を置き換える可能性があることに注意してください
+    'eloreta' によって'dics' は、
 -   [最小限の規範]
     見積りhttp://www.fieldtriptoolbox.org/tutorial/minimumnormestimate/)
-    MEGは、EEGのために適応することができます
--  [DIPFITの以前のチュートリアルバージョン](https://sccn.ucsd.edu/eeglab/dipfittut/dipfit.htmlold)
+    MEG は、EEG に適応する
+-  [DIPFITのチュートリアル](https://sccn.ucsd.edu/eeglab/dipfittut/dipfit.htmlold)
 
-このセクションは、Arnaud Delorme が貢献して書いていました。
-Robert OostenveldとScott Makeigからのフィードバック。
+お問い合わせ Arnaud Delorme は、クライアントの信頼関係を築き上げています。
+Robert Oostenveld と Scott Makeig へ続く。

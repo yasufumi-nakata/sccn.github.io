@@ -5,224 +5,224 @@ parent: Past workshops
 grand_parent: Workshops
 ---
 
-![700px\|thumb\|center](/assets/images/Group_picture_aspet2013.png)
+![700px\|thumb\|センター](/assets/images/Group_picture_aspet2013.png)
 
-Sixteenth EEGLAB Workshop
+第16回EEGLABワークショップ
 =========================
 
-<span style="color: blue">Aspet, France - June 17-21, 2013</span>
-The 16th EEGLAB Workshop will take place from Monday, June 17th through
-Friday, June 21st in the village of Aspet in the Pyrenees mountains in
-southwest France. Participants will be expected to bring laptops with
-MATLAB installed so as to be able to participate in the practical
-sessions. The following tutorial workshop, from Tuesday, June 18 through
-noon on Friday, June 21, will introduce and demonstrate the use of
-EEGLAB-linked tools for performing advanced analysis of EEG and related
-data, with detailed method expositions and practical exercises. The
-workshop will be held at a French family vacation camp, with hiking and
-other recreational opportunities available. Meals will be served family
-style.
+<span style="color: blue">アスペット、フランス - 2013年6月17-21日</span>
+第16回EEGLABワークショップは6月17日(月)から
+6月21日(金)、山のピレンシーでアペットの村で
+南西フランス。 参加者は、ノートパソコンを持参する予定です。
+実用的に参加することができるようにMATLABをインストール
+セッション。 6月18日(火)から6月18日(火)までのチュートリアルワークショップ
+6月21日(金)に正午を導入し、使用を実証する
+EEGと関連する高度な分析を実行するためのEEGLABリンクツール
+データ, 詳細な方法と実用的な演習で. ふりがな
+フランスの家族旅行キャンプでワークショップを開催します。
+その他のレクリエーションの機会をご利用いただけます。 食事は家族に提供されます
+スタイル。
 
 
-Workshop Program (with corresponding PDFs)
+ワークショッププログラム(PDF対応)
 ------------------------------------------
 
-<span style="color: purple">Purple lettering = lecture</span>
-<span style="color: orange">Orange lettering = tutorial</span>
+<span style="color: purple">パープルレター = 講義</span>
+<span style="color: orange">オレンジレター = チュートリアル</span>
 
-<u><span style="color: blue">Monday, June 17</span></u>
+<u><span style="color: blue">6月17日(月)</span></u>
 
 
-16:30 -- Train station shuttle bus pick up
+16:30～ 駅シャトルバス送迎
 
-17:00 -- Airport shuttle bus pick up
+17:00～17:00 空港シャトルバス送迎
 
 <span style="color: green">
 
 
-19:00 -- Dinner (included in registration)</span>
+19:00～ ディナー(要予約)</span>
 
-<u><span style="color: blue">Tuesday, June 18th</span></u>
-
-
-<span style="color: green">7:00 - 8:30 Breakfast</span>
-
-<!-- -->
+<u><span style="color: blue">6月18日(火)</span></u>
 
 
-**Overview and ICA Theory/Practice**
-
-
-<span style="color: purple">8:30 – 9:30 -- Mining event-related brain dynamics I (Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_aspeti3_i.pdf)
-
-<span style="color: purple">9:30 – 10:00 -- EEGLAB overview (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_eeglab_overview.pdf)
-
-<span style="color: green">-- Break--</span>
-
-<span style="color: purple">10:15 – 11:15 -- ICA theory (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_lecture_ica.pdf)
-
-<span style="color: purple">11:15 – 12:00 -- Data import, Artifact rejection and running ICA (Claire Braboszcz)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_cb_artifact_and_ica.pdf)
-<!-- -->
-
-
-<span style="color: green">12:00-13:00 Lunch --</span>
+<span style="color: green">7:00～8:30 朝食</span>
 
 <!-- -->
 
 
-**ICA and time-frequency**
+**概要とICA理論/実践* * 必須
 
 
-<span style="color: orange">13:00 – 14:00 -- Importing data, rejecting data, and performing ICA decomposition practicum (Claire Braboszcz)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_cb_evaluation_ica.pdf)
+<span style="color: purple">8:30～9:30 鉱業イベント関連の脳力学I(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_aspeti3_i.pdf)
 
-<span style="color: orange">14:00 – 15:00 -- Evaluating ICA components practicum (Claire Braboszcz)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_cb_evaluation_ica.pdf)
+<span style="color: purple">9:30-10:00 -- EEGLABの概要(アーナド・デローム)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_eeglab_overview.pdf)
 
-<span style="color: green">-- Break--</span>
+<span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">15:30 – 17:00 -- Time-frequency decompositions: Theory and practice (Tim Mullen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_time_frequency_analysis.pdf)
+<span style="color: purple">10:15 – 11:15 -- ICA理論(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_lecture_ica.pdf)
+
+<span style="color: purple">11:15 – 12:00 -- データのインポート、アーティファクトの拒絶と実行 ICA (Claire Braboszcz)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_cb_artifact_and_ica.pdf)
 <!-- -->
 
 
-
-<span style="color: orange">17:00 – 19:00 -- Data and processing assistance available</span>
-
-<!-- -->
-
-
-<span style="color: green">19:00 -- Dinner</span>
-
-<u><span style="color: blue">Wednesday, June 19st</span></u>
-
-
-<span style="color: green">7:30 - 8:30 Breakfast</span>
+<span style="color: green">12:00-13:00 ランチ --</span>
 
 <!-- -->
 
 
-**Overview and ICA Theory/Practice**
+**ICAおよび時間頻度**
 
 
-<span style="color: purple">8:30 – 9:00 -- Why cluster ICA components? (Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_aspet13_clustering.pdf)
+<span style="color: orange">13:00 – 14:00 -- データをインポートし、データを拒絶し、ICA分解の練習(Claire Braboszcz)を実行</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_cb_evaluation_ica.pdf)
 
-<span style="color: purple">9:00 – 10:00 -- Creating a STUDY and STUDY design (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_study_design.pdf)
+<span style="color: orange">14:00 – 15:00 -- ICAコンポーネントの練習員の評価 (Claire Braboszcz)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_cb_evaluation_ica.pdf)
 
-<span style="color: green">-- Break--</span>
+<span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">10:30 – 11:00 -- Group analysis using EEGLAB studies: Methods to cluster ICA components (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_study_clustering.pdf)
-
-<span style="color: orange">11:00 – 12:00 -- Scripting to manipulate EEGLAB studies for group analysis (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_study_advanced_and_scripts.pdf), [Pipeline example script](https://sccn.ucsd.edu/githubwiki/files/eeglab_pipeline.zip)
-<!-- -->
-
-
-<span style="color: green">12:00-13:00 Lunch --</span>
-
-<!-- -->
-
-
-**ICA, time-frequency and information flow**
-
-
-<span style="color: purple">13:00 – 14:00 -- Robust statistics: central tendency, dispersion and inference (Guillaume Rousselet)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_statistics_rousselet.pdf)
-
-<span style="color: purple">14:00 – 14:30 -- Statistical estimation in EEGLAB (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_study_plot_stats.pdf)
-
-
-<span style="color: green">14:45-18:00-- Excursion to [Saint-Bertrand-de-Comminges](http://en.wikipedia.org/wiki/Saint-Bertrand-de-Comminges)</span>
-
-
-
-<span style="color: green">19:00 -- Dinner</span>
-
-<u><span style="color: blue">Thursday, June 20th</span></u>
-
-
-<span style="color: green">7:30 - 8:30 Breakfast</span>
-
-<!-- -->
-
-
-**Source Localization**
-
-
-<span style="color: purple">8:30 – 9:30 -- Forward and inverse models - the Dipfit plugin (Robert Oostenveld)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_oostenveld.pdf)
-
-<span style="color: purple">9:30 – 10:00 -- The Neuroelectromagnetic Forward Head Modeling (NFT) EEGLAB plugin (Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/nftetc_aspet13.pdf)
-
-
-
-
-<span style="color: green">-- Break--</span>
-
-<!-- -->
-
-
-**General Linear Modeling**
-
-
-<span style="color: orange">10:15 – 12:00 -- Theory and practice of applying general linear models to EEG data using the LIMO EEGLAB plugin (Cyril Pernet)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/limo_aspet_2013.pdf)
-<!-- -->
-
-
-<span style="color: green">12:00-13:00 Lunch --</span>
-
-<!-- -->
-
-
-**Source information flow**
-
-
-<span style="color: purple">13:00 – 14:00 -- Source information flow and Granger-Causal modeling tools (Tim Mullen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_sift_lecture.pdf)
-
-<span style="color: orange">14:00 – 15:00 -- SIFT toolbox: Theory and live demo (Tim Mullen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_sift_practicum.pdf)
-
-<span style="color: green">-- Break--</span>
-
-<span style="color: orange">15:30 – 17:00 -- SIFT toolbox: practicum (Tim Mullen)</span>
-
+<span style="color: purple">15:30 – 17:00 -- 時間頻度分解: 理論と実践 (Tim Mullen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_time_frequency_analysis.pdf)
 <!-- -->
 
 
 
-<span style="color: orange">17:00 – 19:00 -- Data and processing assistance available</span>
+<span style="color: orange">17:00-19:00 -- データ・処理支援</span>
 
 <!-- -->
 
 
-<span style="color: green">19:00 -- Dinner </span>
+<span style="color: green">19:00～ ディナー</span>
+
+<u><span style="color: blue">6月19日(水)</span></u>
 
 
-<u><span style="color: blue">Friday, June 21st</span></u>
+<span style="color: green">7:30 - 8:30 朝食</span>
+
+<!-- -->
 
 
-<span style="color: green">7:30-8:30 -- Breakfast</span>
+**概要とICA理論/実践* * 必須
+
+
+<span style="color: purple">8:30～9:00 なぜクラスターICAコンポーネント? (スコットメイク)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_aspet13_clustering.pdf)
+
+<span style="color: purple">9:00 – 10:00 -- STUDYとSTUDYデザイン(Arnaud Delorme)の作成</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_study_design.pdf)
+
+<span style="color: green">-- ブレーク--</span>
+
+<span style="color: purple">10:30-11:00 -- EEGLABによるグループ分析: クラスターICAコンポーネント(Arnaud Delorme)へのメソッド</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_study_clustering.pdf)
+
+<span style="color: orange">11:00 – 12:00 -- グループ分析のための EEGLAB の研究を操作するためのスクリプト (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_study_advanced_and_scripts.pdf), [パイプライン例スクリプト](https://sccn.ucsd.edu/githubwiki/files/eeglab_pipeline.zip)
+<!-- -->
+
+
+<span style="color: green">12:00-13:00 ランチ --</span>
+
+<!-- -->
+
+
+**ICA、時間頻度および情報の流れ* * 必須
+
+
+<span style="color: purple">13:00 – 14:00 -- 強力な統計: 中央傾向, 分散と推論 (Guillaume Rousselet)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_statistics_rousselet.pdf)
+
+<span style="color: purple">14:00 – 14:30 -- EEGLAB (Arnaud Delorme)の統計推定</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_study_plot_stats.pdf)
+
+
+<span style="color: green">14:45-18:00--- [Saint-Bertrand-de-Comminges(サン・ベルトラント・デ・コモンズ)](http://en.wikipedia.org/wiki/Saint-Bertrand-de-Comminges)</span>
+
+
+
+<span style="color: green">19:00～ ディナー</span>
+
+<u><span style="color: blue">6月20日(木)</span></u>
+
+
+<span style="color: green">7:30 - 8:30 朝食</span>
+
+<!-- -->
+
+
+**Source ローカリゼーション**
+
+
+<span style="color: purple">8:30～9:30 Dipfitプラグイン(Robert Oostenveld)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_oostenveld.pdf)
+
+<span style="color: purple">9:30 – 10:00 -- 神経電磁フォワードヘッドモデリング(NFT) EEGLABプラグイン(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/nftetc_aspet13.pdf)
+
+
+
+
+<span style="color: green">-- ブレーク--</span>
+
+<!-- -->
+
+
+**一般リニアモデリング* * 必須
+
+
+<span style="color: orange">10:15 – 12:00 -- LIMO EEGLABプラグイン(Cyril Pernet)を使用して、一般的なリニアモデルをEEGデータに適用するための理論と実践</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/limo_aspet_2013.pdf)
+<!-- -->
+
+
+<span style="color: green">12:00-13:00 ランチ --</span>
+
+<!-- -->
+
+
+**情報源流* * 必須
+
+
+<span style="color: purple">13:00 – 14:00 -- ソース情報フローとGranger-Causalモデリングツール(Tim Mullen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_sift_lecture.pdf)
+
+<span style="color: orange">14:00- 15:00 -- SIFT ツールボックス: 理論とライブデモ(Tim Mullen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_sift_practicum.pdf)
+
+<span style="color: green">-- ブレーク--</span>
+
+<span style="color: orange">15:30-17:00 -- SIFT ツールボックス: practicum (Tim Mullen)</span>
 
 <!-- -->
 
 
 
-<span style="color: purple">8:30 – 9:30 -- Mining event-related brain dynamics II (Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_sm_miningii.pdf)
-
-<span style="color: orange">9:30 – 10:00 -- Using and building EEGLAB plugins (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_eeglab_plugins.pdf)
-<!-- -->
-
-
-
-<span style="color: green">-- Break--</span>
+<span style="color: orange">17:00-19:00 -- データ・処理支援</span>
 
 <!-- -->
 
 
-
-<span style="color: orange">10:15 – 11:30 -- Practicum, small group projects</span>
-
-<span style="color: orange">11:30 – 12:00 -- Participant project presentations and general discussion</span>
-
-<!-- -->
+<span style="color: green">19:00～ ディナー </span>
 
 
-<span style="color: green">12:00 -- Lunch</span>
+<u><span style="color: blue">6月21日(金)</span></u>
+
+
+<span style="color: green">7:30～8:30 朝食</span>
 
 <!-- -->
 
 
-<span style="color: green">13:00 -- Airport/train station shuttle leaves</span>
+
+<span style="color: purple">8:30～9:30 マイニングイベント関連の脳力II(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_sm_miningii.pdf)
+
+<span style="color: orange">9:30 – 10:00 -- EEGLABプラグインの使用と構築 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_eeglab_plugins.pdf)
+<!-- -->
+
+
+
+<span style="color: green">-- ブレーク--</span>
+
+<!-- -->
+
+
+
+<span style="color: orange">10:15 – 11:30 -- 練習、少人数のグループプロジェクト</span>
+
+<span style="color: orange">11:30 – 12:00 -- 参加者のプロジェクトプレゼンテーションと一般的なディスカッション</span>
+
+<!-- -->
+
+
+<span style="color: green">12月12日 ランチ</span>
+
+<!-- -->
+
+
+<span style="color: green">13:00～ 空港/列車の駅のシャトルの葉</span>

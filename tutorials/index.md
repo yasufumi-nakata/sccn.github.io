@@ -7,18 +7,18 @@ has_toc: false
 nav_order: 3
 ---
 ![第17回EEGLABワークショップのマグカップ](/assets/images/tutorial_image.jpg)
-# EEGLABチュートリアルへようこそ
+# EEGLABのチュートリアル
 
-このチュートリアルは、基本的なEEGLAB関数と処理入門です。 
-参照することもできます。 [オンラインワークショップ](/workshops/Online_EEGLAB_Workshop.html) EEGLABを提示する動画のリストが含まれています。  
+このチュートリアルでは、以下のとおりです。 
+参照することもできます。 [オンラインワークショップ](/workshops/Online_EEGLAB_Workshop.html) EEGLABを提示する動画。  
 
-EEGLAB チュートリアルは 4 つの部分に分割され、その最後には
+EEGLAB チュートリアルでは、多くの部分を分割して、
 おすすめ商品 付録では、ユーザーはより高度に導入されます
-入力データフォーマットやMATLABなどのEEGLABの技術的要素
+入力データ MATLABXEEGLABの要素
 データ構造。 これらのトピックはユーザーに完全に提示されます
-EEGLABシステムのアーキテクチャ等について記述します。
+お問い合わせ
 
-ここでは、単一のサブジェクトレベルでEEGデータを処理するときに取ることができる最も一般的な手順は次のとおりです。
+EE EE EE 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順
 
 <h3><a href="/tutorials"><span style="color: black;">エッグラボ チュートリアル</span></a></h3>
 {%- assign children_list = site.pages | where: "parent", page.title -%}
@@ -59,5 +59,5 @@ EEGLABシステムのアーキテクチャ等について記述します。
 
 MATLAB について 
 ---------------
-MATLABに新しくなったり、リピーターが必要な場合は、素材のご相談はご遠慮ください。 [MATLABのページを立ち上げる](/tutorials/misc/tutorial_matlab.html)
+MATLABに新品、リピーター、素材のご相談を承ります。 [MATLAB は、](/tutorials/misc/tutorial_matlab.html)
 

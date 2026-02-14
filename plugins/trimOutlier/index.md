@@ -6,111 +6,111 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 13
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/trimOutlier).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/trimOutlier).
 
-What is *trimOutlier*?
+*trimOutlier*とは?
 -------------------------------------------------
 
--   **Powerful data surveyability**: It is probably the only tool, as
-    far as I know, that allows to check ALL the channels and ALL the
-    data points in one window. One can perform visual sanity check for
-    outliers and data stationarity at a glance. It saves you from
-    eyeballing hundreds of pages of raw EEG data.
--   **Simple data cleaning**: If you find a problem in your channels or
-    time-series waveforms, you can seamlessly perform an essential-level
-    data cleaning by chopping off bad channels/datapoints. Unlike
+-   **強力なデータ調査可能性**: おそらく唯一のツールです。
+    私は知っている限り、それはすべてのチャンネルとすべてのチャンネルをチェックすることができます
+    1つのウィンドウ内のデータポイント。 1つは視覚のsanityの点検をのための実行できます
+    先物やデータ文具を一目でご紹介します。 あなたからあなたを救う
+    生 EEG データの何百ページを目撃する。
+-   **シンプルなデータクリーニング**: チャンネルで問題が見つかった場合や、
+    タイムシリーズの波形をシームレスに実行できます。
+    悪いチャンネル/データポイントをチョッピングすることでデータのクリーニング。 違います
     [*clean_rawdata*()](https://sccn.ucsd.edu/wiki/Artifact_Subspace_Reconstruction_(ASR)),
-    *trimOutlier*() does not add anything to data. Hence recommended for
-    purists and skeptics of any automated data cleaning/correction
-    algorithm. For example, if your cleaning strategy is a classical
-    'rejected trials EEG exceeds +/- 200 uV', then *trimOutlier*() does
-    the job for you. When called from GUI, it provides interactive and
-    intuitive user environment with which one can determine rejection
-    criteria based on feedback from cut-and-try processes.
+    *trimOutlier*() はデータに何かを加えません。 推薦される塀
+    自動データのクリーニング/補正の浄化および浄化
+    アルゴリズム。 例えば、あなたのクリーニング戦略が古典的である場合
+    'rejected の試験 EEG は +/- 200 uV' を超過し、*trimOutlier*() は
+    あなたのための仕事。 GUI から呼び出されると、対話型と対話型を提供します。
+    拒絶を判断できる直感的なユーザー環境
+    カットアンドトリプロセスからのフィードバックに基づく基準。
 
-Where is the rejection log stored?
+拒絶ログはどこに保存されますか?
 -------------------------------------------------------
 
-It keeps a log in EEG.etc.trimOutlier.cleanChannelMask \[nbchan x 1
-logical\] for channel rejection and EEG.etc.trimOutlier.cleanChannelMask
-\[data_length x 1 logical\] for data point rejection.
+EEG.etc.trimOutlier.cleanChannelMaskでログを保持する\[nbchan x 1
+logical\ チャンネル拒否と EEG.etc.trimOutlier.cleanChannelMask の
+データポイント拒否のための \[data_length x 1 logical\] 。
 
-Tutorial
+チュートリアル
 --------
 
-This tutorial assumes the user understands the basic steps of loading
-data into EEGLAB. For more information, visit the [EEGLAB
-tutorial](http://sccn.ucsd.edu/wiki/EEGLAB_Wiki#EEGLAB_Tutorial).
+このチュートリアルでは、ユーザーがロードの基本的なステップを理解していると仮定します
+EEGLABへのデータ 詳細は【EEGLAB】をご覧ください。
+チュートリアル:()http://sccn.ucsd.edu/wiki/EEGLAB_Wiki#EEGLAB_Tutorial).
 
-To begin, load a continuous (un-epoched) data set and start the plugin
-under “Tools” of the EEGLAB window. Several figures and charts will pop
-up along with a prompt to clean the data.
+開始するには、連続した(非推奨)データセットをロードし、プラグインを開始します。
+EEGLABウィンドウのツール いくつかの数字とチャートがポップアップ表示されます
+データを消去するプロンプトとともに。
 
-![400px\|Figure 1. trimOutlier initialized](images/To1.png)
+![400px\|フィギュア 1. 初期化されるトリムアウトイヤー](images/To1.png)
 
-The top left scalp map shows the topography of channel SD during all
-recording time, and the top right one shows the same image but after
-removing the channels with top 25% highest SD. By comparing these two
-scalp maps, you can see the scalp distribution of high amplitudes that
-is usually associated with artifacts.
+左上のスカルプマップは、すべてのチャネルSDの地理を示しています
+録画時間と右上の画像は同じ画像を示していますが、その後
+最大25%のSDでチャネルを削除。 これらの2つを比較することによって
+scalpのマップは、高振幅のスカルプ分布を見ることができます
+通常はアーティファクトに関連付けられています。
 
-(05/14/2024 Updated)
-Since 2019, the SD bar graph shows error bars that indicates 1 SD.
-The SD of SD is calculated by dividing the data into 100 bins with
-equal length with trimming, then calculate SD for each bin. My calculating
-the mean and SD across the 100 SDs, you can get mean and SD of channel SD
-values. This approach helps distinguish the following two cases:
-(1) High-variance state is stationary (i.e. better to reject the channel;
-in this case, the error bar is short); (2) High-variance state is transiend
-(i.e. better to retain the channel; the error bar is long).
+(05/14/2024 更新)
+2019年以降、SDバーグラフは1つのSDを示すエラーバーを示しています。
+SDのSDは100本のビンにデータを分けることによってと計算されます
+トリミング、各ビンのSDを計算する等しい長さ。 私の計算
+100つのSDを渡る平均そしてSD、チャネルSDの平均そしてSDを得ることができます
+値。 このアプローチは、次の2つのケースを区別するのに役立ちます。
+(1) 高変位状態は静止状態(つまり、チャネルを拒否する方が良い)
+この場合、エラーバーが短くなります。 (2) 高変位状態が超越
+(つまり、チャンネルを保持する方が良い。エラーバーが長い)。
 
-![400px\|Figure S1. Updated display](images/additional.jpg)
+![400px\|フィギュアS1。 更新された表示](images/additional.jpg)
 
-Before continuing by clicking “Yes,” be sure to study the graphs to
-estimate threshold values. There is no need to worry about finding the
-perfect threshold values on the first try however; again, an advantage
-to this plugin is the interactive nature of the process.
+「はい」をクリックすることで継続する前に、必ずグラフを調べてください。
+閾値値の推定値。 見つけることを心配する必要はありません
+しかし、最初の試みの完璧なしきい値。再び、利点
+このプラグインは、プロセスのインタラクティブな性質です。
 
-The first input for filtering is the channel standard deviation upper
-bound. For the example data set, we chose an upper bound of 200 MICROV
-based on the “Standard deviation of all channels” graph. After clicking
-“Ok,” the plugin generates a graph of channel standard deviation data
-before and after rejection, and also displays the number of rejected
-channels and asks for confirmation (names of channels removed will be
-displayed during final step). New upper bound values may be chosen if
-the number of rejected channels is too high; for our experiment, we were
-comfortable with rejecting up to 10% of our channels.
+フィルタリングの最初の入力は、チャンネル標準偏差の上部です
+バインド。 たとえばデータセットの場合、200 MICROV の上限値を選択しました。
+「すべてのチャンネルの標準的な偏差」グラフに基づく。 クリック後
+プラグインがチャンネル標準偏差データのグラフを生成する「Ok」
+拒絶前後に、拒絶する回数も表示します。
+チャネルと確認を求める(削除されたチャンネルの名前)
+最終工程中に表示します。 新規の上限値が選択可能
+拒否されたチャンネルの数が高すぎます。実験では、
+チャンネルの最大10%の拒否で快適にお過ごしいただけます。
 
-![400px\|Figure 2. Channel standard deviation upper
-bound](images/T02.png)
+![400px\]|フィギュア 2. チャネルの標準的な偏差の上部
+バインド(画像/T02.png)
 
-If you have multiple subjects in your experiment you may wish to
-determine a threshold common to all subjects. One way to do this is by
-finding the standard deviation of the EEG data for each channel of each
-subject and sorting the values, then examining the plot of all the
-subject’s sorted data.
+実験に複数の被験者がある場合には、
+すべての被験者に共通のしきい値を決定します。 これを行う一つの方法は、
+各チャネルの EEG データの標準的な偏差を見つけること
+対象と値のソート、すべてのプロットを調べる
+対象のソートデータ。
 
-Click “Ok” again to confirm upper bound channel removal. A similar
-process occurs for rejection based on lower bound. Enter a lower bound
-value, click “Ok,” inspect the result, and alter the value or confirm by
-clicking “Ok” again. While the upper bound is meant to take care of
-“crazy” channels, the lower bound addresses “dead” channels. Therefore,
-it is best to avoid using 0 as the lower bound. 2 MICROV is a good
-value.
+「OK」をクリックし、上部の境界チャネル除去を確認します。 似ている
+プロセスは下限に基づいて拒絶のために起こります。 境界線を下回る
+値、クリック 「Ok」は結果を確認し、値を変更したり、確認したりします。
+「OK」をクリックします。 上限の境界は、世話をすることを意味するが
+“クレイジー” チャネル, 下限アドレス “デッド” チャネル. そのため、
+低い境界として 0 を使用することを避けるのが最善です。 2 MICROVは良い
+値。
 
-![400px\|Figure 3. Channel rejection based on standard deviation for both
-upper and lower bound](images/T03.png)
+![400px\]|フィギュア 3.標準偏差に基づくチャネル拒否
+上部と下部の境界線(画像/T03.png)
 
-The next step is to reject data points. The colour key is the same as
-the first image: black represents mean, red is +/- 2SD, and blue is the
-envelope. Here we use a threshold value of 300 MICROV and a point spread
-width of 1ms. Click “Ok,” and examine the “After datapoint rejection”
-graph. Different values may be used for threshold and point spread width
-if the rejection is not satisfactory. Finalize the process by
-confirming.
+次のステップは、データポイントを拒否することです。 カラーキーは同じです
+最初のイメージ:黒は意味を表し、赤は+/- 2SDであり、青は
+封筒。 ここには300 MICROVとポイントスプレッドのしきい値を使用します。
+1msの幅。 「OK」をクリックし、「データポイント拒否後」を調べる
+グラフ。 閾値とポイントスプレッド幅の異なる値が使用できる
+拒絶が満足していない場合。 プロセスの最終決定
+お問い合わせ
 
-![400px\|Figure 4. Datapoint rejection based on input threhsold and point
-spread width](images/T04.png) ![325px\|Figure 5. Before and
-after of datapoint rejection](images/T05.png)
+![400px\]|フィギュア 4.入力のthrehsoldおよびポイントに基づくデータポイントの拒絶
+スプレッド幅:(画像/T04.png) ![325px\|図 5. 前後
+データポイント拒否後(画像/T05.png)
 
-Authors: Clement Lee and Makoto Miyakoshi. SCCN, INC, UCSD
+著者:クレメン・リーとミヤコシマコト。 SCCN株式会社、UCSD

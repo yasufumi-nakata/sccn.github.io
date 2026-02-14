@@ -1,9 +1,9 @@
-# Conversion scripts and references resources
+# 変換スクリプトとリソースを参照
 
-We use the theme [just-the-docs](https://pmarsceill.github.io/just-the-docs/) for our Github wiki. The most practical reference is the [navigation structure page](https://pmarsceill.github.io/just-the-docs/docs/navigation-structure/) where it details how to organize the left side menu and create page and directory specific table of contents.
+テーマを活かした [ドキュメント](https://pmarsceill.github.io/just-the-docs/) Github wiki について 最も実用的な参照はあります [ナビゲーション構造ページ](https://pmarsceill.github.io/just-the-docs/docs/navigation-structure/) 左側のメニューを整理し、ページを作成したり、コンテンツの特定のテーブルを作成したりする方法を詳しく説明します。
 
-As *just-the-docs* is a Jekyll theme, some Jekyll documentation is relevant for the configuration of and some custom features for the wiki. 
-* For seeing how pages are grouped and urls are generated, see: https://jekyllrb.com/docs/pages/
-* Front matter variables is the way we provide metadata of the page. So far we only need to worry about the variables that control the navigation structure of the page (see navigation structure link above). Just-the-docs will use these variables and automatically generate navigation features. For custom features, we can leverage front matter variables by programmatically accessing them through the [*page* object](https://jekyllrb.com/docs/variables/#page-variables). 
-* Coding with Jekyll page involves using Liquid, its language to programmatically and dynamically add content to static page. It's similar to PHP in the sense that you can mix Liquid with HTML in a page, but it's less powerful than PHP and work exclusively with the Jekyll ecosystem. Liquid's [documentation](https://shopify.github.io/liquid/basics/introduction/) is a helpful reference. Most of the time we look up examples provided on the web or Jekyll official documentation page for our specific problem.
-* Some knowledge of [directory structure](https://jekyllrb.com/docs/structure/) and [theme](https://jekyllrb.com/docs/themes/) is helpful when we write custom features for the site, as sometimes we have to override default behavior of the just-the-docs theme.
+*just-the-docs* は Jekyll のテーマです。一部の Jekyll のドキュメントは wiki の構成とカスタム機能に関連しています。 
+* ページのグループ化とURLの生成方法を見るには、以下を参照してください。 https://jekyllrb.com/docs/pages/
+* 前記変数は、ページのメタデータを提供する方法です。 ここまでは、ページのナビゲーション構造を制御する変数を心配するだけです(上のナビゲーション構造リンクを参照してください)。 Just-the-docs はこれらの変数を使用し、ナビゲーション機能を自動的に生成します。 カスタム機能では、プログラム的にそれらにアクセスすることで、フロント・ダイ・変数を活用することができます。 [*page* オブジェクト](https://jekyllrb.com/docs/variables/#page-variables). 
+* Jekyllページとのコーディングは、液体、その言語を使用してプログラム的に、動的に静的ページにコンテンツを追加します。 ページの HTML で Liquid を混合できるという意味で PHP に似ていますが、PHP よりも強力で、Jekyll エコシステムのみで動作します。 液体の [ドキュメント](https://shopify.github.io/liquid/basics/introduction/) 参考文献です。 WebやJekyllの公式のドキュメントページで提供されているサンプルを特定の問題に見ていきます。
+* いくつかの知識 [ディレクトリ構造](https://jekyllrb.com/docs/structure/) そして、 [テーマ](https://jekyllrb.com/docs/themes/) サイトのカスタム機能を記述するときに役立ちます, 時々、私たちは、単にドキュメントのテーマのデフォルトの動作を上書きする必要があります.

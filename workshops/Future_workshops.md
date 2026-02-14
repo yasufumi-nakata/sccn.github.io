@@ -5,25 +5,25 @@ long_title: Future EEGLAB workshop
 parent: Workshops
 nav_order: 4
 ---
-Future EEGLAB workshops
+今後のEEGLABワークショップ
 ===
-Below are EEGLAB workshops currently planned
+以下は、現在予定されているEEGLABワークショップです。
 
-In 2025:
-- The workshop in San Diego, USA (UCSD campus) in November was canceled.
-- There is a workshop in Marseille, France, at the end of October 2025 as part of the [PracticalMEEG conference](https://cuttingeeg.org/practicalmeeg2025/).
+2025年:
+- 11月のサンディエゴ(米国UCSDキャンパス)でのワークショップは中止となりました。
+- 2025年10月末にマルセイユ、フランスにワークショップがあります。 [実用的なMEEG カンファレンス](https://cuttingeeg.org/practicalmeeg2025/).
 
-Do not forget to subscribe to the EEGLAB News list to be notified of new
-workshop and registration information (you may register by clicking a
-checkbox when downloading EEGLAB).
+EEGLABニュースリストに登録して、新規の通知を忘れないでください
+ワークショップと登録情報(クリックして登録することができます)
+EEGLABをダウンロードする際のチェックボックス
 
-If you are interested in hosting a non-profit workshop (involving at
-least 40 participants), please contact us at <eeglab@sccn.ucsd.edu>. If
-you want to organize a local event, we will be happy to provide
-Powerpoint material and names of possible nearby tutors.
+非営利ワークショップの開催に興味がある方(参加)
+参加定員40名まで <eeglab@sccn.ucsd.edu>お問い合わせ お問い合わせ
+地元のイベントを整理したい、喜んで提供いたします
+パワーポイント素材や、近隣のチューターの名前。
 
 <hr>
 
-An [Online EEGLAB
-Workshop](/workshops/Online_EEGLAB_Workshop) is also
-currently available and will be enhanced.
+オンライン EEGLAB
+ワークショップ:(/workshops/Online_EEGLAB_Workshop)
+現在ご利用可能です。

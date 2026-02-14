@@ -7,71 +7,71 @@ render_with_liquid: false
 title: nsgportal-command-line-tools
 long_title: nsgportal-command-line-tools
 ---
-Just like many other EEGLAB functions, users can interact with *nsgportal* through either the graphic user interface or using command line tools. The command line tools allow users to largely automate their analysis and make the process easy to reproduce. In this section, we introduce the *nsgportal* command line tools to NSG.
+他の多くの EEGLAB 機能と同様に、ユーザーは *nsgportal* とグラフィックユーザーインターフェイスまたはコマンドラインツールを使用して対話できます。 コマンドラインツールは、ユーザーが分析を大幅自動化し、プロセスを簡単に再現できるようにします。 このセクションでは、NSG に *nsgportal* コマンドラインツールを導入しています。
 
-# Using EEGLAB command line tools to NSG
-Command line access to NSG from EEGLAB is mainly performed through two functions: *pop_nsginfo()* and *pop_nsg()*. The first function (*pop_nsginfo*) is used to setup your NSG credential, while *pop_nsg* will allow you to manage your NSG jobs. These functions are introduced in more detail in the next sections.
+# EEGLAB コマンドラインツールを NSG に使用
+EEGLABのNSGへのコマンドラインアクセスは、主に2つの機能で行われます。*pop_nsginfo()*と*pop_nsg()*。 *pop_nsg* は NSG のクレデンシャルをセットアップするために、最初の関数(*pop_nsginfo*)が使用されます。 これらの機能は、次のセクションで詳細に導入されます。
 
-## Setting credentials - *pop_nsginfo*
-Use function *pop_nsginfo* to specify your NSG credentials. The function accepts key-value pair inputs, allowing users to specify their NSG user name (option ***'nsgusername'***), user password (option ***'nsgpassword'***), and path to folder where NSG data will be downloaded (option ***'outputfolder'***). NSG key and NSG url are acceptable keys but need not be changed. See code snippet below for an example of *pop_nsginfo* command line call:  
+## 資格情報の設定 - *pop_nsginfo*
+関数 *pop_nsginfo* を使用して、NSG の認証情報を指定します。 関数はキー値のペアの入力を受け付けます。これにより、ユーザーはNSGユーザ名(option***'nsgusername'***)、ユーザパスワード(option***'nsgpassword'***)、NSGデータがダウンロードされるフォルダ(option***'outputfolder'***)にパスします。 NSGのキーおよびNSGのurlは受諾可能なキーですが、変更しないで下さい。 *pop_nsginfo* コマンドラインコールの例では、以下のコードスニペットを参照してください。  
 ```
 pop_nsginfo('nsgusername', 'your_username', 'nsgpassword', 'your_password', 'outputfolder', '/path/to/output/folder');
 ```
-Running *pop_nsginfo* without any arguments will bring up its GUI interface.
+引数なしで*pop_nsginfo*を実行すると、GUIインターフェイスが現れます。
 
-## Managing your NSG jobs - *pop_nsg*
-The function *pop_nsg*  is the workhorse of the EEGLAB command line tools to NSG. Different ways to call the function allows you to:
+## NSGジョブの管理 - *pop_nsg*
+関数 *pop_nsg* は、EEGLAB コマンドラインツールを NSG に動かすものです。 関数を呼び出す別の方法は、次のことができます。
 
-1. Create and run NSG job (*pop_nsg* option ***'run'***)
-2. Test the job on your local computer (*pop_nsg* option ***'test'***)
-3. Retrieve its result (*pop_nsg* option ***'output'***)
-4. Delete the job (*pop_nsg* option ***'delete'***)
+1. NSGジョブの作成と実行(*pop_nsg*オプション***'run'***)
+2. ローカルコンピューター(*pop_nsg*オプション***'test'***)でジョブをテストする
+3. 結果を取得する (*pop_nsg* オプション) 'output'***' の入力
+4. ジョブを削除 (*pop_nsg* オプション) ***「削除」***
 
-In general, calling *pop_nsg* with these options should be done following the scheme:
+一般的に、これらのオプションで *pop_nsg* を呼び出すと、スキームに従って行う必要があります。
 
 ```
 [NSGJobStructure, AllNSGJobStructure] = pop_nsg('option_name', 'option_value');
 ```
-In the case of using the options ***'run'*** or ***'test'***, the second argument mut be always the path to the zip file or folder containing the job to be submitted or tested. Using these options also require a second pair of arguments defining the script (.m) to be run in your test or NSG run (option ***'filename'***). For instance:
+オプション*'run'*** または ***'test'*** を使用する場合、2番目の引数のミュートは、投稿またはテストされるジョブを含む zip ファイルまたはフォルダーへのパスを常に行います。 これらのオプションを使用して、スクリプト(.m)を定義する2番目の引数を、テストまたはNSG実行(オプション***'filename'***)で実行する必要があります。 例えば:
 
 ```
 [NSGJobStructure, AllNSGJobStructure] = pop_nsg('test', 'path/to/my/job/folder', 'filename', 'my_job_script.m');
 ```
 
-The two outputs of *pop_nsg* above are (1) *NSGJobStructure*: the NSG job structure containing all relevant information of the submitted job (not available for option ***'test'***) and (2) *AllNSGJobStructure* : array of all NSG jobs currently in your account (available from all *pop_nsg* options).
+*pop_nsg* の2つの出力は (1) *NSGJobStructure*: 提出されたジョブのすべての関連情報を含む NSG のジョブ構造(オプションでは利用できません。***)と(2) *AllNSGJobStructure*: 口座内のすべての NSG ジョブの配列(すべての *pop_nsg* オプションから利用可能)。
  
-To call *pop_nsg* with options ***'output'*** or ***'delete'*** simply pass the job ID (ID can be assigned by user during job submission), the NSG job structure (see above) or the job URL (unique NSG identifier for a job. see *NSGJobStructure.jobstatus.selfUri.url*). For instance:
+*pop_nsg* をオプションで呼び出すには***'output'*** または ***'delete'*** は単にジョブ ID (ID は、ジョブの送信中にユーザが割り当てることができます)、NSG ジョブ構造 (上記参照) またはジョブ URL (unique NSG の識別子) を渡すだけです。 *NSGJobStructure.jobstatus.selfUri.url*を参照してください。 例えば:
 
 ```
 [NSGJobStructure, AllNSGJobStructure] = pop_nsg('output', 'My_Job_ID'); % Using job id
 [NSGJobStructure, AllNSGJobStructure] = pop_nsg('output', NSGJobStructure.jobstatus.selfUri.url); % Using job URL
 [NSGJobStructure, AllNSGJobStructure] = pop_nsg('output', NSGJobStructure); % Using job structure
 ```
-Note that for running *pop_nsg* with options ***'output'*** or ***'delete'*** , a job has to be previosly submitted to NSG. The use of ***'output'*** is restricted to jobs already completed.
+*pop_nsg* をオプションで実行するには、*'output'*** または ***'delete'*** 、NSG に優先的に提出する必要があります。 ***'output'*** の使用は、既に完了したジョブに制限されます。
 
-Running *pop_nsg* without any arguments will bring up the graphic interface.
+任意の引数なしで*pop_nsg*を実行すると、グラフィックインターフェイスが表示されます。
 
-## Other useful functions
-Here a list of other useful EEGLAB command line tools to NSG.
+## その他の便利な機能
+ここでは、NSG に他の有用な EEGLAB コマンドラインツールのリストを示します。
 
-### Request list of NSG jobs - *nsg_jobs*
-Return cell array of all NSG jobs under your credentials.
+### NSGジョブのリクエスト一覧 - *nsg_jobs*
+あなたの資格情報の下ですべてのNSGジョブのセル配列を返します。
 
-Usage example:
+使用例:
 
 ```
 alljobs = nsg_jobs;
 ```
 
-### Recursive checking of job status - *nsg_recurspoll*
-Recursive check on the status of a job running on NSG. A mandatory first argument is required to be a single job ID, NSG job structure or job URL. A pair of parameters ('pollinterval', time_in_seconds) can be added to specify the time between polls.
+### ジョブステータスの再帰チェック - *nsg_recurspoll* の
+NSGで稼働しているジョブのステータスに関する再帰チェック。 単一のジョブ ID、NSG のジョブ構造、ジョブ URL に必須の最初の引数が必要です。 パラメータ('pollinterval', time_in_seconds)のペアを追加して、poll間の時間を指定できます。
 
-Usage example:
+使用例:
 
 ```
 NSGJobStructure = nsg_recurspoll('My_Job_ID', 'pollinterval', 120 );
 ```
 
-# Summary
-This article introduced you to the command line tools of EEGLAB plug-in to NSG. To see a detailed explanation and examples of how to use EEGLAB to NSG command line tool, check out [this tutorial](https://github.com/sccn/nsgportal/wiki/Creating-and-managing-an-NSG-job-using-pop_nsg-from-the-command-line).
- Note that any function of EEGLAB plug-in to NSG, you can type "help *function_name*" to read its full documentation. The documentation is a great source explaining what the function does, examples of how to use it, what inputs are allowed, and what outputs it produces. It should always be your go-to when you're unsure about how to use the function.
+# ニュース
+この記事では、EEGLABプラグインのコマンドラインツールをNSGに紹介しました。 EEGLABをNSGコマンドラインツールに使用する方法の詳細な説明と例については、チェックアウト [このチュートリアル](https://github.com/sccn/nsgportal/wiki/Creating-and-managing-an-NSG-job-using-pop_nsg-from-the-command-line).
+ EEGLAB プラグインを NSG に使用している関数は、「ヘルプ *function_name*」と入力して、完全なドキュメントを読み込みます。 ドキュメンテーションは、関数が何であるかを説明する素晴らしいソースです, 使い方の例, どのような入力が許可されています, そして、それが生成する出力. 関数の使用方法がわからない場合は、常にあなたのgo-toでなければなりません。

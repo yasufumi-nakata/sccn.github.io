@@ -7,130 +7,130 @@ render_with_liquid: false
 has_children: true
 nav_order: 26
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/EEG-BIDS).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/EEG-BIDS).
 
-![EEG-BIDS](https://github.com/sccn/EEG-BIDS/assets/1872705/47675a55-6573-47d7-abec-48e364d5ad8a)
+![EEG-BIDSについて](https://github.com/sccn/EEG-BIDS/assets/1872705/47675a55-6573-47d7-abec-48e364d5ad8a)
 
-# EEG-BIDS
+# EEG-BIDSについて
 
-The EEG-BIDS (formerly known as **BIDS-MATLAB-tools**) repository contains a collection of functions that import and export BIDS-formated experiments. The code is tailored for use as an [EEGLAB](http://eeglab.org) plugin but may also be used independently of EEGLAB. Conversion of data format from non-supported BIDS binary format requires that EEGLAB be installed (supported formats are EEGLAB .set files, EDF files, BDF files, and Brain Vision Exchange Format files).
+EEG-BIDS(旧**BIDS-MATLAB-tools**)リポジトリには、BIDS形式の実験をインポートおよびエクスポートする機能のコレクションが含まれています。 コードは、使用するコードを [エッグラボ](http://eeglab.org) プラグインは、EEGLABの独自に使用することもできます。 サポートされていないBIDSバイナリ形式からのデータフォーマットの変換は、EEGLABがインストールされている必要があります(サポートされている形式は、EEGLAB .setファイル、EDFファイル、BDFファイル、およびBrain Vision Exchange Formatファイルです)。
 
-# Documentation
+# ドキュメント
 
-Refer to the [wiki documentation](https://github.com/sccn/EEG-BIDS/wiki) or the submenus of this plugin if you are on the EEGLAB website.
+参照して下さい [wikiドキュメント](https://github.com/sccn/EEG-BIDS/wiki) EEGLABのウェブサイトにある場合、またはこのプラグインのサブメニュー。
 
-# EEG-BIDS vs other BIDS software
+# EEG-BIDSと他のBIDSソフトウェア
 
-[BIDS-MATLAB](https://bids-matlab.readthedocs.io/en/latest/) is a project to import BIDS data. BIDS-MATLAB maps the BIDS directory architectures to MATLAB structures but does not import or convert data like EEG-BIDS. In theory, EEG-BIDS could use BIDS-MATLAB to get the BIDS directory architectures into MATLAB and then convert it to an EEGLAB STUDY. However, in 2021, BIDS-MATLAB could not yet import all the relevant EEG, MEG, and iEEG files. 
+[BIDS-MATLABの特長](https://bids-matlab.readthedocs.io/en/latest/) BIDSデータをインポートするプロジェクトです。 BIDS-MATLABは、BIDSディレクトリアーキテクチャをMATLAB構造にマップしますが、EEG-BIDSなどのデータをインポートまたは変換しません。 理論的に、EEG-BIDSはBIDS-MATLABを使用して、BIDSディレクトリアーキテクチャをMATLABに取得し、EEGLAB STUDYに変換することができます。 しかし、2021年に、BIDS-MATLABは、関連するすべてのEEG、MEG、およびiEEGファイルをインポートできませんでした。 
 
-[EEG2BIDS](https://github.com/aces/EEG2BIDS) is a Python-based executable that formatted a collection of EDF files in BIDS format. EEG2BIDS requires users to create JSON files for meta-data. It is a tool designed to archive data as part of a lab protocol where JSON files have been prepared in advance and are suited for technicians organizing data. EEG-BIDS export capabilities are more suited for researchers managing their data and are agnostic regarding the original data format.
+[EEG2BIDSについて](https://github.com/aces/EEG2BIDS) BIDS 形式の EDF ファイルの集合をフォーマットした Python ベースの実行可能です。 EEG2BIDSは、メタデータ用にJSONファイルを作成するためにユーザーが必要です。 JSONファイルがあらかじめ用意されているラボプロトコルの一部としてデータをアーカイブするツールで、技術者がデータを整理するのに適しています。 EEG-BIDSのエクスポート機能は、研究者がデータを管理し、元のデータフォーマットに関する分析に適しています。
 
-[ezBIDS](https://brainlife.io/ezbids/) is a data export tool for MRI and fMRI data. It does not allow to export EEG data to our knowledge.
+[エズビット](https://brainlife.io/ezbids/) MRIおよびfMRIデータ用のデータエクスポートツールです。 EEGデータを当社の知識にエクスポートすることはできません。
 
-[data2bids.m](https://www.fieldtriptoolbox.org/example/bids/) is a FieldTrip function to export BIDS data. This includes EEG and maybe fMRI. This function can only be used from the command line.
+[データ2bids.m](https://www.fieldtriptoolbox.org/example/bids/) BIDSデータをエクスポートするためのFieldTrip関数です。 これは、EEGと多分fMRIを含みます. この関数はコマンドラインからのみ使用できます。
 
-[EEG-BIDS](https://github.com/sccn/EEG-BIDS) (this program) is the most popular tool to export EEG data using both a graphical interface and/or command line (more than half of the BIDS datasets on OpenNeuro were exported using EEG-BIDS and it has more than 2200 installs in EEGLAB). A compiled stand-alone version will also be released soon.
+[EEG-BIDSについて](https://github.com/sccn/EEG-BIDS) (このプログラム)は、グラフィックインターフェイスと/またはコマンドライン(OpenNeuro上のBIDSデータセットの半分以上がEEG-BIDSを使用してエクスポートされたり、EEG-BIDSで2200以上のインストールが含まれている最も一般的なツールです)。 コンパイルされたスタンドアローンバージョンもすぐにリリースされます。
 
-# EEG-BIDS export capabilities
+# EEG-BIDSエクスポート機能
 
-Accepted EEG input formats are all files that EEGLAB can read. 
+EEGLABが読み取れる全てのファイルです。 
 
-* EEG export: ✔ (as .set, .edf, .bdf, or .vhmk files)
-* iEEG export: ✔ (as .set, .edf or .nwb)
-* Eye-tracking export: ✔ (beta)
-* HED export: ✔
-* BEH export: ✔
-* MRI export: ✔ (no conversion)
-* fMRI export: ✖
-* Motion-cap export: ✖ (upcoming)
-* EMG export: ✖ (upcoming)
-* MEG export: ✖ (upcoming)
+* EEGエクスポート: ✔ (.set、.edf、.bdf、または.vhmkファイルとして)
+* iEEGエクスポート: ✔(.set、.edf、または.nwb)
+* 目追跡の輸出:✔ (ベータ)
+* HEDの輸出: ✔
+* BEHエクスポート: ✔
+* MRIエクスポート: ✔ (変換なし)
+* fMRIエクスポート: ✔
+* モーションキャップのエクスポート: ✔ (更新)
+* EMGエクスポート: ✔ (更新)
+* MEGエクスポート: ✔ (更新)
 
-# EEG-BIDS import capabilities for EEGLAB
+# EEG-BIDS EEGLABのインポート機能
 
-EEG-BIDS allows importing BIDS datasets into EEGLAB. This is the type of information that can be imported.
+EEG-BIDSでは、BIDSデータをEEGLABにインポートすることができます。 インポートできる情報の種類です。
 
-* EEG import: ✔ (all formats)
-* iEEG import: ✔ (all formats)
-* MEG import: ✔ (.ds and .fif files supported, more formats upcoming)
-* Eye-tracking import: ✖ (upcoming)
-* HED import: ✔
-* BEH import: ✔
-* MRI import: n/a
-* fMRI import: n/a
-* Motion-cap import: ✔ (beta)
-* EMG import: ✖ (upcoming)
+* EEGのインポート: ✔ (すべてのフォーマット)
+* iEEGのインポート: ✔ (すべてのフォーマット)
+* MEG のインポート: ✔ (.ds と .fif ファイルがサポートされ、今後より多くのフォーマット)
+* 目追跡の輸入: ✖ (upcoming)
+* HEDの輸入: ✔
+* BEHの輸入: ✔
+* MRIの輸入:n/a
+* fMRI の輸入: n/a
+* モーションキャップのインポート: ✔ (ベータ)
+* EMGのインポート: ✔ (更新)
 
-# Cloning
+# クローニング
 
-Make sure you clone with submodules
+サブモジュールでクローンを作成する
 
 ```
 git clone --recurse-submodules https://github.com/sccn/EEG-BIDS
 ```
 
-# Use with EEGLAB
+# EEGLABの利用
 
-Simply place the code in the EEGLAB plugin folder, and EEGLAB will automatically detect it. See documentation at [https://github.com/sccn/EEG-BIDS/wiki](https://github.com/sccn/EEG-BIDS/wiki).
+EEGLABプラグインフォルダにコードを配置するだけで、EEGLABは自動的に検出されます。 ドキュメントを見る [https://github.com/sccn/EEG-BIDS/wiki](https://github.com/sccn/EEG-BIDS/wiki).
 
-# zip command to release plugin
+# zip コマンドでプラグインを解放
 
 ```
 zip -r EEG-BIDS8.0.zip EEG-BIDS/* -x /EEG-BIDS/testing/additionaltests/* /EEG-BIDS/testing/ds004117/* /EEG-BIDS/testing/hbn_eye_tracking_data/* /EEG-BIDS/testing/data/*
 ```
 
-# Version history
+# バージョン履歴
 
-v1.0 - initial version
+v1.0 - 初期バージョン
 
-v2.0 - add support for external channel location and fix minor bugs
+v2.0 - 外部チャネルの場所のサポートを追加し、マイナーなバグを修正
 
-v3.0 - better export for multiple runs and allowing importing BIDS folder with multiple runs
+v3.0 - 複数の実行のためのより良いエクスポートと複数の実行でBIDSフォルダをインポートすることができます
 
-v3.1 - fix multiple issues at export time, including subject numbering
+v3.1 - 件名番号を含む複数の問題をエクスポート時に修正
 
-v3.2 - fix menu conflict in EEGLAB with bids validator; check channel types; add option to choose EEG event field; minor bugs
+v3.2 - EEGLABでメニューの競合を入札バリデータで修正;チャンネルタイプをチェック; EEGイベントフィールドを選択するためのオプションを追加します。マイナーなバグ
 
-v3.3 - fix an issue for Windows and work on GUI
+v3.3 - Windowsの問題を修正し、GUIで動作します
 
-v3.4 - fix the issue with saving datasets in memory. Allowing to anonymize participant ID or not. Fixed issue with looking up channel locations.
+v3.4 - メモリ内のデータセットを保存して問題を解決します。 参加者IDを匿名化したり、IDを匿名化したりすることはできません。 チャネルの位置を調べる問題を修正しました。
 
-v3.5 - fix issue with choosing event type in graphic interface; various fixes for GUI edit of BIDS info
+v3.5 - グラフィックインターフェイスでイベントタイプを選択すると問題を修正します。 BIDS情報のGUI編集のためのさまざまな修正
 
-v4.0 - fix GUI and many minor export issues
+v4.0 - GUIと多くのマイナーなエクスポートの問題を修正
 
-v4.1 - fix the issue with JSON
+v4.1 - JSON で問題を解決する
 
-v5.0 - major fixes to import all OpenNeuro EEG datasets
+v5.0 - すべてのOpenNeuro EEGデータセットをインポートするための主要な修正
 
-v5.1 - allow calculating dataset meta-data quality
+v5.1 - データセットメタデータの品質を計算することができます
 
-v5.2 - fix the issue with history
+v5.2 - 履歴で問題を解決する
 
-v5.3 - adding the capability to export stimuli
+v5.3 - 刺激をエクスポートする機能を追加します。
 
-v5.3.1 - update documentation for tInfo.HardwareFilters; fix bug defaults fields not filled for eInfo
+v5.3.1 - tInfo のドキュメントを更新します。 HardwareFilters; eInfo に入力されていないバグのデフォルトフィールドを修正
 
-v5.4 - fix the issue with reading BIDS information when importing BIDS data to STUDY
+v5.4 - BIDSデータをSTUDYにインポートする際にBIDS情報を読み込むことで問題を修正
 
-v6.0 - new examples and fixes for HED
+v6.0 - HED の新しい例と修正
 
-v6.1 - allow data with no events. Fix HED import/export. Fix history.
+v6.1 - イベントなしでデータを許可します。 Fix HEDインポート/エクスポート。 履歴を修正。
 
-v7.0 - split code into different functions. Support for behavioral data. Various bug fixes.
+v7.0 - 異なる関数にコードを分割します。 行動データのサポート 各種バグ修正
 
-v7.2 - fix the issue with the missing file.
+v7.2 - 不足しているファイルで問題を修正します。
 
-v7.3 - various minor fixes (EEG reference as string; add duration if not present; resave datasets)
+v7.3 - さまざまなマイナーフィックス(文字列としてEEG参照)。存在しない場合、期間を追加します。データセットを保存します。
 
-v7.4 - fix version issues for HED and BIDS. Export subjects in order. Remove unused columns in participants.tsv file
+v7.4 - HEDとBIDSのバージョンの問題を修正します。 順序で主題を輸出して下さい。 未使用の列を参加者に削除します。 tsv ファイル
 
-v7.5 - adding support for coordsystem files, for loading specific runs, support for motion files
+v7.5 - 特定の実行をロードするためのコルドシステムファイルのサポートを追加し、モーションファイルのサポート
 
-v7.6 - adding export to non-EEGLAB formats, refactoring export
+v7.6 - 非EEGLABのフォーマットに輸出を追加し、輸出を再ファクタリング
 
-v7.7 - fix importing MEG and MEF files. Better handling of runs. Now tracks tool version in BIDS.
+v7.7 - MEGとMEFファイルをインポートする修正。 実行のよりよい処理。 BIDSでツールバージョンを追跡します。
 
-v8.0 - renamed files, separate file for task info, adding BIDS statistic output, handling EGI & BVA file better, channel types and units, adding eye-tracking and behavioral support
+v8.0 - 変更されたファイル、タスク情報用の別々のファイル、BIDS統計出力を追加し、EGI&BVAファイルをよりよく処理し、チャンネルタイプとユニット、目の追跡と行動サポートを追加
 
-v9.0 - update json import to conform to BIDS key-level inheritance principle. Support iEEG and MEG export. Support exporting multiple tasks. Fix issues with exporting channel locations. BIDS export wizard.
+v9.0 - BIDSキーレベルの継承原則に準拠するためにjsonインポートを更新します。 iEEGおよびMEGの輸出を支えて下さい。 複数のタスクをエクスポートするサポート チャネルの場所をエクスポートする問題を修正しました。 BIDS輸出ウィザード。

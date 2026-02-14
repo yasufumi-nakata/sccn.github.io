@@ -6,83 +6,83 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 15
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/imat).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/imat).
 
-# IMAT - Independent Modulator Analysis Toolbox
+# IMAT - 独立した変調器解析ツールボックス
 
-## What is IMA?
-Independent Modulator Analysis (IMA) is a method for decomposing spectral fluctuations of temporally independent EEG sources into 'spatio-spectrally' distinct spectral modulator processes. Such processes might derive from and isolate coordinated multiplicative scaling effects of functionally near-independent modulatory factors, for example the effects of modulations produced in cortico-subcortical or sensory-cortical loops, or by signaling from brainstem-centered import recognition systems using dopamine, serotonin, noradrenaline, etc. (see schematic figure below from [Onton & Makeig, 2009](https://www.frontiersin.org/articles/10.3389/neuro.09.061.2009/full)). Rather than attempting to decompose the mean power spectrum for a component process to identify narrow-band processes superimposed on a 1/f baseline spectrum, IMAT identifies characteristic frequency bands in which spectral power *varies* across time. This allows IMA to find *both* narrow and wide band modes. Also, the identified modes need not be singular. For example, IMA will separate the joint activity of an alpha or mu rhythm and its harmonics from endogenous beta band fluctuations occupying overlapping frequency ranges. IMA is applied to independent component (IC) source processes in the data which can be localized in the brain or to a specific scalp muscle, etc. IMA thereby identifies IC subsets that are co-modulated in a specified IM frequency band; these might be thought of as co-modulation networks with a common influence and susceptibility.
+## IMAとは?
+インディペンデント・モジュレータ・アナリシス(IMA)は、「スパティオ・スペクトラム・スペクトラム・モジュレータ・プロセス」に、温かみのある独立したEEGソースのスペクトル変動を分解する方法です。 そのようなプロセスは、コルチコの皮下または感覚的角質ループで生成された変調の影響、またはドパミン、セロトニン、ノラドレナリンなどを使用して脳幹中心のインポート認識システムからシグナル伝達することにより、など、機能的に独立した変調因子の調整から派生する可能性があります。 (以下の図を参照) [Onton & Makeig, 2009 _ オントン&メイク](https://www.frontiersin.org/articles/10.3389/neuro.09.061.2009/full))。 1/fベースラインスペクトラム上に重ねられた狭いバンドプロセスを識別するために、コンポーネントプロセスの平均電力スペクトルを分解しようとするよりも、IMATは、時折、スペクトル電力 * varies*をスペクトルする特性周波数帯を識別します。 IMAは*both*の狭く、広いバンド モードを見つけることを可能にします。 また、識別されたモードは単数ではありません。 たとえば、IMAは、内因性ベータバンドの変動によるオーバーラップ周波数範囲からのアルファまたはムリズムおよびその調和の関節活動を分離します。 IMAは、脳内でローカライズしたり、特定のスカルプ筋肉など、データ内の独立したコンポーネント(IC)ソースプロセスに適用されます。 IMAは、指定されたIM周波数帯域に連結されたICサブセットを識別します。これらは、共通の影響と感受性を持つコモデーションネットワークとして考えられるかもしれません。
 
 <img src="./Docs/figs/IndependentModulators.png" width="400">  
 
-Many studies of EEG spectral dynamics separate spectrographic data into a set of pre-defined broad or narrow frequency bands, then extract and operate on measures of these bands. Other approaches try to decompose a mean power spectrum itself into wide- and narrow-band portions. However, to better understand the functional roles of local field dynamics contributing to the EEG, as well as individual differences in oscillatory dynamics, more flexible, data-driven models of spectral dynamics are needed.  
+EEGスペクトルダイナミクスの多くの研究は、あらかじめ定義された広帯域または狭い周波数帯域のセットにスペクトルデータを分離し、これらのバンドの対策を抽出し、操作します。 他のアプローチは、広帯域と狭帯域部分に平均電力スペクトル自体を分解しようとします。 しかし、EEGに寄与するローカルフィールドダイナミクスの機能的役割、および振動動における個々の違いをより柔軟に理解するために、スペクトルダイナミクスのデータ駆動型モデルが必要です。  
  
 
-In the IMA method, multi-channel EEG data are first spatially decomposed using independent component analysis (ICA) into spatially stable, maximally temporally independent component (IC) source processes. Then the temporal fluctuations in the concurrent joint IC log spectrograms are decomposed into independent modulator (IM) processes that are maximally independent *over sources and frequency-weightings* (see schematic figure below from [Onton & Makeig, 2006](https://sccn.ucsd.edu/~julie/HBM2006PosterMini.pdf)). Note again: In IMA decomposition, the independence of the resulting IMs is maximized is **not** across time, but across sources and frequency weights.
+IMA法では、複数のチャネルEEGデータは、独立したコンポーネント分析(ICA)を使用して空間的に安定し、最大に温度の独立したコンポーネント(IC)のソースプロセスに最初に分解されます。 その後、並列ジョイントICログ分光器内の一時的な変動は、最大で独立した(IM)プロセスに分解されます(ソースと周波数の重み)*(下図を参照) [Onton & Makeig, 2006年, 2006年, 2006年, 2006年, 2006年, 2006年, 2006年](https://sccn.ucsd.edu/~julie/HBM2006PosterMini.pdf))。 注意: IMA分解では、結果のIMの独立性が最大化されるのは、時間の経過とともに**非**であるが、ソースと周波数の重みを越える。
 
 <img src="./Docs/figs/IMA.png" width="600"> 
 
-IMAT has been developed by Johanna Wagner, Ramon Martinez-Cancino, and Scott Makeig based on research by Julie Onton and Scott ([Onton & Makeig, 2009](https://www.frontiersin.org/articles/10.3389/neuro.09.061.2009/full), [Onton & Makeig, 2006](https://sccn.ucsd.edu/~julie/HBM2006PosterMini.pdf)) and Matlab scripts by Julie.
+ヨハンダ・ワグナー、ラモン・マルティネズ・カンチーノ、スコット・マシェイグがジュリー・オントンとスコットによる研究をベースとした開発[Onton & Makeig, 2009 _ オントン&メイク](https://www.frontiersin.org/articles/10.3389/neuro.09.061.2009/full), [Onton & Makeig, 2006年, 2006年, 2006年, 2006年, 2006年, 2006年, 2006年](https://sccn.ucsd.edu/~julie/HBM2006PosterMini.pdf)) Julie による Matlab スクリプト。
 
 
-## Installing the IMAT plug-in in EEGLAB
-All plug-ins in EEGLAB, including IMAT, can be installed in two ways. To install IMAT:
+## EEGLABにIMATプラグインをインストールする
+IMATを含むEEGLABのすべてのプラグインは、2つの方法でインストールすることができます。 IMATをインストールするには:
 
-1. **From the EEGLAB Plug-in Manager:** Launch EEGLAB and select menu item **File > Manage EEGLAB Extensions** in the main EEGLAB window. A plug-in manager window will pop up. Look for and select the IMAT plug-in, then press **Install/Update**.
+1. **EEGLABプラグインマネージャから:** EEGLABを起動し、メニュー項目を選択**ファイル> EEGLAB拡張機能**をメインのEEGLABウィンドウで管理します。 プラグインマネージャーウィンドウがポップアップ表示されます。 IMAT プラグインを探し、選択し、**Install/Update** を押します。
 
-2. **From the web:** Download the IMAT plug-in zip file either from [this](https://github.com/sccn/imat) GitHub page (select 'Download Zip') or from [this EEGLAB wiki plug-ins page](https://sccn.ucsd.edu/wiki/Plugin_list_all) (select **IMAT**). Decompress the zip file in the plug-ins folder in the main EEGLAB folder (*../eeglab/plugins/*).
+2. **Webから:** IMATプラグインのzipファイルをダウンロードする [お問い合わせ](https://github.com/sccn/imat) GitHubのページ(「Zip」をダウンロード)または [EEGLAB wikiプラグインページ](https://sccn.ucsd.edu/wiki/Plugin_list_all) (*IMAT**を選択してください) メインEEGLABフォルダ(*../eeglab/plugins/*)のプラグインフォルダにzipファイルを解凍します。
 
-Restart EEGLAB. If the installation is successful, a menu item to call IMAT, **Tools > Decompose IC spectograms by IMAT**, will appear in the EEGLAB menu.
+EEGLABを再起動します。 インストールが成功した場合は、メニュー項目を入力、**ツール> IMAT**によるICスペクトグラムを分解し、EEGLABメニューに表示します。
  
 
-## Requirements
-1. Since IMAT is working on brain sources derived using Independent Component Analysis (ICA) you need to decompose the EEG data into Independent Components (ICs) using ICA decomposition before running IMAT. A description on how to preprocess EEG data and run ICA can be found in the [eeglab Wiki](https://eeglab.org/tutorials/06_RejectArtifacts/RunICA.html#run-ica).
-2. For component selection and clustering it is of advantage to also estimate equivalent current dipole models for the brain-based ICs. 
-3. For automatic selection of components you need to install the EEGLAB plug-in [IC Label](https://sccn.ucsd.edu/wiki/ICLabel)  
-4. For plotting dipole density of clusters you need to install the EEGLAB plug-in FieldTrip lite.   
-5. IMAT can handle either epoched or continuous data. Be aware that for epoched data, the epochs should have length to accommodate at least 3 cycles of the lowest frequency at which IMA is to be computed. 
+## よくある質問
+1. IMATは、独立したコンポーネント分析(ICA)を使用して得られた脳情報源に取り組んでいるので、IMATを実行する前にICA分解を使用して、EEGデータを独立したコンポーネント(IC)に分解する必要があります。 EEGデータの処理とICAの実行方法についての説明は、 [eeglab ウィキ](https://eeglab.org/tutorials/06_RejectArtifacts/RunICA.html#run-ica).
+2. コンポーネントの選択とクラスタリングは、脳ベースのICの同等の電流ダイポールモデルを推定する利点です。 
+3. EEGLABプラグインをインストールするコンポーネントの自動選択のために [ICのラベル](https://sccn.ucsd.edu/wiki/ICLabel)  
+4. EEGLABプラグインのFieldTripライトをインストールする必要がありますクラスターのダイポール密度をプロットするために。   
+5. IMATは、epochedまたは連続したデータを処理できます。 epochedデータの場合、epochはIMAが計算される最低の頻度の少なくとも3つの周期を収容する長さがあるべきであることに注意してください。 
 
-Please refer to the section above on how to install EEGLAB plug-ins. 
+EEGLABプラグインをインストールする方法については、上記のセクションを参照してください。 
 
 
-## Single subject analysis
+## 単一の主題の分析
 
-## Running IMAT
-Before running IMAT, start EEGLAB and load an EEG dataset.
+## 走る IMAT
+IMATを実行する前に、EEGLABを起動し、EEGデータセットをロードします。
 
-To run IMAT on the loaded dataset, launch the Run IMA (*pop_runIMA*) window, either by typing *pop_runIMA* on the MATLAB command line or by calling it from the EEGLAB menu by selecting **Tools > Decompose spectograms by IMA > Run IMA**,  as highlighted in the figure below.
+読み込まれたデータセットでIMATを実行するには、MATLABコマンドラインで*pop_runIMA*を入力するか、EEGLABメニューからそれを呼び出して**Tools >を選択することにより、実行IMA(*pop_runIMA*)ウィンドウを起動します。 IMA > IMA** を実行し、以下の図で強調表示します。
 
 <img src="./Docs/figs/RunIMA.png" width="1000"> 
-In the resulting window (above right) we can specify:
+結果のウィンドウ(右)では、次のように指定できます。
 
-1. The Independent Components (ICs) on which to run IMA - either a list of components (**IC Indices**) or we can choose to use ICLabel to automatically classify ICs into different types (**ICLabel tags**). IMAT allows you to set individual thresholds for different IC categories in selecting ICs using ICLabel.   
-2. Which frequency range in which to compute IMA  (**Freq. limits (Hz)**) 
-3. The frequency scale (**Freq scale**) linear of log scale 
-4. A factor to regulate dimensionality reduction in the time windows of the spectral data using PCA dimension reduction before ICA decomposition (**pcfac**) - the smaller the *pcfac*, the more dimensions will be retained *ndims = (freqsxICs)/pcfac* where *freqs* is the number of estimated frequencies and *ICs* is the number of ICs (default is 7)
-5. Other IMA options (**pop_runima options**) – e.g., which ICA algorithm to use   (see *pop_runima* help for more details)
-
-
-**Running IMA from the command line**
-
-*[EEG, IMA] = pop_runIMA(EEG, 'freqscale', 'log', 'frqlim', [6 120], 'pcfac', 7, 'cycles', [6 0.5], 'selectICs', {'brain'}, 'icatype', 'amica');*
-
-Here we are computing IMA on a single subject's data, selecting ''Brain ICs'' using ICLabel, with parameters for time-frequency decomposition: log frequency scaling, frequency limits: 6 to 120 Hz, wavelet cycles [6 0.5], reducing the dimensions of timewindows
-of the time/frequency decomposition using pfac 7, and using AMICA for ICA decomposition.
+1. IMAを実行する独立したコンポーネント(IC) - コンポーネントのリスト(**IC Indices**)またはICLabelを使用して、ICを異なるタイプに自動的に分類することができます(**ICLabelタグ**)。 IMATは、ICLabelを使用してICを選択する際に、異なるICカテゴリの個々のしきい値を設定することができます。   
+2. IMAを計算する周波数範囲(**Freq.限界(Hz)**) 
+3. ログスケールの周波数スケール(**Freq scale**)リニア 
+4. ICA分解前のPCA寸法削減(**pcfac**)を使用してスペクトルデータの時間ウィンドウの寸法減少を調節する要因 - *pcfac*が小さいほど、より多くの寸法が保持されます *ndims = (freqsxIC)/pcfac* 推定周波数の数であり、*ICs*はICの数です(デフォルトは7です)
+5. その他のIMAオプション(**pop_runimaオプション**) - ICAアルゴリズムを使用する例(詳細は、*pop_runima*ヘルプを参照してください)
 
 
-## The IMA structure
+**コマンドラインからIMAを起動**
+
+*[EEG, IMA] = pop_runIMA(EEG, 'freqscale', 'log', 'frqlim', [6 120], 'pcfac', 7, 'cycles', [6 0.5], 'selectICs', {'brain'}, 'icatype');*
+
+ここでは、ICLabelを使用して「Brain ICs」を選択し、時間周波数分解のためのパラメータで計算IMAです:ログ周波数スケーリング、周波数制限:6〜120 Hz, ウェーブレットサイクル [6 0.5], タイムウィンドウの寸法を減らす
+pfac 7を用いた時間/頻度分解、ICA分解のAMICA使用
+
+
+## IMAの構造
   
-*pop_runIMA* saves the IMA results in an IMA structure, in the same folder as the EEG file it is run on.  
+*pop_runIMA* は IMA 構造で IMA 結果を保存します。EEG ファイルが実行されているフォルダと同じです。  
 
-After running IMA (either from the gui or from the command line) type *IMA* in the Matlab command line to display the IMA structure.  
+IMA(gui またはコマンドラインから) IMA を実行した後、Maatlab コマンドラインで *IMA* を入力して IMA 構造を表示します。  
  
-Alternatively the IMA file can be loaded using   
+IMA ファイルが IMA ファイルをロードすることもできます。   
 
-*IMA = load([EEG.etc.IMA.filepath '/' EEG.etc.IMA.filename], '-mat');*
+*IMA = load([EEG.etc.IMA.filepath '/' EEG.etc.filename], '-mat');*
 
-**IMA structure**
+**IMAの構造* * 必須
 
-The IMA structure has the following fields:
+IMAの構造には次の分野があります:
 
 ```matlab
              wts: [21×21 double]
@@ -108,455 +108,455 @@ The IMA structure has the following fields:
     subjfilepath: {'/Volumes/ExtremeSSD/IMAT_project/IM/PreSTUDY/S03'}
 ```
 
-**Detailed description of IMA outputs:**  
+**IMAの出力の記述:**  
 
-*IMA.wts - unmixing weight matrix of the IMA decomposition*  
-*IMA.sph - unmixing sphere matrix of the IMA decomposition*  
-*IMA.meanpwr - mean power spectra of single ICs*  
-*IMA.timevec - vector of latencies*  
-*IMA.freqvec - vector of frequencies in Hz*  
-*IMA.freqscale - frequency scaling of the computed spectra ('log' or 'linear')*  
-*IMA.freqlim - spectral frequency limits*  
-*IMA.npcs - number of dimensions left in the spectrograms before IMA decomposition*   
-*IMA.complist - independent component indices on which IMA was run on*  
-*IMA.srate - original sampling rate of the EEG data used to compute the spectra*  
-*IMA.ntrials - number of trials used to compute the time-frequency decomposition*  
-*IMA.ntw_trials - number of time windows per trial*  
-*IMA.winsize - window length (in sec) for computing spectra in the time-frequency decomposition*
-*IMA.eigvec - PC backprojection in time*  
-*IMA.pc - PC spectral backprojection*  
-*IMA.timefreq - time-frequency decomposition (spectograms for each IC)*  
-*IMA.timepntCond - number of time points in time-frequency decomposition*  
-*IMA.timevec - vector of latencies in the full length of time-frequency decomposition*  
-*IMA.subjfilename - filename of the .ima file*  
-*IMA.subjfilepath - filepath of .ima file*  
-
-
-## Visualizing IMAT results
-
-There are three main plotting functions for visualizing IMAT results.
-
-1. Superimposed components
-2. Spectral envelope
-3. Time courses
+*IMA.wts - IMA分解の混合重量行列*  
+*IMA.sph - IMA分解の混入球マトリックス*  
+*IMA.meanpwr -単一のICの力スペクトルを意味します*  
+*IMA.timevec - レイテンシーのベクトル*  
+*IMA.freqvec - Hzの周波数のベクトル*  
+*IMA.freqscale - 計算されたスペクトルの周波数スケーリング ('log' または 'linear')*  
+*IMA.freqlim - スペクトル周波数制限*  
+*IMA.npcs - IMAの分解の前に分光器に残される次元の数*   
+*IMA.complist - IMAが実行された独立したコンポーネントのインデックス*  
+*IMA.srate - スペクトルを計算するために使用されるEEGデータの元のサンプリングレート*  
+*IMA.ntrials - 時間頻度分解を計算するために使用される試験の数*  
+*IMA.ntw_trials - トライアルあたりの時間ウィンドウ数*  
+*IMA.winsize - 時間周波数分解における計算スペクトルのウィンドウ長(秒単位)*
+*IMA.eigvec - PCのバックプロジェクト時間*  
+*IMA.pc - PCスペクトルバックプロジェクション*  
+*IMA.timefreq - 周波数分解(各ICのスペクトグラム)*  
+*IMA.timepntCond - 時間頻度分解の時間のポイントの数*  
+*IMA.timevec - 時間頻度分解の完全な長さのレイテンシーのベクトル*  
+*IMA.subjfilename - .imaファイルのファイル名*  
+*IMA.subjfilepath - .imaファイルのファイルパス*  
 
 
-**1. Superimposed Components**  (*pop_plotspecdecomp*) 
+## IMAT結果の可視化
 
-To visualize the IM decomposition, launch **Tools > Decompose spectograms by IMA > Plot IMA results > Superimposed Components**
+IMAT結果を視覚化するための3つの主要なプロット機能があります。
+
+1. 優れたコンポーネント
+2. スペクトル封筒
+3. タイムコース
+
+
+**1. 超imposed コンポーネント** (*pop_plotspecdecomp*) 
+
+IM の分解を視覚化するため、**Tools> を起動します。 IMAによる分解のスペクトル > Plot IMAの結果 > 過激なコンポーネント**
 
 <img src="./Docs/figs/plotspecdecomp.png" width="1000"> 
-In the resulting window (above right) we can specify: 
+結果のウィンドウ(右)では、次のように指定できます。 
 
-1. The type of plot (from the drop down menu)   
-    - IM mode decomposition   
-    - Superimposed IC modes  
-    - Superimposed IM modes    
-2. The frequency range to plot (must be within the frequencies for which IMA was computed)
-3. The ICs and IMs to plot
+1. プロットの種類(ドロップダウンメニューから)   
+    - IMモード分解   
+    - 重ねられた IC モード  
+    - 想定されるIMモード    
+2. プロットする周波数範囲(IMAが計算された周波数の範囲内)
+3. ICとIMをプロットする
 
 
-**IM mode decomposition**   
-Plots spectral templates separately for all IMs and ICs.   
-On the command line enter: *pop_plotspecdecomp(EEG, 'plottype', 'comb')*  
+**IMモード分解* * 必須   
+すべての IM および IC のために別にプロットのスペクトルの型板。   
+コマンドラインで入力: *pop_plotspecdecomp(EEG、'plottype'、'comb')*  
 
 <img src="./Docs/figs/IMA_decomposition.png" width="2000"> 
 
 
-**Superimposed IC modes**   
-Plots superimposed IC spectral templates for each IM.  
-On the command line enter: *pop_plotspecdecomp(EEG, 'plottype', 'ics', 'comps', [1:7], 'factors', [1:8])*  
+**優れたICモード**   
+各 IM の IC の分光テンプレートをプロットします。  
+コマンドラインで入力: *pop_plotspecdecomp(EEG, 'plottype', 'ics', 'comps', [1:7], 'factors', [1:8]*  
 
 <img src="./Docs/figs/SuperimposedICmodes.png" width="1000"> 
 
 
-**Superimposed IM modes**   
-Plots superimposed spectral IM templates for each IC.  
-On the command line enter: *pop_plotspecdecomp(EEG, 'plottype', 'ims', 'comps', [1:6 8], 'factors', [1:8])*
+**Superimposed IMモード**   
+各ICのプロットを重ねたスペクトルIMテンプレート。  
+コマンドラインで入力: *pop_plotspecdecomp(EEG, 'plottype', 'ims', 'comps', [1:6 8], 'factors', [1:8])*
 
 <img src="./Docs/figs/SuperimposedIMmodes.png" width="1000"> 
 
 
-**2. Spectral envelope** (*pop_plotspecenv*)
+**2. スペクトルエンベロープ** (*pop_plotspecenv*)
 
-To visualize the contributions of IMs to the mean log spectrum of an IC, launch **Tools > Decompose spectograms by IMA > Plot IMA results > Spectral envelope**
+IMs の貢献を IC の平均ログスペクトラムに可視化するには、**Tools > を起動します。 IMAによる分解のスペクトル > Plot IMAの結果 > スペクトル封筒* * 必須
 
 <img src="./Docs/figs/plotspecenv.png" width="1000">
-In the resulting window (above right) we can specify: 
+結果のウィンドウ(右)では、次のように指定できます。 
 
-1. The type of plot (from the drop down menu)   
-    - Full envelope: plots the 1st and 99th percentiles of the IM spectral variation
-    - Upper envelope: plots the 99th percentile of the IM spectral variation
-    - Lower envelope: plots the 1st percentile of the IM spectral variation  
-2. The frequency range to plot (must be within the frequencies for which IMA was computed)
-3. Indices of the ICs and IMs to plot
+1. プロットの種類(ドロップダウンメニューから)   
+    - フルエンベロープ: IMスペクトルの変動の第1と第99パーセントをプロット
+    - 上部の封筒: IM のスペクトルのバリエーションの 99 パーセントをプロット
+    - より低い封筒: IM のスペクトルの変動の 1 パーセントをプロットします  
+2. プロットする周波数範囲(IMAが計算された周波数の範囲内)
+3. ICとIMの指標をプロットする
 
-On the command line enter:  
-*pop_plotspecenv(EEG,'comps', [1 2 5], 'factors', [1 2 3 6], 'frqlim', [6 120], 'plotenv', 'full');*
+コマンドラインで:  
+*pop_plotspecenv(EEG、'comps'、[1 2 5]、'factors'、[1 2 3 6]、'frqlim'、[6 120]、'plotenv'、'full');*
 
-Here is an example of plotting IMs **Full envelope** of influence on the IC power spectra. The IC mean log power spectrum is shown as a black trace. Outer light grey limits represent the 1st and 99th percentiles of IC spectral variation associated with the IM. Dark grey areas represent the 1st and 99th percentiles of the PCA-reduced spectral data used in the IMA analysis.
+ここでは、IC パワースペクトラの影響の IMs **Full envelope** をプロットする例を示します。 IC は、ログ出力スペクトラムを黒のトレースとして示します。 アウターライトグレーの限界は、IMに関連するICスペクトルの変動の第1と第99パーセントを表します。 ダークグレーの領域は、IMA分析で使用されるPCA削減スペクトルデータの第1および99パーセントを表しています。
 
 <img src="./Docs/figs/plotenv_EC.png" width="600">
 
 
-**3. Time courses** (*pop_plotIMtimecourse*)
+**3. タイムコース** (*pop_plotIMtimecourse*)
 
-To plot the activation of IMs over time, launch **Tools > Decompose spectograms by IMA > Plot IMA results > Time courses**
+IMの有効化を時間をかけてプロットするには、**Tools>を起動します。 IMAによる分解のスペクトル > Plot IMAの結果 > タイムコース**
 
 <img src="./Docs/figs/plottimecourse.png" width="1000">
-In the resulting window (above right) we can specify: 
+結果のウィンドウ(右)では、次のように指定できます。 
 
-1. The type of plot (from the drop down menu)   
-    - IC spectogram   
-    - Summed IM backprojection  
-    - Combined IC-IM spectogram
-    - IM timecourse    
-2. The frequency range to plot (must be within the frequencies for which IMA was computed)
-3. The ICs and IMs to plot
+1. プロットの種類(ドロップダウンメニューから)   
+    - ICスペクトグラム   
+    - Summed IM プロジェクト  
+    - 複合IC-IMスペクトル
+    - IMタイムコース    
+2. プロットする周波数範囲(IMAが計算された周波数の範囲内)
+3. ICとIMをプロットする
 
-**IC spectogram**   
-Plots the normalized (mean log spectrum removed) IC spectograms.  
-On the command line enter: *pop_plotIMtimecourse(EEG, 'comps', [1 2 6], 'frqlim', [6 120], 'plotICtf', 'on')* 
+**IC スペクトグラム* * 必須   
+正規化(メアンログスペクトラム削除) IC スペクトグラムをプロットします。  
+コマンドラインで入力: *pop_plotIMtimecourse(EEG, 'comps', [1 2 6], 'frqlim', [6 120], 'plotICtf', 'on')* 
  
 <img src="./Docs/figs/ICspectogram.png" width="500">
 
 
-**Summed IM backprojection**  
-Plots the PCA reduced normalized (mean log spectrum removed) IC spectograms on which IMA was computed.    
-To visualize the combined effects of IMs on ICs 1, 2, and 6, on the command line enter: *pop_plotIMtimecourse(EEG, 'comps', [1 2 6], 'frqlim', [6 120], 'plotPCtf', 'on')*
+**約束されたIMのバックプロジェクション**  
+PCA を Plots は、IMA が計算した上で、正規化 (ログスペクトラム削除) IC のスペクトグラムを削減しました。    
+コマンドラインでIC1、2、6にIMの複合効果を視覚化するには、*pop_plotIMtimecourse(EEG、'comps'、[1 2 6]、'frqlim'、[6 120]、'plotPCtf'、'on')*
  
 <img src="./Docs/figs/summedICbackprojection.png" width="500">
 
 
-**Combined IC-IM spectogram**  
-Plots the backprojections of single IM spectral weights across time for single ICs.    
-To visualize the combined effect of IM 1 on ICs 1, 2, and 6, on the command line enter: *pop_plotIMtimecourse(EEG, 'comps', [1 2 6], 'frqlim', [6 120], 'factors', [1], 'plotIMtf', 'on')*
+**組込みIC-IMスペクトル**  
+単一ICのための時間を渡る単一のIMのスペクトル重量のバックプロジェクトをプロットして下さい。    
+コマンドラインでIC1、2、6にIM1の併用効果を視覚化するには、*pop_plotIMtimecourse(EEG、'comps'、[1 2 6]、'frqlim'、[6 120]、'factors'、 [1]、'plotIMtf'、'on')*
 
 <img src="./Docs/figs/IMspectralweights.png" width="500">
 
 
-**IM timecourse**  
-Plots the IM activations across time.  
-To visualize the timecourse of IM 1, 2 and 3, on the command line enter: *pop_plotIMtimecourse(EEG, 'frqlim', [6 120], 'factors', [1 2 3], 'smoothing', 40, 'plotIMtime', 'on')*
+**IMタイムコース**  
+時間の経過とともにIMの活性化をプロットします。  
+コマンドラインでIM 1、2、3のタイムコースを視覚化するには、*pop_plotIMtimecourse(EEG、'frqlim'、[6 120]、'factors'、[1 2 3]、'smoothing'、40、'plotIMtime'、'on')*
 
 <img src="./Docs/figs/IMweightbackprojection.png" width="500">
 
 
-## Multiple conditions and group analysis 
+## 複数の条件とグループ分析 
 
-## Running IMAT 
+## 走る IMAT 
 
-Before running IMAT on multiple conditions or for group analysis, you need to build a STUDY in EEGLAB. You can find information on how to create a STUDY in the [eeglab wiki] (https://sccn.ucsd.edu/wiki/Chapter_02:_STUDY_Creation). For multiple conditions, you will need to create a separate .set file for each condition. E.g., if you want to run IMA on EEG data recorded in two conditions (say, Eyes_open and Eyes_closed), you need to create one EEG file for *Eyes_open* and one EEG file for *Eyes_closed* before creating the STUDY. 
+複数の条件またはグループ分析のためにIMATを実行する前に、EEGLABでSTUDYを構築する必要があります。 [eeglab wiki] で STUDY を作成する方法に関する情報を見つけることができます (https://sccn.ucsd.edu/wiki/Chapter_02:_STUDY_Creation)。 複数の条件では、各条件ごとに別の .set ファイルを作成する必要があります。 例えば、2つの条件(say、Eyes_open、Eyes_closed)で記録されたEEGデータでIMAを実行したい場合は、STUDYを作成する前に、*Eyes_open*と1つのEEGファイル用のEEGファイルを作成する必要があります。 
 
-Before running IMAT, start EEGLAB and load the STUDY set.
+IMATを実行する前に、EEGLABを起動し、STUDYセットをロードします。
 
-To run IMAT on the loaded STUDY, launch the Run IMA (*pop_runIMA_study*) window, either by typing *pop_runIMA_study* on the MATLAB command line or by calling it from the EEGLAB menu by selecting **STUDY > STUDY IMA > Run STUDY IMA**  as highlighted in the figure below. This will run a separate IMA decomposition for each subject in the study. That is, a joint IMA is computed over all the conditions for each single subject in the STUDY.
+ロードされた STUDY で IMAT を実行するには、MATLAB コマンドラインで *pop_runIMA_study* を入力するか、MATLAB コマンドラインで EEGLAB メニューから呼び出すことで、**STUDY > スタディIMA > STUDY IMA** を以下の図に示すように実行します。 それぞれの被験者に対して別々の IMA 分解を実行します。 つまり、ジョイントIMAは、STUDYの各科目の全ての条件で計算されています。
 
 <img src="./Docs/figs/runSTUDYIMA.png" width="1000"> 
-In the resulting window (above right) we can specify:
+結果のウィンドウ(右)では、次のように指定できます。
 
-1. We can choose to use ICLabel to automatically classify ICs into several categories (**ICLabel tags**). To select ICs in specified categories, IMAT allows you to set individual likelihood thresholds for the different categories. Otherwise IMAt will use the ICs specified for analysis when the STUDY was created.
-2. Which frequency range to compute IMA on (**Freq. limits (Hz)**).
-3. The frequency scaling (**Freq scale**), linear or log. 
-4. A factor to regulate dimensionality reduction on the time windows of the spectral data using PCA before spectrogram ICA decomposition (**pcfac**) - the smaller the pcfac, the more dimensions will be retained *ndims = (freqsxICs)/pcfac* where *freqs* is the number of frequencies estimated and *ICs* is the number of ICs (default is 7)
-5. Other IMA options (**pop_runima_study options**) – e.g., which ICA algorithm to use (see *pop_runima_study* help for more details)
+1. ICLabel を使用して、IC を複数のカテゴリに自動的に分類することができます(**ICLabel タグ**)。 指定されたカテゴリでICを選択するために、IMATを使用すると、異なるカテゴリの個々の不利なしきい値を設定することができます。 STUDY が作成されたときに分析のために指定された IC を使用します。
+2. IMAを計算する周波数範囲(**Freq.限界(Hz)**)。
+3. 周波数スケーリング(**Freq scale**)、リニアまたはログ。 
+4. 分光器 ICA 分解前の PCA を用いた分光データの時間ウィンドウの寸法減少を調節する要因(**pcfac**) - pcfac が小さいほど、より寸法が保持されます。 *ndims = (freqsxIC)/pcfac* は、 *freqs* が推定周波数の数であり、 *ICs* は IC の数です(デフォルトは 7 です)
+5. その他のIMAオプション(**pop_runima_studyオプション**) - ICAアルゴリズムを使用する例(詳細は、*pop_runima_study*を参照してください)
 
 
-**Running IMA from the command line**
+**コマンドラインからIMAを起動**
 
-*[STUDY] = pop_runIMA_study(STUDY, ALLEEG, 'freqscale', 'log','frqlim', [6 120],
-                                          'pcfac', 7,
+*[STUDY] = pop_runIMA_study(STUDY、ALLEEG、'freqscale'、'log'、'frqlim'、 [6 120]、
+                                          'pcfac'、7、
                                           'cycles', [6 0.5],
-                                          'selectICs', {'brain'},
-                                          'icatype', 'amica');*
+                                          'selectIC', {'brain'}, 'selectICs', {'brain'}, 'brain'}, 'brain'}, 'brain'}, 'brain'}, 'brain'}, 'brain'}, 'brain'}, 'brain'}, 'brain'}, 'brain'},
+                                          'icatype', 'amica';*
                                           
-Here we are computing IMA on the subject data contained in the STUDY set; a separate IMA decomposition is run on the data of each subject. We are selecting Brain ICs using ICLabel with parameters for the time-frequency decomposition: log frequency scaling, frequency limits: 6 to 120 Hz, wavelet cycles [6 0.5], reducing the dimensions of time windows of the tf decomposition using pfac 7, and using AMICA for the IMA decomposition
+ここでは、STUDYセットに含まれる被写体データに IMA を計算しています。各被写体のデータを別々に IMA 分解します。 周波数分解のパラメータを持つICLabelを使用して脳ICを選択します:ログ周波数スケーリング、周波数制限:6〜120 Hz, ウェーブレットサイクル [6 0.5], pfac 7, tf 分解の時間の窓の寸法を減らし、IMA 分解のための AMICA を使用して
 
 
-## The IMA structure in the STUDY environment
+## STUDY環境におけるIMA構造
   
-*pop_runIMA_study* saves the IMA results in the IMA structure which is associated with the subject-specific EEG files and saved in the same folder as the EEG files it is run on. 
+*pop_runIMA_study* は IMA の結果を IMA 構造に保存します。これは、対象の EEG ファイルと関連し、 EEG ファイルと同じフォルダーに保存されます。 
  
-The filenames of the subject-specific IMA files are saved in:
+対象の IMA ファイルのファイル名が保存されます。
 {% raw %}
-*STUDY.etc.IMA*
+*STUDY等IMA * 必須
    
      subjfilename: {{1×2 cell}}
-     subjfilepath: {{1×2 cell}}
-      imafilename: {'S3_S3_RestECEO.ima'}
-      imafilepath: {'/Volumes/ExtremeSSD/IMAT_project/IM/PreSTUDY/S03'}
-          subject: {'S3'}
-         clustidx: [15×4 double]
-         distance: [15×3 double]
+     サブjfilepath: {{1×2 cell}}
+      imafilename:{'S3_S3_RestECEO.ima'}
+      imafilepath:{'/Volumes/ExtremeSSD/IMAT_project/IM/PreSTUDY/S03'}
+          件名: {'S3'}
+         clustidx: [15×4倍]
+         距離: [15×3倍]
      
 {% endraw %} 
-The subject-specific IMA file can be loaded using   
+対象となる IMA ファイルが読み込まれる   
 
-*IMA = load([ STUDY.etc.IMA.imafilepath{subjectindex} filesep STUDY.etc.IMA.imafilename{subjectindex}], '-mat' );*
+*IMA = ロード([] STUDY.etc.IMA.imafilepath{subjectindex}ファイルep STUDY.etc.IMA.imafilename{subjectindex}], '-mat';*
    
 
-**IMA structure**
+**IMAの構造* * 必須
 
-The IMA structure has the following fields:
+IMAの構造には次の分野があります:
 
-              wts: [21×21 double]
-              sph: [21×21 double]
-          meanpwr: [14×229 double]
-          freqvec: [1×229 double]
-          timevec: [2430×1 double]
-     timevec_cond: {[30×42 double]  [30×39 double]}
-        freqscale: 'log'
+              wts: [21×21 ダブル]
+              sph: [21×21 ダブル]
+          Meanpwr: [14×229 ダブル]
+          freqvec: [1×229 ダブル]
+          timevec: [2430×1 ダブル]
+     timevec_cond: {[30×42倍] [30×39倍]}
+        freqscale: 「ログ」 お問い合わせ
           freqlim: [6 120]
-             npcs: 21
-         complist: [1 2 3 4 5 6 8 9 10 11 17 21 27 38]
-            srate: 500
+             npcs: 21の
+         コンリスト: [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30]
+            レート: 500
           ntrials: [42 39]
-       ntw_trials: 30
-          winsize: 0.5000
-      epochlength: 6
-           eigvec: [2430×21 double]
-               pc: [21×3206 double]
-         timefreq: [2430×3206 double]
-      meanpwrCond: [2×14×229 double]
-      timepntCond: {[1×1260 double]  [1×1170 double]}
-        condition: {'EC'  'EO'}
-        STUDYname: 'RestECEO.study'
-    STUDYfilepath: '/Volumes/IM/PreSTUDY/S03'
-             subj: {'S3'}
-     subjfilename: {'RestEC_S03_ContAMICAdip.set'  'RestEO_S03_ContAMICAdip.set'}
-     subjfilepath: {'/Volumes/IM/PreSTUDY/S03'  '/Volumes/IM/PreSTUDY/S03'}
-         filename: 'S3_RestECEO.ima'
-       precluster: [1×1 struct]
+       ntw_trials:30
+          ウィンサイズ: 0.5000
+      epochlength: 6月6日
+           eigvec: [2430×21 ダブル]
+               PC: [21×3206 ダブル]
+         timefreq: [2430×3206 ダブル]
+      平均pwrCond: [2×14×229 ダブル]
+      timepntCond: {[1×1260 ダブル] [1×1170 ダブル]}
+        条件: {'EC' 'EO'}
+        STUDYname: RestECEO.study お問い合わせ
+    STUDYfilepath: '/ボリューム/IM/PreSTUDY/S03 お問い合わせ
+             サブj: {'S3'}
+     subjfilename: {'RestEC_S03_ContAMICAdip.set' 'RestEO_S03_ContAMICAdip.set'}
+     サブjfilepath: {'/Volumes/IM/PreSTUDY/S03' '/Volumes/IM/PreSTUDY/S03'}
+         ファイル名: 'S3_RestECEO.ima お問い合わせ
+       前方: [1×1 struct]
 
-In this example the IMA file is associated with two EEG files (two conditions for the same subject) since a joint IMA is run over multiple conditions (saved in separate EEG.set files) for a single subject.
-
-
-**Detailed description of IMA outputs:**
-
-*IMA.wts - IMA decomposition wtx unmixing matrix*  
-*IMA.sph - IMA decomposition sphere unmixing matrix*  
-*IMA.meanpwr - single IC mean power spectra*  
-*IMA.timevec - vector of times*  
-*IMA.freqvec - vector of frequencies*  
-*IMA.freqscale - frequency scaling of computed spectra ('log' or 'linear')*  
-*IMA.freqlim - spectral frequency limits*  
-*IMA.npcs - number of dimensions to which the data have been reduced before IMA decomposition*  
-*IMA.complist - component indices on which IMA was run*  
-*IMA.srate - original sampling rate of the EEG data used to compute the spectra*  
-*IMA.ntrials - number of trials used to compute the time-frequency decomposition*  
-*IMA.ntw_trials - number of time windows per trial*  
-*IMA.winsize - window length used to compute spectra in the time-frequency decomposition*  
-*IMA.epochlength - epoch length used to compute time-frequency decomposition in seconds*
-*IMA.eigvec - pc backprojection in time*  
-*IMA.pc - pc spectral backprojection*  
-*IMA.timefreq - time-frequency decompositions (spectograms for each IC)*  
-*IMA.timepntCond - total number of time points in the time-frequency
-                  decomposition of each condition*  
-*IMA.timevec_cond - vector of times for the full length (all conditions) time-frequency
-                   decomposition for each condition*  
-*IMA.meanpwrCond - mean power spectra for each IC and each condition*
-*IMA.condition - names and order of conditions*  
-*IMA.STUDYname - filename of the STUDY the IMA decomposition belongs to*  
-*IMA.STUDYfilepath - filepath of the STUDY the IMA decomposition belongs to*  
-*IMA.subj - subject the IMA decomposition has been comuted on*  
-*IMA.subjfilename - filenames of the EEG data the IMA decomposition has been computed on*  
-*IMA.subjfilepath - filepath of the EEG data the IMA has been computed on*  
-*IMA.precluster - contains the collected spectral templates and the associated dipsources and scalpmaps collected during preclustering.*
+この例では、 IMA が 1 つの主題に対して複数の条件(別の EEG.set ファイルで保存)で実行されているため、 IMA ファイルが 2 つの EEG ファイル (同じ主題の 2 つの条件) に関連付けられています。
 
 
-## Visualizing IMAT results for single subjects in the STUDY and multiple conditions
+**IMAの出力の記述:**
 
-There are three main plotting functions for visualizing IMAT results for single subjects in multiple STUDY conditions. These functions are very similar to the single-subject IMAT visualizations discussed above.
+*IMA.wts - IMA 分解 wtx 混合行列*  
+*IMA.sph - IMA分解の球の混合のマトリックス*  
+*IMA.meanpwr -単一ICは力スペクトルを意味します * 必須  
+*IMA.timevec - 時刻のベクトル*  
+*IMA.freqvec - 周波数のベクトル*  
+*IMA.freqscale - 計算されたスペクトル('log' または 'linear')の周波数スケーリング*  
+*IMA.freqlim - スペクトル周波数制限*  
+*IMA.npcs - IMA が分解する前にデータが削減された寸法の数*  
+*IMA.complist - IMAが実行されたコンポーネントのインデックス*  
+*IMA.srate - スペクトルを計算するために使用されるEEGデータの元のサンプリングレート*  
+*IMA.ntrials - 時間頻度分解を計算するために使用される試験の数*  
+*IMA.ntw_trials - トライアルあたりの時間ウィンドウ数*  
+*IMA.winsize - 時間頻度分解のspectraを計算するのに使用される窓の長さ*  
+*IMA.epochlength - 秒単位で時間の頻度分解を計算するのに使用されるepochの長さ*
+*IMA.eigvec - PCのバックプロジェクト時間*  
+*IMA.pc - PCのスペクトルのバックプロジェクション*  
+*IMA.timefreq - 周波数分解(各ICのスペクトグラム)*  
+*IMA.timepntCond - 時間頻度の時間のポイントの総数
+                  各条件の分解*  
+*IMA.timevec_cond - 完全な長さ(すべての条件)の時間頻度のための時間のベクトル
+                   各条件の分解*  
+*IMA.meanpwrCond - 各ICおよび各条件のための力スペクトルを意味します*
+*IMA.condition - 条件の名前と順序*  
+*IMA.STUDYname - IMA decomposition の STUDY のファイル名 *  
+*IMA.(島) STUDYfilepath - STUDYのファイルパス IMAの分解が属する*  
+*IMA.subj - IMAの分解は*で計算されました  
+*IMA.subjfilename - IMAデコンポジションが計算されたEEGデータのファイル名*  
+*IMA.subjfilepath - IMAが計算されたEEGデータのファイルパス*  
+*IMA.precluster - 収集されたスペクトルのテンプレートと関連するディップソースとスカルプマップを事前に含んだ。 * 必須
 
-1. Superimposed components
-2. Spectral envelope
-3. Time courses
 
-**1. Superimposed Components**  (*pop_plotspecdecomp_study*)
+## STUDYおよび複数の条件の単一の主題のためのIMATの結果を視覚化して下さい
 
-To visualize the IM decomposition for single subjects in the study, launch **STUDY > STUDY IMA > Plot IMA results > Superimposed Components**
+複数のSTUDY条件の単一の主題のためのIMATの結果を視覚化するための3つの主要なプロット機能があります。 これらの機能は、上記の単一のサブジェクトIMAT視覚化に非常に似ています。
+
+1. 優れたコンポーネント
+2. スペクトル封筒
+3. タイムコース
+
+**1. 過激なコンポーネント** (*pop_plotspecdecomp_study*)
+
+単一の被験者のためのIM分解を視覚化するために、**STUDY>を起動します。 スタディIMA > Plot IMAの結果 > 過激なコンポーネント**
 
 <img src="./Docs/figs/plotIMdecompSTUDY.png" width="1000"> 
-In the resulting window (above right) we can specify: 
+結果のウィンドウ(右)では、次のように指定できます。 
 
-1. The index of the subject whose IM decomposition you want to plot
-2. The type of plot (from the drop down menu)   
-    - IM mode decomposition   
-    - Superimposed IC modes  
-    - Superimposed IM modes    
-3. The frequency range to plot (must be within the frequency range in which IMA was computed)
-4. Indices of the ICs and IMs to plot
+1. あなたがプロットしたいIMが分解する主題のインデックス
+2. プロットの種類(ドロップダウンメニューから)   
+    - IMモード分解   
+    - 重ねられた IC モード  
+    - 想定されるIMモード    
+3. プロットする周波数範囲(IMAが計算された周波数範囲内にある)
+4. ICとIMの指標をプロットする
 
-On the command line enter:   
-*pop_plotspecdecomp_study(STUDY, 'plottype', 'comb', 'subject', '3')*  
-*pop_plotspecdecomp_study(STUDY, 'plottype', 'ics', 'subject', '3')*  
-*pop_plotspecdecomp_study(STUDY, 'plottype', 'ims', 'subject', '3')*  
+コマンドラインで:   
+*pop_plotspecdecomp_study(STUDY、'plottype'、'comb'、'subject'、'3')*  
+*pop_plotspecdecomp_study(STUDY、'plottype'、'ics'、'subject'、'3')*  
+*pop_plotspecdecomp_study(STUDY、'plottype'、'ims'、'subject'、'3')*  
 
-The type of plots are the same as for single subjects visualizations, please refer to the section above for more information. 
+プロットの種類は、単一の被写体の視覚化と同じです。詳細については、上記のセクションを参照してください。 
 
-**2. Spectral envelope** (*pop_plotspecenv_study*)
+**2. スペクトルエンベロープ** (*pop_plotspecenv_study*)
 
-To visualize the contribution of IMs added to the mean log spectrum of an IC for a single subject launch **STUDY > STUDY IMA > Plot IMA results > Spectral envelope**
+IMs の貢献を 1 つの主題の進水のための IC の平均ログスペクトルに加える視覚化するため**STUDY > スタディIMA > Plot IMAの結果 > スペクトル封筒* * 必須
 
 <img src="./Docs/figs/envSTUDY.png" width="1000">
-In the resulting window (above right) we can specify: 
+結果のウィンドウ(右)では、次のように指定できます。 
 
-1. The subject index
-2. The type of plot (from the drop down menu)   
-    - Full envelope: plots the 1st and 99th percentiles of IM spectral influence
-    - Upper envelope: plots the 99th percentile of IM spectral influence
-    - Lower envelope: plots the 1st percentile of IM spectral influence  
-3. The frequency range to plot (must be within the frequency range in which IMA was computed)
-4. Indices of the ICs and IMs to plot
+1. 対象となるインデックス
+2. プロットの種類(ドロップダウンメニューから)   
+    - 完全な封筒: IM の分光の影響の第 1 および 99 のパーセントをプロットして下さい
+    - 上部の封筒: IM の分光の影響の 99 パーセントをプロット
+    - より低い封筒: IM の分光の影響の 1 パーセントをプロットして下さい  
+3. プロットする周波数範囲(IMAが計算された周波数範囲内にある)
+4. ICとIMの指標をプロットする
 
-The function plots separate spectral loadings for each condition. Here is an example plotting the **Full envelope** of IMs for two *Eyes_open* and *Eyes_closed* conditions separately. The IC mean log power spectrum is shown as a black trace. The outer light grey limits represent the 1st and 99th percentiles of variation in the IC log spectrum across time. Dark grey areas represent the 1st and 99th percentiles for the PCA-reduced IC spectral data that has been used in the IMA analysis.
+関数は各条件のための別のスペクトルのローディングをプロットします。 ここでは、2つの*Eyes_open*と*Eyes_closed*条件を別々にIMの**フルエンベロープ**をプロットする例です。 IC は、ログ出力スペクトラムを黒のトレースとして示します。 アウターライトグレーの限界は、ICログスペクトルの変動の第1と第99パーセントを表します。 ダークグレーの領域は、IMA解析で使用されているPCA-reduced ICスペクトルデータのための1stと99thのパーセンシーを表しています。
 
-On the command line enter:  
-*pop_plotspecenv_study(STUDY,'comps', [1 2 5], 'factors', [1 2 3 6], 'frqlim', [6 120],'plotcond', 'on', 'subject', '3');*
+コマンドラインで:  
+*pop_plotspecenv_study(STUDY、'comps'、[1 2 5]、'factors'、[1 2 3 6]、'frqlim'、[6 120]、'plotcond'、'on'、'subject'、'3');*
 
 <img src="./Docs/figs/envECSTUDY.png" width="500">
 
 <img src="./Docs/figs/envEOSTUDY.png" width="500">
 
 
-**3. Time courses** (*pop_plotIMtimecourse_study*)
+**3. タイムコース** (*pop_plotIMtimecourse_study*)
 
-To plot IM activations (strength across time) for a given subject, launch **STUDY > STUDY IMA > Plot IMA results > Time courses**
+与えられた主題のためのIMの活発化(時間を渡る強さ)を、進水するために**STUDY> スタディIMA > Plot IMAの結果 > タイムコース**
 
 <img src="./Docs/figs/timecourseSTUDY.png" width="1000">
-In the resulting window (above right) we can specify: 
+結果のウィンドウ(右)では、次のように指定できます。 
 
-1. The subject index
-2. The type of plot (from the drop down menu)   
-    - IC spectogram   
-    - Summed IM backprojection  
-    - Combined IC-IM spectogram
-    - IM time course    
-3. The frequency range to plot (must be within the frequency in which IMA was computed)
-4. Indices of the ICs and IMs to plot
+1. 対象となるインデックス
+2. プロットの種類(ドロップダウンメニューから)   
+    - ICスペクトグラム   
+    - Summed IM プロジェクト  
+    - 複合IC-IMスペクトル
+    - IMタイムコース    
+3. プロットする周波数範囲(IMAが計算された周波数内にある)
+4. ICとIMの指標をプロットする
 
-The function plots a black vertical line at the boundary between conditions
+関数は条件間の境界線で黒い縦ラインを写します
 
-**IC spectogram**   
-Plots the normalized (mean log spectrum removed) IC spectograms.    
-On the command line enter:  *pop_plotIMtimecourse_study(STUDY, 'comps', [1 2 6], 'frqlim', [6 120], 'plotcond', 'on', 'plotICtf', 'on', 'subject', '3')*
+**IC スペクトグラム* * 必須   
+正規化(メアンログスペクトラム削除) IC スペクトグラムをプロットします。    
+コマンドラインで入力: *pop_plotIMtimecourse_study(STUDY, 'comps', [1 2 6], 'frqlim', [6 120], 'plotcond', 'on', 'plotICtf', 'on', 'on', 'on', '3')*
  
 <img src="./Docs/figs/ICspectogramSTUDY.png" width="500">
 
 
-**Summed IM backprojection**  
-Plots the PCA-reduced normalized (mean log spectrum removed) IC spectograms on which IMA was computed.    
-On the command line enter:  *pop_plotIMtimecourse_study(STUDY, 'comps', [1 2 6], 'frqlim', [6 120], 'plotcond', 'on', 'plotPCtf', 'on', 'subject', '3')*
+**約束されたIMのバックプロジェクション**  
+IMAが計算されたPCA-reducedのnormalized (mean logのスペクトラムは取除かれました) ICのスペクトル。    
+コマンドラインで入力: *pop_plotIMtimecourse_study(STUDY, 'comps', [1 2 6], 'frqlim', [6 120], 'plotcond', 'on', 'plotPCtf', 'on', 'on', 'on', 'on', '3')*
      
 <img src="./Docs/figs/IMspectogramSTUDY.png" width="500">
 
 
-**Combined IC-IM spectogram** 
-Plots the backprojection of single IM spectral weights across time for single ICs.
-On the command line enter:  *pop_plotIMtimecourse_study(STUDY, 'comps', [1 2 6], 'factors', [1], 'frqlim', [6 120], 'plotcond', 'on', 
-    'plotIMtf', 'on', 'subject', '3')*
+**組込みIC-IMスペクトル** 
+単一ICのための時間を渡る単一のIMのスペクトル重量のbackprojectionを転がして下さい。
+コマンドラインで入力: *pop_plotIMtimecourse_study(STUDY, 'comps', [1 2 6], 'factors', [1], 'frqlim', [6 120], 'plotcond', 'on', 
+    'plotIMtf'、'on'、'subject'、'3')*
 
 <img src="./Docs/figs/ICIMspectogramSTUDY.png" width="500">
 
 
-**IM timecourse** 
-Plots IM activations across time to visualize differences between conditions.  
-On the command line enter:  *pop_plotIMtimecourse_study(STUDY, 'factors', [1 2 3], 'frqlim', [6 120], 'plotcond', 'on', 'smoothing', 40,
-    'plotIMtime', 'on', 'subject', '3')*
+**IMタイムコース** 
+条件間の相違を視覚化するために時間を渡るPlots IMの活発化。  
+コマンドラインで入力: *pop_plotIMtimecourse_study(STUDY, 'factors', [1 2 3], 'frqlim', [6 120], 'plotcond', 'on', 'smoothing', 40,
+    'plotIMtime'、'on'、'subject'、'3')*
 
 <img src="./Docs/figs/IMtimecourseSTUDY.png" width="500">
 
 
-## Clustering IM spectral templates
+## IMスペクトルテンプレートのクラスタリング
 
-There are three main steps in clustering IM spectral templates across subjects (or sessions)
-1. Preclustering
-2. Clustering
-3. Plotting cluster results
+被写体(またはセッション)を渡るIMスペクトルテンプレートのクラスタリングには3つの主なステップがあります。
+1. プレクラスタ
+2. クラスタリング
+3. プロットクラスター結果
 
 
-**Preclustering**  
+**精密加工* * 必須  
 
-Before clustering we need to select the relevant spectral templates for clustering and ignore the spectral templates that are not active in the frequency range of interest. To select the spectral templates for clustering, launch **STUDY > STUDY IMA > Cluster IMs > Collect templates**
+クラスタリングの前に、関連するスペクトルテンプレートを選択し、関心の周波数範囲でアクティブでないスペクトルテンプレートを無視する必要があります。 クラスタリング用のスペクトルテンプレートを選択するには、**STUDY > STUDY IMA > Cluster IMs > テンプレートを収集* * 必須
 
 <img src="./Docs/figs/Precluster.png" width="1000">
-In the resulting window (above right) we can specify: 
+結果のウィンドウ(右)では、次のように指定できます。 
 
-1. **Freq range** The relevant frequency range: this includes only templates that have peaks in the specified frequency range. If empty templates (active in any frequency range) are chosen, templates with low activations are removed.
-2. **Warp spectra** Whether or not the spectra should be warped to a given peak frequency: this linearly stretches or shrinks frequency templates peaking in the given frequency range (defined by 'Freq. range') to peak at the subject-specific median template peak frequency (within the band defined in 'Freq. range'). Use this function to stretch spectra to a predefined peak (as defined in 'Target peak freq'). Use with caution. Only recommended when a narrow enough frequency band is defined in 'Freq. range', e.g., 8-13 Hz alpha, or etc., though even here it may hide natural IM subclusters (low alpha vs. high alpha).         
-3. **Target peak freq** The target peak frequency specifies the target frequency to stretch spectra to when the 'stretch_spectra' flag is 'on', if 'Target peak freq' is empty, uses the center frequency of the 'Freq. range'
+1. **Freqの範囲** 関連する周波数範囲: これは指定された周波数範囲でピークを持っているテンプレートのみを含みます。 空のテンプレート(任意の周波数範囲でアクティブ)を選択すると、低活性化のテンプレートが削除されます。
+2. **Warp spectra ** スペクトラが与えられたピーク周波数に警告すべきかどうか:このリニアは、与えられた周波数範囲('Freq. range'によって定義される)でピークする周波数テンプレートを、サブジェクト固有のメディアンテンプレートピーク周波数('Freq. range'で定義されたバンド内)に拡張または縮小します。 定義済みのピーク('Target peak freq' で定義されている)に spectra をストレッチするためにこの関数を使用します。 注意して使用して下さい。 'Freq. range'、例えば、8-13で定義される狭い十分な周波数帯がときだけ推薦される Hz のアルファ、または等。ここでも自然なIMサブクラスター(低アルファ vs 高アルファ)を隠すことができます。         
+3. **ターゲットピークfreq** ターゲットピーク周波数は、'stretch_spectra' フラグが 'on' の場合、 'Target peak freq' が空の場合、 'Freq の中央周波数を使用します。 ラインナップ お問い合わせ
 
-On the command line enter: 
-*pop_collecttemplates(STUDY, 'peakrange', [8 12],
+コマンドラインで: 
+*pop_collecttemplates(STUDY、'peakrange'、[8 12])、
                                     'stretch_spectra', 'on',
-                                    'targetpeakfreq', 10,
+                                    'targetpeakfreq'、10、
                                     'plot_templ', 'on');*  
                                     
-Here we collect spectral templates for clustering that have a peak in the alpha frequency band [8 12] Hz, we are choosing to warp the spectra to a 'targetpeakfreq' at 10 Hz. We choose to plot the collected templates.
+ここでは、アルファ周波数帯でピークを持っているクラスタリングのためのスペクトルテンプレートを収集 [8 12] Hz は、10 Hz の 'targetpeakfreq' に spectra を warp することを選びます。 収集したテンプレートのプロットを選択します。
 
-The collected spectral templates and the associated dipsources and scalpmaps are saved in the subject-specific IMA file in *IMA.precluster*. 
+収集されたスペクトルテンプレートと関連するディップソースとスカルプマップは、*IMA.precluster*の対象固有のIMAファイルに保存されます。 
 
-     templates: [15×229 double]
-     IMICindex: [15×2 double]
+     テンプレート: [15×229 ダブル]
+     IMICindex: [15×2倍]
     dipsources: [1×15 struct]
-     scalpmaps: [15×67×67 double]
+     scalpmaps: [15×67×67倍]
        
-*IMA.precluster.IMICindex* contains the indices of the spectral templates collected for clustering. The first column are the IM indices, the second column the indices of ICs that have relevant spectral loadings on these IMs.  
+*IMA.precluster.IMICindex*には、クラスタリング用に収集されたスペクトルテンプレートのインデックスが含まれています。 最初の列は、IM指数、第二列は、これらのIMに関連スペクトルローディングを持っているICのインデックスです。  
        
        
-**Cluster IM spectral templates** (*pop_clusterIMAtemplates*)
+**Cluster IMスペクトルテンプレート** (*pop_clusterIMAtemplates*)
 
-To cluster the IM spectral templates collected in the previous step, launch **STUDY > STUDY IMA > Cluster IMs > Cluster IMs**   
+前のステップで収集したIMのスペクトルテンプレートをクラスターするには、**STUDY > を起動します。 STUDY IMA > クラスタ IM > クラスタ メニュー   
 
 <img src="./Docs/figs/IMclustering.png" width="1000">  
-In the resulting window (above right) we can specify: 
+結果のウィンドウ(右)では、次のように指定できます。 
 
-1. **Method** The clustering method; currently only k-means is implemented.
-2. **Number of clusters** The number of clusters to compute          
-3. **Number of PCs** The number of IM spectral template principal dimensions to retain for clustering
-4. **Freq limits** The frequency limits to restrict clustering to (such as an alpha frequency range of [8 14] Hz). The default is the whole frequency range on which IMA was computed
-5. **Complement clustering with dipole location** Use IC equivalent dipole location in addition to spectral template matching in clustering
-6. **Template weight** The weight to assign to spectral templates for clustering when clustering on spectral templates and dipole locations. A number between 1 and 20, default is 1. A larger number will give more weight to spectral templates compared to dipole locations.
-7. **Dipole weight**  The weight to assign to dipole locations for clustering when clustering on spectral templates and dipole locations. A number between 1 and 20, default is 1. A larger number will give more weight to dipole locations compared to spectral templates
+1. **方法** 現在k-meansのみが実装されています。
+2. **クラスターの数** 計算するクラスターの数          
+3. **PC数** クラスタリングのために保持する IM のスペクトルのテンプレートの主な寸法の数
+4. **料金制限** 周波数はクラスタリングを制限するために制限します([8 14]のアルファ周波数範囲など) Hz)。 デフォルトはIMAが計算された全周波数範囲です
+5. **ダイポールの位置と補完的なクラスタリング** クラスタリングのスペクトルテンプレートマッチングに加えて、IC等分位位置を使用する
+6. **重量を制限して下さい** スペクトルのテンプレートとダイポールの場所のクラスタリング時にクラスタリングするためのスペクトルテンプレートに割り当てる重量。 1と20の間の数字は1です。 より大きな数字は、ダイポールの位置と比較して、スペクトルテンプレートにより多くの重量を与えます。
+7. **ダイポール重量** 分光テンプレートとダイポールの場所のクラスタリング時にダイポールの位置を割り当てる重量。 1と20の間の数字は1です。 より大きな数字は、スペクトルテンプレートと比較してダイポールの位置により多くの重量を与えます
 
-On the command line enter: 
-*[STUDY] = pop_clusterIMAtemplates(STUDY, ALLEEG, 'nclust', 5, 'pcs', 10, 'freqlim', [8 14],'dipole_locs', 'on', 'weightSP', 5, 'weightDP', 2);*
+コマンドラインで: 
+*[STUDY] = pop_clusterIMAtemplates(STUDY、ALLEEG、'nclust'、5、'pcs'、10、'freqlim'、[8 14]、'dipole_locs'、'on'、'weightSP'、5、'weightDP'、2);*
 
-Here we are clustering the previously collected spectral templates into 5 clusters, retaining 10 IM spectral template principal dimensions for clustering. We are choosing to cluster on the frequency range 8-14 Hz. We also choose to implement clustering to include IC equivalent dipole location (meaning clustered IMs should be close both in frequency template and in brain location). Here we assign relative weighting 5 for spectral templates and  2 for dipole locations. 
+ここでは、以前に収集したスペクトルテンプレートを5クラスターに集約し、クラスタリング用の10 IMスペクトルテンプレートのプリンシパル寸法を保持しています。 周波数範囲 8-14 Hz のクラスターを選択します。 また、IC等分岐位置(クラスター化されたIMは周波数テンプレートと脳位置の両方を閉じる必要があります)を含むクラスタリングを実装することを選択します。 ここでは、スペクトルテンプレートの相対的な重み 5 と 2 のダイポールの場所を割り当てます。 
 
-The cluster indices and the distances (in the constructed clustering measure space) of the IM spectral templates from each cluster centroid are saved in *STUDY.etc.IMA*. 
+各クラスターの遠心分離機からのIMのスペクトルの型板のクラスターのインデックスそして間隔(組み立てられた集約測定スペースで)は*STUDY.etcで貯えられます。 お問い合わせ 
    
-     clustidx: [15×4 double]
-     distance: [15×3 double]
+     clustidx: [15×4倍]
+     距離: [15×3倍]
      
-*STUDY.etc.IMA.clustidx* has 4 columns: column 1 gives subject indices, column 2 IM indices, column 3 IC indices, and column 4 cluster indices - which cluster the IM spectral template was assigned to.
-*STUDY.etc.IMA.distance* has as many columns as clusters. Each column contains the euclidean distances (in the constructed clustering space) of the spectral IM templates to the specific cluster centroid.
+*STUDY.etc.IMA.clustidx*は4つのコラムを持っています:コラム1は主題のインデックス、コラム2 IMのインデックス、コラム3のICのインデックスおよびコラム4のクラスターのインデックスを与えます-それはimの分光の型板を割り当てました。
+*STUDY.etc.IMA.distance*はクラスターとして多くのコラムがあります。 各列には、特定のクラスターのセンテロイドにスペクトルIMテンプレートのeuclidean距離(構築されたクラスタリングスペース内)が含まれています。
 
 
-**Plotting cluster results**
+**プロットクラスター結果**
 
-To plot cluster results, launch **STUDY > STUDY IMA > Cluster IMs > Plot clusters**  
+クラスターの結果をプロットするには、**STUDY > STUDY IMA > クラスター IM > プロットクラスター**  
 
 <img src="./Docs/figs/PlotClusters2.png" width="1000">  
-In the resulting window (above right) we can specify: 
+結果のウィンドウ(右)では、次のように指定できます。 
 
-1. **IM clusters** Which clusters to plot
-2. **Freq limits** Spectral template frequency range to plot (lo, hi)            
-3. **Freq scale** The frequency scaling (linear or log) to use in plotting the spectral templates
-4. **Templates** Spectral template clusters
-5. **Dipoles** Flag plotting of dipole densities of spectral template clusters ('on', 'off')
-6. **Scalp maps** Flag plotting of scalp maps of spectral template clusters ('on', 'off')
+1. **IMクラスター** プロットするクラスター
+2. **Freqの限界**のプロット(lo、こんにちは)へのスペクトルの型板の頻度範囲            
+3. **Freqのスケール** スペクトルテンプレートのプロットに使用する周波数スケーリング(線形またはログ)
+4. **テンプレート**スペクトラムテンプレートクラスター
+5. **Dipoles** スペクトルテンプレートクラスター('on'、'off')のダイポール密度のフラグプロット
+6. **スカルプマップ** スペクトルテンプレートクラスター('on'、'off')のスカルプマップのフラグプロット
 
-On the command line enter:   
-*pop_plotIMAcluster(STUDY, 'clust', [1 2 3], 'freqlim', [6 40],'freqscale', 'log','plottemplates', 'on', 'plotscalpmaps', 'on', 'plotdipsources', 'on')*
+コマンドラインで:   
+*pop_plotIMAcluster(STUDY、'clust'、[1 2 3]、'freqlim'、[6 40]、'freqscale'、'log'、'plottemplates'、'on'、'plotscalpmaps'、'on'、'plotdips'、'on')*
 
 
-**Templates**
+**テンプレート**
 
 <img src="./Docs/figs/Clusterspectra_RestEC.png" width="500">  
 
 
-**Dipoles**
+**ダイポール* * 必須
 
 <img src="./Docs/figs/Cluster1dipoledensity_RestEC.png" width="500">
 

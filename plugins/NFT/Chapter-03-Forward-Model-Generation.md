@@ -7,195 +7,195 @@ render_with_liquid: false
 title: Chapter-03-Forward-Model-Generation
 long_title: Chapter-03-Forward-Model-Generation
 ---
-Forward Problem: Boundary Element Method
+フォワードの問題: 境界要素法
 ----------------------------------------
 
-The boundary element method (BEM) is a numerical computational technique
-for solving partial differential equations. In electro-magnetic source
-imaging (EMSI) of brain activity, it is used to solve the forward
-problem using realistic head models. When using BEM in head modeling,
-the head is assumed to be composed of uniform conductivity regions
-(i.e., scalp, skull, brain etc.) and the tissue boundaries are
-represented by triangular surface elements. The details of the BEM
-implementation used in this toolbox may be found in \[2\] and \[3\].
-This section describes the BEM Toolbox.
+境界要素法(BEM)は数値計算技術です。
+部分的な差分を解決するため。 電磁波の源で
+脳活動のイメージング(EMSI)、前方を解決するために使用されます
+現実的なヘッド モデルを使用して問題。 ヘッドモデリングでBEMを使う場合、
+頭部は均一伝導性の区域で構成されると仮定されます
+(例、頭皮、頭骨、脳など)および組織の境界は
+三角形の表面要素によって表される。 BEMの詳細
+このツールボックスで使用される実装は \[2\] と \[3\] にあります。
+このセクションでは、BEM Toolboxについて説明します。
 
--   Press ‘Forward Model Generation’ on main menu.
-
-<!-- -->
-
--   Load a mesh from file. It is also possible to load a model or a
-    session if you have created them previously.
+-   メインメニューの「Forward Model Generation」を押します。
 
 <!-- -->
 
--   Enter model name and conductivity values and press on ‘Create Model’
-    button.
+-   ファイルからメッシュをロードします。 モデルやモデルをロードすることも可能です
+    以前に作成したセッション。
 
 <!-- -->
 
--   When the model is created, enter session name and load sensors.
-    Sensors may be loaded from a list of nodes (.dat file) or from mesh
-    coordinates (.sens file).
+-   モデル名と導電性値を入力し、「Create Model」を押します。
+    ボタン。
 
 <!-- -->
 
--   Press on ‘Generate Transfer Matrix’.
+-   モデルが作成されると、セッション名とロードセンサーを入力します。
+    センサーは、ノード(.datファイル)またはメッシュから読み込むことができます。
+    座標(.sensファイル)
 
 <!-- -->
 
--   Load source space from .dip file. It should be a number of dipoles
-    by 6 matrix, giving the location and orientation of the dipoles.
+-   「転送マトリックスの生成」を押します。
 
 <!-- -->
 
--   Press on ‘Compute Lead Field Matrix’.
+-   .dipファイルからソーススペースをロードします。 ダイポールの数でなければなりません
+    6つの行列によって、ダイポールの位置と方向を与えます。
 
 <!-- -->
 
--   You may plot potential distribution for the nth dipole.
+-   「コンピュートリードフィールドマトリックス」を押します。
 
-The potentials are save under ‘session_name’_LFM as a Matlab .mat file.
-The user interface is shown in Figure 12.
+<!-- -->
+
+-   あなたは、nthダイポールの潜在的な分布をプロットすることができます.
+
+'session_name'_LFM を Matlab .mat ファイルとして保存します。
+ユーザインタフェースは図12で表示されます。
 
 <center>
 
-![Figure 12: Interface for Forward Model Generation.](NFT_forward_ui.png "wikilink")
+![図12:フォワードモデル生成のためのインターフェイス。](NFT_forward_ui.png "wikilink")
 
 </center>
 
-A forward problem solution using BEM consists of the following steps:
+BEMを用いたフォワードの問題ソリューションは以下の手順で構成されています。
 
-1.  Compute the BEM matrices for a given head model.
-2.  Compute the transfer matrix for a given set of electrodes.
-3.  Compute the source vector for a given set of dipoles.
-4.  Obtain the electrode potentials due to the dipole activity.
+1.  与えられたヘッドモデルのためのBEMのマトリックスを計算して下さい。
+2.  特定の電極のセットの転送行列を計算します。
+3.  特定のセットのダイポールのソースベクトルを計算します。
+4.  ダイポール活動により電極の電位を取得。
 
-The BEM solver that is interfaced from MATLAB to compute the BEM
-matrices is described below. Then, the data structures and functions
-used by the BEM toolbox are described.
+MATLABからBEMを計算するBEMソルバー
+matricesは以下のとおりです。 次に、データ構造と機能
+BEMツールボックスで使用しているものが記載されています。
 
-The BEM Solver
+BEMソルバー
 --------------
 
-The BEM solver is written in C++ and is an executable program that is
-started from MATLAB with correct parameters to compute and save BEM
-matrices. The solver is called transparently from the MATLAB and need
-not be called explicitly by the user of the toolbox. However a
-familiarity with basic options and the program outputs would be useful.
+BEMソルバーはC++で書かれており、実行可能なプログラムです。
+MATLAB を始め、正しいパラメータで BEM を計算し保存
+マトリクス。 ソルバーはMATLABから透明に呼び出され、
+ツールボックスのユーザが明示的に呼び出されない。 しかし、
+基本的なオプションとプログラムの出力に精通したほうが便利です。
 
 $ bem_matrix
 
 
 
-Generate BEM coefficient matrices, including inner matrices for IPA
+BEM係数を生成します。, IPAのための内部のマトリックスを含みます
 
-Usage: bem_matrix \[-f matname\] \[-m magsens\] \[-o mod\] meshname
+使用法: bem_matrix \[-f の matname\] \[-m の magsens\] \[-o mod\] 網の名前
 \[s=sig ...\]
 
 
 
--f: save matrices to matname.\[cdi\]mat (default meshname)
+-f: matrices を matname に保存します。\[cdi\]mat (既定のメッシュ名)
 
--m: magnetic sensor file name
+-m:磁気センサーファイル名
 
--o: interface to use with modified equations
+-o:変更された方程式の使用するインターフェイス
 
-(1: outer, 0: to disable)
+(1:外側、0:無効化)
 
-s=sig: s:region (1: outer), sig: conductivity
+s=sig: s:region (1: 外), sig: 導電性
 
 
 
-(default conductivity: 0.2 for all regions)
+(既定の導電率:全地域0.2)
 
-As can be seen from the usage text, the bem_matrix application can
-generate and save BEM matrices for computing potential and magnetic
-fields. It can use the isolated problem approach (IPA) to compansate for
-the loss of accuracy due to the low conductivity of the skull.
+使用テキストから見ることができるように、bem_matrixアプリケーションは
+計算の可能性と磁気のためのBEMのマトリックスを生成し、保存します
+フィールド。 分離された問題のアプローチ(IPA)を使用して、
+頭蓋骨の低い伝導性による精度の低下。
 
-BEM Matrices
+BEMのマトリックス
 ------------
 
-When IPA is not used, only the BEM Coefficient matrix is generated for
-EEG. It’s saved with the extension .cmt. If IPA is applied, two more
-matrices are generated and saved: .dmt and .imt.
+IPAが使用されていない場合、BEM係数の行列のみが生成されます。
+お問い合わせ 拡張子.cmtで保存されます。 IPAが適用される場合、2つ以上
+matrices が生成され、保存されます: .dmt と .imt.
 
-In addition to the matrices created by the BEM solver, an additional
-matrix is the inverse of the Inner Coefficient Matrix. This matrix is
-the inverse of the imt matrix. It is inverted using the builtin MATLAB
-function inv() and saved on disk using the extension .iinv.
+BEMソルバーによって作成されたマトリックスに加えて、追加
+マトリックスは内部の係数のマトリックスの逆です。 この行列は
+imt のマトリックスの逆。 ビルトインMATLABを使用して反転
+関数 inv() と拡張子 .iinv を使用してディスクに保存します。
 
-The Transfer Matrix
+トランスファー・マトリックス
 -------------------
 
-The transfer matrix makes it possible to have very fast forward problem
-solutions. It is computed by inverting the selected columns of the
-coefficient matrix. In the toolbox, the inversion is done in MATLAB
-using the GMRES iterative solver. The resulting matrix is saved to the
-disk using the filename extension .tmte.
+転送行列は、非常に高速転送の問題を持つことを可能にします
+ソリューション 選択した列を反転させることで計算されます
+係数のマトリックス。 ツールボックスでは、MATLAB で inversion を実行します。
+GMRESの反復的な解決装置を使用して。 結果の行列が保存されます
+ファイル名拡張子 .tmte を使用してディスク。
 
-Since the matrix generation can take a long time for large meshes, an on
-disk copy is always present so that future computations can be made
-without generating the matrices from scratch. This is true for all the
-BEM and transfer matrices generated by the solver and by MATLAB. The
-matrices are loaded into MATLAB as needed, and can be cleared by the
-user as necessary to save memory. An additional advantage of this
-approach is that the matrices can be created externally (manually, at an
-other computer, etc.) and used by the toolbox.
+行列生成は大きなメッシュに長時間かかる可能性があるため、
+ディスクコピーは、将来の計算ができるように常に存在します
+傷からマトリを発生させない。 これはすべてのために本当です
+BEMは、ソルバーとMATLABによって生成されたマトリックスを転送します。 ふりがな
+必要に応じてMATLABにmatricesがロードされ、
+メモリを保存するために必要なユーザー。 この追加の利点
+アプローチは、行列が外部に作成できるということです(マニュアルでは、
+他のコンピュータ等)およびツールボックスによって使用される。
 
-Structures
+構造体
 ----------
 
-The BEM toolbox functions are implemented on three main data structures
-which represent information available at different stages of the forward
-problem solution procedure. The structures correspond to the BEM Mesh,
-the Head Model which is a combination of the mesh, conductivities and
-solver parameters, and a Session which specifies the sensor (electrode)
-positions used to acquire the data. The structures are described below:
+BEMツールボックスは3つの主要なデータ構造で実装されています。
+さまざまなステージで利用できる情報を表す
+問題解決のプロシージャ。 BEMメッシュに対応した構造
+メッシュ、導電性の組み合わせであるヘッドモデル
+ソルバーパラメータと、センサー(電極)を指定するセッション
+データを取得するために使用される位置。 構造は以下のとおりです。
 
-### The Mesh Structure
+### メッシュ構造
 
-Mesh structure contains coordinates and connectivity and boundary
-information from the mesh file.
+メッシュ構造には、座標と接続と境界が含まれています
+メッシュファイルからの情報。
 
-### The Model Structure
+### モデル構造
 
-The model structure includes the mesh structure and conductivity values
-for the mesh tissue classes and the index of the modified boundary, for
-use with IPA. If the index is set for smaller than 1, then IPA is not
-applied. If, for example, it’s set for 3 and there are 4 tissue classes,
-then 3rd and the 4th layers are the inner layers and the RHS vector is
-modified.
+モデル構造にはメッシュ構造と導電性値が含まれています。
+メッシュ組織のクラスと修正境界のインデックスのために、
+IPAでの使用。 1よりも小さいインデックスが設定されている場合、IPAは
+応用。 たとえば、3 で設定して、4 個の組織クラスがある場合、
+その後3rdと4thレイヤーは内部レイヤーであり、RHSベクトルは
+変更しました。
 
-Furthermore, as the model matrices (.cmt, .dmt, .imt and .iinv) are
-loaded, they are stored inside the model structure as fields of the same
-name. The name of the model is used as the base filename when loading
-the model matrices.
+また、モデルマトリクス(.cmt、.dmt、.imt、.iinv)は、
+読み込み、同じフィールドとしてモデル構造の中に保存されます。
+名前。 モデルの名前は、ロード時にベースファイル名として使用されます。
+モデルのマトリックス。
 
-### The Session Structure
+### セッション構成
 
-The session structure represents a ‘recording session’. It includes the
-model structure and a matrix relating the positions of the sensors on
-the scalp to the nodes of the mesh (Smatrix). Each electrode is a
-weighted sum of the nodes of the element. The weights are determined by
-the element shape functions. The format of the Smatrix is as follows:
-\[electrode_index node_index weight\]. The rows of the matrix must be
-sorted by electrode_index and there can be more than one row with a
-given electrode index.
+セッション構造は「録画セッション」を表しています。 それは含んでいます
+モデル構造とセンサーの位置に関するマトリックス
+メッシュ(Smatrix)のノードへのスカルプ。 各電極は
+要素のノードの合計を重くしました。 体重は重量によって決定されます
+要素形状関数。 Smatrixの形式は次のとおりです。
+\[electrode_index node_index 重量\] を指定します。 行列の行は必須
+電極_index でソートされ、複数の行が 1 つ以上ある
+与えられた電極の索引。
 
-When the transfer matrix (.tmte) is loaded, it is stored inside the
-session structure. The name of the session is used as the base filename
-when saving and loading the transfer matrix.
+転送行列(.tmte)が読み込まれると内部に格納されます
+セッション構造。 セッションの名前は、ベースファイル名として使用されます。
+転送行列を保存してロードするとき。
 
 ------------------------------------------------------------------------
 
-References:
+参考文献:
 
-\[2\] Z. Akalin Acar, N.G. Gencer, An advanced BEM implementation for
-the forward problem of Electro-magnetic source imaging, Physics in Med.
-and Biol., vol. 49(5), 2004, pp 5011-28.
+\[2\] Z. アカリン・アカル、N.G. Gencer、 高度なBEM実装
+電磁波の発生源のイメージング、Medの物理のフォワードの問題。
+とBiol., Vol. 49(5), 2004, PP 5011-28.
 
-\[3\] N.G. Gencer, Z. Akalin Acar, Use of the isolated problem approach
-for multi-compartment BEM models of electro-magnetic source imaging,
-Physics in Med. and Biol., vol. 50, 2005, pp 3007-22.
+\[3\] N.G. Gencer、Z.Akalin Acar、 隔離された問題のアプローチの使用
+多部品 BEM のモデルのための電磁石の源のイメージ投射、
+Med.とBiol.の物理, vol. 50, 2005, PP 3007-22.

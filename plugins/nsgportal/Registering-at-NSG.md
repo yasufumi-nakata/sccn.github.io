@@ -7,15 +7,15 @@ render_with_liquid: false
 title: Registering-at-NSG
 long_title: Registering-at-NSG
 ---
-There are two ways to access to NSG: via NSG portal and through the command line interface NSG-R. The latter one uses its core curl commands to communicate with NSG and is the interface used by the nsgportal plug-in. Since both ways are interfaces to NSG, If you have already registered to NSG, you can use the same login and password for NSG-R. For the REST interface, refer to the [NSG REST documentation](https://nsgr.sdsc.edu:8443/restusers/documentation).
+NSGポータル経由でNSGにアクセスし、コマンドラインインターフェイスNSG-Rを介して2つの方法があります。 後者は、そのコアカールコマンドを使用して、NSG と通信し、nsgportal プラグインで使用されるインタフェースです。 NSG のインターフェイスは両方なので、既に NSG に登録された場合、NSG-R のログインとパスワードは同じです。 REST インターフェイスについては、 [NSG REST ドキュメント](https://nsgr.sdsc.edu:8443/restusers/documentation).
 
-The first step to using the Open EEGLAB Portal is to create an NSG account [HERE](https://www.nsgportal.org/gest/reg.php) (or by clicking on "Register account" on the NSG home page).
+Open EEGLABポータルを使用する最初のステップは、NSGアカウントを作成することです [お問い合わせ](https://www.nsgportal.org/gest/reg.php) (またはNSGホームページの「登録」をクリック)
 
 <center>
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/500px-NSG11.png?raw=true" alt="drawing" width="500"/>
 </center>
 
-After your account is approved by the NSG team (typically within 2 days), the second step is to enter your NSG user credentials [HERE](https://nsgdev.sdsc.edu:8443/portal2/login!input.action) (else select, "Access NSG portal" on the [NSG home page](http://www.nsgportal.org/)).
+アカウントがNSGチーム(通常2日以内に)によって承認されると、2番目のステップはNSGユーザー資格情報を入力することです [お問い合わせ](https://nsgdev.sdsc.edu:8443/portal2/login!input.action) (「アクセスNSGポータル」を選択) [NSGホームページ](http://www.nsgportal.org/)).
 
 
 <center>

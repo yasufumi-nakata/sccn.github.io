@@ -7,43 +7,43 @@ render_with_liquid: false
 title: Using-pop_nsg-command-line-tools-in-your-EEGLAB-plug-in
 long_title: Using-pop_nsg-command-line-tools-in-your-EEGLAB-plug-in
 ---
-# Using pop_nsg command line tools in your EEGLAB plug-in
+# あなたの EEGLAB プラグインで pop_nsg コマンドラインツールを使用する
 
- The goal of this tutorial is to demonstrate the use of *pop_nsg* command line tools (see [Tutorial 2](https://github.com/sccn/nsgportal/wiki/Creating-and-managing-an-NSG-job-using-pop_nsg-from-the-command-line)) to implement EEGLAB plug-ins equiped with NSG capabilities. This is demonstrated here by implementing a sample plug-in using *pop_nsg* command line tools. The plug-in implemented for this purpose (*pop_icansg*)  is a light-weight version of *pop_runica* implemented to compute ICA (using a method selected from two options) on a loaded EEG dataset. However here, instead of showing the many options and parameters available in *pop_runica*, *pop_icansg* focuses on enabling some standard *pop_nsg* command line options to run via NSG, thereby potentially reducing compute time. Below we discuss each of the steps involved in this process.
+ このチュートリアルの目的は、*pop_nsg*コマンドラインツールの使用を実証することです(参照) [チュートリアル2](https://github.com/sccn/nsgportal/wiki/Creating-and-managing-an-NSG-job-using-pop_nsg-from-the-command-line)) NSG 機能を搭載した EEGLAB プラグインの実装 *pop_nsg* コマンドラインツールを使用してサンプルプラグインを実装することでここに実証されます。 この目的のために実装されたプラグイン(*pop_icansg*)は、ロードされたEEGデータセットでICA(2つのオプションから選択された方法を使用して)を計算するために実装された*pop_runica*の軽量版です。 しかし、ここには、*pop_runica* で利用可能な多くのオプションとパラメーターを表示する代わりに、*pop_icansg* は、NSG 経由で実行する標準の *pop_nsg* コマンドラインオプションを有効にすることに重点を置いています。 以下は、このプロセスに関与する各手順について説明します。
   
-   First, you will need to specify your NSG credential using *pop_nsginfo*, either via the EEGLAB menu selection **Tools > Send to NSG portal > Change NSG portal settings and credentials** or by calling the function *pop_nsginfo* on the command line. Make sure also that you have the *nsgportal* plug-in folder under *../eeglab/plugins*.
+   まず、EEGLABメニュー選択で*pop_nsginfo*を使用してNSGクレデンシャルを指定する必要があります**ツール > NSGポータルへ NSGポータルの設定と認証情報** またはコマンドラインで関数 *pop_nsginfo* を呼び出すことで変更します。 *../eeglab/plugins* の下の *nsgportal* のプラグインのフォルダーがあることを確認してください。
 
-## The sample plug-in *pop_icansg*
+## サンプルプラグイン *pop_icansg*
   
-The example plug-in (*pop_icansg*) implemented for this tutorial is distributed with the *nsgportal* plug-in files and can be found in *nsgportal/demos/demo_plugin/icansg/*. To install the plug-in, move the folder containing the plug-in (*icansg*) to *../eeglab/plugins* and restart EEGLAB.
+このチュートリアルで実装されているプラグイン(*pop_icansg*)は、*nsgportal*プラグインファイルで配布され、*nsgportal/demos/demo_plugin/icansg/*で見つけることができます。 プラグインをインストールするには、プラグイン(*icansg*)を含むフォルダを*./eeglab/plugins*に移動し、EEGLABを再起動します。
 
-In the plug-in folder you will find two  files, [eegplugin_icansg.m](https://github.com/sccn/nsgportal/blob/master/demos/demo_plugin/icansg/eegplugin_icansg.m) and [pop_icansg.m](https://github.com/sccn/nsgportal/blob/master/demos/demo_plugin/icansg/pop_icansg.m).
- The first function enables the user to launch the plug-in from the EEGLAB menu and provides the current EEG dataset structure (the dataset currently loaded in EEGLAB) as an input to *pop_icansg.m*. An explanation of the syntax used in this function can be found in [this EEGLAB wiki section](https://sccn.ucsd.edu/wiki/A07:_Contributing_to_EEGLAB#How_to_write_an_EEGLAB_extension)  
+プラグインフォルダには2つのファイルがあります。 [eegplugin_icansg.m ディレクティブ](https://github.com/sccn/nsgportal/blob/master/demos/demo_plugin/icansg/eegplugin_icansg.m) そして、 [ログイン](https://github.com/sccn/nsgportal/blob/master/demos/demo_plugin/icansg/pop_icansg.m).
+ 最初の関数は、EEGLABメニューからプラグインを起動し、現在のEEGデータセット構造(現在EEGLABに読み込まれたデータセット)を*pop_icansg.m*に入力することができます。 この関数で使用される構文の説明は、 [この EEGLAB wiki セクション](https://sccn.ucsd.edu/wiki/A07:_Contributing_to_EEGLAB#How_to_write_an_EEGLAB_extension)  
  
-The second function will be the focus of this tutorial. The aim of the plug-in is to perform ICA decomposition via NSG using one of two implemented decomposition approaches, 'runica' or 'jader', that performs Infomax or JADE ICA decomposition, respectively. If called from the EEGLAB menu by manually selecting the EEGLAB GUI menu item specified in the *eegplugin_icansg* function (see figure below), the plug-in will use the current EEG dataset structure loaded into EEGLAB, and will pop up an option entry window asking which ICA method to use. The figure below shows the *eegplugin_icansg* menu item selected and the *pop_icansg* window popped up as a result. 
+2番目の関数はこのチュートリアルの焦点になります。 プラグインの目的は、それぞれインフォマックスまたはJADE ICAの分解を実行する2つの実装された分解アプローチを使用して、NSGを介してICA分解を実行することです。 *eegplugin_icansg*関数で指定されたEEGLAB GUIメニュー項目を手動で選択することにより、EEGLABメニューから呼び出されると(下の図を参照)、プラグインはEEGLABに読み込まれた現在のEEGデータセット構造を使用し、ICAメソッドを使用するオプションのエントリウィンドウが表示されます。 下の図は、選択した*eegplugin_icansg*メニュー項目と、*pop_icansg*ウィンドウがポップアップして表示されます。 
 
 <center>
 <img src="https://github.com/sccn/nsgportal/blob/master/docs/img/plugin_runicansg.jpg?raw=true" alt="drawing" width="600"/>
 </center>
 
-The plug-in pop-function (*pop_icansp*)can also be called from the MATLAB command line; in this case, you may pass as input the EEG dataset structure you want to decompose as well as the decomposition method to apply to the data. The sample code below specifies both the EEG dataset structure to operate on and the ICA decomposition type to apply; it thus will perform ICA decomposition via NSG on the currently loaded (EEG structure) dataset (using *'runica'*) *without* popping up a parameter input window:
+プラグインのポップアップ機能(*pop_icansp*)は、MATLABコマンドラインから呼び出すこともできます。この場合、EEGデータセット構造の入力や、データに適用するデコンポジションメソッドを渡すこともできます。 以下のサンプルコードは、EEG のデータセット構造と ICA のデコンポジションタイプの両方が適用されます。そのため、現在読み込まれた (EEG 構造) データセット (*'runica'* を使用して) *without* で ICA デコンポジションを実行します。
 
 `OUT_EEG = pop_icansg(EEG,'icatype','runica')`
 
-After calling and executing the plug-in, the function *pop_icansg* will have created a folder containing the data and scripts required to submit an NSG job. The plug-in will then submit that job to NSG, and when the job finishes, will retrieve and return the EEG dataset plus its ICA decomposition. This processing proceeds in the following steps:
+プラグインを呼び出して実行した後、*pop_icansg* は、NSG ジョブを送信するために必要なデータとスクリプトを含むフォルダーを作成します。 その後、プラグインは、そのジョブをNSGに送信し、ジョブが終了すると、EEGデータセットとICAデコンポジションを取得します。 この処理は、次の手順で進めます。
 
-1.  Manage the inputs
-2.  Create a temporary folder and save the input data to it 
-3.  Compose the m-file MATLAB script to be executed via NSG
-4.  Submit the job to NSG
-5.  Optionally activate periodic NSG polling for job completion 
-6.  Download the input data and job results
-7.  Delete the job from your NSG job list
-8.  Load the results into EEGLAB and return them in the plug-in command output.
+1.  入力を管理する
+2.  一時的なフォルダーを作成し、入力データを保存します。 
+3.  M-file MATLABスクリプトをNSG経由で実行する
+4.  NSGにジョブを送信
+5.  ジョブ完了時に定期的なNSGポーリングを有効にします。 
+6.  入力データとジョブ結果をダウンロード
+7.  NSGジョブリストからジョブを削除
+8.  結果を EEGLAB にロードし、プラグインコマンド出力で返します。
 
-The following subsections explain these steps in detail. The subsection headings are direct references to comment headings in [pop_icansg.m](https://github.com/sccn/nsgportal/blob/master/demos/demo_plugin/icansg/pop_icansg.m).  
+次のセクションでは、これらの手順を詳細に説明します。 サブセクション見出しはコメント見出しに直接参照されます [ログイン](https://github.com/sccn/nsgportal/blob/master/demos/demo_plugin/icansg/pop_icansg.m).  
  
-### Section 1: Manage the plug-in inputs 
+### セクション1:プラグインの入力を管理する 
 ```
 if nargin < 1   
     help pop_icansg;
@@ -73,13 +73,13 @@ else % Command line call specifying the ICA decomposition method;
 end
 ```
 
-In the code subsection above, the plug-in handles the *pop_icansg* function inputs. The code supports the two ways of invoking the plug-in, from the EEGLAB menu (see the **Pop-up window call** code section above) and by a MATLAB command line call (see the **Command line call** code section above). If the function is called with only one argument (specifying the EEG set to decompose), the code pops up a parameter input window asking which ICA algorithm to use. The selected option is stored in the variable *options*. If the command line call provides the ICA algorithm to use (using the optional input '*icatype*'), then the function will assign its argument to the variable *options*.
+上のコードサブセクションでは、プラグインは*pop_icansg*関数の入力を処理します。 このコードは、EEGLABメニューからプラグインを呼び出しる2つの方法(上の**Pop-upウィンドウコール**コードセクションを参照)とMATLABコマンドラインコール(上の**Command line call**コードセクションを参照)をサポートしています。 関数が1つの引数だけで呼び出される(EEGセットを分解する)場合、そのコードは、ICAアルゴリズムが使用するパラメータ入力ウィンドウをポップアップします。 選択したオプションは変数 *options* に格納されます。 コマンド・ライン・コールが ICA のアルゴリズムを(任意入力 '*icatype*' を使用して)使用すると、関数は変数 *options* にその引数を割り当てます。
 
-### Section 2: Create a temporary folder and save the input data to it. 
+### セクション2:仮フォルダを作成し、入力データを保存します。 
 
-In the first part of this section, your NSG credentials and options (including the location of the output folder to receive the results) are retrieved by invoking *nsg_info.m*. These options, of course, must already have been set by using *pop_nsginfo.m* as [explained here](https://github.com/sccn/nsgportal/wiki/Setting-up-the-plug-in). 
-This information is used to create a temporary folder (here *icansgtmp*) in the NSG output folder (as defined in *pop_nsginfo.m*).
-The location of the temporary output folder is freely selectable. Here we use the output folder defined in the NSG options, as we assume the user has permissions to write and modify files in this location (since that option was previously defined by the user).
+このセクションの最初の部分では、NSGの資格情報とオプション(結果を受け取るために出力フォルダの場所を含む)は、*nsg_info.m*を呼び出すことで取得されます。 これらのオプションは、もちろん、すでに*pop_nsginfo.m*をそのまま使用して設定されている必要があります。 [詳細はこちら](https://github.com/sccn/nsgportal/wiki/Setting-up-the-plug-in). 
+この情報は、NSG出力フォルダ(*pop_nsginfo.m*で定義されている)の一時的なフォルダ(*icansgtmp*)を作成するために使用されます。
+仮出力フォルダの場所は自由に選択可能です。 ここでは、NSGオプションで定義された出力フォルダを使用します。これにより、ユーザーはこの場所にファイルを書き込みおよび変更する権限を持つと仮定します(そのオプションは以前にユーザによって定義されたため)。
 
 ```
 nsg_info;                   % Get the name and path of the temporary folder
@@ -94,9 +94,9 @@ if exist(tmpJobPath,'dir'),
 end
 mkdir(tmpJobPath);                               % Make the temporary folder
 ```
-For the sake of simplicity, in our example we use a hard-coded job ID (string variable *jobID* in code section above). This may be sufficient *if* no other job is submitted (by anyone) via this plug-in while a earlier *pop_icansg* job is still in the NSG processing queue, and if previous NSG job records have been deleted (as demonstrated below) after retrieving their results. However, if you want to allow multiple concurrent job submissions to be active in the NSG job queue, we encourage you to generate individual job IDs, so that NSG job label confounds do not arise. For instance, you may create a job ID by attaching a three digits random number to the current name ( MATLAB code: jobID = ['icansg_tmpjob' num2str(floor(rand(1)*1000))]).
+シンプルさの酒は、例えば、ハードコードされたジョブID(文字列変数 *jobID* のコードセクション)を使用します。 これは、以前の*pop_icansg*ジョブがNSG処理キューに依って、他のジョブがこのプラグインを介して(誰からも)送信されない場合があり、以前のNSGジョブレコードが削除された場合(以下に示すように)結果を取得した後に。 しかし、複数の同時ジョブ送信をNSGジョブキューでアクティブにできるようにしたい場合、個別のジョブ ID を生成し、NSG ジョブラベルが混在していないようにすることをお勧めします。 たとえば、現在の名前に3桁のランダム番号を付けてジョブIDを作成できます(MATLABコード:ジョブID = ['icansg_tmpjob' num2str(floor(rand(1)*1000))))))。
 
-Next, save the input data in the temporary folder via the following code:
+次に、次のコードで仮フォルダに入力データを保存します。
 
 ```
 % Save data in the folder previously created. 
@@ -105,11 +105,11 @@ Next, save the input data in the temporary folder via the following code:
 
 pop_saveset(EEG,'filename', EEG.filename, 'filepath',tmpJobPath);
 ```
-Here, the name of the data file was not changed, but it might be modified to make it consistent with its treatment in the next section.
+ここでは、データファイルの名前は変更されませんが、次のセクションでその処理と一致させるために変更されることがあります。
 
-### Section 3: Manage the m-file script to be executed via NSG
+### セクション3:m-fileスクリプトをNSG経由で実行するように管理
 
-The MATLAB script to be executed via NSG (code Section 3) is written so as to allow the script to flexibly adapt to different input options. In our example, the name of the dataset and the ICA algorithm to use are provided as inputs, either through the pop-up parameter input window or the command line. These values are used then to compose the script to be executed via NSG:
+NSG(コードセクション3)を介して実行されるMATLABスクリプトは、スクリプトが異なる入力オプションに柔軟に適応できるように書かれています。 たとえば、データセットの名前と、使用するICAアルゴリズムは、ポップアップパラメータ入力ウィンドウまたはコマンドラインを介して、入力として提供されます。 これらの値は、NSG 経由で実行されるスクリプトを構成するために使用されます。
 
 ```
 fid = fopen( fullfile(tmpJobPath,'icansg_job.m'), 'w');
@@ -119,7 +119,7 @@ fprintf(fid, 'EEG = pop_ica(EEG, ''%s'',''%s'');\n', options{1},options{2});
 fprintf(fid, 'pop_saveset(EEG, ''filename'', ''%s'');\n',EEG.filename);
 fclose(fid);
 ```
-If, as here, the *icatype* is 'runica' and the EEG file name is *tempdatafile.set*, the script to be run via NSG will then read as follows:
+ここで、*icatype* は 'runica' で、EEG ファイル名は *tempdatafile.set* で、NSG 経由で実行するスクリプトは次のように読みます。
 ```
 eeglab;                                     % The composed script to be run via NSG 
 EEG = pop_loadset('tempdatafile.set');
@@ -127,9 +127,9 @@ EEG = pop_ica(EEG, 'icatype','runica');
 pop_saveset(EEG, 'filename', 'tempdatafile.set');
 ```
 
-### Section 4: Submit the job to NSG
+### セクション4:NSGにジョブを送信
 
-In Sections 2 and 3, the job files were created in the folder *icansgtmp*. In this section, the job will be submitted to NSG. (This part of the code may look similar the one used in the [Tutorial 2](https://github.com/sccn/nsgportal/wiki/Creating-and-managing-an-NSG-job-using-pop_nsg-from-the-command-line)).
+セクション2と3では、ジョブファイルがフォルダー*icansgtmp*で作成されました。 このセクションでは、NSGにジョブが提出されます。 (コードのこの部分は、使用しているものと同様に見えるかもしれません) [チュートリアル2](https://github.com/sccn/nsgportal/wiki/Creating-and-managing-an-NSG-job-using-pop_nsg-from-the-command-line)).
 
 ```
 MAX_RUN_HOURS = 0.5;
@@ -137,13 +137,13 @@ jobstruct = pop_nsg('run',tmpJobPath,'filename', 'icansg_job.m', ...
                     'jobid', jobID,'runtime', MAX_RUN_HOURS);  % run the job via NSG; here 
                                                                % ask for up to 30 min runtime
 ```
-Observe here that although some default NSG options are hard-coded in the *pop_nsg* code, it is possible for the programmer to allow users to specify some or all of these options using, for instance, a parameter input edit in the main GUI of the plug-in (not shown in this tutorial). 
+デフォルトのNSGオプションは*pop_nsg*コードでハードコードされていますが、プログラマがこれらのオプションの一部または全部を、例えばプラグインのメインGUIでパラメータ入力編集(このチュートリアルでは示されていない)使用できるようにすることができます。 
 
-Alternatively, the plug-in function may end here (Section 4); in this case the user can be directed to manage the job through the *pop_nsg* pop-up window (see [Tutorial 1](https://github.com/sccn/nsgportal/wiki/Creating-and-managing-a-job-from-pop_nsg-GUI)). The rationale for this is that jobs may remain for some time in the NSG job queue waiting to be processed. Thus, you may not want the plug-in function and window to remain active until the job finishes. Due to this, you may want to direct the user to manage the job through *pop_nsg*, so as to wait for job completion, or the user can choose to log back into *pop_nsg*  to check on the NSG job status at some later time. If you *do* want the plug-in to hang until the NSG job is finished, then continue the function code as below:
+代わりに、プラグイン関数はここで終わるかもしれません(セクション4)。この場合、ユーザーは*pop_nsg*ポップアップウィンドウを介してジョブを管理することができます(参照) [チュートリアル1](https://github.com/sccn/nsgportal/wiki/Creating-and-managing-a-job-from-pop_nsg-GUI))。 このリサールは、処理を待ち受けるNSGジョブキューでジョブがしばらくの間残る可能性があることです。 そのため、ジョブが終了するまでプラグイン機能とウィンドウがアクティブに残るくありません。 そのため、ジョブの完了を待ちますように、*pop_nsg* を介してジョブを管理するためにユーザーを指示したい場合、または、後で NSG ジョブの状態をチェックするために、*pop_nsg* にログバックするかを選択できます。 *do* が NSG ジョブが終了するまでプラグインを掛けたい場合は、以下のように関数コードを続けてください。
 
-### Section 5: Activate periodical job status polling from NSG
+### セクション5:NSGから定期ジョブステータスポーリングを有効化
 
-Next, we perform periodic job status polling using *nsg_recurspoll.m*.
+次に、*nsg_recurspoll.m*を使って定期的なジョブステータスポーリングを実行します。
  
 ```
 POLL_INTERVAL = 60;  % use a (default) 60-second polling interval value
@@ -151,55 +151,55 @@ jobstructout = nsg_recurspoll(jobstruct,...
                   'pollinterval', POLL_INTERVAL); % recursively poll for NSG job status 
                                                   % and display latest results
 ```
-The function will now retrieve the status of the submitted NSG job every 60 seconds (via the argument to option *'pollinterval'*), continuing to run until the job is completed. **Note**: We advise making this polling mode optional, as the user may rather wish to perform other work in EEGLAB and check the status of the job later (See comments at the end of Section 4).
+この関数は、送信されたNSGジョブのステータスを60秒ごとに取得します(引数をオプション*'pollinterval'*)、ジョブが完了するまでの実行を継続します。 **注記: EEGLAB で他の作業を実行し、後でジョブのステータスを確認したい場合(セクション 4) の最後にコメントを参照してください。
 
-### Section 6: Download the NSG job data and results
+### セクション6:NSGジョブデータと結果をダウンロード
 
-After the function *nsg_recurspoll.m* exits, download the NSG job results using another call to *pop_nsg*:
+関数 *nsg_recurspoll.m* が終了した後、NSG のジョブ結果は、別のコールを使用して *pop_nsg* をダウンロードします。
 ```
 pop_nsg('output',jobstructout); 
 ```
 
-### Section 7: Delete the job from the user's NSG job list
+### セクション7:ユーザーのNSGジョブリストからジョブを削除
 
-You can then again call *pop_nsg* to remove the NSG job record from the user's NSG job list. 
+ユーザの NSG ジョブリストから NSG ジョブレコードを削除するために、*pop_nsg* を呼び出すことができます。 
 
 ```
 pop_nsg('delete',jobstructout);
 ```
-In general, it is good practice to remove the job record once its results are retrieved. This will avoid cluttering your NSG account with jobs that are no longer active.
+一般的に、その結果が取得されると、ジョブレコードを削除することをお勧めします。 これは、もはやアクティブでないジョブでNSGアカウントを乱雑にすることを避けます。
 
-### Section 8: Load the NSG job results into EEGLAB and return the results from the calling function
+### セクション8:NSGジョブ結果をEEGLABにロードし、呼び出し機能から結果を返す
 
-Here, the EEG data *and* its computed ICA decomposition are loaded into EEGLAB and returned in the function output. Here, we use the default output folder path defined in *nsg_info.m*.
+ここでは、EEGデータ*と*その計算されたICA分解がEEGLABにロードされ、関数出力で返されます。 ここでは、*nsg_info.m* で定義されたデフォルトの出力フォルダパスを使用します。
 
 ```
 OUT_EEG = pop_loadset(EEG.filename, fullfile(outputfolder, ['nsgresults_' jobID],foldername));
 ```
 
-## Example of executing *pop_icansg*
+## *pop_icansg*の実行例
 
-In this example, we apply the completed plug-in *pop_icansg* to a sample EEG dataset.
+この例では、完成したプラグイン*pop_icansg*をEEGデータセットに適用する。
 
-### Load data
+### データの読み込み
 
- Here we use the EEG sample data, *eeglab_data_epochs_ica.set*, distributed with EEGLAB, which is located in *../eeglab/sample_data/* . To load the data, either use the EEGLAB menu (by selecting menu item **File > Load existing dataset**) or use a command line call to *pop_loadset* (as in the example below).
+ ここでは、EEG サンプルデータ、*eeglab_data_epochs_ica.set* を EEGLAB で配布しています。 データをロードするには、EEGLABメニュー(メニュー項目を選択することで**File > 既存のデータセット**をロードするか、コマンドラインコールを*pop_loadset*(例として)使用してください。
  
  `EEG = pop_loadset('filename','eeglab_data_epochs_ica.set','filepath','/eeglab/sample_data/');`
 
 
-### Call the plug-in *pop_icansg*
+### プラグインの呼び出し *pop_icansg*
 
-We now compute the ICA decomposition of the loaded EEG dataset using *pop_icansg*, selecting the 'runica' method. To perform this, select EEGLAB menu item **Tools > Run ICA via NSG** and then select the ICA method 'runica' in the pop up parameter selection window. Press 'Ok', after the selection.
-Else, to execute the same process but from the command line, use the following command:
+*pop_icansg*を使って読み込まれたEEGデータセットのICA分解を計算し、「runica」メソッドを選択します。 これを実行するには、EEGLABメニュー項目**Tools > NSG**でICAを実行し、ポップアップパラメータ選択ウィンドウでICAメソッド'runica'を選択します。 選択後に「OK」を押します。
+Else は、同じプロセスを実行しますが、コマンドラインから次のコマンドを使用します。
  
  ```
  OUT_EEG = pop_icansg(EEG,'icatype','runica');
  ```
  
-### While waiting for the NSG job to complete
+### NSGジョブが完了するまで待っています
 
-After *pop_icansg* executes,  you will see in the MATLAB command line window accumulating messages similar to these:
+*pop_icansg* が実行されると、MATLAB コマンドラインウィンドウで、以下のようなメッセージが蓄積されます。
 ```
 1  >> Scaling components to RMS microvolt
 2  >> Saving dataset...
@@ -238,12 +238,12 @@ After *pop_icansg* executes,  you will see in the MATLAB command line window acc
 35 >> Scaling components to RMS microvolt
 ```
 
-The first and second lines indicate that the dataset provided as an input was saved in the temporary folder *icansgtmp*. Lines 3 and 4 confirm that the job was submitted to NSG. Lines 5 to 14 provide periodic updates on the job status (dated 60 seconds apart). Lines 15 to 32 detail the process of downloading the job's results. The final lines 33-35 document loading the function output.
-Note that this is the whole output print of the job; to generate all these messages, the job must complete successfully. Be aware this may take some time.
+最初の2行目は、入力として提供されたデータセットが一時フォルダ*icansgtmp*に保存されたことを示しています。 行 3 と 4 は、ジョブが NSG に提出されたことを確認します。 ライン5〜14は、ジョブステータス(60秒間隔)で定期的な更新を提供します。 行 15 宛先 32 作業の結果をダウンロードするプロセスの詳細. 最終的なライン33-35文書は機能出力をローディングします。
+これは、ジョブ全体の出力プリントです。これらすべてのメッセージを生成するために、ジョブは正常に完了しなければなりません。 しばらくお待ちください。
 
-If you are curious about the job generated by calling *pop_icansg*, check the folder you indicated should receive the output of the NSG job, and list the sub-folder '*icansgtmp*'. This will contain the data submitted to the NSG job and its output file(s).
+*pop_icansg* を呼び出すことで生成されたジョブについて好奇心旺盛な場合は、NSG ジョブの出力を受信し、サブフォルダ '*icansgtmp*' を一覧表示するフォルダを確認してください。 これにより、NSG ジョブおよび出力ファイル(s) に送信されたデータが格納されます。
  
-##  Summary
+##  ニュース
 
-Here we showed, via a simple example, how high-performance computing (HPC) resources at the San Diego Supercomputer Center (SDSC), accessible via NSG, can be integrated seamlessly into an EEGLAB plug-in using the flexible *pop_nsg* command line tool.
-Note that this example is intended only a proof-of-concept example. Feel free to explore other implementation variations in your plug-ins. Note also that your plug-in should in nearly all cases give the user the option of computing on the local machine *else* via NSG. You should consider allowing the user to specify further NSG launch variables, and might also urge the NSG user to test the performance of the plug-in on a small subset of their data before launching a lengthy NSG computation. 
+ここでは、NSG経由でアクセス可能なサンディエゴスーパーコンピュータセンター(SDSC)の高性能コンピューティング(HPC)リソースの簡単な例で、フレキシブル*pop_nsg*コマンドラインツールを使用して、EEGLABプラグインにシームレスに統合することができます。
+この例は、証拠の概念例だけを意図しています。 プラグイン内の他の実装のバリエーションを自由に探索できます。 あなたのプラグインは、ほぼすべてのケースでは、NSGを介してローカルマシン*else*上のコンピューティングのオプションをユーザーに与える必要があります。 ユーザーは、さらにNSG 起動変数を指定できるようにし、NSG ユーザが、長い NSG 計算を起動する前に、データの小さなサブセットでプラグインのパフォーマンスをテストするかどうかを検討する必要があります。 

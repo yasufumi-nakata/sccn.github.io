@@ -6,124 +6,124 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 19
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/PACTools).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/PACTools).
 
-# EEGLAB Event Related PACTools
-The Event Related PACTools (PACTools) is an EEGLAB plug-in to compute phase-amplitude coupling in single subject data. 
-In addition to traditional methods to compute PAC, the plugin include the Instantaneuous and Event-Related implementation of the Mutual Information Phase-Amplitude Coupling Method (MIPAC) (see Martinez-Cancino et al 2019).
-This toolbox was developed by the EEGLAB Team at the Swartz Center for Computational Neurosciences in UCSD, La Jolla, California, and is currently maintained by its main developer, Ramon Martinez-Cancino.
+# エッグラボ イベント関連パックツール
+イベント関連PACTools(PACTools)は、単一の被験者データにおける相振度結合を計算するEEGLABプラグインです。 
+PACを計算するための伝統的な方法に加えて、プラグインには、相互情報フェーズ振幅カップリング方法(MIPAC)の即時およびイベント関連実装(Martinez-Cancino et al 2019参照)が含まれます。
+このツールボックスは、UCSD、La Jolla、カリフォルニアのComputational NeurosciencesのSwartz CenterでEEGLABチームによって開発され、現在、主要な開発者であるRamon Martinez-Cancinoによって維持されています。
 
-## Table of Contents
-1. [Phase-amplitude coupling in neurosciences](#phase-amplitude-coupling-in-neurosciences)
-2. [Methods implemented in the toolbox](#methods-implemented-in-the-toolbox)
-   1. [Continuous signal](#continuous-signal)
-   2. [Epoched signal](#epoched-signal)
-3. [Plugin architecture and workflow](#plugin-architecture-and-workflow)
-	1. [Plugin architecture]([#plugin-architecture])
-	2. [Plug-in setup](#plug-in-setup)
-	3. [Graphical user interface](#graphical-user-interface)
-	   1. [Computing PAC with pop_pac](#computing-pac-with-pop_pac)
-	   2. [Visualizing PAC with pop_plotpac](#visualizing-pac-with-pop_plotpac)
-	4. [Structure of outputs](#structure-of-outputs)  
-4. [Demos](#demos)
-   1. [Computing Mean Vector Length Modulation Index in a continuous signal](#computing-mean-vector-length-modulation-index-in-a-continuous-signal)
-      1. [Computation](#computation)
-      2. [Visualization](#visualization)
-   2. [Computing Instantaneous MIPAC in a continuous signal](#computing-instantaneous-mipac-in-a-continuous-signal)
-      1. [Computation](#computation)
-      2. [Visualization](#visualization)
-5. [Contributions and feedback](#contributions-and-feedback)
+## コンテンツの表
+1. [神経科学における位相差結合](#phase-amplitude-coupling-in-neurosciences)
+2. [ツールボックスで実装されたメソッド](#methods-implemented-in-the-toolbox)
+   1. [連続信号](#continuous-signal)
+   2. [Epoched信号](#epoched-signal)
+3. [プラグインアーキテクチャとワークフロー](#plugin-architecture-and-workflow)
+	1. [プラグインアーキテクチャ]([#plugin-architecture])
+	2. [プラグインの設定](#plug-in-setup)
+	3. [グラフィカルなユーザーインターフェイス](#graphical-user-interface)
+	   1. [Pop_pacでPACを計算する](#computing-pac-with-pop_pac)
+	   2. [Pop_plotpacでPACを可視化](#visualizing-pac-with-pop_plotpac)
+	4. [出力の構造](#structure-of-outputs)  
+4. [デモ](#demos)
+   1. [計算方法ベクトル長さの変調 連続信号のインデックス](#computing-mean-vector-length-modulation-index-in-a-continuous-signal)
+      1. [コンピューティング](#computation)
+      2. [可視化](#visualization)
+   2. [瞬時の計算 連続的な信号のMIPAC](#computing-instantaneous-mipac-in-a-continuous-signal)
+      1. [コンピューティング](#computation)
+      2. [可視化](#visualization)
+5. [貢献とフィードバック](#contributions-and-feedback)
 
-## Phase Amplitude Coupling in Neuroscience 
-Cross-frequency coupling (CFC) could refer to any possible interaction between frequencies, phases, and amplitudes of oscillatory phenomena (*Sotero, 2016*). Most experimental work in this field has focused on three types of CFC: amplitude-amplitude coupling (AAC) or comodulation, phase-phase coupling (PPC) including bicoherence, and phase-amplitude coupling (PAC). Among them, PAC has attracted increasing interest given the growing amount of evidence of its potential role in brain information processing and its changes under pathological conditions, including epilepsy (*López-Azcárate et al., 2010; De Hemptinne et al., 2013*). In PAC, the instantaneous amplitude of a higher frequency band within a signal is modulated by (or otherwise linked to) the instantaneous phase of a lower-frequency band of the same (or a different) signal.
+## 神経科学におけるフェーズ振幅のカップリング 
+クロス周波数カップリング(CFC)は、振動現象(*Sotero、2016*)の周波数、フェーズ、および振幅の間の任意の可能な相互作用を参照することができます。 この分野のほとんどの実験的な仕事はCFCの3つのタイプに焦点を合わせました:振幅振幅振幅振幅のカップリング(AAC)または調整、バイコヒーレンスを含む位相相カップリング(PPC)、および位相振幅のカップリング(PAC)。 PACは、脳情報処理における潜在的な役割の証拠の増大量と、流行精神(*López-Azcárate et al.、2010;De Hemptinne et al.、2013*)を含む病理学的条件下の変化の有益性を高めました。 PACでは、信号内の高周波数帯域の瞬間広さは、(またはその他のリンク)同じ(または異なる)信号の低周波数帯の瞬間段階によって調整されます。
 
 
-## Methods Implemented in the Toolbox
- Several methods have been proposed to address the computation of measures of  Phase-Amplitude coupling, but none has been established as a gold standard. This fact explains to some extent why most of the major academic open-source programs for analyzing electroencephalographic data has implemented more than one method in its distribution (e.g., FieldTrip, Brainstorm, MNE). This is not different in EEGLAB with PACTools. In PACTools we have implemented four of the most widely used measures: The Mean Vector Length Modulation Index (MVLmi) (*Canolty et al., 2006*), the Kullback-Leibler Modulation Index (KLmi) (*Tort et al., 2010*), the Phase-Locking Value (plv) (*Lachaux et al., 1999*), and the General Linear Model Modulation Index (GLMmi) (*Penny et al., 2008a*).  The implementation of these ensures they can operate either in continuous and epoched signals. In the case of epoched signals, we use a scheme similar to the one proposed by *Voytek et al., 2013* with the use of the method by (*Penny et al., 2008*) in the dimension of the trials (assuming a data matrix of dimensions equal to the number of trials by latencies). In addition to these measures, we have included the  Mutual Information Phase Amplitude Coupling (MIPAC) (*Martinez-Cancino et al., 2019*)  developed recently by our group. This method allows naturally for the computation of time-resolved PAC in both continuous and epoched data.
+## Toolboxで実装されたメソッド
+ 相振幅カップリングの対策の計算に取り組むためにいくつかの方法が提案されていますが、金規格として確立されていません。 この事実は、電気脳データを分析するための主要な学術オープンソースプログラムのほとんどが、その分布(例えば、フィールドトリップ、Brainstorm、MNE)で複数の方法を実行している理由について説明しています。 PACTools で EEGLAB では違いません。 PACToolsでは、最も広く使用されている対策の4つを実施しました。 平均ベクトル長変調指数(MVLmi) (*Canolty et al., 2006*), Kullback-Leibler Modulation Index (KLmi) (*Tort et al., 2010*), Phase-Locking Value (plv) (*Lachaux et al., 1999*), 一般線形モデル変調指数 (GLMmi) (*ペニー ら., 2008a*). これらの実装は、連続およびエポケされた信号で操作できることを確認します。 epoched シグナルの場合、*Voytek et al., 2013* によって提案されたもの(*Penny et al., 2008*)の試験の寸法(レイテンシーによる試験の数に等しい寸法のデータ行列)に類似したスキームを使用します。 これらの対策に加えて、最近、グループが開発した「MIPAC」(*Martinez-Cancino et al., 2019*)の相互情報相振幅カップリング(MIPAC)が含まれています。 この方法は、自然に時間分解されたPACの計算を連続したデータとエッチングデータの両方で行うことができます。
 
-## Continuous signal
-In the table below are listed the methods implemented to compute PAC in continuous signals. References to the specific methods are listed in the second row of the table. A note on the dimension of the PAC values has been indicated in the third row of the table. 
+## 連続信号
+下表では、連続信号でPACを計算するために実装されたメソッドがリストされています。 特定のメソッドへの参照は、テーブルの2番目の行にリストされています。 PAC値の寸法は、テーブルの3番目の行に示されています。 
 
-| Method                                | Reference                                                                              | Output Dimension | 
+| 方法 | 参照 | 出力寸法 お問い合わせ 
 | ---------                             | -----------                                                                            | --------------   | 
-| Mean Vector Length Modulation Index   | [Canolty et al., 2006](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2628289/)          | Single value     |
-| Kullback-Leibler Modulation Index     | [Tort et al., 2010](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2941206/)             | Single value     |
-| General Linear Model Modulation Index | [Penny et al., 2008](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2675174/)            | Single value     |
-| Phase Locking Value                   | [Lachaux et al., 1999](https://www.ncbi.nlm.nih.gov/pubmed/10619414)                   | Single value     |
-| Instantaneous Mutual Information PAC  | [Martinez-Cancino et al., 2019](https://www.ncbi.nlm.nih.gov/pubmed/30342235)          | Unidimensional   |
+| 平均ベクトル長変調指数 | [Canolty ら., 2006](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2628289/)          | 単価 |
+| クルバックリーザー変調指数 | [トート ら., 2010](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2941206/)             | 単価 |
+| 一般リニアモデル変調指数 | [ペニー ら., 2008](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2675174/)            | 単価 |
+お問い合わせ フェーズロックバリュー | [Lachaux ら., 1999](https://www.ncbi.nlm.nih.gov/pubmed/10619414)                   | 単価 |
+| 瞬間的な相互情報 PAC | [Martinez-Cancino ら., 2019](https://www.ncbi.nlm.nih.gov/pubmed/30342235)          | ユニディカル |
 
 
-### Epoched signal
-In the table below are listed the current methods implemented in the toolbox to estimate PAC in epoched data. Epoched data is usually the result of extracting snippets of signals time-locked to an event(s) of interest. Here epoched data is assumed as being formated as a data matrix with dimensions of number of epochs(trials) by number of latencies(timepoints).  The first four methods listed in the table are a natural extension of the methods listed in the previous section but applying them onto each latency along the dimension of the epochs. The first application of this scheme was proposed by *Voytek et al., 2013* as an extension of the method by *Penny et al., 2008*. These methods return a time series describing the *'average'* PAC dynamics across all trials. For this type of data, the Event-related MIPAC method returns a PAC time series for each trial provided.
+### Epoched信号
+下の表では、ツールボックスで実装された現在のメソッドを一覧表示して、epochedデータのPACを推定します。 Epochedデータは通常、関心のあるイベントにタイムロックされた信号のスニペットを抽出する結果です。 ここでは、レイテンシー(タイムポイント)の数のエポック(トライアル)の寸法を持つデータ行列としてフォーマットされていると仮定します。 表にリストされている最初の4つの方法は、前のセクションにリストされたメソッドの自然な拡張ですが、それぞれのレイテンシにエポックの寸法に沿ってそれらを適用します。 このスキームの最初のアプリケーションは、*Penny et al., 2008* によるメソッドの拡張として *Voytek et al., 2013* によって提案されました。 これらのメソッドは、すべての試験で*'average'* PACの動的を記述する時間シリーズを返します。 このタイプのデータでは、イベント関連のMIPACメソッドは、各試験のPACタイムシリーズを返します。
 
-| Method                                | Reference                                                                             | Output Dimension |
+| 方法 | 参照 | 出力寸法 お問い合わせ
 | ---------                             | -----------                                                                           | --------------   | 
-| Mean Vector Length Modulation Index   | [Canolty et al., 2006](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2628289/)         | Unidimensional   |
-| Kullback-Leibler Modulation Index     | [Tort et al., 2010](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2941206/)            | Unidimensional   |
-| General Linear Model Modulation Index | [Voytek et al., 2013](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2675174/)          | Unidimensional   |
-| Phase Locking Value                   | [Lachaux et al., 1999](https://www.ncbi.nlm.nih.gov/pubmed/10619414)                  | Unidimensional   |
-| Event-Related Mutual Information PAC  | [Martinez-Cancino et al., 2019](https://www.ncbi.nlm.nih.gov/pubmed/30342235)         | Bidimensional    |
+| 平均ベクトル長変調指数 | [Canolty ら., 2006](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2628289/)         | ユニディカル |
+| クルバックリーザー変調指数 | [トート ら., 2010](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2941206/)            | ユニディカル |
+| 一般リニアモデル変調指数 | [Voytek ら., 2013](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2675174/)          | ユニディカル |
+お問い合わせ フェーズロックバリュー | [Lachaux ら., 1999](https://www.ncbi.nlm.nih.gov/pubmed/10619414)                  | ユニディカル |
+| イベント関連情報 PAC | [Martinez-Cancino ら., 2019](https://www.ncbi.nlm.nih.gov/pubmed/30342235)         | 寸法 |
 
 
-# Plugin Architecture and Workflow
-### Plugin architecture
-The plugin PACTools is developed as an EEGLAB plugin. Given this, it shares the same philosophy regarding the structure and hierarchy of the functions as well as data formats(.set) as EEGLAB. In PACTools, depending on their level of Matlab expertise, users can either interact only with the graphics interface (GUI), else they can call functions directly from the Matlab command line or write their own Matlab scripts using EEGLAB functions and structures. This arrangement defines the hierarchy implemented by the two-level functions used in PACTools. 
+# プラグインアーキテクチャとワークフロー
+### プラグインアーキテクチャ
+プラグイン PACTools は EEGLAB プラグインとして開発されています。 これを考えると、機能の構造と階層、およびEEGLABとしてのデータフォーマット(.set)に関する同じ哲学を共有します。 PACToolsでは、Matlabの専門知識のレベルに応じて、ユーザーはグラフィックインターフェイス(GUI)とのみやり取りすることができます。また、Matlabのコマンドラインから直接関数を呼び出すか、EEGLAB関数と構造を使用して独自のMatlabスクリプトを書くことができます。 この配列は、PACToolsで使用される2レベルの関数によって実装された階層を定義します。 
  
- PACTools comprises two top-level functions implemented to compute and visualize PAC respectively: pop_pac and pop_plotpac Called with no (or few) arguments (as from the EEGLAB GUI), these functions pops up a query window to gather additional parameter choices. These functions can also be called directly from the Matlab command line or from Matlab scripts. 
+ PACToolsは、それぞれPACを計算し、視覚化するために実装された2つのトップレベルの機能で構成されています。 pop_pac と pop_plotpac いいえ(または少数)引数(EEGLAB GUI から)で呼び出され、これらの関数はクエリウィンドウをポップアップし、追加のパラメータ選択を収集します。 これらの関数は、Maatlab コマンドラインやMaatlab スクリプトから直接呼び出すこともできます。 
  
-The function pop_pac.m  provides the front-end interface for the toolbox it also serves as the bridge to the inner layer function, eeg\_pac.m. The function eeg\_pac.m is,  indeed, the core function of the PAC computation and is responsible for processing and parsing the input data and options in order to distribute it to the functions in charge of the computation of each of the PAC methods mentioned in the section [Methods Implemented in the Toolbox](#methods-implemented-in-the-toolbox).
+関数 pop_pac.m は、ツールボックスのフロントエンドインターフェイスも内部レイヤー関数、eeg\_pac.m にブリッジとして機能します。 関数 eeg\_pac.m は、実際には、PAC 計算のコア関数であり、入力データとオプションの処理と解析を担当し、セクションで説明した PAC メソッドの各計算を担当します。 [Toolboxで実装されたメソッド](#methods-implemented-in-the-toolbox).
 
-**Code acceleration**. Computation of PAC can be a highly computationally intensive task. This is especially true when dealing with multiple frequencies for phases and amplitudes.  To add to the workload, the computation when using epoched data (multiples trials) makes the computation even more demanding. To speed up the PAC computation in PACTool we have parallelized the code using the MATLAB Parallel Computing Toolbox. Direct access to High-performance computing through the Neurosciences Gateways (NSG) has also been implemented. By using this option, users with a valid account in NSG can submit their PAC computation to the HPC resources hosted at NSG directly from within PACTools. To take advantage of this new feature in addition of having a valid NSG account, the user needs to install the EEGLAB plug-in [nsgportal](https://github.com/sccn/nsgportal)
+**コードアクセラレーション**。 PACの計算は、非常に計算的に集中的なタスクにすることができます。 これは、フェーズと振幅の複数の周波数を扱うときに特に当てはまります。 ワークロードに追加するには、epochedデータ(複数のトライアル)を使用して計算すると、計算がより要求されます。 PACToolのPAC計算を高速化するために、MATLAB Parallel Computing Toolboxを使用してコードを並列化しました。 Neurosciences Gateways (NSG) による高性能コンピューティングへの直接アクセスも行っています。 このオプションを使用することで、NSG の有効なアカウントを持つユーザーは、PACTools 内で直接 NSG でホストされている HPC リソースに PAC 計算を提出できます。 有効な NSG アカウントを持つことに加えて、この新機能を利用するには、EEGLAB プラグインをインストールする必要があります。 [ログイン](https://github.com/sccn/nsgportal)
 
-### Plug-in setup
-PACTools is a plugin to EEGLAB. Thus, its installation can be done directly from the EEGLAB plug-in manager (In the EEGLAB GUI see: File -> Manage EEGLAB extensions).
-An alternative way is by downloading PACTools files to the user's local computer. Then, copying the folder with all the files to the EEGLAB folder located in *../eeglab/plugins/* and then restart EEGLAB. The toolbox can be located under the menu *Tools* in EEGLAB (see figure below).
+### プラグインの設定
+PACToolsはEEGLABのプラグインです。 したがって、EEGLABプラグインマネージャから直接インストールすることができます(EEGLAB GUIで参照:ファイル -> EEGLAB拡張機能の管理
+代替方法は、PACToolsファイルをユーザーのローカルコンピュータにダウンロードすることです。 その後、フォルダを全てのファイルとコピーして、EEGLABフォルダに*./eeglab/plugins/*にあるEEGLABフォルダにコピーし、EEGLABを再起動します。 ツールボックスは、EEGLAB のメニュー *Tools* の下に設置できます(下の図を参照)。
 
-![image](https://github.com/user-attachments/assets/2cb685bd-9c6c-4935-aa0c-c39402d928a4)
+![サイトマップ](https://github.com/user-attachments/assets/2cb685bd-9c6c-4935-aa0c-c39402d928a4)
 
-### Graphical user interface
-In its current version, the toolbox provide basic function to compute and visualize PAC that can be executed either from command line calls or from graphical user interfaces (GUI) created for these ends. Acces to GUI can be done from the EEGLAB GUI through *Tools >  PAC Tools*. Here we will be given the option to *Estimate PAC* or *Visualize PAC*. 
+### グラフィカルなユーザーインターフェイス
+現在のバージョンでは、ツールボックスは、コマンドラインコールから実行できるPACを計算し、またはこれらの端のために作成されたグラフィカルなユーザーインターフェイス(GUI)から視覚化するための基本的な機能を提供します。 EEGLAB GUI から *Tools > PAC Tools* から GUI へのアクセスを実行できます。 ここでは、*Estimate PAC* または *Visualize PAC* のオプションを付与します。 
 
-#### Computing PAC with pop_pac 
-To invoke the GUI to compute PAC from the EEGLAB  GUI, click the menu *Tools >  PAC Tools > Estimate PAC*, otherwise, you can launch the GUI from the MATLAB command windows by typing `EEG = pop_pac(EEG)` (see figure below). Here we assume that the user has already loaded the EEG set where the PAC wants to be computed on.  
+#### Pop_pacでPACを計算する 
+EEGLAB GUI から PAC を計算するために GUI を呼び出すには、メニュー *Tools > PAC Tools > PAC* を刺激します。そうしないと、MATLAB コマンドウィンドウから GUI を起動できます。 `EEG = pop_pac(EEG)` (下図参照) ここでは、PACが計算したいEEGセットを既に読み込まれていると仮定します。  
 
-![image](https://github.com/user-attachments/assets/9f6c95cf-002c-4895-88ec-a4b25c474dd3)
+![サイトマップ](https://github.com/user-attachments/assets/9f6c95cf-002c-4895-88ec-a4b25c474dd3)
     
-The GUI is divided into five parts designated by the labels: **Data type**, **PAC Method**, **Optional inputs**, **Significance testing** and  **Compute on NSG** .
-In the first section (**Data type**), the type of data used for PAC computation can be chosen between channel data (*Channels*) or ICA decomposed data (*Components*). 
-Right below,  fields to input options associated with **Phase data**  and **Amplitude data**  can be used to define the data stream and the frequency band properties. For example,  In the first column, depending on the selection set in the **Data type** menu, the user can select the channels or components to compute PAC from a list of current channels or components under **Select Comp/chan**. Here, computation of PAC is done by channels/components pairs picked from **Phase data**  and **Amplitude data** menu, thus the same number of channels/components must be selected for in both fields.
+GUI はラベルによって指定された5つの部分に分けられます。 **データ型**, **PACメソッド**, **任意入力**、**Significanceのテスト**および** NSG**の計算。
+最初のセクション(**Data type**)では、PAC計算に使用されるデータの種類は、チャネルデータ(*Channels*)またはICA分解データ(*Components*)の間で選択できます。 
+以下では、**Phase data** と**Amplitude data** に関連するオプションを入力するフィールドを使用して、データストリームと周波数帯のプロパティを定義できます。 例えば、 最初の列では、**Dataタイプ**メニューで設定された選択に応じて、ユーザーは現在のチャンネルまたはコンポーネントのリストからPACを計算するためにチャンネルまたはコンポーネントを選択することができます**Select Comp/chan**。 ここでは、PACの計算は、**Phase data**と**Amplitude data**メニューから選択されたチャンネル/コンポーネントのペアによって行われます。そのため、両方のフィールドでチャネル/コンポーネントの同じ数を選択する必要があります。
 
-In the second column (**Freq range [lo hi] (Hz)**), the range of frequencies (in Hz) to compute the instantaneous phase and amplitude can be defined. The number of frequencies in these ranges can be defined in the fourth column (**# Frequencies**). Two checkboxes to set the frequency scale,*logarithmic* when checked and *linear* when unchecked, can be found in the last column. By default a log scaling is set. Notice that currently, scaling of the frequency values is applied to both Phase and Amplitude values (checkboxes selection are linked).
+2番目の列(**Freq範囲[lo hi](Hz)**)では、インスタンスのフェーズと振幅を計算するための周波数(Hz)の範囲を定義できます。 これらの範囲の周波数の数は、4列(**# Frequencies**)で定義できます。 2つのチェックボックスは、チェック時に周波数スケール、*logarithmic*を設定し、チェックを外すと*linear*が最後の列に見つけることができます。 デフォルトではログスケーリングが設定されています。 現在、周波数値のスケーリングは、フェーズと振幅値の両方(チェックボックス選択はリンクされます)に適用されます。
 
-The next two sections allow for the selection of the PAC method (**PAC Method**) and the input of pop_pac optional parameters at **Optional inputs**.  To list po_pac optional parameters refer to pop_pac.m help in the lowest left button **Help**.
+次の2つのセクションでは、PACメソッド(**PACメソッド**)の選択と**オプションの入力でポップアップ_pacオプションパラメータの入力を可能にします。 po_pac オプションのパラメーターをリストするには、左下のボタンで pop_pac.m のヘルプを参照します**Help**。
 
-The following section comprises the settings for the computation of PAC statistics (**Significance testing**). Here the number of surrogates (**# surrogates**), number of blocks to use to shuffle the data for generating the surrogates (**# data blocks**), the significance threshold (**Significance threshold (0<p<1)**) and multiple comparison correction (**Correct for multiple comparisons**) can bet set. 
+以下のセクションでは、PAC統計(**Significance Testing**)の計算の設定を構成しています。 ここでは、代理者(**# surrogates**)、代理者(**# data block**)を生成するためのデータをシャッフルするために使用するブロックの数、重要な閾値(**Significance threshold(0<p<1)**)、および複数の比較補正(**Correct for MultipleCompars**)を設定できます。 
  
-The last section of pop_pac GUI, designated with the label **Compute on NSG** and enabled with a checkbox,  is reserved for enabling and setting the computation of PAC through the Neurosciences Gateway. We will expand on this capability in the next sections.
+ラベル「**Compute on NSG**」で指定されている「POP_pac GUI」の最後のセクションでは、Neurosciences Gateway を通じて PAC の計算を有効にし、設定するために、チェックボックスで有効になっています。 次のセクションでこの機能を拡大します。
 
-Finally, three buttons lay at the bottom of the GUI designated to launch the help documentation (button: **Help**), cancel the execution of the GUI without further action (button: **Cancel**) and to start the execution of PAC computation with the settings provided (button: **OK**).
+最後に、ヘルプ文書(button:**Help**)を起動するために指定されたGUIの下部にある3つのボタンが配置され、追加のアクションなしでGUIの実行をキャンセル(button:**Cancel**)し、提供される設定(button:**OK**)でPACの計算の実行を開始します。
 
-#### Visualizing PAC with pop_plotpac
- Once PAC is computed using *pop_pac.m*, the results are stored in the EEG structure (see details in the next section). Visualization of the results can be done by invoking the function *pop_plotpac* from the command line (`pop_plotpac(EEG)`)or from the EEGLAB menu as *Tools >  PAC Tools > Visualize PAC* (see figure below).  
+#### Pop_plotpacでPACを可視化
+ PACが*pop_pac.m*を使用して計算されると、結果はEEG構造に格納されます(次のセクションの詳細は参照)。 結果の可視化は、コマンドラインから関数 *pop_plotpac* を呼び出して実行できます。`pop_plotpac(EEG)`) または EEGLAB メニューから *ツール > PAC ツール > PAC*を視覚化(下図参照)。  
 
-![image](https://github.com/user-attachments/assets/7d340eed-d694-4dec-a8f2-2abc8a93a3ed)
+![サイトマップ](https://github.com/user-attachments/assets/7d340eed-d694-4dec-a8f2-2abc8a93a3ed)
   
-The GUI of poc_pacplot comprises four major sections(depicted in the figure above).
-Section A : In this section the user can get a quick glimpse of the parameters used for the computation of PAC stored in the current EEG set.
-Section B: Display all the channel/components pairs for which PAC has been computed. The first element of the pair corresponds to the stream used to compute the instantaneous Phase, while the second element corresponds to the one used for the instantaneous Amplitude.
+poc_pacplot の GUI は 4 つの主要なセクション (上の図で記述) で構成されます。
+セクションA: このセクションでは、ユーザーは、現在のEEGセットに格納されているPACの計算に使用されるパラメータの迅速な一目を得ることができます。
+セクションB: PACが計算されたすべてのチャネル/コンポーネントのペアを表示します。 ペアの最初の要素は、インスタンスのフェーズを計算するために使用されるストリームに相当します。2番目の要素はインスタンスの振幅に使用するものに対応しています。
 
-Section C: Here the methods used to compute PAC on the selected data stream pairs are shown. Users must select the measure they desire to plot. The checkbox enables the plotting of a significance mask over the PAC results if computed previously (currently only available for Comodulograms).
+セクションC: ここでは、選択したデータストリームペアでPACを計算するために使用されるメソッドが表示されます。 ユーザーは、プロットしたい測定を選択する必要があります。 チェックボックスは、以前に計算された(現在はコモーダログラムでのみ利用可能)場合、PAC以上の重要なマスクのプロットを有効にします。
 
-Section D: PAC results can be plotted from this section.  The four buttons on the right side of the interface correspond to the four types of plots that can be generated from pop_pacplot. These are:
- (1)*Plot comodulogram*: Plot PAC values as a function of phase and amplitude frequencies. Available for all methods and data formats.
-(2)*Plot temporal comodulogram*: Plot PAC values as a function of phase frequencies, amplitude frequencies and latencies (time). This plot is available for continuous data if Instantaneous MIPAC has been computed. For event-related epoched data this plot is available for all the implemented methods.
-(3)*Plot freq-time PAC*: Plot PAC values as a function of phase frequencies (or amplitude frequencies) and latencies (time). This plot is available for continuous data if Instantaneous MIPAC has been computed. For event-related epoched data this plot is available for all the implemented methods.
-(4)*Plot trial-based PAC*: PLot PAC values for each trial as a function of time. Only enabled for  PAC computed using Event-Related MIPAC.
+セクションD:PACの結果は、このセクションからプロットすることができます。 インターフェイスの右側にある4つのボタンは、ポップアップから生成できる4種類のプロットに対応しています。 これらは:
+ (1)* プロットのコモーダック*: Plot PACは、フェーズと振幅の周波数の機能として値します。 すべての方法およびデータ フォーマットのために利用できる。
+(2)* プロットの一時的なコモードグラム*: Plot PAC は、フェーズの周波数、振幅の周波数およびレイテンシー(時間)の機能として値します。 このプロットは、即時MIPACが計算されている場合、連続的なデータのために利用可能です。 イベント関連のepochedデータでは、実装されたすべてのメソッドでこのプロットが利用できます。
+(3)* Plot freq-time PAC*: Plot PAC は、相周波数(または振幅周波数)とレイテンシー(時間)の機能として値します。 このプロットは、即時MIPACが計算されている場合、連続的なデータのために利用可能です。 イベント関連のepochedデータでは、実装されたすべてのメソッドでこのプロットが利用できます。
+(4)* Plot トライアルベース PAC*: PLot PAC は、各試験の値を時間関数として値します。 Event-Related MIPAC を使用した PAC の計算のみが有効です。
 
-Based on PAC previously computed,  and the selection of the method computed, the plotting buttons will be enabled/disabled automatically. To the right side of each of the plotting buttons,  the user can define parameters like frequency and latency ranges specific to each plot on the left side.
+以前はPACを計算し、計算された方法の選択に基づいて、プロットボタンは自動的に有効/無効にします。 各プロットボタンの右側に、ユーザーは、左側の各プロットに固有の周波数とレイテンシ範囲などのパラメータを定義できます。
 
-### Structure of outputs
-When PAC is computed with pop\_pac.m,  the results of the computation are stored in the field *EEG.etc.pac.eegpac* structure. In the code sample below it is shown a generic structure storing the PACs values computed for two pairs of channels using the General Linear Model (*glm*), Instantaneous MIPAC (*instmipac*), Kullback-Leibler Modulation Index  (*klmi*) and Mean Vector Length Modulation Index (*mvlmi*).
+### 出力の構造
+PAC が pop\_pac.m で計算されると、計算の結果はフィールド *EEG.etc.pac.eegpac* 構造に格納されます。 下のコードサンプルでは、一般的なリニアモデル(*glm*)、即時MIPAC(*instmipac*)、Kullback-Leibler Modulation Index(*klmi*)、Meanvector length Modulation Index(*mvlmi*)の2つのチャネルで計算されたPAC値を保存する一般的な構造を示しています。
  
 ```matlab
 >> EEG.etc.eegpac
@@ -141,7 +141,7 @@ When PAC is computed with pop\_pac.m,  the results of the computation are stored
     mvlmi
 
 ```
-Diving into one of the structures corresponding to one of the pairs computed reveals more information related to the PAC computation.
+組込みの1つに対応する構造の1つに潜入すると、PAC計算に関する詳細情報がわかります。
 
 ```matlab
 >> EEG.etc.eegpac(1)
@@ -159,8 +159,8 @@ Diving into one of the structures corresponding to one of the pairs computed rev
         mvlmi: [1×1 struct]
 ```
 
-The last four fields here indicate that the measure computed.  These fields take the shortname given to the method used for the computation. In practice, we may find as many fields like this as PAC measures computed. These fields, in general, store the PAC values, the dimension of the output, and results specific to the method computed. The field *dataindx* contains the index of the components or channel used to extract the phase and amplitude respectively in order to compute PAC. The labels of these data streams are stored in the field *label*. The field *datatype* indicates the type of data used to compute PAC, ICA decomposed (0), or Channel data(1). 
-The set of parameters common to all the methods computed, as phase-frequency (*freqs_phase*) and amplitude-frequency (*freqs_amp*) are stored in the field *params*. Below it is shown a sample parameter structure from the same *EEG.ect.eegpac* structure showed above.
+ここで最後の4つのフィールドは、測定が計算されていることを示しています。 これらのフィールドは、計算に使用するメソッドに与えられた短い名前を取ります。 練習では、このようなPAC対策として多くの分野が分かち合います。 これらのフィールドは、一般的に、PAC値、出力の寸法を保存し、計算されたメソッド固有の結果を表示します。 フィールド *dataindx* には、それぞれ PAC を計算するために、フェーズと振幅を抽出するために使用されるコンポーネントまたはチャネルのインデックスが含まれています。 これらのデータストリームのラベルはフィールド*label*に保存されます。 フィールド *datatype* は、PAC、ICA が分解した(0)、またはチャンネルデータ(1)を計算するために使用されるデータの種類を示します。 
+相周波数(*freqs_phase*)と振幅周波数(*freqs_amp*)がフィールド*params*に格納されているすべてのメソッドに共通するパラメータのセット。 以下は、上記の同じ*EEG.ect.eegpac*構造からのサンプルパラメータ構造を示しています。
  
 ```matlab
 >> >> EEG.etc.eegpac(1).params
@@ -173,41 +173,41 @@ The set of parameters common to all the methods computed, as phase-frequency (*f
           srate: 500
 ```
          
-Finally, the field *cache* stores the serialized(encoded) parameters used for the current PAC computation. This field allows for a fast comparison with the parameters provided in a new computation and prevents the user to recompute and already computed PAC measure.
-#### Method-specific fields
-(work in progress..)
+最後に、フィールド *cache* は、現在の PAC 計算に使用するシリアライズされた(エンコード) パラメータを保存します。 このフィールドは、新しい計算で提供されるパラメータと高速な比較を可能にし、ユーザーがRecomputeを防止し、すでにPAC測定を計算することができます。
+#### 方法固有のフィールド
+(進行中の作業)
 
-## Demo
-### Computing Instantaneous MIPAC and MVLMI in a continuous signal
+## デモデモ
+### 瞬時の計算 連続信号におけるMIPACとMVLMI
 
-#### Computation
+#### コンピューティング
 
-In this demo, we show how to compute PAC using *pop_pac* GUI and command-line call. For this, we first load the sample dataset provided with the toolbox, *Simpac\_famp\_60\_fphs\_8.set*, into EEGLAB. The dataset can be loaded either from the EEGLAB GUI or from the command windows by using the following code: 
+このデモでは、*pop_pac* GUI とコマンドライン呼び出しを使用して PAC を計算する方法を示します。 そのためには、まず、ツールボックス、*Simpac\_famp\_60\_fphs\_8.set*、EEGLABにサンプルデータセットをロードします。 データセットは、EEGLAB GUI またはコマンドウィンドウから次のコードを使用してロードできます。 
 
 ```matlab
 EEG = pop_loadset('filename','Simpac_famp_60_fphs_8.set');
 eeglab redraw; 
 ```
 
-Note: In this sample code, we assume the current directory to be the folder containing the toolbox.
+Note: このサンプルコードでは、現在のディレクトリがツールボックスを含むフォルダであることを想定しています。
 
-This dataset contains a simulated PAC signal where the instantaneous phase at 8Hz and the instantaneous amplitude at 60Hz are coupled during two segments of the signal (see figure below).
+このデータセットは、信号の2つのセグメント(下の図を参照)の間に、60Hzの即時フェーズと60Hzの瞬時の振幅が相まって、シミュレートされたPAC信号が含まれています。
 
-![image](https://github.com/user-attachments/assets/253d0a6c-620e-4328-b8d1-ea7e0637f7e1)
+![サイトマップ](https://github.com/user-attachments/assets/253d0a6c-620e-4328-b8d1-ea7e0637f7e1)
 
-After loading the dataset, we proceed to compute PAC with PACTools by using *pop_pac* GUI. To launch the GUI, select *Tools >  PAC Tools > Estimate PAC*  in the main EEGLAB GUI. Alternatively, you can use `EEG = pop_pac(EEG)` from the MATLAB command windows. Here we compute PAC using the Mean Vector Length Modulation Index method (*mvlmi*)  between 10 phase frequencies in the range [4 15]Hz and 20 amplitude frequencies in the range [30 100]Hz. To perform this computation, set *pop_pac* GUI as shown in the figure below, and click **Ok**.
+データセットをロードした後、PACToolsとPACToolsを*pop_pac* GUIで計算します。 GUI を起動するには、*Tools > PAC Tools > EEGLAB GUI で PAC* を推定します。 代わりに、あなたは使用することができます `EEG = pop_pac(EEG)` MATLABコマンドウィンドウから。 ここでは、範囲内の10相周波数間の平均ベクトル長さ変調インデックスメソッド(*mvlmi*)を使用してPACを計算します [4 15]Hz および範囲内の20の振幅周波数 [30 100]Hz. この計算を実行するには、以下の図に示すように*pop_pac* GUIを設定し、**Ok**をクリックします。
 
-![image](https://github.com/user-attachments/assets/f2dbe558-8096-4062-b828-67e5f8b8a6c8)
+![サイトマップ](https://github.com/user-attachments/assets/f2dbe558-8096-4062-b828-67e5f8b8a6c8)
 
-The equivalent command line call to perform this computation can be retreived with the command `eegh`. In this case will return in it last entry:
+この計算を実行するための同等のコマンドライン呼び出しは、コマンドで再処理できます `eegh`お問い合わせ この場合、最後のエントリで返します。
 
 `EEG = pop_pac(EEG,'Channels',[4  15],[30  90],[1 2],[1 2],'method','mvlmi','nboot',200,'alpha',[],'nfreqs1',10,'nfreqs2',20,'freqscale','log','bonfcorr',0);`
 
-To compute PAC with the same settings for an additional measure, we call *pop_pac* GUI again and select the new method after setting up the same set of parameters used for the previous computation. The results from the new computation will be saved in the EEG structure, following the specifications in the sections above. If the user sets different parameters from the ones saved from the previous computation, *pop_pac* delete the old computation and proceed with the new one. In this example, we compute PAC using the same parameters used above but using Instantaneous MIPAC (*instmipac*):
+追加の測定と同じ設定で PAC を計算するには、以前の計算に使用するパラメータの同じセットを設定した後、*pop_pac* GUI を再び呼び出して、新しいメソッドを選択します。 上記のセクションの仕様に従って、新しい計算からの結果はEEG構造で保存されます。 ユーザーが前の計算から保存されたものから異なるパラメータを設定した場合、 *pop_pac* 古い計算を削除し、新しいものを続行します。 この例では、上記のパラメータを使用してPACを計算しますが、Instantaneous MIPAC(*instmipac*):
 
 `EEG = pop_pac(EEG,'Channels',[4  15],[30  90],[1 2],[1 2],'method','instmipac','nboot',200,'alpha',[],'nfreqs1',10,'nfreqs2',20,'freqscale','log','bonfcorr',0);`
 
-A quick look into the results yield the following structure of results:
+結果へのクイックルックは、結果の次の構造をもたらす:
 
 ```matlab
 >> EEG.etc.eegpac(1)
@@ -223,7 +223,7 @@ A quick look into the results yield the following structure of results:
         mvlmi: [1×1 struct]
 ```
 
-and 
+そして、 
 
 ```matlab
 >> EEG.etc.eegpac(1)
@@ -239,10 +239,10 @@ and
         mvlmi: [1×1 struct]
 ```
 
-#### Visualization
-To visualize the PAC values computed previously we use the *pop_plotpac* GUI (click *Tools >  PAC Tools > Visualize PAC*). From the  *pop_plotpac* GUI we select the channel pair and the measure to visualize, then proceed to plot PAC results using the enabled plots in section D of the GUI. The figure below shows the plots generated for the Instantaneous MIPAC (*instmipac*) from each of the plotting options available for this measure: *Comodulogram*, *Temporal comodulogram* and *Freq.-time PAC*. We used default plotting options here, but users are encouraged to explore how the different plotting parameter options modify the visualization.
+#### 可視化
+以前に計算した PAC 値を視覚化するには、 *pop_plotpac* GUI を使用します( *Tools > PAC Tools > PAC* を視覚化)。 *pop_plotpac* GUI では、チャンネルのペアと視覚化のための測定を選択し、GUI のセクション D で有効なプロットを使用して PAC 結果をプロットします。 以下の図は、この測定のために利用可能なプロットオプションのそれぞれからInstantaneous MIPAC(*instmipac*)のために生成されたプロットを示しています。 *Comodulogram*、*Temporal comodulogram*および*Freq.-time PAC*。 ここではデフォルトのプロットオプションを使用しますが、ユーザーは異なるプロットパラメータオプションが視覚化をどのように変更するかを調べることをお勧めします。
 
-![image](https://github.com/user-attachments/assets/ed4dd87d-9d9f-4c26-ada4-41be78a910f0)
+![サイトマップ](https://github.com/user-attachments/assets/ed4dd87d-9d9f-4c26-ada4-41be78a910f0)
 
-### Contributions and feedback
-This is an open-source project on constant development. Please, contact the authors at nucleuscub@gmail.com for contributions. The use of the issue tracker is encouraged. 
+### 貢献とフィードバック
+定番開発に関するオープンソースプロジェクトです。 投稿者への連絡は、nuruuscub@gmail.comまでお願いします。 問題トラッカーの使用は推奨されます。 

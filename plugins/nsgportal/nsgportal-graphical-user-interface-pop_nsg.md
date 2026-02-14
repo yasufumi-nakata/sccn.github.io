@@ -8,53 +8,53 @@ title: nsgportal-graphical-user-interface:-pop_nsg
 long_title: nsgportal-graphical-user-interface:-pop_nsg
 ---
 
-# *nsgportal* graphical user interface: pop_nsg
+# *nsgportal* グラフィカルなユーザーインターフェイス: pop_nsg
 
-Interaction with key function in EEGLAB is mostly supported through both, command line and graphical user interface (GUI). The plugin *nsgportal* also follows this philosophy. In this section, we introduce the GUI supporting the plugin *nsgportal* through its main function, *pop_nsg*. A more advanced tutorial on using the plugin from its GUI will be addressed in the next sections (see [here](https://github.com/sccn/nsgportal/wiki/Creating-and-managing-a-job-from-pop_nsg-GUI)).
+EEGLABのキー機能との相互作用は、主に、コマンドラインとグラフィカルユーザーインターフェイス(GUI)の両方でサポートされています。 プラグイン *nsgportal* もこの理念に従います。 このセクションでは、プラグイン *nsgportal* をメイン関数 *pop_nsg* でサポートする GUI を紹介します。 GUI からプラグインを使用するより高度なチュートリアルは、次のセクションにアドレスされます(参照) [詳しくはこちら](https://github.com/sccn/nsgportal/wiki/Creating-and-managing-a-job-from-pop_nsg-GUI)).
 
-## The *pop_nsg* GUI
-To call the *pop_nsg* GUI, simply type *pop_nsg* from the MATLAB command windows. The GUI depicted below will pop up. the GUI can also be invoked from the EEGLAB main GUI by clicking ***Tools > NSG Tools > Manage NSG jobs***. For this, the plugin *nsgportal*  has to be installed before (see [this](https://github.com/sccn/nsgportal/wiki/Registering-on-NSG-R) section). 
+## *pop_nsg* GUI は
+*pop_nsg* GUI を呼び出すには、MATLAB コマンドウィンドウから *pop_nsg* を入力するだけです。 下記のGUIがポップアップ表示されます。 GUI は、EEGLAB のメイン GUI から呼び出すこともできます。 NSGジョブの管理*** このためには、プラグイン *nsgportal* をインストールする必要があります(参照) [お問い合わせ](https://github.com/sccn/nsgportal/wiki/Registering-on-NSG-R) セクション)。 
 
 <center>
 <img src="https://github.com/sccn/nsgportal/blob/master/docs/img/pop_nsgguineu.jpg?raw=true" alt="drawing" width="800"/>
 </center>
 
-The main functionalities supported from the pop_nsg GUI are listed below:
+pop_nsg GUI からサポートされている主な機能は次のとおりです。
 
-1. Submit an EEGLAB job to NSG. See GUI section "Submit new NSG job"
-2. Test NSG jobs locally on your computer.
-3. Delete jobs from your NSG account
-4. Download NSG job results.
-5. Load results from a completed and downloaded NSG job.
-6. Visualize error and intermediate logs
-7. Access *pop_nsg* help.
+1. NSG に EEGLAB ジョブを送信します。 GUIセクション「新規NSGジョブの送信」を参照してください。
+2. コンピュータでNSGジョブをローカルにテストします。
+3. NSGアカウントからジョブを削除
+4. NSGのジョブ結果をダウンロードします。
+5. 完了してダウンロードしたNSGジョブから結果を読み込みます。
+6. エラーと中間ログの可視化
+7. アクセス *pop_nsg*ヘルプ。
 
-## GUI main sections
-### Submitting new NSG job
-From this section of the GUI you will be able to test and submit a job for processing in NSG.
+## GUI メインセクション
+### 新規 NSG ジョブの送信
+GUIのこのセクションから、NSGで処理するジョブをテストして送信することができます。
 
-Component list:
+コンポーネントリスト:
 
- 1. Edit **Job folder or zip file** : Full path to the zip file or folder for a job to submit to NSG
- 2. Button **Browse**: Browse a zip file or folder for a job to submit to NSG
- 3. Edit **Matlab script to execute**: Matlab script for NSG to execute upon job submission
- 4. Button **Test job locally**:  Test job locally on this computer. A downscaled version of the job MUST be used.
- 5. Edit **Job ID (default or custom)**: Unique identifier for the NSG job. Modify this field at your convenience.   
- 6. Edit **NSG run options (see Help)**: NSG options for the job to be submitted. See *>> pop_nsg help* for the list of all options.
- 7. Button **Run job on NSG**: Submit the job to run on NSG                
+ 1. 編集**Jobフォルダまたはzipファイル**: NSGに送信するジョブのzipファイルまたはフォルダへのフルパス
+ 2. button **Browse**: NSGに送信するジョブのzipファイルまたはフォルダを参照
+ 3. **Matlabスクリプトを編集して実行**: ジョブ投稿時に実行するNSGのMatlabスクリプト
+ 4. ボタン **ローカルでテストジョブ**: このコンピューターにローカルでジョブをテストします。 ジョブのダウンスケールバージョンを使用する必要があります。
+ 5. 編集**Job ID(デフォルトまたはカスタム)**: NSGジョブのユニークな識別子。 このフィールドを利便性で変更します。   
+ 6. 編集**NSG実行オプション(ヘルプを参照してください)**: 応募作品のNSGオプション お問い合わせ すべてのオプションのリストの pop_nsg ヘルプ*
+ 7. ボタン**NSGで実行するジョブ**:NSGで実行するジョブを送信                
                                   
-### Interacting with your jobs
- From this section of the GUI, you will be able to interact with the jobs submitted to NSG under your credentials.
- This section is comprised of the following components:
+### あなたの仕事とのやりとり
+ GUIのこのセクションから、あなたの資格情報の下でNSGに提出されたジョブとやり取りすることができます。
+ このセクションは、次のコンポーネントで構成されています。
  
- 1. Button **Refresh job list**: Refresh the list of all of your NSG jobs.
- 2. Checkbox **Auto-refresh job list**: Automatically refresh the list of all of your NSG jobs.
- 3. Button **Delete this NSG job**: Delete the currently selected job
- 4. List box **Select job**: List of all jobs under your credentials in NSG. A color code is used here to inform on the status of the jobs in this list. The legend can be found below the list box.
- 5. Button **Matlab output log**: Download and display MATLAB command line output for the currently selected job. Intermediate job logs can be also visualized from here. In the figure above, this option appears disabled since there is no current job on the list.
- 6. Button **Matlab error log**: Download and display the MATLAB error log for the currently selected job. In the figure above, this option appears disabled since there is no current job on the list.
- 7. Button **Download job result**: Download result files from the currently selected job
- 8. Button **Load/plot results**: Launch a GUI for loading and displaying results of the currently selected job
+ 1. ボタン **参照ジョブリスト**: NSGの全てのジョブのリストを更新します。
+ 2. チェックボックス **Auto-refresh ジョブリスト**: NSGジョブの一覧を自動的に更新します。
+ 3. ボタン**このNSGジョブを削除**: 選択したジョブの削除
+ 4. リストボックス **選択ジョブ**: NSGであなたの資格情報に基づくすべてのジョブのリスト。 このリストのジョブのステータスを通知するために、ここでカラーコードが使用されます。 伝説はリストボックスの下にあります。
+ 5. ボタン**Matlab出力ログ**:現在選択されているジョブのMATLABコマンドライン出力をダウンロードして表示します。 中間ジョブログもここから視覚化できます。 上記の図では、リストに現在のジョブがないため、このオプションは無効になっています。
+ 6. ボタン**Matlabエラーログ**:現在選択されているジョブのMATLABエラーログをダウンロードして表示します。 上記の図では、リストに現在のジョブがないため、このオプションは無効になっています。
+ 7. ボタン**ジョブ結果をダウンロード**: 現在選択したジョブから結果ファイルをダウンロードする
+ 8. ボタン**ロード/プロット結果**: 現在選択したジョブの結果をロードおよび表示するためのGUIを起動します
     
-### Checking your NSG job status
-In this section are displayed the messages issued by NSG during the submission and processing of the job currently selected from the list box **Select job**.
+### NSGジョブステータスの確認
+このセクションでは、リストボックスから選択したジョブの送信と処理中にNSGによって発行されたメッセージが表示されます**ジョブを選択**。

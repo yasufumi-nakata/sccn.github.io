@@ -7,123 +7,123 @@ render_with_liquid: false
 title: Chapter-7.-Statistics-in-SIFT
 long_title: Chapter-7.-Statistics-in-SIFT
 ---
-When making inferences about information flow or causation in the neural
-systems, it is highly important to also produce confidence intervals and
-statistical significance thresholds for the estimator. The most common
-statistical tests used in neural system identification are listed in
-the table below. Statistical routines in SIFT are designed to address one or
-more of these three tests and currently fall under two main categories:
-non-parametric surrogate statistics, and asymptotic analytic statistics.
+情報の流れやニューラルの注意点を推測するとき
+システム、自信の間隔を作り出すことも非常に重要です
+推定者のための統計的意義のしきい値。 最も一般的な
+神経系識別に使用される統計的検査は、
+下の表。 SIFTの統計的なルーチンは1つまたはに対処するように設計されます
+これらの3つのテストの多くは、現在2つの主要なカテゴリの下に分類されます。
+非パラメトリック代理統計、および非対称分析統計。
 
 
 
-*Table caption. Common statistical tests. Here C(i,j) is
-the measured information flow from process *j* to process *i*.
-C<sub>null</sub> is the expected measured information flow when there is
-no true information flow, C<sub>base</sub> is the expected information
-flow in some baseline period.*
+*テーブルキャプション。 一般的な統計検査。 ここでC(i,j)は
+測定された情報はプロセス*j*からプロセス*i*に流れます。
+ツイート<sub>ログイン</sub> 測定された情報の流れはそこにあります
+本当の情報の流れ無し、C<sub>ベース</sub> 想定される情報
+ベースラインの期間に流れます。 * 必須
 
 |                                                  |                                                                                                |                                    |
 |--------------------------------------------------|------------------------------------------------------------------------------------------------|------------------------------------|
-| Test                         | Null Hypothesis                                  | What question are we addressing?                                                               | Applicable Methods                 |
-| **<img src="https://latex.codecogs.com/svg.latex?{ {H}_{null} }">**                          | Is there significantly non-zero information flow from process *j* to *i* ?         | Phase randomization Analytic tests |
-| **<img src="https://latex.codecogs.com/svg.latex?{ {H}_{base} }">**       | Is there a difference in information flow relative to the baseline?                            | Bootstrap resampling               |
-| **<img src="https://latex.codecogs.com/svg.latex?{ {H}_{AB} }">** | Is there a difference in information flow between experimental conditions/populations A and B? | Bootstrap resampling               |
+お問い合わせ 試験 | 核催眠 | どんな質問がありますか? |適用方法 |
+| **<img src="https://latex.codecogs.com/svg.latex?{ {H}_{null} }">※ | 工程から情報の流れが著しくない ※j*～*i* ? | フェーズランダム化分析試験 |
+| **<img src="https://latex.codecogs.com/svg.latex?{ {H}_{base} }">** | 基準線に相対的な情報流の違いはありますか? | ブーツストラップリサンプリング |
+| **<img src="https://latex.codecogs.com/svg.latex?{ {H}_{AB} }">※ | 実験的条件・人口AとBの違いはありますか? | ブートストラップ再販 |
 
-## 7.1. Asymptotic analytic statistics
+## 7.1. 麻薬分析統計
 
-In recent years, asymptotic analytic tests for non-zero information flow
-*(H<sub>null</sub>)* at a given frequency have been derived and
-validated for the PDC, rPDC, and DTF estimators (Schelter et al., 2005;
-Eichler, 2006b; Schelter et al., 2009). These tests have the advantage
-of requiring very little computational time, compared to surrogate
-statistics. However, these tests are also based on asymptotic properties
-of the VAR model, meaning they are *asymptotically* accurate and may
-suffer from inaccuracies when the number of samples is not very large or
-when assumptions are violated. Nonetheless, these tests can provide a
-useful way to quickly check for statistical significance, possibly
-following up with a more rigorous surrogate statistical test. These
-tests are implemented in SIFT's **`stat_analyticStats()`** function. To
-our knowledge, SIFT is the only publicly available toolbox that
-implements these analytic tests.
+近年、非ゼロ情報フローの非整形分析試験
+*(H)<sub>ログイン</sub>)* 与えられた頻度で派生し、
+PDC、rPDC、およびDTFの推定者(Schelter et al.、2005年)のために検証される;
+Eichler、2006b、Schelter et al。、2009)。 これらのテストは利点を持っています
+排ガスと比較して、非常に少ない計算時間を必要とする
+統計情報 しかし、これらのテストは、非対称的なプロパティに基づく
+VARモデルでは、それらは*asymptotically*正確であり、
+サンプルの数が非常に大きくないとき、または不正確に苦しむ
+想定される場合。 しかし、これらのテストは、
+統計的意義を素早く確認できる便利な方法
+より厳密な代理の統計的なテストと続く。 お問い合わせ
+SIFTの**でテストを実施`stat_analyticStats()`**機能。 お問い合わせ
+私たちの知識は、SIFTは公に利用可能なツールボックスです。
+これらの分析テストを実施します。
 
-## 7.2. Nonparametric surrogate statistics
+## 7.2. 非パラメトリック代理統計
 
-Analytic statistics require knowledge of the probability distribution of
-the estimator in question. When the distribution of an estimator is
-unknown, nonparametric surrogate statistical methods may be used to test
-for non-zero values or to compare values between two conditions.
-Surrogate statistical tests utilize surrogate data (modified samples of
-the original data) to empirically estimate the expected probability
-distribution of either the estimator or a *null distribution*
-corresponding to the expected distribution of the estimator when a
-particular null hypothesis has been enforced. Two popular surrogate
-methods are **bootstrap resampling and phase
-randomization.** These
-tests are implemented in SIFT's **`stat_surrogateStats()`** function.
+分析統計は、確率分布の知識を必要とする
+質問の推定者。 推定者の分布が
+未知の、非パラメトリック代理統計メソッドは、テストに使用できる
+ゼロ以外の値または2つの条件間の値を比較する。
+代理統計試験では、代理データ(変更サンプル)を利用しています。
+元のデータ) 期待される確率を一時的に推定する
+estimator か *null の配分のどちらかの配分*
+推定値の分布に対応する場合
+特定のヌル仮説が施行されました。 2つの人気のある代理
+メソッドは **bootstrap 再サンプリングとフェーズ
+ランダム化。** お問い合わせ
+SIFTの**でテストを実施`stat_surrogateStats()`**機能。
 
-### 7.2.1. Bootstrap resampling
+### 7.2.1. ブーツストラップ再サンプリング
 
-Bootstrap resampling (Efron and Tibshirani, 1994) approximates the true
-distribution of an estimator by randomly resampling with replacement
-from the original set of data and re-computing the estimator on the
-collection of resampled data. This is repeated many (e.g., 200-2000)
-times, and the value of the estimator for each resample is stored. When
-the procedure terminates, we have an empirical distribution of the
-estimator from which we can compute the expected value of the estimator,
-obtain confidence intervals around the expected value, and perform
-various statistical tests (t-tests, ANOVAs, etc.) to compare different
-values of the estimator. It can be shown that, under certain conditions,
-as the number of resamples approaches infinity, the bootstrap
-distribution approaches the true distribution of the data. The
-convergence speed depends largely on the nature of the data, but a rule
-of thumb is that 250-1000 resamples are generally sufficient to produce a
-reasonable estimate of the distribution. 
+ブーツストラップ再サンプリング(EfronとTibshirani、1994年)が正式に正式に
+代替品でランダムに再サンプリングすることにより、推定者の分布
+オリジナルのデータセットから、推定値を再入力
+再サンプルデータの収集。 これは多くの繰り返し(例えば、200-2000)
+各リサンプルの推定値が保存されます。 いつか
+手順は終了します。, 我々は、帝国分布を持っています
+estimator は、推定値の推定値を計算することができます。
+期待値の周りの信頼区間を取得し、実行する
+異なる統計的検査(t-tests、ANOVAsなど)を比較する
+推定値。 特定の条件の下で、それを示すことができます
+再サンプル数が無限に近づくにつれて、ブートストラップ
+分布は、データの真の分布にアプローチします。 ふりがな
+収束速度は、データの性質上大きく左右されますが、ルール
+の親指は250-1000再サンプルが一般に農産物に十分であるということです
+配布物の合理的な見積もり。 
 
-### 7.2.2. Phase Randomization
+### 7.2.2. フェーズランダム化
 
-Phase randomization (Theiler, 1992) is a method for testing for non-zero
-information flow in a dynamical system. The concept is quite simple: we
-begin by constructing the expected probability distribution of the
-estimator when the null hypothesis (no information flow) has been
-enforced in the data. We call this the *null distribution.* An observed
-value of the estimator is then compared to the quantiles of the null
-distribution to obtain a significance level for rejection of the null
-hypothesis for that value. Specifically, to generate our null
-distribution we randomize only the phases of each time-series,
-preserving the amplitude distribution. We then re-compute our estimator.
-Repeating this procedure many times produces the desired null
-distribution. Phase randomization should be implemented by
-applying a fast-fourier transform (FFT) to obtain the complex power
-spectrum, replacing the phases with those of a uniform random matrix,
-and finally applying the inverse FFT to obtain our surrogate data
-matrix. This procedure ensures that (a) the surrogate spectral matrix is
-hermitian and (b) the real part of the surrogate spectrum is identical
-to that of the original data. Since our frequency-domain information
-flow estimators depend critically on the relative phases of the
-multivariate time series, any observed information flow in the surrogate
-dataset should be due to chance. Therefore, values of the estimator
-greater than, say, 95% of the values in the null distribution should be
-significant at a 5% level (p < 0.05). 
+相ランダム化(Theiler, 1992)は、非ゼロのテストのための方法です
+動的システム内の情報フロー。 コンセプトはとてもシンプルです。
+期待される確率分布を組み立てることから始まります。
+null 仮説 (情報の流れなし) が行われたときに推定者
+データを強制する。 *null分布を呼び出します。* 観察される
+estimator の値は、null の quantiles と比較されます。
+NULLの拒絶のための重要なレベルを得るために配分
+その値の仮説。 具体的には、null を生成する
+各シリーズのフェーズだけをランダム化します。
+振幅分布を保存します。 見積もりをリクエストします。
+この手順を何度も繰り返して、目的のnullを生成します
+分布。 フェーズランダム化を実装する
+複雑な力を得るために高速燃料変換(FFT)を適用
+スペクトル、均一なランダム行列のそれらと相を交換する、
+そして最終的に私達の代理データを得るために逆FFTを適用して下さい
+マトリックス。 この手順では、(a) の surrogate の spectral の行列が
+hermitian および (b) 代理スペクトルの実質の部品は同一です
+元のデータへ。 周波数ドメイン情報から
+フロー推定器は、相対的なフェーズに依存します。
+多変量的時間シリーズ、任意の観察された情報の流れを代理
+データセットはチャンスのために必要です。 したがって、推定者の値
+より大きい, 言う, null 分布の値の 95% は、
+5% レベル (p < 0.05) で重要な。 
 
-Importantly, the above tests (both analytic and surrogate) are only
-pointwise significance tests, and therefore, when jointly testing a
-collection of values (for example, obtaining p-values for a complete
-time-frequency image), we should expect some number of non-significant
-values to exceed the significance threshold. As such, it is important to
-correct for multiple comparisons using tests such as False Discovery
-Rate (FDR) (Benjamini and Hochberg, 1995) using EEGLAB's **`fdr()`** function. 
+重要なのは、上記のテスト(分析と代理の両方)のみです。
+同様に重要なテスト、従って、共同テストするとき
+値の収集(例えば、p-values を完全に取得する)
+時間頻度のイメージ)、私達は少数の重要でない少数を期待します
+重要なしきい値を超える値。 こんなに重要なのは、
+False Discoveryのようなテストを使用して複数の比較のために正しい
+料金(FDR) (Benjamini、Hochberg、1995) EEGLABの**使用`fdr()`**機能。 
 
-## 7.3. Practical statistics in SIFT
+## 7.3. SIFTにおける実用的な統計
 
-Once a model has been fit and connectivity estimates computed, we often
-wish to compute statistics for the dataset. As discussed above, this can be achieved in SIFT using several approaches, including
-asymptotic analytic tests (for PDC, RPDC, and DTF measures) and
-surrogate statistics (bootstrapping, phase randomization). 
+モデルがフィットし、コネクティビティが計算されたら、私たちはしばしば
+データセットの統計を計算したい 上記と述べた通り、これにはいくつかのアプローチを使用してSIFTで達成することができます。
+アシンプトティック分析試験(PDC、RPDC、DTF対策用)
+代理統計(bootstrapping、位相ランダム化)。 
 
-### 7.3.1. SIFT native functions
+### 7.3.1. SIFT ネイティブ機能
 
-SIFT statistical functions are only available from the command line. Look at the help of these functions for how to use them. 
+SIFT統計機能はコマンドラインからのみ利用できます。 これらの機能の助けを借りて、それらを使用する方法を見てみましょう。 
 
 ```matlab
 % Analytic stats
@@ -136,11 +136,11 @@ EEG = pop_stat_surrogateGen(EEG);
 EEG = pop_stat_surrogateStats(EEG);
 ```
 
-The **EEG.CAT.Stats** structure should store statistics computed by these functions and can be used by the **TimeFreqGrid**  and **Brainmovie** functions presented earlier. Look in the **SIFT/stats** folder for other functions that may compute statistics. Most of these functions are a work in progress and were never finished, so they were not included in the SIFT menu. 
+**EEG.CAT.Stats** 構造は、これらの関数によって計算された統計を保存し、**TimeFreqGrid** および**Brainmovie** 関数が以前の機能で使用できるはずです。 統計を計算する他の関数の**SIFT/stats**フォルダを参照してください。 これらの関数のほとんどは進行中の作業であり、終了しませんでした。そのため、SIFTメニューには含まれていません。 
 
-### 7.3.2. Working with SIFT connectivity structure
+### 7.3.2. SIFT接続構造で動作する
 
-Another current method to compute statistics is to export the connectivity matrices stored in the CAT substructure of the EEG dataset. On the MATLAB command line type:
+統計を計算するための別の現在の方法は、EEGデータセットのCATサブ構造に保存された接続マトリックスをエクスポートすることです。 MATLAB コマンドラインタイプ:
 
 ```
 >> EEG(1).CAT.Conn
@@ -159,15 +159,15 @@ ans =
                    S: [8×8×49×238 single]
 ```
 
-The connectivity matrix in the **dDTF08** substructure, for example, is of size 8 components x 8 components x 49 frequencies x 238 time windows. Other substructures contain an array of frequencies and window centers.
+**dDTF08**サブ構造の接続行列は、例えば、サイズ8コンポーネントx 8コンポーネントx 49周波数x 238時間ウィンドウです。 その他のサブ構造には、周波数とウィンドウセンターの配列が含まれています。
 
-### 7.3.2.1. Comparing post-stimulus connectivity to baseline
+### 7.3.2.1. ベースラインへのポスト刺激接続の比較
 
-Bootstrapping to compute confidence intervals remains relatively simple. You may randomly select data epochs and rerun the connectivity analysis multiple times.
+自信の間隔を計算するBootstrappingは比較的簡単です。 データをランダムに選択し、接続解析を複数回再実行できます。
 
-**Important note:** You can look for effects using the simple thresholding method presented in the visualization section. However, computing significance of connectivity measures can take hours. This is also why it is only presented as a script. Be patient.
+**重要な注意:** 視覚化セクションで提示されたシンプルなしきい値方法を使用して効果を探すことができます。 しかし、接続対策の重要性は時間がかかります。 これは、スクリプトとしてのみ提示される理由です。 患者になる。
 
-If you have followed the tutorial, you need not prepare the data, but if you have not, the following script will apply the analyses performed in the previous sections of the tutorial (you still need to import the data with EEGLAB and perform EEGLAB-based preprocessing presented in section 5.2).
+チュートリアルに従った場合、データを用意する必要はありませんが、もしそうでなければ、次のスクリプトはチュートリアルの前のセクションで行われた分析を適用します(EEGLABでデータをインポートし、セクション5で提示されたEEGLABベースのプリプロセッシングを実行する必要があります)。
 
 ```matlab
 % prepare data
@@ -180,7 +180,7 @@ EEG = pop_est_fitMVAR( EEG, 'nogui', 'Algorithm', 'Vieira-Morf', 'ModelOrder', 1
 EEG = pop_est_mvarConnectivity( EEG, 'nogui', 'ConnectivityMeasures', {'Coh' 'S'}, 'freqs', [2:50], 'verb', 1); 
 ```
 
-Then, we can compute bootstrap connectivity, repetitively selecting data trials in a random fashion and recomputing connectivity.
+その後、ブーツトラップ接続を補正し、ランダムなファッションと再コンパイル接続でデータ試用を繰り返し選択できます。
 
 ```matlab
 % Bootstrap data trials and repeat 100 times, assuming you have already preprocessed data from the GUI
@@ -203,7 +203,7 @@ pVals = stat_surrogate_pvals(cohConcatBaselined, zeros(size(cohConcatBaselined,[
 pValsCorrected = fdr(pVals); % for info only. For FDR correction, we would need at least 1000 repetitions.
 ```
 
-You may then plot the result using the following script. Below we are using the low-level function **vis_TimeFreqGrid** to plot the result, but if we place the statistics in the **EEG.CAT.Stats** sub-structure, we may also use the higher-level **pop_vis_TimeFreqGrid** function to do so.
+次のスクリプトを使用して結果をプロットすることができます。 以下では、結果をプロットするために、低レベル関数**vis_TimeFreqGrid**を使用していますが、**EEGに統計情報を置く場合。 CAT。 Stats** サブ構造では、上位レベルの **pop_vis_TimeFreqGrid** 関数も使用できます。
 
 ```matlab
 stats = [];
@@ -218,11 +218,11 @@ vis_TimeFreqGrid('EEG', EEG(1), 'Conn', EEG(1).CAT.Conn, 'MatrixLayout', {'Parti
 
 <img width="1110" alt="Screen Shot 2023-08-26 at 9 31 05 AM" src="https://github.com/sccn/SIFT/assets/1872705/4b490066-ee57-42d8-b399-82bc86af33e4">
 
-*Figure caption. Connectivity compared to baseline and masked for significance (uncorrected for multiple comparisons).*
+*充填キャプション。 ベースラインと比較してコネクティビティと重要性(複数の比較に誤って)のマスク。 * 必須
 
-### 7.3.2.2. Comparing two conditions
+### 7.3.2.2. 2つの条件を比較する
 
-The data is prepared in the same way as above. This is to compare connectivity against the null hypothesis where the distribution of connectivity values comes from the same distribution (we thus fuse the data for both datasets and rebuild them by randomly pulling trials from the fused data).
+上記と同じ方法でデータを準備します。 これは、接続値の分布が同じ分布から来るnullの仮説との接続を比較することです(したがって、両方のデータセットのデータを使用し、ヒューズデータから試用をランダムに引き出すことによってそれらを再構築)。
 
 ```matlab
 % Bootstrap data compare EEG(1) and EEG(2)
@@ -249,7 +249,7 @@ pVals = stat_surrogate_pvals(cohConcat, originalDiff, 'both');
 pValsCorrected = fdr(pVals); % For illustration only, increase repetition to 1000 or more to use FDR in practice
 ```
 
-We are plotting the difference below.
+下記の違いを描いています。
 
 ```matlab
 stats = [];
@@ -263,67 +263,67 @@ vis_TimeFreqGrid('EEG', EEGTMP, 'Conn', EEGTMP.CAT.Conn, 'MatrixLayout', {'Parti
    'nodelabels', { 'IC8' 'IC11' 'IC13' 'IC19' 'IC20' 'IC23' 'IC38' 'IC39' }, 'stats', stats);
 ```
 
-![Screen Shot 2023-08-26 at 3 17 28 PM](https://github.com/sccn/SIFT/assets/1872705/1138b9a5-36d3-4d66-b7c7-3bd4e44c1032)
+![スクリーンショット 2023-08-26 3 17 28 PM](https://github.com/sccn/SIFT/assets/1872705/1138b9a5-36d3-4d66-b7c7-3bd4e44c1032)
 
-*Figure caption. Connectivity difference between correct and wrong conditions of the tutorial dataset thresholded for significance (uncorrected).*
+*充填キャプション。 重要性(未修正)のためのチュートリアルデータセットの正しいと間違った条件間の接続性の違い。 * 必須
 
-The solution above will also generalize to ANOVA and other types of statistical plots. The TFCE (threshold-free cluster enhancement method) is less aggressive than FDR (false discovery rate) to correct for multiple comparisons. You may use *limo_tcfe* function to apply TFCE.
+上記のソリューションは、ANOVAや他の種類の統計的なプロットに一般化します。 TFCE(レスホールドフリークラスターエンハンスメント方式)は、FDR(偽発見率)よりも攻撃力が少なく、複数の比較を補正します。 ※limo_tcfe* 関数を TFCE に適用させることもできます。
 
-## 7.4. Group analysis in SIFT
+## 7.4. SIFTにおけるグループ分析
 
-Cognitive experiments are typically carried out across a cohort of
-participants, and it is useful to be able to characterize differences in
-brain network activity within and between groups of individuals for
-different conditions. 
+認知実験は通常、コホート全体で行われます
+参加者は、差分を特徴付けるのに便利です。
+個人のためのグループ内との間の脳ネットワーク活動
+異なった条件。 
 
-While such analysis is
-relatively simple when performing analyses on scalp channels, it becomes
-more complicated when estimating connectivity in the source domain
-between dipolar IC processes. This is primarily due to the fact that it
-is often difficult to equate IC sources between participants. While we
-typically utilize clustering techniques to help equate dipolar sources
-across participants, in some cases, a subset of participants will still
-not exhibit one or more sources observed in all other
-participants. If one does not take into account these *missing
-variables*, one may risk obtaining biased estimates of the average
-connectivity across the subject population. This missing variable
-problem is well-known in statistics, and several approaches have been
-proposed for dealing with this. 
+そのような分析は、
+scalp チャネルで解析を実行すると比較的単純に、
+ソースドメイン内の接続を推定する際に、より複雑
+ダイポーラICプロセス間。 これは主にそれの事実のために
+参加者間でICソースを装備することは困難です。 私たちは、
+通常、クラスタリング技術を使用して、ダイポーラソースを装備
+参加者全員に、場合によっては、参加者のサブセットが引き続き行われる
+他のすべての場所で観察された複数のソースを展示しない
+参加者 これらを考慮に入れない場合 *missing
+変数*は、平均の偏差推定値を取得する危険性があります。
+被写体人口を越えた接続。 この行方不明変数
+問題は統計学でよく知られ、いくつかのアプローチはありました
+これに対処するための提案。 
 
-Currently, group analysis in the source
-domain is possible using two methods: disjoint clustering, which does
-not take into account the missing variable problem, but may still be
-useful for a general analysis, particularly if there is high agreement
-across the cohort of datasets in terms of source location and a
-Bayesian mixture model approach, which provides more robust statistics
-across datasets. A brief description of these methods is provided below.
+現在、ソースのグループ分析
+ドメインは 2 つの方法を使用して可能です: disjoint クラスタリング, これを行う
+欠落した変数問題を考慮に入れないが、まだあるかもしれない
+一般的な分析に役立ちます。特に高い合意がある場合
+ソースの場所とソースの面でデータセットのコホートを渡る
+より堅牢な統計情報を提供するベイジアンの混合モデルアプローチ
+データセットを渡る。 これらの方法の簡単な説明は以下のとおりです。
 
-### 7.4.1. Disjoint Clustering
+### 7.4.1. クラスタリング解除
 
-As mentioned above, users need to export connectivity matrices stored in the **EEG.CAT.Conn** structure and use external software to compute significance. 
+上記のように、ユーザーは**EEGに保存されている接続マトリックスをエクスポートする必要があります。 CAT。 Conn** 構造と外部ソフトウェアを使用して、意義を計算します。 
 
-This approach adopts a 3-stage process:
+このアプローチは3段階のプロセスを採用しています。
 
-**1. Identify K ROI's (clusters).** You may use affinity clustering of sources
-across subject populations using EEGLAB's Measure-Product clustering.
+**1. K ROI(クラスター)を特定する。** ソースの親和性クラスタリングを使うことができます
+EEGLABの計測製品クラスタを使用して、被写体人口を越える。
 
-**2. Compute all incoming and outgoing individually statistically
-significant connections between each pair of ROIs.** To do so, for each connection between 2 clusters, assess if it is significant across subjects, then create a \[ K X K
-\[x freq x time \] \] group connectivity matrix. Some pairs of connections might have more subjects than others, and that's OK. Note that users may also build a large connectivity matrix for all subjects, replacing missing connections in some subjects with NaNs and then using LIMO to compute statistics (as LIMO can handle the NaNs).
+**2. 個別に統計的にすべての着信および発信を計算する
+ROIの各ペア間の重要な接続。** そのためには、2つのクラスター間の接続ごとに、被写体全体に重要な場合は、\[ K X K] を作成します。
+\[x freq x 時間 \] \] グループ接続行列。 接続の一部のペアは、他のものよりも多くの被写体を持っているかもしれません。 ユーザーは、すべての被験者に対して大きなコネクティビティマトリクスを構築し、NaNsといくつかの被験者におけるコネクションを交換し、LIMOを使用して計算統計(LIMOはNaNsを処理できる)に使うことができることに注意してください。
 
-**3. Visualize the results using any of SIFT's visualization routines.**
-This method suffers from low statistical power when subjects do not have
-high agreement in terms of source locations (missing variable problem).
+**3. SIFTの視覚化のルーチンを使用して結果を視覚化して下さい。 メニュー
+この方法は、被験者がいないときに低統計力に苦しむ
+ソースの場所の面で高い合意(可変的な問題に従う)。
 
-### 7.4.2. Bayesian Mixture Model
+### 7.4.2. ベイジアンミックスチャーモデル
 
-A more robust approach (in development with Wes Thompson) uses smoothing splines and Monte-Carlo methods
-for joint estimation of posterior probability (with confidence
-intervals) of cluster centroid location and between-cluster
-connectivity. This method takes into account the "missing variable"
-problem inherent to the disjoint clustering approach and provides robust
-group connectivity statistics. A poster was [published](https://sccn.ucsd.edu/~scott/pdf/Thompson_and_Mullen_Poster_ICONXI.pdf) on this topic, but the code is not yet available.
+より堅牢なアプローチ(Wes Thompson の開発)は、スプラインとモンテカルロメソッドを滑らかに使用
+ポスターの確率の共同推定(自信あり)
+間隔)クラスターの遠心分離機の場所および間カルスターの
+接続性。 このメソッドは "missing変数" を考慮に入れます。
+問題は密接なクラスタリングのアプローチに固有のものであり、堅牢性を提供します。
+グループ接続統計。 ポスターは [ニュース](https://sccn.ucsd.edu/~scott/pdf/Thompson_and_Mullen_Poster_ICONXI.pdf) このトピックでは、コードはまだ利用できません。
 
-### 7.4.3. Group SIFT
+### 7.4.3. グループSIFT
 
-[Group SIFT](https://github.com/sccn/groupSIFT) was developed by Makoto Miyakoshi and collaborators. Its validity has not been assessed by SIFT authors, so use it at your own risk.
+[グループSIFT](https://github.com/sccn/groupSIFT) 宮越真琴とコラボレーターが開発した。 その妥当性は、SIFTの著者によって評価されていないので、あなた自身のリスクでそれを使用してください。

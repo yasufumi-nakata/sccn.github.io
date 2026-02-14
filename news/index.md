@@ -7,6 +7,6 @@ has_children: true
 has_toc: true
 nav_order: 1
 ---
-# EEGLAB news
+# EEGLABニュース
 
-The pages below contains recent EEGLAB news.
+EEGLABの最新情報をご覧いただけます。

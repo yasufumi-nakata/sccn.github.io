@@ -8,198 +8,198 @@ parent: Past workshops
 layout: redirect
 redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
-# 2021 Virtual EEGLAB Workshop
+# 2021年 バーチャルEEGLABワークショップ
 
-<h3 style="color:red"><b>Note:</b> If you are an attendee, please refer to the link you have received by email which contains the latest program and links to the online event.</h3>
+<h3 style="color:red"><b>注意:</b> 参加者の方は、最新のプログラムとオンラインイベントへのリンクを記載したメールが受け取ったリンクをご確認ください。</h3>
 
-From June 14 to June 18, the 30th EEGLAB workshop will be held online in a virtual brain conference site on [GatherTown](https://gather.town/). The first day will be free for all and will feature lectures and social events. The workshop will feature lectures on how to process data using EEGLAB, including scripting and the use of multiple plug-ins. Parallel sessions will discuss specific topics, particularly wearable EEG, deep learning and EEG, connectivity analysis, and EEG.
+6月14日から6月18日まで、第30回EEGLABワークショップがバーチャル脳会議場でオンライン開催されます。 [ガザータウン](https://gather.town/)お問い合わせ 初日は無料で、講演会や社会イベントを盛り上げます。 ワークショップでは、EEGLABを使用してデータを処理する方法について、スクリプトや複数のプラグインの使用などについて説明します。 並列セッションでは、特定のトピック、特にウェアラブルなEEG、ディープラーニング、EEG、コネクティビティ分析、およびEEGについて説明します。
 
-**<span style="color: red">REGISTRATION is now CLOSED </span>**.
+**<span style="color: red">会員登録 現在、営業終了 </span>**.
 
 <!--[<b>Register for the free first day session, Monday June 14 here</b>](https://www.eventbrite.com/e/147847663341).
 
 [<b>Register for the workshop sessions, Tuesday-Friday June 15-18th here</b>](https://na.eventscloud.com/611187). **Note:** You must register twice, once for June 14th and once for June 15-18th, if you want to attend the whole event.-->
 
-We are looking forward to meeting you online ... 
+私たちは、オンライン会議をお待ちしています... 
 
-Below is a still-provisional program for the 2021 Virtual EEGLAB Workshop (suggestions/requests welcome). The workshop will be held online, with social networking possible in the [GatherTown](https://gather.town/) environment. All hours are shown in Pacific Daylight Savings Time (PDT), and, in parentheses, Central European Summer Time (CEST). The time has been arranged to accommodate North and South American as well as Western European and African time zone waking hours. 'Night owl' participants from elsewhere are welcome as well. A later event will be planned to better accommodate Asian time zones. 
+以下は、2021年の仮想EEGLABワークショップ(提案/依頼歓迎)のための暫定プログラムです。 ワークショップはオンラインで開催され、社会的なネットワーキングが可能 [ガザータウン](https://gather.town/) 環境。 パシフィック・デイライト・セービング・タイム(PDT)と、括弧、中央ヨーロッパ・サマー・タイム(CEST)で、全時間を表示しています。 滞在期間は、北米と南米、欧米のタイムゾーンのウェイク時間に対応するために配置されています。 「Night owl」の参加者も歓迎します。 後日、アジアのタイムゾーンに対応したイベントを予定しています。 
 
-**Note:** Gather.town has a free public sample site for learning how to get around, attend events, and meet people in Gather.town - we highly recommend you try out their live walkthrough before the Workshop begins.
+**注意:** Gather. 町には、集会、集会、集会、集会など、様々な体験を楽しめる無料公開サンプルサイトがあります。 町 - ワークショップが始まる前に、ライブウォークスルーを試すことをお勧めします。
 
-**Time zone:** All the times below are shown in California (Pacific Daylight) Time. Click on one of the time zone boxes below to select your time zone (we are in process of adding more zones). 
+**タイムゾーン:** カリフォルニア(Pacific Daylight)時間に以下のすべての時刻が表示されます。 下のタイムゾーンボックスの1つをクリックして、タイムゾーン(より多くのゾーンを追加するプロセス)を選択します。 
 
-<button onclick="changeFormat()" style="background-color: Black; color: White; border: none; padding: 5px 5px; text-align: center;">A/PM<->24hr</button>
-<button onclick="changeTimezone('PDT')" style="background-color: #4CAF50; color: white; border: none; padding: 5px 5px; text-align: center;">PDT</button>
-<button onclick="changeTimezone('EDT')" style="background-color: #008CBA; color: white; border: none; padding: 5px 5px; text-align: center;">EDT</button>
-<button onclick="changeTimezone('CEST')" style="background-color:Orange; color: white; border: none; padding: 5px 5px; text-align: center;">CEST</button>
-<button onclick="changeTimezone('CST')" style="background-color: #ebcf34; color: white; border: none; padding: 5px 5px; text-align: center;">CST</button>
-<button onclick="changeTimezone('MST')" style="background-color:#34bdeb; color: white; border: none; padding: 5px 5px; text-align: center;">MST</button>
-<button onclick="changeTimezone('BST')" style="background-color:Grey; color: white; border: none; padding: 5px 5px; text-align: center;">BST</button>
-<button onclick="changeTimezone('IST')" style="background-color:Purple; color: white; border: none; padding: 5px 5px; text-align: center;">IST</button>
+<button onclick="changeFormat()" style="background-color: Black; color: White; border: none; padding: 5px 5px; text-align: center;">日 時<->24時間</button>
+<button onclick="changeTimezone('PDT')" style="background-color: #4CAF50; color: white; border: none; padding: 5px 5px; text-align: center;">PDTの特長</button>
+<button onclick="changeTimezone('EDT')" style="background-color: #008CBA; color: white; border: none; padding: 5px 5px; text-align: center;">エディット</button>
+<button onclick="changeTimezone('CEST')" style="background-color:Orange; color: white; border: none; padding: 5px 5px; text-align: center;">ウエスト</button>
+<button onclick="changeTimezone('CST')" style="background-color: #ebcf34; color: white; border: none; padding: 5px 5px; text-align: center;">インフォメーション</button>
+<button onclick="changeTimezone('MST')" style="background-color:#34bdeb; color: white; border: none; padding: 5px 5px; text-align: center;">ツイート</button>
+<button onclick="changeTimezone('BST')" style="background-color:Grey; color: white; border: none; padding: 5px 5px; text-align: center;">ツイート</button>
+<button onclick="changeTimezone('IST')" style="background-color:Purple; color: white; border: none; padding: 5px 5px; text-align: center;">リスト</button>
 
-## MONDAY, June 14th (open to all; free registration required)
+## 6月14日(土)(全開、無料登録)
 
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timeformat="12hr" data-timezone="PDT">06:30am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:00</span> – Registration open; come explore the workshop Gather.Town site. Hang out and socialize with new and old friends ... </span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timeformat="12hr" data-timezone="PDT">06:30午前</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:00</span> – 参加登録は開講します。ワークショップを見学してください。 タウンサイト 新しくて古い友達と交流し、楽しく過ごす... </span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:55</span> –  **Gather** in the Gather.Town workshop site. **Meet the tutors**. </span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7月7日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:55</span> – **ギャザー ** ギャザー. 町の研修会の場所。 **チューターの集合 ** </span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – **Basic elements** of MATLAB scripting for EEGLAB (for beginners; Clement Lee)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7月7日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – ** EEGLAB の MATLAB スクリプトの基本的な要素** (初心者向け; Clement Lee)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">9:10</span>– **Mining event-related brain dynamics I** (Scott Makeig)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8月8日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">9:10</span>– **イベント関連の脳のダイナミクスのマイニング I** (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig)) (Scott Makeig (Scott Makeig)) (Scott Makeig) (Scott Makeig)) (Scott Makeig (Scott Makeig)) (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig)) (Scott Makeig (Scott Makeig)) (Scott Makeig (Scott Makeig (Scott) (Scott)))) (Scott Makeig (S...</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">9:15am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **What&#39;s new in EEGLAB?** (Arnaud Delorme)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前9時15分</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **EEGLABで新しくなった&#39;s?** (アルナード・デローム)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:00am</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - Parallel **participant poster presentations** in the Poster Hall. Note that you must register for the whole workshop to present a poster.</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前10時</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - ポスターホールにパラレル**参加ポスター発表**。 ワークショップ全体にポスターを提示するために登録する必要があります。</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00am</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span> - Advanced Topics</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前11時～午後11時</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - 高度なトピック</span>
 
-> <span style="color: gray">Parallel session 1 - **Analysis of \'wearably\' acquired EEG data**
+> <span style="color: gray">パラレルセッション 1 - ** \'wearably\' の分析は EEG データを得ました**
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span> - **Wearable EEG device** review (Cedric Cannard)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span> - **ウェアラブルEEGデバイス**レビュー(Cedric Cannard)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:15pm</span> - **Practical applications** of wearable EEG (Tzyy Ping Jung)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時15分</span> - **実用的なアプリケーション**着用可能なEEG(Tzyy Ping Jung)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:15</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span> - **Mobile Brain/Body Imaging (MoBI)** (John Iversen)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:15</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - **移動式脳/ボディ イメージ投射(MoBI)** (ジョン・イヴァーン)</span>
 
-> <span style="color: gray">Parallel session 2 - **Neuroinformatics using BIDS and HED**
+> <span style="color: gray">パラレルセッション 2 - **BIDSとHEDを使用してNeuroinformatics **
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span> - **What is the \'Brain Imaging Data Structure\' (BIDS)?** (Cyril Pernet)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span> -** \'Brain Imaging Data Structure\'(BIDS)とは何ですか?** (Cyrilパーネット)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:10pm</span> - **Hierarchical Event Descriptors (HED)** (Robbins, Makeig &amp; Dung Truong)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:10pm</span> - **階層イベント記述子(HED)** (ロビンズ、マジグ&amp;ダン・トゥルン)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:10</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span> - **The EEGLAB BIDS data I/O plug-in** (Truong &amp; Delorme)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:10</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - **EEGLAB BIDSデータI/Oプラグイン** (Truong &amp;Delorme) )</span>
 
-> <span style="color: gray">Parallel session 3 (reserved for sponsors; TBD)</span>
+> <span style="color: gray">パラレルセッション3(スポンサー、TBD)</span>
 
-## TUESDAY, June 15th (paid registration required)
+## TUESDAY、6月15日(有料)
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – **EEGLAB data import and \'bad\' data visualization** (Julie Onton)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7月7日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – **EEGLABデータのインポートと\'bad\'のデータ可視化**(Julie Onton)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">9:00</span> – **Time-frequency decomposition: Theory** (John Iversen)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8月8日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">9:00</span> - **時間頻度分解: 理論** (ジョン・イヴァーン)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">9:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **ICA theory** (Jason Palmer &amp; Scott Makeig)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前9時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **ICA理論** (Jason Palmer &amp;スコット・マディグ)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span> – Social time. **Tutors available** for Q&amp;A </span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前10時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span> – 社会的な時間. **Q&amp;Aのチューター** </span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30am</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span> - **Advanced Topics**</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30～</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - **高度なトピック**</span>
 
-> <span style="color: gray">Parallel session 1 - **Time-frequency and connectivity analysis**
+> <span style="color: gray">パラレルセッション 1 - **時間頻度と接続解析**
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span> - **Time-frequency PRACTICUM** in EEGLAB (John Iversen)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span> - **EEGLAB(John Iversen)における時間頻度の実践**</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:00pm</span> - **The PowPowCAT plug-in** (Makoto Miyakoshi)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時</span> -**PowPowCATプラグイン**(宮越真琴)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span> - **Phase/amplitude coherence (PAC) plugin** (Ramon Martinez Cancino)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> -**Phase/amplitude coherence(PAC)プラグイン**(Ramon Martinez Cancino)</span>
 
-> <span style="color: gray">Parallel session 2 - **Lab Streaming Layer (LSL) for multimodal data collection**
+> <span style="color: gray">パラレルセッション 2 - **複数のモジュールのデータ収集のための層(LSL)を流す実験室* * 必須
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">10:45</span> - **LSL introduction and demonstration** (Christian Kothe)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">10:45</span> -**LSL導入とデモ**(Christian Kothe)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:45</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - **The lsl_app_matlabviewer EEGLAB plugin** (Arnaud Delorme)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:45</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - **lsl_app_matlabviewer EEGLABプラグイン** (Arnaud Delorme)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span> - **LSL synchronization and other topics** (Christian Kothe)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span> -**LSLの同期とその他のトピック**(Christian Kothe)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:00pm</span> - **LSL in virtual reality and iEEG** (Chadwick Boulay)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時</span> - バーチャルリアリティとiEEG**(Chadwick Boulay)の**LSL</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:30pm</span> - **LSL troubleshooting I** (David Medine)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時30分</span> -**LSLのトラブルシューティングI**(David Medine)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span> - **LSL wrap up** (Tim Mullen)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> -**LSLラップアップ** (キム・ムレン)</span>
 
-> <span style="color: gray">Parallel session 3 (reserved for sponsors; TBD)</span>
+> <span style="color: gray">パラレルセッション3(スポンサー、TBD)</span>
 
-## WEDNESDAY, June 16th (paid registration required)
+## WEDNESDAY、6月16日(有料)
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – **ICA decomposition PRACTICUM** (Julie Onton)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7月7日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – **ICA分解PRACTICUM**(ジュリー・オントン)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">9:00</span> – **Forward &amp; inverse head modeling** (Zeynep Akalin Acar)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8月8日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">9:00</span> - **フォワード&インバース;インバースヘッドモデリング**(Zeynep Akalin Acar)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">9:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **EEG connectivity analysis** (Tim Mullen)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前9時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **EEG接続解析** (キム・ムレン)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span> – Social time. **Tutors available** for Q&amp;A.</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前10時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span> – 社会的な時間. **Q&amp;Aのチューター**。</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30am</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span> - **Advanced Topics**</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30～</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - **高度なトピック**</span>
 
-> <span style="color: gray">Parallel session 1 **NFT/NIST high-res. source imaging plug-ins**
+> <span style="color: gray">パラレルセッション 1 **NFT/NIST ハイレス。 ソースイメージングプラグイン**
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - **High-resolution source imaging** (Zeynep Akalin Acar)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> -**高分解能撮影**(Zeynep Akalin Acar)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span>- **NFT/NIST demo and PRACTICUM** (Zeynep Akalin Acar)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span>- **NFT/NISTデモとPRACTICUM**(Zeynep Akalin Acar)</span>
 
-> <span style="color: gray">Parallel session 2 - **Connectivity analysis**
+> <span style="color: gray">パラレルセッション 2 - **接続解析**
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - **The DIPFIT and ROIconnect plug-ins** (Arnaud Delorme)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> -**DIPFITとROIconnectプラグイン**(Arnaud Delorme)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:45</span> - **Connectivity analysis using SIFT** (Tim Mullen)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:45</span> - **SIFT**(Tim Mullen)を用いた接続解析</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:45</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span>- **SIFT PRACTICUM** (Tim Mullen)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:45</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span>- ** SIFT PRACTICUM** (Tim Mullen) は</span>
 
-> <span style="color: gray">Parallel session 3 (reserved for sponsors; TBD)</span>
+> <span style="color: gray">パラレルセッション3(スポンサー、TBD)</span>
 
-## THURSDAY, June 17th (paid registration required)
+## 6月17日(金) THURSDAY
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – **ICA clustering PRACTICUM** (Julie Onton)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7月7日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – **ICAクラスタリング PRACTICUM** (ジュリー・オントン)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8:00am</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">9:00</span> – **EEGLAB group analysis** (Arnaud Delorme)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8月8日</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">9:00</span> -**EEGLABグループ分析**(Arnaud Delorme)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">9:00am</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **Multiple comparisons corrections and the use of bootstrap** (Cyril Pernet)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前9時</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **複数の比較修正とブーツストラップの使用** (Cyril Pernet)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span> – Social time. **Tutors available** for Q&amp;A.</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前10時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span> – 社会的な時間. **Q&amp;Aのチューター**。</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30am</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span> - **Advanced Topics**</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30～</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - **高度なトピック**</span>
 
-> <span style="color: gray">Parallel session 1 - **Linear statistical modeling of EEG data**
+> <span style="color: gray">パラレルセッション 1 - **EEGデータの線形統計モデリング**
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - **Introduction to linear modeling** (Arnaud Delorme)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - **リニアモデリング入門**(Arnaud Delorme)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span> - **Statistics using linear modeling** (Cyril Pernet)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span> - **リニアモデリングを用いた統計** (Cyril Pernet)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span> - **EEGLAB LIMO plug-in PRACTICUM** (Cyril Pernet &amp; Arnaud Delorme)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - **EEGLAB LIMOプラグインPRACTICUM**(Cyril Pernet &amp;Arnaud Delorme)</span>
 
-> <span style="color: gray">Parallel session 2 - **Advanced ICA analysis**
+> <span style="color: gray">パラレルセッション 2 - **先進的なICA分析**
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:15</span> - **AMICA and AMICA Tools** (Scott Makeig &amp; Jason Palmer)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:15</span> - **アメリカとアメリカツール** (Scott Makeig &amp; Jason Palmer) (Scott Makeig &amp; Jason Palmer) (Scott Makeig &amp; Jason Palmer) (Scott Makeig &amp; Jason Palmer) (Scott Makeig &amp; Jason Palmer)) (Scott Makeig &amp; Jason Palmer)) (Scott Makeig &amp; Jason Palmer) (Scott Makeig &amp; Jason Palmer)) (Scott Makeig &amp; Jason Palmer) (Ja)))) (Scott Makeig &amp; Jason Palmer) (Ja (Ja (Ja)))))))) (Ja (Ja (Ja (Ja (Ja (Ja (Ja (Ja (Ja (Ja (Scott))))))))))))))))</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:15</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:45</span> - **Independent Modulator Analysis plug-in** (Wagner &amp; Onton)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:15</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:45</span> - **独立した変調器解析プラグイン** (ワグナー&オントン)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:45</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span> - **ICA reliability analysis** (Fiorenzo Artoni)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:45</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - **ICA信頼性分析**(Fiorenzo Artoni)</span>
 
-> <span style="color: gray">Parallel session 3 (reserved for sponsors; TBD)</span>
+> <span style="color: gray">パラレルセッション3(スポンサー、TBD)</span>
 
-## FRIDAY, June 18th (paid registration required)
+## 6月18日(金)(有料)
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – Network. **Tutors available** for Q&amp;A.</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7月7日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – ネットワーク **Q&amp;Aのチューター**。</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">9:30</span> – **Mining event-related brain dynamics II** (Scott Makeig)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8月8日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">9:30</span> – **イベント関連の脳のダイナミクスII ** (Scott Makeig)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">9:30am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **Deep learning for EEG - the HBN benchmark dataset** (Delorme, Truong)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前9時30分</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> - **EEGのためのディープラーニング - HBNベンチマークデータセット** (デラックス、トゥルン)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:00am</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span> – Social time. **Tutors available** for Q&amp;A.</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前10時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span> – 社会的な時間. **Q&amp;Aのチューター**。</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30am</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span> - Advanced Topics</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30～</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - 高度なトピック</span>
 
-> <span style="color: gray">Parallel session 1 - **Group analysis, pipelines, and scripting in EEGLAB**
+> <span style="color: gray">パラレルセッション 1 - **EEGLAB*のグループ分析、パイプライン、およびスクリプト * 必須
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - **Creating an EEGLAB STUDY** (Arnaud Delorme)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - **EEGLAB STUDY**(Arnaud Delorme)の作成</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:45</span>- **Working with EEGLAB studies, PRACTICUM** (Arnaud Delorme)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:45</span>- **EEGLABの研究、PRACTICUM**(Arnaud Delorme)で働く</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:45</span>-<span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:15pm</span>- **Scripting with EEGLAB studies, PRACTICUM** (Arnaud Delorme)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:45</span>-<span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時15分</span>- ** EEGLABの研究、PRACTICUM**(Arnaud Delorme)によるスクリプト</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:15pm</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span> - **EEGLAB and high-performance computing (Arnaud Delorme)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時15分</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - **EEGLABと高性能コンピューティング(Arnaud Delorme)</span>
 
-> <span style="color: gray">Parallel session 2 **Automated artifact rejection and component classification**
+> <span style="color: gray">パラレルセッション 2**Automatedアーティファクト拒絶とコンポーネント分類**
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - **Artifact Subspace reconstruction** (Christian Kothe)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - **アーティファクト・サブスペース再建**(Christian Kothe)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:20</span> - **ASR performance analysis I** (Fiorenzo Artoni)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:20</span> -**ASR性能解析 I** (Fiorenzo Artoni) (Fiorenzo Artoni) (Fiorenzo Artoni) (Fiorenzo Artoni) (Fiorenzo Artoni) (Fiorenzo Artoni)) (Fiorenzo Artoni)) (Fiorenzo Artoni)) (Fiorenzo Artoni) (Fiorenzo Artoni) (Fiorenzo Artoni)) (Fiorenzo Artoni (Fiorenzo)) (Fiorenzo Artoni (Fiorenzo)) (Fiorenzo Artoni (Fiorenzo)))) (Fiorenzo (Fiorenzo (Fiorenzo Artoni)))))))))) (Fiorenzo (Fiorenzo (Fiorenzo Artoni (Fiorenzo)))))))))))))) (Fiorenzo (Fiorenzo (Fiorenzo (Fiorenzo (Fiorenzo (Fiorenzo (Fiorenzo (Fiorenzo)))))))))) (Fiorenzo</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:20</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:40</span> - **ASR performance analysis II** (Tzyy Ping Jung)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:20</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:40</span> -**ASR性能解析II**(Tzyy Ping Jung)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:40</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:45pm</span> - **ICLabel for classifying independent components** (Luca Pion Tonachini)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:40</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> -**独立したコンポーネントを分類するためのICLabel**(Luca Pion Tonachini)</span>
 
-> <span style="color: gray">Parallel session 3 (reserved for sponsors; TBD)</span>
+> <span style="color: gray">パラレルセッション3(スポンサー、TBD)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">1:00pm</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">1:45pm</span>– **Participant presentations and general discussion** (All)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午後1時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">午後1時45分</span>– **参加者のプレゼンテーションと一般的な議論** (すべて)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">1:45pm</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">2:00pm</span>– Close</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午後1時45分</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">午後2時</span>– 閉じる</span>

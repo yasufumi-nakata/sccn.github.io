@@ -5,35 +5,35 @@ long_title: MATLAB tutorial
 parent: Reference Topics
 grand_parent: Tutorials
 ---
-Matlabチュートリアル
+Matlab チュートリアル
 ===
 
-EEGLABのグラフィックインターフェイスは強力なMATLABの上に構築されています
-スクリプト言語。 EEGLABのフル機能を楽しむ
+EEGLABのソリューション
+EEGLABの特徴
 マクロコマンドの構築とカスタムと自動処理の実行
-MATLABのデータ構造を操作する機能が必要です。
+MATLABデータ構造を操作する
 
 ## MATLABオンラインコース
 
-MathWorksは、MATLABのセルフペースのオンラインコースを提案しています。 お問い合わせ
- 「MATLAB ONramp」を1〜2時間の双方向導入完了
-  MATLABプログラミングの基礎 
+MathWorksは、MATLABのオンラインコースです。
+ 「MATLAB ONramp」を1〜2倍に導入
+  MATLABプログラミング 
   
-MATLABへのアクセス ランプ: 
-- フォロー [MATLABアカデミーへのリンク](https://matlabacademy.mathworks.com/)
-- またはMATLAB内の「Learn MATLAB」メニューを選択します。 
+MATLABのランプ: 
+- フォロー [MATLABアカデミー](https://matlabacademy.mathworks.com/)
+- または、MATLAB は、 メニュー 
 
-MathWorksにログインする
+MathWorksをフォローする
  無料で作成できるアカウント [詳しくはこちら](https://www.mathworks.com/mwaccount/register). 
 
 
-## MATLABドキュメント
-また、MATLABのヘルプやドキュメントもご相談いただけます。 
+## MATLABの特徴
+また、MATLABのヘルプやドキュメントも受け付けております。 
 以下のデモを実行し、次のヘルプセクションを読むことをお勧めします。
 
-MATLABヘルプでは、最初の4つのチュートリアルを実行する必要があります。
+MATLABヘルプ, チュートリアル4
 
--   MATLABで始める
+-   MATLABの使い方
 -   言語の基礎
 -   数学
 -   グラフィック(第一部2Dプロットのみ)
@@ -45,8 +45,8 @@ MATLABヘルプでは、最初の4つのチュートリアルを実行する必�
 
 <!-- If you do not have access to the MATLAB demos, [here](http://sccn.ucsd.edu/eeglab/matlaboverview.html) is a short online introduction to MATLAB (recommended pages, 1 to 12).
 -->
-MATLABを定期的に使用しない場合は、これらのデモを見たり、これらのセクションを読んで、数日間にわたって紹介するスキルを使用して練習することをお勧めします。
+MATLABは、様々な言語で、様々な言語を学習し、様々な言語を学習し、その言語を学習する。
 
-## EEGLABでスクリプトするためのビデオチュートリアル
+## EEGLABのチュートリアル
 
-お問い合わせ [ビデオチュートリアル](http://sincxpress.com/neuroscience/) マイク・コーエンがEEGLABを利用しています。
+お問い合わせ [ビデオチュートリアル](http://sincxpress.com/neuroscience/) マイク・コーエンは、

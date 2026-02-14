@@ -6,4 +6,4 @@ parent: Tutorials
 has_children: true
 nar_order: 20
 ---
-このセクションの下のページには、EEGLABのEEGデータを処理するためのその他の情報が含まれています。 
+このサイトでは、EEGLABのEEGLABのEEGLABのEEGラボの会員資格を付与しています。 

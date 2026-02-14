@@ -6,77 +6,77 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 22
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/relica).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/relica).
 
 <img src="./images/relica.png" width="600">
 
-# The RELICA EEGLAB plug-in
+# RELICA EEGLABプラグイン
 
-## What is RELICA?
-Independent Component Analysis (ICA) is a widely applied data-driven method for parsing brain and non-brain EEG source signals, mixed by volume conduction to the scalp electrodes, into a set of maximally temporally and functionally independent component (IC) processes. Many ICs may be identified with a precise brain physiological (or non-brain) origin. However, this process is hindered by partial instability in ICA results that can arise from noisy, nonstationary, or insufficient data. Here we describe the use of an EEGLAB extension to perform RELICA (for ‘RELiable ICA’) decomposition, a novel method by Fiorenzo Artoni ([Artoni et al., 2014](https://www.sciencedirect.com/science/article/pii/S1053811914007526))for characterizing the statistical reliability within a data set of IC processes identified by its ICA decomposition. 
+## RELICAとは?
+インディペンデントコンポーネント分析(ICA)は、頭皮電極へのボリューム伝導によって混合され、脳と非脳EEGソース信号を解析するための広く応用データ駆動方式で、最大温度および機能的に独立したコンポーネント(IC)プロセスのセットに使用されます。 詳しくはこちら ICは正確な脳生理学的(または非脳)の起源と識別することができる。 しかし、このプロセスは、ノイズ、非静止、または不十分なデータから発生する可能性のあるICA結果の部分的な不安定性によって妨げられます。 ここでは、Fiorenzo Artoni(Fiorenzo Artoni)による新しい方法であるRELICA(RELiable ICA)の分解を実行するためのEEGLAB拡張機能の使用について説明しています。[アルトーニ ら., 2014](https://www.sciencedirect.com/science/article/pii/S1053811914007526))ICAの分解によって識別されるICプロセスのデータセット内の統計的な信頼性を特徴付けるため。 
 
-To enable RELICA decomposition of large datasets, we have now implemented an easy route, from the EEGLAB GUI or MATLAB command line, to optionally run the RELICA processing on the high-performance computing (HPC) resources of the U.S. XCEDE network via [The Neuroscience Gateway](https://www.nsgportal.org). See [Delorme et al., 2019](https://sccn.ucsd.edu/~scott/pdf/Delorme_Open_EEGLAB_Portal_NER18.pdf) for more details.
+大規模なデータセットの RELICA 分解を有効にするには、EEGLAB GUI または MATLAB コマンドラインから、米国の XCEDE ネットワークの高性能コンピューティング (HPC) リソースの RELICA 処理をオプションで実行できるようになりました。 [神経科学ゲートウェイ](https://www.nsgportal.org)お問い合わせ お問い合わせ [Delorme ら., 2019](https://sccn.ucsd.edu/~scott/pdf/Delorme_Open_EEGLAB_Portal_NER18.pdf) 詳しくはこちら
 
-The goal of RELICA is to identify IC processes that are most stably separated from the decomposition data across many random bootstrap selections of its data frames or epochs. Results of RUNICA can be used to judge confidence in conclusions drawn about individual ICs or about the stability of between-subject IC clusters.
+RELICAの目標は、データフレームやエポックの多くのランダムなブートストラップ選択を渡る分解データから最も安定的に分離されるICプロセスを特定することです。 RUNICAの結果は、個々のICについて描画された結論や、対流ICクラスターの安定性について自信を判断することができます。
 
-RELICA first computes a reference decomposition the data using an ICA algorithm of choice (the most powerful is AMICA). It then performs multiple decompositions of bootstrap surrogate versions of the input data (as many data frames or epochs as are in the training data, selected at random from the data with substitution). To speed the computation, the user may choose a faster (though somewhat less effective) ICA algorithm to use for these decompositions.
+RELICAは、最初に、ICAアルゴリズムの選択肢(最も強力なAMICA)を使用してデータを分解する参照を計算します。 それから、入力データのbootstrap surrogateバージョンの複数の分解を実行します(いくつかのデータフレームや、置換のデータからランダムに選択したトレーニングデータにあるEPochs)。 計算を高速化するために、ユーザーはこれらの分解のために使用するために、より速く(少し効果的)ICAアルゴリズムを選ぶことができます。
 
-Next, for each IC in each decomposition, RELICA computes the dipolarity of the IC scalp map, a measure of physiological plausibility ([Delorme et al., 2012](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135)). It then clusters the separated ICs from the surrogate decompositions based on correlations between their time courses. The number of clusters is the number of computed ICs (typically the number of input channels). When a bootstrap dataset contributes two or more ICs to one cluster, that bootstrap decomposition is removed from the computation as it likely failed to converge. Each cluster can then be identified with an exemplar IC, selected as the IC nearest to the cluster centroid in the clustering measure space. A measure, QLc, of the compactness of the bootstrap IC clusters provides a within-subject measure of IC reliability for each IC. RELICA can also return informative visualizations of its results. 
+次に、各ICが分解するごとに、RELICAはICスカルプマップの分極性を計算し、生理学的プルーシビリティの測定()[Delorme ら., 2012](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135))。 その後、時間コース間の相関に基づいて、分離されたICを分離します。 クラスターの数は計算されたICの数(通常入力チャンネル数)です。 ブートストラップのデータセットが 1 つのクラスターに 2 つ以上の IC に貢献した場合、そのブートストラップの分解は、コンバージに失敗する可能性があるため、計算から削除されます。 各クラスターは、クラスター測定スペースのクラスターの遠心分離機に最も近いICで選択された試験器ICで識別することができます。 ブーツトラップICクラスターの小型化のQLcは、各ICのIC信頼性の内流測定を提供します。 RELICAは、その結果の有益な視覚化を返すこともできます。 
 
-## Installing the RELICA plug-in in EEGLAB
-All plug-ins in EEGLAB, including RELICA, can be installed in two ways. To install RELICA:
+## EEGLABにRELICAプラグインをインストールする
+RELICA を含む EEGLAB のすべてのプラグインは 2 つの方法でインストールできます。 RELICAをインストールするには:
 
-1. **From the EEGLAB Plug-in Manager:** Launch EEGLAB and select menu item **File > Manage EEGLAB Extensions** in the main EEGLAB window. A plug-in manager window will pop up. Look for and select the RELICA plug-in, then press **Install/Update**.
+1. **EEGLABプラグインマネージャから:** EEGLABを起動し、メニュー項目を選択**ファイル> EEGLAB拡張機能**をメインのEEGLABウィンドウで管理します。 プラグインマネージャーウィンドウがポップアップ表示されます。 RELICA プラグインを探し、選択し、**Install/Update** を押します。
 
-2. **From the web:** Download the RELICA plug-in zip file either from [this](https://github.com/sccn/relica) GitHub page (select ‘Download Zip‘) or from [this EEGLAB wiki plug-ins page](https://sccn.ucsd.edu/wiki/Plugin_list_all) (select **RELICA**). Decompress the zip file in the plug-ins folder in the main eeglab folder (*../eeglab/plugins/*).
+2. **Webから:** RELICAプラグインのzipファイルをダウンロードする [お問い合わせ](https://github.com/sccn/relica) GitHub のページ (「Zip をダウンロード」) または [EEGLAB wikiプラグインページ](https://sccn.ucsd.edu/wiki/Plugin_list_all) (*RELICA**を選択してください) メインのeeglabフォルダ(*../eeglab/plugins/*)のプラグインフォルダにzipファイルを解凍します。
 
-Restart EEGLAB. If the installation is successful, a menu item to call RELICA, **Tools > Run RELICA**, will appear in the EEGLAB menu.
+EEGLABを再起動します。 インストールが成功すると、RELICA, **Tools > Run RELICA** を呼び出すメニュー項目が EEGLAB メニューに表示されます。
 
-## Running RELICA
-Before running RELICA, start EEGLAB and load an EEG dataset. Here we will use the sample EEGLAB dataset,  *.../eeglab/sample\_data/eeglab\_data\_epochs\_ica.set*.
+## ランニングリライカ
+RELICAを実行する前に、EEGLABを起動し、EEGデータセットをロードします。 ここでは、サンプル EEGLAB データセット、 *.../eeglab/sample\_data/eeglab\_data\_epochs\_ica.set* を使用します。
 
-### Running RELICA locally on your computer
-To run RELICA on the loaded dataset, first launch the main RELICA (*pop\_relica*) window, either by typing *relica* on the MATLAB command line or by calling it from the EEGLAB menu by selecting **Tools > RELICA > Run RELICA**,  as highlighted in the figure below.
+### コンピュータ上でローカルでRELICAを実行
+ロードされたデータセットで RELICA を実行するには、まずメイン RELICA (*pop\_relica*) ウィンドウを起動します。MATLAB コマンドラインで *relica* を入力するか、EEGLAB メニューからそれを呼び出して、**Tools > RELICA > Run RELICA** を選択します。
 
 <img src="./images/relica_gui1.jpg" width="600">
 
-From the resulting RELICA main window (above right) we can specify:
+結果の RELICA のメインウィンドウ (右) から、次のように指定できます。
 
-1. The ICA decomposition algorithm to use (**ICA Method**) – the default is EEGLAB 'runica' which implements extended Infomax ICA; other, quicker (though somewhat less effective) decomposition approaches are also supported.
-2. How RELICA performs the bootstrapping (**RELICA mode**) – frame-by-frame or trial-by-trial 
-3. The number of bootstrap versions to decompose (**Bootstraps**) – the default is 50
-4. The pathname of the folder in which to save the RELICA results (**Output folder**)
-5. Other RELICA options (**RELICA options**) – e.g., ICA options for the selected method (see *pop_relica* help for more details)
+1. ICA は (**ICA メソッド**) を使用するアルゴリズムを分解します。デフォルトは、拡張した Infomax ICA を実装する EEGLAB の 'runica' です。 つまり、より速く (もう少し有効) の分解アプローチもサポートされています。
+2. RELICAがブートストラップを実行する方法(**RELICAモード**) - フレームバイフレームまたはトライアルバイトライアルバイトライアル 
+3. ブートストラップのバージョンを分解する(**Bootstraps**) - デフォルトは50
+4. RELICA 結果を保存するフォルダーのパス名(**Output フォルダー**)
+5. その他のRELICAオプション(**RELICAオプション**) - 選択したメソッドのICAオプション(詳細は*pop_relica*ヘルプを参照してください)
 
-The other interface elements will be introduced in the next section.
+次のセクションで他のインターフェイス要素が導入されます。
 
-### Running RELICA on high-performance computing resources using The Neuroscience Gateway (NSGportal.org)
-To run the RELICA computation on an XSEDE network supercomputer via the Open EEGLAB Portal to the Neuroscience Gateway (NSGportal.org), **you must first obtain a free NSG user credential** and have the EEGLAB plug-in [nsgportal](https://github.com/sccn/nsgportal/) installed in your computer. For how to do this, [see this page](https://github.com/sccn/nsgportal/wiki).
+### 神経科学ゲートウェイ(NSGportal.org)を用いた高性能コンピューティングリソースでRELICAを実行
+Open EEGLABポータルからNeuroscience Gateway(NSGportal.org)までのXSEDEネットワークスーパーコンピュータでRELICAの計算を実行するには、Neuroscience Gateway(NSGportal.org)に最初に無料のNSGユーザ資格**を取得し、EEGLABプラグインを持っている必要があります。 [ログイン](https://github.com/sccn/nsgportal/) コンピュータにインストールします。 そのためには、 [サイトマップ](https://github.com/sccn/nsgportal/wiki).
 
-Then, from the RELICA main window shown above:
+次に、上記のRELICAメインウィンドウから:
 
-1. Select the RELICA window checkbox (**Compute on NSG**) – note: this is not the RELICA default.
-2. Specify any optional NSG parameters (‘NSG options‘) – see *pop\_nsg* help. 
+1. RELICA ウィンドウのチェックボックス (** NSG** で計算) を選択します。: これは RELICA のデフォルトではありません。
+2. 任意の NSG パラメータ ('NSG オプション') – *pop\_nsg* のヘルプを参照してください。 
 
-The RELICA window **Help** button will display the RELICA (*pop\_relica.m)* function help message, which lists all available options.
+RELICAウィンドウ**Help**ボタンは、利用可能なすべてのオプションをリストするRELICA(*pop\_relica.m)*機能ヘルプメッセージが表示されます。
 
-### Example 1: Running RELICA locally. 
-In the test case example (shown below), we select  ICA method BEAMICA (implementing non-extended Infomax, but quite fast) and set the number of bootstrap decompositions to 100. We set the RELICA results folder to be the data folder (*../eeglab/sample_data/*) and leave the other selections to use their default values.
+### 例1:RELICAをローカルで実行する。 
+テストケース例(以下に示す)では、ICAメソッドBEAMICA(非拡張インフォマックスの実装)を選択し、ブートストラップの分解回数を100に設定します。 RELICA 結果フォルダーをデータフォルダー(*../eeglab/sample_data/*)に設定し、デフォルト値を使用する他の選択を解除します。
 
 <img src="./images/relica_gui1_example1.jpg" width="400">
 
-### Example 2: Running RELICA via NSG. 
-The lengthiest step in RELICA is performing the reference and then the repeated bootstrap ICA decompositions. If the dataset is large (and/or the number of bootstraps specified is large), this process may be lengthy. We have included *nsgportal* code in RELICA to allow users to submit a RELICA computation for processing at XSEDE HPC resources via NSG. This processing is managed from the same *pop\_relica* window shown above. Using the HPC resources of the XSEDE network, this section of the process is parallelized, likely producing a many fold speed up compared to sequential processing.
+### 例2:NSGでRELICAを実行します。 
+RELICAの長いステップは、リファレンスを実行し、繰り返しブートストラップICAの分解を行います。 データセットが大きい(および/または指定されたブートストラップの数が大きい)場合、このプロセスは長い場合があります。 RELICAの*nsgportal*コードは、NSG経由でXSEDE HPCリソースで処理するためのRELICA計算書を提出できるようにしました。 この処理は上記と同じ*pop\_relica*ウィンドウから管理されます。 XSEDEネットワークのHPCリソースを使用して、プロセスのこのセクションが並列化され、シーケンシャル処理と比較して多くのフォールド速度を上げます。
 
-To perform RELICA computation in NSG **you must have an NSG account** and have the EEGLAB plug-in *nsgportal* already installed in your computer. See the [*nsgportal* wiki](https://github.com/sccn/nsgportal/wiki) for more details. Once the *nsgportal* plug-in is installed on your computer, and the NSG credentials and settings are set, you can easily perform the RELICA bootstrap decompositions via NSG by checking the *pop\_relica* window checkbox **Compute on NSG**. Additional NSG parameters, including requested maximum run time (<=48 hours) and custom *jobID* name, can be set in the edit window **NSG options**. For more options, see the *pop\_relica* help message (using **Help**). To run RELICA with the selected settings, press  **OK**. 
-If no custom *jobID* is provided as an NSG option, *pop\_relica* will assign a jobID consisting on the prefix '*relicansg\_*' followed by six random digits (such as: *relicansg\_123456*). You may also assign a custom jobname if you wish. The jobID will be shown in the MATLAB command window when the NSG job is issued. To track the status of the job, see the *pop\_nsg* window; locate your job there using the jobID assigned to your RELICA job.
+NSG**でRELICAの計算を実行するには、NSGのアカウント**が必要です。EEGLABのプラグイン* nsgportal*は既にコンピュータにインストールされています。 詳細はこちら [*nsgportal* ウィキ](https://github.com/sccn/nsgportal/wiki) 詳しくはこちら *nsgportal* プラグインがコンピューターにインストールされると、NSG の認証情報と設定がセットされると、NSG による RELICA ブートストラップの分解を簡単に実行できます。 リクエストされた最大実行時間(<=48時間)とカスタム*jobID*名を含む追加のNSGパラメータは、編集ウィンドウ**NSGオプション**で設定できます。 詳しくは、*pop\_relica*ヘルプメッセージ(**Help**を使用して)を参照してください。 選択した設定でRELICAを実行するには、**OK**を押します。 
+カスタム*jobID*がNSGオプションとして提供されていない場合、*pop\_relica*は、プレフィックス'*relicansg\_*'から構成されるジョブIDを6つのランダム数字(例えば:*relicansg\_123456*)で割り当てます。 必要に応じてカスタムジョブ名を割り当てることもできます。 ジョブ ID は、NSG ジョブが発行されたときに MATLAB コマンドウィンドウに表示されます。 ジョブのステータスを追跡するには、*pop\_nsg* ウィンドウを参照してください。 RELICA ジョブに割り当てられた jobID を使用して、そのジョブを見つけます。
 
-## Retrieving RELICA results
-There are three ways to access the RELICA output:
+## RELICA結果の取得
+RELICA出力にアクセスするには3つの方法があります。
 
-1.***Following local computation:*** In the same EEGLAB session in which RELICA was run, RELICA results will be stored in the EEG structure subfield *EEG.etc.RELICA*.
-2. *Loading the RELICA results:* To load RELICA results file information into the EEG structure of the currently loaded dataset, select EEGLAB menu item **Tools > RELICA > Load RELICA from disk** and then select the *RELICA.mat* file corresponding to the loaded dataset.
-3. ***Following NSG-assisted computation:*** If the **Compute on NSG** option was selected in the RELICA window and the resulting NSG job its complete (learn how to check its status [here](https://github.com/sccn/nsgportal/wiki/nsgportal-graphical-user-interface:-pop_nsg)), use the *jobID* of your RELICA job to retrieve its results. For example, if the selected (custom) RELICA *jobID* were *relicatest_data* you may execute the following code from the MATLAB command window.  
+1.***ローカル計算を下げる:*** RELICA が実行された同じ EEGLAB セッションでは、RELICA の結果は EEG 構造サブフィールド *EEG.etc に保存されます。 リリカ*
+2. *RELICA結果の読み込み:* 現在読み込まれたデータセットの EEG 構造に RELICA 結果のファイル情報を読み込むには、EEGLAB メニュー項目 **ツール > RELICA > ディスク**からRELICAをロードし、読み込まれたデータセットに対応する*RELICA.mat*ファイルを選択します。
+3. ***NSG-assistedコンピューティングのフォロー:*** * NSG**オプションのCompute が RELICA ウィンドウで選択され、その結果、NSG ジョブが完了しました(ステータスを確認する方法を学ぶ) [詳しくはこちら](https://github.com/sccn/nsgportal/wiki/nsgportal-graphical-user-interface:-pop_nsg))、結果を取得するには、RELICA ジョブの *jobID* を使用します。 たとえば、選択した(カスタム) RELICA *jobID* が *relicatest_data* の場合、MATLAB コマンドウィンドウから次のコードを実行できます。  
 ```>> EEG = pop_relica('relicatest_data');```
 After performing any of these steps, the RELICA results of your job will be stored in the EEG data structure subfield *EEG.etc.RELICA*.
 

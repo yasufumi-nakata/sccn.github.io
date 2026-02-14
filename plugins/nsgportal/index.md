@@ -7,25 +7,25 @@ render_with_liquid: false
 has_children: true
 nav_order: 25
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/nsgportal).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/nsgportal).
 
-# EEGLAB on NSG and nsgportal
-An Open EEGLAB Portal to High-Performance Computing: As of late 2018, EEGLAB scripts may now be run on high-performance computing resources via the freely available Neuroscience Gateway Portal to the NSF-sponsored [Comet supercomputer](https://ucsdnews.ucsd.edu/pressrelease/sdsc_to_double_comet_supercomputers_graphic_processor_count/) of the [San Diego Supercomputer Center](https://sdsc.edu/). The home page of the Neuroscience Gateway is shown below. NSG accounts are free and are not limited to US users, but the portal may only be used for non-commercial purposes (see the [NSG Terms of Use](http://www.nsgportal.org/policy.html)).
+# NSGとnsgportalのEEGLAB
+EEGLABのオープンポータルを高性能化 コンピューティング: 2018年後半に、ESGLABスクリプトは、Neuroscience Gateway PortalをNSFスポンサーに無料で利用できる高性能コンピューティングリソースで実行できるようになりました。 [コメットスーパーコンピュータ](https://ucsdnews.ucsd.edu/pressrelease/sdsc_to_double_comet_supercomputers_graphic_processor_count/) お問い合わせ [サンディエゴスーパーコンピュータセンター](https://sdsc.edu/)お問い合わせ Neuroscience Gatewayのホームページは、以下のとおりです。 NSGアカウントは無料で、米国のユーザーに限定されませんが、ポータルは非商用の目的のためにのみ使用することができる(参照) [NSG利用規約](http://www.nsgportal.org/policy.html)).
 
-![Screenshot 2024-07-11 at 14 45 33](https://github.com/user-attachments/assets/ddccba01-f5f4-4337-ae08-2fd4cf96f916)
+![スクリーンショット 2024-07-11 に 14 45 33](https://github.com/user-attachments/assets/ddccba01-f5f4-4337-ae08-2fd4cf96f916)
 
-Like all (except personal!) supercomputers, Comet typically runs jobs in batch mode rather than in the interactive style of Matlab. However, Comet has all Matlab functions as well as EEGLAB functions and many plug-in extensions installed ready to be called from scripts. When a job submitted through the NSG portal is run, you will receive an email from NSG alerting you to download the results. This means that best uses of the Open EEGLAB Portal are for computationally intensive processes and/or for parallel, automated processing of large EEG studies. In the first category, we are now installing the most computationally intensive EEGLAB functions on comet: AMICA, RELICA, time/frequency analysis, SCALE-optimized individual subject head modeling via NFT, etc. We will give more information here about using these installed capabilities as they become available.
+全て(個人を除く)のスーパーコンピューターと同様に、Matlabのインタラクティブなスタイルではなく、通常はバッチモードでジョブを実行します。 しかし、コメットには、すべてのMatlab関数とEEGLAB関数と多くのプラグイン拡張機能がインストールされています。 NSGポータルから送信されたジョブが実行されると、NSGからメールを受信して結果をダウンロードします。 これは、Open EEGLABポータルの最良の使用が、複雑な集中的なプロセスや/または、大規模なEEG研究の並列、自動処理のためのものです。 最初のカテゴリでは、我々は今、彗星に最も計算的に集中的なEEGLAB関数をインストールしています: AMICA、RELICA、時間/周波数分析、NFTを介してモデリングするSCALE最適化された個々の被写体ヘッドなど。 インストールした機能を利用することで、より詳細な情報が得られます。
 
-To read a detailed overview of the Open EEGLAB Portal, browse a [conference paper submitted the IEEE/EMBS Neural Engineering Conference](https://sccn.ucsd.edu/~scott/pdf/Delorme_Open_EEGLAB_Portal_NER18.pdf) in San Francisco (March, 2019), and our later [Neuroimage](https://www.sciencedirect.com/science/article/pii/S1053811920302652) article.
+Open EEGLABポータルの詳細な概要を読むには、 [会議用紙はIEEE/EMBS神経工学会議に提出しました](https://sccn.ucsd.edu/~scott/pdf/Delorme_Open_EEGLAB_Portal_NER18.pdf) サンフランシスコ(2019年3月)以降 [ネロイメージ](https://www.sciencedirect.com/science/article/pii/S1053811920302652) 記事。
 
-This respository contains the  code for the EEGLAB plug-in interfacing the NSG portal through the REST API: nsgportal. The core functions of the plug-in were initially drafted by Arnaud Delorme and further modified and reworked by Ramon Martinez-Cancino, Dung Troung and Scott Makeig (The EEGLAB Team) with substantials contributions from the NSG team at the SDSC.
+このリポジトリには、REST API: nsgportal を通じて NSG ポータルを横断する EEGLAB プラグインのコードが含まれています。 プラグインのコア機能は、Arnaud Delormeによって最初に作成され、さらに、Ramon Martinez-Cancino、Dung Troung、Scott Makeig(EEGLAB Team)がSDSCのNSGチームから大幅に貢献しました。
 
-# Versions
-v1.0 - version used for Neuroimage 2020 article
+# バージョン
+v1.0 - Neuroimage 2020の記事に使用されるバージョン
 
-v2.0 - version used for Nov. 2020 NSG online tutorial (increased robustness and command line calls)
+v2.0 - 2020年11月NSGオンラインチュートリアルに使用されるバージョン(堅牢性とコマンドラインコールの増加)
 
-v2.1 - Use EEGLAB on Expanse. Make job submission non-blocking
+v2.1 - Expanse で EEGLAB を使う。 仕事の投稿をブロックしない
 
-**Explore the NSGPORTAL Wiki [here](https://github.com/sccn/nsgportal/wiki)**
+**NSGPORTALの探索 メニュー [詳しくはこちら](https://github.com/sccn/nsgportal/wiki)**
 

@@ -6,31 +6,31 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 12
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/eegstats).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/eegstats).
 
-# EEGSTATS plugin for EEGLAB
+# EEGLABのEEGSTATSプラグイン
 
-This plugin computes frequency band power, alpha peak frequency, and alpha asymmetry. It uses the [restingIAF](https://github.com/corcorana/restingIAF) MATLAB code for some computation.
+このプラグインは、周波数帯域電力、アルファピーク周波数、およびアルファ非対称性を計算します。 それは使用します。 [リスティングIAF](https://github.com/corcorana/restingIAF) いくつかの計算のためのMATLABコード。
 
-## Do not download GitHub zip file
+## GitHubのzipファイルをダウンロードしないでください
 
-You will miss the resting IAF code dependency when downloading the zip file. Instead, download the plugin from the EEGLAB extension manager or clone the repository as indicated below.
+zipファイルをダウンロードすると、IAFコードの依存性が残ります。 代わりに、EEGLAB拡張マネージャからプラグインをダウンロードしたり、以下のようにリポジトリをクローンします。
 
-## Checkout repository
+## チェックアウトリポジトリ
 
-Make sure to copy the submodule when you clone the repository. You may clone the repository in the **plugins** folder of EEGLAB, and the plugin will behave as if you had downloaded it from the EEGLAB plugin manager.
+リポジトリをクローンするときにサブモジュールをコピーしてください。 EEGLABの**plugins**フォルダにあるリポジトリをクローン化し、プラグインはEEGLABプラグインマネージャからダウンロードしたかのように動作します。
 
 ```
 git clone --recurse-submodules https://github.com/arnodelorme/eegstats.git
 ```
 
-## Graphic interface
+## グラフィックインターフェイス
 
-The plugin may be used from the command line or from its GUI. After installing the plugin using the EEGLAB plugin manager (EEGLAB menu item **File > Manage EEGLAB extensions**), you may load the tutorial dataset "eeglab_data.set" from the "sample_data" folder of eeglab (or simply type "eeglab cont" on the MATLAB command line). Then use EEGLAB menu item **Tools > EEG freq/power statistics** and following UI will pop up. In this UI, you may select frequency ranges of interest, electrodes, and other spectral parameters. You may also select to compute individual alpha frequency or alpha asymmetry between electrodes of your choice. See the [pop_eegstats.m](https://github.com/arnodelorme/eegstats/blob/master/pop_eegstats.m) header for more information.
+プラグインはコマンドラインやGUIから使うことができます。 EEGLABプラグインマネージャ(EEGLABメニュー項目**ファイル>EEGLAB拡張子の管理**)を使用してプラグインをインストールした後、eeglabの「sample_data.set」フォルダ(または単にMATLABコマンドラインで「eeglabコント」)からチュートリアルデータセットをロードできます。 次に、EEGLABメニュー項目**ツール > EEG freq/power 統計** を使用し、次の UI がポップアップ表示されます。 このUIでは、興味、電極、およびその他のスペクトルパラメータの周波数範囲を選択できます。 また、選択した電極間の個々のアルファ周波数またはアルファアシンセトリーを計算するために選択することもできます。 詳細はこちら [pop_eegstats.m ディレクティブ](https://github.com/arnodelorme/eegstats/blob/master/pop_eegstats.m) より多くの情報のためのヘッダー。
 
 ![](eegstats_gui.png)
 
-Some statistics are then shown on the command line
+コマンドラインでいくつかの統計情報が表示されます。
 
 ```
 All_channels	FPz	EOG1	F3	Fz	F4	EOG2	FC5	FC1	FC2	FC6	T7	C3	C4	Cz	T8	CP5	CP1	CP2	CP6	P7	P3	Pz	P4	P8	PO7	PO3	POz	PO4	PO8	O1	Oz	O2
@@ -43,7 +43,7 @@ Alpha center of gravity	9.36	8.65	8.88	8.94	8.87	8.99	8.97	9.12	8.99	9.05	9.14	9
 Alpha Asymmetry	0.62408
 ```
 
-You can also recover these statistics using the command line call (see function help for more information):
+コマンドラインコールを使用してこれらの統計を回復することもできます(詳細は機能ヘルプを参照してください)。
 
 ```matlab
 [power, iafSum, iafChan, freqs] = pop_eegstats(EEG, 'thetarange',[4 6] ,'alpharange',[8 12] , ...
@@ -52,9 +52,9 @@ You can also recover these statistics using the command line call (see function 
             'csvfile','save_these_results.csv');
 ```
 
-## Group analysis (beta)
+## グループ分析(ベータ)
 
-The **EEG.etc.eegstats** structure contains the saved EEG spectral statistics. Assuming you have created an EEGLAB study (requires EEGLAB 2024.0 or later version), you may compute EEG statistics on all the datasets (the plugin is compatible with processing an entire EEGLAB STUDY). Then, from the EEGLAB command line, you may recover specific fields for all datasets. You can use the ***std_readdata*** function to read the data from all datasets (this uses the default STUDY design in STUDY.currentdesign -- otherwise, you can also specify the design when calling the ***std_readdata*** function by setting the 'design' parameter).
+**EEG.etc.eegstats**構造は保存されたEEGスペクトル統計を含んでいます。 EEGLABの勉強(EEGLAB 2024.0以降のバージョンが必要です)を作成していると仮定すると、すべてのデータセットでEEGの統計を計算できます(プラグインはEEGLAB STUDY全体を処理すると互換性があります)。 EEGLABコマンドラインから、すべてのデータセットの特定のフィールドを回復できます。 すべてのデータセットからデータを読み込むために、***std_readdata***関数を使うことができます(これはSTUDY.currentdesignでデフォルトのSTUDYデザインを使用します。そうしないと、'design'パラメータを設定することで、***std_readdata***関数を呼び出すときにデザインを指定することもできます)。
 
 {% raw %}
 ```matlab
@@ -63,7 +63,7 @@ The **EEG.etc.eegstats** structure contains the saved EEG spectral statistics. A
 ```
 {% endraw %}
 
-Then you can perform statistics using EEGLAB building functions. 
+EEGLAB ビルド機能を使用して統計を実行できます。 
 
 ```
 [~,p] = std_stat(aa, 'groupstats', 'on'), % perform some statistics based on the current STUDY design
@@ -75,7 +75,7 @@ p =
     {[0.0345]}
 ```
 
-Or convert the data to a table, and perform statistics using MATLAB statistics toolbox or using external software. The table below was obtained by applying these commands to a subset of the STERN EEGLAB STUDY available on this [page](https://eeglab.org/tutorials/tutorial_data.html)
+またはデータをテーブルに変換し、MATLAB統計ツールボックスを使用して統計を実行したり、外部ソフトウェアを使用して実行します。 これらのコマンドを STERN EEGLAB STUDY のサブセットに適用することで、以下の表が取得されました。 [サイトマップ](https://eeglab.org/tutorials/tutorial_data.html)
 
 ```matlab
 res = std_cell2table([], [], aa, info, 'design', STUDY.design(2),  'dimensions', {'subjects' 'alpha_asymmetry' })
@@ -95,10 +95,10 @@ res =
 ```
 
 
-## Version history
+## バージョン履歴
 
-v1.2 - better STUDY support
+v1.2 - より良いSTUDYサポート
 
-v1.1 - better output formating and saving results in EEG structure
+v1.1 - EEG構造の結果をフォーマットし、保存するより良い出力
 
-v1.0 - initial version
+v1.0 - 初期バージョン

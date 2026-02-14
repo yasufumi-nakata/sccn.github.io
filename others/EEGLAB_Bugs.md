@@ -4,112 +4,112 @@ title: EEGLAB Bugs
 long_title: EEGLAB Bugs
 parent: Support
 ---
-EEGLAB bugs
+EEGLABのバグ
 ===
-{: .no_toc }
+お問い合わせ
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-Dealing with EEGLAB bugs and suggestions
+EEGLABのバグと提案に対処する
 ---
 
-EEGLAB bugs are managed under [Github EEGLAB
-Issues](https://github.com/sccn/eeglab/issues). The old [EEGLAB Bugzilla
-interface](https://sccn.ucsd.edu/bugzilla/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_status=ON%20HOLD&bug_status=CHECKDEV&f0=OP&f1=OP&f3=CP&f4=CP&list_id=549&query_format=advanced)
-has been deprecated, although it is still being used to track potential
-improvements.
+EEGLAB のバグは [Github EEGLAB] で管理されます。
+課題:()https://github.com/sccn/eeglab/issues)。 古い [EEGLAB Bugzilla]
+インターフェイス:()https://sccn.ucsd.edu/bugzilla/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_status=ON%20HOLD&bug_status=CHECKDEV&f0=OP&f1=OP&f3=CP&f4=CP&list_id=549&query_format=advanced)
+それでも潜在能力を追跡するために使用されているが、非推奨されている
+改善。
 
-Since EEGLAB has been developed under MATLAB, there are little risks
-that using EEGLAB will crash your machine or erase files
-inadvertently, unless MATLAB itself crashes. This is one advantage
-of using MATLAB.
+EEGLABがMATLABで開発されているため、リスクが少ない
+EEGLAB を使用して、マシンをクラッシュしたり、ファイルを消去したりします。
+MATLAB自体がクラッシュしない限り、不注意。 これは1つの利点です
+MATLABの利用
 
-About 1000 [test cases](https://sccn.ucsd.edu/wiki/EEGLAB_test_cases) run daily on EEGLAB code to test its integrity
-    and that its functions are stable.
+1000について [試験事例](https://sccn.ucsd.edu/wiki/EEGLAB_test_cases) EEGLABコードで毎日実行して、その完全性をテスト
+    その機能が安定している。
 
- EEGLAB is an open-source project. To understand in more detail how
-    any signal processing is performed, you may study the
-    function source file. To adjust its performance, you may edit
-    it yourself. Note: If you do this successfully, please consider
-    issuing a pull request on Github. See more information on
-    [contributing to
-    EEGLAB](tutorials/contribute/Contributing_to_EEGLAB).
+ EEGLABはオープンソースプロジェクトです。 もっと詳しく知る方法
+    どの信号処理も行なわれます。
+    機能ソースファイル。 パフォーマンスを調整するには、編集する
+    お問い合わせ 注意: うまくいけば、
+    Githubのプルリクエストを発行します。 詳細情報を見る
+    [コントリビュート]
+    EEGLAB:(チュートリアル/コントリビュート/コントリビュート_to_EEGLAB)
 
-How do I report a Bug?
+バグを報告する方法
 ---
-If you encounter a bug:
--  Please first read the MATLAB command-line and any error window text carefully to determine whether you may
-    be able to avoid the problem directly.
--  Next, test whether the error
-    occurs using the current release of EEGLAB. If so, check the [Github
-    EEGLAB Issues](https://github.com/sccn/eeglab/issues) to see if your
-    issue has already been reported:
-    -   If your issue has been reported, you may comment on the bug.
-    -   If your issue has not been reported, you may submit a new bug.
-        Once you press the "New issue" button, you will be guided on how
-        on the type of information needed to report your bug.
+バグが発生した場合:
+-  まず、MATLAB コマンドラインとエラーウィンドウのテキストを注意深くお読みください。
+    直接問題を避けることができます。
+-  次に、エラーかどうかをテストする
+    EEGLABの現在のリリースで発生します。 もしそうなら[Github]をチェックしてください
+    EEGLABの課題https://github.com/sccn/eeglab/issues) あなたのかどうかを確認する
+    問題は既に報告されています:
+    -   問題が報告されている場合は、バグについてコメントする場合があります。
+    -   問題が報告されていない場合は、新しいバグを提出することができます。
+        「新しい問題」ボタンを押すと、どのように案内されます
+        バグを報告するために必要な情報の種類。
 
-Mex files errors in EEGLAB
----
-
-EEGLAB itself does not include any
-precompiled functions (also called mex functions). If you get an error "could not locate mex file" or any related mex file
-error, do not blame EEGLAB. However, some
-external modules use mex files for reading binary data files or
-performing source localization. Usually, an error indicates the
-precompiled file is not available for your platform (it would thus need
-to be recompiled, something you can sometimes do yourself - for more
-information, see below). There are mainly four modules in EEGLAB that use mex
-files.
-
--   FieldTrip functions: If you get an error that some functions in the
-    FieldTrip folder cannot be found, refer to the [FieldTrip
-    documentation](https://www.fieldtriptoolbox.org/faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do/)
-    for how to recompile such functions.
-
--   BIOSIG: Some release of BIOSIG contains some updated mex files so
-    you might want to check if you have the latest version of BIOSIG.
-    Sometimes BIOSIG does not preserve backward compatibility so you may
-    experience problem when reading data after updating BIOSIG.
-
--   ANT plugin: The ANT plugin was made by the ANT company. Contact
-    [ANT](mailto:info@ant-neuro.com) for an updated version of the
-    compiled binaries.
-
--   ERPSS plugin: Simply recompile decompresserpss.c (type "mex
-    decompresserpss.c")
-
-Some known EEGLAB bugs and/or missing features:
+EEGLABのファイルエラー
 ---
 
--   *Epoch selection using pop_eegplot.m:* Epochs selected for
-    rejection using *eegplot* data scrolling are not saved in EEGLAB
-    history until the epochs are rejected. This means that they
-    will not be reproduced automatically in a new EEGLAB session.
-    However, the labeled epochs are identified in the field
-    EEG.reject.manualrej that is saved along with the dataset. Also, and
-    more importantly, when the labeled epochs are rejected,
-    this operation is saved in EEGLAB history.
+EEGLAB自体には含まれていません
+precompiled関数(mex関数とも呼ばれます)。 "mexファイルが見つからない場合"または関連するmexファイル
+エラーは、EEGLABを非難しません。 しかし、
+外部モジュールは、バイナリデータファイルや
+ソースのローカリゼーションを実行します。 通常、エラーは、
+事前にコンパイルされたファイルは、プラットフォームでは利用できません。
+再コンパイルされるには、時々自分でできること - より
+お問い合わせ メックスを使用するEEGLABには主に4つのモジュールがあります
+ファイル。
 
--   *Zooming using pop_eegplot.m*: When zooming and selecting
-    epochs, only the data (no the background epoch markings) may be zoomed.
+-   FieldTrip機能: 一部の機能がエラーになる場合
+    FieldTripフォルダが見つからない場合は、[FieldTrip]を参照してください。
+    ドキュメントhttps://www.fieldtriptoolbox.org/faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do/)
+    このような機能を再コンパイルする方法。
 
--   *Spectral analysis (with no MATLAB Signal Processing Toolbox):*
-    The spec.m function emulates the function psd.m but not the function
-    pwelch.m. As a result, the scaling of the spectrum (by the spectopo.m function
-    only) may differ. Also, for unknown reasons, the spec.m function
-    cannot handle frequencies that have been filtered out and may return
-    inaccurately high power at these frequencies.
+-   BIOSIG:BIOSIGのいくつかのリリースには、いくつかの更新されたmexファイルが含まれています
+    BIOSIGの最新バージョンを持っているかどうかを確認したい場合があります。
+    時々BIOSIGは後方互換性を維持しないので、
+    BIOSIGを更新した後のデータを読むとき経験問題。
 
--   *MATLAB versions and OS:* MATLAB versions have different bugs
-    under different OS and these bugs - usually graphical bugs - may
-    affect EEGLAB. The latest one we know of is the fact that MATLAB
-    version 2018a (all OS) requires a patch for EEGLAB to work.
+-   ANT プラグイン: ANT のプラグインは ANT の会社によって作られました。 お問い合わせ
+    [ログイン](mailto:info@ant-neuro.com) 更新されたバージョンの
+    コンパイルされたバイナリ。
+
+-   ERPSS プラグイン: 単にrecompile decompresserpss.c (タイプ "mex"
+    decompresserpss.c は、
+
+いくつかの既知の EEGLAB バグと/または欠落した機能:
+---
+
+-   *POP_eegplot.m を使用したEpoch選択:* Epochsが選ばれる
+    *eegplot*データスクロールによる拒否はEEGLABに保存されません。
+    エポックが拒否されるまでの歴史。 つまり、
+    EEGLAB セッションで自動で再現されることはありません。
+    ただし、フィールドにラベルの付いたエポックが識別されます。
+    データセットと一緒に保存されるEEG.reject.manualrej。 また、
+    ラベル付きのエポックが拒否されると、
+    EEGLABの歴史の中でこの操作は保存されます。
+
+-   *POP_eegplot.m*を使用してズーム: ズームして選択するとき
+    epochs は、データのみ (背景のエポックマークなし) をズームすることができます。
+
+-   *Spectral分析(MATLAB信号処理ツールボックスなし): * 必須
+    spec.m 関数は関数 psd.m をエミュレートしますが、機能しません
+    お問い合わせ その結果、スペクトルのスケーリング(spectopo.m関数による)
+    ※一部異なる場合がございます。 また、未知の理由からspec.m関数
+    フィルタアウトした周波数を処理できず、返すことができない
+    これらの周波数で誤って高出力。
+
+-   *MATLABバージョンとOS:* MATLABバージョンは異なるバグがあります
+    異なるOSとこれらのバグ - 通常、グラフィカルバグ - かもしれない
+    EEGLABに影響します。 私たちが知っている最新のものは、MATLABが
+    version 2018a (すべてのOS) は、EEGLAB が動作するパッチが必要です。
 

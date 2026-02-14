@@ -7,177 +7,177 @@ render_with_liquid: false
 title: Chapter-2.-Introduction
 long_title: Chapter-2.-Introduction
 ---
-Mapping the structural and active functional properties of brain
-networks is a key goal of basic and clinical neuroscience and medicine.
-The novelty and importance of this transformative research was recently
-emphasized by the U.S. National Institute of Health in their 2010
-announcement for the Human Connectome Project:
+脳の構造的および活動的な機能特性のマッピング
+ネットワークは基礎および臨床神経科学および薬の主目的です。
+この変容性研究の重要性は、最近ありました
+2010年に米国国立衛生研究所が強調
+ヒューマンコネクトームの発表 プロジェクト:
 
-> *Knowledge of human brain connectivity will transform human
-> neuroscience by providing not only a qualitatively novel class of
-> data, but also by providing the basic framework necessary to
-> synthesize diverse data and, ultimately, elucidate how our brains work
-> in health, illness, youth, and old age.*
+> *人間の脳のつながりの知識は人間を変える
+> 神経科学は、定性的に新しいクラスを提供するだけでなく、
+> データだけでなく、必要な基本的なフレームワークを提供することで
+> 多様なデータを合成し、最終的には脳の働き方を解明
+> 健康・病気・若年・老年 * 必須
 
-The study of human brain connectivity generally falls under one or more
-of three categories: *structural*, *functional*, and *effective*
-(Bullmore and Sporns, 2009).
+人間の脳のコネクティビティの研究は、一般的に1つ以上の下で落ちます
+3つのカテゴリ: *structural*、*functional*、および*effective*
+(Bullmore と Sporns, 2009).
 
-*Structural connectivity* denotes networks of anatomical (e.g., axonal)
-links. Here the primary goal is to understand what brain structures are
-*capable* of influencing each other via direct or indirect axonal
-connections. This might be studied *in vivo* using invasive axonal
-labeling techniques or noninvasive MRI-based diffusion weighted imaging
-(DWI/DTI) methods.
+*構造接続*は、解剖学のネットワーク(例えば、軸)を記述します。
+リンクについて ここでは、脳の構造が何であるかを理解することが主な目標です
+* 直接または間接軸を介して互いに影響する*キャパブル*
+接続。 これは、侵略的な軸線を使用して*in vivo*を研究するかもしれない
+ラベリング技術または非侵襲的MRIベースの拡散重みイメージング
+(DWI/DTI) メソッド
 
-*Functional connectivity* denotes (symmetrical) correlations in activity
-between brain regions during information processing. Here the primary
-goal is to understand what regions are functionally related through
-correlations in their activity, as measured by some imaging technique. A
-popular form of functional connectivity analysis using functional
-magnetic resonance imaging (fMRI) has been to compute the pairwise
-correlation (or partial correlation) in BOLD activity for a large number
-of voxels or regions of interest within the brain volume.
+*機能的なコネクティビティ*は活動の(symmetrical)相関を示します
+情報処理中の脳領域間。 ここで第一次
+目標は、どの地域が機能的に関連しているかを理解することです。
+いくつかのイメージング技術によって測定されるように、活動中の相関。 ツイート
+機能的な接続解析の人気フォーム
+磁気共鳴イメージング(fMRI)は、対面を計算する
+多人数のBOLD活動における相関(または部分相関)
+脳の容積内の利益のボクセルまたは地域。
 
-In contrast to the symmetric nature of functional connectivity,
-*effective connectivity* denotes asymmetric or causal dependencies
-between brain regions. Here the primary goal is to identify which brain
-structures in a functional network are (causally) influencing other
-elements of the network during some stage or form of information
-processing. Often the term “information flow” is used to indicate
-directionally specific (although not necessarily causal) effective
-connectivity between neuronal structures. Popular effective connectivity
-methods, applied to fMRI and/or electrophysiological (EEG, iEEG, MEG)
-imaging data, include dynamic causal modeling, structural equation
-modeling, transfer entropy, and Granger-causal methods.
+機能的なコネクティビティの対称的な性質とは対照的に、
+*効果的なコネクティビティ*は非対称的または因果的な依存性を示す
+脳領域間。 ここで第一次目標は、どの脳を識別することです
+機能的なネットワークの構成は(通常)他を影響を及ぼす
+一部の段階または情報の形の間のネットワークの要素
+処理。 多くの場合、「情報流」という言葉は、
+方向的に特定の(必ずしも注意しないが)有効
+神経構造間の接続。 人気の効果的な接続
+fMRIおよび/または電気生理学的(EEG、iEEG、MEG)に適用される方法
+イメージングデータには、動的因果モデリング、構造式が含まれます。
+モデリング、エントロピーの転送、およびGranger-causalメソッド。
 
-Contemporary research on building a human ‘connectome’ (complete map of
-human brain connectivity) has typically focused on structural
-connectivity using MRI and diffusion-weighted imaging (DWI) and/or on
-functional connectivity using fMRI. However, the brain is a highly
-dynamic system, with networks constantly adapting and responding to
-environmental influences so as to best suit the needs of the individual.
-A complete description of the human connectome necessarily requires
-accurate mapping and modeling of transient directed information flow or
-causal dynamics within distributed anatomical networks. Efforts to
-examine transient dynamics of effective connectivity (causality or
-directed information flow) using fMRI are complicated by low temporal
-resolution, assumptions regarding the spatial stationarity of the
-hemodynamic response, and smoothing transforms introduced in standard
-fMRI signal processing (Deshpande et al., 2009a; Deshpande et al.,
-2009b). While electro- and magneto-encephalography (EEG/MEG) affords
-high temporal resolution, the traditional approach of estimating
-connectivity between EEG electrode channels (or MEG sensors) suffers
-from a high risk of false positives from volume conduction and non-brain
-artifacts. Furthermore, severe limitations in spatial resolution when
-using surface sensors further limits the physiological interpretability
-of observed connectivity. Although precisely identifying the anatomical
-locations of sources of observed electrical activity (the inverse
-problem) is mathematically ill-posed, recent improvements in source
-separation and localization techniques may allow approximate
-identification of such anatomical coordinates with sufficient accuracy
-to yield anatomical insight invaluable to a wide range of cognitive
-neuroscience and neuroengineering applications (Michel et al., 2004). In
-limited circumstances it is also possible to obtain human
-intracranially-recorded EEG (ICE, ECoG, iEEG) that, although highly
-invasive, affords high spatiotemporal resolution and (often) reduced
-susceptibility to non-brain artifacts.
+人間「コネクトーム」の構築に関する現代的な研究(コンプリートマップ)
+人間の脳の結合性は通常構造に焦点を合わせました
+MRIおよび拡散重くされたイメージ投射(DWI)および/またはを使用して接続
+fMRIを用いた機能接続 しかし、脳は高度に
+動的システム、ネットワークが絶えず適応し、応答して
+個々のニーズに最も適したように、環境への影響。
+人間のコネクトームの完全な記述は必然的に要求します
+トランスエント ダイレクト インフォメーション フローの正確なマッピングとモデリング
+分散型解剖ネットワーク内での静脈動。 への取り組み
+効果的なコネクティビティの過渡的なダイナミクスを調べる(因果性または
+fMRI を使用した情報フローは、低周波で複雑です。
+決断、空間の静止に関する仮定
+hemodynamic応答、および標準で導入される滑らかな変形
+fMRI信号処理(デシュパンドら。、2009a;デシュパンドら。、
+2009b)。 電子・磁気脳卒中(EEG/MEG)は余裕があります
+高い一時的な決断、推定の従来のアプローチ
+EEG電極チャネル(またはMEGセンサー)間の接続が苦しむ
+ボリューム伝導と非脳からの偽陽性のリスクが高いから
+工芸品。 さらに、空間解像度の厳しい制限
+表面センサーを使用して、生理学的解釈性をさらに制限します
+観察された接続の。 正確に解剖学的を識別するが
+観察された電気活動の源の場所(逆)
+問題)は数学的にill-posed、源の最近の改善です
+分離とローカリゼーション技術により、近似できる
+このような解剖学的座標の十分な精度の特定
+さまざまな認知に有利な分析的洞察をもたらす
+神経科学および神経工学の適用(Michel et al.、2004)。 お問い合わせ
+限られた状況でも人を取得することも可能
+比類のない EEG (ICE, ECoG, iEEG) は、
+侵略的、高い空間的分解能と(多くの場合)削減
+非脳のアーティファクトに対する感受性。
 
-Once activity in specific brain areas have been identified using source
-separation and localization, it is possible to look for transient
-changes in dependence between these different brain source processes.
-Advanced methods for non-invasively detecting and modeling distributed
-network events contained in high-density EEG data are highly desirable
-for basic and clinical studies of distributed brain activity supporting
-behavior and experience. In recent years, Granger Causality (GC) and its
-extensions have increasingly been used to explore ‘effective’
-connectivity (directed information flow, or causality) in the brain
-based on analysis of prediction errors of autoregressive models fit to
-channel (or source) waveforms. GC has enjoyed substantial recent success
-in the neuroscience community, with over 1200 citations in the last
-decade (Google Scholar). This is in part due to the relative simplicity
-and interpretability of GC – it is a data-driven approach based on
-linear regressive models requiring only a few basic *a priori*
-assumptions regarding the generating statistics of the data. However, it
-is also a powerful technique for system identification and causal
-analysis. While many landmark studies have applied GC to invasively
-recorded local field potentials and spike trains, a growing number of
-studies have successfully applied GC to non-invasively recorded human
-EEG and MEG data (as reviewed in (Bressler and Seth, 2010)). Application
-of these methods in the EEG source domain is also being seen in an
-increasing number of studies (Hui and Leahy, 2006; Supp et al., 2007;
-Astolfi et al., 2007; Haufe et al., 2010).
+特定の脳領域でのアクティビティがソースを使用して特定されると
+分離とローカリゼーション、過渡を求めることができます
+これらの異なる脳ソースプロセスの依存性の変化。
+非侵襲的検出と分散モデリングのための高度な方法
+高密度EEGデータに含まれるネットワークイベントは非常に望ましい
+分散脳活動の基本的な研究と臨床研究
+行動と経験。 近年では、Granger Causality(GC)とその原因
+エクステンションは「効果的」を探求するために使われています。
+脳内のコネクティビティ(間接的な情報の流れ、または因果性)
+自動回帰モデルの予測エラーの分析に基づく
+チャンネル(またはソース)波形。 GCは、最近の成功を収めた
+神経科学のコミュニティで、最後の1200以上の引用
+10年(Google Scholar) これは、相対的な単純性のために一部です
+GC の解釈性 – データ主導のアプローチです。
+いくつかの基本だけを必要とする線形回帰モデル *優先 * 必須
+データの生成統計に関する仮定。 しかし、
+また、システム識別と注意のための強力な技術です
+分析。 多くのランドマークスタディが GC を侵襲的に応用している間
+ローカルフィールドの潜在能力とスパイクの列車を記録し、成長する数
+研究は非侵襲的に記録された人間にGCを適用しました
+EEGとMEGデータ(Bressler and Seth, 2010)で確認しました。 アプリケーション
+EEG ソースドメインのこれらのメソッドは、
+研究の増加(HuiとLeahy、2006; Supp et al。、2007;
+Astolfi ら., 2007; Haufe ら., 2010).
 
-In the last decade an increasing number of effective connectivity
-measures, closely related to Granger’s definition of causality, have
-been proposed. Like classic GC, these measures can be derived from
-(multivariate) autoregressive models fit to observed data time-series.
-These measures can describe different aspects of network dynamics and
-thus comprise a complementary set of tools for effective connectivity or
-causal analysis.
+過去10年間、効果的な接続回数が増えました
+測定、Grangerの死亡率の定義に密接に関連した、
+提案しました。 古典的なGCと同様に、これらの対策はから派生することができます
+(multivariate) 観察されたデータ タイム シリーズにオートレグレッシブ モデル適合。
+これらの対策は、ネットワークのさまざまな側面を動的に記述することができます。
+そのため、効果的なコネクティビティのためのツールの補完的なセットを構成する
+原因分析。
 
-Several toolboxes affording various forms of Granger-causal (or related)
-connectivity analysis are currently available in full or beta-release.
-Table 1 provides a list of several of these toolboxes, along with the
-website, release version, and license. Although these toolboxes provide
-a number of well-written and useful functions, most lack integration
-within a more comprehensive framework for EEG signal processing (the
-exceptions being FieldTrip's routines, and TSA, which integrates into
-the Biosig EEG/MEG processing suite). Furthermore, many of these may
-implement only one or two (often bivariate) connectivity measures, lack
-tools for sophisticated visualization, or lack robust statistics or
-multi-subject (group) analysis. Finally, to our knowledge, with the
-exception of E-Connectome, none of these toolboxes directly support
-analysis and visualization of connectivity in the EEG source domain.
-These are all factors that our Source Information Flow Toolbox (SIFT),
-combined with the EEGLAB software suite, hopes to address.
-
-
+さまざまな形態のGranger-causal(または関連)を手頃な価格のいくつかのツールボックス
+現在、ベータ版またはベータ版で接続分析が可能です。
+表1は、これらのツールボックスのいくつかのリストを提供し、
+ウェブサイト、リリースバージョン、ライセンス。 これらのツールボックスは提供しますが、
+よく書かれた機能と便利な機能の数、ほとんどの欠如の統合
+EEG信号処理のためのより広範囲なフレームワーク内で()
+FieldTrip のルーチンである例外、および TSA は、
+Biosig EEG/MEG処理スイート さらに、これらの多くは、
+1つまたは2つだけ(多くの場合バイバリエート)接続対策を実行し、欠如
+高度な視覚化のためのツール、または堅牢な統計や
+マルチサブジェクト(グループ)解析。 最後に、私たちの知識に、
+E-Connectome 例外、これらのツールボックスのどれも直接サポート
+EEGソースドメイン内の接続の分析と可視化
+これらは、ソース情報フローツールボックス(SIFT)のすべての要因です。
+EEGLABソフトウェアスイートと組み合わせて、対処したい。
 
 
-Table caption. A list of free Matlab-based toolboxes for granger-causal
-connectivity analysis in neural data.
+
+
+テーブルのキャプション。 granger-causal用の無料のMaatlabベースのツールボックスのリスト
+神経データの接続解析
 
 
 
 
 |                                                                  |                  |         |                                                             |
 |------------------------------------------------------------------|------------------|---------|-------------------------------------------------------------|
-| <b>Toolbox Name</b>                                                     | <b>Primary Author</b>   | <b>Website</b>                                                     | <b>License</b> |
-| Granger Causality Connectivity Analysis (GCCA) Toolbox           | Anil Seth        | <https://www.sussex.ac.uk/research/centres/sussex-centre-for-consciousness-science/resources/connectivity> | GPL 3   |
-| Time-Series Analysis (TSA) Toolbox                               | Alois Schloegl   | <https://sourceforge.net/p/octave/tsa/ci/default/tree/>                 | GPL 2   |
-| E-Connectome                                                     | Bin He           | <https://www.nitrc.org/projects/econnectome>                               | GPL 3   |
-| FieldTrip                                                        | Robert Oosteveld |  <http://fieldtrip.fcdonders.nl/>                            | GPL 2   |
-| Brain-System for Multivariate AutoRegressive Timeseries (BSMART) | Jie Cui          |  <http://www.brain-smart.org/>                               | --      |
+| <b>ツールボックス名</b>                                                     | <b>プライマリ著者</b>   | <b>サイトマップ</b>                                                     | <b>ライセンス</b> |
+| グランジェ・キャサリティ・コネクティビティ分析(GCCA) ツールボックス | アニルセス | <https://www.sussex.ac.uk/research/centres/sussex-centre-for-consciousness-science/resources/connectivity> | GPL 3 | GPL 3 | GPL 3 | GPL 3 |
+| 時系列分析(TSA) ツールボックス | アロワス・シュロゲル | <https://sourceforge.net/p/octave/tsa/ci/default/tree/>                 | GPL2 | GPL2 | GPL2 | GPL2 |
+| E-Connectome | ビン・ヘ | <https://www.nitrc.org/projects/econnectome>                               | GPL 3 | GPL 3 | GPL 3 | GPL 3 |
+| フィールドトリップ | ロバート・オオステヴェル お問い合わせ  <http://fieldtrip.fcdonders.nl/>                            | GPL2 | GPL2 | GPL2 | GPL2 |
+| 多品種オートレグレッシブ・タイムズシリーズ(BSMART)用脳システム | ジー・クイ |  <http://www.brain-smart.org/>                               | --      |
 
 
-SIFT is an open-source Matlab (The Mathworks, Inc.) toolbox for analysis
-and visualization of multivariate information flow and causality,
-primarily in EEG/iEEG/MEG datasets following source separation and
-localization. The toolbox supports both command-line (scripting) and
-graphical user interface (GUI) interaction and is integrated into the
-widely used open-source EEGLAB software environment for
-electrophysiological data analysis (sccn.ucsd.edu/eeglab). There are
-currently four modules: data preprocessing, model fitting and
-connectivity estimation, statistical analysis, and visualization. First methods implemented include a large number of
-popular frequency-domain granger-causal and coherence measures, obtained
-from adaptive multivariate autoregressive models, surrogate and analytic
-statistics, and a suite of tools for interactive visualization of
-information flow dynamics across time, frequency, and (standard or
-personal MRI co-registered) anatomical source locations.
+SIFTはオープンソースのMaatlab(Mathworks, Inc.)の解析ツールボックスです。
+多様な情報の流れと因性を可視化し、
+主に EEG/iEEG/MEG のデータセットのソース分離および
+ローカリゼーション。 ツールボックスはコマンドライン(スクリプト)と
+グラフィカル・ユーザー・インタフェース(GUI)の相互作用はに統合され、
+広く使用されているオープンソース EEGLAB ソフトウェア環境
+電気生理学的データ解析(sccn.ucsd.edu/eeglab) そこにあります
+現在4つのモジュール:データの事前処理、モデルフィッティングおよび
+接続推定、統計分析、可視化 最初に実装したメソッドは、数が多い
+人気の周波数ドメイン 危険 - 原因と一貫性対策, 取得
+適応型多variateのオートレグレッシブ モデル、surrogateおよび分析から
+統計とインタラクティブな視覚化のためのツールのスイート
+情報の流れは時間、頻度および(標準か)を渡る動的に流れます
+個人的な MRI の共同登録済み) anatomical の源の場所。
 
-In this tutorial, we will outline the theory underlying multivariate
-autoregressive modeling and granger-causal analysis. Practical
-considerations, such as data length, parameter selection, and
-non-stationarities are addressed throughout the text and useful tests
-for estimating statistical significance are outlined. This theory
-section is followed by a hands-on walkthrough of the use of the SIFT
-toolbox for analyzing source information flow dynamics in an EEG
-dataset. Here, we will walk through a typical data-processing pipeline
-culminating with the demonstration of some of SIFT’s powerful tools for
-interactive visualization of time- and frequency-dependent directed
-information flow between localized EEG sources in an
-anatomically-coregistered 3D space. Theory boxes throughout the chapter
-will provide additional insight into various aspects of model fitting and
-parameter selection.
+このチュートリアルでは、多変種を根ざした理論を説明します
+オートレグレッシブモデリングと危険性分析。 実用的
+データ長、パラメータ選択、および
+テキストおよび有用なテストを通して非文具が対処されます
+統計的意義の推定については、概説します。 この理論
+セクションは、SIFTの使用の実践的なウォークスルーによって続く
+EEGでソース情報フローを分析するためのツールボックス
+データセット。 ここでは、典型的なデータ処理パイプラインを歩く
+SIFTの強力なツールの一部を実証して計算する
+時間と周波数に依存するインタラクティブな視覚化
+ローカル化されたEEGソース間の情報フロー
+解剖学的に登録された3D空間。 章全体に理論ボックス
+モデルフィッティングのさまざまな側面に追加のインサイトを提供します。
+パラメータ選択。
 

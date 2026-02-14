@@ -4,33 +4,33 @@ title: EEGLAB on Octave
 long_title: EEGLAB on Octave
 parent: Interoperability
 ---
-Running EEGLAB on Octave
+OctaveでEEGLABを実行する
 ====
-MATLAB, although quite efficient, can be expensive. As of 2021, we are supporting the Octave MATLAB-compatible open-source environment (both command line calls and graphic interface). See the video below for information on running EEGLAB in Octave.
+非常に効率的ですが、MATLABは高価です。 2021年と同様に、Octave MATLABに対応したオープンソース環境(コマンドラインコールとグラフィックインターフェイスの両方)をサポートしています。 OctaveでEEGLABを稼働させるための動画をご覧ください。
 
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NhKc0arEcbs?start=206" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
-# Running EEGLAB on Octave
+# OctaveでEEGLABを実行する
 
-EEGLAB on Octave is not as stable as EEGLAB on Matlab. EEGLAB on Matlab should be your first choice. Your second choice should be the compiled version of EEGLAB, and the third and last choice should be EEGLAB on Octave.
+オクターブのEEGLABは、マトラブのEEGLABとして安定していません。 MatlabのEEGLABは、あなたの最初の選択肢でなければなりません。 あなたの2番目の選択肢は、EEGLABのコンパイルされたバージョンであり、3番目の最後の選択は、OctaveのEEGLABであるべきです。
 
-Install Octave and EEGLAB
+OctaveとEEGLABをインストールする
 -------------------------
 
-Download the latest version of Octave from [this
-page](https://www.gnu.org/software/octave/download.html). EEGLAB has
-been best tested using Octave 6.1 on Windows but might also run on later
-versions and other platforms. We recommend the Octave installer for Windows, which has all toolboxes (signal processing, statistics, etc...) pre-installed. 
-### Optional octave settings
+Octaveの最新バージョンをダウンロード
+ページ:()https://www.gnu.org/software/octave/download.html)。 EEGLABは
+WindowsでOctave 6.1を使用してテストされたが、後で実行されるかもしれない
+バージョンやその他のプラットフォーム。 すべてのツールボックス(信号処理、統計など)がプリインストールされているWindows用のOctaveインストーラをお勧めします。 
+### オプションのオクターブ設定
 
-To avoid having Octave show warning messages constantly, change the startup option and add "--traditional --brainless --quiet" (on Windows, select the Octave icon's property, and add the following options to the *Target* field).
+避ける Octave は、常に警告メッセージを表示し、起動オプションを変更し、「---traditional --brainless --quiet」(Windows では、Octave アイコンのプロパティを選択し、*Target* フィールドに次のオプションを追加します)。
 
-### Non-windows Octave releases
+### 非窓 Octaveリリース
 
-If you are running Octave on Linux or macOS, in addition to Octave, you will need to install the Octave signal
-processing and statistics package. For Mac, you might also want to install gnu-tar to be able to uncompress Octave packages (brew install gnu-tar). On the Octave command line, type:
+Linux または macOS で Octave を実行している場合、Octave に加えて、Octave シグナルをインストールする必要があります。
+処理および統計パッケージ。 Macの場合、オクターブパッケージを解凍するためにgnu-tarをインストールすることもできます(brew install gnu-tar)。 Octave コマンドラインで、タイプ:
 
 ```
 pkg install -forge control
@@ -41,50 +41,50 @@ pkg install -forge statistics
 pkg load statistics
 ```
 
-Note that you need to run the last command <em>pkg load signal</em> and <em>pkg load statistics</em>
-every time you start Octave.
+最後のコマンドを実行する必要があることに注意してください <em>pkg負荷信号</em> そして、 <em>pkg荷重統計</em>
+Octaveを始めるたびに。
 
-### Install EEGLAB
+### EEGLABをインストールする
 
-EEGLAB for Octave is a work in progress. As of EEGLAB 2021.0, we recommend using the development version of [EEGLAB on GitHub](https://github.com/sccn/eeglab). For later EEGLAB versions, you may use the official EEGLAB releases.
+EEGLAB(エグラボ) Octaveは進行中です。 EEGLAB 2021.0 では、開発バージョンの使い方をおすすめします。 [GitHubでEEGLABを](https://github.com/sccn/eeglab)お問い合わせ EEGLABの公式バージョンでは、EEGLABの公式リリースを使用できます。
 
-To install the development version of EEGLAB, install [Git for windows](https://git-scm.com/download/win) and clone the repository with submodules. If you encounter problems with Octave, please submit an issue on [GitHub](https://github.com/sccn/eeglab/issues).
+EEGLABの開発バージョンをインストールするには、インストールします [窓のためのGit](https://git-scm.com/download/win) リポジトリをサブモジュールでクローンします。 オクターブに問題が発生した場合は、問題の提出をお願いします。 [GitHubで](https://github.com/sccn/eeglab/issues).
 
-Known issues with EEGLAB and Octave graphics compatibility
+EEGLABとOctaveグラフィックスの互換性に関する既知の問題
 ----------------------------------------------------------
 
-All EEGLAB signal processing functions should run on Octave. Although
-Octave is supposed to be fully compatible
-with MATLAB, the Octave
-graphic rendering engine sometimes cannot render all EEGLAB graphics subtleties. In particular, we have encountered the following
-issues:
+すべての EEGLAB 信号処理機能は、Octave 上で実行する必要があります。 しかし、
+オクターブは完全に互換性があります
+MATLAB、オクタブ
+グラフィックレンダリングエンジンは、EEGLABのすべてのグラフィックスの繊細さをレンダリングできないことがあります。 特に、以下に遭遇しました。
+問題:
 
--   Graphical figure updating is buggy. Users must move their mouse for multi-panel figures to be updated. Or sometimes, the figure itself must be moved or resized to be shown properly. For example, the *eegplot.m* interactive data
-    scrolling function is not fully functional: selecting data regions in continuous data involves waiting for 10 seconds or so between mouse clicks.
--   Speed: Processing data is often about twice slower in Octave.
--   Plug-ins need to be installed manually (downloaded as zip files and
-    uncompressed in the EEGLAB plugins folder). Most plugins (including
-    SIFT and LIMO) have not been tested on Octave and will likely not be
-    functional. They could probably be made functional by their
-    developers or by motivated users.
--   We were able to run ICLabel under Octave 8.4 (after modifying some of the ICLabel code - the changes are not saved in ICLabel). However, the code is so slow it is impractical (it takes 15+ hours to execute on Octave compared to 10 seconds on MATLAB). This is because Octave reserves a new memory location when you take an array slice. If you need to run ICLabel, use the compiled version of EEGLAB.
+-   グラフィック図の更新はバグです。 ユーザーはマウスをマルチパネルの数字に更新する必要があります。 あるいは、図自体が正しく表示されているか、またはサイズを変更する必要があります。 例えば、*eegplot.m* インタラクティブなデータ
+    スクロール機能が完全に機能しない:連続データ領域を選択すると、マウスクリック間で10秒待っています。
+-   速度:処理データはオクターブで約2倍遅くなります。
+-   プラグインは手動でインストールする必要があります(zipファイルとしてダウンロードし、
+    EEGLABプラグインフォルダに非圧縮)。 ほとんどのプラグイン(を含む)
+    SIFT および LIMO はオクターブでテストされなかったし、そうではない
+    機能。 彼らはおそらく彼らの機能によって作ることができる
+    開発者または意欲的なユーザーによる
+-   Octave 8.4(ICLabelコードの一部を変更した後、ICLabelに保存されていない)でICLabelを実行できるようになりました。 しかしながら、そのコードは暗黙的です(MATLABの10秒と比較してオクターブで実行するのに15時間かかります)。 これは、オクタブが配列のスライスを取るときに新しいメモリの場所を予約しているためです。 ICLabel を実行する必要がある場合は、コンパイルされたバージョンの EEGLAB を使用します。
 
-Nevertheless, even some of the most complex EEGLAB plots can be rendered on Octave - for example, below, dipole plots in MATLAB (left)
-and Octave (right) match perfectly.
+それにもかかわらず、最も複雑な EEGLAB のプロットのいくつかは Octave でレンダリングできます - 例えば、MATLAB のダイポールプロット (左)
+そしてオクターブ(右)は完全に一致します。
 
- ![dipole in matlab and octave](/assets/images/Eeglab_dipoles_matlab_octave.png)
+ ![マットラボとオクターブのダイポール](/assets/images/Eeglab_dipoles_matlab_octave.png)
 
-If you modify an interactive EEGLAB
-function for that purpose and want others to benefit from your changes,
-fork the code and create a pull request as explained on [this
-page](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository). [This other 
-page](/tutorials/contribute/) contains additional
-information on how to contribute to EEGLAB.
+インタラクティブな EEGLAB を変更した場合
+その目的のために機能し、他の人があなたの変更から利益を得るために望む,
+コードをフォークし、リクエストをプルとして作成します。
+ページ](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository) [その他] 
+page:(/tutorials/contribute/) は追加
+EEGLABへの貢献について
 
-Comparing EEGLAB output in Octave and Matlab
+Octave と Matlab の EEGLAB 出力の比較
 ----------------------------------------------
-Below is a time-frequency decomposition plotted by Octave 4.4 for the
-EEGLAB tutorial dataset by the EEGLAB/MATLAB code below.
+以下は、オクターブ4.4によってプロットされた時間頻度分解です
+EEGLAB/MATLABコードによるEEGLABチュートリアルデータセット
 
 ``` matlab
 % cd xxxxx/eeglab        % move to the proper directory/folder
@@ -97,7 +97,7 @@ newtimef(EEG.data(1,:,:), EEG.pnts, [-1000 2000], EEG.srate, [3 0.5]); % compute
 
 ![](/assets/images/Octave2.png)
 
-For comparison, below is the graphic output of *newtimef.m* run in MATLAB.
+比較では、以下は、MATLABで実行する*newtimef.m*のグラフィック出力です。
 
-![600px\|EEGLAB newtimef output](/assets/images/Eeglab_newtimef2.png)
+![600px\|EEGLAB ニュータイムF出力](/assets/images/Eeglab_newtimef2.png)
 

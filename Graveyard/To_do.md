@@ -1,29 +1,29 @@
 ---
 layout: default
 ---
-To do before wiki release
+wikiリリース前に行うため
 ====
 
-In progress
+進行状況
 
-- Add google tracking
+- グーグルトラッキングを追加
 
-- EEGLAB: Revisit aspect ratio of GUIs on Windows and Mac
+- EEGLAB: WindowsとMacでGUIのアスペクト比を再考する
 
-- Plugins: Update all github repositories
+- プラグイン:すべてのgithubリポジトリを更新する
 
-- Put Makoto ASR page on the clean_rawdata wiki
+- Clean_rawdata wiki に Makoto ASR のページを置く
 
-- Replace
+- リプレース
 
-Printing and editing EEGLAB figures
+EEGLAB図の印刷と編集
 -----------------------------------
 
-To edit pictures saved from MATLAB figures so as to format them for
-publication, we advise the following procedure:
+MATLABの図から保存した写真を編集し、それらをフォーマットする
+出版物、私達は次のプロシージャを助言します:
 
--   Export the figure (*myfigure*) from MATLAB as a postscript image
-    (the *.epsc* format) by typing on the MATLAB command line
+-   MATLABの図(*myfigure*)をポストスクリプトイメージとしてエクスポートする
+    MATLABコマンドラインで入力することで(*.epsc*形式)
 
 ``` matlab
        * >> print -depsc myfigure.eps*
@@ -31,12 +31,12 @@ publication, we advise the following procedure:
 
 ``` 
 
--   Edit the resulting postscript or PDF image file using an editor such
-    as Adobe Illustrator.
--   If your vectorized image appears as an uneditable bitmap in the
-    postscript editor, change the MATLAB renderer to *painter* before
-    saving the figure by typing on the MATLAB commandline, before saving
-    the figure,
+-   このようなエディタを使用して、結果の投稿スクリプトまたはPDFイメージファイルを編集する
+    Adobe Illustrator として。
+-   ベクター化した画像が未編集のビットマップとして表示されている場合
+    ポストスクリプトエディタは、MATLABレンダラーを*画家*に変更します。
+    MATLABのコマンドラインに入力することで図を保存します。
+    数字,
 
 
 ``` matlab
@@ -44,26 +44,26 @@ publication, we advise the following procedure:
 
 ``` 
 
--   If you have images with transparent regions, export them using the
-    MATLAB
-    [SVG](http://www.mathworks.com/matlabcentral/fileexchange/7401)
-    export tool (PDF above will not work).
--   To ensure that the image you are seeing is the image that is being
-    saved and printed, on the MATLAB command line type
+-   透明な地域に画像がある場合、それらをエクスポートします
+    マトラボ
+    [SVGの特長](http://www.mathworks.com/matlabcentral/fileexchange/7401)
+    エクスポートツール(上記PDFは動作しません)
+-   見ているイメージがイメージであることを確実にするため
+    MATLABコマンドラインタイプに保存および印刷
 
 
 ``` matlab
        *>>set(gcf, 'paperpositionmode', 'auto');*
 
 ``` 
--   To change the font of all elements in a figure, try
+-   図内のすべての要素のフォントを変更するには、
 
 ```matlab 
        * >> setfont(gcf,'fontsize',16);*
 
 ``` 
 
-Unfortunately in some recent versions of MATLAB, saving vectorized
-version of figures has become difficult (artefacts in STUDY scalp
-topographies). Let us know if you find better solutions.
+残念ながら、MATLABの最近のバージョンでは、ベクター化を保存
+数字の版が難しくなってきました(STUDY scalpのアーファクト)
+トポグラフィ より良いソリューションを見つけるかどうかをお知らせください。
 

@@ -9,8 +9,8 @@ grand_parent: Tutorials
 ===========================
 お問い合わせ
 
-EEGのスカルプマップを2Dまたは3Dフォーマットでプロットするか、または見積もり
-データコンポーネントのソースの場所、EEGLABのデータセットには、
+EEGのスカルプマップを2Dまたは3Dフォーマットでプロット、または引用
+データコンポーネントのソース, ソース, ソース
 記録電極のスカルプ位置に関する情報。 あなたも参照することができます  [EEGLAB座標系](../ConceptsGuide/coordinateSystem.md) 必須の定義と概念のためのページ。
 
 <details open markdown="block">
@@ -23,54 +23,54 @@ EEGのスカルプマップを2Dまたは3Dフォーマットでプロットす�
 </details>
 
 
-サンプル EEGLAB データセットをロードする
+EEGLAB をロードする
 ------
 
 選択する <span style="color: brown">ファイル</span> メニュー項目および出版物
 <span style="color: brown">既存のデータセットをロードする</span> サブメニュー項目。
 
-![画像:Pop_loadset.png](/assets/images/Pop_loadset.png)
+![サイトマップ](/assets/images/Pop_loadset.png)
 
-配布するチュートリアルファイル「eeglab_data.set」を選択します。
-EEGLABの「sample_data」フォルダにあるツールボックス。 それから *Open*を押して下さい。
+チュートリアルファイル「eeglab_data.set」
+EEGLABの「sample_data」のフォルダにあるツールボックス。 *Open*ファイルの開き。
 
 チャンネルの場所を見る
 ------
 
 このセクションでは、チュートリアルデータセットは使用しません。 その意図は提供することです
 チャンネル時にチャンネルの場所を自動的に検索するためのガイドライン
-名前は知られています。 例えば、Neuroscan をインポートするとき、または
-Biosemiチャネルの場所ファイル、チャネル名は頻繁に貯えられます
-ファイルヘッダー。 EEGLAB は、これらのチャンネルラベルを自動的に読み込みます。 いつか
+名前は必須です。
+の場所 の場所 の場所
+ダウンロード ????????????
 その後、チャンネル編集ウィンドウを呼び出すと、関数が現れます
 385 の定義されたチャンネル・ラベルのデータベースの 10-10 チャネルの場所、ファイル
-"functions/supportfiles" サブフォルダ内の "Standard-10-5-Cap385.sfp"
-EEGLAB分布。 追加の標準的なチャンネルの場所を追加できます。
+"functions/supportfiles" サブフォルダ "Standard-10-5-Cap385.sfp"
+EEGLAB分布。
 ご希望の場合はこのファイルへ。 2021年と同様に、デフォルト
-電極位置のチャンネル位置ファイルは、ソースローカリゼーションに最適なMNIファイルです。 2021年以前
-BESAの球面位置ファイルでした。
+現在位置: 2021年
+BESA の球面のファイル。
 
 データセットに含まれるチャネル位置情報をロードまたは編集するには、
 選択する <span style="color: brown">編集 → チャネルの場所</span>.
 ダイアログボックス(以下に示す)が表示されますので、ご希望の場合は、
 輸入された電極に基づく標準的なチャネルの場所を使用するため
-使用するチャンネルの場所ファイルから位置ラベル(例えば、'Fz')
+デスクトップファイル
 延長インターナショナル10-20システム。
 
-![画像:Editchannelinfo_auto.png](/assets/images/Editchannelinfo_auto.png)
+![サイトマップ](/assets/images/Editchannelinfo_auto.png)
 
 複数のテンプレートから選ぶことができます。 出演予定者
 ソースのローカリゼーション, あなたが第二を選択することを強くお勧め
-"BEM DipfitモデルのMNI座標を使用する"(最初のセット)
-「BESA」の座標は球面BESAのヘッド モデルのために設計されました、
-今、obsolete。 プレス *Ok*.
+"BEM Dipfit のモデルのMNI座標関数"(オプション)
+「BESA」のコアは、
+今、obsolete。 プレス *Ok*。
 
 ![](/assets/images/Gui_pop_chanedit2.jpg)
 
 ### コマンド・ライン・チャネルの位置は、例を調べる
 
 以下では、チャネルラベルのみを使用してチャネル構造を構築します。
-その後、チャンネル編集ウィンドウを呼び出します。 MATLABコマンドウィンドウで、
+チャンネル登録 MATLABウィンドウで、
 タイプ:
 
 ```matlab
@@ -78,142 +78,142 @@ chanlocs = struct('labels', { 'cz' 'c3' 'c4' 'pz' 'p3' 'p4' 'fz' 'f3' 'f4'});
 pop_chanedit( chanlocs );
 ```
 
-呼び出し <span style="color: brown">編集 → チャネルの場所</span> チャネルの場所を調べる. *Plot 2-D*を押してチャンネルの場所をプロットします。 チャンネル編集ウィンドウを閉じる(*Cancel*を使用して入力した場所を破棄)、次のセクションに進みます。
+呼び出し <span style="color: brown">編集 → チャネルの場所</span> お問い合わせ *Plot 2-D* チャンネル編集ウィンドウを右折する(*Cancel* )、次の投稿へ進む
 
-![画像:Topoplotlookup.gif](/assets/images/Topoplotlookup.gif)
+![投稿ナビゲーション](/assets/images/Topoplotlookup.gif)
 
 ファイルからチャネルの場所をロードする
 ------
 
-再オープン <span style="color: brown">編集 → チャネルの場所</span>お問い合わせ ラベルに基づいてチャンネルの位置を調べることができない、または利用可能なスキャンされた電極ファイルがある場合、*Read Locations*ボタンを押します。 現在のデータファイルの場合、サンプルチャンネルの場所ファイル *eeglab_chan32.locs* を選択します。
-(EEGLABの*sample_data*サブディレクトリに設置)
+再オープン <span style="color: brown">編集 → チャネルの場所</span> お問い合わせ を * * * * * * 所在地*ボタンを押します。 現在のデータファイルの場合、デスクトップファイル *eeglab_chan32.locs* など。
+(EEGLABの*sample_data*サブディレクトリへ)
 分布)。
 
-![画像:Loadchannellocation.png](/assets/images/Loadchannellocation.png)
+![サイトマップ](/assets/images/Loadchannellocation.png)
 
 指定しない場合
-ファイル形式は、[pop_chanedit.m]() 関数が試みます
+関数は、
 ファイル名拡張子を使用して、その形式を評価します。 ボタンを押します
 *ビューするには、メインチャンネルのグラフィックインターフェイスウィンドウでヘルプ*を読み込みます
-サポートされているフォーマット。 次のポップアップウィンドウで、単に*Ok*を押します。 
+株式について 次のウィンドウで、Ok*Ok*が開きます。 
 
 ![](/assets/images/Chanedit_fileformat_gui.jpg)
 
 下のウィンドウでは、チャンネルフィールドの値でスクロールできます。
-*\<* および *→* ボタン、または 10 のステップで *\<\<* を使用して 1-by-1
+*\<* および *→* ボタン、または 10 のステップで *\<\<*> を 1 つずつ
 と *\>\>*。
 
 ![](/assets/images/Gui_pop_chanedit2.jpg)
 
-*Set チャンネルタイプ* ボタンにより、*channel タイプ* を入力することができます。
-チャンネルに関連付けられている(例えば、'EEG'、'MEG'、'EMG'、'ECG'、
-「イベント」など。 他の EEGLAB 関数は、チャンネルタイプをプロットと計算を目的のサブセットに制限するためにチャンネルタイプを使用することがあり、複数のモジュールデータセットを簡単に分析できます。 ですから、
+*チャンネルタイプ* ボタンの種類* を 設定します。
+'EmeG'、'EMG'、'ECG'、
+他の EEGLAB の関数は、Centre のクラスで、Centre のクラスでは、Centre のクラスで、Centre のクラスでは、Centre のクラスで、Centre のクラスでは、Centre のクラスでは、Centre のクラスでは、Centre のクラスでは、Centre のクラスでは、Centre のクラスでは、Centre のクラスでは、Centre のクラスでは、Centre のクラスでは、Centre のクラスでは、Centre のクラスを に分けます。
 チャネルタイプをデータに追加する手間はかかります。 それは必須です
-実際にインポートするために、上記のチャネル編集ウィンドウで*Ok*を押します
-チャネルの場所。 EEGLAB のメインウィンドウでは、*channel Location* フラグが *yes* を表示します。
+ウィンドウ ウィンドウ * *
+EEGLABのWindows、*channel Location*は、
 
 チャネルの場所を見る
 ------
 
 再オープン <span style="color: brown">編集 → チャネルの場所</span> 閉じる 
 
-### 2DのPlotのチャネルの場所
+### 2DのPlotの
 
-チャネルの2D場所を視覚化するために、*Plotを押して下さい
-*Read Locations* ボタンの上の 2-D*。 EEGLABセッション中に、チャンネルの場所を示すプロットを参照することができます
-選ぶことによって <span style="color: brown">Plot → チャネルの場所 → によって
+* * *
+*Read Locations* ボタンの特別2D*。 EEGLABのコメント
+選ぶことによって <span style="color: brown">投稿ナビゲーション
 お名前 (必須)</span>. 
 どちらのコマンドでも、以下のようにウィンドウがポップアップ表示されます。 デフォルト設定をご使用ください。
 
 *注記:
 このプロットは、チャンネル番号を参照するために任意のチャンネルラベルをクリックします。
 
-![画像:Channellocationname.png](/assets/images/Channellocationname.png)
+![サイトマップ](/assets/images/Channellocationname.png)
 
 <span style="color: red">警告</span>: 'チャンネルの場所' を 'チャンネルの場所'
-(単一) *electrode*の場所はすべてのチャネルの使用時だけ感じさせます
-同じ 'reference channel.' EEGチャンネル信号は常に
+*electrode* は、任意の場所から始まる
+'参照チャンネル' EEGチャンネル
 2つの電極の電圧の違い --
-典型的には、電極は「参照チャンネル」を参照します。 信号の「チャネルの場所」をの位置にEquating
+参照チャンネル 交通アクセス
 貢献した電極の1つは、チャネルとしてかなり非推奨です
-2 の *either* に流れる可能性に等しく敏感である必要があります。
-(またはそれ以上の) scalp の電極に貢献します。
+2 の *either* に の に の に の に の に の に の に の に の に の に の に の に の に の に の に の に 等 の に の の に の の に の の に の の に の の に の の に の の の の に の の に の に の の の に の の の に の の に の の の の の の に の の の の に に の の の の の の に の の の の の の の の の の の に に に の の の の の の の の の の の に の の の の の 
+または scalp の 利点
  
 ヘッド漫画の外側にプロットされた電極は、ミッドヘッドライン(つまり、
-ネガティブ z (高さ) 座標、0 は
-ヘッドの中心)。 大会でヘッド漫画の外に描かれています。 頭の漫画の中にのみスカルプマップをプロットするには、*Plotに0.5を入力してください
-radius* の編集箱。 この場合、2つの目の電極は、
-コンピューティングの補間時に表示または考慮に入れる 2-Dスカルプ
-ディスプレイや(場合によっては)さらなる処理のためのマップ。 これらの設定は、EEGLABでプロットされたすべてのスカルプトポグラフィに使用されます。 
+ネガティブ z (ja) は、
+首页 大会 で で で の 漫画 に の 漫画 に の 漫画 に の に の に の に の に の に の に の に の に の に の に の に の に の の に の に の に の の に の の に の の に の の に の の に の の に の の に の の に の の に の の に の の に の の に の の に の の の の に の の の の の に の の の の の の の に の の の の の の の の の の の に の の の の の の の の の の の 漫画 の の の の の の
+Radus* の編集箱。
+表示 の の の の 2Dスカルプ
+ディスプレイや(場合によっては) EgLabでは、すべてのカルプトポグラフィに合格しました。 
 
 記録されたフィールドに十分見えない場合は、このダイアログ ボックスを 1.0 に設定します。
 すべての可能なスカルプチャネルを含むスカルプマップをインターポレートし、表示します
 示される(0.5)頭部の下の頭部の部分が付いている場所、
-漫画のヘッド境界の外側の「スカート」または「ハロ」領域で(more)
+漫画の頭文字の「シャツ」または「ハロ」の領域(more)
 どのチャネルの場所がプロットする精密な別の制御はあります
-コマンドラインから使用可能: scalp のメッセージを参照
+scalp のメッセージ
 地図のプロット機能 [topoplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m)).
 
 ### なぜ電極は頭の限界の外側にプロットされていますか?
   
-前の画像では、ヘッドセンターの水平平面を下回るので、EOG1とEOG2の電極はヘッド限界を超えて描画されます。 ふりがな [topoplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m) 関数はそれらをプロットします
+ふりがな [topoplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m) 関数はそれらをプロットします
 漫画の頭の外側に、
-(arc_length = 0.5) ヘッド中心平面。 によって
-デフォルトでは、場所 arc_lengths \<= 1.0 (ヘッドボトム) のすべてのチャネル
+(arc_length = 0.5) ヘッド中心的. によって
+デフォルトでは、 arc_lengths \<= 1.0 (頭の最下) を 設定します。
 補間に使用され、プロットに示されます。 から
 コマンドライン, [topoplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m) ユーザが指定することを可能にします
-半径(*intrad*および*plotrad*)および
-漫画の頭部の半径(*headrad*)。 *headrad* の値は
-通常、その生理学的に正しい値(0.5)で保持され、そのため、EEGLABグラフィカルインターフェイスで変更することはできません。
+半径(*intrad**plotrad) および
+漫画の半径(*headrad*)。 *ヘッドラッド*
+現在、その中身の回り値(0.5)をリベートして、EEGLABグラフィカルに交換する。
 
-2Dでプロットすると、頂点からの電極位置の距離は、スカルプの(グレートサークル)距離に比例します。
+2Dでプロットする、SepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepperのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepperのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSepcalのSpcalのSepcalのSpcalのSpcalのSpcalのSpcalのSpcalのSpcalのSepcalのSepcalのSepcalのSepperのSepcalのS
 頂点。 これは頭部の側面の電極をそのまま保持します
 自分のポジションのトップダウンビューにいるようにまとめました。
 この大きな円柱の投影は、下部の位置を広げます
 電極。 したがって、上の図では、(トップ)電極がプロットされています
-'skirt'の下部には、実際に顔の下部にある。 プロットでは、彼らは、現実、彼らは、そのように、スプレッドアウト表示されます
+'skirt's's は、 その、その、その、その、その、その
 比較的狭い面面に束ねられます。 の組み合わせ
-top-down と big-circle のプロジェクションにより、フルコンポーネント
+top-down と big-circle のプロジェクション、完全なコンポーネント
 プロジェクション(または生データスカルプマップ)は、許可しながら明確に見えます
-プロット機能の実際の3D位置を推定するためのビューア。
+プロット機能の3D
 連続したデータをインポートする
 
-### 3DのPlotのチャネルの場所
+### 3DのPlotの
 
-3Dのチャンネルの位置を可視化するには、*Plot 3-D (xyz)* を押します。 ふりがな
-以下の画面が表示されます。 作図箱は3-Dの使用で回すことができます
+3D's チャンネル * * ふりがな
+画面 画面 で
 マウス:
 
 ![サイズ:3dlpotxyz.gif](/assets/images/3dlpotxyz.gif)
 
 ロードされたチャンネルラベルと座標が表示されるようになりました
-お問い合わせ [ポップアップ_chanedit.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanedit.m) ウィンドウ。 チャンネルエディタは、ポーラをカルチェシアンに保つので、球面座標を一貫して保ちます。 ポーラ座標を含むファイルをチャネルラベルに読み込むと、自動的にカテージと球面座標に変換されます。 提供された編集ボックスを使用して手動でチャンネルの場所を変更することができます
+お問い合わせ [チャンネル登録](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanedit.m) ウィンドウ。 チャンネルエディタは、ポーラをカルチェシアンに保つので、球面座標を一貫して保ちます。 ポーラ座標を含むファイルをチャネルラベルに読み込むと、自動的にカテージと球面座標に変換されます。 提供された編集ボックスを使用して手動でチャンネルの場所を変更することができます
 各チャンネルの座標に。 ただし、各変更後の変更は必須です。
 他の座標形式を更新します。 例えば、更新する場合
-1つのチャネルのための極座標は、それから*polar → sphを押します。 & xyz*
-右側のボタン [ポップアップ_chanedit.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanedit.m) ウィンドウ (参照)
+1つの異なる極極の座標は、*polar → s. & xyz*
+右側のボタン [チャンネル登録](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanedit.m) ウィンドウ (参照)
 上) これらの値を他の座標形式に変換します。
 
 サポートされているデータ形式
 -------------------------------------
 
-サポートされているデータフォーマットは、ヘルプメッセージに記載されています [読み込み場所 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=readlocs.m) 機能。 サポートされている形式は次のとおりです。
+サポートされているデータフォーマットは、ヘルプメッセージに記載されています [住 所 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=readlocs.m) 機能。 サポートされている形式は次のとおりです。
 
-- '.loc', '.locs', '.eloc' 拡張子: EEGLAB 極座標ファイル
-- '.ced' 拡張子: ポーラー、カテージ、および球面座標を含むEEGLABファイル
+- '.loc', '.locs', '.eloc' ファイル拡張子: EEGLAB 極座標ファイル
+- '.ced' ファイル拡張子: ポーラー、カテージ、および球面構成要素EEGLABファイル
 - '.sph' 拡張子: MATLABの球面座標
-- '.elc' 拡張子: カルティシャン 3-D 電極は EETrak ソフトウェアを使用してスキャンされた座標を調整します。 
-- '.elp' 拡張子: Polhemus-.'elp' Cartesian 座標
-- '.elp' 拡張子:BESA-'.elp' 球面座標
-- '.xyz' 拡張子: MATLAB/EEGLAB(マトラボ) Cartesian座標
-- '.asc' と '.dat' 拡張子: Neuroscan-.'asc' または '.dat' Cartesian Polar はテキストファイルを座標します。
-- '.mat' 拡張子: Brainstrom チャンネルの場所ファイル。
-- '.sfp' 拡張子:BESA/EGI-xyz Cartesian 座標
+- '.elc' ファイル拡張子: カルティ・シャン EETrak は、EETrak Software の略称です。 
+- '.elp' ファイル拡張子: Polhemus-.'elp' Cartesian 座標
+- '.elp' 文字列:BESA-'.elp' 球面座標
+- '.xyz' ファイル拡張子: MATLAB/EEGLAB(マトラボ) ログイン
+- '.asc' と '.dat' は、Neuroscan-.'asc' または '.dat' と '.dat' は、Craft で動作します。
+- '.mat' ファイル拡張子: Brainstrom
+- '.sfp' ファイル拡張子:BESA/EGI-xyz Cartesian 座標系
 
-お問い合わせ [読み込み場所 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=readlocs.m) 関数(チャンネルエディタによって呼び出される)は、異なる列に座標情報が含まれているカスタムチャンネルの位置ファイルをインポートすることもできます。 EEGLAB対応フォーマットにおけるASCIIチャンネル位置データの一例です。 以下のすべての例では、最初のヘッダ行は存在しません。
+お問い合わせ [住 所 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=readlocs.m) チャンネル に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 EEGLAB は、EEGLAB のチャンネルで、EEGLAB は、EEGLAB のチャンネルで、EEGLAB は、EEGLAB のチャンネルで、EEGLAB は、EEGLAB のチャンネルで、EEGLAB は、EEGLAB のチャンネルで、EEGLAB は、EEGLAB のチャンネルで動作します。
 
 -   極座標ファイルから4つのチャネル(ファイル名拡張子付き)
-    *.loc*、 (ライトブルー)ヘッダラインは含まれていません。
+    *.loc*、(ライト・ブルー)ヘッダ・ラインは無料
 
 <table>
 <tbody>
@@ -270,7 +270,7 @@ top-down と big-circle のプロジェクションにより、フルコンポ�
 </table>
 
 
-- 同じ場所, 球面座標ファイルから (estension, *.sph* ):
+- .sph* , 球面座標系ファイル:
 
 <table>
 <tbody>
@@ -308,7 +308,7 @@ top-down と big-circle のプロジェクションにより、フルコンポ�
 </table>
 
 
-- カルチェシアンの同じ場所はファイル(拡張子、*.xyz*)を調整します:
+- カルチェーシア通りは、以下の通りです。
 
 <table>
 <tbody>
@@ -355,32 +355,32 @@ top-down と big-circle のプロジェクションにより、フルコンポ�
 </tbody>
 </table>
 
-チャンネル編集ウィンドウの*Save(その他のタイプ)*ボタンを使用して、チャンネル位置ファイルの形式間で変換することもできます。
+チャンネル編集ウィンドウの*Save(その他のタイプ)*ボタン、チャンネル設定ファイルを作成する
 
 ### 利用可能なチャンネルの場所ファイル
 
-他のテンプレートチャンネルの場所ファイルについては、次のWebサイトとFTPリポジトリ(このページを編集して追加してください):
+他のチャンネルでは、次のWebサイトとFTPを編集して追加してください。
 
 -   [私達に送られるサンプル ファイル](ftp://sccn.ucsd.edu/pub/locfiles/)
 
 -   [Neuroscan社ホームページ](http://www.neuro.com/)
 
--   [EGI チャンネルの場所ファイル](ftp://sccn.ucsd.edu/pub/philips_neuro)
+-   [EGI チャンネル](ftp://sccn.ucsd.edu/pub/philips_neuro)
 
 -   [容易なキャップの電極の位置](http://www.easycap.de)
 
 -   [容易なキャップの電極の位置](http://www.easycap.de)
 
--   [BIOSEMIチャンネルの場所ファイル](https://sccn.ucsd.edu/eeglab/download/BIOSEMI_cap_coords_all.xls)
+-   [BIOSEMIチャンネル](https://sccn.ucsd.edu/eeglab/download/BIOSEMI_cap_coords_all.xls)
 
-スキャンされた3Dチャネルの場所の調整
+特許取得済み3D
 ------------------------------
 
 このセクションでは、チュートリアルデータセットは使用しません。 提供の意図
 カルチェシアンで測定されたチャンネルの位置をインポートするためのガイドライン
-3D追跡装置(Polhemusのような)を使用して調整します。 利用する
+3D 機器(Polhemis) を調節します。
 EEGLABメニュー <span style="color: brown">編集 → チャンネルの場所</span> またはタイプ
-MATLABコマンドラインで次のコマンドを実行します。
+MATLABでは、次のコマンドを実行します。
 
 ```matlab
 pop_chanedit([]);
@@ -388,57 +388,57 @@ pop_chanedit([]);
 
 空のチャンネル編集ウィンドウが表示されます。
 
-![画像:Editchannelinfo.jpg](/assets/images/Editchannelinfo.jpg)
+![サイトマップ](/assets/images/Editchannelinfo.jpg)
 
-*Read Location*ボタンを押し、*scanned72.dat*ファイルを選択します。
-EEGLAB分布の*sample_data*サブフォルダから。 これは、
-Neuroscanを用いたPolhemusシステムで測定されたチャンネルの場所ファイル
-ソフトウェア(ゾルタン・マリ) *autodetect*をのための使用して下さい
-ファイルの形式。 ファイルがインポートされたら、*plotting radius* を 0.6 に設定して、スカルプトポグラフィをプロットするときにいくつかの参照ポイントをマスクします。 それから、*Plot 2-D*を押して下さい
+*Read Location*は、*scanned72.dat*のファイルです。
+EEGLAB分布の*sample_data*サブフォルダから。
+Neuroscan では、Polhemus のシステムで測定されたチャンネルで
+ソフトウェア(ゾルタン・マリ)
+ドキュメント ファイルが * * * * * * * * * * * * * * * * * * * * * します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します *Plot 2-D*は、
 ボタン。 以下のプロットがポップアップ表示されます。
 
-![画像:Scanlocs1.gif](/assets/images/Scanlocs1.gif)
+![サイトマップ](/assets/images/Scanlocs1.gif)
 
-ご覧のとおり、測定された3Dチャンネル座標は、測定された3Dチャンネル座標が表示されない場合があります。
-2Dヘッドモデルに正確に分散します。 これは、
+測定された3Dチャンネルは、
+2Dモデルのモデル
 測定値がヘッドセンターにシフトされていない。 これを修正するには
 問題は、最初に最も適したヘッド球の中心を見つける必要があります
-インポート 3D電極の位置。 そのためには、*Opt.ヘッドセンター*を押します。
+インポート * * * *
 (ヘッドセンターの最適化) 次のウィンドウがポップアップ表示されます。
 
-![画像:Pop_chancenter.gif](/assets/images/Pop_chancenter.gif)
+![サイトマップ](/assets/images/Pop_chancenter.gif)
 
 おそらく、チャンネルの一部はヘッドセンターに含まれるべきではありません
 ヘッドや/または録音されていない場合の最適化
 場所。 使用するために電極のインデックスを入力します。 (ここでは、 1:3 33 35 64:72) で
-編集ウィンドウ。 *Browse*ボタンを押して選択することもできます。
-頭にないチャンネル。 ブラウザで*Ok*を押すと
+編集ウィンドウ。 *Browse*ボタンを押します。
+コメントはありません。 *Ok* で
 ウィンドウに示すように、チャンネルのインデックスがコピーされます。
-上記。 それから *Ok*を押して下さい。 最適化完了後、プレス
-※Plot 2-D*ボタンをもう一度入力してください。
+それから それから 後
+※Plot 2-D*ボタンを入力してください。
 
-![画像:Scanlocs2.gif](/assets/images/Scanlocs2.gif)
+![サイトマップ](/assets/images/Scanlocs2.gif)
 
 上記のビューでは、いくつかのチャンネルの場所はまだ間違っています。 お問い合わせ
-例えば、頂点(プロットセンターなど)にあるチャンネル「Cz」が期待できます。
-これを調整するには、*Rotate axis*ボタンを押します。 次のウィンドウ
+「Cz」は「Cz」で紹介しています。
+こちらのウィンドウでは、
 ポップアップ:
 
-![画像:Forcelocs.gif](/assets/images/Forcelocs.gif)
+![サイトマップ](/assets/images/Forcelocs.gif)
 
-*Ok* を押して、チャンネル 'Cz' を頂点 (デフォルト) に整列します。 それから
-*Plot 2-D*ボタンをもう一度押してスカルプマップをプロットします。
+'Cz' を 'Cz' に 'Cz' に 整列 (デフォルト) に 'Cz' を 'Cz' に 'Cz' に 'Cz'
+*Plot 2-D*ボタンを右折すると、Plot 2D*ボタンを押します。
 
-![画像:Scanlocs3.gif](/assets/images/Scanlocs3.gif)
+![サイトマップ](/assets/images/Scanlocs3.gif)
 
 このセクションでは、適応するために実行したい操作を説明します
-測定器 EEGLABで利用する3Dチャンネルの場所 チャンネル編集ウィンドウを閉じることもできます。
+測定器 EEGLABの使い方は?????????????
 
 プロットオプションを調整する
 --------------------------
 
 多くのプロットオプションがあります [topoplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m))機能。 それらを追加することができます。 
-コンテンツ <i>EEG.chaninfo.topoplot(エグシャン)</i> そして、それらをすべての地理的なプロットに適用して下さい。 たとえば、ヘッド半径を変更するには、MATLABコマンドラインに入力します(第二行はメモリ内のデータセットを保存します)。
+コンテンツ <i>EEG.chaninfo.topoplot(エグシャン)</i> すべての すべての して下さい 第二 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の
 
 ```
 EEG.saved = 'no';

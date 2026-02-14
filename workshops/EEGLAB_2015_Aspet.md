@@ -5,241 +5,241 @@ parent: Past workshops
 grand_parent: Workshops
 ---
 
-![250px\|thumb\|right\|upright=2.5\|Cows enjoying the scenery of the
-Pyrenees mountains](/assets/images/Cow-breeds.jpg)
+![250px\]|thumb\|right\|upright=2.5\|景色を楽しむための方法
+Pyreneesの山)(/assets/images/Cow-breeds.jpg)
 
-Nineteenth EEGLAB Workshop
+Nineteenth EEGLABワークショップ
 ==========================
 
-<span style="color: blue">Aspet, France - May 25-29, 2015</span>
-The 19th EEGLAB Workshop will take place from Monday, May 25th through
-Friday, May 29th in the village of Aspet in the Pyrenees foothills in
-southwest France near Toulouse. Participants will be expected to bring
-laptops with MATLAB installed so as to be able to participate in the
-practical sessions. The tutorial workshop will introduce and demonstrate
-the use of the EEGLAB software environment and EEGLAB-linked tools for
-performing advanced analysis of EEG and related data, with detailed
-method expositions and practical exercises. The workshop will be held at
-a French family vacation camp, with hiking and other recreational
-opportunities available. Meals will be served family style.
+<span style="color: blue">アスペット、フランス - 2015年5月25日-29日</span>
+第19回EEGLABワークショップが5月25日(月)から開催されます
+5月29日(金)、ピレンシー・フットヒルズのアペット村にて
+トゥールーズ近くの南西フランス。 参加者はお持ちになる予定
+MATLABを搭載したノートパソコンは、参加できるように設置されています。
+実践的なセッション。 チュートリアルのワークショップが紹介し、実証します
+EEGLABソフトウェア環境およびEEGLABリンクツールの使用
+EEGおよび関連データの高度な分析を実行し、詳細
+方法の分解と実践的な演習. ワークショップを開催いたします。
+ハイキングや他のレクリエーションとフランスの家族旅行キャンプ
+利用できる機会。 お食事は、家族食のご提供となります。
 
 
 
-Workshop Program (with corresponding PDFs)
+ワークショッププログラム(PDF対応)
 ------------------------------------------
 
-<span style="color: purple">Purple lettering = lecture</span>
-<span style="color: orange">Orange lettering = tutorial</span>
+<span style="color: purple">パープルレター = 講義</span>
+<span style="color: orange">オレンジレター = チュートリアル</span>
 
-<u><span style="color: blue">Monday, May 25th</span></u>
-
-
-16:30 -- Train station shuttle bus pick up
-
-17:00 -- Airport shuttle bus pick up
-
-<span style="color: green">19:45 -- Dinner (included in registration)</span>
-
-<u><span style="color: blue">Tuesday, May 26th</span></u>
+<u><span style="color: blue">5月25日(月)</span></u>
 
 
-<span style="color: green">7:00 - 8:30 Breakfast</span>
+16:30～ 駅シャトルバス送迎
 
-<!-- -->
+17:00～17:00 空港シャトルバス送迎
 
+<span style="color: green">19:45～ ディナー(要予約)</span>
 
-**Overview and ICA Theory/Practice**
-
-
-<span style="color: purple">8:30 – 9:45 -- Mining event-related brain dynamics I (Scott Makeig)</span>
-
-<span style="color: purple">9:45 – 10:15 -- EEGLAB overview (Arnaud Delorme)</span>
+<u><span style="color: blue">5月26日(火)</span></u>
 
 
-<span style="color: green">-- Break--</span>
-
-<span style="color: purple">10:30 – 11:30 -- ICA theory (Arnaud Delorme)</span>
-
-<span style="color: orange">11:30 – 12:30 -- Data import, Artifact rejection (Tracy Brandmeyer)</span>
+<span style="color: green">7:00～8:30 朝食</span>
 
 <!-- -->
 
 
-<span style="color: green">12:30-13:45 Lunch --</span>
+**概要とICA理論/実践* * 必須
+
+
+<span style="color: purple">8:30～9:45～ 鉱業イベント関連の脳力学I(Scott Makeig)</span>
+
+<span style="color: purple">9:45 – 10:15 -- EEGLABの概要 (Arnaud Delorme)</span>
+
+
+<span style="color: green">-- ブレーク--</span>
+
+<span style="color: purple">10:30-11:30 -- ICA理論(Arnaud Delorme)</span>
+
+<span style="color: orange">11:30～12:30～ データインポート、アーティファクト拒否(Tracy Brandmeyer)</span>
 
 <!-- -->
 
 
-**ICA and time-frequency**
-
-
-<span style="color: orange">13:45 – 14:30 -- ICA decomposition practicum (Arnaud Delorme)</span>
-
-<span style="color: orange">14:30 – 15:30 -- Evaluating ICA components practicum (Arnaud Delorme)</span>
-
-
-<span style="color: green">-- Break--</span>
-
-<span style="color: purple">15:45 – 17:00 -- Time-frequency decompositions: Theory and practice (Tim Mullen)</span>
+<span style="color: green">12:30-13:45 ランチ</span>
 
 <!-- -->
 
 
-<span style="color: green">19:45 -- Dinner</span>
-
-<u><span style="color: blue">Wednesday, May 27th</span></u>
+**ICAおよび時間頻度**
 
 
-<span style="color: green">7:30 - 8:30 Breakfast</span>
+<span style="color: orange">13:45 – 14:30 -- ICA分解練習(アーナド・デローム)</span>
 
-<!-- -->
-
-
-**Group analysis and ICA clustering in EEGLAB**
+<span style="color: orange">14:30～15:30～ ICAコンポーネントの練習(Arnaud Delorme)の評価</span>
 
 
-<span style="color: purple">8:30 - 9:00 -- Why cluster ICA components? (Scott Makeig)</span>
+<span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">9:00 - 9:30 -- Robust statistics and correction for multiple comparisons (Arnaud Delorme)</span>
-
-<span style="color: purple">9:30 - 10:30 -- Creating a STUDY and STUDY design (Arnaud Delorme)</span>
-
-
-<span style="color: green">-- Break--</span>
+<span style="color: purple">15:45 – 17:00 -- 時間頻度分解: 理論と実践 (Tim Mullen)</span>
 
 <!-- -->
 
 
+<span style="color: green">19:45～ ディナー</span>
 
-<span style="color: purple">10:45 - 11:45 -- Plotting and computing statistics in channels and components in STUDY (Arnaud Delorme)</span>
-
-<span style="color: purple">11:45 - 12:45 -- Group analysis using EEGLAB studies: Methods to cluster ICA components (Arnaud Delorme)</span>
-
-<!-- -->
+<u><span style="color: blue">5月27日(水)</span></u>
 
 
-<span style="color: green">12:45-13:45 Lunch --</span>
+<span style="color: green">7:30 - 8:30 朝食</span>
 
 <!-- -->
 
 
-<span style="color: green">13:45-18:00-- Hiking excursion</span>
-
-<!-- -->
+**EEGLABのグループ分析とICAクラスタリング* * 必須
 
 
-<span style="color: green">19:45 -- Dinner</span>
+<span style="color: purple">8:30～9:00 なぜクラスターICAコンポーネント? (スコットメイク)</span>
 
-<u><span style="color: blue">Thursday, May 28th</span></u>
+<span style="color: purple">9:00～9:30 複数の比較のための強力な統計と修正(Arnaud Delorme)</span>
 
-
-<span style="color: green">7:30 - 8:30 Breakfast</span>
-
-<!-- -->
+<span style="color: purple">9:30 - 10:30 -- STUDYとSTUDYデザイン(Arnaud Delorme)の作成</span>
 
 
-**Source Localization**
-
-
-<span style="color: purple">8:30 – 9:30 -- Forward and inverse models - the Dipfit tools (Robert Oostenveld)</span>
-
-<span style="color: purple">9:30 – 10:00 -- The Neuroelectromagnetic Forward Head Modeling (NFT) and NIST (Inverse Source Imaging) toolkits (Scott Makeig)</span>
+<span style="color: green">-- ブレーク--</span>
 
 <!-- -->
 
 
 
-<span style="color: green">-- Break--</span>
+<span style="color: purple">10:45〜11:45〜 STUDY(Arnaud Delorme)のチャネルとコンポーネントのプロットとコンピューティング統計</span>
+
+<span style="color: purple">11:45 - 12:45 -- EEGLAB を用いたグループ分析: クラスターICAコンポーネント(Arnaud Delorme)へのメソッド</span>
 
 <!-- -->
 
 
-**General Linear Modeling**
-
-
-<span style="color: orange">10:15 – 12:00 -- Theory and practice of applying general linear models to EEG data using the LIMO EEGLAB plugin (Cyril Pernet)</span>
-
-<span style="color: orange">12:00 – 12:30 -- The future of LIMO and EEGLAB (Arnaud Delorme)</span>
+<span style="color: green">12:45-13:45 ランチ --</span>
 
 <!-- -->
 
 
-<span style="color: green">12:30-13:45 Lunch --</span>
+<span style="color: green">13:45-18:00--- ハイキングツアー</span>
 
 <!-- -->
 
 
-**Source information flow**
+<span style="color: green">19:45～ ディナー</span>
+
+<u><span style="color: blue">5月28日(木)</span></u>
 
 
-<span style="color: purple">13:45 – 14:30 -- Source information flow and Granger-Causal modeling tools (Tim Mullen)</span>
-
-<span style="color: orange">14:30 – 15:30 -- SIFT toolbox: Theory and live demo (Tim Mullen)</span>
-
-
-<span style="color: green">-- Break--</span>
-
-<span style="color: orange">15:45 – 17:30 -- SIFT toolbox: practicum (Tim Mullen)</span>
+<span style="color: green">7:30 - 8:30 朝食</span>
 
 <!-- -->
 
 
-<span style="color: green">19:45 -- Dinner </span>
-
-<!-- -->
+**Source ローカリゼーション**
 
 
+<span style="color: purple">8:30～9:30 フォワードと反転モデル - Dipfitツール(Robert Oostenveld)</span>
 
-<span style="color: orange">20:00 - 23:00 -- SIFT hackathon, meet with Tim Mullen and his computer at the bar - ask anything you like </span>
+<span style="color: purple">9:30 – 10:00 -- 神経電磁フォワードヘッドモデリング(NFT)とNIST(Inverse Source Imaging)ツールキット(Scott Makeig)</span>
 
 <!-- -->
 
 
 
-<span style="color: orange">20:00 - 23:00 -- LIMO hackathon, meet with Cyril Pernet and his computer at the bar - ask anything you like </span>
+<span style="color: green">-- ブレーク--</span>
+
+<!-- -->
+
+
+**一般リニアモデリング* * 必須
+
+
+<span style="color: orange">10:15 – 12:00 -- LIMO EEGLABプラグイン(Cyril Pernet)を使用して、一般的なリニアモデルをEEGデータに適用するための理論と実践</span>
+
+<span style="color: orange">12:00 – 12:30 – 12:30 LIMOとEEGLAB(Arnaud Delorme)の未来</span>
+
+<!-- -->
+
+
+<span style="color: green">12:30-13:45 ランチ</span>
+
+<!-- -->
+
+
+**情報源流* * 必須
+
+
+<span style="color: purple">13:45～14:30～ ソース情報の流れとGranger-Causalモデリングツール(Tim Mullen)</span>
+
+<span style="color: orange">14:30-15:30 -- SIFT ツールボックス: 理論とライブデモ(Tim Mullen)</span>
+
+
+<span style="color: green">-- ブレーク--</span>
+
+<span style="color: orange">15:45 – 17:30 -- SIFT ツールボックス: practicum (Tim Mullen)</span>
+
+<!-- -->
+
+
+<span style="color: green">19:45～ ディナー </span>
 
 <!-- -->
 
 
 
-<span style="color: orange">20:00 - 23:00 -- FieldTrip hackathon, meet with Robert Oostenveld and his computer at the bar - ask anything you like </span>
-
-<u><span style="color: blue">Friday, May 29th</span></u>
-
-
-<span style="color: green">7:30-8:30 -- Breakfast</span>
+<span style="color: orange">20:00 - 23:00 -- SIFTハッカソン、Tim Mullenとバーのコンピュータと会う - 好きなものを尋ねる </span>
 
 <!-- -->
 
 
 
-<span style="color: purple">8:30 – 9:30 -- Mining event-related brain dynamics II (Scott Makeig)</span>
-
-<span style="color: orange">9:30 – 10:00 -- Using and building EEGLAB extensions/plugins (Arnaud Delorme)</span>
+<span style="color: orange">20:00 - 23:00 - LIMOハッカソン、Cyril Pernetとバーのコンピュータと会う - 好きなものを尋ねる </span>
 
 <!-- -->
 
 
 
-<span style="color: green">-- Break--</span>
+<span style="color: orange">20:00 - 23:00 - フィールドトリップハッカソン、ロバート・オオステンドヴェルドとバーのコンピュータと会う - あなたが好きなものを尋ねる </span>
+
+<u><span style="color: blue">5月29日(金)</span></u>
+
+
+<span style="color: green">7:30～8:30 朝食</span>
 
 <!-- -->
 
 
 
-<span style="color: orange">10:15 – 11:30 -- Practicum, small group projects</span>
+<span style="color: purple">8:30～9:30 マイニングイベント関連の脳力II(Scott Makeig)</span>
 
-<span style="color: orange">11:30 – 12:00 -- Participant project presentations and general discussion</span>
-
-<!-- -->
-
-
-<span style="color: green">12:15 -- Lunch</span>
+<span style="color: orange">9:30 – 10:00 -- EEGLAB拡張/プラグイン(Arnaud Delorme)の使用と構築</span>
 
 <!-- -->
 
 
-<span style="color: black">13:00 -- Airport/train station shuttle bus leaves Bois Perche</span>
 
-<span style="color: black">14:30+ -- Airport/train station shuttle bus arrives in Toulouse</span>
+<span style="color: green">-- ブレーク--</span>
+
+<!-- -->
+
+
+
+<span style="color: orange">10:15 – 11:30 -- 練習、少人数のグループプロジェクト</span>
+
+<span style="color: orange">11:30 – 12:00 -- 参加者のプロジェクトプレゼンテーションと一般的なディスカッション</span>
+
+<!-- -->
+
+
+<span style="color: green">12:15 -- ランチ</span>
+
+<!-- -->
+
+
+<span style="color: black">13:00～ 空港/列車の駅のシャトルバスはボイ・ペルチェに出発します</span>
+
+<span style="color: black">14:30+ -- 空港/鉄道駅のシャトルバスがトゥールーズに到着</span>
 

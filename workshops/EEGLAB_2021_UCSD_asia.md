@@ -8,69 +8,69 @@ parent: Past workshops
 layout: redirect
 redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
-<font color=red>Please refer to the email you have received for a link to a page that contains Zoom links</font>
+<font color=red>記載されているページへのリンクについては、受信したメールアドレスをご確認ください。 ズームリンク</font>
 
-# 2021 Virtual EEGLAB Workshop Pacific/Asia
+# 2021年 バーチャル EEGLAB ワークショップ パシフィック/アジア
 
-From November 29 to December 3, the 31st EEGLAB workshop will be held online in a virtual brain conference site on [GatherTown](https://gather.town/). The first day will be free for all and will feature lectures and social events. The workshop will feature lectures on how to process data using EEGLAB, including scripting and the use of multiple plug-ins. Parallel sessions will discuss specific topics, particularly wearable EEG, deep learning and EEG, connectivity analysis, and EEG.
+11月29日から12月3日まで、第31回EEGLABワークショップがバーチャル脳会議場でオンライン開催されます。 [ガザータウン](https://gather.town/)お問い合わせ 初日は無料で、講演会や社会イベントを盛り上げます。 ワークショップでは、EEGLABを使用してデータを処理する方法について、スクリプトや複数のプラグインの使用などについて説明します。 並列セッションでは、特定のトピック、特にウェアラブルなEEG、ディープラーニング、EEG、コネクティビティ分析、およびEEGについて説明します。
  
-[<b>Register for the free first day session, Monday November 29th here</b>](https://www.eventbrite.com/e/eeglab-workshop-day-1-free-tickets-182128179287).
+[<b>11月29日(月)の1日(月・祝)の1日(月・祝)まで無料登録</b>](https://www.eventbrite.com/e/eeglab-workshop-day-1-free-tickets-182128179287).
 
-[<b>Register for the workshop sessions, Tuesday-Friday November 30th-December 3rd here</b>](https://na.eventscloud.com/ereg/index.php?eventid=641115&). **Note:** You must register twice (once for November 29th and once for November 30th-December 3rd) if you want to attend the whole event.
+[<b>ワークショップのお申し込みはこちらから11月30日(火)〜12月3日(火)</b>](https://na.eventscloud.com/ereg/index.php?eventid=641115&)お問い合わせ ※2回(11月29日、11月30日〜12月3日は1回)は、イベント全体にご参加ください。
 
-We are looking forward to meeting you online...
+皆様のお越しをお待ちしております。
 
-期待在第31届EEGLAB研讨会上见到您 - 鍾子平 （ 聖地牙哥加大 史沃茲電腦運算神經科學中心 副主任 ;  國立陽明交通大學 客座教授 ;  國立清華大學 講座教授 ;  天津大學 合聘教授 )
+期待 期待 到 到 到 到 到 到 到 到 到 到 到 到 到 到 到 到 到 到 到 到 到 到 到 到 到 到 到 客 客 到 客 客 ; ; 講座 講座 ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ; ; ; ; ; ; ) ; ) ) ) )
 
-第31回EEGLABワークショップでお会いしましょう　宮腰誠　(カリフォルニア大学サンディエゴ校 スウォーツ計算神経科学センター プロジェクトサイエンティスト)
+第31回EEGLAB Workshop I 宮医科大学 医学部 科学部 科学部 科学部 教授
 
-Below is a still-provisional program for the 2021 Virtual EEGLAB Workshop (suggestions/requests welcome). The workshop will be held online, with social networking possible in the [GatherTown](https://gather.town/) environment. All hours are shown in Pacific Standard Time (PST) but you can click on the relevant time zone. The time has been arranged to accommodate America and Asia time zones waking hours. 'Night owl' participants from elsewhere are welcome as well.
+以下は、2021年の仮想EEGLABワークショップ(提案/依頼歓迎)のための暫定プログラムです。 ワークショップはオンラインで開催され、社会的なネットワーキングが可能 [ガザータウン](https://gather.town/) 環境。 太平洋標準時刻(PST)に全時間表示していますが、関連するタイムゾーンをクリックすることができます。 アメリカとアジアのタイムゾーンのウェイク時間に対応できる時間を設けました。 「Night owl」の参加者も歓迎します。
 
-Some presentations might be pre-recorded, but presenters will be present for questions.
+一部のプレゼンテーションは事前に記録されるかもしれませんが、発表者は質問のために提示されます。
 
-**Note:** Gather.town has a free public sample site for learning how to get around, attend events, and meet people in Gather.town - we highly recommend you try out their live walkthrough before the Workshop begins.
+**注意:** Gather. 町には、集会、集会、集会、集会など、様々な体験を楽しめる無料公開サンプルサイトがあります。 町 - ワークショップが始まる前に、ライブウォークスルーを試すことをお勧めします。
 
-**Time zone:** All the times below are shown in California (Pacific Standard) Time. Click on one of the time zone boxes below to select your time zone. 
+**タイムゾーン:** カリフォルニア(Pacific Standard)の時間に、以下のすべての時刻が表示されます。 タイムゾーンボックスの1つをクリックして、タイムゾーンを選択します。 
 
-<button onclick="changeFormat()" style="background-color: Black; color: White; border: none; padding: 5px 5px; text-align: center;">A/PM<->24hr</button>
-<button onclick="changeTimezone('PST')" style="background-color: #4CAF50; color: white; border: none; padding: 5px 5px; text-align: center;">Pacific US</button>
-<button onclick="changeTimezoneFromBase('PST','MST')" style="background-color:#34bdeb; color: white; border: none; padding: 5px 5px; text-align: center;">Mountain US</button>
-<button onclick="changeTimezoneFromBase('PST','EST')" style="background-color: #008CBA; color: white; border: none; padding: 5px 5px; text-align: center;">Eastern US</button>
-<button onclick="changeTimezoneFromBase('PST','IST')" style="background-color:Purple; color: white; border: none; padding: 5px 5px; text-align: center;">India</button>
-<button onclick="changeTimezoneFromBase('PST','CST')" style="background-color: #00CED1; color: white; border: none; padding: 5px 5px; text-align: center;">China, Taiwan & Australia W</button>
+<button onclick="changeFormat()" style="background-color: Black; color: White; border: none; padding: 5px 5px; text-align: center;">日 時<->24時間</button>
+<button onclick="changeTimezone('PST')" style="background-color: #4CAF50; color: white; border: none; padding: 5px 5px; text-align: center;">パシフィックアメリカ</button>
+<button onclick="changeTimezoneFromBase('PST','MST')" style="background-color:#34bdeb; color: white; border: none; padding: 5px 5px; text-align: center;">マウンテン US</button>
+<button onclick="changeTimezoneFromBase('PST','EST')" style="background-color: #008CBA; color: white; border: none; padding: 5px 5px; text-align: center;">米国東部</button>
+<button onclick="changeTimezoneFromBase('PST','IST')" style="background-color:Purple; color: white; border: none; padding: 5px 5px; text-align: center;">インド</button>
+<button onclick="changeTimezoneFromBase('PST','CST')" style="background-color: #00CED1; color: white; border: none; padding: 5px 5px; text-align: center;">中国、台湾、オーストラリア ツイート</button>
  
-<button onclick="changeTimezoneFromBase('PST','AEST')" style="background-color:#CD5C5C; color: white; border: none; padding: 5px 5px; text-align: center;">Australia E</button>
-<button onclick="changeTimezoneFromBase('PST','JST')" style="background-color:#BC8F8F; color: white; border: none; padding: 5px 5px; text-align: center;">Japan & Korea</button>
-<button onclick="changeTimezoneFromBase('PST','CEST')" style="background-color:Orange; color: white; border: none; padding: 5px 5px; text-align: center;">Central Europe</button>
-<button onclick="changeTimezoneFromBase('PST','HST')" style="background-color:#FFD700; color: white; border: none; padding: 5px 5px; text-align: center;">Hawaii</button>
+<button onclick="changeTimezoneFromBase('PST','AEST')" style="background-color:#CD5C5C; color: white; border: none; padding: 5px 5px; text-align: center;">オーストラリア E</button>
+<button onclick="changeTimezoneFromBase('PST','JST')" style="background-color:#BC8F8F; color: white; border: none; padding: 5px 5px; text-align: center;">日本・韓国</button>
+<button onclick="changeTimezoneFromBase('PST','CEST')" style="background-color:Orange; color: white; border: none; padding: 5px 5px; text-align: center;">中央ヨーロッパ</button>
+<button onclick="changeTimezoneFromBase('PST','HST')" style="background-color:#FFD700; color: white; border: none; padding: 5px 5px; text-align: center;">ハワイ</button>
 
-## MONDAY, November 29th (open to all; free registration required)
+## 11月29日(月・祝)(全開、無料登録)
 
 <ul>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">05:30pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00pm</span> – Registration open; come explore the workshop Gather.Town site. Hang out and socialize with new and old friends … 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">2019年5月30日</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00午後</span> – 参加登録は開講します。ワークショップを見学してください。 タウンサイト 新しくて古い友達と交流し、楽しく過ごす... 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:55pm</span> – 
-				<strong>Gather</strong> in the Gather.Town workshop site. 
-				<strong>Meet the tutors</strong>. 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00午後</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:55午後</span> – 
+				<strong>ガザー</strong> ガザーで。 町の研修会の場所。 
+				<strong>講師紹介</strong>. 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:45pm</span> – 
-				<strong>Basic elements</strong> of MATLAB scripting for EEGLAB (for beginners; Clement Lee) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00午後</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:45午後</span> – 
+				<strong>基本要素</strong> EEGLAB の MATLAB スクリプト (初心者向け; Clement Lee) 
 			</span>
 		</p>
 	</li>
@@ -78,42 +78,42 @@ Some presentations might be pre-recorded, but presenters will be present for que
 		<p>
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">07:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:10pm</span>– 
-				 <strong>What's new in EEGLAB?</strong> (Arnaud Delorme)
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">8月10日</span>– 
+				 <strong>EEGLABの新機能</strong> (アルナード・デローム)
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:15pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm</span> – 
-				<strong>Mining event-related brain dynamics I</strong> (Scott Makeig) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">8月15日</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span> – 
+				<strong>マイニングイベント関連の脳の動的 お問い合わせ</strong> (スコットメイク) 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span> - Parallel 
-				<strong>participant poster presentations</strong> in the Poster Hall. Note that you must register for the whole workshop to present a poster. 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span> - パラレル 
+				<strong>参加者ポスター発表</strong> ポスターホール ワークショップ全体にポスターを提示するために登録する必要があります。 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span> - Advanced Topics 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 高度なトピック 
 			</span>
 		</p>
 	</li>
 </ul>
 <blockquote>
 	<p>
-		<span style="color: gray">Parallel session 1 - 
-			<strong>Analysis of 'wearably' acquired EEG data</strong>
+		<span style="color: gray">パラレルセッション 1 - 
+			<strong>「ウェアラブル」のEEGデータ分析</strong>
 		</span>
 	</p>
 </blockquote>
@@ -121,9 +121,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:30pm</span> - 
-				<strong>Practical applications</strong> of wearable EEG (Tzyy Ping Jung) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span> - 
+				<strong>実用的なアプリケーション</strong> ウェアラブルEEG(Tzyy Ping Jung) 
 			</span>
 		</li>
 	</ul>
@@ -132,9 +132,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:30pm</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:15pm</span> - 
-				<strong>Mobile Brain/Body Imaging (MoBI)</strong> (John Iversen) 
+				<strong>モバイルブレイン/ボディイメージング(MoBI)</strong> (ジョン・イヴァーン) 
 			</span>
 		</li>
 	</ul>
@@ -144,16 +144,16 @@ Some presentations might be pre-recorded, but presenters will be present for que
 		<li>
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:15pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span> - 
-				<strong>EEG and TMS review</strong> (Mateusz Gola) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
+				<strong>EEGとTMSのレビュー</strong> (マテウス・ゴラ) 
 			</span>
 		</li>
 	</ul>
 </blockquote>
 <blockquote>
 	<p>
-		<span style="color: gray">Parallel session 2 - 
-			<strong>Neuroinformatics using BIDS and HED</strong>
+		<span style="color: gray">パラレルセッション 2 - 
+			<strong>BIDSとHEDを用いたニューロインフォマティクス</strong>
 		</span>
 	</p>
 </blockquote>
@@ -161,9 +161,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:30pm</span> - 
-				<strong>3rd-gen Hierarchical Event Descriptors (HED)</strong> (D. Truong)
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span> - 
+				<strong>3rd-gen階層イベント記述子(HED)</strong> (D. トン)
 			</span>
 		</li>
 	</ul>
@@ -172,9 +172,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:30pm</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:10pm</span> - 
-				<strong>What is BIDS 'Brain Imaging Data Structure'?</strong> (C. Pernet)  
+				<strong>BIDS「Brain Imaging Data Structure」とは?</strong> (C.パーネット)  
 			</span>
 		</li>
 	</ul>
@@ -184,8 +184,8 @@ Some presentations might be pre-recorded, but presenters will be present for que
 		<li>
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:10pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span> - 
-				<strong>The EEGLAB BIDS data I/O plug-in</strong> (Dung Truong &amp; Arnaud Delorme) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
+				<strong>EEGLAB BIDSデータI/Oプラグイン</strong> (Dung Truong &amp; Arnaud Delorme) (Dung Truong &amp; Arnaud Delorme) (Dung Truong &amp; Arnaud Delorme) (Dung Truong &amp; Arnaud Delorme)) (Dung Truong &amp; Arnaud Delorme) (Dung Truong &amp; Arnaud Delorme) (Dung Truong) (Dung Truong &amp; Arnaud Delorme)) (Dung Truong (Dung Truong &amp; Arnaud Delorme)) (Arnaud Delorme (Dorme)) (Dung Truong (Dung))) (Dung Truong (Dung Truong (Dung Truong (Dung Truong (Dung Truong))))))) (Arnaud (Arnaud (Arnaud (Arnaud (Arnaud))))) (Dorme (Arnaud (Dorme (Dorme (Arnaud (Arnaud)))))))) (Arnaud (Arnaud ( 
 			</span>
 		</li>
 	</ul>
@@ -200,15 +200,15 @@ Some presentations might be pre-recorded, but presenters will be present for que
 		<svg viewBox="0 0 16 16" aria-hidden="true">
 			<use xlink:href="#svg-link"></use>
 		</svg>
-	</a> TUESDAY, November 30th (paid registration required) 
+	</a> TUESDAY、11月30日(有料) 
 </h2>
 <ul>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:45pm</span> – 
-				<strong>EEGLAB data import and 'bad' data visualization</strong> (Julie Onton) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00午後</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:45午後</span> – 
+				<strong>EEGLABデータのインポートと「bad」のデータ可視化</strong> (ジュリー・オントン) 
 			</span>
 		</p>
 	</li>
@@ -216,43 +216,43 @@ Some presentations might be pre-recorded, but presenters will be present for que
 		<p>
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">07:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00pm</span> – 
-				<strong>Time-frequency decomposition: Theory</strong> (John Iversen) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00～20:00</span> – 
+				<strong>時間頻度分解: インフォメーション</strong> (ジョン・イヴァーン) 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm</span> – 
-				<strong>ICA theory</strong> (Scott Makeig) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00～20:00</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span> – 
+				<strong>ICA理論</strong> (スコットメイク) 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span> – Social time. 
-				<strong>Tutors available</strong> for Q&amp;A 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span> – 社会的な時間. 
+				<strong>利用可能なチューター</strong> Q&amp;Aの 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span> - 
-				<strong>Advanced Topics</strong>
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
+				<strong>高度なトピック</strong>
 			</span>
 		</p>
 	</li>
 </ul>
 <blockquote>
 	<p>
-		<span style="color: gray">Parallel session 1 - 
-			<strong>Time-frequency and connectivity analysis</strong>
+		<span style="color: gray">パラレルセッション 1 - 
+			<strong>時間頻度と接続解析</strong>
 		</span>
 	</p>
 </blockquote>
@@ -260,9 +260,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:30pm</span> - 
-				<strong>Time-frequency PRACTICUM</strong> in EEGLAB (John Iversen) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span> - 
+				<strong>時間頻度練習</strong> EEGLAB(ジョン・イヴァーン) 
 			</span>
 		</li>
 	</ul>
@@ -271,9 +271,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:00pm</span> - 
-				<strong>Phase/amplitude coherence (PAC) plugin</strong> (Ramon Martinez Cancino) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11月16日</span> - 
+				<strong>フェーズ/振幅コヒーレンス(PAC)プラグイン</strong> (ラモン・マルティネス・カンチーノ) 
 			</span>
 		</li>
 	</ul>
@@ -282,17 +282,17 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span> - 
-				<strong>The PowPowCAT plug-in</strong> (Makoto Miyakoshi) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11月16日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
+				<strong>PowPowCATプラグイン</strong> (宮越真琴) 
 			</span>
 		</li>
 	</ul>
 </blockquote>
 <blockquote>
 	<p>
-		<span style="color: gray">Parallel session 2 - 
-			<strong>Lab Streaming Layer (LSL) for multimodal data collection</strong>
+		<span style="color: gray">パラレルセッション 2 - 
+			<strong>マルチモーダルデータ収集のためのレイヤー(LSL)をストリームするラボ</strong>
 		</span>
 	</p>
 </blockquote>
@@ -300,9 +300,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:45pm</span> - 
-				<strong>LSL introduction and demonstration</strong> (Christian Kothe) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時45分</span> - 
+				<strong>LSL導入と実証</strong> (クリスティアン・コーテ) 
 			</span>
 		</li>
 	</ul>
@@ -311,9 +311,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:45pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span> - 
-				<strong>The lsl_app_matlabviewer EEGLAB plugin</strong> (Arnaud Delorme) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時45分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span> - 
+				<strong>lsl_app_matlabviewer は、 EEGLABプラグイン</strong> (アルナード・デローム) 
 			</span>
 		</li>
 	</ul>
@@ -322,9 +322,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:30pm</span> - 
-				<strong>LSL synchronization and other topics</strong> (Christian Kothe) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span> - 
+				<strong>LSLの同期とその他のトピック</strong> (クリスティアン・コーテ) 
 			</span>
 		</li>
 	</ul>
@@ -333,9 +333,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:00pm</span> - 
-				<strong>Tiny devices &amp; time synchronization</strong> (Tristan Stenner) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11月16日</span> - 
+				<strong>小さなデバイス &amp; 時間同期</strong> (トリスタンステンナー) 
 			</span>
 		</li>
 	</ul>
@@ -344,9 +344,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:30pm</span> - 
-				<strong>LSL troubleshooting I</strong> (David Medine) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11月16日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:30～14:00</span> - 
+				<strong>LSLトラブルシューティングI</strong> (デヴィッド・メディン) 
 			</span>
 		</li>
 	</ul>
@@ -355,9 +355,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span> - 
-				<strong>LSL wrap up</strong> (Tim Mullen) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:30～14:00</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
+				<strong>LSLラップアップ</strong> (キム・ムレン) 
 			</span>
 		</li>
 	</ul>
@@ -372,15 +372,15 @@ Some presentations might be pre-recorded, but presenters will be present for que
 		<svg viewBox="0 0 16 16" aria-hidden="true">
 			<use xlink:href="#svg-link"></use>
 		</svg>
-	</a> WEDNESDAY, December 1st (paid registration required) 
+	</a> 12月1日(金)WEDNESDAY 
 </h2>
 <ul>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:45pm</span> – 
-				<strong>ICA decomposition PRACTICUM</strong> (Julie Onton) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00午後</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:45午後</span> – 
+				<strong>ICA分解PRACTICUM</strong> (ジュリー・オントン) 
 			</span>
 		</p>
 	</li>
@@ -388,43 +388,43 @@ Some presentations might be pre-recorded, but presenters will be present for que
 		<p>
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">07:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00pm</span> – 
-				<strong>Forward &amp; inverse head modeling</strong> (Zeynep Akalin Acar) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00～20:00</span> – 
+				<strong>フォワード&amp;逆ヘッドモデリング</strong> (Zeynep アカリ) 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm</span> – 
-				<strong>EEG connectivity analysis</strong> (Tim Mullen) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00～20:00</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span> – 
+				<strong>EEG接続解析</strong> (キム・ムレン) 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span> – Social time. 
-				<strong>Tutors available</strong> for Q&amp;A. 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span> – 社会的な時間. 
+				<strong>利用可能なチューター</strong> Q&amp;Aの 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span> - 
-				<strong>Advanced Topics</strong>
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
+				<strong>高度なトピック</strong>
 			</span>
 		</p>
 	</li>
 </ul>
 <blockquote>
 	<p>
-		<span style="color: gray">Parallel session 1 
-			<strong>NFT/NIST high-res. source imaging plug-ins</strong>
+		<span style="color: gray">パラレルセッション 1 
+			<strong>NFT/NIST ハイレス ソースイメージングプラグイン</strong>
 		</span>
 	</p>
 </blockquote>
@@ -432,9 +432,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span> - 
-				<strong>High-resolution source imaging</strong> (Zeynep Akalin Acar) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span> - 
+				<strong>高解像度のソースイメージング</strong> (Zeynep アカリ) 
 			</span>
 		</li>
 	</ul>
@@ -443,17 +443,17 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span>- 
-				<strong>NFT/NIST demo and PRACTICUM</strong> (Zeynep Akalin Acar) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span>- 
+				<strong>NFT/NISTデモとPRACTICUM</strong> (Zeynep アカリ) 
 			</span>
 		</li>
 	</ul>
 </blockquote>
 <blockquote>
 	<p>
-		<span style="color: gray">Parallel session 2 - 
-			<strong>Connectivity analysis</strong>
+		<span style="color: gray">パラレルセッション 2 - 
+			<strong>接続性分析</strong>
 		</span>
 	</p>
 </blockquote>
@@ -461,9 +461,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span> - 
-				<strong>The DIPFIT and ROIconnect plug-ins</strong> (Arnaud Delorme) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span> - 
+				<strong>DIPFITとROIconnectプラグイン</strong> (アルナード・デローム) 
 			</span>
 		</li>
 	</ul>
@@ -472,9 +472,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:45pm</span> - 
-				<strong>Connectivity analysis using SIFT</strong> (Tim Mullen) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時45分</span> - 
+				<strong>SIFTを用いた接続解析</strong> (キム・ムレン) 
 			</span>
 		</li>
 	</ul>
@@ -483,9 +483,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:45pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span>- 
-				<strong>SIFT PRACTICUM</strong> (Tim Mullen) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時45分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span>- 
+				<strong>シフト練習</strong> (キム・ムレン) 
 			</span>
 		</li>
 	</ul>
@@ -500,15 +500,15 @@ Some presentations might be pre-recorded, but presenters will be present for que
 		<svg viewBox="0 0 16 16" aria-hidden="true">
 			<use xlink:href="#svg-link"></use>
 		</svg>
-	</a> THURSDAY, December 2nd (paid registration required) 
+	</a> 12月2日(金) THURSDAY(有料) 
 </h2>
 <ul>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:45pm</span> – 
-				<strong>ICA clustering PRACTICUM</strong> (Julie Onton) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00午後</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:45午後</span> – 
+				<strong>ICAクラスタリング練習</strong> (ジュリー・オントン) 
 			</span>
 		</p>
 	</li>
@@ -516,43 +516,43 @@ Some presentations might be pre-recorded, but presenters will be present for que
 		<p>
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">07:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00pm</span> – 
-				<strong>EEGLAB group analysis</strong> (Arnaud Delorme) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00～20:00</span> – 
+				<strong>EEGLABグループ分析</strong> (アルナード・デローム) 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm</span> – 
-				<strong>Multiple comparisons corrections and the use of bootstrap</strong> (Cyril Pernet) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00～20:00</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span> – 
+				<strong>複数の比較修正とブートストラップの使用</strong> (Cyrilパーネット) 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span> – Social time. 
-				<strong>Tutors available</strong> for Q&amp;A. 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span> – 社会的な時間. 
+				<strong>利用可能なチューター</strong> Q&amp;Aの 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span> - 
-				<strong>Advanced Topics</strong>
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
+				<strong>高度なトピック</strong>
 			</span>
 		</p>
 	</li>
 </ul>
 <blockquote>
 	<p>
-		<span style="color: gray">Parallel session 1 - 
-			<strong>Linear statistical modeling of EEG data</strong>
+		<span style="color: gray">パラレルセッション 1 - 
+			<strong>EEGデータのリニア統計モデリング</strong>
 		</span>
 	</p>
 </blockquote>
@@ -560,9 +560,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span> - 
-				<strong>Introduction to linear modeling</strong> (Arnaud Delorme) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span> - 
+				<strong>リニアモデリング入門</strong> (アルナード・デローム) 
 			</span>
 		</li>
 	</ul>
@@ -571,9 +571,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:30pm</span> - 
-				<strong>Statistics using linear modeling</strong> (Cyril Pernet) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span> - 
+				<strong>リニアモデリングを用いた統計</strong> (Cyrilパーネット) 
 			</span>
 		</li>
 	</ul>
@@ -582,17 +582,17 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span> - 
-				<strong>EEGLAB LIMO plug-in PRACTICUM</strong> (Cyril Pernet &amp; Arnaud Delorme) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
+				<strong>EEGLAB LIMOプラグインPRACTICUM</strong> (Cyril Pernet &amp; Arnaud Delorme), キプロス 
 			</span>
 		</li>
 	</ul>
 </blockquote>
 <blockquote>
 	<p>
-		<span style="color: gray">Parallel session 2 - 
-			<strong>Advanced ICA analysis</strong>
+		<span style="color: gray">パラレルセッション 2 - 
+			<strong>高度なICA分析</strong>
 		</span>
 	</p>
 </blockquote>
@@ -600,9 +600,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:15pm</span> - 
-				<strong>AMICA and AMICA Tools</strong> (Scott Makeig &amp; Jason Palmer) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時15分</span> - 
+				<strong>AMICAとAMICAツール</strong> (Scott Makeig &amp; Jason Palmer) (Scott Makeig &amp; Jason Palmer) (Scott Makeig &amp; Jason Palmer) (Scott Makeig &amp; Jason Palmer) (Scott Makeig &amp; Jason Palmer)) (Scott Makeig &amp; Jason Palmer)) (Scott Makeig &amp; Jason Palmer) (Scott Makeig &amp; Jason Palmer)) (Scott Makeig &amp; Jason Palmer) (Ja)))) (Scott Makeig &amp; Jason Palmer) (Ja (Ja (Ja)))))))) (Ja (Ja (Ja (Ja (Ja (Ja (Ja (Ja (Ja (Ja (Scott)))))))))))))))) 
 			</span>
 		</li>
 	</ul>
@@ -611,9 +611,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:15pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:45pm</span> - 
-				<strong>IMAT: Independent Modulator Analysis plug-in</strong> (Wagner &amp; Onton) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時15分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時45分</span> - 
+				<strong>IMAT:独立した変調器分析プラグイン</strong> (ワグナー&オントン) 
 			</span>
 		</li>
 	</ul>
@@ -622,9 +622,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:45pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span> - 
-				<strong>ICA reliability analysis</strong> (Fiorenzo Artoni) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時45分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
+				<strong>ICAの信頼性の分析</strong> (フィオレンツォ・アルトーニ) 
 			</span>
 		</li>
 	</ul>
@@ -639,15 +639,15 @@ Some presentations might be pre-recorded, but presenters will be present for que
 		<svg viewBox="0 0 16 16" aria-hidden="true">
 			<use xlink:href="#svg-link"></use>
 		</svg>
-	</a> FRIDAY, December 3rd (paid registration required) 
+	</a> FRIDAY、12月3日(金) 
 </h2>
 <ul>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:45pm</span> – Network. 
-				<strong>Tutors available</strong> for Q&amp;A. 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00午後</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:45午後</span> – ネットワーク 
+				<strong>利用可能なチューター</strong> Q&amp;Aの 
 			</span>
 		</p>
 	</li>
@@ -655,42 +655,42 @@ Some presentations might be pre-recorded, but presenters will be present for que
 		<p>
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">07:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:30pm</span> – 
-				<strong>Mining event-related brain dynamics II</strong> (Scott Makeig) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後8時30分</span> – 
+				<strong>マイニングイベント関連の脳の動的 第2回</strong> (スコットメイク) 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:30pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm</span> – 
-				<strong>Deep learning for EEG - the HBN benchmark dataset</strong> (Delorme) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後8時30分</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span> – 
+				<strong>EEGのディープラーニング - HBNベンチマークデータセット</strong> (デローレム) 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span> – Social time. 
-				<strong>Tutors available</strong> for Q&amp;A. 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span> – 社会的な時間. 
+				<strong>利用可能なチューター</strong> Q&amp;Aの 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span> - Advanced Topics 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 高度なトピック 
 			</span>
 		</p>
 	</li>
 </ul>
 <blockquote>
 	<p>
-		<span style="color: gray">Parallel session 1 - 
-			<strong>Group analysis, pipelines, and scripting in EEGLAB</strong>
+		<span style="color: gray">パラレルセッション 1 - 
+			<strong>EEGLABのグループ分析、パイプライン、スクリプト</strong>
 		</span>
 	</p>
 </blockquote>
@@ -698,9 +698,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span> - 
-				<strong>Creating an EEGLAB STUDY</strong> (Arnaud Delorme) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span> - 
+				<strong>EEGLABスタディの作成</strong> (アルナード・デローム) 
 			</span>
 		</li>
 	</ul>
@@ -709,9 +709,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:45pm</span>- 
-				<strong>Working with EEGLAB studies, PRACTICUM</strong> (Arnaud Delorme) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時45分</span>- 
+				<strong>EEGLABの研究、実践</strong> (アルナード・デローム) 
 			</span>
 		</li>
 	</ul>
@@ -720,9 +720,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:45pm</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時45分</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:15pm</span>- 
-				<strong>Scripting with EEGLAB studies, PRACTICUM</strong> (Arnaud Delorme) 
+				<strong>EEGLABの研究、実践とスクリプト</strong> (アルナード・デローム) 
 			</span>
 		</li>
 	</ul>
@@ -732,16 +732,16 @@ Some presentations might be pre-recorded, but presenters will be present for que
 		<li>
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:15pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span> - 
-				<strong>EEGLAB and high-performance computing</strong> (Arnaud Delorme) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
+				<strong>EEGLABと高性能コンピューティング</strong> (アルナード・デローム) 
 			</span>
 		</li>
 	</ul>
 </blockquote>
 <blockquote>
 	<p>
-		<span style="color: gray">Parallel session 2 
-			<strong>Automated artifact rejection and component classification</strong>
+		<span style="color: gray">パラレルセッション2 
+			<strong>自動化されたアーティファクト拒絶とコンポーネント分類</strong>
 		</span>
 	</p>
 </blockquote>
@@ -749,9 +749,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:30pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span> - 
-				<strong>Artifact Subspace reconstruction</strong> (Christian Kothe) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span> - 
+				<strong>アーティファクト・サブスペースの復興</strong> (クリスティアン・コーテ) 
 			</span>
 		</li>
 	</ul>
@@ -760,9 +760,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:00pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:20pm</span> - 
-				<strong>ASR performance analysis I</strong> (Fiorenzo Artoni) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時20分</span> - 
+				<strong>ASR性能解析 I</strong> (フィオレンツォ・アルトーニ) 
 			</span>
 		</li>
 	</ul>
@@ -771,9 +771,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:20pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:40pm</span> - 
-				<strong>ASR performance analysis II</strong> (Chiyuan Chang) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時20分</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10時40分～</span> - 
+				<strong>ASR性能解析II</strong> (千元長) 
 			</span>
 		</li>
 	</ul>
@@ -782,9 +782,9 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<ul>
 		<li>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10:40pm</span>- 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:45pm</span> - 
-				<strong>ICLabel for classifying independent components</strong> (Luca Pion Tonachini) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10時40分～</span>- 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
+				<strong>独立したコンポーネントを分類するためのICLabel</strong> (ルカピオントンチニ) 
 			</span>
 		</li>
 	</ul>
@@ -793,22 +793,22 @@ Some presentations might be pre-recorded, but presenters will be present for que
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">12:00pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">12:45pm</span>– 
-				<strong>Participant presentations and general discussion</strong> (All) 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後12時</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後12時45分</span>– 
+				<strong>参加者のプレゼンテーションと一般的な議論</strong> (すべて) 
 			</span>
 		</p>
 	</li>
 	<li>
 		<p>
 			<span style="color: black">
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">12:45pm</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">01:00am</span>– Close 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後12時45分</span>– 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">01時00分</span>– 閉じる 
 			</span>
 		</p>
 	</li>
 </ul>
- <b>Sponsored by:</b>
+ <b>主催:</b>
 
 [<img src="/assets/images/mbt_logo.png" width="192" height="108" />](https://mbraintrain.com/)
 	

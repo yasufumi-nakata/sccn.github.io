@@ -7,70 +7,70 @@ render_with_liquid: false
 title: Using-the-Open-EEGLAB-Portal
 long_title: Using-the-Open-EEGLAB-Portal
 ---
-There will be two approaches to using the Open EEGLAB Portal: either, through its NSG web interface (http://www.NSGportal.org), or by making use of the NSG command line RESTful interface (NSG-R). This section describes the use of the web interface.
+Open EEGLAB Portal を使用するには、NSG Web インターフェイスを介して 2 つのアプローチがあります。http://www.NSGportal.org)、またはNSGコマンドラインRESTfulインターフェイス(NSG-R)の使用によって。 このセクションでは、Webインターフェイスの使用について説明します。
 
-Start by login into the NSG portal. Once logged in, you may upload a **zipped file** containing 1) an EEGLAB script calling 2) one or more data files by name (they should be in or under the same folder as the script). Then click on the "Data" tab and select "Upload data", then upload a file containing your script and data.
+NSGポータルにログインします。 ログインすると、EEGLABスクリプトが呼び出される1*を含む**zipファイル**を、名前で1つまたは複数のデータファイルをアップロードできます(スクリプトと同じフォルダにある必要があります)。 次に、「データ」タブをクリックし、「データをアップロード」を選択し、スクリプトとデータを含むファイルをアップロードします。
 
 <center>
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/500px-NSG3.png?raw=true" alt="drawing" width="500"/>
 </center>
 
-You may download a 3.5-MB sample zip file (containing EEG data and a sample script [HERE](https://sccn.ucsd.edu/mediawiki/images/7/7c/Testingeeglabonnsg.zip). Below is its list of contents:
+3.5-MBのサンプルzipファイル(EEGデータとサンプルスクリプトを含む)をダウンロードできます。 [お問い合わせ](https://sccn.ucsd.edu/mediawiki/images/7/7c/Testingeeglabonnsg.zip)お問い合わせ 以下は、コンテンツのリストです。
 
 <center>
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/200px-NSG32.png?raw=true" alt="drawing" width="200"/>
 </center>
 
-The EEGLAB script (test.m) in this upload file is shown below ( try minor alterations for testing purposes)
+このアップロードファイルの EEGLAB スクリプト (test.m) は以下のとおりです(テスト目的でマイナーな変更を試してください)
 
 <center>
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/500px-NSG33.png?raw=true" alt="drawing" width="500"/>
 </center>
 
-Now create a new NSG task. To do this, click on the "Task" tab and select, "Create new task." Click on, "Select input data" and select the zip file you have uploaded above. Click on "Select tool" and select "EEGLAB".
+新しいNSGタスクを作成します。 これを行うには、「タスク」タブをクリックし、「新しいタスクを作成」を選択します。 入力データを選択し、アップロードしたzipファイルを選択します。 「ツールを選択」をクリックし、「EEGLAB」を選択します。
 
 <center>
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/500px-NSG4.png?raw=true" alt="drawing" width="500"/>
 </center>
 
-Then click on "Select parameters". Enter the name of your script. This script must be at the root (top) folder of your zip archive. You may also (optionally) change other NSG settings on this page.
+次に「パラメータの選択」をクリックします。 スクリプトの名前を入力します。 このスクリプトは、zipアーカイブのルート(トップ)フォルダにある必要があります。 また、このページの他のNSG設定を変更することもできます。
 
 <center>
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/500px-NSG5.png?raw=true" alt="drawing" width="500"/>
 </center>
 
-Finally, press "Save parameters". This will bring you back to the previous screen. You may now press, "Save and Run Task" which will enter the task into the Comet queue. A warning is shown as in the image below. Simply click OK.
+最後に「保存パラメータ」を押します。 前画面に戻ります。 タスクをコメットキューに入れる「タスクを保存し、実行する」を押してください。 下の画像のように警告が表示されます。 クリックするだけでOK。
 
 <center>
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/300px-NSG6_add.png?raw=true" alt="drawing" width="350"/>
 </center>
 
-Once the task has been run, you will receive an email from NSG (see email for the test job below).
+タスクが実行されると、NSG からのメールが届きます(下記のテストジョブのメールを参照してください)。
 
 
 <center>
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/500px-NSG6_3.png?raw=true" alt="drawing" width="500"/>
 </center>
 
-Upon receiving this message, go back to the NSG interface and select the task you ran from the list of tasks, as shown below.
+このメッセージを受信すると、NSG インターフェイスに戻り、下図のようにタスクのリストから実行したタスクを選択します。
 
 <center>
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/500px-NSG6.png?raw=true" alt="drawing" width="500"/>
 </center>
 
-Select "View" following the heading "Output" (see above): this will bring the output below.
+見出し "Output" の後に "View" を選択します。以下に出力が表示されます。
 
 <center>
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/500px-NSG7.png?raw=true" alt="drawing" width="500"/>
 </center>
 
-You may now download the task output, a zip file containing the results of your task. Output files (see listing below) include the Matlab log and error log for your task. If your script saved data files, they will be there. For example, if you use the zip file and script provided above, below (left) is what the unzipped output archive will contain. The figure below (right) is the .jpg image created by the test.m script. Saving output images in Matlab .fig format (instead of .jpg) will allow you to read them into Matlab (for further editing, etc.). Note: The numeric data plotted in a figure can be read from the .fig file structure as well. Alternatively, saving figures in Postscript (e.g., as .epsc) will allow you to edit them in Illustrator.
+タスクの出力、タスクの結果を含むzipファイルをダウンロードできるようになりました。 出力ファイル(以下のリストを参照)には、タスクのMaatlabログとエラーログが含まれます。 スクリプトがデータファイルを保存すると、そこに表示されます。 たとえば、上記のzipファイルとスクリプトを使用する場合、以下(左)は、未入力の出力アーカイブが含まれているものです。 以下の図(右)は、test.mスクリプトで作成した.jpgイメージです。 Matlab .fig 形式の出力画像を保存(.jpg ではなく)、Maatlab に読み込むことができます。 注意: 図内の数値データを .fig ファイル構造から読み込むこともできます。 また、ポストスクリプト(.epsc など)で図を保存することで、それらをIllustratorで編集することができます。
 
-Note: To save needless transfer time and effort, the uploaded data file itself will not be returned with the output unless your script explicitly saves it under a new name. In future this will also allow you to temporarily store and reuse the uploaded data.
+Note: 不要な転送時間と労力を節約するために、アップロードされたデータファイル自体は、新しい名前で明示的に保存しない限り、出力で返されません。 将来的には、アップロードされたデータを一時的に保存して再利用することもできます。
 
 <center>
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/500px-NSG8.png?raw=true" alt="drawing" width="500"/>
 </center>
 
-### Interact with NSG through command line interface NSG-R and the creation of NSG EEGLAB Plugin
-As mentioned at the beginning of this page, users can also interact with NSG (and make use of Open EEGLAB Portal) through command line RESTFUL interface NSG-R (R for REST interface). You can use the same credentials when registered for NSG for NSG-R. NSG-R allows users to move away from the browser window and perform computational work more programmatically. However, interacting with NSG-R directly requires some knowledge of web services and appropriate networking tools and libraries (e.g. curl command) which most people are unfamiliar with. Thus we developed an EEGLAB plugin to simplify the process, allowing EEGLAB users to interact with NSG in the familiar MATLAB environment, either through graphical or command line interface. In the next sections of the wiki, we will describe the EEGLAB plugin to NSG and provide hands-on tutorials. For those who are curious about NSG-R, you can read more at this [link](https://www.nsgportal.org/guide.html).
+### コマンドラインインターフェイスNSG-RとNSG EEGLABプラグインの生成によるNSGとの相互作用
+このページの冒頭で述べたように、コマンド・ラインRESTFULインターフェイスNSG-R(RESTインターフェイス用R)を介して、NSG(オープンEEGLABポータル)とユーザーと相互作用することもできます。 NSG-R. NSG-R の NSG に登録すると、同一の認証情報を利用することができます。これにより、ユーザーはブラウザウィンドウから離れ、計算された作業をプログラム的に実行できます。 しかし、NSG-Rと直接やりとりするには、ほとんどの人があまり慣れていないWebサービスと適切なネットワークツールやライブラリ(例えばcurlコマンド)の知識が必要です。 そのため、EEGLAB プラグインはプロセスを簡素化し、EEGLAB ユーザーが MATLAB 環境で NSG とやり取りできるようにしました。 wikiの次のセクションでは、EEGLABプラグインをNSGに記述し、実践的なチュートリアルを提供します。 NSG-Rの好奇心旺盛な方には、こちらでもっと読むことができます。 [サイトマップ](https://www.nsgportal.org/guide.html).

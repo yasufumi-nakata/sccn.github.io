@@ -5,192 +5,192 @@ long_title: Filtering frequently asked questions
 parent: Support
 nav_order: 2
 ---
-EEGLAB Filtering FAQ
+EEGLABフィルターFAQ
 ===
-{: .no_toc }
+お問い合わせ
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    コンテンツの表
   </summary>
-  {: .text-delta }
-- TOC
-{:toc}
+  お問い合わせ
+- トピックス
+お問い合わせ
 </details>
 
-### Q. What are passband, stopband, transition bandwidth, cutoff frequency, passband ripple/ringing, and stopband ripple/attenuation?
+### お問い合わせ パスバンド、ストップバンド、移行帯域幅、カットオフ周波数、パスバンドripple /リング、およびストップバンドripple /減衰とは何ですか?
 
-A. You can find explanations in this
-[PDF presentation](https://github.com/downloads/widmann/Firfilt/Firfilt.pdf)
-created by Andreas Widmann.
+お問い合わせ 説明はこちら
+[PDFプレゼンテーション](https://github.com/downloads/widmann/Firfilt/Firfilt.pdf)
+Andreas Widmannによって作成される。
 
-### Q. What is the difference between the “Basic FIR filter (legacy)” and the “Basic FIR filter (new)”? Which should I use?
+### お問い合わせ 「基本FIRフィルタ(レガシー)」と「基本FIRフィルタ(新規)」の違いは何ですか? 使用するべきものは?
 
-A. The heuristic for automatically determining the filter length in the
-legacy basic FIR filter (pop_eegfilt) was inappropriate (possibly
-causing suboptimal filtering or unexpected filter effects). The new
-basic FIR filter (pop_eegfiltnew) has a new heuristic for automatically
-determining the filter length and is based on the Firfilt plugin. The
-legacy function should only be used for backward compatibility purposes.
+お問い合わせ フィルタの長さを自動的に決定するためのヒューリスティック
+従来の基本FIRフィルタ(pop_eegfilt)は不適切でした(おそらく)
+潜水ろ過または予期しないフィルター効果を引き起こします。 新着記事
+基本的な FIR フィルター(pop_eegfiltnew)に自動的にのための新しいヒューリスティックがあります
+フィルターの長さを決定し、Firfilt プラグインに基づいています。 ふりがな
+レガシー機能は、後方互換性の目的のためにのみ使用する必要があります。
 
-### Q. What is the difference between the “Basic FIR filter (new)” and the “Windowed sinc FIR filter”?
+### お問い合わせ 「基本FIRフィルタ(new)」と「Windowed sinc FIRフィルタ」の違いは何ですか?
 
-A. Both are based on windowed sinc filters. The basic filter applies a
-hardcoded hamming window, has an automatic default for filter length,
-and is defined by the passband edges. The windowed sinc FIR filter
-allows manual selection of window type, estimation of filter length by
-transition bandwidth (no default), and is defined by cutoff frequencies
-(-6dB, half amplitude).
+お問い合わせ 両方ともウィンドウズされたsincフィルターに基づいています。 基本フィルタは、
+ハードコードされたハムミング窓は、フィルター長さの自動デフォルトを持っています、
+パスバンドのエッジによって定義されます。 ウィンドウズされたsinc FIRフィルター
+ウィンドウタイプ、フィルタ長さの推定を手動で選択できます
+移行帯域幅(デフォルトなし)、およびカットオフ周波数で定義される
+(-6dB、ハーフ振幅)。
 
-### Q. Why does Firfilt-plugin run faster than the legacy EEGLAB filter?
+### お問い合わせ Firfilt-plugin が従来の EEGLAB フィルターよりも速く動くのはなぜですか?
 
-A. The Firfilt plugin does not use filtfilt to achieve zero-phase but
-shifts the signal by the filter’s group delay (NB: requiring ODD filter
-length/even filter order). So, the data are only filtered once with
-multi-threading (filtfilt does not seem to be multi-threading capable).
+お問い合わせ Firfilt のプラグインはゼロフェーズを達成するのに ltfilt を使用しませんが
+フィルターのグループ遅延(NB: ODD フィルターを要求する)によって信号を移して下さい
+長さ/even フィルター順序)。 そのため、データを一度だけフィルタリングします。
+マルチスレッド(filtfiltはマルチスレッド可能ではない)。
 
-### Q. What is the recommended passband ripple/stopband attenuation/window type?
+### お問い合わせ 推奨パスバンド ripple/stopbandの減衰/windowタイプは何ですか?
 
-A. Ripple, i.e. deviation from the requested frequency response (0 in
-stopband, 1 in passband) is equal in passband and stopband in windowed
-sinc FIR filters. Ripple/attenuation is defined by the window type.
-0.002 to 0.001 (that is, 0.2 to 0.1%; Hamming or Kaiser window) are
-reasonable starting values. This equals a stopband attenuation of -53 to
--60 dB which is ok.
+お問い合わせ Ripple、すなわち要求された周波数応答からの偏差(0 in)
+停止バンド、パスバンドの1つ)は、パスバンドおよびウィンドウで停止バンドで等しいです
+sinc FIR フィルター。 Ripple/attenuation はウィンドウタイプによって定義されます。
+0.002〜0.001(0.2〜0.1%、ハムミングまたはカイザーウィンドウ)
+合理的な開始値。 これは -53の停止バンド減衰を等しい
+-60 dB です。
 
-### Q. Should we prefer separate high- and low-pass filters over bandpass filters? (09/30/2020 updated)
+### お問い合わせ バンドパスフィルタを上回るハイパスフィルタとローパスフィルタの分離を好む必要がありますか? (2020年9月30日更新)
 
-A. With separate high- and low-pass filters, transition bandwidth can
-be defined independently. High-pass filters often require narrower
-transition bands than low-pass filters. Separate filtering is preferable
-in these cases.
+お問い合わせ 別々のハイパスフィルタとローパスフィルタで、移行帯域幅は、
+独立して定義される。 ハイパスフィルタは、多くの場合、狭くする必要があります
+低パスフィルタよりもトランジションバンド。 別のろ過は好ましいです
+これらの場合。
 
-### Q. What is the difference between filter length and filter order?
+### お問い合わせ フィルターの長さとフィルタオーダーの違いは何ですか?
 
-A. Filter order is defined as filter length minus 1.
+お問い合わせ フィルターの順序はフィルター長さのマイナス1として定義されます。
 
-### Q. What is the transition band?
+### お問い合わせ トランジションバンドとは?
 
-A. The transition band is the frequency band/range between the passband
-edge and the stopband edge. In windowed sinc FIR filters the -6dB cutoff
-is in the center of the transition band.
+お問い合わせ 移行バンドは、パスバンド間の周波数帯域/範囲です。
+エッジとストップバンドエッジ。 ウィンドウズされたsinc FIRは-6dBの締切りをろ過します
+トランジションバンドの中央にある。
 
-### Q. What is the slope of windowed sinc FIR filters in dB/oct (as in IIR filters)?
+### お問い合わせ dB/oct (IIR フィルターのように) の windowed sinc FIR フィルターの斜面は何ですか。
 
-A. Slope CANNOT be defined in dB/oct for windowed sinc FIR filters.
-Rather use transition bandwidth. There is no straightforward conversion
-of slope in dB/oct to transition bandwidth due to conceptual
-differences between FIR and IIR filters. IIR filters do not have a
-defined stopband.
+A. Slope CANNOTは、ウィンドウズされたSinc FIRフィルタのdB/octで定義されます。
+移行帯域幅を使用する。 簡単な変換はありません
+dB/octの斜面の概念による転移の帯域幅への
+FIRとIIRフィルタの違い IIRフィルタは持っていません
+定義された停止バンド。
 
-### Q. What is the lower limit for cutoff frequency for high-pass filter?
+### お問い合わせ ハイパスフィルタのカットオフ周波数の低限は何ですか?
 
-A. There is no theoretical lower limit, however, the lower the cutoff
-the steeper is the roll-off and the higher is the filter order (length).
-Very low cutoff frequencies as low as 0.01 Hz as sometimes found in the
-literature require extremely long filters (FIR) or are prone to
-instability (IIR). The computation time for very long FIR filters becomes
-enormous. You can try the 'usefftfilt' option in "Basic FIR Filter (new,
-default)" (pop_eegfiltnew) or "Windowed sinc FIR Filter" (pop_firws) to speed
-up filtering for FIR filter orders higher than 2000 to 3000. Note that
-lowering the sampling rate also reduces the required filter orders. If you
-are experiencing stability problems with IIR filters with lower cutoff
-frequencies, also consider reducing the sampling frequency of the signal.
+お問い合わせ 理論的な限界はありませんが、カットオフを下げる
+スタイパーはロールオフであり、より高いフィルタオーダー(長さ)です。
+非常に低いカットオフ周波数 0.01 以下 Hzは時々見つけられるように
+文学は、非常に長いフィルター(FIR)を必要とするか、または
+安定性(IIR)。 非常に長い FIR フィルターのための計算の時間はなります
+非常に。 'usefftfilt' のオプションを "Basic FIR フィルター (new) で試すことができます。
+デフォルト)" (pop_eegfiltnew) または "Windowed sinc FIR filter" (pop_firws) を高速化
+FIR フィルターの注文のためのろ過を2000から3000まで高めて下さい。 注意:
+サンプリングレートを下げると、必要なフィルタオーダーも軽減します。 お問い合わせ
+より低い締切りのIIRフィルターとの安定性問題を経験しています
+また、周波数は、信号のサンプリング周波数を減らすことを考慮する。
 
-### Q. What is the recommended transition bandwidth (for a windowed sinc FIR high-pass filter)?
+### お問い合わせ 推奨トランジション帯域幅(winded sinc FIR High-pass filter)とは?
 
-A. Generally, the slope in the frequency domain should be as low/flat as
-possible, that is the transition band as wide as possible. Steeper
-slopes reduce the precision in the time domain; distortions and
-artifacts are additionally spread wider due to the longer filter length.
-A good staring value for a high-pass filter: twice the cutoff frequency
-(-6 dB) for cutoff \<= 1 Hz, 2 Hz for cutoff frequency \< 1 and \<= 8 Hz
-and 25% of cutoff frequency for cutoff \> 8 Hz. This is also the
-heuristic implemented in the new basic FIR filter (generalized for all
-critical frequencies). However, please note, that it is recommended to
-(manually) adjust this heuristic to the application of interest. Do not
-go beyond twice of the cutoff frequency (i.e., transition band goes
-below DC/0 Hz). TIP: Strong attenuation (\<\< -60dB) can be important
-for DC/0 Hz (e,g,, to get rid of the DC offset for Biosemi files or to
-avoid baseline correction). By using twice of the cutoff frequency for
-transition bandwidth, a type 1 windowed sinc filter can be tuned for
-excellent DC attenuation.
+お問い合わせ 一般的に、周波数ドメインの斜面は、できるだけ低く/平らでなければなりません
+できる限りトランジションバンドです。 スティーパー
+斜面は時間のドメインの精密を減らします;歪みおよび
+より長いフィルター長さのためにアーティファクトはより広い広がります。
+ハイパスフィルタの優れたスターリング値:カットオフ周波数の2倍
+(-6 dB) 切断用 \<= 1 Hz, 締切りの頻度のための2つのHz \< 1および\<= 8つのHz
+カットオフ周波数の25% \> 8つのHz。 これはまたです
+新しい基本FIRフィルタで実装されたヒューリスティック(すべてのために一般化)
+重要な頻度。 ただし、お気を付けください。
+(マニュアル的に)このヒューリスティックを興味のアプリケーションに調整します。 しない
+カットオフ周波数の2回を超えて行きます(すなわち、トランジションバンドは行きます
+DC/0 Hz以下 TIP:強い減少(\< -60dB)は重要である場合もあります
+DC/0用 Hz (例えば、BiosemiファイルのためのDCのオフセットを取り除くためにまたは
+ベースラインの訂正を避けて下さい)。 カットオフ周波数の2回使用することで
+トランジションの帯域幅、タイプ1のウィンドウズされたsincフィルターはのための調整することができます
+優秀なDCの減少。
 
-### Q. What stopband attenuation is good?
+### お問い合わせ ストップバンドの減衰は良いですか?
 
-A. The community default of Hamming window/-53dB is a good starting
-value. With Kaiser windows stopband attenuation can be precisely
-adjusted.
+お問い合わせ ハムミングウィンドウ/-53dBのコミュニティデフォルトは良い始まりです
+値。 カイザーの窓の停止バンドの減少は正確にできます
+調節される。
 
-### Q. How can I find optimal values for cutoff frequencies, attenuation, and filter length for my particular application?
+### お問い合わせ 特定のアプリケーションにカットオフ周波数、減衰、フィルタ長さの最適な値を見つける方法は?
 
-A. By testing and systematically comparing the effects of different
-filters on the signal in the time domain.
+お問い合わせ 異なる効果をテストし、体系的に比較することにより
+時間ドメイン内の信号のフィルタ。
 
-### Q. Where can I read more about windowed sinc FIR filters?
+### お問い合わせ ウィンドウズされたsinc FIRフィルタについてもっと読むことができますか?
 
-A. Check out [Engineers guide to digital signal
-processing](http://www.dspguide.com/).
+お問い合わせ [エンジニアがデジタル信号を誘導する
+処理:()http://www.dspguide.com/).
 
-### Q. For Granger Causality analysis, what filter should be used? (11/21/2020 Updated)
+### Q.GRANGERの因果性分析のために、どのフィルターが使用されるべきですか。 (2020年11月21日更新)
 
-A. There are a few important things to confirm.
+お問い合わせ 確認する重要なことはいくつかあります。
 
--   Barnett and Seth (2011) showed that multivariate Granger causality
-    is in theory invariant under zero-phase (a.k.a. phase-invariant)
-    filter. They do recommend filtering to achieve stationarity (e.g.,
-    drift, line noise) See Seth, Barrett, Bernett (2015).
--   However, in practice, filtering causes problems in calculating
-    multivariate Granger causality. The main problem is the increase in
-    model order. This is because filtering makes the power spectrum
-    density of the signal complicated (low power in the stopband, steep
-    roll-off, etc). See the following example: 33ch EEG, downsampled to
-    100 Hz, without (top) and with (bottom) applying 44.5Hz low-pass
-    filter (FIR, Blackman, TBW 1 Hz). Notice that the estimated model
-    orders is worsened from 10 (without LPF) to 14 (with LPF)--but
-    apparently taking 16 (with LPF) is the right decision here from AIC,
-    FPE and HQ results.
+-   バルネットとセス(2011)は、多品種の造粒機因性を示した
+    理論はゼロフェーズ(a.k.a.phase-invariant)の下のinvariantです
+    フィルター。 固定性(例えば、
+    ドリフト、ラインノイズ) Seth、Barrett、Bernett (2015)を参照してください。
+-   しかし、実際には、フィルタリングは計算の問題を引き起こします
+    多variateの造粒機因性。 主な問題は増加です
+    モデル順序。 これはろ過が力スペクトルを作るのでです
+    信号の複雑な密度(停止バンドの低い電力、急な
+    ロールオフ等。 次の例を参照してください: 33ch EEG, downsampled to
+    100円 Hz、なし(上)および(下)適用44.5 Hzの低パス
+    フィルター(FIR、黒人、TBW 1 Hz)。 推定モデルについて
+    注文は10(LPFなしで)から14(LPFと)に不良です---しかし
+    明らかに16(LPF)を取ることは、AICからここに正しい決定です、
+    FPEおよびHQの結果。
 
 ![](/assets/images/ModelOrderComparison.png)
 
-Here is another comparison: with and without notch filter at 30Hz
-(cutoff freq 28 and 32Hz, TBW 0.5Hz). Note the suggested order became
-10-12 to 11-15 with the notch filter on.
+ここに別の比較があります。30Hzでノッチフィルタなしで
+(カットオフ周波数28および32Hz、TBW 0.5Hz)。 提案された注文は、
+10-12から11-15ノッチフィルタで。
 
 ![](/assets/images/NotchFilterDemo.png)
 
--   The second problem, which comes from the same reason mentioned
-    above, is that empirical estimates of VAR parameters yields unstable
-    models due to poor parameter estimate for increased model order.
--   The third problem is that filtering causes numerical instabilities
-    in estimating causality.
+-   上記の同じ理由から来る第二の問題、
+    上記は、VARパラメータの帝国的な推定値が不安定に収まることです。
+    値引き値が悪いため、モデルの注文が増加しました。
+-   第3の問題は、フィルタリングが数値的な不安定性を引き起こすことです
+    原因を推定する。
 
-How can we address these problems?
+これらの問題に対処する方法は?
 
--   When applying a high-pass filter to achieve stationarity, let the
-    transition band end at DC (i.e. 0Hz). For example, when you use
-    EEGLAB's 'Basic FIR filter (new, default)‘ to apply high-pass filter
-    with 'passband edge' below 2-Hz, the transition band is
-    automatically adjusted so that it always ends at DC. (We use 1-Hz
-    high-pass for the ICA purpose; empirical test is required to see
-    whether 2-Hz high-pass is beneficial for GCA compared with 1-Hz). If
-    you want to set the high-pass filter passband edge above 2 Hz, we
-    recommend you use 'Windowed sinc FIR filter' to design the filter so
-    that it has the stopband at DC. (CAUTION: 'Windowed sinc FIR filter'
-    uses **cutoff frequency** and not **passband edge** i.e. cutoff
-    frequency of 1 Hz is equivalent to passband edge at 2 Hz
--   When treating the line noise, use CleanLine() instead of notch
-    filter because the former is phase-invariant.
--   When downsampling data (which is useful for multivariate Granger causality analysis), use mild anti-aliasing filter and do not let the stopband below the Nyquist frequency. In practice, use the following example. In this example, you are downsampling your data to 200Hz (i.e., Nyquist frequency is 100Hz), with the cutoff frequency being 80Hz (i.e. 100Hz\*0.8) and the transition bandwidth 40Hz (i.e. 100Hz\*0.4). 
+-   高パスフィルタを適用すると、固定性を実現
+    DC(0Hz)でのトランジションバンドエンド。 例えば、使うとき
+    EEGLABの「基本FIRフィルタ(新規、デフォルト)」でハイパスフィルタを適用
+    2Hzの下の「バンド端」と、転移バンドはあります
+    DCでは常に終了するように自動的に調整されます。 (私達は1-Hzを使用します)
+    ICAの目的のためのハイパス; 見るために帝国テストは要求されます
+    2Hzのハイパスが1Hzと比較してGCAに有益であるかどうか。 お問い合わせ
+    2 Hz の上のハイパス フィルター パスバンドの端を、私達セットアップしたいです
+    'Windowed sinc FIR フィルター' を使用してフィルターを設計することを推薦して下さい
+    DCでストップバンドを持っていること。 (注意: 'Windowed sinc FIR フィルター お問い合わせ
+    **締切りの頻度**および**passbandの端** i.e.の締切りを使用して下さい
+    頻度の頻度 1つのHzは2つのHzのパスバンドの端に等しいです
+-   ラインノイズを処理する際には、ノッチではなくCleanLine() を使用します。
+    前者はフェーズインヴァリアントであるため、フィルタ。
+-   ダウンサンプリングデータ(マルチバリエート・グランガー・キャサリティ分析に有用である)時、軽度のアンチエイリアシング・フィルタを使用し、Nyquist周波数の下のストップバンドを放さない。 練習では、次の例を使用します。 この例では、データを200Hz(つまり、Nyquist周波数は100Hz)にダウンサンプリングし、カットオフ周波数は80Hz(つまり100Hz\*0.8)であり、トランジション帯域幅40Hz(つまり100Hz\*0.4)である。 
     ```matlab
     EEG = pop_resample(EEG, 200, 0.8, 0.4);
     ```
 
-### Q. When should causal filters be used? (3/15/2021)
+### お問い合わせ フィルタはいつ使うべきか? (3/15/2021)
 
-Causal filters typically should only be used if the application explicitly requires this. For example, if causality matters as in the detection of onset latencies (even if the problem is overestimated as it mainly affects ultra-sharp transients typically not observed in EEG/ERP), the analysis of small fast components before large slow components (e.g. if higher high-pass cutoff frequencies are required), or in the analysis of pre-stimulus activity, that is, your case. The difference between a linear causal and linear non-causal filter is exclusively the time axis. The output of the non-causal filter equals the delay corrected output of the causal filter. It is sufficient to change the EEG.times time axis. That is, if your signal of interest is further away from stimulus onset than the group delay, you can simply use a linear non-causal filter.
+アプリケーションが明示的にこれを必要とする場合にのみ、通常、Causal フィルターを使用する必要があります。 たとえば、誤差がオンセットのレイテンシーの検出のように重要である場合(問題が主にEEG/ERPで観察されていない超シャープなトランジェントに影響を及ぼす場合)、大低速コンポーネント(例えば、ハイパスのカットオフ周波数が要求される場合など)前の小さな高速コンポーネントの解析、または事前刺激活性の分析では、あなたのケースです。 線形管および線形非管フィルター間の相違は時間軸だけです。 非causal フィルターの出力は管フィルターの遅れの訂正された出力を等しいです。 EEG.times 時間軸を変更するのに十分です。 つまり、興味の信号がグループ遅延よりも刺激から離れた場合は、線形非因果フィルターを使用するだけです。
 
-% Example:
+% 例:
 ```matlab 
     sig = [ 0 0 0 0 0 1 0 0 0 0 0 ]; % test signal (impulse)
     b = [ 1 1 1 1 1 ] / 5; % some crude boxcar filter for demonstration purposes only, linear-phase, length = 5, order = 4, group delay = 2
@@ -201,173 +201,173 @@ Causal filters typically should only be used if the application explicitly requi
     plot( -5:5, [ sig; fsig ]', 'o' ) % the filtered impulse in the output starts before the impulse in the input BUT everything before x = -2 is unaffected
 ```
 
-### Q. Should I use a linear causal FIR filter with delay correction or a non-linear causal filter (e.g. minimum-phase)?
+### お問い合わせ 遅延補正または非線形キャスカルフィルタ(例:最小相)でリニアキャスルFIRフィルタを使用する必要がありますか?
 
-You cannot delay correct a causal filter (linear or non-linear). This would make it automatically non-causal and break causality and there is no way around this. If the (group) delay is too large for your purpose, you must reduce the delay and thus use a non-linear filter (e.g. minimum phase). Non-linear filters delay different frequencies by a different amount (and due to this difference you cannot easily delay correct the output of non-linear filters even if non-causality would be acceptable). Therefore, you must not interpret the shape of the waveform in ERPs as it is distorted to some extent, and also not interpret cross-frequency relationships of amplitude or phase in ERSPs. But on the other hand, you can be certain that your pre-stimulus data are not contaminated by post-stimulus activity.
-Side note: I recommend not to use the legacy filter. It is broken. It would be relatively simple to use the new filter for causal linear filtering on the command line (just take the filter coefficients and use the regular MATLAB filter command; see above).
+管状フィルタ(リニアまたは非リニア)を修正することはできません。 これは、それが自動的に非因果と死を破壊し、この周りの方法がないようになります. (グループ) 遅延が目的に大きすぎる場合は、遅延を削減し、非線形フィルタ(例えば、最小フェーズ)を使用する必要があります。 非線形フィルタは、異なる量(およびこの違いのために、非異常が許容される場合でも、非線形フィルタの出力を簡単に遅らせることができません)によって異なる周波数を遅らせます。 そのため、ERPの波形の形状を解釈してはならないため、ERPの振幅や相の相互周波数関係を解釈しない。 しかし、一方で、あなたは、あなたの事前刺激データは、ポスト刺激活動によって汚染されていないことを確信することができます。
+サイドノート:レガシーフィルタを使用しないことをお勧めします。 壊れています。 コマンドラインでcausalリニアフィルタリング用の新しいフィルタを使用するのは比較的簡単です(単にフィルタ係数を取り、通常のMATLABフィルタコマンドを使用します。 上記を参照してください)。
 
-### Q. Because my analysis is exploratory on a large time window, I cannot know whether the signal of interest is further away from stimulus onset than the group delay. For a filter order of 1650 and a sampling rate of 500 Hz, how do I calculate the group delay to know how much of pre-stimulus period is contaminated by post-stimulus activity (linear non-causal) or shifted in time (linear causal)?
+### お問い合わせ 私の分析は、大規模な時間ウィンドウにexploratoryであるため、グループ遅延よりも、興味の信号がstimulusのオンセットから離れているかどうかはわかりません。 1650のフィルター注文と500Hzのサンプリング速度のために、グループ遅延を計算して、プリ刺激期間の量がポスト刺激活性(線形非因果)によって汚染されるか、時間(線形原因)でシフトされるかを知るにはどうすればよいですか?
 
-For filter order = 1650 -> N = 1651 samples (N taps = filter length = filter order + 1) -> group delay = (N - 1) / 2 samples and sampling rate fs = 500 samples / second -> group delay = (N - 1) / 2 / fs for seconds (same equation, just written differently). Thus, the delay of the order 1650 filter is 1.65 seconds.
+フィルターオーダー = 1650 → N = 1651 サンプル (N タップ = フィルターの長さ = フィルターオーダー + 1) → グループ遅延 = (N - 1) / 2 サンプルとサンプリング速度 fs = 500 サンプル/秒 → グループ遅延 = (N - 1) / 2 / 秒間 fs (同じ方程式の異なる). 従って、注文1650フィルターの遅れは1.75秒です。
 
 
-### Q. Does the _firfilt_ function automatically delay-correct if I choose to do the non-causal linear filter? 
+### お問い合わせ _firfilt_ 関数は、非因果線形フィルターを選択した場合、自動的に遅延誤りしますか? 
 
-Yes, firfilt automatically corrects for the group delay, that is, implements a zero-phase FIR filter. But firfilt is a low-level function and you should know what you are doing when using it. If you want to do this on the command line I would rather recommend using fir_filterdcpadded. There is a 'causal‘ flag and you can do causal and non-causal (linear phase only) filtering. fir_filterdcpadded must be used with continuous segments only. firfilt also works with boundaries. firfilt was designed long time ago when memory was a limited resource and is memory optimized but complex. It will be sooner than later be fully replaced by fir_filterdcpadded (as in FieldTrip) which is simple and fast but memory consuming. 
-Note: fir_filterdcpadded always operates (pads, filters) along first dimension. 
-So, with EEG.data (chans x times) it is necessary to transpose (twice): 
+はい、firfilt はグループ遅延に対して自動的に補正します。つまり、ゼロフェーズ FIR フィルターを実装します。 しかし、firfiltは低レベルの機能であり、使用時に何をしているかを知る必要があります。 コマンドラインでこれを行う場合は、fir_filterdcpadded を使うのをおすすめします。 'causal' フラグがあり、causal と non-causal (linear フェーズのみ) フィルタリングを行うことができます。 fir_filterdcpadded は、連続セグメントのみで使用する必要があります。 firfilt も境界線で動作します。 firfilt は、メモリが限られたリソースだったり、メモリが最適化されたり、複雑なときに長い間設計されていました。 fir_filterdcpadded (FieldTrip のように) が完全に置換されるよりも早くなります。 
+注意: fir_filterdcpadded は、常に最初の次元に沿って(パッド、フィルタ)動作します。 
+そのため、EEG.data(chans x time)で、トランスポーズ(twice): 
 ```matlab 
     EEG.data = fir_filterdcpadded(b_low, 1, EEG.data', 1)'; 
 ```
-### Q. What about IIR filters and causal filtering?
+### お問い合わせ IIRフィルタとケーサールフィルタリングとは?
 
-Note that you cannot delay correct an IIR filter (the impulse response is infinite and the phase response non-linear) and order has a very different meaning. Indeed, backward-forward filtering will result in a non-causal zero-phase filter (actually, the order of backward-forward or forward-backward doesn’t matter). As an IIR filter is used there is no temporal limit for non-causal effects (here post-stimulus on pre-stimulus time ranges) as with FIR filters. 
+IIRフィルタ(衝動応答が無限であり、相応答非線形)を修正し、注文が非常に異なる意味を持つことはできないことに注意してください。 確かに、後方フィルタリングは、非因性ゼロフェーズフィルタ(実際には、後方前方または後方後方には問題ありません)になります。 IIRフィルタは、FIRフィルタと同様に、非因性効果(前刺激時間範囲のポスト刺激)の一時的な制限はありません。 
  
-### Q. If I use linear (causal or non-causal) filters for both high-pass and low-pass, does the group delay double (i.e. 232 ms?)?
+### お問い合わせ ハイパスとローパスの両方でリニア(非因果)フィルタを使うと、グループ遅延が2倍になります(232ms?)?
 
-Depends. This is a somewhat more complex issue as this is different for causal vs. non-causal and also different for serial high-pass and low-pass vs. band-pass and finally also how band-pass is implemented.
+お問い合わせ これは、原因対のために異なっているので、これはもう少し複雑な問題です. シリアルハイパスとローパス対バンドパスと、最終的にはバンドパスの実装方法と異なっても違います。
 
-1. Non-causal/zero-phase:
-  1.a. Serial application: Both filters are delay corrected separately, there is no delay in the final output. The impulse response of the final filter is the convolution of the high-pass and low-pass impulse responses. That is, the time range potentially contaminated by non-causal effects is (Nlow-pass + Nhigh-pass - 2) / 2 (in samples, divide by fs for seconds). This is identical to a band-pass filter implemented by convolution.
-  1.b. You may implement a band-pass filter by clever combinations of spectral inversion and reversal (in a nutshell by adding two low-pass and high-pass kernels). The time range potentially contaminated by non-causal effects can be reduced to (max([Nlow-pass, Nhigh-pass]) - 1) / 2. More details on band-pass by convolution vs. spectral inversion, reversal and adding are explained for example here.
-2.Causal
-  2.a. Serial application: Both delays are added (minus 1; see 1a above)
-  2.b. Single stage bandpass. Again the delay can be reduced to (max([Nlow-pass, Nhigh-pass]) - 1) / 2 with clever implementation.
+1. 非causal/ゼロ段階:
+  1.a。 シリアルアプリケーション: どちらのフィルタも別々に修正されます。最終出力の遅延はありません。 最終的なフィルターの衝動の応答はハイパスおよび低パス衝動の応答のconvolutionです。 つまり、非原因の影響によって汚染される時間範囲は(Nlow-pass + Nhigh-pass - 2)/2 (サンプルでは、fsを秒単位で区切って下さい)です。 これは、convolutionによって実装されたバンドパスフィルタと同じです。
+  1.b。 スペクトル反転と反転の巧妙な組み合わせによってバンドパスフィルタを実装することができます(2つのローパスとハイパスカーネルを追加することにより、ナッツシェル)。 非因果効果によって汚染される時間範囲は(max ([Nlow-pass, Nhigh-pass])に減ることができます - 1) / 2. 進化によるバンドパスの詳細は、対. スペクトル反転, 逆転と追加は、ここで説明されています.
+2.カバール
+  2.a。 シリアルアプリケーション: どちらの遅延も追加されます(マイナス1;上記1aを参照してください)
+  2.b. シングルステージバンドパス。 再び遅延を減らすことができます (max([Nlow-pass, Nhigh-pass]) - 1) / 2 巧妙な実装で。
 
-### Q. Changing the sampling rate would not change anything regarding the delays, right?
+### お問い合わせ サンプリングレートの変更は、遅延について何も変更しませんか?
 
- Right.
+ お問い合わせ
  
- ### Q. Trying to reduce the delay without compromising filter quality, I still get a delay of 0.958 s ... which corresponds to 64% of my window of interest! Whether I ignore this period with the linear non-causal filter, or lose it through the time shift with the linear causal filter, it's a huge loss. The implementation of a more advanced band-pass method by convolution vs spectral inversion is above my level, and even if I could find a way to implement it, I would still have a delay of 0.826 s, which is still too big. That leaves me the minimum-phase causal filter with a reduced delay but unknown signal/phase distortions which prevents me from doing more complex analyses. I’m wondering if I should not use any filters at all at the cost of lower SNR instead?
+ ### お問い合わせ フィルターの品質を損なうことなく遅延を削減しようとすると、私はまだ関心の私の窓の64%に相当する0.958秒の遅延を取得します! 線形非因果フィルターでこの期間を無視するか、または線形腔フィルターとの時間のシフトによってそれを失うかどうか、それは巨大な損失です。 convolution と spectral inversion によるより高度なバンドパスメソッドの実装は、私のレベル上にあり、それを実装する方法を見つけることができれば、私はまだ大きすぎる 0.826 秒の遅延を持っています。 それは私により複雑な分析をすることを防ぐ低い遅延しかし未知の信号/フェーズのゆがみが付いている最低フェーズのcausalフィルターを残します。 代わりに、SNRを下げるコストですべてのフィルターを使わなければ、私は疑問に思いますか?
 
-For frequency analysis filtering is not necessarily required. Most time frequency analysis methods are actually filters by itself (and most can indeed be implemented by convolution, that is, also here you may have to watch out for non-causal effects in certain scenarios). Typically DC removal (mean subtraction or possibly detrending in problematic cases) may be sufficient.
+周波数分析フィルタリングは必ずしも必要ではありません。 ほとんどの時間頻度分析方法は、実際にそれ自体によってフィルタリングされます(そして、ほとんどの場合、それはまた、ここであなたは特定のシナリオで非因性効果のために見なければならないかもしれません)。 通常、DC除去(微分または問題のある症例で悪化する可能性があります)が十分である場合があります。
 
-For ERPs personally I would try non-linear phase filters. I would try to systematically compare non-linear and linear phase filtered data to try to disentangle what are distortions due to non-linearity or what are potentially non-causal effects. Particularly helpful is to systematically evaluate and compare the signal removed by different filters (unfiltered minus filtered data).
+ERPs 個人的に私は非線形位相フィルターを試みます。 非線形位相および線形位相フィルターされたデータを系統的に比較して、非直線性または潜在的に非因性効果による歪みを解体しようとします。 特に有用とは、異なるフィルタ(非濾過されたマイナスフィルタリングされたデータ)で削除された信号を系統的に評価し比較することです。
 
-### Q. How is ICA affected by causal filtering? Is it affected exactly the same way the data is?
+### お問い合わせ ケーサルフィルタリングの影響を受けるICAは? データが同じように正確に影響されますか?
 
-Linear phase filtering shouldn’t change the independent component topographies. As the output of non-causal vs. causal linear phase filters is identical (just delayed) there shouldn’t be a difference with respect to causality. For more detailed considerations on ICA and filtering, see introduction of the following link: https://urldefense.com/v3/__https://onlinelibrary.wiley.com/doi/full/10.1111/ejn.14992__;!!Mih3wA!WlVVw6y6WsMIveCkz6Cx0qfOc0soAbgN7fqqfafhhGpsK1K4v6sywYeJkpnraIjK4rrVrw$ 
-
-
-### Q. How is re-refenrecing affected? 
-
-Sorry, I cannot comment on this. Just a general note: I’m sometimes lazily writing linear/non-linear filtering. In this context (spectral filters) actually I should consistently use the complete and correct terminology: linear/non-linearphase filtering. "Linear/non-linear phase" here describes that the phase response is a straight line or not. The point is that also non-linear phase spectral filtering is a linear operation (in contrast to true non-linear filtering). This is all straight-forward convolution. For linear operations the order doesn’t matter, and therefore, for regular re-referencing (common/averaged/linked reference) the order (filter -re-reference or re-reference -filter) doesn’t matter (except edge effects).
+リニアフェーズフィルタリングは、独立したコンポーネントのトポグラフィを変更しないでください。 非因性対因性リニアフェーズフィルタの出力が同一である(ただ遅延)、因性に対する差はない。 ICAおよびフィルタリングに関するより詳細な検討については、次のリンクの導入を参照してください。 https://urldefense.com/v3/__https://onlinelibrary.wiley.com/doi/full/10.1111/ejn.14992__;!!Mih3wA!WlVVw6y6WsMIveCkz6Cx0qfOc0soAbgN7fqqfafhhGpsK1K4v6sywYeJkpnraIjK4rrVrw$ 
 
 
-### Q. Are there other Matlab/EEGLAB options I could use to design filters from the command line?
+### お問い合わせ 影響を受けた再防御方法は? 
+
+申し訳ありません、このコンテンツはただ今 アメリカ英語 のみです。 一般的なメモだけ: 私は時々、線形/非線形フィルタリングを書く。 この文脈(スペクトルフィルタ)では、私は一貫して完全な正しい用語を使用する必要があります:線形/非線形位相フィルタリング。 ここで「リニア/非リニアフェーズ」は、フェーズ応答がストレートラインであるか否かを説明します。 点は、非線形位相スペクトルフィルタリングも線形操作(真の非線形フィルタリングとは対照的)であるということです。 これは、すべてのストレートフォーワードの関与です。 線形操作の場合、注文は問題ありません。そのため、通常のリファーレンシング(共通/平均/リンク参照)では、注文(フィルタ -re-reference or re-reference -filter)は問題ありません(エッジエフェクトを除く)。
+
+
+### お問い合わせ コマンドラインからフィルタを設計するために使用できるMatlab/EEGLABオプションはありますか?
 
 ```matlab 
     b_high = minphaserceps( firws( 10, 1/5, 'high' ) ); % minimum-phase non-linear high-pass
     fsig_high = filter( b_high, 1, sig ); % causal filter
 ```
-Or
+または
 
 ```matlab 
     [EEG, com, b] = pop_firws(EEG, 'forder', forder, 'fcutoff', fcutoff, 'ftype', 'highpass', 'wtype', 'hamming', 'minphase', 1);
 ```
 
-This is the same BUT: pop_firws is the high level wrapper. Unit for fcutoff is Hz! firws is a low-level function. 
-Unit for f is pi rad / sample (i.e. normalized to Nyquist, this is the MATLAB standard for this kind of functions). 
-0.2 pi rad / sample * fs / 2 with fs = 500 samples / second -> 50 seconds^-1 or Hz.
+これは同じBUTです: pop_firwsは高レベルのラッパーです。 fcutoff のユニットは Hz です! firwsは低レベル機能です。 
+f のユニットは pi rad / サンプル (つまり、Nyquist に正規化されて、この種類の関数の MATLAB 標準です)。 
+0.2 pi rad / サンプル * fs / 2 fs = 500 サンプル / 2 → 50秒^-1またはHz。
 
 
 
-This page was created by Makoto Miyakoshi and Andreas Widmann. 
-Edits 3/15/2021 on causal filtering by Cedric Cannard (from discussion with Andreas Widmann). 
+このページはMakoto MiyakoshiとAndreas Widmannによって作成されました。 
+Cedric Cannard(Andreas Widmannとのディスカッションから)によるカスールフィルタリングで3/15/2021を編集します。 
 
 
 
 
-## References and recommended readings
+## 参照と推奨読書
 
--   Duncan-Johnson, C. C., & Donchin, E. (1979). The time constant in
-    P300 recording. Psychophysiology, 16, 53–56.
-
-
-
--   Barnett, L., & Seth, A. K. (2011). Behaviour of Granger causality
-    under filtering: theoretical invariance and practical application.J
-    Neurosci Methods. 201, 404-419.
+-   ダンカン・ジョンソン、C.、&ドニチン、E.(1979)。 一定時間
+    P300録画。 心理生理学、16、53–56。
 
 
 
--   Van Rullen, R. (2011). Four common conceptual fallacies in mapping
-    the time course of recognition. Frontiers in Psychology, 2, 365.
-    doi: 10.3389/fpsyg.2011.00365
+-   Barnett, L., & Seth, A. K. (2011). グランガー因果の行動
+    ろ過の下:理論的な変化および実用的な適用。 日 時
+    Neurosciメソッド。 201、404-419。
 
 
 
--   Acunzo, D. J., MacKenzie, G., & van Rossum, M. C. W. (2012).
-    Systematic biases in early ERP and ERF components as a result of
-    high-pass filtering. Journal of Neuroscience Methods, 209, 212–218.
-    doi: 10.1016/j.jneumeth.2012.06.011
+-   ヴァン・ルレン、R.(2011)。 マッピングの4つの一般的な概念下落
+    認識の時間経過。 心理学のフロンティア, 2, 365.
+    土井: 10.3389/fpsyg.2011.00365
 
 
 
--   Rousselet GA (2012) Does filtering preclude us from studying ERP
-    time-courses? Front. Psychology 3:131. doi: 10.3389/fpsyg.2012.00131
+-   アカンゾー、D. J.、MacKenzie、G.、Van Rossum、M. C. W.(2012)。
+    ERP および ERF コンポーネントの初期に体系的なバイアスを生成
+    ハイパスフィルタリング。 神経科学法ジャーナル, 209, 212–218.
+    土井: 10.1016/j.jneumeth.2012.06.011
 
 
 
--   Widmann, A., & Schröger, E. (2012). Filter effects and filter
-    artifacts in the analysis of electrophysiological data. Frontiers in
-    Psychology, 3, 233. doi: 10.3389/fpsyg.2012.00233
+-   ルーゼレット GA (2012) ERPを勉強から除外するフィルタリング
+    時間コース? フロント. 心理学 3:131. 土井: 10.3389/fpsyg.2012.00131
 
 
 
--   Zoefel, B., & Heil P. (2013). Detection of near-threshold sounds is
-    independent of EEG phase in common frequency bands. Front Psychol,
+-   Widmann, A., & Schröger, E. (2012). フィルター効果およびフィルター
+    電気生理学的データの解析におけるアーティファクト。 フロンティア
+    心理学、3、233。 土井: 10.3389/fpsyg.2012.00233
+
+
+
+-   Zoefel, B., & Heil P. (2013). 周囲の音の検出は
+    共通の周波数帯域のEEG段階の独立。 前部精神医学、
     4, 262.
 
 
 
--   Luck, S. J. (2014). An introduction to the event-related potential
-    technique (2nd ed.). Cambridge, MA: MIT Press.
+-   Luck, S. J. (2014). イベント関連の可能性の紹介
+    テクニック(2nd ed。)。 ケンブリッジ、MA:MIT プレス。
 
 
 
--   Widmann, A., Schröger, E., & Maess, B. (2015). Digital filter design
-    for electrophysiological data--a practical approach. J Neurosci
-    Methods, 250, 34-46. doi: 10.1016/j.jneumeth.2014.08.002
-    [link](http://home.uni-leipzig.de/~biocog/eprints/widmann_a2015jneuroscimeth250_34.pdf)
+-   Widmann, A., Schröger, E., & Maess, B. (2015). デジタル フィルター設計
+    電気生理学的データ--実用的なアプローチのため。 J ネウロシ
+    方法, 250, 34-46. 土井: 10.1016/j.jneumeth.2014.08.002
+    [サイトマップ](http://home.uni-leipzig.de/~biocog/eprints/widmann_a2015jneuroscimeth250_34.pdf)
 
 
 
--   Tanner, D., Morgan-Short, K., & Luck, S. J. (2015). How
-    inappropriate high-pass filters can produce artifactual effects and
-    incorrect conclusions in ERP studies of language and cognition.
-    Psychophysiology, 52(8), 997-1009. doi: 10.1111/psyp.12437
+-   タンナー、D.、モーガン・ショート、K.、&Luck、S. J.(2015)。 使い方
+    不適切なハイパスフィルタは、アーティファクト効果を生成し、
+    言語と認知のERP研究における誤った結論。
+    心理生理学, 52(8), 997-1009. 土井: 10.111111/psyp.12437
 
 
 
--   Seth, A. K., Barrett, A. B., & Barnett, L. (2015). Granger causality
-    analysis in neuroscience and neuroimaging. J Neurosci. 35,
+-   Seth, A. K., バレット, A. B., & Barnett, L. (2015). グランガー因果
+    神経科学と神経科学の分析 J Neurosci. 35、
     3293-3297.
 
 
 
--   Maess B, Schröger E, Widmann A. (2016). High-pass filters and
-    baseline correction in M/EEG analysis. Commentary on: "How
-    inappropriate high-pass filters can produce artefacts and incorrect
-    conclusions in ERP studies of language and cognition". J Neurosci
-    Methods. \[Epub ahead of print\]
+-   Maess B、Schröger E、Widmann A.(2016)。 ハイパスフィルタと
+    M/EEG分析におけるベースライン補正 コメント: "方法
+    不適切なハイパスフィルタは、アーティファクトと誤りを生成できます
+    言語と認知のERP研究における結論。 J ネウロシ
+    メソッド。 \[プリント前のEpub\]
 
 
 
--   Tanner D, Norton JJ, Morgan-Short K, Luck SJ. (2016). On high-pass
-    filter artifacts (they're real) and baseline correction (it's a good
-    idea) in ERP/ERMF analysis. J Neurosci Methods. \[Epub ahead of
-    print\]
+-   タンナーD、ノートンJJ、モーガンショートK、ラックSJ(2016)。 ハイパスで
+    フィルターアーティファクト(本当です)およびベースラインの訂正(それはよいです
+    ERP/ERMF分析におけるアイデア J Neurosciメソッド。 \[Epub より先に
+    プリント\
 
 
 
--   Maess B, Schröger E, Widmann A. (2016). High-pass filters and
-    baseline correction in M/EEG analysis-continued discussion. J
-    Neurosci Methods. \[Epub ahead of print\]
+-   Maess B、Schröger E、Widmann A.(2016)。 ハイパスフィルタと
+    M/EEG分析継続した議論におけるベースライン補正 日 時
+    Neurosciメソッド。 \[プリント前のEpub\]
 
 
 
--   Liljander S, Holm A, Keski-Säntti P, Partanen JV. (2016). Optimal
-    digital filters for analyzing the mid-latency auditory P50
-    event-related potential in patients with Alzheimer's disease. J
-    Neurosci Methods. 2016 Mar 22;266:50-67.
+-   Liljander S, Holm A, Keski-Säntti P, Partanen JV. (2016). 最適化
+    ミッドレイテンシーの聴覚P50を分析するためのデジタルフィルタ
+    アルツハイマー病の患者におけるイベント関連の潜在能力。 日 時
+    Neurosciメソッド。 2016年3月22日;266:50-67。

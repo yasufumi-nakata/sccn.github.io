@@ -6,27 +6,27 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 4
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/amica).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/amica).
 
-![Screenshot 2024-07-25 at 14 12 51](https://github.com/user-attachments/assets/e5880f21-51ae-4ebf-a3de-bc040d6f4aab)
+![スクリーンショット 2024-07-25 に 14 12 51](https://github.com/user-attachments/assets/e5880f21-51ae-4ebf-a3de-bc040d6f4aab)
 
-# The AMICA algorithm and EEGLAB plugin
+# AMICAアルゴリズムとEEGLABプラグイン
 
-Adaptive Mixture Independent Component Analysis (AMICA) is a program (for Linux, Mac, and Windows) that performs an independent component analysis (ICA) decomposition on input data, potentially with multiple ICA models. It can be run standalone, or from MATLAB.
+アダプティブ・ミックスチャー・インディペンデント・コンポーネント・アナリシス(AMICA)は、複数のICAモデルで、インプット・データに関する独立したコンポーネント分析(ICA)を行うプログラム(Linux、Mac、Windows)です。 スタンドアローン、またはMATLABから実行できます。
 
-Code for AMICA: Adaptive Mixture ICA with shared component
+AMICAのコード:共有コンポーネントを備えた適応型ミックスチャーICA
 
-Refer to the [Amica wiki](https://github.com/japalmer29/amica/wiki) for documentation or the other menus if you are on the EEGLAB website.
+参照して下さい [アミカ ウィキ](https://github.com/japalmer29/amica/wiki) EEGLABのウェブサイトにあるドキュメントやその他のメニューの場合。
 
-Refer also to Jason Palmer's [AMICA page](https://sccn.ucsd.edu/~jason/amica_web.html).
+Jason Palmer's も参照 [AMICAページ](https://sccn.ucsd.edu/~jason/amica_web.html).
 
-# Version history
+# バージョン履歴
 
-1.7 - Update documentation for pop_runamica and add test file
+1.7 - pop_runamica のドキュメントを更新し、テストファイルを追加
 
-1.6.1 - Modify Windows compilation instructions. Intel OneAPI should be tested for Mac and Ubuntu.
+1.6.1 - Windowsのコンパイル指示を変更します。 Intel OneAPIは、MacとUbuntuでテストする必要があります。
 
-1.6 - Deprecate Comet and replace with Expanse supercomputer executable
+1.6 - DeprecateのコメットおよびExpanseのスーパーコンピューターの実行可能と取り替えて下さい
 
-1.5.2 - Comet supercomputer executable
+1.5.2 - コンピュータの実行可能彗星
 

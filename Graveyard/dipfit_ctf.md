@@ -1,71 +1,71 @@
-DIPFIT supports source localization for MEG data (tested with CTF data). Note that a custom head model needs
-to be used for MEG source localization since it is not possible to do
-accurate source localization on a template head model. The
-main reason for this limitation is that, first, MEG sensor positions do
-not follow any positioning standard. Each system may have its own
-arrangement. Furthermore, unlike EEG, the sensors are not placed on an
-elastic cap that automatically fits the subject's head. The MEG
-sensor coils are located within a fixed helmet in which the majority of
-subjects' heads fit loosely. The position of a given sensor relative to
-a cortical structure could be quite different from subject to subject,
-and even across different recordings from the same subject. For this
-reason, the sensor's location is always reported relative to the center
-and the orientation of the subject's head during the recording, which is
-never exactly the same across recordings. Consequently, a head model
-needs to be created for each recording using the CTF MRIViewer and
-localSphere programs (see the CTF documentation). Then, in EEGLAB, call
-menu item <span style="color: brown">Tools → Locate dipoles using DIPFIT → Head model and settings</span>, and select the tab *CTF* in the upper
-pop-window (note that the GUI below is an older version compared to the
-one available in DIPFIT, but the field remain fairly similar). Set up the
-DIPFIT model and preferences as follows:
+DIPFITは、MEGデータのソースローカリゼーションをサポートしています(CTFデータでテスト済み)。 カスタムヘッドモデルのニーズに注意
+MEG ソースのローカリゼーションに使用することはできないため
+テンプレートヘッドモデルの正確なソースローカリゼーション。 ふりがな
+この制限のための主な理由は、まず、MEGセンサー位置は、
+任意の位置基準に従わない。 各システムには、それぞれ独自のシステムがあります。
+アレンジ。 さらに、EEGとは違い、センサーが配置されていない
+被写体の頭部に自動的に合う伸縮性がある帽子。 メグ
+センサーコイルは固定ヘルメット内にあります。
+被写体の頭部は緩く合います。 相対的な特定のセンサーの位置
+角質構造は、被写体と非常に異なる可能性があります。
+同じ主題からの異なった録音を渡ってまた。 お問い合わせ
+センサーの位置は、常に中央に相対的に報告される
+録音中の被写体の頭の向きと、
+録画間ではまったく同じではありません。 その結果、ヘッドモデル
+CTF MRIViewerを使用して各録画用に作成する必要があります。
+ローカル Sphere プログラム (CTF ドキュメントを参照してください). それから、EEGLABで、呼ぶ
+メニュー項目 <span style="color: brown">ツール → DIPFIT → ヘッドモデルと設定を使用してダイポールを探します</span>上部のタブ *CTF* を選択します。
+pop-window (下のGUIは古いバージョンであることに注意してください)
+DIPFITで利用可能なフィールドは似ていますが、フィールドは似ています。 セットアップ
+DIPFITモデルと好みは以下の通りです。
 
--   Select CTF as model.
--   The model file is the file *default.hdm* created by CTF localSphere,
-    located in the *xxx.ds* folder.
--   The MRI head image should be the *xxx.mri* file used by MRIViewer to
-    extract the cortical surface.
--   The channel file should be the *xxx.res4* file within the *xxx.ds*
-    folder. This file also contains gradiometer-specific information,
-    including sensor orientation, that is not in the EEG structure.
+-   モデルとしてCTFを選択します。
+-   モデルはファイル *default です。 CTFローカルで作成したhdm* スフィア,
+    *xxx.ds*フォルダにあります。
+-   MRI の頭部のイメージは MRIViewer によって使用される *xxx.mri* ファイルであるべきです
+    腐食性表面を抽出します。
+-   *xxx.ds* 内の *xxx.res4* ファイルでなければなりません。
+    フォルダ。 このファイルには、gradiometer固有の情報も含まれています。
+    EEG構造にないセンサーのオリエンテーションを含む。
 
 ![](/assets/images/Dipole_settings_meg.gif)
 
-As for EEG data, you first need to scan a relatively coarse grid to find
-an appropriate starting position for each dipole, by calling the
-<span style="color: brown">Tools → Locate dipoles using DIPFIT → Coarse fit (grid scan)</span> menu item. 
+EEGデータに関しては、まず見つけるために比較的粗いグリッドをスキャンする必要があります
+各ダイポールの適切な開始位置を呼び出して、
+<span style="color: brown">ツール → DIPFIT → 粗いフィット(グリッドスキャン)を使用してダイポールを探します</span> メニュー項目。 
 
-Note that CTF head models are in centimeters (cm). Consequently,
-the grid used for grid search needs to be specified in cm (this is done
-automatically by pop_dipfit_gridsearc.m).
+CTFヘッドモデルはセンチメートル(cm)です。 その結果、
+グリッド検索に使用されるグリッドは、cm で指定する必要があります(これは行われます)
+pop_dipfit_gridsearc.m によって自動的に。
 
 
-![Image:Dipole_grid_meg.gif](/assets/images/Dipole_grid_meg.gif)
+![画像:Dipole_grid_meg.gif](/assets/images/Dipole_grid_meg.gif)
 
-Then as in EEG dipole fitting,
-use the <span style="color: brown">Tools → Locate dipoles using DIPFIT → Fine fit (iterative)</span> menu item to optimize dipole positions nonlinearly.
+その後、EEGダイポールフィッティングで、
+使用して下さい <span style="color: brown">ツール → DIPFIT → ファインフィット(iterative)を使用してダイポールを割り当てる</span> ダイポールポジションを非線形に最適化するためのメニュー項目。
 
-Finally, you may plot dipoles on the subject MRI using menu item <span style="color: brown">Tools → Locate dipoles using DIPFIT → Plot component dipoles</span>, as shown below. The corresponding scalp map is also shown
-on the right. Because of co-registration issues, it is not possible to
-plot the dipole positions on the scalp map as in EEG). It is strongly
-advisable to normalize dipole lengths when plotting MEG equivalent dipoles.
+最後に、メニュー項目を使用して、対象となるMRIにダイポールをプロットすることができます <span style="color: brown">ツール → DIPFIT → プロットコンポーネントダイポールを使用してダイポールを割り当てる</span>以下に示すように。 対応するスカルプマップも表示
+右上の 共同登録の問題のため、それは不可能です
+scalp 地図上のダイポールの位置を EEG にプロットします。 それは強く
+MEG の同等のダイポールをプロットするときにダイポールの長さを正規化することをお勧めします。
 
 
 ![](/assets/images/Dipole_plot_meg.gif)
 
-You can also run DIPFIT for MEG data without a subject MR image if you
-have extracted the subject head surface from another source like a head
-model acquired using a Polhemus 3-D location system. However, it would
-then not be possible to visualize the dipole within EEGLAB. Any
-comparison between or drawing of dipoles for different subjects requires
-a thorough understanding of the MEG coordinate system since that is
-being used to express the dipole position. The default is in individual
-subjects' head coordinates, and given that head sizes differ between
-subjects, the position of dipoles cannot be directly compared between
-subjects. It is therefore advisable to coregister and spatially
-normalize your subjects' MRIs to a common template (such as the MNI
-template) and to apply the same coregistration and normalization to the
-dipole positions before comparing them. These operations need to be
-executed outside EEGLAB. A test set is available
-[here](http://sccn.ucsd.edu/eeglab/dipfittut/testmeg.zip) (thanks to Nicolas
-Robitaille for providing the test data). Simply load
-the test file and follow the instruction above (note that newer versions of FieldTrip cannot process this file anymore, so use FieldTrip versions up to 2016).
+対象となるMRイメージなしで、MEGデータのDIPFITを実行することもできます。
+頭のような別のソースから被写体ヘッド表面を抽出しました
+Polhemus 3-Dの場所システムを使用して取得したモデル。 しかし、
+EEGLAB内のダイポールを視覚化することはできません。 その他
+異なった主題のためのダイポールの比較は要求します
+それ以来、MEG座標系の徹底的な理解
+ダイポールの位置を表現するために使用される。 デフォルトは個人で
+被写体の頭部は調整し、頭部のサイズが間の相違を与えられます
+被写体、ダイポールの位置は間直接比較できません
+トピック そのため、共同登録と空間的にお勧め
+あなたの主題のMRIを共通の型板に正規化して下さい(MNIのような)
+テンプレート) 同じコアジストレーションと正規化を適用する
+それらを比較する前にダイポールの位置. これらの操作は、
+EEGLAB外で実行される。 試験セットをご用意しました。
+[詳しくはこちら](http://sccn.ucsd.edu/eeglab/dipfittut/testmeg.zip) (ニコラスへの感謝)
+テストデータを提供するためのロピエール。 単に負荷
+テストファイルと上記の指示に従ってください(FieldTripの新しいバージョンがこのファイルを処理できないため、FieldTripバージョンを2016年まで使用してください)。

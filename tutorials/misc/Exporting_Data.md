@@ -9,7 +9,7 @@ grand_parent: Tutorials
 ================
 お問い合わせ
 
-本リファレンスガイドでは、EEGLABデータをエクスポートする方法について説明します。
+リファレンス では では
 
 <details open markdown="block">
   <summary>
@@ -25,35 +25,35 @@ grand_parent: Tutorials
 
 以下のエクスポート形式がサポートされています。
 
--  エッグ データ: ASCII テキスト、.txt、.csv
--  エッグ データ: ヨーロッパのデータ フォーマット(16ビット)、.edf 
--  エッグ データ:Biosemi、.bdf  
--  エッグ データ: BIOSIG、.gdf  
--  エッグ データ: 脳の視野の検光子、.dat、.vhdr、.vmrk 
--  エッグ データ: MFF EGIのフォーマット、.mff
--  エッグ データ: Neuroscan .cnt (ベータ)
--  アメリカ アクティビティ: ASCII テキスト、.txt               
--  重量のマトリックス: ASCIIのテキスト、.txt               
--  逆の重量のマトリックス: ASCII のテキスト、.txt               
+-  ASCII テキスト、.txt、.csv
+-  エッグデータ:ヨーロッパのデータフォーマット(16ビット)、.edf 
+-  エッグデータ:バイオセミ、.bdf  
+-  エッグデータ: BIOSIG、.gdf  
+-  脳の検光子、.dat、.vhdr、.vmrk 
+-  MFF EGIのフォーマット、.mff
+-  エッグデータ:Neuroscan .cnt (β)
+-  アメリカ: ASCII テキスト、.txt               
+-  ASCIIのテキスト、.txt               
+-  最近の投稿 ASCIIのテキスト、.txt               
 -  お問い合わせ サポートされているデータフォーマットに関する詳細情報
-    お問い合わせ [BIOSIGドキュメント](http://biosig.sourceforge.net/).
+    お問い合わせ [BIOSIGについて](http://biosig.sourceforge.net/).
 
 
-データのエクスポートとICAのマトリックス
+データの の
 -------------------------------
 
-### データを ASCII テキストファイルにエクスポートする
+### ASCII は、
 
-EEGLAB データセットは、メニュー項目を使用して ASCII ファイルとしてエクスポートできます。
-<span style="color: brown">ファイル → エクスポート → テキストファイルへのデータとICAアクティビティ</span>. 
-ファイル名(*mydata.txt*)を入力します。 チェックイン
-データエポックではなく平均ERPをエクスポートする2番目のチェックボックス。 によって
+エッグラボ メニュー ASCIIファイルとして
+<span style="color: brown">テキストファイルデータとICAのチュートリアル</span>. 
+ファイル名: *mydata.txt*
+このページではjavascriptを使用しています。
 デフォルトでは、各行(4番目のチェックボックス)に電極ラベルが保存され、
 各列(第5チェックボックス)に時間値が保存されます。 時間単位はできます
 時刻値チェックボックスに最も近い編集ボックスに指定します。
 最後に、保存する前に行列をトランスポーズするために3番目のチェックボックスを確認してください。
 
-![画像:Pop_export.gif](/assets/images/pop_export1.png)
+![サイトマップ](/assets/images/pop_export1.png)
 
 ディスクに書かれているファイルは次のようになります:
 
@@ -89,36 +89,36 @@ FPz             EOG1       F3          Fz    �
 ```
 
 最初の列には、それぞれの時間軸とその他のデータが含まれています
-電極。 このファイルは SPSS や BMDP にインポートされる場合があります。
+ この  この  この  この
 
-### バイナリ形式でEEGデータをエクスポートする
+### EE EE
 
-異なる EEGLAB メニュー項目を使用して、異なる EEG 形式にエクスポートできます。
+EEGLABメニューの項目は、EEGの形式に分けられます。
 
--  エッグ データ:ヨーロッパデータフォーマット(16ビット).edf、Biosemi .bdf、BIOSIG .gdfフォーマット。 利用する <span style="color: brown">ファイル → エクスポート → EDF/BDF/GDF ファイルへのデータ</span> メニュー項目。 これは、BIOSIGをインストールする必要があります(インストールされていない場合はBIOSIGをインストールする必要があります)。
+-  エッグデータ: 無線データ(16ビット).edf、Biosemi .bdf、 BIOSIG .gdf. 利用する <span style="color: brown">ファイル → EDF/BDF/GDF ファイルへ</span> メニュー項目。、BIOSIG インストール(BIOSIG インストール)。
 
--  エッグ データ:脳の視野の検光子、.dat、.vhdr、.vmrk。 利用する <span style="color: brown">ファイル → エクスポート → Brain Vis を書く。 交換形式ファイル</span> メニュー項目。 これは、 [bva-io(ババオ)](https://github.com/arnodelorme/bva-io) インストールするプラグイン。
+-  エッグ 放射線の光子、.dat、.vhdr、.vmrk。 <span style="color: brown">ファイル → エクスポート → ログイン フォーマットファイル</span> メニュー項目。 これは、 [bva-io(ババオ)](https://github.com/arnodelorme/bva-io) インストールするプラグイン。
 
--  エッグ データ: MFF EGIのフォーマット、.mff。 利用する <span style="color: brown">ファイル → エクスポート → EGI .mff ファイル</span> メニュー項目。 これは、 [mffMatlabIOの動画](https://github.com/arnodelorme/mffMatlabIO) インストールするプラグイン。
+-  MFF EGIのフォーマット、.mff。 使い方 <span style="color: brown">ファイル → エクスポート → EGI .mff ファイル</span> メニュー項目。 これは、 [mffMatlabIOの動画](https://github.com/arnodelorme/mffMatlabIO) インストールするプラグイン。
 
--  エッグ データ: Neuroscan .cnt (ベータ)。 *writecnt.m*関数を使ってコマンドラインから実行できます。 これは、 [神経癌](https://github.com/sccn/neuroscanio) インストールするプラグイン。
+-  エッグ・データ: Neuroscan .cnt (β)。 *writecnt.m*関数が実行されます。 [神経癌](https://github.com/sccn/neuroscanio) インストールするプラグイン。
 
-### BIDSとしてデータをエクスポートする
+### BIDSの現状
 
-参照して下さい [bids-matlab-io EEGLABプラグインチュートリアル](https://github.com/sccn/bids-matlab-tools/wiki) BIDS(Brain Imaging Data Structure)のアーカイブとしてEEGLABの研究をエクスポートします。
+参照して下さい [bids-matlab-io EEGLAB プラグインチュートリアル](https://github.com/sccn/bids-matlab-tools/wiki) BIDS(脳イメージング) Data Structure のアーカイブは、
 
-ICA の重量および逆の重量のマトリックスを輸出する
+. . .
 ---
 
-メニュー項目を使用する <span style="color: brown">ファイル→エクスポート→テキストファイルへの重量行列</span> ICAの混合のマトリックス(weights\*sphere)を輸出するため。 シンプル
-ポップアップウィンドウにファイル名を入力し、*Save*を押します。
+メニュー項目を使用する <span style="color: brown">ファイル→エクスポート→テキストファイルへの重量行列</span> ICA's のハッシュタグをエクスポートします。
+*Save*は、
 
 ディスク上のテキストファイルでは、重量行列が含まれています。 お問い合わせ
-メニュー項目を使用して別のEEGLABデータセットに再インポート
+メニュー項目別々にEEGLABデータセットが再発行されます
 <span style="color: brown">編集 → データセット情報</span>お問い合わせ 以下に示すように、
-*ICA重量配列*編集ボックスのファイル名。 球の編集箱を残して下さい
-空にするか、空にしないと空にしてください。 [ICA分解]を参照してください。
-チュートリアル:(/tutorials/06_RejectArtifacts/RunICA.html) より
+* の の の
+空に来たら、空に空に飛んでください。
+チュートリアル:(/tutorials/06_RejectArtifacts/RunICA.html)
 球および重量のマトリックスの細部。
 
 ![](/assets/images/Pop_editset.gif)
@@ -126,24 +126,24 @@ ICA の重量および逆の重量のマトリックスを輸出する
 イベントのエクスポート
 ---
 
-イベント情報は .txt ファイル(プレーンテキストファイル)にもエクスポートできます。
+.txtファイル(プレーンテキストファイル)
 タブ区切り値を含む)。 お問い合わせ
-ファイルは、任意のテキストエディタ、OpenOffice Calc、またはMicrosoftで開くことができます
-たとえばExcelなど。 
+Open, Open, Open, Open Calc、Microsoft では、
+お問い合わせ 
 
 チュートリアルデータをインポートすることができます <i>eeglab_data.set ディレクティブ</i> お問い合わせ
-<i>サンプルデータ</i> EEGLAB では
-現在ロードされたEEGのすべてのイベントをエクスポートするには
-file, メニュー項目を選択 <span style="color: brown">ファイル → エクスポート → テキストファイルへのイベント</span>お問い合わせ ダイアログウィンドウのポップアップ
-.csv ファイルの名前と場所を尋ねます。 最初の行
+<i>サンプルデータ</i> EEGLABでは、
+ 現在 イベント イベント
+メニュー項目を選択 <span style="color: brown">ファイル → エクスポート → テキストファイルへのイベント</span>お問い合わせ ダイアログウィンドウのポップアップ
+.csvファイルの名前と場所を引用します。
 ファイルがイベントフィールドの名前が含まれています。 ご注意
-イベントフィールドではない追加のカラム "number" 。
+イベントフィールドは「数値」です。
 
 ![](/assets/images/Spreadsheet_event.png)
 
 エクスポートオプションをもっとコントロールしたい場合は、コマンドラインバージョンのコマンド・ライン・バージョンを使用する必要があります。 [pop_expevents.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_expevents.m) 機能。 代替手段 
 機能, [eeg_eventtable.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_eventtable.m)、でき事を輸出するための付加的な選択があります。
 
-出力とSTUDY結果のエクスポート
+STUDY 結果のエクスポート
 ---
-ふりがな [スクリプトチュートリアルセクション](/tutorials/11_Scripting/command_line_study_functions.html#saving-results-for-processing-in-other-software-packages) SPSS、Statistica、Sta、R、SAS、Excel で以降の処理のために、任意の結果をテキストまたはExcelファイルにエクスポートするためのソリューションについて説明します。
+ふりがな [スクリプトチュートリアルセクション](/tutorials/11_Scripting/command_line_study_functions.html#saving-results-for-processing-in-other-software-packages) SPSS、統計学、Sta、R、SAS、Excel で で で で で で で で で で で で で で で で で で で で で で で で で で 。 。 で 。 。 。 。 。 。 。 で 。 。 。 。 。 。 で で で 。 。 。 。 。 。 。 。

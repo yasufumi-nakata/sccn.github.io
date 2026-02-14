@@ -7,13 +7,13 @@ render_with_liquid: false
 title: EEGLAB-plug-ins-on-NSG
 long_title: EEGLAB-plug-ins-on-NSG
 ---
-The EEGLAB installation on NSG provides access to most of the EEGLAB plug-ins. See the table below for the list below of plug-in available from EEGLAB at NSG, as well as important links to the use of these plugins
+NSGのEEGLABインストールは、EEGLABプラグインのほとんどへのアクセスを提供します。 NSGのEEGLABから入手可能なプラグインの下の表、およびこれらのプラグインの使用に関する重要なリンクを参照してください。
 
-| Plug-in name     | Plug-in description                           |  Optimized for NSG |
+| プラグイン名 | プラグインの説明 | NSGの最適化 |
 | ---------        | -----------                                   | --------------  
-| [AMICA](https://sccn.ucsd.edu/wiki/AMICA#How_to_run_AMICA.3F_Option_2:_Neuroscience_Gateway_.28NSG.29)            | Amica ICA algorithm plugin for EEGLAB          | Yes|
-| Dipfit            | Source localization of ICA components          | No|
-| filrfilt          | Routines for filtering data                    |No|
+| [アメリカ](https://sccn.ucsd.edu/wiki/AMICA#How_to_run_AMICA.3F_Option_2:_Neuroscience_Gateway_.28NSG.29)            | エイミカ ICA のアルゴリズムプラグイン| 有り|
+| ディップフィット | ICAコンポーネントのソースローカライズ | ナンバー|
+| filrfilt | フィルタリングデータのルーチン | ノー|
 
-Not all the EEGLAB plug-ins on NSG are optimized for use in high-performance computing resources. Currently, we are adding these capabilities to key plug-ins developed at the SCCN. Optimization of plug-ins for HPC has been indicated in the last column of the table. Documentation for the plug-ins can be found by following the link in the plug-in name.
+NSG の EEGLAB プラグインは、高性能コンピューティングリソースで使用するために最適化されています。 現在、SCCNが開発したキープラグインにこれらの機能を追加しています。 HPC用のプラグインの最適化は、テーブルの最後の列に示されています。 プラグインのドキュメンテーションは、プラグイン名のリンクに従って見つけることができます。
 

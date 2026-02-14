@@ -6,264 +6,264 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 21
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/PowPowCAT).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/PowPowCAT).
 
 <a href="images/PowPowCAT_31stEEGLABWorkshop.pdf" class="image fit"><img src="images/PowPowCAT_logo.png" alt=""></a>
-(Click the cat to download presentation slides). The slides are from the 31st EEGLAB workshop, day two 'Time-frequency and connectivity analysis' (November 30, 2021). Artwork is by Mayumi and Makoto Miyakoshi. All rights reserved!
+(クリックしてプレゼンテーションスライドをダウンロード) スライドは、第31回EEGLABワークショップ、第2回「時間頻度と接続分析」(11月30日、2021年)からあります。 作品は、宮古志摩と真琴によるものです。 お問い合わせ
 
-The PowPowCAT plugin for EEGLAB
+EEGLABのPowPowCATプラグイン
 ==============================================
 
-What it does:
+それは何をするか:
 
--   It computes within-IC cross-frequency power-power coupling
-    (covariance) called 'comodugram/comodulogram' (see references below)
-    for a single-subject continuous IC activation.
--   The preprocessing pipeline is as follows:
--   Performs Matlab spectrogram() (hence it requires Matlab Signal
-    Processing Toolbox) to compute spectrogram and power spectrum
-    density (PSD) as its temporal average using 1-s window with 50%
-    overlap and with modified () logarithmically-spaced frequency bins.
+-   それは内部ICの相互頻度力のカップリングを計算します
+    (covariance) 'comodugram/comodulogram' と呼ばれる (以下参照)
+    単一注入の連続的なICの活発化のため。
+-   前処理パイプラインは次のとおりです。
+-   Matlab の spectrogram () を実行します(Matlab 信号が必要です)
+    スペクトログラムとパワースペクトラムを計算するツールボックス
+    密度(PSD)は1秒のウィンドウを使用して、その温度平均として50%
+    オーバーラップと修正済み () logarithmical-spaced 周波数 bins.
 
 ```
 deviationFromLog = 5;
 freqBins = logspace(log10(1+deviationFromLog), log10([user_input_value]+deviationFromLog), 100)-deviationFromLog;
 ```
 
--   Finds boundary event in EEGLAB and removes the chunks that contain
-    boundaries.
--   Compute median across all the chunks to compute robust spectra, and
-    compute the variance to discard 20% of chunks for cleaning.
--   Compute covariance matrices of cross-frequency power spectrum for
-    all the ICs (hence pre-selecting ICs is recommended; see [this
-    page](https://sccn.ucsd.edu/wiki/Std_selectICsByCluster) for how to
-    perform it efficiently.)
--   Performs permutation statistics by randomizing chunk (i.e.
-    datapoint) indices differently for each frequency bin to build
-    surrogate time-frequency data, apply the same covariance
-    calculation, and repeat these processes for 5,000 times. Finally,
-    the observed (i.e. the real) covariance values are tested against
-    the surrogate distribution using non-parametric method,
-    stat_surrogate_pvals(). For multiple comparison correction, false
-    discovery rate (FDR) is computed across all ICs and all pixels.
--   By using mouse cursor, one can explore the frequency-frequency plot
-    interactively and intuitively. The combination of frequency ranges
-    as well as the correlation coefficient of the selected combination
-    are shown.
--   The subsampled time-courses of the two frequencies are shown in the
-    bottom left plot.
--   The scatter plot of the two time-series data are shown.
+-   EEGLABで境界イベントを見つけ、含まれているチャンクを削除
+    境界線。
+-   すべてのチャンクを網羅して堅牢なスペクトルを計算し、
+    洗浄のためのチャンクの20%を捨てる分散を計算します。
+-   相互周波数パワースペクトラムの計算式係数
+    すべてのIC(前選択ICが推奨されますので、こちらを参照してください)
+    ページ:()https://sccn.ucsd.edu/wiki/Std_selectICsByCluster) 方法
+    効率的に行います。)
+-   分裂統計をランダム化して実行するチャンク (i.e.)
+    datapoint) は各周波数の bin がビルドするごとに異なるインデックス
+    時間の頻度データを代理し、同じ共varianceを適用して下さい
+    これらのプロセスを5,000回繰り返します。 最後に、
+    観察値(実際の値)の共鳴値がテストされます。
+    非パラメトリック方式による代理分布
+    stat_surrogate_pvals(). 複数の比較修正の場合、false
+    検出速度(FDR)は、すべてのICとすべてのピクセルで計算されます。
+-   マウスカーソルを使うと、周波数頻度のプロットを探索できます。
+    インタラクティブで直感的に。 周波数範囲の組み合わせ
+    および選択した組み合わせの相関係数
+    詳細はこちら
+-   2つの周波数のサブサンプル時間コースは、
+    左下プロット。
+-   2つの時間系列データのスキャッタープロットが表示されます。
 
-Reference paper and erratum
+参照のペーパーおよびerratum
 ===========================
 
-[Thammasan N, Miyakoshi M. (2020). Cross-frequency Power-Power Coupling
-Analysis: A Useful Cross-Frequency Measure to Classify ICA-Decomposed
-EEG. *Sensors*. 20:7040 .](https://www.mdpi.com/1424-8220/20/24/7040)
+[Thammasan N, ミヤコシM. (2020)] クロス周波数パワーカップリング
+分析:ICA分解を分類する有用な十字頻度測定
+お問い合わせ *センサー* 20:7040 .)https://www.mdpi.com/1424-8220/20/24/7040)
 
-Here is an erratum: The equation (1) in the above paper misses the normalization term 1/k. Too bad I had not found it before I published it! 
+ここでは、erratum です。 上記の紙の中の方程式の(1)は正規化の用語1/kを欠きます。 悪すぎる 公開前に見つけられなかった! 
 
 
-How to use it
+使い方
 =============
 
-![Defaultgui.png](images/Defaultgui.png)
+![デフォルトgui.png](images/Defaultgui.png)
 
-1.  On the top left panel, choose whether you analyze electrode data or
-    ICA-decomposed data.
-2.  Enter the upper frequency limit in Hz.
-3.  Choose parametric method (Pearson's correlation coefficient) or
-    non-parametric method (Spearman's correlation coefficient). The
-    parametric method is sensitive but susceptible to outliers, while
-    the non-parametric method is robust but less sensitive. For further
-    details, please see our paper (Thammasan and Miyakoshi, 2020).
-4.  Set the number of iteration for the permutation test. Default is
+1.  左上のパネルで、電極データを分析するか、または
+    ICA分解データ
+2.  Hzの上の周波数制限を入力します。
+3.  パラメトリック方式(ピアソンの相関係数)または
+    非パラメトリック方式(スピアマンの相関係数) ふりがな
+    parametric メソッドは、感度が高いが、outlier に敏感です。
+    非パラメトリック方式は堅牢で、感度が低下します。 詳しくはこちら
+    詳細は、当紙(Thammasan and Miyakoshi, 2020)をご覧ください。
+4.  パーマテーションテストの反復の数を設定します。 デフォルトは
     5,000.
-5.  Press the button 'Precompute' to start precomputing. It may take
-    while, depending on how long your data is and how many
-    electrodes/ICs there are.
-6.  (Optional) When precompute is done, you may press the button on the
-    top middle panel to show the first 35 electrodes/ICs to see the
-    overview of the results.
-7.  On the top right panel, enter the index of electrode/IC to show the
-    results in the main interactive plotting panels. You may show the
-    raw correlation coefficients, those masked by p\<0.05 and by p\<0.01
-    after false discovery rate (FDR) correction.
+5.  「Precompute」ボタンを押して、事前に入力します。 お問い合わせ
+    しばらくの間、データがどのくらいの時間であるか、そして何
+    電極/ICがあります。
+6.  (オプション) プリコンプトが完了すると、ボタンを押します。
+    最初の35の電極/ICを表示するためのトップミドルパネル
+    結果の概要。
+7.  右上のパネルで、電極/ICのインデックスを入力して表示します。
+    主要なインタラクティブなプロット パネルの結果。 あなたが表示されます
+    生相関係数、p\<0.05とp\<0.01でマスクされたもの
+    誤った発見率(FDR)補正後。
     
-Batch process from command line
+コマンドラインからのバッチ処理
 ===============================
-The plugin package contains calc_PowPowCAT() which takes EEG and other 4
-parameters as input and outputs EEG structure which contains
-EEG.etc.PowPowCAT under which precomputed PowPowCAT variables can be found.
+プラグインパッケージには、EEG や他の 4 を取る calc_PowPowCAT() が含まれています。
+入力および出力として変数 EEG の構造は含んでいます
+EEG.etc.PowPowCAT は、PowPowPowCAT のプリコンプット変数が見つかります。
 
-Results comparison
+結果比較
 ==================
 
-These are the selected independent components (ICs) with
-ICLabel-generated probabilistic labels.
+これらは、選択した独立したコンポーネント(IC)です。
+ICLabel 生成された確率的ラベル。
 
-![Scalptopos.png](images/Scalptopos.png)
+![Scalptopos.pngの特長](images/Scalptopos.png)
 
-Here is the comparison between PPC Pearson's correlation coefficient
-(left) with Spearman's correlation coefficient (right). The input data
-was continuous. The comodulogram is thresholded at FDR-corrected
-p\<0.01. In the comodulogram, 11.5Hz-23.0Hz is selected. Note Pearson'
-correlation is slightly more sensitive. Pearson's correlation is
-calculated after removing 20% of outliers, while Spearman's correlation
-is robust so data rejection is not applied.
+PPC Pearsonの相関係数の比較はこちら
+(左)スピアマンの相関係数(右) 入力データ
+継続的だった。 Comodulogram は FDR 補正で保持されます
+p\<0.01。 comodulogramでは、11.5Hz-23.0 Hz を選択します。 ノートピアソン お問い合わせ
+相関性はもう少し敏感です。 ピアソンの相関は
+スピアマンの相関しながら、アウターの20%を除去した後に計算
+堅牢なので、データ拒否は適用されません。
 
-![Continuous_pearson.png](images/Continuous_pearson.png)![Continuous_pearson.png](images/Continuous_spearman.png)
+![連続的な_pearson.png](images/Continuous_pearson.png)![連続的な_pearson.png](images/Continuous_spearman.png)
 
-The same comparison with the same but epoched data. The comodulogram is
-thresholded at FDR-corrected p\<0.05. In the comodulogram, 11.5Hz-23.0Hz
-is selected. Note that sensitivity is reduced in the epoched data
-analysis.
+同一のデータと同一の比較。 コモジュグラムはあります
+FDR が誤った p\<0.05 で保持されている。 comodulogramでは、11.5Hz-23.0Hz
+選択します。 epochedデータの感度が低下することに注意してください
+分析。
 
-![Epoched_pearson.png](images/Epoched_pearson.png)![Epoched_pearson.png](images/Epoched_spearman.png)
+![Epoched_pearson.png _ 株式会社ドリテック](images/Epoched_pearson.png)![Epoched_pearson.png _ 株式会社ドリテック](images/Epoched_spearman.png)
 
-The difference between the continuous and epoched data analysis is that
-for the former, 1-s sliding window with overlap of 50% is applied to
-obtain spectrogram, while for the latter, each epoch served as windows
-to analyze. Generally, it is recommended that you go back to the
-continuous data and apply the analysis. The results from the
-sliding-window calculation capturing 'boundary' events are excluded to
-avoid the boundary effect.
+連続データ解析とエッチングデータの違いは、
+前者の場合、50%のオーバーラップで1秒のスライドウィンドウが適用されます。
+スペクトグラムを取得します。, 後者のために, 各エポックは、ウィンドウとして提供
+分析する。 一般的には、戻るのがおすすめです。
+連続的なデータおよび分析を適用して下さい。 結果から
+「境界」イベントをキャプチャするスライディングウィンドウ計算は、
+境界効果を避ける。
 
-Demonstration
+デモンストレーション
 =============
 
-EEGLAB workshop tutorial data 'stern_125.set' was analyzed. The
-continuous 71-ch data were low-pass filtered at 50Hz, and non-brain ICs
-were rejected manually. The overall results are shown below.
+EEGLABワークショップチュートリアルデータ 'stern_125.set' を解析しました。 ふりがな
+連続71chのデータは50Hzでろ過されたローパスおよび非brain ICでした
+手動で拒否されました。 結果は以下です。
 
-![Stern125_scalptopos.png](images/Stern125_scalptopos.png)
-![Powpowcatfigure2.png](images/Powpowcatfigure2.png)
+![Stern125_scalptopos.pngの特長](images/Stern125_scalptopos.png)
+![ポwpowcatfigure2.png](images/Powpowcatfigure2.png)
 
-For example, IC6 and IC8 look similar in terms of their scalp topography
-and frequency spectra. However, when you compare their cross-frequency
-power correlations, the difference is clearer. Compare the difference of
-10Hz-20Hz peak in the bottom-left box bewtween IC6 and IC8.
+例えば、IC6とIC8は頭皮のトポグラフィの面で似ています
+そして頻度スペクトル。 しかし、十字周波数を比較すると
+力の相関、相違はより明確です。 違いを比較する
+10Hz-20Hzは左下の箱のbewtween IC6およびIC8のピークを置きます。
 
-![Ic6vs8_redone.png](images/Ic6vs8_redone.png)
-![Powpowcatfigure5.png](images/Powpowcatfigure5.png)
-![Powpowcatfigure6_redone.png](images/Powpowcatfigure6_redone.png)
+![Ic6vs8_redone.png リリース](images/Ic6vs8_redone.png)
+![ポwpowcatfigure5.png](images/Powpowcatfigure5.png)
+![Powpowcatfigure6_redone.png _ フィードバック](images/Powpowcatfigure6_redone.png)
 
-The analysis revealed complex cross-frequency power coupling structure
-in IC15 and IC21. For example, IC15 showed 11Hz, 22Hz, 33Hz, and 44Hz
-peaks as 2nd, 3rd, and 4th harmonics. Note that the 4th harmonics can be
-seen more clearly in the correation coefficient plot than that in the
-PSD plot, indicating better sensitivity of this method to detect
-cross-frequency power-power coupling structure.
+解析は、複雑な相互周波数パワーカップリング構造を明らかにしました
+IC15およびIC21で。 例えば、IC15は11Hz、22Hz、33Hzおよび44Hzを示しました
+第2、第3、第4の調和としてピーク。 第4回高調波ができることに注意
+腐食係数のプロットでより明確に見られた
+PSDのプロット、検出するこの方法のよりよい感受性を示す
+クロス周波数パワーカップリング構造。
 
-![Powpowcatfigure7.png](images/Powpowcatfigure7.png)
+![ポwpowcatfigure7.png](images/Powpowcatfigure7.png)
 
 
-Group-level analysis (12/29/2021 added)
+グループレベルの分析 (12/29/2021追加)
 ========================================
 
-Nick Dogris hired me to develop this part of the extention.  He donated it for public use (Thanks Nick!)
-The first step is to apply a batch process on multiple .set files. This can
-be done using a batch mode. From PowPowCAT menu, click the second item.
+ニック・ドカリスは、この分裂の部分を開発するために私を雇った. 公衆利用のために寄付(Thanks Nick!)
+最初のステップは、複数の .set ファイルにバッチ処理を適用することです。 このことができます。
+バッチモードを使って行います。 PowPowCATメニューから、2番目の項目をクリックします。
 
-![shot1.png](images/shot1.png)
+![ショット1.png](images/shot1.png)
 
-It opens the following sub-window.
+次のサブウィンドウを開きます。
 
-![shot2.png](images/shot2.png)
+![ショット2.png](images/shot2.png)
 
-At this stage, both electrode data and ICA-decomposed data are available.
-The results from the calculation is stored under EEG.etc.PowPowCAT. Note that
-this batch process overwrites the exising .set files. Note also that the
-target .set files must be in the single folder.
-
-
-When the batch process is finished, go to the next step. Note that from now on,
-only ICA-decomposed results are supported because the solution uses dipole
-density plots.
-
-![shot3.png](images/shot3.png)
-![shot4.png](images/shot4.png)
-
-In this sub-window, first push the top button. This promptes the user to select
-all the pre-computed data. By selecting all the data you want to include, it
-automatically starts the next calculation for optimum clustering. It may take a
-few minutes. Then the following result report pops up.
-
-![shot5.png](images/shot5.png)
-
-These plots show results from evalution of optimality when the numbers of the
-clusters are varied from 5 to 15. There are three popular criterion used for
-the k-means algorithm. The optimum points are highlighted with blue dots. In this
-example, I choose 11 because Silhouette index shows a slight peak there. Based on
-this decision, the default number is changed from 5 to 11. If you want, a part
-of the result we will see can be exported in an Excel file format by specifying
-the output folder (the bottom pushbotton and the edit box).
-
-![shot6.png](images/shot6.png)
-
-By pressing 'Visualizee the results' button, it generates the clustering results.
-
-![shot7.png](images/shot7.png)
-
-Note that it generates Matlab variable PowPowCAT in the base workspace by default.
-This is a structure variable which contains basically all the results for the
-user-defined optimum number of clusters. If the optional file export is also
-requested, it save to the part of the output: dataset ID, within-subject IC indices,
-and the corresponding cluster indices.
-
-![shot8.png](images/shot8.png)
+この段階では、電極データとICA分解データの両方が利用可能です。
+計算の結果は EEG.etc.PowPowPowCAT で保存されます。 注意:
+このバッチ プロセスは、exising .set ファイルを上書きします。 注意して、
+対象となる .set ファイルは 1 つのフォルダーにある必要があります。
 
 
-Reference
+バッチ処理が完了したら、次のステップに進みます。 今から、
+ソリューションがダイポールを使用するため、ICA分解結果のみがサポートされています。
+密度のプロット。
+
+![ショット3.png](images/shot3.png)
+![ショット4.png](images/shot4.png)
+
+このサブウィンドウで、最初にトップボタンを押します。 これはユーザーが選択するように促します
+すべての事前入力されたデータ。 含めるすべてのデータを選択することで、
+最適なクラスタリングの次の計算を自動的に開始します。 それは取るかもしれません
+数分。 その後、次の結果レポートがポップアップ表示されます。
+
+![ショット5.png](images/shot5.png)
+
+これらのプロットは、数値の最適な評価から結果を表示します
+クラスターは5から15までさまざまです。 3つの人気基準があります
+k-means アルゴリズム。 青色の点で最適な点を強調しています。 お問い合わせ
+例えば、シルエットのインデックスがそこにわずかなピークを示すので、私は11を選ぶ。 会社概要
+この決定は、デフォルト番号は5から11に変更されます。 あなたが望むなら、部分
+結果の出力はExcelファイルフォーマットで指定することで出力できます
+出力フォルダ(下押しボタンと編集ボックス)。
+
+![ショット6.png](images/shot6.png)
+
+「結果を可視化する」ボタンを押して、クラスタリング結果を生成します。
+
+![ショット7.png](images/shot7.png)
+
+デフォルトでベースワークスペースにMatlab変数PowPowCATを生成します。
+これは基本的にすべての結果が含まれている構造変数です。
+ユーザー定義のクラスターの最適数。 オプションのファイルエクスポートも
+要求される、それは出力の部分に救います:データセットID、内部注入ICのインデックス、
+対応するクラスターインデックス。
+
+![ショット8.png](images/shot8.png)
+
+
+参考文献
 =========
 
-[Thammasan N, Miyakoshi M. (2020). Cross-frequency Power-Power Coupling
-Analysis: A Useful Cross-Frequency Measure to Classify ICA-Decomposed
-EEG. *Sensors*. 20:7040 .](https://www.mdpi.com/1424-8220/20/24/7040)
+[Thammasan N, ミヤコシM. (2020)] クロス周波数パワーカップリング
+分析:ICA分解を分類する有用な十字頻度測定
+お問い合わせ *センサー* 20:7040 .)https://www.mdpi.com/1424-8220/20/24/7040)
 
-Llinás RR, Ribary U, Jeanmonod D, Kronberg E, Mitra PP. (1999).
-Thalamocortical dysrhythmia: A neurological and neuropsychiatric syndrome
-characterized by magnetoencephalography. *Proc Natl Acad Sci USA*.
+Llinás RR、Ribary U、Jeanmonod D、Kronberg E、Mitra PP。 (1999)。
+解剖学的 dysrhythmia: 神経質および神経精神科症候群
+マグネロエンセファログラフィーによって特徴付けられる。 ※Proc Natl Acad Sci USA* は、米国にてご確認いただけます。
 96:15222-15227
 
-Sterman MB, Kaiser D. (2000). Comodulation: A new QEEG analysis metric
-for assessment of structural and functional disorders of the central
-nervous system. *Journal of Neurotherapy*. 4:73-83.
+ステルマンMB、カイザーD.(2000)。 調整: 新しいQEEG分析メトリック
+中央の構造的および機能的障害の評価のため
+神経系。 *神経療法*のジャーナル。4:73-83。
 
-Buzsaki G, Buhl DL, Harris KD, Csicsvari J, Czeh B, Morozov A. (2003).
-Hippocampal network patterns of activity in the mouse. *Neuroscience*.
+Buzsaki G、Buhl DL、Harris KD、Csicsvari J、Czeh B、Morozov A.(2003)。
+マウスでのアクティビティのHippocampalネットワークパターン。 *神経科学*
 116:201-211.
 
-Csicsvari J, Jamieson B, Wise KD, Buzsaki G. (2003). Mechanisms of Gamma
-Oscillations in the Hippocampus of the Behaving Rat. *Neuron*.
+Csicsvari J、Jamieson B、Wise KD、Buzsaki G.(2003)。 ガンマのメカニズム
+救命ラットのHippocampusの振動。 *Neuron*。
 37:311-322.
 
-Thatcher RW, Biver CJ, North DM. (2004). EEG and Brain Connectivity: A
-Tutorial. *Unpublished manuscript, PDF available online*.
+シーザーRW、バイバーCJ、ノースDM。 (2004)。 EEGと脳の接続性: A
+チュートリアル。 ※未公開原稿、PDF対応可
 
-Sullivan D, Csicsvari J, Mizuseki K, Montgomery S, Diba K, Buzsaki G.
-(2011). Relationships between hippocampal sharp waves, ripples, and fact
-gamma oscillation: infludence of dentate and entorhinal cortical
-activity. *The Journal of Neuroscience*. 31:8605-8616.
+Sullivan D、Csicsvari J、Muzuseki K、モンゴメリーS、Diba K、Buzsaki G。
+(2011). ヒポカンカルな鋭い波、さざ波および事実間の関係
+ガンマの発振: デンタルトとエントルヒンルコルティカルの侵入
+活動。 *神経科学ジャーナル*。31:8605-8616。
 
-Buzsaki G, Wang X-J. (2012). Mechanisms of Gamma Oscillations. *Annu Rev
+Buzsaki G, 王 X-J. (2012). ガンマオシレーションのメカニズム。 *アンヌ・レフ
 Neurosci*. 35:203-225.
 
-Jirsa V, Mueller V. (2013). Cross-frequency coupling in real and virtual
-brain networks. *Frontiers in Computational Neuroscience*. 7:78.
+ジルサV、ミュラーV。 (2013)。 実質および事実上の十字頻度カップリング
+脳ネットワーク。 *神経科学のフロンティア* 7:78.
 
-Zobay O, Adjamian P. (2015). Source-Space Cross-Frequency
-Amplitude-Amplitude Coupling in Tinnitus. *BioMed Research
-International*. 2015:489619.
+Zobay O, アドジャマイアン P. (2015). Source-Space クロス周波数
+Tinnitusの振幅振幅のカップリング。 *バイオメド研究
+国際*. 2015:489619.
 
-Yeh C-H, Lo MT, Hu K. (2016). Spurious cross-frequency
-amplitude-amplitude coupling in nonstationary, nonlinear signals.
-Physica A. 454:453-150.
+Yeh C-H, Lo MT, Hu K. (2016). 洗練されたクロス周波数
+非文脈、非線形信号の広さの結合。
+物理A. 454:453-150.
 
-Acknowledgement
+アクノレッジメント
 ===============
 
-I express my gratitude to Drs. Gyorgy Buzsaki and Tim Mullen for
-informative communication.
+Gyorgy Buzsaki と Tim Mullen 博士の感謝を申し上げます。
+有益なコミュニケーション。
 
-(This page was written by Makoto Miyakoshi)
+(このページは宮越真琴著)

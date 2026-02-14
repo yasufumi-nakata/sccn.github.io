@@ -1,71 +1,71 @@
 ---
 layout: default
 ---
-DIPFIT vs. BESA study using the spherical head model
+DIPFIT対BESAが球面ヘッドモデルを用いた研究
 --------
 
-[statistics](Statistics.md)
+[統計情報](Statistics.md)
 
-We (AD) checked the results of fitting equivalent dipoles with DIPFIT
-(spherical model) against results of BESA(3.0) for independent
-components of data recorded in a working memory task in our laboratory.
-There were 72 channels, of which 69 were used for dipole fitting. In
-particular, we excluded tow EOG channels and the reference channel. We
-performed ICA on data from three subjects and fit all 69 resulting
-components with single dipoles using BESA (see the BESAFIT plugin
-Appendix) and DIPFIT. We then compared only those dipoles whose residual
-variance was less than 15% (see plot below).
+DIPFITと同等のダイポールのフィッティング結果を確認
+(球面モデル) 独立したBESA(3.0)の結果に対して
+私たちの研究室で作業メモリタスクで記録されたデータのコンポーネント。
+ダイポールフィッティングに69使用した72チャンネルがありました。 お問い合わせ
+特に、TOW EOG チャネルとリファレンスチャネルを除外しました。 お問い合わせ
+ICAは3つの被写体からデータを処理し、69件すべてに適合
+BESA(BESAFITプラグイン参照)を使用したシングルダイポールのコンポーネント
+付録)およびDIPFIT。 その後、残留物が残っているダイポールだけと比較しました
+variance が 15% 未満であった(下図を参照)。
 
-![Image:Comparedipfitbesa.gif](/assets/images/Comparedipfitbesa.gif)
+![画像:Comparedipfitbesa.gif](/assets/images/Comparedipfitbesa.gif)
 
-Distances between equivalent dipole locations returned by DIPFIT1 and
-BESA(3.0) were less than 3 mm (left panel) Note: The outliers were
-infrequent failures to converge by either algorithm. Dipole angle
-differences were below 2 degrees (middle panel). Residual variances
-(mismatch between the component scalp map and the model pole projection)
-were near equal (right panel). A few dipoles were localized with
-residual variance below 15% by DIPFIT but not by BESA (4 of 213
-components); a few others with residual variance below 15% by BESA but
-not by DIPFIT (8 of 213 components). Optimization nonlinearities may
-account for these small differences between the two algorithms, as the
-solution models used in the two programs are theoretically identical.
+DIPFIT1 で返される同等なダイポールの位置間の間隔
+BESA(3.0)は3mm(左パネル)未満でした。 アトリエは
+アルゴリズムによって収束する不十分な失敗。 ダイポールアングル
+差分は2度以下でした。 在留資格
+(コンポーネントのスカルプマップとモデルポールプロジェクションの中間)
+平等(右パネル)近くでした。 いくつかのダイポールがローカライズされた
+DIPFITで15%未満の残留差は、BESA (4 の 213
+コンポーネント;BESAの15%未満の残留差を持つ他のいくつかが、
+DIPFIT (8 213 コンポーネント) ではありません。 最適化の非線形性はかもしれない
+これら2つのアルゴリズムの小さな違いのアカウント
+2つのプログラムで使用されるソリューションモデルは理論的に同一です。
 
-The main advantage of using DIPFIT over BESA for localization of
-equivalent dipoles for independent component scalp maps is that it is
-integrated into MATLAB and EEGLAB, and can be used in batch processing
-scripts. BESA has additional capabilities not relevant to DIPFIT.
-Succeeding versions of BESA did not allow a batch processing option.
+ローカル化のためのBESA上のDIPFITを使用しての主な利点
+独立したコンポーネントのスカルプマップの同等のダイポールは、それが
+MATLABおよびEEGLABに統合し、バッチ処理で使用することができます
+スクリプト。 BESAには、DIPFITに関連しない機能が追加されています。
+BESAのSucceedingバージョンでは、バッチ処理オプションは使用できませんでした。
 
-### Spherical model error
+### 球面モデルエラー
 
-The following article in Frontiers [Corrected Four-Sphere Head Model for
-EEG Signals](https://www.frontiersin.org/articles/10.3389/fnhum.2017.00490/full)
-claim "errors in the formulas \[for the spherical model\] both in the
-original paper and in the book”, and then refer to a 1998 paper and 2006
-book. It seems to me that Srinivasan made an error in 1998 that was
-copied in his contribution to Nunez’ book in 2006. However, the author
-have not looked up the original original work, which as far as we know
-is [https://www.ncbi.nlm.nih.gov/pubmed/95707](https://www.ncbi.nlm.nih.gov/pubmed/95707) which is from 1979. And
-note that in the 2nd half of the ’80s and certainly in the ‘90s the
-4-concentric-sphere model was widely already (e.g. in BESA above). The
-version of BESA we used to compare with Dipfit was BESA 3.0 which was
-likely release before 1998 since it was released before BESA 99 (in
+フロンティアズの次の記事【四球ヘッドモデルの調整】
+EEG信号](https://www.frontiersin.org/articles/10.3389/fnhum.2017.00490/full)
+クレーム "式内のエラー\[球面モデルの場合\]
+原紙と本で、1998年製紙と2006年
+予約する Srinivasanが1998年にエラーを犯したと私は思います
+2006年にNunezの書籍に寄稿しました。 しかし、著者は
+オリジナルのオリジナル作品は見ていません。
+お問い合わせ [https://www.ncbi.nlm.nih.gov/pubmed/95707](https://www.ncbi.nlm.nih.gov/pubmed/95707) 1979年(昭和27年)より そして
+'80s の 2 番目の半分で、確かに ‘90s に注意してください。
+4つの同心球モデルは既に(上のBESAの例えば)ありました。 ふりがな
+Dipfitと比較するために使用したBESAのバージョンはBESA 3.0でした。
+BESA 99以前にリリースされた1998年以前のリリース(in)
 1999).
 
-Our implementation in Dipfit (and FieldTrip) was programmed by Robert
-Oostenveld and is based on the Habilschrift (sort of advanced PhD thesis
-that only exists in Germany) from Bernd Lutkenhoner from 1992. That
-habilschrift is not available in pdf or online, but Robert Oostenveld
-has a paper copy. The reason Robert Oostenveld used that description is
-that it includes coordinate transformations for the dipole to be off
-from the z-axis, i.e. at a arbitrary location in the brain. Right now,
-until proven wrong, we don’t see a reason why the implementation in
-Dipfit would be wrong, or that it would be based on an incorrect
-published description.
+Dipfit(およびFieldTrip)の実装は、Robertによってプログラムされました
+Oostenveld と Habilschrift に基づいている (高度な博士論文のソート)
+1992年ベルン・ルッケンホーナーよりドイツにしか存在しません。 お問い合わせ
+habilschriftはpdfかオンラインで利用できませんが、ロバートOostenveld
+紙のコピーを持っています。 理由 ロバート・オオステンドヴェルドは、その説明が使用されている
+それには、ダイポールがオフになるための座標変換が含まれています
+脳内の任意の場所にあるz軸、すなわち。 今のところ、
+実証済みの問題まで、実装の理由は見ていません。
+Dipfit が間違っているか、誤りに基づいているか
+公開説明.
 
-There is another function to perform spherical source localization in
-Brainstorm
+球状ソースのローカリゼーションを実行する別の機能があります。
+ブレインストーム
 <https://github.com/brainstorm-tools/brainstorm3/blob/master/toolbox/forward/bst_eeg_sph.m>
-which is an approximation (Dipfit uses an exact computation, albeit a
-series expansion that is truncated by default at order 60). It would be
-worth to compare the results of this function with the result of Dipfit.
+これは近似である(Dipfitは、正確な計算を使用しており、
+順序60でデフォルトでtuncatedされるシリーズ拡張。 お問い合わせ
+Dipfitの結果とこの関数の結果を比較する価値があります。

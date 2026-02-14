@@ -2,7 +2,7 @@
 layout: default
 nav_exclude: true
 ---
-<button class="float-right" onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'LiveScripts', 'dipfit_source_reconstruction.mlx'));">Show MATLAB command</button>
+<button class="float-right" onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'LiveScripts', 'dipfit_source_reconstruction.mlx'));">MATLABコマンドを表示する</button>
 
-<a style="cursor: pointer" onclick="showModal(this)" data-command="another command">Show MATLAB command</a>
+<a style="cursor: pointer" onclick="showModal(this)" data-command="another command">MATLABコマンドを表示する</a>
 

@@ -7,7 +7,7 @@ render_with_liquid: false
 title: Scheme-of-plug-in-functions-call
 long_title: Scheme-of-plug-in-functions-call
 ---
-The figure below shows a scheme of function calls in _nsgportal_. In the plug-in there are two main sets, or layers, of functions designated by the prefix _pop__ and _nsg__. The _pop__ functions open a parameter entry window when called with fewer than the required arguments, else run directly without opening a window.  The second class of nsgportal functions with prefix _nsg__ can be called directly from MATLAB command line or from other MATLAB scripts or functions. These functions perform lower-level processing than the pop_ functions. A plug-in function (_eegplugin_nsgportal_) manages the inclusion and appearance of an nsgportal item in the main EEGLAB window menu. 
+下の図は _nsgportal_ で関数呼び出しのスキームを示します。 プラグインには、2つのメインセット、レイヤー、プレフィックス _pop__ と _nsg___ によって指定された関数があります。 _pop__ 関数は、必要な引数よりも少ない引数で呼び出されたときにパラメータのエントリーウィンドウを開き、ウィンドウを開くことなく直接実行します。 nsgportal 関数の 2 番目のクラスは、MATLAB コマンドラインや MATLAB スクリプトや関数から直接呼び出すことができます。 これらの関数は pop_ 関数よりも低レベルの処理を実行します。 プラグイン関数 (_eegplugin_nsgportal_) は、メインの EEGLAB ウィンドウ メニューの nsgportal アイテムの包含と外観を管理します。 
 
 <center>
 <img src="https://github.com/sccn/nsgportal/blob/master/docs/img/nsgportal_scheme_call.png?raw=true" alt="drawing" width="1000"/>

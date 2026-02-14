@@ -7,127 +7,127 @@ render_with_liquid: false
 title: Chapter-01-Getting-Started-with-NFT
 long_title: Chapter-01-Getting-Started-with-NFT
 ---
-Introduction
+導入事例
 ------------
 
-The Neuroelectromagnetic Forward Head Modeling Toolbox is an open-source
-software toolbox running under MATLAB (The Mathworks, Inc.) for
-generating realistic head models from available data (MRI and/or
-electrode locations) and for solving the forward problem of
-electro-magnetic source imaging. The toolbox includes tools for
-segmenting scalp, skull, cerebrospinal fluid (CSF) and brain tissues
-from T1-weighted magnetic resonance (MR) images. After extracting the
-segmented tissue volumes, mesh generation can be performed. When MR
-images are not available, it is possible to warp a template head model
-to measured electrode locations to obtain a better-fitting head model.
-The toolbox also includes electrode scalp mesh co-registration and
-generation of a uniform source space inside the brain volume for to be
-used in coarse source localization. The Boundary Element Method (BEM) is
-used for the numerical solution of the forward problem. Toolbox
-functions can be called from either a graphic user interface or from the
-command line. Function help messages and a tutorial are included. The
-toolbox is freely available under the GNU Public License for
-noncommercial use and open source development.
+神経電磁気 フォワードヘッドモデリング Toolboxはオープンソースです。
+MATLAB(Mathworks, Inc.)で動作するソフトウェアツールボックス
+利用可能なデータ(MRIおよび/または)から現実的なヘッドモデルを生成する
+電極の位置)および前方問題の解決のため
+電磁石の源のイメージ投射。 ツールボックスにはツールが含まれています
+頭皮、頭皮、cerebrospinalの液体(CSF)および脳のティッシュを分けること
+T1級磁気共鳴(MR)画像より。 抽出した後
+区分されたティッシュの容積、網の生成は行うことができます。 MRの場合
+テンプレートヘッドモデルを警戒することができません
+電極位置を測定し、より優れた装着ヘッドモデルを得る。
+ツールボックスには、電極の頭皮メッシュの共同登録と
+脳内の均一なソース空間を生成し、
+粗いソース ローカリゼーションで使用される。 境界要素法(BEM)は
+前方問題の数値ソリューションに使用されます。 ツールボックス
+関数は、グラフィックユーザーインターフェイスまたはから呼び出すことができます。
+コマンドライン 機能ヘルプメッセージとチュートリアルが含まれています。 ふりがな
+ツールボックスは、GNUパブリックライセンスの下で自由にご利用いただけます
+非商用利用とオープンソース開発。
 
-The toolbox uses the following third party tools and libraries for
-segmentation, mesh generation and forward problem solution. The source
-codes for these tools are available.
+ツールボックスは、次のサードパーティのツールとライブラリを使用します。
+セグメント化、メッシュ生成およびフォワード問題ソリューション。 ソース
+これらのツールのコードは利用可能です。
 
-1\. ASC - for triangulation of 3D volumes.
+1\. ASC - 3Dボリュームの三角化のために。
 
-2\. Qslim - for mesh coarsening.
+2\。 Qslim - メッシュ粗加工用。
 
-3\. Matitk - Matlab interface to the ITK image processing toolkit.
+3\。 Matitk - ITK画像処理ツールキットへのMatlabインターフェイス。
 
-4\. Metu-bem - Boundary Element Method solver.
+4円 Metu-bem - 境界要素メソッドソルバー。
 
-The NFT toolbox provides a user interface (UI) for segmentation, mesh
-generation and for creating the numerical head model. It also has a well
-defined MATLAB command-line interface.
+NFTツールボックスは、セグメンテーション、メッシュ用のユーザーインターフェイス(UI)を提供します
+生成と数値ヘッドモデルの作成 それはまたよくあります
+MATLABコマンド・ライン・インタフェースを定義しました。
 
-This manual explains how to use the NFT toolbox. The head modeling UI,
-the command line API and the structures are described. An overview of
-the implementation is provided.
+このマニュアルでは、NFTツールボックスの使用方法について説明します。 ヘッドモデリングUI、
+コマンドライン API と構造を記述します。 会社概要
+実装が提供されます。
 
-The next section describes the installation of the toolbox. The Getting
-Started section provides an overview of the interface. Head modeling
-from 3D MR images is described next, followed by head modeling from
-template warping. This is followed by a section on forward modeling and
-examples. The [final
-section](Chapter_05_NFT_Commands_and_Functions "wikilink") is a
-summary of all toolbox functions and commands.
+次のセクションでは、ツールボックスのインストールについて説明します。 取得する
+インターフェイスの概要を提供するセクションを開始。 ヘッドモデリング
+3D MR画像は、次の3D MR画像から記述され、その後、ヘッドモデリングから
+テンプレートワーピング。 これは、前方モデリングのセクションで続きます
+例) ザ [final]
+セクション](Chapter_05_NFT_Commands_and_Functions "wikilink")は、
+すべてのツールボックス関数とコマンドの概要。
 
-Installation and Configuration
+インストールと構成
 ------------------------------
 
-This section describes installation and configuration of the NFT
-Toolbox. The following steps are necessary for a proper installation of
-the toolbox:
+このセクションでは、NFTのインストールと構成について説明します
+ツールボックス。 次の手順は、適切なインストールのために必要です
+ツールボックス:
 
-1\. Extract or copy the toolbox directory to a suitable place on your
-computer file system.
+1円 ツールボックスのディレクトリを抽出またはコピーする
+コンピュータファイルシステム。
 
-2\. The extracted directory will contain m-files, and C++ executables.
+2\。 抽出されたディレクトリには m-files と C++ の実行ファイルが含まれます。
 
-3\. Add the toolbox directory to the MATLAB path. You can use the File →
-SetPath menu item or the addpath() function. Under linux/unix, you may
-add the directory to the MATLABPATH.
+3\。 MATLABパスにツールボックスディレクトリを追加します。 ファイル →
+setPath メニュー項目または addpath() 関数。 linux/unix では、
+MATLABPATH にディレクトリを追加します。
 
-The toolbox can also make use of the Matlab Parallel Processing toolbox
-(if installed) to distribute the computation of the transfer and
-lead-field matrices to multiple processors. To do this, before running
-NFT, the user must simply enter
+ツールボックスは、Matlab 並列処理ツールボックスの使用も可能です
+(インストールされている場合) 転送の計算を配布し、
+複数のプロセッサへのリードフィールドのマトリックス。 これを行うには、実行前に
+NFT は、単に入力しなければなりません
 
-\>\> matlabpool(n) % where n is the number of compute nodes available
+\>\> matlabpool(n) % は、n が利用可能な計算ノードの数です。
 
-In parallel mode, wait bars do not appear while computing the transfer
-and lead-field matrices.
+並列モードでは、転送を計算している間にバーが表示されないのを待ちます
+リードフィールドのマトリックス。
 
-Getting Started
+始める
 ---------------
 
-The toolbox starts by typing
-Neuroelectromagnetic_Forward_Modeling_Toolbox or NFT on command window.
-Main window appears as shown in Figure 1. This window is divided into
-three panels. The first panel is used to select the working folder, and
-to name the subject and the session. The NFM toolbox requires a subject
-folder to be specified at startup. All subject specific output is saved
-into this folder. The filenames are derived from the subject and session
-names entered into this panel. The second panel is the Head modeling
-panel. The head model can either be created from MR images, or a
-template head model can be warped to digitized sensors. The head
-modeling panel provides the following operations when creating a head
-model from MR images:
+ツールボックスはタイピングで始まります
+コマンドウィンドウのNeuroelectromagnetic_Forward_Modeling_ToolboxまたはNFT。
+図1に示すようにメインウィンドウが表示されます。 このウィンドウは分割されます
+3つのパネル。 最初のパネルは、作業フォルダを選択するために使用されます。
+被写体とセッションの名前を付ける。 NFMツールボックスは、対象を要求します
+起動時に指定するフォルダ すべての被写体固有の出力が保存されます
+このフォルダに。 ファイル名は、対象とセッションから派生します。
+このパネルに入力された名前。 2番目のパネルはヘッドモデリングです
+パネル。 ヘッドモデルは、MRイメージから作成するか、またはMRイメージから作成できます。
+テンプレートヘッドモデルは、デジタルセンサーに警告することができます。 ヘッド
+モデリングパネルは、ヘッドを作成するときに次の操作を提供します
+MRイメージからのモデル:
 
-![NFT_ui](NFT_ui.png)
+![NFT_uiの特長](NFT_ui.png)
 
-**Image Segmentation**
-
-
-
-Interface for tissue classification from 3D MR Images.
-
-**Mesh Generation**
+**画像のセグメンテーション* * 必須
 
 
 
-Uses the segmentation results to generate realistic BEM meshes.
+3D MR イメージからの組織の分類のためのインターフェイス。
 
-**Source Space Generation**
-
-
-
-Generates a regular grid sources within the brain mesh.
-
-**Electrode Co-Registration**
+**メッシュジェネレーション**
 
 
 
-Registers digitized electrode locations to the scalp mesh.
+セグメント化結果を使用して、現実的なBEMメッシュを生成します。
 
-When generating a template-based head model from digitized electrode
-positions, the only option is Template Warping. The final panel in the
-main menu is for Forward Model Generation. This opens up the Forward
-Model Generation interface which is used to compute the BEM coefficient
-matrix, create the transfer matrices for each sensor, and generate lead
-field matrices for a source distribution.
+**Source Space世代**
+
+
+
+脳メッシュ内の定期的なグリッドソースを生成します。
+
+**電極共同登録**
+
+
+
+電極の位置をスカルプメッシュに登録します。
+
+数値化した電極からテンプレートベースのヘッドモデルを生成するとき
+位置、唯一のオプションは、テンプレートワーピングです。 最終的なパネル
+メインメニューはフォワードモデル生成用です。 フォワードを開く
+BEM係数を計算するために使用されるモデル生成インターフェイス
+マトリクスは、各センサーのトランスファーマトリクスを作成し、リードを生成します
+ソース分布のためのフィールドマトリックス。

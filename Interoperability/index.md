@@ -6,8 +6,8 @@ has_children: true
 has_toc: true
 nav_order: 5
 ---
-# EEGLAB interoperability
+# EEGLABの相互運用性
 
-The pages below describe how EEGLAB compare and interact with other software and environments.
+以下のページでは、EEGLABが他のソフトウェアと環境を比較し、やり取りする方法について説明します。
 
 

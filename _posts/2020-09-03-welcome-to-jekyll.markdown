@@ -4,25 +4,25 @@ title:  "Welcome to Jekyll!"
 date:   2020-09-03 14:06:30 -0400
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+この投稿をあなたの投稿で見つける `_posts` ディレクトリ。 先に進んで編集し、サイトを再構築して変更を確認します。 多くの異なる方法でサイトを再構築することができますが、最も一般的な方法は実行することです `jekyll serve`Webサーバーを起動し、ファイルを更新したときにサイトを自動再生します。
 
-Jekyll requires blog post files to be named according to the following format:
+Jekyllは、次の形式に従って名前を付けるためにブログの投稿ファイルを要求します。
 
 `YEAR-MONTH-DAY-title.MARKUP`
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+どこまでも `YEAR` 4桁の数字です。 `MONTH` そして、 `DAY` 2桁の数字で、 `MARKUP` ファイルの形式を表すファイル拡張子です。 その後は、必要な正面の事項を記入します。 この投稿のソースを見て、それがどのように動作するかについて考えてみましょう。
 
-Jekyll also offers powerful support for code snippets:
+Jekyllはコードスニペットの強力なサポートも提供しています。
 
 {% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+def print_hi(名前)
+  "こんにちは、#{name}" を置く
+メニュー
+print_hi('トム')
+#=> 'Hi, Tom' を STDOUT に印刷します。
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Jekyllを最大限に活用する方法の詳細については、[Jekyll docs][jekyll-docs]をご覧ください。 [Jekyll's GitHub repo][jekyll-gh] ですべてのバグ/feature リクエストをファイルします。 質問がある場合は、[Jekyll Talk][jekyll-talk]にご連絡ください。
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll

@@ -7,51 +7,51 @@ render_with_liquid: false
 title: NFT-Appendix-C
 long_title: NFT-Appendix-C
 ---
-Effect of brain-to-skull conductivity ratio estimate on EEG source localization
+EEGソースローカリゼーションに対する脳対頭脳伝導率推定の影響
 -------------------------------------------------------------------------------
 
-An important consideration for obtaining accurate forward problem
-solutions is to correctly model the distribution of conductivity within
-the head. In the literature, consistent conductivity values have been
-reported for scalp, brain, and CSF tissues but there has been a huge
-variation in reported skull conductivity values. This is partly caused
-by variations in skull conductivity from person to person and throughout
-the life cycle (Hoekema et al 2003), and partly from use of different
-measurement/estimation methods (Oostendorp et al 2000). In the 1970's
-and 80's the brain-to-skull conductivity ratio was reported to be 80
-(Rush 1968, Cohen 1983), still a very commonly used ratio in EEG source
-localization. More recent studies in the last decade have reported this
-ratio to be as low as 15 (Oostendorp 2000). In a more recent study on
-epilepsy patients undergoing presurgical evaluation using simultaneous
-intra-cranial and scalp EEG recordings, the average brain-to-skull
-conductivity ratio was estimated to be 25 (Lai 2005).
+正確なフォワードの問題を得るための重要な考慮事項
+ソリューションは、内部の導電性の分布を正しくモデル化することです。
+ヘッド。 文献では、一貫した導電性値が
+頭皮、脳およびCSF組織のために報告されたが、巨大な
+報告された頭蓋骨伝導性値の変化。 これは部分的に引き起こされます
+人から人まで、そして全体を通して、頭蓋骨の伝導性の変化によって
+ライフサイクル(Hoekema et al 2003), 一部異なる使用から
+測定/推定方法(Oostendorp et al 2000)。 1970年代に
+80年代の頭脳対頭脳導電率が80になると報告
+(ルシュ 1968, コーエン 1983), まだ EEG ソースで非常に一般的に使用される比率
+ローカリゼーション。 過去10年間でより最近の研究が報告されています
+15(Oostendorp 2000)と同じくらいの割合。 最近の研究では
+同時性を用いた術前評価を受けている精神病患者
+intra-cranial と scalp EEG の記録、平均的な脳対頭骨
+導電率は25(平成17年)と推定される。
 
-Below, we present some simulation results showing the effects of using
-incorrect skull conductivity values on equivalent dipole source
-localization. For this purpose, we solved the forward electrical head
-model problem using a realistic, subject-specific four-layer BEM model
-built from a subject’s MR head image using the NFT toolbox (Akalin Acar
-& Makeig, 2010). We set the forward model (‘ground truth’)
-brain-to-skull conductivity ratio to 25 and then solved the inverse
-problem using the same realistic head model using the commonly used
-ratio of 80. This produced equivalent dipole localization errors of up
-to 2.5 cm (figure below, top row). The positions of the grid of model
-dipoles were moved towards the scalp surface. On the other hand, (figure
-below, bottom row) if the brain-to-skull conductivity ratio was
-mis-estimated to be 15 when solving the inverse problem, the dipoles
-were localized more towards the center of the brain with localization
-errors up to 1 cm (Akalin Acar & Makeig, 2012). Therefore, correct
-modeling of skull conductivity is an important factor for EEG source
-localization.
+以下では、使用効果を示すシミュレーション結果を紹介します。
+同等ダイポールソースの誤った頭蓋骨伝導値
+ローカリゼーション。 この目的のために、私達は前方電気頭部を解決しました
+現実的、主題固有の4層BEMモデルを用いたモデルの問題
+NFTツールボックス(Akalin Acar)を用いたMRヘッドイメージから構築
+& Makeig、2010年。 フォワードモデル(「地理」)を設定します。
+脳対頭の導電率を25にし、逆に解決
+一般的に使用されるを使用して同じ現実的なヘッド モデルを使用して問題
+80の比率。 これは、アップの同等のダイポールローカリゼーションエラーを生成しました
+最上段2.5cmまで モデルのグリッドの位置
+頭皮の表面にダイポールが移動しました。 一方、(図)
+脳対頭の導電率がなかった場合、下列)
+逆の問題を解決するときに15であることを誤って推定、ダイポール
+ローカリゼーションで脳の中心に向かってローカライズされた
+1cmまでのエラー(Akalin Acar & Makeig、2012)。 したがって、正しい
+頭蓋骨伝導のモデル化は、EEG ソースの重要な要因です。
+ローカリゼーション。
 
 ![](Wiki_figure.png "wikilink")
 
-Figure 1. Equivalent dipole source localization error directions
-(arrows) and magnitudes (colors) for a 4-layer realistic BEM head model
-when the brain-to-skull conductivity ratio was estimated to be 80 as
-opposed to the actual simulated forward model value of 25 (top row) and
-as 15 (as opposed to 25) (bottom row). The source space was a regular
-Cartesian grid of single equivalent dipole sources with 8-mm spacing
-filling the brain volume. The three columns show the errors when the
-equivalent dipole sources are oriented in x-, y-, and z-directions,
-respectively.
+プロフィール 1. 等価なダイポールのソース ローカリゼーションの間違いの方向
+4層現実的なBEMヘッドモデルのための(矢印)と大きさ(色)
+頭脳対頭伝導率が80と推定されたとき
+25(上列)の実際のシミュレート前方モデル値と反対
+15(25ではなく)(ボトム行)として。 ソーススペースは普通でした
+8mmの間隔の単一の同等のダイポールの源のCartesianの格子
+脳の容積を満たして下さい。 3つの列はエラーを表示します
+同等なダイポールソースは、x-、y-、およびz-directionsで指向しています。
+それぞれ。

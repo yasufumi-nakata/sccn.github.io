@@ -9,232 +9,232 @@ long_title: Documentation
 ---
 ![](Get_chanlocs.jpg)
 
-[Download the *get_chanlocs* User Guide](https://sccn.ucsd.edu/eeglab/download/Get_chanlocs_userguide.pdf)
+[*get_chanlocs*をダウンロード ユーザーガイド](https://sccn.ucsd.edu/eeglab/download/Get_chanlocs_userguide.pdf)
 
-### What is *get_chanlocs*?
+### *get_chanlocs*とは?
 
-The *get_chanlocs* EEGLAB plug-in is built on functions in
-[FieldTrip](http://www.fieldtriptoolbox.org/) to locate 3-D electrode
-positions from a 3-D scanned head image. Robert Oostenveld, originator
-of the FieldTrip toolbox, alerted us in 2017 that he and his students in
-Nijmegen had put functions into FieldTrip to compute positions of scalp
-electrodes from the recorded 3-D images for one 3-D camera, the
-[Structure scanner](https://structure.io/) mounted to an Apple iPad.
-(Read [Homölle and Oostenveld
-(2019)](https://doi.org/10.1016/j.jneumeth.2019.108378) and [notes on
-the incorporated FieldTrip
-functions](http://www.fieldtriptoolbox.org/tutorial/electrode/)). We at
-SCCN have created an EEGLAB plug-in extension, *get_chanlocs*, to ease
-the process of digitizing the positions of the electrodes from the
-acquired 3-D and entering them into the *EEG.chanlocs* data structure
-for use with other EEGLAB (plotting and source localization) functions
-that require electrode position information.
+*get_chanlocs* EEGLABプラグインは、関数に組み込まれています
+[フィールドトリップ](http://www.fieldtriptoolbox.org/) 検索する 3-D電極
+3Dスキャンしたヘッドイメージからの位置。 ロバート・オオオステンド
+FieldTripツールボックスは、2017年に生徒たちと生徒達に警告しました。
+Nijmegen は、Scalp の計算位置を FieldTrip に関数を置く
+記録された3D画像から1つの3Dカメラ、
+[構造の走査器](https://structure.io/) Apple iPadに取り付けました。
+(読みます) [Homölle と Oostenveld
+(2019)](https://doi.org/10.1016/j.jneumeth.2019.108378)および[注記]
+組み込みフィールドトリップ
+関数:()http://www.fieldtriptoolbox.org/tutorial/electrode/)。 お問い合わせ
+SCCN は EEGLAB プラグイン拡張機能 (*get_chanlocs*) を作成しました。
+電極の位置をデジタル化するプロセス
+3Dを取得して、*EEG.chanlocs*データ構造に入力
+他の EEGLAB (plotting と source ローカリゼーション) 関数を使用するため
+電極位置情報を必要とする。
 
-The <b>major advantages</b> of using <em>get_chanlocs</em> to measure
-electrode positions are that: 1) <b>the 3D image can be recorded quickly
-(\<1 min)</b>, thereby saving precious subject time (and attention
-capacity) better used to record EEG data! The researchers who have been
-most enthusiastic to hear about <em>get_chanlocs</em> are those
-collecting data from children and infants -- though even normal adult
-participants must feel less cognitive capacity for the experimental
-tasks after sitting, wearing the EEG montage, for 20 min while research
-assistants record the 3D location of each scalp electrode. 2) <b>The 3D
-image connects the electrode locations to the head fidicuals in a very
-concrete and permanent way</b>; future improved head modeling will be
-able to use the 3D head surface scans to fit to subject MR images or to
-warp template head models to the actual subject head. 3) Unlike with
-wand-based electrode localizing (neurologists call this electrode
-'digitizing'), <b>retaining the 3D head image allows rechecking the
-electrode positions</b> (e.g., if some human error occurs on first
-readout).
+ふりがな <b>主な利点</b> 使用方法 <em>get_chanlocs ディレクティブ</em> 測定する
+電極の位置はそれです: 1) <b>3D画像はすぐに録画できます
+(\<1 min)</b>、それによって貴重な主題の時間(および注意を節約して下さい
+容量) EEGデータを記録するために使用されるよりよい! 過去の研究者
+最も熱心に耳を傾ける <em>get_chanlocs ディレクティブ</em> お問い合わせ
+お子様や乳幼児からのデータ収集 - 通常の大人でも
+参加者は実験の認知能力を低下させる必要があります
+座ってからタスク, EEGモンタージュを着用, のために 20 研究しながら分
+各頭皮の電極の3D位置を記録します。 2)2 <b>3Dについて
+画像は電極の位置を非常に頭部のfidicualsに接続します
+コンクリートおよび永久的な方法</b>;未来の改善された頭部の模倣はあります
+3Dヘッド表面スキャンを使用して、MR画像またはMR画像に収まる
+実際の被写体の頭部にテンプレートヘッドモデルを warp。 3) と違って
+wand ベースの電極ローカリゼーション (泌尿器科医はこの電極を呼び出します)
+「デジタル化」 <b>3Dヘッドイメージを保持することで、再チェックが可能
+電極の位置</b> (例: 人間のエラーが最初に起きた場合
+読み出し)。
 
-In brief, the process is as follows:
+簡略的には、以下のとおりです。
 
-<b>Scanning the head surface:</B> A 3-D head image (3-D head ‘scan’) is
-acquired using the Structure scanner showing the subject wearing the
-electrode cap; this image acquisition typically requires a minute or
-less to perform. The resulting 3-D *.obj* image file is stored along
-with the EEG data. *get_chanlocs* also supports use of *.obj* 3D image
-files obtained using the [itSeez3D scanning app](https://itseez3d.com/),
-which we have found to be easier to capture good 3D images with than the
-Structure scanner's native app (Suggestion: Ask iSeez3D about a
-non-commercial license).
+<b>ヘッド表面をスキャン:</B> 3-Dヘッドイメージ(3-Dヘッド「スキャン」)
+被写体を身に着けている構造の走査器を使用して得られる
+電極キャップ; この画像取得は、通常、分または分を必要とします
+パフォーマンスが少ない。 結果の3D *.obj*画像ファイルが保存されます
+EEGデータを使って。 *get_chanlocs* は *.obj* 3D のイメージの使用を支えます
+取得したファイル [itSeez3Dスキャンアプリ](https://itseez3d.com/),
+良い3D画像をキャプチャしやすくなることがわかりました。
+構造スキャナのネイティブアプリ(Suggestion: iSeez3D を尋ねる
+非商用ライセンス
 
-<B>Localizing the electrodes in the 3D scan:</B> When the data are to be
-analyzed, the *get_chanlocs* plug-in, called from the Matlab command
-line or EEGLAB menu, guides the data analyst through the process of
-loading the recorded 3-D head image and then clicking on each of the
-electrodes in the image in a pre-planned order to compute and store
-their 3-D positions relative to 3 fidicual points on the head (bridge of
-nose and ears). (Note: in future, this digitizing step may be automated
-at some point in the future using a machine vision approach). The
-electrode labels and their 3-D positions relative to the three skull
-landmarks (‘fiducial points’) are then written directly into the dataset
-*EEG.chanlocs* structure. During this process, a montage template
-created for the montage used in the recorded experiment can be shown by
-*get_chanlocs* as a convenient visual reference to speed and minimize
-human error in the electrode digitization process.
+<B>3Dスキャンで電極をローカライズする:</B> データがいつあるべきか
+解析, *get_chanlocs* プラグイン, Matlab コマンドから呼び出される
+ラインまたはEEGLABメニューは、データの分析をプロセスを通じて行います。
+録画した3Dヘッド画像をロードし、それぞれをクリック
+計算し、貯えるために計画された順序のイメージの電極
+頭の3つの点(橋)に相対的に3Dの位置
+鼻と耳。 (注:将来的には、このデジタル化ステップは自動化される可能性があります)
+マシンビジョンのアプローチで未来のところにある。 ふりがな
+電極のラベルおよび3-Dの位置は3頭に相対的に置きます
+ランドマーク('fiducial point')は、データセットに直接書かれています。
+*EEG.chanlocs*の構造。 このプロセス中に、モンタージュテンプレート
+記録実験で使用されるモンタージュは、
+*get_chanlocs* は速度および最小に便利な視覚参照として
+電極のデジタル化プロセスにおけるヒューマンエラー。
 
-<B>User Guide</B> See the illustrated [*get_chanlocs* User
-Guide](https://sccn.ucsd.edu/mediawiki/images/5/5f/Get_chanlocs_userguide.pdf) for details.
+<B>ユーザーガイド</B> 説明されている[*get_chanlocs*]を参照してください。 ユーザー登録
+ガイド:()https://sccn.ucsd.edu/mediawiki/images/5/5f/Get_chanlocs_userguide.pdf) 細部のため。
 
-<B>Uses:</B> Once the digitized electrode positions have been stored in
-the dataset, further (scalp field plotting and source localization)
-processes can use the digitized positions.
+<B>使用:</B> 数値化した電極の位置が保存されると
+データセット、さらに(スカルプフィールドプロットとソースローカリゼーション)
+プロセスはデジタル化された位置を使用できます。
 
-<b>Ethical considerations:</B> An institutional review board (or
-equivalent ethics review body) will likely consider head images as
-personally identifiable information. <b>Here is the IRB-approved [UCSD
-subject Consent
-form](/Media:Get_chanlocs_sampleConsent.pdf "wikilink")</B>, allowing
-participants to consent to different degrees of use of their 3D head
-image, that we use at SCCN.
+<b>倫理的考慮事項:</B> 機関レビューボード(または)
+等価な倫理観査体)は、頭のイメージをとして考慮する可能性が高い
+個人を特定できる情報。 <b>IRB認定 [UCSD]はこちら
+被写体コンセント
+フォーム:(/Media:Get_chanlocs_sampleConsent.pdf "wikilink")</B>、許可して下さい
+3Dヘッドの異なる使用度に同意する参加者
+SCCNで利用するイメージです。
 
-### Why *get_chanlocs*?
+### なぜ*get_chanlocs*?
 
-To achieve <b>high-resolution EEG (effective) source imaging</b>
-requires (a) <b>an accurate 3-D electrical head model</b>, and (b)
-<b>accurate co-registration of the 3-D scalp electrode positions to the
-head model</b>. Several packages are available for fashioning a
-geometrically accurate head model from an anatomic MR head image. We use
-Zeynep Akalin Acar's [Neuromagnetic Forward problem Toolbox
-(NFT)](https://sccn.ucsd.edu/wiki/NFT), which she is now coupling to the
-first non-invasive, universally applicable method (SCALE) for estimating
-individual skull conductivity from EEG data (Akalin Acar et al., 2016;
-more news of this soon!). When a subject MR head image is *not*
-available, equivalent dipole models for independent component brain
-sources can use a template head model. Zeynep has shown that the dipole
-position fitting process is more accurate when the template head is
-warped to fit the actual 3-D positions of the electrodes -- IF these are
-recorded accurately. This kind of warping is performed in Zeynep's
-[**NFT** toolbox for EEGLAB](https://sccn.ucsd.edu/wiki/NFT).
+達成するため <b>高分解能 EEG(有効)ソースイメージング</b>
+必須 (a) <b>正確な3D電気ヘッドモデル</b>と (b)
+<b>3Dスカルプ電極の位置の正確な調整
+ヘッドモデル</b>お問い合わせ いくつかのパッケージは、ファッショニングのために利用可能です
+アトミックMRヘッドイメージから幾何学的に正確なヘッドモデル。 お問い合わせ
+Zeynep Akalin Acarの[神経磁気フォワードの問題ツールボックス]
+(NFT))https://sccn.ucsd.edu/wiki/NFT)、彼女は今に結合している
+推定のための最初の非侵襲的、普遍的な適用方法(SCALE)
+EEGデータ(Akalin Acar et al., 2016)からの個々の頭蓋骨伝導性;
+詳しくはこちら 被写体 MR ヘッドイメージが *not* の場合
+利用できる、独立したコンポーネントの脳のための同等のダイポール モデル
+ソースはテンプレートヘッドモデルを使うことができます。 ゼインプは、ダイポールがあることを示しています
+テンプレートヘッドがいるとき位置のフィッティングプロセスはより正確です
+電極の実際の3-D位置に合わせて歪んだ -- これらが
+正確に記録される。 ゼニエプのこの種の警戒は、
+[**EEGLABのNFT**ツールボックス](https://sccn.ucsd.edu/wiki/NFT).
 
-For too long, it has been expensive and/or time consuming (for both
-experimenter and subject) to record (or 'digitize') the 3-D positions of
-the scalp electrodes for each subject. In recent years, however, cameras
-capable of recording images in 3-D have appeared and are now becoming
-cheaper and more prevalent. Robert Oostenveld, originator of the
-FieldTrip toolbox, alerted us that he and his students in Nijmegen had
-added functions to FieldTrip to compute the 3-D positions of scalp
-electrodes from scanned 3-D images acquired by one such camera, the
-[Structure scanner](https://store.structure.io/store) mounted to an
-Apple iPad.
+あまりにも長く、高価で時間消費(両方)
+実験者と被験者)の記録(または「デジタル化」)の3D位置
+各被写体のための頭皮の電極。 近年では、カメラが
+3Dで画像を録画できるようになりました。
+より安く、より普及。 ロバート・オオオステンド
+FieldTrip ツールボックス、Nijmegen の生徒がいたことを警告しました
+scalpの3D位置を計算するためにFieldTripに機能を追加
+このようなカメラで取得した3D画像のスキャンによる電極
+[構造の走査器](https://store.structure.io/store) 取付けられる
+アップルのiPad。
 
-Recording the actual electrode positions in a 3-D head image minimizes
-the time spent by the experimenter and subject on electrode position
-recording during the recording session to a minute or less, while also
-minimizing position digitizing system cost (to near $1000) and the space
-required (to an iPad-sized scanner plus enough space to walk around the
-seated subject holding the scanner). Digitizing the imaged electrode
-positions during data preprocessing is made convenient in *get_chanlocs*
-by using a montage template. In future, we anticipate an automated
-template-matching app will reduce time required to simply checking the
-results of an automated procedure.
+実際の電極位置を3Dヘッド画像で記録することで、
+実験者で過ごした時間と電極位置の被写体
+録音セッション中の録音を1分以下にし、また
+位置のデジタル化システムコストを最小化(1000ドル近く)、スペース
+必要な(iPadサイズのスキャナと十分なスペースに)
+スキャナを握る座席を付けられた主題)。 画像電極の分岐
+*get_chanlocs* でデータ処理中のポジションが便利です。
+モンタージュテンプレートを使って 将来的には自動化を期待
+テンプレートマッチングアプリは、単にチェックするのに必要な時間を削減します
+自動手順の結果。
 
-Required Resources
+必要なリソース
 ------------------
 
-The *get_chanlocs* plug-in has been tested under Matlab 9.1 (R2016b) on
-Windows 10 as well as OS X 10.10.5. Please provide feedback concerning
-any incompatibilities, bugs, or feature suggestions using the [GitHub
-issue tracker](https://github.com/cll008/get_chanlocs/issues/).
+*get_chanlocs* プラグインは Matlab 9.1 (R2016) でテストされました
+Windows 10およびOS X 10.10.5。 ご意見をお寄せください。
+[GitHub] を使用して任意の非互換性、バグ、または機能の提案
+問題の追跡者]()https://github.com/cll008/get_chanlocs/issues/).
 
-<b>Scanning software:</B> In theory, any combination of 3-D scanning
-hardware and software that produces a Wavefront OBJ file (.obj) with the
-corresponding material texture library (.mtl) and JPEG (.jpg) files can
-be used for the plug-in. *get_chanlocs* has only been tested with head
-models produced by the [Structure Sensor
-camera](https://store.structure.io/store) attached to an iPad Air (model
-A1474). We use the default [calibrator
-app](https://itunes.apple.com/us/app/structure-sensor-calibrator/id914275485?mt=8)
-to align the Sensor camera and the tablet camera, and both the default
-scanning software
-([Scanner](https://itunes.apple.com/us/app/scanner-structure-sensor-sample/id891169722?mt=8))
-and a third-party scanning software ([itSeez3D](https://itseez3d.com/)).
+<b>スキャン ソフトウェア:</B> 理論では、3Dスキャンの任意の組み合わせ
+Wavefront OBJファイル(.obj)を生成するハードウェアとソフトウェア
+対応する素材のテクスチャライブラリ(.mtl)とJPEG(.jpg)ファイルは、
+プラグインに使用されます。 ※get_chanlocs* はヘッドでのみテスト済みです。
+[構造センサー]で生成されたモデル
+カメラ:()https://store.structure.io/storeiPad Air(モデル)に付属
+A1474). デフォルト [キャリブレータ] を使用します。
+アプリケーション:()https://itunes.apple.com/us/app/structure-sensor-calibrator/id914275485?mt=8)
+センサーのカメラおよびタブレットのカメラおよびデフォルトを並べるために
+スキャンソフトウェア
+([スキャナ](https://itunes.apple.com/us/app/scanner-structure-sensor-sample/id891169722?mt=8))
+サードパーティのスキャンソフトウェア([itSeez3Dの特長](https://itseez3d.com/)).
 
-<b>Scanner vs. itSeez3D:</B> While the default scanning app
-([Scanner](https://itunes.apple.com/us/app/scanner-structure-sensor-sample/id891169722?mt=8))
-is free and produces models that are of high enough quality for the
-plug-in, we find the third-party app ([itSeez3D](https://itseez3d.com/))
-easier to use. It seems to be more robust, providing better tracking and
-faster scans while minimizing the effects of adverse lighting
-conditions. itSeez3D features a user friendly online account system for
-accessing high-resolution models that are processed on their cloud
-servers. Users may contact [itSeez3D](mailto:support@itseez3d.com) to
-change processing parameters; for *get_chanlocs*, we found that
-increasing the model polygon count beyond 400,000 results in longer
-processing time without providing an appreciable increase in resolution.
-Unfortunately, while scanning is free, exporting models (required for
-*get_chanlocs*) has a [per export or subscription
-cost](https://itseez3d.com/pricing.html). Please contact
-[itSeez3D](mailto:support@itseez3d.com) regarding discounts for
-educational institutions and other non-commercial purposes.
+<b>スキャナ対. itSeez3D:</B> デフォルトのスキャンアプリ
+([スキャナ](https://itunes.apple.com/us/app/scanner-structure-sensor-sample/id891169722?mt=8))
+自由で、のための十分な質であるモデルを作り出します
+プラグインは、サードパーティのアプリ()を見つけます。[itSeez3Dの特長](https://itseez3d.com/))
+使いやすい。 より堅牢で、より良い追跡を提供し、
+副作用を最小限に抑えながらスキャンを高速化
+条件。 itSeez3Dはユーザーフレンドリーなオンラインアカウントシステムを備えています
+クラウド上で処理される高解像度モデルへのアクセス
+サーバー。 利用者が連絡する場合があります。 [itSeez3Dの特長](mailto:support@itseez3d.com) お問い合わせ
+処理パラメータを変更します。 *get_chanlocs* では、
+400,000以上のモデルのポリゴン数を増加させる
+決断の達成可能な増加を提供しないで処理時間。
+残念ながら、スキャンが無料で、モデルのエクスポート(必須)
+*get_chanlocs*) は [エクスポートまたはサブスクリプションごと]
+費用:()https://itseez3d.com/pricing.html)。 お問い合わせ
+[itSeez3Dの特長](mailto:support@itseez3d.com) 割引について
+教育機関および他の非商業目的のために。
 
-Common Issues
+共通の問題
 -------------
 
-<b>Incorrect units in resulting electrode locations:</b> 3-D .obj model
-units are estimated by relating the range of the recorded vertex
-coordinates to an average-sized head: a captured model that is much
-larger or smaller than average will cause errors. If your project
-requires scanning an atypically-sized model (e.g. large bust scan
-including ECG electrode, arm scan for EMG sleeve, etc.), manually set
-obj.unit - [instead of using
-*ft_determine_units*](https://github.com/cll008/get_chanlocs/blob/master/private/ft_convert_units.m#L86)
-- to the correct unit used by your scanner {'m','dm','cm','mm'} to avoid
-complications.
+<b>電極の位置の誤った単位:</b> 3-D .objモデル
+記録された頂点の範囲に関する単位は推定されます
+平均サイズのヘッドに座標を合わせる: はるかにあるキャプチャモデル
+平均値よりも大きくても小さくてもエラーが発生します。 プロジェクトの場合
+大型バストスキャンなどの大型モデルをスキャンする必要があります。
+ECGの電極、EMGの袖のための腕のスキャン、等を含む)、手動で置きました
+obj.unit - [使用の代わりに
+*ft_determine_units*(半角)https://github.com/cll008/get_chanlocs/blob/master/private/ft_convert_units.m#L86)
+- あなたの走査器 {'m'、'dm'、'cm'、'mm'} によって使用される正しい単位に避けて下さい
+合併症。
 
-<b>Keyboard settings:</b> Key presses are used to rotate 3-D head models
-when selecting electrode locations in *get_chanlocs*. Key press
-parameters should be adjusted per user discretion: macOS and Windows
-systems have adjustable Keyboard Properties, where 'Repeat delay' and
-'Repeat rate' may be modified. For some versions of macOS, long key
-presses will instead bring up an accent selection menu; in such cases,
-repeated single key presses can be used to control MATLAB, or users may
-disable the accent selection menu and enable repeating keys by typing
-(or pasting) the following in the terminal:
+<b>キーボードの設定:</b> キープレスは3Dヘッドモデルを回転させるために使用されます
+*get_chanlocs* の電極の位置を選ぶとき。 キープレス
+パラメータは、ユーザの裁量ごとに調整する必要があります: macOSとWindows
+システムは「Repeatの遅れ」および
+'Repeat率' は変更される場合があります。 macOSのいくつかのバージョンでは、長いキー
+プレスは、代わりにアクセントの選択メニューが表示されます。このような場合、
+MATLABを制御するために、単一のキープレスを繰り返すことができ、またはユーザーはMATLABを制御することができます
+アクセント選択メニューを無効化し、キーをタイプすることによって繰り返すことを可能にします
+(または貼り付け) ターミナルの次の:
 `defaults write -g ApplePressAndHoldEnabled -bool false`
 
-One way to circumvent this issue is to use the 3-D figure rotation tool
-in MATLAB. First select the rotation tool, then mark electrodes by
-clicking as normal; to rotate the model, hold the click after selecting
-an electrode and drag the mouse; else, be sure to press 'r' to remove
-points as necessary.
+この問題を回避するための1つの方法は、3Dフィギュアの回転ツールを使用することです
+MATLAB では まず回転工具を選択し、電極をマークします。
+モデルを回転させるには、選択後にクリックを押し続けます
+電極とマウスをドラッグします。 それ以外の場合は、'r' を押して削除してください。
+必要に応じてポイント。
 
-<b>Low resolution in head model:</b> Models will have lowered resolution
-in MATLAB due to how 3-D .obj are imported and handled, even if they
-have show a reasonable resolution in other 3-D modeling software (e.g.
-Paint 3D). Increase the polygon count of the model to circumvent this
-issue (we recommend 400,000 uniform polygons for itSeez3D).
+<b>ヘッド モデルの低い決断:</b> モデルが解像度を下げる
+3D .obj のインポートと処理方法による MATLAB では、
+3次元モデリングソフトウェア(例:
+3Dペイント モデルのポリゴン数を増加させ、これを回避します。
+問題(私達は itSeez3D のための 400,000 の均一 polygons を推薦します)。
 
-Download
+ダウンロード
 --------
 
-To download *get_chanlocs*, use the extension manager within EEGLAB.
-Alternatively, plug-ins are available for manual download from the
-[EEGLAB plug-in
-list](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php).
+※get_chanlocs* をダウンロードするには、EEGLAB 内の拡張マネージャを使用してください。
+または、プラグインは手動ダウンロードのために利用可能です
+[EEGLABプラグイン]
+リスト:()https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php).
 
-Revision History
+改定履歴
 ----------------
 
-Please check the [commit
-history](https://github.com/cll008/get_chanlocs/commits/master) of the
-plug-in's GitHub repository.
+[commit] をご確認ください。
+歴史:()https://github.com/cll008/get_chanlocs/commits/master) の
+プラグインのGitHubリポジトリ。
 
-*get_chanlocs* User Guide
+※get_chanlocs* は必須項目です。 ユーザーガイド
 -------------------------
 
-View/download the [*get_chanlocs* User
-Guide](https://sccn.ucsd.edu/eeglab/download/Get_chanlocs_userguide.pdf)
+[*get_chanlocs*] を表示/ダウンロード ユーザー登録
+ガイド:()https://sccn.ucsd.edu/eeglab/download/Get_chanlocs_userguide.pdf)
 
 <div align=left>
 
-Creation and documentation by:
+作成とドキュメント:
 
-**Clement Lee**, Applications Programmer, SCCN/INC/UCSD,
+**Clement Lee**、アプリケーションプログラマー、SCCN/INC/UCSD、
 <cll008@eng.ucsd.edu>
-**Scott Makeig**, Director, SCCN/INC/UCSD, <smakeig@ucsd.edu>
+**Scott Makeig**、SCCN/INC/UCSDのディレクター、 <smakeig@ucsd.edu>
 
 </div>
 

@@ -6,56 +6,56 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 0
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/ICLabel).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/ICLabel).
 
-# ICLabel
-An automatic EEG independent component classifer plugin for EEGLAB.
-For more information, see [the ICLabel website tutorial](https://labeling.ucsd.edu/tutorial/about).
+# ICラベル
+EEGLAB用の自動EEG独立したコンポーネントのclassiferプラグイン。
+詳しくは、 [ICLabelのウェブサイトチュートリアル](https://labeling.ucsd.edu/tutorial/about).
 
-## Installation
-The easiest way to get the ICLabel plugin is through the EEGLAB plugin manager. 
+## 導入事例
+ICLabel プラグインを取得する最も簡単な方法は、EEGLAB プラグインマネージャです。 
 
-If you plan to install the plugin through GitHub rather than the EEGLAB plugin manager, be aware that matconvnet is included as submodule. This means that it will no be included in the zip-file download. You will have to download [my fork (version) of matconvnet](https://github.com/lucapton/matconvnet) and extract that zip into the ICLabel folder. Alternatively, if you are cloning this repository through the command line, be sure to include the "--recusive" flag to clone submodules as well. Once you are in the desired directory, the correct command is:
+EEGLABプラグインマネージャではなくGitHubでプラグインをインストールする予定がある場合は、matconvnetがサブモジュールとして含まれていることに注意してください。 つまり、zip-fileのダウンロードには含まれません。 ダウンロードする必要があります [matconvnetの私のフォーク(バージョン)](https://github.com/lucapton/matconvnet) ICLabelフォルダにzipを抽出します。 また、コマンドラインでこのリポジトリをクローニングしている場合、サブモジュールをクローンする「---recusive」フラグを必ず含めてください。 必要なディレクトリにあると、正しいコマンドは次のようになります。
 
-git clone --recursive https://github.com/lucapton/ICLabel.git
+git clone --再帰的 https://github.com/lucapton/ICLabel.git
 
-## Usage
-### Graphical Usage
-![menu](ICLabel_menu.png)
-Once you finish installing ICLabel, of if you already have it installed, you need to load your EEG dataset. To run ICLabel, your dataset must already have been decomposed using independent component analysis.
+## 使用方法
+### グラフィカルな使用法
+![メニュー](ICLabel_menu.png)
+ICLabelのインストールが完了したら、既にインストール済みの場合は、EEGデータセットをロードする必要があります。 ICLabel を実行するには、独立したコンポーネント分析を使用してデータセットが既に分解されている必要があります。
 
-With your dataset loaded, start ICLabel using the EEGLAB window by clicking on "Tools"->"ICLabel". You will see progress notes displayed on MATLAB's command window as ICLabel's pipeline progresses. When ICLabel finishes, it will display "Done" on MATLAB's command window and the Viewprops plug-in will open if available. If you do not have "Viewprops" installed, then nothing else will appear on the screen.
+読み込まれたデータセットで、「ツール」->「ICLabel」をクリックして、EEGLABウィンドウを使用してICLabelを起動します。 MATLAB のコマンドウィンドウに ICLabel のパイプラインの進捗状況が表示されます。 ICLabel が終了すると、MATLAB のコマンドウィンドウに「完了」が表示され、利用可能な場合は、Viewprops プラグインが開きます。 「Viewprops」がインストールされていない場合は、画面に表示されません。
 
-### Command-line Usage
-Assuming you have stored your ICA-decomposed EEG dataset in the variable EEG, you can use ICLabel by entering the following into MATLAB's command window:
+### コマンド・ライン 使用方法
+ICA-decomposed EEG のデータセットを変数 EEG に保存したと仮定すると、MATLAB のコマンドウィンドウに次の入力で ICLabel を使うことができます。
 ```
 EEG = iclabel(EEG)
 ```
-### Finding Results
-Either way you use ICLabel, from the EEGLAB window or MATLAB's command window, the IC classification information is saved to the EEG structure in the matrix:
+### 結果の検索
+ICLabel を使用する方法、EEGLAB ウィンドウまたは MATLAB のコマンドウィンドウから、IC の分類情報は、行列の EEG 構造に保存されます。
 ```
 EEG.etc.ic_classification.ICLabel.classifications
 ```
-The labels are stored as a matrix in which each row is a label vector for the corresponding IC. A label vector is a row of seven numbers, summing to one, which represent the probabilities that an IC being in any of the seven ICLabel IC categories. For example, to find the label vector for the fifth IC, reference the fifth row of the matrix:
+ラベルは各行が対応するICのラベルベクトルである行列として保存されます。 ラベルベクターは、7つのICLabel ICカテゴリのいずれかにあるICの確率を表す7つの数字の列です。 例えば、5番目のICのラベルベクターを見つけるには、行目の行を参照します。
 ```
 EEG.etc.ic_classification.ICLabel.classifications(5, :)
 ```
-You can also find the class labels in the cell array of strings:
+また、文字列のセル配列でクラスラベルを見つけることができます。
 ```
 EEG.etc.ic_classification.ICLabel.classes
 ```
-Each element of the cell array of strings indicates the category of the corresponding element in the label vectors. For example, to find the category of the third element in the label vector:
+文字列のセル配列の各要素は、ラベルベクター内の対応する要素のカテゴリを示します。 例えば、ラベルベクターの3番目の要素のカテゴリを検索します。
 ```
 EEG.etc.ic_classification.ICLabel.classes{3}
 ```
-You will find the category is "eye."
-## Viewprops plug-in
+カテゴリーが「目」です。
+## Viewprops プラグイン
 ![](Viewprops_eye.png)
-The ICLabel plugin offers no built-in plotting or visualization; therefore, it is highly suggested that you also install the [Viewprops plug-in](https://sccn.ucsd.edu/wiki/Viewprops). It will produce figures like the one shown at the top of this article. See the [Installation](https://sccn.ucsd.edu/wiki/ICLabel#Installation) section for directions on how to acquire the [Viewprops plug-in](https://sccn.ucsd.edu/wiki/Viewprops) and see [its wiki page](https://sccn.ucsd.edu/wiki/Viewprops) for information on how to use it.
+ICLabel プラグインは、組み込みのプロットやビジュアライゼーションを提供していません。したがって、インストールすることも強くお勧めします。 [Viewprops プラグイン](https://sccn.ucsd.edu/wiki/Viewprops)お問い合わせ この記事の一番上に示したような数字を生成します。 詳細はこちら [導入事例](https://sccn.ucsd.edu/wiki/ICLabel#Installation) 取得方法に関するセクション [Viewprops プラグイン](https://sccn.ucsd.edu/wiki/Viewprops) 見る [wikiページ](https://sccn.ucsd.edu/wiki/Viewprops) 使用方法に関する情報
 
-### Run ICLabel in FieldTrip
+### フィールドトリップでICLabelを実行
 
-First install EEGLAB (it includes the ICLabel plugin by default). Then use the script below.
+まず EEGLAB をインストールします(デフォルトでは ICLabel プラグインを含みます)。 以下のスクリプトを使用します。
 
 ```matlab
 cfg = [];
@@ -81,23 +81,23 @@ event = read_eeglabevent( EEG, 'header', hdr );
 cd(curPath);
 ```
 
-## Version history
-Pending - new message if signal processing toolbox is absent (we judged a new release was not necessary for such a small change)
+## バージョン履歴
+Pending - シグナル処理ツールボックスが不在である場合、新しいメッセージ(そのような小さな変更のために新しいリリースが必要ではないと判断しました)
 
-1.6 - fix issue with electrode orientation introduced in version 1.5 one month prior
+1.6 - バージョン1.5 1ヶ月前に導入された電極のオリエンテーションで問題を修正
 
-1.5 - minor tweaks and better stability (see commit history)
+1.5 - マイナーな微調整と優れた安定性(コミット履歴を参照してください)
 
-1.4 - adding 'average' to the list of possible reference for EEGLAB compatibility
+1.4 - EEGLABの互換性のための可能な参照のリストに「平均」を追加
 
-1.3 - make sure the classification probabilities are identical when processing multiple datasets with the same ICA decompositions
+1.3 - 同じICAの分解と複数のデータセットを処理するとき、分類の確率が同一であることを確認してください
 
-1.2.6 - fix issue in pop_iclabel.m for Matlab prior to 2016, fix rare path issue and issue with autocorrelation length
+1.2.6 - 2016年の前にMaatlabのためのpop_iclabel.mで問題を修正し、まれなパスの問題を修正し、Autocorrelation長さで問題が発生します
 
-1.2.5 - fix issue when pressing cancel in pop_iclabel.m
+1.2.5 - pop_iclabelでキャンセルを押すと問題を修正します。 m 点
 
-1.2.4 - Forgot to include some dependencies in 1.2.3, adding them back and fix issue to view properties
+1.2.4 - いくつかの依存関係を1.2.3に含めることを忘れて、それらを追加し、プロパティを表示するために問題を解決します
 
-1.2.3 - Fix bug for single dataset
+1.2.3 - 単一のデータセットのためのバグを修正
 
-1.2.2 - Fix STUDY calling format and add new function eeg_icalabelstat
+1.2.2 - STUDYの呼び出し形式を修正し、新しい関数eeg_icalabelstatを追加

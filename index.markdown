@@ -6,57 +6,57 @@ layout: home
 nav_exclude: true
 has_toc: true
 ---
-![EEGLAB sum-up picture](/assets/images/tutorial_image.png)
+![EEGLABのまとめ画像](/assets/images/tutorial_image.png)
 <!-- <a href="https://eeglab.org/workshops/EEGLAB_2022_UCSD.html" style="color:red; font-size:30px">EEGLAB San Diego (Nov 2022) workshop registration open!</a>
 -->
 
-# Welcome to the EEGLAB Wiki
+# EEGLAB Wikiへようこそ
 
-Since 2003, EEGLAB ([Delorme & Makeig, 2004](/others/EEGLAB_References.html)), has become a very widely used environment for human EEG and other related data analysis, with contributions from dozens of programmers, plug-in tool authors, and users. This new (2021-) revised version of the EEGLAB documentation is hosted on GitHub.com for ease of use and updating. Please send us any feedback ([eeglab@sccn.ucsd.edu](mailto:eeglab@sccn.ucsd.edu)).
+2003年以来、EEGLAB(EEGLAB)[Delorme & Makeig, 2004, オーストラリア](/others/EEGLAB_References.html))、人間EEGや他の関連データ分析のために非常に広く使用されている環境になりました。プログラマー、プラグインツールの作者、およびユーザーからの貢献。 この新しい(2021-) EEGLABのドキュメントの改訂版は、GitHub.comでホストされ、使いやすさや更新が容易になります。 ご意見をお寄せください。[eeglab@sccn.ucsd.edu _ 株式会社ドリテック](mailto:eeglab@sccn.ucsd.edu)).
 
-### Download EEGLAB
+### ダウンロード EEGLAB
 
--    [EEGLAB hardware and software
-    recommendations](/others/EEGLAB_hardware_and_software_recommendations.html)
--   [Download EEGLAB as a ZIP file](/others/How_to_download_EEGLAB.html)
--    [Download EEGLAB from GIT](https://github.com/sccn/eeglab)
--    [Download the compiled version of EEGLAB](/others/Compiled_EEGLAB.html)
--    [EEGLAB extensions/plugins](/others/EEGLAB_Extensions.html)
--    [EEGLAB revision history](/others/EEGLAB_revision_history.html)
+-    [EEGLABハードウェアとソフトウェア]
+    推奨事項:(/その他/EEGLAB_hardware_and_software_recommendations.html)
+-   [EEGLABをZIPファイルとしてダウンロード](/others/How_to_download_EEGLAB.html)
+-    [GITからEEGLABをダウンロード](https://github.com/sccn/eeglab)
+-    [EEGLABのコンパイル版をダウンロード](/others/Compiled_EEGLAB.html)
+-    [EEGLABエクステンション/プラグイン](/others/EEGLAB_Extensions.html)
+-    [EEGLABリビジョンの歴史](/others/EEGLAB_revision_history.html)
 
-### Useful EEGLAB documentation pages
+### EEGLABのドキュメントページ
 
-The EEGLAB tutorial is available in a subsequent section on this page.
-Other type of documentation are listed below.
+EEGLABチュートリアルは、このページの次のセクションで利用可能です。
+ドキュメントの他の種類は以下に記載されています。
 
--    [EEGLAB reference articles - Please cite](/others/EEGLAB_References.html)
--    [Quick ICA Component Rejection Tutorial](/tutorials/misc/Quick_Tutorial_on_Rejection.html)
--    [Using EEGLAB vs. Commercial EEG Software](/others/EEGLAB_vs_Commercial_EEG_Software.html)
--    [Working with EEGLAB and FieldTrip](/others/EEGLAB_and_FieldTrip.html)
--    [Using EEGLAB on open-source Octave](/others/Running_EEGLAB_on_Octave.html)
--    [Using EEGLAB on high performance computing resources](/others/EEGLAB_and_high_performance_computing.html)
--    [EEGLAB on MATLAB versus Python](/others/EEGLAB_and_python.html)
--    [EEGLAB History: The first two decades from 2001-2021](/others/The_first_decade_of_EEGLAB.html)
+-    [EEGLAB 参照記事 - お問い合わせ](/others/EEGLAB_References.html)
+-    [速いICA コンポーネントの拒絶チュートリアル](/tutorials/misc/Quick_Tutorial_on_Rejection.html)
+-    [EEGLABと商用EEGソフトウェアの使用](/others/EEGLAB_vs_Commercial_EEG_Software.html)
+-    [EEGLABとFieldTripと連携](/others/EEGLAB_and_FieldTrip.html)
+-    [オープンソースオクターブでEEGLABを使用する](/others/Running_EEGLAB_on_Octave.html)
+-    [高性能コンピューティングリソースでEEGLABを活用](/others/EEGLAB_and_high_performance_computing.html)
+-    [MATLAB と Python の EEGLAB](/others/EEGLAB_and_python.html)
+-    [エッグラボ 歴史: 2001-2021年の最初の2年](/others/The_first_decade_of_EEGLAB.html)
 
-### Troubleshooting
+### トラブルシューティング
 
--    [Ask eeglablist@sccn.ucsd.edu (requires subscription here)](/others/EEGLAB_mailing_lists.html)
--    [Use Google - add "eeglablist" or "EEGLAB" to your query](http://google.com)
--    [Bugs and Suggestions](/others/EEGLAB_Bugs.html)
--    [Post a bug issues on Github](https://github.com/sccn/eeglab/issues)
--    [Download EEGLAB test cases](https://github.com/sccn/eeglab-testcases)
--    [Other TIPS and FAQ](/others/TIPS_and_FAQ)
--    [EEGLAB filtering FAQ](/others/Firfilt_FAQ)
+-    [eeglablist@sccn.ucsd.edu に問い合わせてください。](/others/EEGLAB_mailing_lists.html)
+-    [Googleを使用して - クエリに「eeglablist」または「EEGLAB」を追加](http://google.com)
+-    [バグと提案](/others/EEGLAB_Bugs.html)
+-    [Githubのバグ問題投稿](https://github.com/sccn/eeglab/issues)
+-    [EEGLABテストケースをダウンロード](https://github.com/sccn/eeglab-testcases)
+-    [その他のTIPSとFAQ](/others/TIPS_and_FAQ)
+-    [EEGLABフィルターFAQ](/others/Firfilt_FAQ)
 
-<h3><a href="/tutorials"><span style="color: black;">EEGLAB Tutorial</span></a></h3>
+<h3><a href="/tutorials"><span style="color: black;">エッグラボ チュートリアル</span></a></h3>
 {%- assign children_list = site.pages | where: "parent", "Tutorials" -%}
 {% include toc_nav.html nav=children_list %}
 
-<h3><a href="/workshops"><span style="color: black;">Workshops</span></a></h3>
+<h3><a href="/workshops"><span style="color: black;">ワークショップ</span></a></h3>
 {%- assign children_list = site.pages | where: "parent", "Workshops" -%}
 {% include toc_nav.html nav=children_list %}
 <hr>
 
-<i><font size="-1">This tutorial was written by <a href="mailto:EEGLAB@sccn.ucsd.edu">Arnaud
-Delorme</a> with feedback and edits from <a href="mailto:EEGLAB@sccn.ucsd.edu">Scott Makeig</a>. Other essential contributors include Dung Truong, Claire Braboszcz, Makoto Miyakoshi, Ramon Martinez, Devapratim Sarma, Derrick Lock, Hilit Serby, Toby Fernsler.</font><i>
+<i><font size="-1">このチュートリアルは、 <a href="mailto:EEGLAB@sccn.ucsd.edu">アーノード
+デルオルム</a> フィードバックと編集から <a href="mailto:EEGLAB@sccn.ucsd.edu">スコット・マディグ</a>お問い合わせ その他の重要なコントリビューターには、ダン・トゥルン、クレア・ブラボスツ、マコト・ミヤコシ、ラモン・マルティネス、デバプラティム・サルマ、デリック・ロック、ハイリット・セルビー、トービー・フェルンズラーなどがあります。</font><i>
 

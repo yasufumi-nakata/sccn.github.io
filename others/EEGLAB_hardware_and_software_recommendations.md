@@ -4,56 +4,56 @@ title: Hard/software requirements
 long_title: EEGLAB hardware and software recommendations
 parent: Download EEGLAB
 ---
-EEGLAB hardware and software requirements
+EEGLABハードウェアおよびソフトウェア要件
 ====
 
-Desirable hardware configurations for working with EEGLAB
+EEGLABで作業するための望ましいハードウェア構成
 ---------------------------------------------------------
 
-Below we outline hardware and software requirements for EEGLAB and
-associated tools. Hardware requirements vary with the size of the
-datasets you want to process. We have outlined two levels of hardware
-needed for basic and advanced processing, respectively. It is also
-possible to process data on (some) less powerful platforms, but in trying
-to use them, you may end up spending much of your time trying to avoid
-"Out of Memory" errors. EEGLAB works on Windows, Linux, or Mac OS X. No
-operating system is better.
+EEGLABおよびEEGLABのハードウェアおよびソフトウェア要件の概要
+関連するツール。 ハードウェア要件は、サイズによって異なります
+処理したいデータセット。 ハードウェアの2つのレベルを概説しました
+それぞれ基本的な、高度の処理のために必要とされて。 それはまたあります
+強力なプラットフォーム(一部)でデータを処理できるが、試してみる
+それらを使用するために、あなたは避けようとするあなたの時間の多くを費やす終わるかもしれません
+「メモリのアウト」エラー。 EEGLABはWindows、Linux、またはMac OS Xで動作します。 いいえ
+オペレーティング システムよりよいです。
 
-**Minimum processing requirements (and/or highly desirable features)**
-for processing up to 32 EEG channels per subject using core EEGLAB
-functions only:
+**最小加工要件(および/または非常に望ましい機能)* * 必須
+コア EEGLAB を使用して 1 件あたりの 32 EEG チャネルまでの処理
+関数だけ:
 
--   8Gb of RAM (random access memory)
--   At least 200 Gb of available hard drive space (SSD if possible)
--   Newest version of MATLAB -- no additional MATLAB toolboxes are
-    required (but see below)
+-   8GbのRAM(ランダムアクセスメモリ)
+-   利用可能なハードドライブスペースの少なくとも200 Gb(SSD可能であれば)
+-   MATLABの最新バージョン - 追加のMATLABツールボックスはありません
+    必須(ただし下記参照)
 
-**Normal processing requirements (and/or highly desirable features)**
-for processing 64 or more EEG channels and/or using the most recent
-EEGLAB toolboxes:
+**正常な処理の条件(および/または非常に望ましい特徴)* * 必須
+64 以上の EEG チャネルおよび/または最新の使用のために
+EEGLABツールボックス:
 
--   Quad processors cores (4 or more are desirable) 
--   16 Gb or more of RAM (random access memory)
--   At least 1 Tb of SSD (SSD will speed up read/write by a factor of up
-    to 5x) or mixed system (SSD 128Gb and large hard drive)
--   Newest version of MATLAB and the MATLAB signal processing, statistics, and optimization
-    toolboxes, whose functions are used in some advanced EEGLAB plugins.
+-   クワッドプロセッサコア(4以上が望ましい) 
+-   16 Gb以上のRAM(ランダムアクセスメモリ)
+-   SSDの少なくとも1 Tb(SSDは、アップの要因によって読み取り/書き込みをスピードアップします
+    5xに)または混合されたシステム(SSD 128Gbおよび大きいハードドライブ)
+-   MATLABおよびMATLAB信号処理、統計、最適化の最新バージョン
+    ツールボックス, いくつかの高度な EEGLAB プラグインで使用される関数.
 
-Notes
+インフォメーション
 -----
 
--   Although EEGLAB is free, the MATLAB software environment that it
-    runs on is a commercial product of The Mathworks. Often, your school might have negotiated access ([check here](https://www.mathworks.com/academia/tah-support-program/eligibility.html)). EEGLAB also works on the free Octave environment (command-line only), and you may also download a compiled version of EEGLAB that does not require a MATLAB license. 
+-   EEGLABは無料ですが、MATLABソフトウェア環境はそのまま
+    のは、The Mathworksの商用製品です。 多くの場合、あなたの学校は、アクセスを交渉している可能性があります()[詳しくはこちら](https://www.mathworks.com/academia/tah-support-program/eligibility.html))。 EEGLABは、無料のオクターブ環境(コマンドラインのみ)でも機能し、MATLABライセンスを必要としないEEGLABのコンパイル版をダウンロードすることもできます。 
     
--   For Ubuntu linux users: There are often graphics problems when
-    MATLAB uses OpenGL graphics under Ubuntu. To avoid them, at the
-    beginning of each MATLAB session enter
+-   Ubuntuのlinuxユーザーの場合: 多くの場合、グラフィックの問題がある場合
+    MATLABは、UbuntuでOpenGLグラフィックを使用しています。 それらを避けるために、
+    各MATLABセッションの開始
 
     ``` matlab
     >> set(0,'DefaultFigureRenderer','painters');
     ```
 
--   For GPU users: EEGLAB functions do not currently use GPUs' capabilities (Graphic Processing Unit), which currently have the
-    highest performance/cost ratio. However, we have made the first attempts
-    at porting some functions to work with GPUs -- click
-    [here](/others/EEGLAB_and_high_performance_computing.html#running-eeglab-on-gpus-graphic-processing-units) for more information.
+-   GPU ユーザーの場合: EEGLAB の機能は現在 GPU の機能 (グラフィック処理ユニット) を使用しません。
+    最高の性能/費用の比率。 しかし、最初の試みをしました。
+    GPUで動作する関数をポートする - クリック
+    [詳しくはこちら](/others/EEGLAB_and_high_performance_computing.html#running-eeglab-on-gpus-graphic-processing-units) 詳細については、.

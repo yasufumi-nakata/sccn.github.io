@@ -7,165 +7,165 @@ render_with_liquid: false
 title: Chapter-05-NFT-Commands-and-Functions
 long_title: Chapter-05-NFT-Commands-and-Functions
 ---
-This section summarizes the MATLAB commands and data structures used for
-each stage of head modeling using the NFT toolbox. The function
-reference can be found in Appendix B
+このセクションでは、MATLAB コマンドとデータ構造をまとめました。
+NFTツールボックスを使用したヘッドモデリングの各ステージ。 関数
+参照はAppendix Bで見つけることができます
 
-Function Naming and Style
+機能 ネーミングとスタイル
 -------------------------
 
-The toolbox functions have names all lowercase, words separated by
-underscore. The GUI function names start with capital letters. The user
-interface functions all begin with the name of the module, such as
-bem_, mesh_, segm_, warping_ while utility functions are prefixed by
-util, for instance BEM utility functions start with utilbem_. All
-functions have help sections describing the usage, inputs and outputs,
-compatible with the help2html() conventions. They also include a license
-block.
+ツールボックス関数は、すべての小文字、単語を区切って名前を付けています。
+アンダースコア。 GUI 関数名は、大文字で始まります。 ユーザ
+インターフェイス機能はすべてモジュールの名前から始まります。
+bem_, mesh_, segm_, warping_ はユーティリティ関数がプレフィックスする時に
+util は、例えば BEM ユーティリティ関数は utilbem_ から始まる。 すべて
+関数は使用法、入力および出力を記述する助けのセクションを持っています、
+help2html() の規約と互換性があります。 ライセンスも含む
+ブロック。
 
-In user interface functions (bem_, etc.) the input arguments are
-validated before use. The utility functions, which are mostly used
-internally do minimal validation.
+ユーザインタフェース関数(bem_など)では、入力引数は
+使用前に検証します。 主に使われているユーティリティ関数
+内部で最小限の検証を行います。
 
-Segmentation Functions
+区分機能
 ----------------------
 
-The main user interface for the segmentation is initiated using
-[Segmentation()](NFT_Appendix_B#Segmentation "wikilink") command which
-opens up the GUI for segmentation.
+セグメンテーションの主なユーザーインターフェイスは、
+[区分()](NFT_Appendix_B#Segmentation "wikilink") コマンド
+セグメント化用のGUIを開きます。
 
-While most of the BEM matrix generation functionality can be initiated
-from the GUI interface, each operation can also be performed through
-matlab functions. After loading the MR image the following functions are
-called respectively:
-[segm_aniso_filtering()](NFT_Appendix_B#segm_aniso_filtering "wikilink"),
-[segm_scalp()](NFT_Appendix_B#segm_scalp "wikilink"),
-[segm_brain()](NFT_Appendix_B#segm_brain "wikilink"),
-[segm_outer_skull()](NFT_Appendix_B#segm_outer_skull "wikilink"),
-[segm_inner_skull()](NFT_Appendix_B#segm_inner_skull "wikilink"),
-[segm_final_skull()](NFT_Appendix_B#segm_final_skull "wikilink").
+BEM のマトリックスの生成機能のほとんどは開始できます
+GUIインターフェイスから、各操作も実行できます。
+matlabの機能。 MRイメージをロードした後、次の関数が
+それぞれ:
+[segm_aniso_filtering() ディレクティブ](NFT_Appendix_B#segm_aniso_filtering "wikilink"),
+[segm_scalp() は](NFT_Appendix_B#segm_scalp "wikilink"),
+[segm_brain() は、](NFT_Appendix_B#segm_brain "wikilink"),
+[segm_outer_skull() は、](NFT_Appendix_B#segm_outer_skull "wikilink"),
+[segm_inner_skull() は、](NFT_Appendix_B#segm_inner_skull "wikilink"),
+[segm_final_skull() の](NFT_Appendix_B#segm_final_skull "wikilink").
 
-Mesh Generation Functions
+メッシュ生成機能
 -------------------------
 
-The main user interface for mesh generation is initiated using
-[Mesh_generation()](NFT_Appendix_B#Mesh_generation "wikilink") command
-which opens up the GUI for mesh generation. The function loads the
-segmentation and generates meshes for scalp, skull, CSF and brain. If
-the user wants to refine the meshes locally,
-[mesh_local_refinement()](NFT_Appendix_B#mesh_local_refinement "wikilink")
-function is called. The topology of the generated meshes are checked by
-[mesh_final_correction()](NFT_Appendix_B#mesh_final_correction "wikilink"),
-and finally, the total head mesh is written in the format described in A
-using the function
-[mesh_read_write()](NFT_Appendix_B#mesh_read_write "wikilink").
+メッシュ生成のメインユーザーインターフェイスが始まります
+[メッシュ_ジェネレーション()](NFT_Appendix_B#Mesh_generation "wikilink") コマンド
+メッシュ生成用のGUIを開きます。 関数は読みます
+スカルプ、スカル、CSF、脳のメッシュのセグメンテーションと生成 お問い合わせ
+ユーザーは、メッシュをローカルに精製したい、
+[メッシュ_local_refinement()](NFT_Appendix_B#mesh_local_refinement "wikilink")
+関数は呼ばれます。 生成されたメッシュのトポロジーは、
+[メッシュ_final_correction()](NFT_Appendix_B#mesh_final_correction "wikilink"),
+そして最後に、総ヘッドメッシュはAで説明した形式で書かれています
+関数を使う
+[メッシュ_read_write()](NFT_Appendix_B#mesh_read_write "wikilink").
 
-Co-registration Functions
+共同登録機能
 -------------------------
 
-The main user interface for the co-registration of electrode locations
-with MR images is initiated using Coregistration() command which opens
-up the GUI for co-registration.
+電極の位置の調整のための主要なユーザー インターフェイス
+MR画像は、Coregistration() コマンドで起動します。
+GUIを共同登録する。
 
-Warping Functions
+ワーピング機能
 -----------------
 
-The main user interface for the warping of a template head model is
-initiated using
-[Warping_mesh()](NFT_Appendix_B#Warping_mesh "wikilink") command which
-opens up the GUI for warping functions. After loading the electrode
-locations the MNI mesh is loaded. Using
-[warping_main_function()](NFT_Appendix_B#warping_main_function "wikilink")
-function the warping parameters and the warped mesh are calculated.
+テンプレートヘッドモデルのワーピングの主なユーザーインターフェイスは
+使用開始
+[ワーピング_メッシュ()](NFT_Appendix_B#Warping_mesh "wikilink") コマンド
+機能に警告するためのGUIを開きます。 電極をロードした後
+MNIメッシュをロードします。 使用方法
+[warping_main_function() の使い方](NFT_Appendix_B#warping_main_function "wikilink")
+警告パラメータと警告メッシュを計算します。
 
-Forward Model Generation Functions
+フォワードモデル生成機能
 ----------------------------------
 
-The main user interface for the forward model generation is initiated
-using
-[Forward_Problem_Solution()](NFT_Appendix_B#Forward_Problem_Solution "wikilink")
-command. While most of the BEM matrix generation functionality can be
-initiated from the GUI interface, each operation also be performed
-through matlab functions.
+前方モデル生成のメインユーザーインターフェイスが開始
+使用方法
+[Forward_Problem_ソリューション()](NFT_Appendix_B#Forward_Problem_Solution "wikilink")
+コマンド。 ほとんどのBEMのマトリックスの生成機能性はある場合もあります
+GUIインターフェースから始まり、各操作も行います。
+matlabの機能を使って。
 
-The functions used by the BEM module are used for creating the BEM
-structures, running the solver to generate the model matrices, and
-solving for single or multiple dipoles.
+BEMモジュールで使用される機能は、BEMを作成するために使用されます
+構造体, ソルバーを実行してモデルのマトリックスを生成します, そして、
+単一か複数のダイポールのための解決。
 
-The state of the forward solution is stored in the structures, and no
-global variables are used by the toolbox. Since the contents of the
-structure arguments may change during a function call, most interface
-functions return the structure so that the changes can be preserved
-(MATLAB has no OUT arguments).
+フォワードソリューションの状態は構造物に保存されず、
+ツールボックスでは、グローバル変数が使用されます。 コンテンツから
+構造の引数は関数呼び出し、ほとんどのインターフェイスの間に変わるかもしれません
+関数は変更が保存できるように構造を返す
+(MATLABにはアウト引数はありません)。
 
-### Mesh Functions
+### メッシュ機能
 
-A set of mesh files can be loaded with the
-[bem_load_mesh()](NFT_Appendix_B#bem_load_mesh "wikilink") function
-which returns a mesh structure.
+メッシュファイルのセットをロードできます。
+[bem_load_mesh()](NFT_Appendix_B#bem_load_mesh "wikilink") 関数
+メッシュ構造を返す。
 
-### Model Functions
+### モデル機能
 
-The model structure which combines the mesh, conductivities and solver
-IPA parameters is obtained using the
-[bem_create_model()](NFT_Appendix_B#bem_create_model "wikilink")
-function. Once the model structure is obtained, it is possible to invoke
-the solver using the
+メッシュ、導電性、ソルバーを組み合わせたモデル構造
+IPAパラメータは、IPAパラメータを用いて取得します。
+[bem_create_model() は、](NFT_Appendix_B#bem_create_model "wikilink")
+機能。 モデル構造が得られると、呼び出すことができます。
+ソルバーを使用して
 [bem_generate_eeg_matrices()](NFT_Appendix_B#bem_generate_eeg_matrices "wikilink")
-function to generate the BEM matrices. Individual matrices can be loaded
-into the model structure using the
+BEM のマトリックスを発生させる機能。 個々のマトリックスをロードできます
+モデル構造に
 [bem_load_model_matrix()](NFT_Appendix_B#bem_load_model_matrix "wikilink")
-function.
+機能。
 
-### Session Functions
+### セッション機能
 
-The session structure is used for solving the forward problem at a given
-set of sensors. The structure is created using
-[bem_create_session()](NFT_Appendix_B#bem_create_session "wikilink")
-from a model and a list of sensors. The list of sensors can be generated
-from a list of nodes using the
+セッション構造は、前方問題の解決に使用されます。
+センサーセット 構造は、
+[bem_create_session() は](NFT_Appendix_B#bem_create_session "wikilink")
+モデルやセンサーのリストから。 センサーの一覧を生成できます
+ノードの一覧から
 [bem_smatrix_from_nodes()](NFT_Appendix_B#bem_smatrix_from_nodes "wikilink")
-function.
+機能。
 
-The transfer matrix for the sensors specified in the session can be
-generated using the
+セッションで指定されたセンサーの転送行列は、
+生成された使用
 [bem_generate_eeg_transfer_matrix()](NFT_Appendix_B#bem_generate_eeg_transfer_matrix "wikilink")
-function which computes and saves the transfer matrix. The computed
-transfer matrix can be loaded into the session structure using the
+転送行列を計算して保存する関数。 計算された
+転送行列はセッション構造に読み込むことができます
 [bem_load_transfer_matrix()](NFT_Appendix_B#bem_load_transfer_matrix "wikilink")
-function.
+機能。
 
-There are two functions for obtaining forward solutions. The
+フォワードソリューションの取得には2つの機能があります。 ふりがな
 [bem_solve_dipoles_eeg()](NFT_Appendix_B#bem_solve_dipoles_eeg "wikilink")
-function computes the sensor potentials due to the activation of a
-number of dipoles. The
+関数は、アクティベーションによるセンサーのポテンシャルを計算します
+ダイポールの数。 ふりがな
 [bem_solve_lfm_eeg()](NFT_Appendix_B#bem_solve_lfm_eeg "wikilink")
-function is suitable for generating a Lead Field Matrix since it returns
-a matrix of single dipole solutions.
+関数は、それが返すので、リードフィールドマトリックスを生成するのに適しています
+単一のダイポールの解決のマトリックス。
 
-### Utility Functions
+### ユーティリティ機能
 
-The utility functions are used internally by the functions described
-above.
+ユーティリティ関数は内部で使われます。
+上記。
 
-The external user configuration can be returned using the
-[NFT_get_config()](NFT_Appendix_B#NFT_get_config "wikilink") function.
-This m-file can be edited manually to specify run-time options for the
-toolbox. User interface functions call this function to get
-configuration variables as needed.
+外部のユーザ設定は、外部のユーザ設定で返すことができます。
+[NFT_get_config()](NFT_Appendix_B#NFT_get_config "wikilink") 機能。
+このm-fileは手動で編集して、ランタイムオプションを指定できます。
+ツールボックス。 ユーザーインターフェイス機能は取得するためにこの機能を呼び出す
+必要に応じて設定変数。
 
-The
-[utilbem_compute_cond()](NFT_Appendix_B#utilbem_compute_cond "wikilink")
-and
+ふりがな
+[utilbem_compute_cond() ディレクティブ](NFT_Appendix_B#utilbem_compute_cond "wikilink")
+そして、
 [utilbem_compute_indices()](NFT_Appendix_B#utilbem_compute_indices "wikilink")
-functions compute conductivity and index information from the mesh.
-These functions are called by
-[bem_create_model()](NFT_Appendix_B#bem_create_model "wikilink") and
-the results are stored in the model structure.
+メッシュの導電率とインデックス情報を算出します。
+これらの関数は、
+[bem_create_model() は、](NFT_Appendix_B#bem_create_model "wikilink") そして、
+結果はモデル構造に格納されます。
 
-There are two utility functions for computing source (right-hand-side)
-vectors.
+コンピューティングソースには2つのユーティリティ機能があります(右側)
+ベクター。
 [utilbem_multilayer_rhs()](NFT_Appendix_B#utilbem_multilayer_rhs "wikilink")
-is used for IPA and
-[utilbem_pot_unbound()](NFT_Appendix_B#utilbem_pot_unbound "wikilink")
-is used without IPA.
+IPAに使用され、
+[utilbem_pot_unbound() は、](NFT_Appendix_B#utilbem_pot_unbound "wikilink")
+IPAを使わずに使用しています。

@@ -7,7 +7,7 @@ render_with_liquid: false
 title: NFT-Appendix-B
 long_title: NFT-Appendix-B
 ---
-bem_create_model
+bem_create_model(ビーエムクリエイト)
 ----------------
 ```
 bem_create_model() - Creates a model structure combining a mesh,  
@@ -42,7 +42,7 @@ Optional Fields:  
                   relative to the inner mesh
 ```
 
-bem_create_session
+bem_create_セッション
 ------------------
 ```
 bem_create_session() - Creates a session structure combining a model,  
@@ -77,7 +77,7 @@ Session Structure:  
   num_electrodes - number of EEG sensors
 ```
 
-bem_generate_eeg_matrices
+bem_generate_eeg_matrices ディレクティブ
 -------------------------
 ```
 bem_generate_eeg_matrices() - Generates BEM matrices for a BEM model.  
@@ -115,7 +115,7 @@ Notes: The matrix is created using the name given in the session str
       using the bem_load_transfer_matrix().
 ```
 
-nft_get_config
+nft_get_config ディレクティブ
 --------------
 ```
 nft_get_config() - Returns the toolbox configuration information  
@@ -132,7 +132,7 @@ Config Structures:  
   showmesh - name of the correction and smoothing program.
 ```
 
-bem_load_mesh
+bem_load_mesh は
 -------------
 ```
 bem_load_mesh() - Loads a BEM mesh.  
@@ -159,7 +159,7 @@ Mesh Structure:  
        [num_elements inner_tissue_class outer_tissue_class]
 ```
 
-bem_load_model_matrix
+bem_load_model_matrix は、
 ---------------------
 ```
 bem_load_model_matrix() - Loads the BEM matrix with extension ’ext’.  
@@ -182,7 +182,7 @@ Outputs:  
   model - model structure.
 ```
 
-bem_load_transfer_matrix
+bem_load_transfer_matrix ディレクティブ
 ------------------------
 ```
 bem_load_transfer_matrix() Loads the BEM transfer matrix with extension ’ext’.  
@@ -201,7 +201,7 @@ Outputs:  
   session - updated session structure.
 ```
 
-bem_smatrix_from_nodes
+bem_smatrix_from_nodes ディレクティブ
 ----------------------
 ```
 bem_smatrix_from_nodes() - Generates Smatrix from nodes of a mesh.  
@@ -240,7 +240,7 @@ Outputs:  
              loaded, modifying the underlying model.
 ```
 
-bem_solve_lfm_eeg
+bem_solve_lfm_eeg ディレクティブ
 -----------------
 ```
 bem_solve_lfm_eeg() - Computes the LFM arising from given dipoles  
@@ -260,7 +260,7 @@ Outputs:  
             loaded, modifying the underlying model.
 ```
 
-Coregistration
+コアギストレーション
 --------------
 ```
 Coregistration() - Produces the GUI for co-registration of electrode locations  
@@ -278,7 +278,7 @@ Optional Arguments:  
    start with this name.
 ```
 
-Forward_Problem_Solution
+Forward_Problem_ソリューション
 ------------------------
 ```
 Forward_Problem_Solution() - Produces the forward model generation GUI.  
@@ -294,7 +294,7 @@ Optional Arguments:  
    starting with this name.
 ```
 
-Mesh_generation
+メッシュ・ジェネレーション
 ---------------
 ```
 Mesh_generation() - Produces the mesh generation GUI.  
@@ -308,7 +308,7 @@ Optional Arguments:  
   ’subject’ - (string) Subject name. Output files will start with this name.
 ```
 
-mesh_local_refinement
+Mesh_local_refinement ディレクティブ
 ---------------------
 ```
 mesh_local_refinement() - Refines the meshes in a given folder. Loads  
@@ -324,7 +324,7 @@ Inputs:  
   ratio_lmr - ratio of local edge length to local distance between meshes
 ```
 
-mesh_final_correction
+メッシュ_final_correction
 ---------------------
 ```
 mesh_final_correction() - Performs mesh correction for Scalp.smf,  
@@ -339,7 +339,7 @@ Inputs:  
   nl - number of layers (3 or 4)
 ```
 
-mesh_read_write
+メッシュ_read_write
 ---------------
 ```
 mesh_read_write() - Reads Scalp, Skull, Csf and Brain meshes in .smf  
@@ -355,7 +355,7 @@ Inputs:  
   nl - number of layers (3 or 4)
 ```
 
-Segmentation
+セグメント
 ------------
 ```
 Segmentation() - Produces the GUI for running segmentation functions.  
@@ -369,7 +369,7 @@ Optional Arguments:  
   ’subject’ - (string) Subject name. The output files will start with this name.
 ```
 
-segm_aniso_filtering
+segm_aniso_filtering ディレクティブ
 --------------------
 ```
 segm_aniso_filtering() - Performs anisotropic filtering.  
@@ -387,7 +387,7 @@ Outputs:  
   b - output image
 ```
 
-segm_scalp
+segm_scalp ディレクティブ
 ----------
 ```
 segm_scalp() - Performs scalp segmentation  
@@ -401,7 +401,7 @@ Inputs:  
 Outputs:  
   Sca - scalp mask
 ```
-segm_brain
+segm_brainさん
 ----------
 ```
 segm_brain() - Performs brain segmentation  
@@ -418,7 +418,7 @@ Inputs:  
 Outputs:  
   Bra - brain mask
 ```
-segm_outer_skull
+segm_outer_skull ディレクティブ
 ----------------
 ```
 segm_brain() - Performs outer skull segmentation  
@@ -436,7 +436,7 @@ Outputs:  
   Sk_out - outer skull mask
   X_dark - dark regions of b
 ```
-segm_inner_skull
+segm_inner_skull(スギム)
 ----------------
 ```
 segm_inner_skull() - Performs inner skull segmentation  
@@ -453,7 +453,7 @@ Inputs:  
 Outputs:  
   Sk_in - inner skull mask  
 ```
-segm_final_skull
+segm_final_skull ディレクティブ
 ----------------
 ```
 segm_final_skull() - Corrects scalp and outer skull masks wrt inner  
@@ -472,7 +472,7 @@ Outputs:  
   Sca    - scalp mask  
   Sk_out - outer skull mask
 ```
-utilbem_compute_cond
+utilbem_compute_cond ディレクティブ
 --------------------
 ```
 utilbem_compute_cond() - Computes the average conductivity  
@@ -495,7 +495,7 @@ Note: The average conductivity is normally the average of the inner a
    meshes with intersecting boundaries there may be three or more tissues  
    around a node. This function also handles this general case.
 ```
-utilbem_compute_indices
+utilbem_compute_インデックス
 -----------------------
 ```
 utilbem_compute_indices() - When the Isolated Problem Approach (IPA) is used,  
@@ -520,7 +520,7 @@ Outputs:  
    indMshMod - Coordinate indices of modified boundary relative to inner  
                mesh.
 ```
-utilbem_multilayer_rhs
+utilbem_multilayer_rhsの特長
 ----------------------
 ```
 utilbem_multilayer_rhs() - Computes the Right-Hand-Side of the  
@@ -550,7 +550,7 @@ Outputs:  
    RHS - The right-hand-side of the BEM matrix equation for a given  
    dipole.
 ```
-utilbem_pot_unbound
+utilbem_pot_unbound の使い方
 -------------------
 ```
 utilbem_pot_unbound() - Computes the unbounded potential at the  
@@ -572,7 +572,7 @@ Outputs:  
 Notes: When IPA is not used the weighted potential 
    is the  Right-Hand-Side of the BEM matrix equation.
 ```
-Warping_mesh
+ワーピング_メッシュ
 ------------
 ```
 Warping_mesh() - Produces the GUI for warping of a template head model  
@@ -589,7 +589,7 @@ Optional Arguments:  
   ’session’ - (string) Session name. Session-specific output files will be saved  
    starting with this name.
 ```
-warping_main_function
+warping_main_function の使い方
 ---------------------
 ```
 warping_main_function() - Main warping function.  

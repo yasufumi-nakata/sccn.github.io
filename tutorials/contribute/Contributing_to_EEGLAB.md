@@ -6,11 +6,11 @@ parent: Contribute
 grand_parent: Tutorials
 nav_order: 3
 ---
-EEGLABコアコードへの貢献
+EEGLABグループ
 ========================
 お問い合わせ
 
-メインの EEGLAB リポジトリは新しい関数を追加する場所ではありません。 代わりに、これは EEGLAB エクステンション/プラグインを作成することによって行われます。 ただし、コアコードを変更してバグを修正したり、既存の機能にマイナーな改善を加えることもできます。 
+EEGLAB は、EEGLAB が新しい関数の場所です。 外部リンク コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア に に コア コア コア に コア に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に 
 
 <details open markdown="block">
   <summary>
@@ -21,175 +21,175 @@ EEGLABコアコードへの貢献
 お問い合わせ
 </details>
 
-EEGLAB開発モデル
+EEGLABモデル開発
 -------------------
 
 ### EEGLABの歴史
 
-EEGLABソフトウェア設計者のチーフはArnaud DelormeとScott Makeigです。 EEGLAB、ICA/EEG Toolbox(1997-2001)のプレデッサ
-Tony Bell、Colin Humphries、SigurdとMakeigによって書かれた機能
-Enghoff、Tzyy-Ping Jung、Te-Won Leeなど、最初にリリースされました。
+EEGLABソフトウェア開発チーフ Arnaud DelormeとScott Makeigです。 EEGLAB、ICA/EEG Toolbox(1997-2001)のプレデッサ
+トニーベル、 Colin Humphries、SigurdとMakeigによる機能
+Enghoff、Tzyy-Ping Jung、Te-Won Leeetc、リリース
 1997年 スコッツ・マディグによる計算神経生物学
 サーク・インスティテュート、ラ・ホラーのテルレンス・セジュノスキの研究室。 
 
-EEGLABの統合ツールボックスの最初のバージョンは、
-Delorme と Makeig は、多くの貢献を伴います。
-Marissa Westerfield、Jörn Anemüller、Luca Finelli、Robert Oostenveld、
-Hilit serby, Toby Fernsler, ニマ シャムロ Bigdeley、Jason Palmer、その他多数
+EEGLABの統合ツールボックスは、
+Delorme と Makeig は、Delorme と Makeig の共同作業を行います。
+Marissa Westerfield、Jörn Anemüller、 ルカ・フィネリ、ロバート・オオステンド、
+Hilit serby, Toby Fernsler, ニマ シャムロ Bigdeley, Jason Palmer, その他
 その他。 専用のベータテスターには、アンドレアス・ロメイケと彼のチームが含まれます。
-EEGLABの試験スイート、その他上級者向けのテストスイートを開発
+EEGLABの試験スイート、その他上級者向け
 Stefan Debener と Andreus Widmar. 
 
-EEGLABの開発は、Swartz Center for Computational Neuroscience (SCCN) のインスティテュートで中心になりました。
-カリフォルニア大学サンディエゴ校(UCSD)での神経コンピューティング コアEEGLABのメンテナンスと開発は、米国国立神経疾患研究所および脳卒中(NINDS)がサポートしています。 
+EEGLAB開発 Swartz Center for Computational Neuroscience (SCCN) のインスティテュートで現在に至る。
+カリフォルニア大学サンディエゴ校(UCSD) コアEEGLABのメンテナンスと開発は、米国国立科学研究所がサポートしています。 
 
-EEGLABコアコードは、直接第三者によって変更することはできません。 代わりに、
-ユーザーの投稿 [プルリクエスト](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository)お問い合わせ EEGLABコア開発者は、
+EEGLABのコードは、直接的に変更されます。
+ユーザーの投稿 [プルリクエスト](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository)EEGLABコア開発者
 コードを見直し、リポジトリに追加します。
 
 サードパーティの開発者にとって、ユーザーとのコラボレーションを歓迎します。
-オープンソースの開発者がEEGLABの機能および/または拡張し、改善します
-独立して EEGLAB プラグイン/拡張アプリケーションを作成およびリリース
+ソリューション
+独立して EEGLAB リリース
 そして環境。 プラグインを書いているなら、
 研究室では、本ページに記載されているように、他の人が使用するためにそれらを解放することを検討してください。
 
-EEGLABは、オープンソース開発を積極的に行っています。 ユーザーと共に
+EEGLABは、
 開発者は、オーバーサブジェクトを含む機能を拡張しています。
 一般的なリニアモデル統計。 ユーザーの機能と機能
-提案を歓迎し、EEGLABの相互接続を奨励し、計画します
-その他のMATLAB対応ツールボックス
+EEGLABの相互接続
+サイトマップ
 
 ### オープンソースモデル
 
-EEGLABはオープンソースソフトウェア環境であり、無料でご利用いただけます。
+EEGLABは、環境にやさしいソフトウェアです。
 任意のユーザに請求します。
 
-しかし、EEGLABでは、商用購入やインストールが必要です。
-[MATLABソフトウェア環境](http://www.mathworks.com/store/)お問い合わせ マトラボ
-バージョン2008b以降が必要です。 最新の使い方をおすすめします。
-MATLAB. MATLABとEEGLABは、Linux/Unix、Mac OS X、または
-ウィンドウズ。 MATLABを購入すると、MATLABの学生が高価にすることができます
-バージョンは通常$ 50 US付近で価格です。
+しかし、EEGLABでは、商用購入や登録を行っております。
+[環境方針](http://www.mathworks.com/store/)お問い合わせ マトラボ
+おすすめのサイトへ
+マトラボ MATLABとEEGLABは、Linux/Unix、Mac OS X、または
+ウィンドウズ。 MATLABの学生が高価な価格で購入
+$ 50 アメリカ
 
-アドオンMATLABツールボックスの依存関係をすべて削除しようとしました。
-したがって、EEGLABコア分布を実行するには、追加のツールボックスは必要ありません。 しかし、いくつかの高度なプラグインツールボックスは、
-特定の MATLAB ツールボックスから関数を使用する: ドキュメントを参照してください。
+新規会員登録
+したがって コア コア コア しかしながら、より詳細なプラグインは、
+お問い合わせ MATLAB ツールボックス関数: ドキュメント。
 詳しくはこちら
 
-すべての EEGLAB 処理機能 (グラフィックインターフェイスではありません) も無料で実行できます
-[Octave 環境](http://www.gnu.org/software/octave/download.html)お問い合わせ EEGLABは、MATLABを必要としないコンパイルされたプログラムとして存在します。
+EEGLAB の処理機能がすべて揃っています。
+[オタクターブ](http://www.gnu.org/software/octave/download.html)EEGLAB は、MATLAB が、MATLAB がリリースされました。
 
 ### ライセンスとクレジット
 
-EEGLAB は [BSD] で配布されます。
+EEGLAB は [BSD] で います。
     ライセンスhttps://opensource.org/licenses/BSD-2-Clause)。 その他
-    EEGLABに追加する機能が利用可能になりました
+    EEGLAB追加機能
     このライセンスに基づく商用および非商用利用
 
-コントリビューターは GitHub で認識され、メインソースコードにコミットしたコミットを記録しています。 
+コントリビューター GitHub に GitHub を 使おう 
 
-*extension* または *plugin* オプションを記述する
-以下のセクションで。 EEGLABの拡張機能により、著者が柔軟に対応
-EEGLABメニューに新しい機能を組み込む
+*extension* または *plugin* のオプション
+お問い合わせ EEGLAB の拡張機能により、Author は
+EEGLABメニュー
 拡張子をダウンロード. 著者はまた、書き込み機能にすべての商用権利を保持します。
 
 ### 行動規範
 
 コミュニティを重視する行動規範を追究し、
-[Ubuntu ] が最初に説明したコラボレーション、尊敬、責任
+[Ubuntu ] は、
 コミュニティhttps://ubuntu.com/community/code-of-conduct).
 
-### GITによるコードの貢献
+### お問い合わせ
 
-EEGLABのコアコードにコードを付与し、コードをフォークして作成する
-下の要求として引き。 Githubアカウントが必要です
+EEGLABのコアにコードを付与し、コードをフォークして作成する
+お問い合わせ Githubアカウント
 これらの操作を実行するが、特別な許可を必要としません
 私たちから。
 
-EEGLABリポジトリのフォーク
+EEGLABのフォーク
 ---
 
-メインの EEGLAB リポジトリは新しい関数を追加する場所ではありません。 お問い合わせ
-新しい機能を追加したい、EEGLAB を書く
+EEGLAB は、EEGLAB の新機能です。
+新機能:EEGLAB ドキュメント
 [プラグイン](/tutorials/contribute/Contributing_to_EEGLAB.html) 代わりに。
 
-### EEGLABリポジトリをフォークする理由
-このページでは、GitHub、Git、バージョン管理に少し精通していると仮定しています。
+### お問い合わせ
+このページではjavascriptを使用しています。
 
 ソフトウェアリポジトリをフォーク(コピー)することで、リポジトリのコピーを作成
 あなたに属します。 これにより実験が可能
 既存のコードに影響を与えない。 完了したら
 変更は、それらを(それらをプッシュ)メインに転送することができます
-*pullリクエスト*を使用してリポジトリ(*)
-*pushリクエスト* と呼びますが、ソフトウェアコミュニティは
+*Pull は、
+*push* および python コミュニティ
 メインリポジトリの観点から名前を付けます。
 <em>プルリング</em> あなたの変更に)。 このページが紹介されました
-EEGLABリポジトリをフォークする基本 Githubはプロシージャを非常にさせます
+EEGLABは、 Githubは、
 シンプル。
 
-### EEGLABリポジトリのフォーク
+### EEGLABのフォーク
 
-Github から EEGLAB リポジトリをフォークするには、次の 2 つの単純な
+Github から EEGLAB へ直接、次の 2 へ
 ステップ:
 
-1.  Github で [EEGLAB] に行く
-    リポジトリ(Repository)https://github.com/sccn/eeglab)
-2.  ウィンドウの右上隅にある「*Fork*」をクリック(図を参照)
+1.  Github で [EEGLAB]
+    リポジトリ(リポジトリ)https://github.com/sccn/eeglab)
+2.  ウィンドウの右上隅にある「*Fork*」
     お問い合わせ
 
-![センター\|thumb\|700px](/assets/images/Fork_link.jpg)
+![\|thumb\|700px](/assets/images/Fork_link.jpg)
 
 これらの2つのステップを実行したら、あなたは成功したでしょう
-EEGLABリポジトリの独自のコピーを作成しました。 新しいリポジトリが見える
-あなたがフォークしたEEGLABリポジトリのように正確に、フォークされたコピー
+EEGLABの強み
+コピー コピー コピー
 ユーザー名アカウントの下にあります。
 
-![センター\|thumb\|700px](/assets/images/Fork_username.jpg)
+![\|thumb\|700px](/assets/images/Fork_username.jpg)
 
 ### あなたのフォークされたコピーで作業
 
-Githubでフォークを作成したら、設定する必要があります
-*git* はコンピュータで EEGLAB のコードコピーで作業を開始できます。 それから
+Github では、
+*git* は、EEGLAB のコード コピー で動作します。
 コンピュータにフォークされたリポジトリをクローンする必要があります。
 
--   Githubでフォークされたリポジトリページに移動します。 これは、
+-   Github は、
     上記の図で説明したページと同じです。
 -   画面の右側にあるボタン*クローンまたは
     ダウンロード* をクリックしてクリックします。
 
-![センター\|thumb\|700px](/assets/images/Clone_link.jpg)
+![\|thumb\|700px](/assets/images/Clone_link.jpg)
 
--   クローン HTTPS セクションでリンクをコピーします。
+-   HTTPS をコピーします。
 
-![センター\|thumb\|400px](/assets/images/Clone_https_link.jpg)
+![基本情報|thumb\|400px](/assets/images/Clone_https_link.jpg)
 
--   コンピュータの端末を開き、*git clone* を入力し、貼り付けます。
+-   の の の
     前のステップでコピーしたリンクを実行します。
 
 `$git clone `[`https://github.com/yourgitusername/eeglab.git`](https://github.com/yourgitusername/eeglab.git)
 
-これらの手順に従って、EEGLABコードの変更を開始することができます。
+今後、EEGLABコード変更が始まります。
 
 ### プルリクエストの発行
 
-コードの変更に満足したら、GitHubにコミットしてください。 それから、Githubに戻る
-*pullリクエスト*を発行します。 変更が評価され、承認されると
-EEGLABのチームによって、EEGLABのマスターコードに統合されます。
+GitHub は、 GitHub に 、 GitHub に 、 GitHub に あります。
+*pull*を発行します。
+EEGLABは、EEGLABのマスターコードを運営しています。
 
-![センター\|thumb\|700px](/assets/images/Pullrequest1.png)
+![\|thumb\|700px](/assets/images/Pullrequest1.png)
 
-EEGLABリポジトリにマージするためにフォークされたブランチを選択できる画面が表示されます。 Note: 常にマージする
-EEGLABの「デベロプ」ブランチに。
+EEGLABにマージに偽造品をプレゼント (注)
+EEGLABの「デ・ベイプ」に出演。
 
-![センター\|thumb\|700px](/assets/images/Pullrequest2.png)
+![\|thumb\|700px](/assets/images/Pullrequest2.png)
 
 ### プルリクエストの検討
 
 事前承認のため:
 -   新しい機能を追加した場合は、両方の機能が動作することを確認してください。
-    グラフィックインターフェイスとMATLABコマンドラインから。 お問い合わせ
+    このサイトについて
     シンプルなテストスクリプトでこれを実証します。
--   修正された関数でテストケースを実行します。 可能であれば、テストケースを [EEGLABテストケースリポジトリ](https://github.com/sccn/eeglab-testcases).
+-   修正された関数でテストケースを実行します。 可能であれば、テストケースを [EEGLABテストケース](https://github.com/sccn/eeglab-testcases).
 -   あまりにも多くの文書を追加することはできません。 ドキュメントを必ず確認
     あなたの変更は明確にそして徹底的に!
 -   単一機能変更のための問題の引き。

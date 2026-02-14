@@ -7,49 +7,49 @@ render_with_liquid: false
 has_children: true
 nav_order: 6
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/LIMO-EEG-Toolbox/limo_meeg).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/LIMO-EEG-Toolbox/limo_meeg).
 
-# LInear MOdeling of MEEG data
+# MEEGデータのLInear MOdeling
 
-The LInear MOdelling of MEEG data (LIMO MEEG) toolbox is a Matlab toolbox dedicated to the statistical analysis of MEEG data. It has some  interfacing with EEGLAB (in particular the STUDY in the EEGLAB develop version) to act as a plug in. However, once data are imported all is performed within LIMO MEEG and the toolbox can thus work for any data sets.
+MEEGデータのLInear MOdelling(LIMO MEEG)ツールボックスは、MEEGデータの統計解析に専念するMatlabツールボックスです。 EEGLAB(特にEEGLABのSTUDYはバージョンを開発する)との対面があります。 ただし、データがインポートされると、LIMO MEEG内で実行され、ツールボックスは任意のデータセットのために動作することができます。
 
-This repo is the stable version of LIMO MEEG (v2) to be used with EEGLAB (https://sccn.ucsd.edu/eeglab/) but can be used with in other applications like FieldTrip (http://www.fieldtriptoolbox.org/) or BrainStorm (https://neuroimage.usc.edu/brainstorm/) for your research applications. The previous version (1.5) is now archived here: http://datashare.is.ed.ac.uk/handle/10283/2190
+このリポジトリは、EEGLAB(EEGLAB)で使用するLIMO MEEG(v2)の安定版です。https://sccn.ucsd.edu/eeglab/) しかし、FieldTripのような他のアプリケーションで使用することができます(http://www.fieldtriptoolbox.org/)またはBrainStorm ()https://neuroimage.usc.edu/brainstorm/) あなたの研究の適用のための。 以前のバージョン(1.5)がここにアーカイブされています: http://datashare.is.ed.ac.uk/handle/10283/2190
 
-## Installation
+## 導入事例
 
-Have EEGLAB installed (because we call some functions) and LIMO in the plug-in directory.
+EEGLAB をインストール (一部の関数を呼び出すため) とプラグインディレクトリに LIMO をインストールします。
 
-## Documentation
-in the doc directory (a bit outdated)
-and of course the [wiki](https://github.com/LIMO-EEG-Toolbox/limo_eeg/wiki)
+## ドキュメント
+docディレクトリに (少し古い)
+もちろんです。 [ウィキ](https://github.com/LIMO-EEG-Toolbox/limo_eeg/wiki)
 
-## LIMO tutorial dataset
+## LIMOチュートリアルデータセット
 
-With the software we released a dataset that can now be cited and downloaded here: http://datashare.is.ed.ac.uk/handle/10283/2189
+ソフトウェアでは、ここで引用してダウンロードできるデータセットをリリースしました。 http://datashare.is.ed.ac.uk/handle/10283/2189
 
-## Questions
+## お問い合わせ
 
-Best to use the discussion forums like the eeglab mailing list or neurostar (tagging people) for general analysis questions.  
-You can also email directly or raise a github issue, in particular for bugs.
+一般的な分析質問のためのeeglabメーリングリストやneurostar(tagging people)などのディスカッションフォーラムを使用するのがベストです。  
+また、直接メールを送ったり、 github の問題を上げることもできます。特にバグです。
 
-## Contribute
+## 貢献する
 
-Anyone is welcome to contribute ! check here [how you can get involved](https://github.com/LIMO-EEG-Toolbox/limo_eeg/blob/master/contributing.md), the [code of conduct](https://github.com/LIMO-EEG-Toolbox/limo_eeg/blob/master/code_of_conduct.md).
+どなたでもご参加いただけます! 詳しくはこちら [参加できる方法](https://github.com/LIMO-EEG-Toolbox/limo_eeg/blob/master/contributing.md), , [行動規範](https://github.com/LIMO-EEG-Toolbox/limo_eeg/blob/master/code_of_conduct.md).
 
-Contributors are listed [here](https://github.com/LIMO-EEG-Toolbox/limo_eeg/blob/master/contributors.md)
-# **Tutorial**
+寄稿者一覧 [詳しくはこちら](https://github.com/LIMO-EEG-Toolbox/limo_eeg/blob/master/contributors.md)
+# **チュートリアル**
 
-Details on the different functions and usage can be found on the [wiki pages here](https://github.com/LIMO-EEG-Toolbox/limo_tools/wiki) while this is a step-by-step tutorial.
+異なる機能と使用状況に関する詳細は、 [wikiページはこちら](https://github.com/LIMO-EEG-Toolbox/limo_tools/wiki) これはステップバイステップのチュートリアルです。
 
-_Important notice_
+_重要なお知らせ _
 
-Whatever you display using LIMO plotting functions, all the variables are returned in the Matlab workspace. For instance, if you plot all channels vs time (ERP results), then the raw statistical map and the significance mask are returned. If you plot a time course, that time course with confidence interval is returned, etc. You may type "who" on the Matlab command line to see these variables.
+LIMO プロット機能を使用して表示するたびに、Matlab ワークスペースですべての変数が返されます。 たとえば、すべてのチャンネルと時間(ERP結果)をプロットすると、生の統計マップと重要なマスクが返されます。 タイムコースをプロットすると、その時間経過を自信の間隔で返します。 これらの変数を参照するには、Matlab コマンドラインで "who" を入力できます。
 
-## Getting started
+## スタート
 
-The tutorial is using [Wakeman and Henson (2015)](https://www.nature.com/articles/sdata20151) face data. In short, famous, unfamiliar and scrambled faces were presented, and repeated immediately or later. Subjects had to do a judgment task orthogonal to the design to keep them engaged. The EEG channels were extracted and preprocessed. [DOWNLOAD THE DATA FOR THIS TUTORIAL HERE](https://openneuro.org/datasets/ds002718/versions/1.0.5) in BIDS format.
+チュートリアルは、 [ウェイクマンとヘンソン (2015)](https://www.nature.com/articles/sdata20151) 顔データ。 短い、有名な、非有名でスクランブルされた顔が提示され、すぐに繰り返されます。 被験者は、それらを従事し続けるために、設計に判断タスクの矯正を行う必要があります。 EEGチャンネルを抽出し、前処理しました。 [このチュートリアルのデータをここにダウンロード](https://openneuro.org/datasets/ds002718/versions/1.0.5) BIDS形式
 
-This tutorial assumes you are using the latest [EEGLAB](https://github.com/sccn/eeglab) version (2020.0 or later) that uses [STUDY](https://sccn.ucsd.edu/wiki/Chapter_02:_STUDY_Creation) to link with [LIMO tools](https://github.com/LIMO-EEG-Toolbox/limo_tools).
+このチュートリアルでは、最新の使い方を想定しています。 [エッグラボ](https://github.com/sccn/eeglab) 使用するバージョン(2020.0以降) [スタディ](https://sccn.ucsd.edu/wiki/Chapter_02:_STUDY_Creation) リンクについて [LIMOツール](https://github.com/LIMO-EEG-Toolbox/limo_tools).
 
 
  

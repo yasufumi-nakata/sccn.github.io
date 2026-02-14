@@ -6,29 +6,29 @@ parent: Plugins
 render_with_liquid: false
 nav_order: 10
 ---
-To view the plugin source code, please visit the plugin's [GitHub repository](https://github.com/sccn/zapline-plus).
+プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/zapline-plus).
 
-# Zapline-plus
-Improvements of the ZapLine function to remove line noise from EEG/MEG data. Adds automatic detection of the number of components to remove, and chunks the data into segments to account for nonstationarities.
+# Zaplineプラス
+EEG/MEGデータからラインノイズを除去するZapLine関数の改善。 削除するコンポーネントの数の自動検出を追加し、非ステーションのアカウントにデータをセグメントにチャンクします。
 
-Dependencies of Noisetools are provided with permission by Alain de Cheveigné. Please visit the original repository for more info and additional noise removal tools: [http://audition.ens.fr/adc/NoiseTools/](http://audition.ens.fr/adc/NoiseTools/)
+ノイズツールの依存性は、アライン・デ・チェヴェーニャの許可を得て提供されます。 オリジナルのレポジトリをご覧ください。 [http://audition.ens.fr/adc/NoiseTools/](http://audition.ens.fr/adc/NoiseTools/)
 
-# Quick start
+# クイックスタート
 ```matlab
 cleanedData = clean_data_with_zapline_plus(data,srate);
 ```
 
-Or if you live in the EEGlab universe:
+EEGlabの宇宙に住んでいる場合:
 ```matlab
 EEG = clean_data_with_zapline_plus_eeglab_wrapper(EEG,struct('noisefreqs',[50])) % specifying the config is optional
 ```
 
-# Please cite
+# お問い合わせ
 
-Original Zapline paper: Cheveigné, Alain de. 2020. “ZapLine: A Simple and Effective Method to Remove Power Line Artifacts.” NeuroImage 207 (February): 116356. [https://www.sciencedirect.com/science/article/pii/S1053811919309474](https://www.sciencedirect.com/science/article/pii/S1053811919309474).
+オリジナルのザップライン紙:チェヴェーニョ、アライン・デ・2020。 「ZapLine:電力線アーティファクトを除去するシンプルで効果的な方法」 NeuroImage 207(2月):116356。 [https://www.sciencedirect.com/science/article/pii/S1053811919309474](https://www.sciencedirect.com/science/article/pii/S1053811919309474).
 
-Zapline-plus paper: Klug, M., and N. A. Kloosterman. 2021. “Zapline-plus: A Zapline Extension for Automatic and Adaptive Removal of Frequency-Specific Noise Artifacts in M/EEG.” bioRxiv. [https://www.biorxiv.org/content/10.1101/2021.10.18.464805.abstract](https://www.biorxiv.org/content/10.1101/2021.10.18.464805.abstract).
+Zapline-plusのペーパー:Klug、M。およびN. A. Kloosterman。2021。 「Zapline-plus: M/EEGにおける周波数特異ノイズアーティファクトの自動および適応除去のためのZapline拡張」 バイオRxiv。 [https://www.biorxiv.org/content/10.1101/2021.10.18.464805.abstract](https://www.biorxiv.org/content/10.1101/2021.10.18.464805.abstract).
 
-# Versions
+# バージョン
 
-- v1.0, initial version
+- v1.0、初期バージョン

@@ -7,158 +7,158 @@ render_with_liquid: false
 title: Chapter-6.-Visualization
 long_title: Chapter-6.-Visualization
 ---
-Once we’ve computed our connectivity estimates, and potentially computed
-some statistics, we will want to visualize the results. SIFT currently
-provides two visualization programs for exploring results for a
-single dataset or a cohort of datasets: an Interactive Time-Frequency
-Grid, and an Interactive BrainMovie3D. For the next several sections, let’s start by
-visualizing the results for each condition separately. Let’s begin by
-selecting only the *RespWrong* dataset as shown in the figure below.
+接続の見積もりを計算し、潜在的に計算されると
+いくつかの統計情報では、結果を視覚化します。 SIFT 現在現在
+結果を探索するための2つの視覚化プログラムを提供します
+単一のデータセットまたはデータセットのコホート:インタラクティブな時間頻度
+グリッドとインタラクティブなBrainMovie3D。 次のセクションでは、
+各条件毎に結果を視覚化します。 始めよう
+下の図のように *RespWrong* データセットのみを選択します。
 
-![Image:images/SIFTfig20.jpg](images/SIFTfig20.jpg )
+![画像:images/SIFTfig20.jpg](images/SIFTfig20.jpg )
 
-*Figure caption. Select only the RespWrong dataset to continue.*
+*充填キャプション。 RespWrongのデータセットのみを選択して続行します。 * 必須
 
-## 6.1. Interactive Time-Frequency Grid
+## 6.1. インタラクティブタイム周波数グリッド
 
-Bring up the Interactive Time-Frequency Grid Options GUI by selecting menu item
-**SIFT > Visualization > Time-FrequencyGrid**. This can also be achieved from the command line:
+メニュー項目を選択することにより、インタラクティブなタイム頻度のグリッドオプションGUIを実装
+**SIFT > 可視化 > 時間頻度Grid**。 コマンドラインから実行することもできます。
 
 ``` matlab
  pop_vis_TimeFreqGrid(EEG);
 ```
 
-This should generate the GUI seen in the figure below. This GUI has
-substantially more options than we’ve previously seen, and we will only
-briefly introduce them here. Help text for each option can be obtained
-by expanding the Help Pane at the bottom of the PropertyGrid. The first
-step to creating a Time-Frequency Grid is to design the grid layout. We
-can plot time-frequency images of different VAR-based measures on the
-upper triangle, lower triangle, or diagonal of the grid. This is
-achieved by setting the **MatrixLayout** property to ***Partial*** and
-selecting the measures to plot on the various grid components. Next we
-should decide which **FrequenciesToPlot**. Usually we want to visualize
-a subset of all frequencies, to make interesting details more salient.
-We can also control how the color map is saturated, using a priori color
-limits or adaptive ones based on percentiles of the data. Picking a good
-color scaling is important for visual inspection of the data. If source
-localization has been performed we can set **SourceMarginPlot** to
-***dipole*** to plot the anatomical locations of the sources on the
-column and row margins. If source locations are not available, but ICA
-has been performed, we can set this property to ***topoplot*** to
-instead plot the scalp maps of the ICs on the margins. We can provide a
-**Baseline** window (in seconds) for computing event-related measures.
-We can also perform statistical **Thresholding** or use simple
-percentile or absolute thresholds to establish significance. If the
-threshold is constant, contours can be plotted around significant
-regions by enabling **PlotContour**. Finally, we can customize a wide
-variety of display options, including placement of event and frequency
-markers, labels and title strings, font colors and sizes, and more.
+下の図で見たGUIを生成します。 このGUIは
+以前見たよりもかなり多くの選択肢があります。
+詳しくはこちらをご覧ください。 各オプションのヘルプテキストを取得できます
+プロパティグリッドの下部にあるヘルプペインを拡大することで。 初めての方へ
+Time-Frequency Gridを作成する手順は、グリッドレイアウトを設計することです。 お問い合わせ
+異なるVARベースの対策の時間頻度画像をプロットすることができます
+上部の三角形、下の三角形、またはグリッドの対角。 お問い合わせ
+**MatrixLayout** プロパティを***Partial***に設定することで達成
+さまざまなグリッドコンポーネントにプロットする対策を選択します。 次へ
+**FrequenciesToPlot ** を決定する必要があります。 通常、視覚化したい
+すべての周波数のサブセット, 興味深い詳細を詳細に一貫性を作るために.
+また、カラーマップの飽和状態を、優先カラーで制御することもできます。
+データのパーセンタイルに基づいて、制限または適応するもの。 良いものを選ぶ
+カラースケーリングは、データの視覚的検査のために重要です。 ソースの場合
+localization は、**SourceMarginPlot** をセットできます。
+***dipole*** ソースの解剖の場所をプロットする
+列と行のマージン。 ソースの場所が利用できない場合は、ICA
+このプロパティを***topoplot***にセットできます。
+代わりに、マージンのICのスカルプマップをプロットします。 提供いたします。
+**Baseline** ウィンドウ(秒単位で) コンピューティングイベント関連の対策。
+また、統計的な**閾値**を実行したり、単純に使うこともできます。
+重要性を確立するためのパーセントまたは絶対的なしきい値。 もし、
+しきい値は定数であり、輪郭は重要な周りをプロットすることができます
+**PlotContour**を有効にすることによって地域。 最後に、ワイドをカスタマイズできます。
+でき事および頻度の配置を含むいろいろな表示選択、
+マーカー、ラベル、タイトル文字列、フォントの色やサイズなど。
 
 
-For this example, make sure your options are set as in the figure and table below:
+この例では、以下の図と表にオプションが設定されていることを確認してください。
 
 <table>
 <tbody>
 <tr class="odd">
-<td><p>Option</p></td>
-<td><p>Value</p></td>
-<td><p>Description</p></td>
+<td><p>オプション</p></td>
+<td><p>バリュー</p></td>
+<td><p>コンテンツ</p></td>
 </tr>
 <tr class="even">
-<td><p><strong>MatrixLayout</strong></p></td>
-<td><p><strong>Partial</strong></p></td>
+<td><p><strong>マトリックスレイアウト</strong></p></td>
+<td><p><strong>カテゴリー</strong></p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><blockquote>
-<p><strong>UpperTriangle</strong></p>
+<p><strong>アッパートライアングル</strong></p>
 </blockquote></td>
-<td><p><strong>dDTF08</strong></p></td>
-<td><p>Put the dDTF08 on the upper triangle</p></td>
+<td><p><strong>dDTF08の特長</strong></p></td>
+<td><p>上部の三角形にdDTF08を置く</p></td>
 </tr>
 <tr class="even">
 <td><blockquote>
-<p><strong>LowerTriangle</strong></p>
+<p><strong>ダウントライアングル</strong></p>
 </blockquote></td>
-<td><p><strong>dDTF08</strong></p></td>
-<td><p>Put the dDTF08 on the lower triangle</p></td>
+<td><p><strong>dDTF08の特長</strong></p></td>
+<td><p>下部の三角形にdDTF08を置く</p></td>
 </tr>
 <tr class="odd">
 <td><blockquote>
-<p><strong>Diagonal</strong></p>
+<p><strong>ダイアゴナル</strong></p>
 </blockquote></td>
-<td><p><strong>S</strong></p></td>
-<td><p>Put the power spectra on the diagonal</p></td>
+<td><p><strong>ツイート</strong></p></td>
+<td><p>対角にパワースペクトラを置く</p></td>
 </tr>
 </tbody>
 </table>
 
-![Screen Shot 2023-08-25 at 10 39 52 PM](https://github.com/sccn/SIFT/assets/1872705/e401cac0-d686-4f17-a9a2-122d33b860b2)
+![スクリーンショット 2023-08-25 10 39 52 PM](https://github.com/sccn/SIFT/assets/1872705/e401cac0-d686-4f17-a9a2-122d33b860b2)
 
-*Figure caption. Interactive Time-Frequency Grid
-option GUI generated by `pop_vis_TimeFrequencyGrid()`.Almost every
-aspect of the grid is customizable, and only the most commonly-used
-options are represented in the GUI.*
-
-
-Click **OK** to continue and generate the Time-Frequency Grid. After a
-few seconds, you should see a figure similar to the figure below. 
-
-![Screen Shot 2023-08-25 at 10 43 36 PM](https://github.com/sccn/SIFT/assets/1872705/cf355414-a033-41e3-93b8-0e37820995e3)
-
-*Figure caption. Time-Frequency Grid.*
-
-Here we have
-plotted an array of time-frequency images, where frequency is on the
-y-axis and time on the x-axis. On the upper and lower triangle of the
-grid (above and below the red-bordered diagonal) we have the dDTF
-(conditional GC) between each pair of sources. Information flows from
-columns to rows. Thus the time-frequency (TF) image at (row,col) = (3,1)
-shows information flow at different times and frequencies from the
-source above column 1 (IC8) to the source on the left of row 3 (IC13).
-Note that we have vertical red lines indicating events of interest (here
-the time of the button-press event) and horizontal gray lines denoting
-our frequencies of interest **(FrequencyMarkers)**. On the diagonal, we
-have plotted the event-related spectral perturbation (ERSP). Because we
-provided a baseline, each pixel shows the information flow or spectrum
-relative to the baseline window. Red denotes more information flow than
-in the baseline, while blue denotes less. The anatomical dipole
-locations for each source are rendered on the margins. Clicking on this
-will expand an interactive 3D MRI plot (dipplot). Clicking on any
-time-frequency image generates a figure with more detail regarding the
-interaction between the respective sources.
+*充填キャプション。 インタラクティブタイム周波数グリッド
+オプションで生成されるGUI `pop_vis_TimeFrequencyGrid()`お問い合わせ ほぼすべて
+格子の面はカスタマイズ可能です、そして最も一般的に使用されるだけ
+オプションはGUIで表されます。 * 必須
 
 
-Note the large bursts of information flow and spectral power in the
-theta (3-7 Hz) and delta (2-3 Hz) bands around, and just after, the
-erroneous button press. This suggests some kind of transient network
-synchronization occurring around the time when the button press is made
-in error. As a side note, observe that, although spectral power often
-increases with information flow/granger-causality, it does not
-*necessarily* do so. Consider IC 38 (7th row and column). It shows very
-little change in ERSP (cell (7,7)) around the button press, but appears
-to exhibit changes in information flow with ICs 8 (row 1) and 13 (row 3). As a
-rule, spectral power modulation and phase synchronization/information
-flow can occur independently of each other – one does not imply the
-other. Merely observing two regions concomitantly increase their
-spectral amplitude does not necessarily suggest that they are
-communicating. Conversely, observing a lack of event-related spectral
-power modulation in some putative components of a brain network does not
-mean it is not critically participating in the network.
+[OK**] をクリックして、Time-Frequency Grid を継続して生成します。 アフター
+数秒で、下の図に似ている数字が表示されます。 
+
+![スクリーンショット 2023-08-25 10 43 36 PM](https://github.com/sccn/SIFT/assets/1872705/cf355414-a033-41e3-93b8-0e37820995e3)
+
+*充填キャプション。 時間頻度格子。 * 必須
+
+お問い合わせ
+周波数画像の配列をプロットしました。
+x軸のy軸と時間。 上部と下部の三角形
+グリッド(赤字の対角の下)は、dDTFを持っています
+(条件付きGC) 各ソースのペア間で。 情報の流れ
+列から行へ。 したがって、時間頻度(TF)イメージ(row,col) = (3,1)
+異なる時間と頻度で情報の流れを表示
+列1(IC8)上のソースは、行3(IC13)の左側のソースに。
+関心のあるイベントを示す縦の赤い線があることに注意してください。
+ボタン・プレス・イベントの時間)および横の灰色ラインは指摘します
+関心のある当社の周波数**(FrequencyMarkers)**。 斜めに、私達は
+イベント関連の分裂(ERSP)をプロットしました。 私たちだからこそ
+ベースラインを提供し、各ピクセルは情報の流れかスペクトルを示します
+ベースラインウィンドウに相対的に。 レッドは、より情報の流れを示す
+ベースラインでは青色が少ない。 解剖ダイポール
+各ソースの場所はマージンにレンダリングされます。 これをクリック
+インタラクティブな3D MRIプロット(ディプロット)を展開します。 任意のクリック
+time-frequency イメージは、より詳細な図を生成します。
+各ソース間の相互作用。
 
 
-To explore one of these interactions further, let’s go ahead and click
-on cell (3,1), which corresponds to IC8 to IC13. Clicking on cell (3,1) should generate an image similar to that in
-the figure below. Here we can explore the interaction between these two
-processes in greater detail. On the top panel of we have the dDTF flow
-from IC8 to IC13 (the plot mentions IC1 and IC3, but IC1 is 8, which is the first component in our list and IC3 is component 13 which was the 3rd in our list) and on the bottom panel we have thefeedback flow (IC13 to IC8). Note that you can use the parameter to rename components. 
+情報の流れとスペクトルの大きなバーストに注意してください。
+theta (3-7 Hz) および delta (2-3 Hz) バンドのまわり、そしてちょうどの後で、
+erroneousボタン出版物。 これは、いくつかの種類の一時的なネットワークを提案します
+ボタンプレスが作成される時間の周りに発生する同期
+エラー。 サイドノートとして, 観察します。, スペクトル力が頻繁に
+情報の流れ/危険性によって増加して下さい、それはではないです
+※必須* です。 IC 38(第7列と列)を検討してください。 それは非常に示します
+ボタンプレスの周りのERSP(セル(7,7))で少し変更しますが、表示されます
+IC 8(ロー1)と13(ロー3)で情報の流れの変化を展示します。 お問い合わせ
+規則、スペクトル力調節および段階の同時性/情報
+流れは互いに独立して起こることができます - 一つは暗くありません
+その他。 2つの地域を密接に観察することで、
+分光度は必ずしもそれらがであることを提案しません
+コミュニケーション。 逆に、イベント関連のスペクトルの欠如を観察する
+脳ネットワークのいくつかのパテativeコンポーネントにおけるパワーモジュレーションは、
+つまり、ネットワークにはほとんど参加していません。
 
-![Screen Shot 2023-08-25 at 10 47 12 PM](https://github.com/sccn/SIFT/assets/1872705/418f6dbf-cbf1-4e12-b48b-3ff6bb2b2ab4)
 
-*Figure Caption. Interactive Time-Frequency Grid.*
+これらのインタラクションの1つをさらに探索するには、先に進んでクリックしてみましょう
+IC8～IC13に対応したセル(3,1) セル上でクリックする(3,1)は、そのように類似した画像を生成する必要があります
+下の図です。 ここでは、これらの2つの間の相互作用を探索することができます
+より詳細なプロセス。 トップパネルにはdDTFフローがあります
+IC8 から IC13 (プロットは IC1 と IC3 に言及しますが、 IC1 は 8 です。このリストの最初のコンポーネントであり、 IC3 はコンポーネント 13 で、リストの 3 番目でした) と下部パネルでは、フィードバックフロー (IC13 から IC8) があります。 パラメータを使用してコンポーネントの名前を変更できます。 
 
-Many more options may be used. Unfortunately, in recent versions of MATLAB, the GUI may crash or return an error after pressing OK. Therefore, using the command line to set different options is preferable. Below is the same command used to plot the figure above, but changing the color limit. We are also adding a baseline from -1 to -0.25 seconds. This subtracts the average connectivity in the pre-event baseline window (1 sec to ¼ sec before the button-press event) from each measured value. We will also use simple thresholding and a percentile threshold of 97.5% on the 3rd dimension of the connectivity matrix. This is not as rigorous as computing statistics, but it allows us to get an idea of what might be significant. We will also associate the proper labels to each of the 8 components. Refer to the GUI for the different parameters and associated help messages/descriptions. 
+![スクリーンショット 2023-08-25 10 47 12 PM](https://github.com/sccn/SIFT/assets/1872705/418f6dbf-cbf1-4e12-b48b-3ff6bb2b2ab4)
+
+*耐火物。 インタラクティブタイム周波数グリッド。 * 必須
+
+より多くのオプションが使用できる場合があります。 残念ながら、MATLAB の最新バージョンでは、GUI は、OK を押した後にエラーをクラッシュしたり、返したりすることがあります。 そのため、コマンドラインを使用して異なるオプションを設定できます。 上記図をプロットするのと同じコマンドですが、色の制限を変更します。 -1〜0.25秒のベースラインも追加しています。 各測定値から、プレイベントベースラインウィンドウ(1秒〜1秒、1秒〜4秒)の平均接続率を下回します。 また、接続行列の第3次元の97.5%の単純なしきい値とパーセントのしきい値も使用されます。 これは、計算統計として厳格ではありませんが、重要なことの考えを得ることができます。 また、各8つのコンポーネントに適切なラベルを関連付けます。 異なるパラメータと関連するヘルプメッセージ/説明のGUIを参照してください。 
 
 
 ```matlab
@@ -168,315 +168,315 @@ vis_TimeFreqGrid('EEG', EEG(1), 'Conn', EEG(1).CAT.Conn, 'MatrixLayout', ...
        'nodelabels', { 'IC8' 'IC11' 'IC13' 'IC19' 'IC20' 'IC23' 'IC38' 'IC39' });
 ```
 
-![Screen Shot 2023-08-25 at 11 35 07 PM](https://github.com/sccn/SIFT/assets/1872705/0fdb639d-3620-4921-8484-a484219ef5b6)
+![スクリーンショット 2023-08-25 に 11 35 07 PM](https://github.com/sccn/SIFT/assets/1872705/0fdb639d-3620-4921-8484-a484219ef5b6)
 
-*Figure Caption. Interactive Time-Frequency Grid.*
+*耐火物。 インタラクティブタイム周波数グリッド。 * 必須
 
-Again, let's select the cell (3,1). On the left marginals, the column-envelope of the matrix is visible (maximum and minimum dDTF
-across time), while on the bottom marginal, we have the row-envelope
-(maximum and minimum of the dDTF across frequency). The envelopes of the
-two-sided thresholds (using the percentile
-threshold) are plotted as green-black lines on the marginals. Values
-between the threshold lines are considered non-significant and masked in
-the time-frequency plot. The purple shaded region on the time-marginal
-indicates our baseline window. Every part of the image is expandable.
+繰り返し、セル(3,1)を選択しましょう。 左側のマージンでは、行列の列列列が表示される(最大値と最小dDTF)
+時間を渡して下さい)、最下の余白の間、私達に列封筒があります
+(頻度を渡るdDTFの最高そして最低)。 の封筒の
+2面のしきい値(パーセンシーを使用)
+しきい値)は、マージンの緑色黒線としてプロットされています。 バリュー
+しきい線の間には、非重要なと見なされます
+時間頻度のプロット。 タイムマルジナルの紫色の陰部
+ベースラインウィンドウを示します。 あらゆる部分が拡大可能です。
 
-![Screen Shot 2023-08-25 at 11 34 50 PM](https://github.com/sccn/SIFT/assets/1872705/83407bb0-fb51-4056-9074-bf1c7a33528e)
+![スクリーンショット 2023-08-25 に 11 34 50](https://github.com/sccn/SIFT/assets/1872705/83407bb0-fb51-4056-9074-bf1c7a33528e)
 
-*Figure caption. Expansion of the Time-Frequency Grid
-cell (3,1) corresponding to IC8 to IC13.*
+*充填キャプション。 時間周波数グリッドの拡張
+IC8～IC13に対応したセル(3,1) * 必須
 
-As with the Time-Frequency Grid, each element of the Time-Frequency Cell
-is also interactively expandable. On the top panel, we have the
-dDTF flow from IC8 to IC13 and on the bottom panel we havethe feedback flow (IC13 to IC8). The envelopes of the time-frequency matrix are plotted on the marginal. Here, two-sided thresholds for statistical significance are plotted as
-green-black lines on the marginal. The purple-shaded region denotes the
-baseline interval [-1 -0.25] sec. Clicking on the source anatomical
-images will generate interactive dipole plots of the sources.
+Time-Frequency Gridと同様に、Time-Frequency Cellの各要素
+また、インタラクティブに拡張可能です。 トップパネルには、
+IC8 から IC13 までの dDTF の流れおよび下部パネルのフィードバックの流れ(IC13 への IC8)。 時間頻度行列のエンベロープは、マージン上に描画されます。 ここでは、統計的重要性のための2つの側面のしきい値が次のようにプロットされます。
+余白の緑の黒いライン。 紫色の陰影地域は、
+ベースライン間隔 [-1 -0.25] sec. ソース解剖学のクリック
+画像は、ソースのインタラクティブなダイポールプロットを生成します。
 
-By examining this time-frequency image, we can see that there is a
-significant flow of information from IC8 to IC13 in the theta band
-around the time of the erroneous button press. There is also a slightly
-delayed and damped feedback from IC13 to IC8. This emphasizes the points made in section 4.5. regarding the importance of
-using an asymmetric measure that can separate feedforward and feedback
-influences in closed-loop systems. Note that the early information flow
-is highly peaked around 5 Hz theta-band, while we see later information
-flow around 250-600 ms, shifting to the delta-band (2-3 Hz). This is
-precisely in line with several observations regarding the functional
-role in error processing (the so-called Error-Related Negativity (ERN)
-seen reported in ERP literature) and electrophysiology of the cortical
-area to which IC8 is localized (Anterior Cingulate Cortex (ACC))
+今回の周波数イメージを調べてみると、そこにあることがわかります
+IC8からIC13までの情報の流れ
+erroneousボタンの出版物のまわり。 少しずつあります
+IC13からIC8へのフィードバックを遅らせ、弱めました。 これは、セクション4.5で行われたポイントを強調します。 重要性について
+フィードフォワードとフィードバックを分離できる非対称測定を使用して
+クローズドループシステムの影響。 早期情報の流れ
+5 Hz のスタットバンドのまわりで非常にピークに、私達は後で情報を見ます
+250-600 ms のまわりで流れ、デルタ バンド (2-3 Hz) に移ります。 お問い合わせ
+機能に関するいくつかの観察に沿って正確に
+エラー処理のロール(いわゆるエラー関連ネガティブ(ERN))
+ERPの文献で報告された)および皮質の電気生理学
+IC8がローカライズされるエリア(Anterior Cingulate Cortex(ACC))
 (Holroyd and Coles, 2002; Yordanova et al., 2004; Luu et al., 2004;
-Roger et al., 2010).
+ロジャー ら., 2010.
 
-Returning to our Time-Frequency Grid, and turning our
-attention to the first column, we note that IC8 (ACC) appears to be
-exerting a disproportionate amount of theta-band causal influence on the
-rest of the network around the time of the erroneous button press. IC8
-appears to be some kind of hub, synchronizing and communicating with
-multiple other brain areas when the error is being committed. In order
-to examine the full network behavior in more detail, let’s generate a 3D
-BrainMovie.
+時間の頻度の格子に戻って、私達の回して下さい
+最初の列に注意して、IC8(ACC)が表示されることに注意
+シートバンドの因果の影響の比例した量を出す
+誤ったボタンプレスの周りのネットワークの残り。 IC8の特長
+いくつかの種類のハブであるように見えます, 同期し、とのコミュニケーション
+エラーがコミットされると、他の複数の脳領域。 注文
+完全なネットワークの動作を詳細に調べるために、3Dを生成してみましょう
+ブラインムービー.
 
-## 6.2. Interactive Causal BrainMovie3D
+## 6.2. インタラクティブ・キャサール・ブレインムービー3D
 
-The Interactive Causal BrainMovie3D (Mullen and Delorme et al, 2010;
-Delorme, 2005) is a way of visualizing brain network activity across
-time, frequency and anatomical location in the form of an anatomically
-localized directed graph. Directed graphs (graphical models) are
-powerful constructs for representing causal network structure (Pearl,
-2000; Eichler, 2006a). Graph-theoretic measures are being increasing
-used to study brain network organization (Bullmore and Sporns, 2009).
-The BrainMovie3D provides a way to interactively explore multiple
-dimensions of source-domain network dynamics and graph structure in an
-intuitive and aesthetically pleasing manner.
+インタラクティブ・キャサール・ブレインムービー3D (MullenとDelorme et al、2010;)
+デルロメ、2005年)は、脳ネットワークの活動を可視化する方法です。
+時間、頻度および解剖学的形態の解剖学的位置
+ローカライズされた指示されたグラフ。 直接グラフ(グラフィックモデル)は
+ケーショナルネットワーク構造(Pearl,
+2000年;Eichler、2006a)。 グラフ理論的な対策が高まっています
+脳ネットワーク組織(Bullmore and Sporns, 2009)を勉強するために使用される。
+ブレインムービー3 Dは、複数のインタラクティブな探索方法を提供します
+ソースドメインネットワークのダイナミクスとグラフ構造の寸法
+直感的かつ審美的に喜ぶ方法。
 
 
-To begin, let’s bring up the BrainMovie3D GUI by selecting **SIFT > Visualization > Causal BrainMovie3D** (if you experience problems with the GUI, use the command line calls at the end of this section). The command-line analogue is
+始めるには、**SIFT > Visualization >を選択してBrainMovie3D GUIを立ち上げましょう。 Causal BrainMovie3D** (GUIで問題が発生した場合は、このセクションの最後にコマンドライン呼び出しを使用します)。 コマンドラインアナログは
 
 ```matlab
  pop_vis_causalBrainMovie3D(EEG);
 ```
 
 
-You should now be presented with a control panel similar to that shown
-below. This GUI has the most options of any thus far, and we
-will, again, only explore a small subset of the options for this
-example. The Help Pane (and some adventurous exploration) should allow
-the user to deduce the function of many of the remaining options.
+表示されるようにコントロールパネルで提示する必要があります
+お問い合わせ このGUIは、これまでのところ最も多くの選択肢があり、
+このオプションの小さなサブセットだけを探索する
+例) ヘルプパン(およびいくつかの冒険的な探査)は、許可する必要があります
+ユーザは残りのオプションの多くの機能を引き起こします。
 
 
-One of the interesting features of the BrainMovie is the ability to
-modulate the color and size of nodes based on graph-theoretic measures
-such as inflow/outflow, indegree/outdegree, causal flow, causal density,
-asymmetry ratio, and other such quantities (Seth, 2005; Bullmore and
-Sporns, 2009). This is achieved through the **NodeColorMapping**, and
-**NodeSizeMapping** properties. Below is a list of definition that will be useful when we look at Brainmovies.
+BrainMovieの興味深い機能の1つは、
+グラフ理論測定に基づいてノードの色とサイズを変更します
+inflow/outflow、indegree/outdegree、causalの流れ、causal密度のような、
+asymmetryの比率および他のそのような量(Seth、2005年;Bullmoreおよび
+Sporns, 2009 . これは**NodeColorMapping**によって達成され、
+**NodeSizeMapping** プロパティ。 以下は、Brainmovies を見ると役に立つ定義のリストです。
 
 <table>
 <tbody>
 <tr class="odd">
-<td><p>Measure</p></td>
-<td><p>Description</p></td>
+<td><p>測定値</p></td>
+<td><p>コンテンツ</p></td>
 </tr>
 <tr class="even">
-<td><p><strong>Outflow</strong></p></td>
-<td><p>Sum connectivity strengths over outgoing edges</p></td>
+<td><p><strong>アウトフロー</strong></p></td>
+<td><p>外出先のエッジ上のSum接続強度</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>Inflow</strong></p></td>
-<td><p>Sum connectivity strength over incoming edges</p></td>
+<td><p><strong>インフロー</strong></p></td>
+<td><p>着信エッジ上のSum接続強度</p></td>
 </tr>
 <tr class="even">
-<td><p><strong>Casual Flow</strong></p></td>
-<td><p><em>Outflow</em> - <em>Inflow</em></p></td>
+<td><p><strong>カジュアルフロー</strong></p></td>
+<td><p><em>アウトフロー</em> - <em>インフロー</em></p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>Outdegree</strong></p></td>
-<td><p>Number of significant outgoing edges</p></td>
+<td><p><strong>アウトタイム</strong></p></td>
+<td><p>重要な外出エッジの数</p></td>
 </tr>
 <tr class="even">
-<td><p><strong>Indegree</strong></p></td>
-<td><p>Number of significant incoming edges</p></td>
+<td><p><strong>最近の投稿</strong></p></td>
+<td><p>重要な着信エッジの数</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>Casual Degree</strong></p></td>
-<td><p><em>Outdegree</em> - <em>Indegree</em></p></td>
+<td><p><strong>偶然の程度</strong></p></td>
+<td><p><em>アウトタイム</em> - <em>最近の投稿</em></p></td>
 </tr>
 <tr class="even">
-<td><p><strong>Asymmetry Ratio</strong></p></td>
-<td><p><img src="https://latex.codecogs.com/svg.latex?AR=\frac{Outflow-Inflow}{Inflow+Outflow}"><br /><img src="https://latex.codecogs.com/svg.latex?-1~\le AR~\le 1"><br /><em>AR</em> = -1 indicates all connectivity related to that node is inflowing (a causal sink)<br />
-<em>AR</em> = +1 indicates all connectivity related to that node is outflowing (a causal source)<br />
-<em>AR</em> = 0 indicates either balanced flow or no significant flow</p></td>
+<td><p><strong>アシムネトリー比率</strong></p></td>
+<td><p><img src="https://latex.codecogs.com/svg.latex?AR=\frac{Outflow-Inflow}{Inflow+Outflow}"><br /><img src="https://latex.codecogs.com/svg.latex?-1~\le AR~\le 1"><br /><em>アーカイブ</em> = -1 は、そのノードに関連したすべての接続が流入していることを示します(causal シンク)<br />
+<em>アーカイブ</em> = +1 は、そのノードが流出しているすべての接続を示します(原因源)<br />
+<em>アーカイブ</em> = 0 は、バランスの取れたフローまたは重要なフローを示す</p></td>
 </tr>
 </tbody>
 </table>
 
 
-Below is a list of options we have used
-to generate the plots on this page. Let’s begin by starting with the default options and setting the
-remaining options as shown in the GUI and the table below:
+以下は、使用したオプションのリストです。
+このページのプロットを生成します。 デフォルトオプションから始めてから始めましょう。
+GUI と下の表に示すように、残りのオプション:
 
 
 <table>
 <tbody>
 <tr class="odd">
-<td><p>Option</p></td>
-<td><p>Value</p></td>
-<td><p>Description</p></td>
+<td><p>オプション</p></td>
+<td><p>バリュー</p></td>
+<td><p>コンテンツ</p></td>
 </tr>
 <tr class="even">
-<td><p><strong>ConnectivityMethod</strong></p></td>
-<td><p><strong>dDTF08</strong></p></td>
-<td><p>Which connectivity measure to use</p></td>
+<td><p><strong>接続性 メソッド</strong></p></td>
+<td><p><strong>dDTF08の特長</strong></p></td>
+<td><p>どの接続測定を使用するか</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>FrequenciesToCollapse</strong></p></td>
+<td><p><strong>周波数ToCollapse</strong></p></td>
 <td><p><strong>4:7</strong></p></td>
-<td><p>Collapse frequencies across the theta range</p></td>
+<td><p>β の範囲を渡る崩壊の頻度</p></td>
 </tr>
 <tr class="even">
-<td><p><strong>FreqCollapseMethod</strong></p></td>
-<td><p><strong>Integrate</strong></p></td>
-<td><p>Which method to use to collapse frequencies?<br />
-<em>Integrate</em>: integrate over the selected frequencies<br />
-<em>Mean</em>: take the mean over frequencies<br />
-<em>Max</em>: take the maximum<br />
-<em>Peak</em>: return the peak value over frequencies (a monotonically increasing or decreasing sequence does not have a peak)</p></td>
+<td><p><strong>FreqCollapseメソッド</strong></p></td>
+<td><p><strong>インテグレート</strong></p></td>
+<td><p>周波数を崩壊させるために使用する方法は?<br />
+<em>インテグレート</em>: 選択した周波数に統合<br />
+<em>メリット</em>: 周波数を超えた意味を取る<br />
+<em>マックス</em>: 上限を取る<br />
+<em>ピーク</em>: 周波数上のピーク値を返します(単一的に増加または減少するシーケンスはピークを持たない)</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>EdgeColorMapping</strong></p></td>
-<td><p><strong>Connectivity</strong></p></td>
-<td><p>The color of the edges will be mapped to connectivity strength (amount of information flow along that edge). Red = high connectivity, Green = low connectivity.</p></td>
+<td><p><strong>エッジカラーマッピング</strong></p></td>
+<td><p><strong>接続性</strong></p></td>
+<td><p>エッジの色は、接続強度(そのエッジに沿って情報の流れの量)にマップされます。 赤=高コネクティビティ、グリーン=低コネクティビティ</p></td>
 </tr>
 <tr class="even">
-<td><p><strong>EdgeSizeMapping</strong></p></td>
-<td><p><strong>ConnMagnitude</strong></p></td>
-<td><p>The size of edges of the graph (connecting “arrows”) will be mapped to connectivity magnitude (absolute value of connectivity strength, useful if there are negative values as with event-related (baselined) or between-condition analysis)</p></td>
+<td><p><strong>エッジサイズマッピング</strong></p></td>
+<td><p><strong>コンテンツ</strong></p></td>
+<td><p>グラフのエッジの大きさ(「矢印」の接続)は、接続の大きさ(接続強度の絶対値、イベント関連(ベースライン)や、条件間分析などのマイナス値がある場合に便利です)にマップされます。</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>NodeColorMapping</strong></p></td>
-<td><p><strong>AsymmetryRatio</strong></p></td>
-<td><p>The color of a node (source) will be mapped to the asymmetry ratio of connectivity for that source. Red = causal source, Blue = causal sink. Green = balanced flow</p></td>
+<td><p><strong>ノードカラー マッピング</strong></p></td>
+<td><p><strong>Asymmetryラティオ</strong></p></td>
+<td><p>ノード(ソース)の色は、そのソースの接続の非対称比にマッピングされます。 赤=因果源、 青=カウスシンク。 グリーン = バランスの流れ</p></td>
 </tr>
 <tr class="even">
-<td><p><strong>NodeSizeMapping</strong></p></td>
-<td><p><strong>Outflow</strong></p></td>
-<td><p>The size of a node will be mapped to the amount of information outflow from the source</p></td>
+<td><p><strong>ノードサイズマッピング</strong></p></td>
+<td><p><strong>アウトフロー</strong></p></td>
+<td><p>ノードのサイズは、ソースからの情報流出量にマップされます。</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>FooterPanelDisplaySpec</strong></p></td>
-<td><p><strong>ICA_ERPenvelope</strong></p></td>
-<td><p>This configures the footer panel at the bottom of the brainmovie. Here, we have chosen to display the ERP envelope of some back-projected components</p></td>
+<td><p><strong>フットパネルディスプレイ仕様</strong></p></td>
+<td><p><strong>ICA_ERPenvelope(アメリカ)</strong></p></td>
+<td><p>これは、ブレーンモアの下部にあるフッターパネルを設定します。 ここでは、いくつかのバックプロジェクトされたコンポーネントのERPエンベロープを表示するようにしました</p></td>
 </tr>
 <tr class="even">
 <td><blockquote>
-<p><strong>icaenvelopevars</strong></p>
+<p><strong>icaenvelopevarsの</strong></p>
 </blockquote></td>
 <td><p><strong>1</strong></p></td>
-<td><p>Backproject the ERP of IC8 (ACC), which is the first component on the list</p></td>
+<td><p>リストの最初のコンポーネントであるIC8(ACC)のERPをバックプロット</p></td>
 </tr>
 <tr class="odd">
 <td><blockquote>
-<p><strong>backprojectedchans</strong></p>
+<p><strong>backprojectedchansさん</strong></p>
 </blockquote></td>
 <td><p><strong>B1;</strong></p></td>
-<td><p>… and compute the envelope only for channel B1 (FCz)</p></td>
+<td><p>...チャネルB1(FCz)のみの封筒を計算する</p></td>
 </tr>
 <tr class="even">
-<td><p><strong>RotationPath3d</strong></p></td>
-<td><p><strong>automatic</strong></p></td>
-<td><p>This creates an automatic rotation of the brainmovie when we create the final movie</p></td>
+<td><p><strong>回転Path3d</strong></p></td>
+<td><p><strong>自動制御</strong></p></td>
+<td><p>最終ムービーを作成すると、ブレーンモヴィの自動回転が生成されます。</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>ProjectGraphOnMRI</strong></p></td>
-<td><p><strong>on</strong></p></td>
-<td><p>This projects the 3D directed graph onto the 2D anatomical slices</p></td>
+<td><p><strong>プロジェクトグラフOnMRI</strong></p></td>
+<td><p><strong>お問い合わせ</strong></p></td>
+<td><p>このプロジェクトでは、2Dの解剖スライスに3Dのグラフを向けました</p></td>
 </tr>
 <tr class="even">
-<td><p><strong>Thresholding</strong></p></td>
+<td><p><strong>投げかけ</strong></p></td>
 <td></td>
-<td><p>If statistics are available, we can use them, otherwise, we get a rough sense of significance by applying simple percentile thresholding</p></td>
+<td><p>統計が利用可能な場合、我々はそれらを使用することができます、それ以外の場合は、単純なパーセンタイルのしきい値を適用することにより、意義の荒い感覚を得ることができます</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>PercentileThreshold</strong></p></td>
+<td><p><strong>パーセンタイル パスワード</strong></p></td>
 <td><p><strong>0.05</strong></p></td>
-<td><p>We will only render the top 5% of all connections across all time</p></td>
+<td><p>私たちは、すべての接続の最高5%を常にレンダリングします</p></td>
 </tr>
 </tbody>
 </table>
 
 
 
-A useful feature of the Control Panel is that we can **Preview frames**
-from the brainmovie before committing to render the movie. You can also
-save these preview frames, allowing an easy way to create a network image
-for any desired time point. Now that we have configured our options, go
-ahead and click on the scrollbar in the **Preview BrainMovie** panel. It
-may take a second or two for the brainmovie to render, so be patient and
-don’t click multiple times in rapid succession. If you have graphics
-problems, try setting the **UseOpenGL** option to **off**. 
+コントロールパネルの便利な機能は、**プレビューフレーム* * 必須
+映画をレンダリングするためにコミットする前に、Brainmovieから。 また、
+これらのプレビューフレームを保存し、ネットワークイメージを簡単に作成できます。
+任意の時間ポイントのために。 オプションを設定しました。
+*Preview BrainMovie**パネルのスクロールバーをクリックします。 お問い合わせ
+ブレーンモビがレンダリングするために2つまたは2つを取ることができるので、患者であり、
+数回クリックしないでください。 グラフィックがあれば
+問題は、**UseOpenGL**オプションを**off**に設定してみてください。 
 
-![700px](images/SIFTfig24.jpg )
+![700pxの](images/SIFTfig24.jpg )
 
-*Figure caption. The Interactive BrainMovie3D Control Panel.*
+*充填キャプション。 インタラクティブなBrainMovie3D コントロール パネル。 * 必須
 
-If you
-move the slider to approximately -0.2 seconds (200 ms before the button
-press) you should see a figure similar to the figure below. We are looking at a
-3D rendering of the brain of this subject derived from MRI images. To be
-precise, here we have coregistered (warped) this subject’s electrode
-montage to the 4-shell spherical head model corresponding to the
-Montreal Neurological Institute (MNI) average brain. This accounts for
-the low-resolution of the MRIs (and much of the error in the dipole
-localization). If individual MRIs are available for the subject, an
-individualized head model can be constructed. The outline of the
-cerebral spinal fluid (CSF) is rendered translucently
-(**RenderCorticalSurface** option) to show us the outline of the
-cortical surface. As described in the section above, node and edge color
-and size are modulated by one or more network or graph-theoretic
-measures. Since we have mapped outflow to **NodeColor** and **AsymmetryRatio**
-to **NodeSize** we can immediately see that IC8 (big red ball in center) is
-a causal source hub here, driving many other brain areas in the theta
-frequency band. Note the backprojected ERP from IC8 at the bottom of the
-screen shows a sharp negativity around 40 ms followed by a late positive
-complex at around 350-400 ms. This is the well-known ERN potential known
-to be associated with error-processing. Try scrolling to the time point
-corresponding to the negative peak of the ERN (40 ms) and see what
-happens to the network (particularly IC 8). Try rotating the graph to
-examine it from different angles. Try scrolling through various stages
-of the epoch and exploring different mappings for node and edge color
-and size.
+お問い合わせ
+スライダーを約-0.2秒(ボタンの前に200ms)に移動します
+プレス)下の図に似ている図を見る必要があります。 お問い合わせ
+MRI画像から得られるこの被写体の脳の3Dレンダリング。 お問い合わせ
+正確には、この被験者の電極を共同登録しています
+4シェルの球面ヘッドモデルにモンタージュ
+モントリオール神経学研究所(MNI)平均脳。 このアカウントは、
+MRIの低解像(およびダイポールの誤差の多く)
+ローカリゼーション) 被写体に個々のMRIが利用可能である場合、
+個別化されたヘッドモデルは組み立てることができます。 の概要
+脳脊髄液(CSF)は、トランスルークエント
+(**RenderCorticalSurface**オプション) は、
+腐食性表面。 上記のセクションで説明されているように、ノードとエッジカラー
+そしてサイズは1つ以上のネットワークかグラフ理論によって調節されます
+対策 **NodeColor**と**AsymmetryRatio**にアウトフローをマッピングしたので、
+**NodeSize**では、IC8(中央の大きな赤い球)がすぐに確認できる
+ここのカスールソースハブ, スタタ内の他の多くの脳領域を運転
+周波数帯域。 IC8 から返された ERP が下部にあることに注意してください。
+スクリーンは40のmsのまわりで鋭いnegativityを遅らせます肯定的な示します示します
+350-400 ms 付近の複合体。 これはよく知られているERNの潜在的な既知の
+エラー処理に関連付けられている。 時間点にスクロールしてみる
+ERN(40 ms)のネガティブピークに対応し、
+ネットワーク(特にIC 8)に起こります。 グラフを回転させよう
+異なる角度から調べます。 様々なステージでスクロールしてみる
+エポックのノードとエッジカラーの異なるマッピングを探索
+そしてサイズ。
 
-![Image:images/SIFTfig25.jpg](images/SIFTfig25.jpg )
+![画像/SIFTfig25.jpg](images/SIFTfig25.jpg )
 
-*Figure caption. A frame of the interactive BrainMovie3D at -0.2 seconds (-200 ms) relative to the event.*
+*充填キャプション。 インタラクティブなBrainMovie3Dのフレーム -0.2秒(-200 ms)イベントの相対。 * 必須
 
-When you are ready, specify an output folder and format using **OutputFormat > ImageOutputDirectory** and click **MakeMovie!** All frames of the movie will now be rendered and saved to disk.
-This may take a while, so you might want to pull out that Yoga mat again
-(you can also choose a narrower **MovieTimeRange** if you don’t want to
-wait around). If you selected **BrainMovieOption > Visibility = *On*** then you should see each frame rendered on your
-display. Setting visibility to **off** will replace the on-screen rendering
-with a progress bar, speeding up the movie-making process.
-
-
-Now that we’ve made our movie let’s take a look at some of our frames.
-The figure below shows three of these frames, corresponding to the start (-523
-ms), middle (40 ms), and end (606 ms) of our button-press task. Note
-that at the start of the epoch, the network is initially quiescent, with
-some weak communication between sources in or near anterior rostral ACC
-(RCZa; IC 11) and supplementary motor area (SMA/preSMA; IC 38).
+準備ができたら、**OutputFormat > を使って出力フォルダと形式を指定します。 ImageOutputDirectory** をクリックして**MakeMovie!** 映画のすべてのフレームがレンダリングされ、ディスクに保存されます。
+しばらく経つと、ヨガマットをもう一度引き出すと良いでしょう。
+(必要に応じて、より狭い**MovieTimeRange**を選択することもできます。
+お待ちください。 選択した場合**BrainMovieOption > 可視性 = *On*** その後、各フレームがあなたの上にレンダリングされていることがわかります
+ディスプレイ。 **off** への可視性の設定は、画面上のレンダリングを置き換えます
+進捗バーを使って、映画制作プロセスをスピードアップ。
 
 
-Moving to the time just following the button-press event (center frame), we see that now IC8, located in posterior ACC (RCZp/CCZ), has become a
-central causal hub, exerting significant influence on several areas of
-the network, but particularly the posterior parietal cortex (IC13) and RCZa.
-There is some bidirectional flow, but the flux is largely outward from
-IC8, as indicated by the red hue of the node (indicating a large positive
-asymmetry ratio). Note that this corresponds precisely to the negative
-peak of the ERN. However, we *are not* modeling dependencies in the
-event-locked ERN itself (which is an ERP and subtracted during ensemble
-normalization) but rather in the ongoing oscillations *underlying* the
-ERN complex.
+映画を作ったのは、フレームの一部を見てみましょう。
+以下の図は、開始に対応する3つのフレーム(-523)を示しています。
+ms)、中(40 ms)、および端(606 ms)のボタンプレスタスク。 お問い合わせ
+エポックの開始時、ネットワークは初期にキセントです。
+アントリア・ロストラルACC付近のソース間の弱い通信
+(RCZa; IC 11)および補足モーター区域(SMA/preSMA; IC 38)。
 
 
-Moving to the end of the epoch, around 606 ms, we see that the network
-has almost returned to its initial decoupled state, and examining the
-last frames of the movie will reveal the complete decoupling of IC 8 from
-the rest of the network. This panel seems to implicate RCZp/CCZ as some
-sort of causal hub in a cortical network for error processing. As noted
-in earlier in this page, this is entirely consistent with the theoretical (and
-partly experimentally verified) role of RCZp/CCZ in error processing.
+ボタンプレスイベント(中央フレーム)の直後に時間に移動し、現在、IC8がポスターACC(RCZp/CCZ)にあり、
+中心のcausalハブ、複数の区域の重要な影響を出すこと
+ネットワークは、特にポスター面相(IC13)とRCZaです。
+二方向のフローはありますが、フラックスは大きく上から上向きです。
+IC8は、ノードの赤色の色合いによって示されるように(大きな陽性を示す)
+asymmetryの比率。 これは負に正確に対応することに注意してください
+ERNのピーク。 但し、弊社※※の依存関係をモデル化しない
+event-locked ERN 自体 (これは ERP であり、アンサンブル中に引き下げられます)
+正規化) しかし、むしろ進行中の発振で * アンダーリング*
+ERN 複合体。
 
-![Image:images/SIFTfig26.jpg](images/SIFTfig26.jpg )
 
-*Figure caption. Three frames of a causal
-BrainMovie3D shows transient theta information flow during error
-commission. The frames correspond to -523 ms (left), 40 ms (center),
-and 606 ms (right) relative to the button press (0 ms).*
+606 ms付近のエポックの終端に移動すると、ネットワークが表示されます。
+初期のデコルド状態にほとんど戻り、調べる
+映画の最後のフレームは、IC 8の完全なデカップリングをから明らかにします
+ネットワークの残りの部分。 このパネルはRCZp/CCZを一部複雑化しているようです
+エラー処理のための相関的なネットワーク内の運河ハブのソート。 注目されるように
+このページでは、理論と完全に一致しています(そして
+エラー処理におけるRCZp/CCZの部分的に実験的に検証)ロール。
 
-To save movies, we recommend downloading the **Brainmovie** EEGLAB plugin, as the Brainmovie function of SIFT only supports outdated movie formats. The upgraded *brainmovie3d_causal* function of the brainmovie plugin will shadow the same function in SIFT (which is OK) and a warning message will appear on the command line.
+![画像/SIFTfig26.jpg](images/SIFTfig26.jpg )
 
-As for other SIFT graphic interfaces, depending on the MATLAB version you are using, changing some options may cause the GUI to crash. In this case, we recommend using the command line. For example, this will generate a movie with automatic rotation and save it in an MP4 file (requires the recently updated **Brainmovie** EEGLAB plugin mentioned above).
+*充填キャプション。 カスールの3フレーム
+ブラインムービー3 D は間違いの間に渡る ta 情報の流れを示します
+手数料。 フレームは-523 ms (左)、40 ms (中心)、
+ボタンプレス(0 ms)の相対的な606 ms(右)。 * 必須
+
+映画を保存するには、**Brainmovie** EEGLABプラグインをダウンロードすることをお勧めします。SIFTのBrinmovie機能は、古い映画フォーマットのみをサポートしています。 アップグレードされた *brainmovie3d_causal* は、Brainmovie プラグインの機能を SIFT (OK) で同じ機能をシャドウし、警告メッセージはコマンドラインに表示されます。
+
+他の SIFT グラフィック インターフェイスに関しては、使用している MATLAB バージョンによっては、GUI がクラッシュする可能性があります。 この場合、コマンドラインを使用することをお勧めします。 例えば、自動回転でムービーを生成し、MP4ファイルに保存します(最近更新された**Brainmovie** EEGLABプラグインが必要です)。
 
 ```matlab
 pop_vis_causalBrainMovie3D(EEG(1), 'nogui', 'BrainMovieOptions', ...
@@ -484,22 +484,22 @@ pop_vis_causalBrainMovie3D(EEG(1), 'nogui', 'BrainMovieOptions', ...
                     'rotationpath3d' {'AngleFactor' 1 'PhaseFactor' 0.75}});
 ```
 
-It is left as an exercise to the reader to do the following:
+読者が次のことをするために練習として残されます。
 
-1.  Try creating brainmovies for other frequency bands (e.g., delta).
-    What is different between the evolution of the delta-band cortical
-    network and the theta-band network? You can even have Brainmovie find the peaks over some frequency range (e.g., 2-9 Hz) and map the
-    peak frequency onto edge color to color-code different
-    frequency-specific sub-networks (Hint: examine the
-    **FreqCollapseMethod** and **EdgeColorMapping** properties).
+1.  他の周波数帯域(例、デルタ)のブラインドムービーを作成してみてください。
+    デルタ・バンド・コルティカルの進化との違いは何ですか?
+    ネットワークとテタバンドネットワーク? いくつかの周波数範囲(例、2-9 Hz)上のBrainmovieはピークを見つけることができ、マップ
+    端色へのピークの頻度は別の色をコードします
+    周波数固有のサブネットワーク (Hint: 参照)
+    **FreqCollapseMethod** および **EdgeColorMapping** プロパティ)。
 
-2.  Select both *RespWrong* and *RespCorr* datasets and create
-    TimeFrequencyGrid images and BrainMovies for the between-condition
-    differences (if more than one dataset is selected TimeFrequencyGrid
-    and BrainMovie3D automatically assume you want to examine the
-    between-condition difference). Is there more theta-band information
-    flow from RCZp during error commission than during correct button
-    presses? What about the delta band?
+2.  *RespWrong* と *RespCorr* の両方を選択して作成します。
+    時間頻度 グリッド画像とBrainMoviesの間で条件
+    違い(複数のデータセットが選択されている場合 TimeFrequencyGrid
+    ブラインムービー3 D は自動的に調べたいと仮定します
+    相互条件の相違)。 より多くのベータバンド情報があります
+    正しいボタンの間に間違いのコミッションの間にRCZpから流れて下さい
+    プレス デルタバンドとは?
 
 
 

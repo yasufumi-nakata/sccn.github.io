@@ -5,105 +5,105 @@ long_title: EEGLAB and Python
 parent: Interoperability
 ---
 
-EEGLAB and Python
+EEGLABとPython
 ===================
 
-EEGLAB does not work natively in Python because EEGLAB runs on
-MATLAB (and, to a considerable extent, on the open source Octave
-platform). Nevertheless, there are possible links with Python, which we
-are detailing here.
+EEGLAB は Python でネイティブで動作しません。EEGLAB が実行されているからです。
+MATLAB(および、オープンソースオクターブでかなりの程度まで)
+プラットフォーム) それにもかかわらず、 Python とリンクできるので、
+詳しくはこちら
 
-Should I use MATLAB-based tools or Python-based tools
+MATLABベースのツールやPythonベースのツールを使用する必要があります。
 -----------------------------------------------------
 
-One of the most important features when using a software package is usage and community.
-If the community is large and the software is popular, it is a safer
-choice as this ensures many problems people encounter have
-been solved - it also means that the code is probably more stable and
-has fewer bugs. 
+ソフトウェアパッケージを使用する際の最も重要な機能は、使用とコミュニティです。
+コミュニティが大きく、ソフトウェアが普及している場合は、より安全です。
+これは多くの問題の人々が遭遇していることを保障するので選択
+解決された - それはまたコードがおそらくより安定していることを意味します
+バグが少ない。 
 
-Below is the figure in an independent [2024 article](https://apertureneuro.org/article/116386-the-art-of-brainwaves-a-survey-on-event-related-potential-visualization-practices) showing the popularity of all software packages.
-![image_eeglab](https://github.com/sccn/sccn.github.io/assets/1872705/4a2de7bc-ee1d-450f-8314-48d3294d54f4)
+以下は独立した数字です [2024 記事](https://apertureneuro.org/article/116386-the-art-of-brainwaves-a-survey-on-event-related-potential-visualization-practices) すべてのソフトウェアパッケージの人気が表示されます。
+![画像ライブラリ](https://github.com/sccn/sccn.github.io/assets/1872705/4a2de7bc-ee1d-450f-8314-48d3294d54f4)
 
-See also this third-party [2023 report](https://doi.org/10.1016/j.neuri.2023.100154) and [2024 report](https://www.preprints.org/manuscript/202411.0750/v1), which compares EEGLAB citations with other EEG analysis software packages. 
+このサードパーティーも参照 [2023 報告書](https://doi.org/10.1016/j.neuri.2023.100154) そして、 [2024報告書](https://www.preprints.org/manuscript/202411.0750/v1)EEGLAB 引用を他の EEG 解析ソフトウェアパッケージと比較する。 
 
-Major differences between MATLAB and Python
+MATLABとPythonの大きな違い
 -------------------------------------------
 
-There is a trend in imaging tool development to migrate brain imaging
-tools to Python. Of course, Python (and the numpy/scipy math packages
-built on Python) would be an interesting (and free) alternative to using
-MATLAB. However, irrespective of what Python enthusiasts might claim,
-Python might not be ideal because it remains a programming language
-designed for programmers. For example,
+脳イメージングを移行するためのイメージングツール開発の傾向があります
+Python へのツール。 もちろん、Python(およびnumpy/scipy mathパッケージ)
+Pythonで構築されたのは面白い(と無料)使い方の代替です
+マトラボ しかし、Pythonの愛好家が何を主張する可能性があるかの見解は、
+プログラミング言語のままのPythonは理想的ではない
+プログラマーのために設計されている。 例えば、
 
--   **Code indentation.** Code indentation is a nice feature of Python. However, this style
-    does not come naturally to the novice programmer. It also makes
-    copying and pasting code between file sources and the command line
-    interface problematic (since a snippet of code will most likely have
-    unwanted indentation when copied to the Python command line).
--   **Object-oriented notation.** Python is much more object-oriented than MATLAB, sometimes requiring
-    users to understand object-oriented concepts when calling functions. MNE, for example, do not
-    let you access EEG data structures. If you want to access some information, such as channel coordinates,
-    you need to dig through the MNE code in the hope of finding the non-documented method that will return
-    this information. 
--   **Matrix for dummies!** It is hard to understand for novices why an n-size vector should be
-    indexed, beginning at 0 and ending at n-1 (in MATLAB and R, vectors
-    begin at position 1 and end at n). Matrix manipulation in Python is not as intuitive as MATLAB. For
-    example, the already non-intuitive Python code to concatenate arrays
-    <i>np.concatenate((np.array(\[\[1,_2\],_\[5,_6\|1, 2\], \[5,
-    6\]\]), np.array(\[1, 2\])))</i> will fail because, unlike MATLAB,
-    1-D vectors are not compatible with 2-D matrices by default - and
-    need explicit conversion. Compare to MATLAB simpler notation <i>\[
-    \[1 2; 5 6\]; \[1 2\] \]</i> or <i>\[ \[1 2; 5 6\] \[1 2\]' \]</i>
-    depending on the dimension to concatenate. The MATLAB code is
-    readable for someone with math training.
--   **Which version am I running?** Python versions 2 and 3 are not
-    fully compatible -- and Python 2.7, although no longer supported
-    since January 1, 2020, is still widely used because a large number
-    of Python libraries are not available in Python 3 -- leading to all
-    kinds of unexpected problems that can slow down a novice
-    programmer. 
--   **Where are my libraries?** Python usually requires the user to install multiple external
-    libraries; this can be tedious and does not come naturally to
-    novices. Even experienced users sometimes spend hours getting their
-    library settings right. There are also other technical problems
-    related to the operating system and library compatibility that can take
-    hours or days to solve (we speak from experience). Python version libraries' stability across platforms
-    can also be a headache -- sometimes, you even have multiple libraries to do the same thing.
--   **But Python is free.** Why should I have to pay for MATLAB? Good conduct in
-    (open) science should transcend discussions on finances. We pay for
-    Microsoft or Adobe licenses because the free alternative, even
-    if it exists, does not fulfill our needs. The compiled version of
-    EEGLAB does not require users to purchase MATLAB, and EEGLAB code
-    also runs on Octave.
-- **Jupyter notebooks.** The closest alternative to the Matlab interactive interface is the
-Jupyter Notebook environment that runs in your browser or in Visual Studio code. However, the
-graphical capabilities of Jupyter notebooks remain limited (it is
-sometimes hard to manipulate figures, impossible to zoom, etc...).
-Most people who are used to Matlab and tried
-Jupyter notebooks dislike Jupyter notebooks - then learn to live with the
-limitations if they need it for their work. By contrast, the less popular [Spyder IDE](https://www.spyder-ide.org/) is a decent equivalent of the MATLAB graphical interface and should feel more familiar. 
--   **Lack of features.** MEEG software packages on MATLAB are mainly EEGLAB, FieldTrip, and
-    Brainstorm. MEEG software on Python is MNE which is more tailored to MEG users than EEG users.
-    The MATLAB suite of available software is currently more mature than
-    the Python one, which is a good reason to stick to MATLAB. EEGLAB has 32 plugins for automated artifact rejections. MNE has one (autoreject).
--   **Show some respect!** Python's numpy library has been partially mapped onto MATLAB, which was released 22 years earlier. In numpy, you can map the names of some of the functions to their MATLAB counterparts, and they also take the same list of arguments. These include functions such as reshape, squeeze, meshgrid, griddata, transpose, dot, linspace, logspace, sum, mean, std, min, max, prod, diff, cumsum, cumprod, zeros, ones, eye, diag, inv, pinv, svd, eig, norm, trace, det, fft, ifft, cross, unique, sort, etc. Like MATLAB, Python is undoubtedly a versatile and powerful interpreted language, but please show some respect to your elders :-).
+-   **コードインデント** コードインデントは、Pythonの素晴らしい機能です。 しかし、このスタイル
+    初心者プログラマに自然に来ない。 それはまた作ります
+    ファイルソースとコマンドライン間でコードをコピーして貼り付ける
+    インターフェイスの問題点(コードのスニペットが最も可能性が高いため)
+    Python コマンドラインにコピーしたときに不要なインデント)。
+-   **オブジェクト指向の表記。** Python は MATLAB よりもはるかにオブジェクト指向で、時々 要求する
+    関数を呼び出すときにオブジェクト指向の概念を理解するユーザー。 たとえば、MNE は
+    EEGのデータ構造にアクセスしましょう。 チャンネル座標などの情報にアクセスしたい場合、
+    MNE コードを返す非ドキュメントメソッドを見つけることを望む必要があります。
+    お問い合わせ 
+-   **マトリクス・フォー・ダミーズ!** nサイズのベクトルがすべき初心者のために理解するのは困難です
+    インデックス化、0 で始まり、n-1 で終わる (MATLAB と R のベクトルで)
+    位置1で始まり、nで終わる。 Python でのマトリクス操作は MATLAB と同じくらい直感的ではありません。 お問い合わせ
+    例えば、すでに非直観的な Python コードで配列を連結する
+    <i>np.concatenate(np.array(\[1,_2\]),_\[5,_6\|1,2\],\[5,]
+    6\]\), np.array(\[1, 2\]))</i> MATLABとは異なり、
+    1-Dベクターは、デフォルトで2-Dマトリクスと互換性がありません。
+    明示的な変換が必要です。 MATLABのシンプルな表記と比較 <i>\[
+    \[1 2; 5 6\]; \[1 2\] \]</i> または <i>\[ \[1 2; 5 6\] \[1 2\]' \]</i>
+    次元に従って連結して下さい。 MATLABコードは
+    数学の訓練を持つ人のために読みやすくなります。
+-   **バージョンが実行中ですか?** Python のバージョン 2 と 3 は
+    完全に互換性のある -- と Python 2.7, もはやサポートされていません
+    2020年1月1日以降は、数が多いためまだまだ広く使われています。
+    Python 3 では Python ライブラリは利用できません。
+    初心者を遅くできる予期しない問題の種類
+    プログラマー 
+-   **図書館はどこにありますか?** Pythonは通常、複数の外部をインストールするためにユーザーが必要
+    ライブラリ; これは退屈であり、自然に来ない
+    コメントはありません。 経験豊富なユーザーでも、時々自分の時間を得る時間を費やす
+    ライブラリの設定は右にあります。 その他の技術的な問題もあります
+    オペレーティングシステムとライブラリの互換性に関連する
+    解決する時間か日(私達は経験から話します)。 プラットフォーム間でのPythonバージョンライブラリの安定性
+    頭痛にもなる。時々、同じことを行うために複数のライブラリを持っている。
+-   **しかし、Pythonは無料です。** なぜ私はMATLABのために支払う必要がありますか? よい行為で
+    (open) 科学は、財務に関する議論を伝えるべきである。 お支払い
+    Microsoft または Adobe ライセンスは、無料の代替品、さらには
+    もしそれが存在すれば、私たちのニーズを満たしません。 コンパイルされたバージョンの
+    EEGLAB では、MATLAB および EEGLAB コードを購入するユーザーを必要としません。
+    また、オクターブで動作します。
+- **Jupyterのノート。** Matlabの相互インターフェイスへの最も近い代わりはあります
+ブラウザまたはVisual Studioコードで実行するJuppyter Notebook環境。 しかし、
+Jupyterのノートブックのグラフィカルな機能が限られる(それはあります
+時には数字を操作しにくい、ズームできない、など...)。
+マトラブと試してみたところほとんどの人
+ジュピターノートブックはジュピターノートブックとは異なります - その後、一緒に生きるために学ぶ
+作業に必要な場合の制限。 対照的に、あまり人気 [スパイダーIDE](https://www.spyder-ide.org/) MATLABのグラフィカルインターフェイスとの違いは深刻です。 
+-   **機能の欠如。** MATLABのMEEGソフトウェアパッケージは、主にEEGLAB、FieldTrip、および
+    ブレインストーム。 Python上でMEEGソフトウェアは、EEGユーザーよりもMEGユーザーに合わせたMNEです。
+    利用可能なソフトウェアのMATLABスイートは、現在よりも成熟しています
+    MATLABに固執する正当な理由であるPython 1。 EEGLABには、自動アーティファクト拒否用の32プラグインがあります。 MNEは1つ(オートレジェクト)を持っています。
+-   **いくつかの敬意を表します!** Pythonのnumpyライブラリは、22年前にリリースされたMATLABに部分的にマッピングされています。 numpy では、MATLAB のカウンターパートに関数の一部の名前をマッピングできます。また、引数の同じリストも取得できます。 これらは、リシェイプ、スクイーズ、メッシュグリッド、グリッドデータ、トランスポーズ、ドット、リンスペース、ログスペース、合計、平均、std、min、max、prod、diff、cumsum、cumprod、ゼロス、アイ、掘り出し、inv、svd、svd、eig、標準、トレース、det、fft、ifft、クロス、一意、ソートなどのような機能を含みます。 MATLAB と同様に、Python は多様で強力な解釈言語ですが、あなたの elders :- に敬意を表してください。
 
-How to call EEGLAB functions from Python
+PythonからEEGLAB関数を呼び出す方法
 ----------------------------------------
 
-### Using Oct2Py
+### Oct2Pyの使用
 
-If you want or need to call EEGLAB functions from Python, the best
-solution is to use the Python package Oct2py (pip install Oct2py). You
-will need to install Octave as well. See [this
-page](/others/Running_EEGLAB_on_Octave.html) for more information on how
-to run EEGLAB on Octave. The way this Python library works is that it
-converts Python data structures to MATLAB/Octave data structures and
-vice versa. Based on our research, it is the simplest and most stable way
-to run MATLAB functions in Python, and most EEGLAB functions may be
-called from within Python using this method (change xxx to the location where EEGLAB is installed on your computer).
+Python から EEGLAB 関数を呼び出すか、または必要であれば、最善
+ソリューションは、Python パッケージ Oct2py (pip install Oct2py) を使用することです。 お問い合わせ
+インストールする必要があります オクターブも。 見る [this]
+page:(/others/Running_EEGLAB_on_Octave.html) より詳細な情報
+Octave で EEGLAB を実行します。 この Python ライブラリの仕組みは、
+コンバーター Python のデータ構造を MATLAB/Octave のデータ構造に
+逆に。 私達の研究に基づいて、それは最も簡単で、最も安定した方法です
+Python で MATLAB 関数を実行し、ほとんどの EEGLAB 関数は
+このメソッドを使用して Python 内で呼び出されます (xxx をコンピュータに EEGLAB をインストールした場所に変更します)。
 
 ``` Python
 # import dataset from EEGLAB
@@ -124,44 +124,44 @@ plt.plot(EEG.data[0][0]);
 plt.show()
 ```
 
-The SCIPY Python library can import EEGLAB files, when the raw data is embedded in the *.set* file.
+スキャピー Pythonライブラリは、*.set*ファイルに生データが埋め込まれた場合、EEGLABファイルをインポートできます。
 
 ``` Python
 import scipy.io as sio
 EEG = sio.loadmat('eeglab_data_epochs_ica.set')
 ```
 
-If the raw data is stored in a separate *.fdt* file, the *read_epochs_eeglab* MNE function can also import EEGLAB data files.
+生データが別々の *.fdt* ファイルに格納されている場合、 *read_epochs_eeglab* MNE 関数は EEGLAB のデータファイルをインポートすることもできます。
 
 ``` Python
 import mne
 EEG = mne.io.read_epochs_eeglab('eeglab_data_epochs_ica.set')
 ```
 
-**Stability consideration:** We have found the Oct2py interface very stable. Issues usually arise when an EEGLAB function is not fully compatible with Octave (most functions should be compatible, including ICLabel; However, EEGLAB is optimized for MATLAB, not Octave).
+**安定性の考慮:** Oct2pyインターフェイスは非常に安定しています。 EEGLAB 関数が Octave と完全に互換性がないとき、通常は問題が発生します(ほとんどの機能は ICLabel を含む互換性があります。ただし、EEGLAB は MATLAB で最適化されています。
 
-**Speed consideration:** When using EEGLAB with this method, due to automated data conversion delay and lack of optimization in Octave, one should expect a 2x or more slowdown compared to using EEGLAB on MATLAB or native Python libraries.
+**速度の考察:** このメソッドで EEGLAB を使うと、自動データ変換の遅延と Octave の最適化の欠如のために、MATLAB やネイティブ Python ライブラリで EEGLAB を使用すると比較して 2x 以上の減速が期待できます。
 
-### Using MATLAB runtime Engine under Python or MATLAB compiled Python library
+### Python または MATLAB コンパイルされた Python ライブラリで MATLAB のランタイムエンジンを使用する
 
-We do not advise these solutions as EEGLAB data structures are too complex to be passed on from MATLAB to Python. When executing the Python code, you will get an error "only 1xN and Nx1 char arrays can be returned from MATLAB" (which is not technically correct as many [different data types](https://www.mathworks.com/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html) are handled). However, the EEGLAB EEG structure contains arrays of structures for events and channels and is not handled. This has been the case for at least four years as of 2024, with no improved support in sight. Look for unsupported data types on this [page](https://www.mathworks.com/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html) (as of 2024, the website lists "structure arrays" and "cell arrays" as unsupported data types). Note that the Oct2Py interface described above handles these data types just fine. 
+MATLAB から Python に渡される EEGLAB のデータ構造は複雑すぎるため、これらのソリューションはアドバイスしません。 Python のコードを実行すると、「1xN と Nx1 char 配列のみが MATLAB から返すことができます」というエラーが表示されます(これは技術的に多く正しいわけではありません) [異なるデータタイプ](https://www.mathworks.com/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html) お問い合わせ しかし、EEGLAB EEG構造は、イベントやチャネルの構成の配列を含み、処理されていない。 これは、視力で改善されたサポート無しで、2024年の4年以上のケースでした。 未サポートのデータタイプはこちら [サイトマップ](https://www.mathworks.com/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html) (2024年の時点では、サポートされていないデータ型として「構造配列」と「セル配列」をリストします)。 上述の Oct2Py インターフェイスは、これらのデータ型をうまく処理することに注意してください。 
 
-Will EEGLAB ever run natively on Python?
+EEGLAB は Python でネイティブに実行されることはありませんか?
 ----------------------------------------
 
-For the foreseeable future, MATLAB will remain the platform on, which
-EEGLAB is developed and supported. MATLAB has a breadth of useful tools
-that are not yet matched by open source environments (e.g., no complex
-system to install libraries, good graphical support for different
-platforms, 3-D interactive graphics with transparency, powerful
-debugging tools, capacity to run native Java code), plus a wealth of
-available MATLAB toolboxes are handy, well known and well tested (e.g.,
-image processing toolbox, for correcting for multiple comparisons;
-signal processing toolbox, for spectral decompositions; optimization
-toolbox, for optimizing code; bioinformatics toolbox, useful for EEG
-classification; virtual reality toolbox, for the real-time 3-D rendering of
-EEG activity). Finally, the MATLAB compiler allows us to create a
-compiled version of EEGLAB that does not require the user to have MATLAB
--- MATLAB scripts can be run by [compiled
-EEGLAB](/others/Compiled_EEGLAB.html), although interactive sessions
-are not supported. 
+MATLABは、将来予測可能なプラットフォームを維持します。
+EEGLABの開発・サポート MATLABは、便利なツールのパントを持っています
+オープンソース環境ではまだマッチしていない(例えば、複雑ではない)
+ライブラリをインストールするためのシステム, 異なるための優れたグラフィカルなサポート
+プラットフォーム, 透明性、強力な3次元インタラクティブグラフィックス
+デバッグツール、ネイティブJavaコードを実行する容量)、および豊富な
+利用可能なMATLABツールボックスは便利で、よく知られてよくテストされています(例えば、
+複数の比較を修正するための画像処理ツールボックス。
+スペクトル分解のための信号処理ツールボックス、; 最適化
+コードを最適化するためのツールボックス、バイオインフォマティクスツールボックス、EGGに有用
+分類; リアルタイム3Dレンダリングのためのバーチャル リアリティのツールボックス、
+EEG活動) 最後に、MATLABコンパイラが作成できるようにします。
+ユーザがMATLABを持っていないEEGLABのコンパイルバージョン
+-- MATLABスクリプトは[コンパイル]で実行できます
+EEGLAB:(/others/Compiled_EEGLAB.html) インタラクティブセッション
+サポートされていません。 
