@@ -18,7 +18,7 @@ grand_parent: Tutorials
 スタットパワーレベル、特定のレイテンシーウィンドウ、アルファフェーズの電圧を意味します
 stimulusのオンセット、または等で、
 隣接する試行と、ついに2次元で色分けして視覚化
-このページではjavascriptを使用しています。 [コンセプトガイド](ConceptsGuide/erp_image_background.html). 
+このページではjavascriptを使用しています。 [コンセプトガイド](/tutorials/ConceptsGuide/erp_image_background.html). 
 
 <details open markdown="block">
   <summary>
@@ -375,5 +375,4 @@ Plottings of Plottings and Plottings and Plottings and Plottings and Plottings a
 ふりがな [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) 下の図が現れます。
 
 ![](/assets/images/I85erpimage.jpg)
-
 

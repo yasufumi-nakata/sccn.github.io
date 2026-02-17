@@ -30,8 +30,7 @@ WindowsとMacOSが異なる
 ![サイトマップ](/assets/images/Pop_loadset.png)
 
 このページではjavascriptを使用しています。
-[データのインポートとデータ
-イベント名:(/tutorials/04_Import/Importing_Continuous_and_Epoched_Data.html)
+[データのインポートとイベント情報の追加](/tutorials/04_Import/Importing_Continuous_and_Epoched_Data.html)
 
 「eeglab_data.set」のチュートリアル
 EEGLABの「sample_data」のフォルダにあるツールボックス。 *Open*ファイルの開き。

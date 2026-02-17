@@ -13,12 +13,11 @@ has_toc: true
 
 # EEGLAB Wikiへようこそ
 
-2003年以来、EEGLAB(EEGLAB)[Delorme & Makeig, 2004, オーストラリア](/others/EEGLAB_References.html))、人間EEGや他の関連データ分析のために非常に広く使用されている環境になりました。プログラマー、プラグインツールの作者、およびユーザーからの貢献。 この新しい(2021-) EEGLABのドキュメントの改訂版は、GitHub.comでホストされ、使いやすさや更新が容易になります。 ご意見をお寄せください。[eeglab@sccn.ucsd.edu _ 株式会社ドリテック](mailto:eeglab@sccn.ucsd.edu)).
+2003年以来、EEGLAB([Delorme & Makeig, 2004](/others/EEGLAB_References.html))は、人間EEGや関連データ分析のために非常に広く使用される環境になりました。プログラマー、プラグインツールの作者、およびユーザーからの貢献に支えられています。この新しい(2021-) EEGLABドキュメント改訂版はGitHubでホストされ、使いやすさと更新のしやすさを高めています。ご意見は [eeglab@sccn.ucsd.edu](mailto:eeglab@sccn.ucsd.edu) までお寄せください。
 
 ### ダウンロード EEGLAB
 
--    [EEGLABハードウェアとソフトウェア]
-    推奨事項:(/その他/EEGLAB_hardware_and_software_recommendations.html)
+-    [EEGLABハードウェアとソフトウェア推奨事項](/others/EEGLAB_hardware_and_software_recommendations.html)
 -   [EEGLABをZIPファイルとしてダウンロード](/others/How_to_download_EEGLAB.html)
 -    [GITからEEGLABをダウンロード](https://github.com/sccn/eeglab)
 -    [EEGLABのコンパイル版をダウンロード](/others/Compiled_EEGLAB.html)
@@ -60,4 +59,3 @@ EEGLABチュートリアルは、このページの次のセクションで利�
 
 <i><font size="-1">このチュートリアルは、 <a href="mailto:EEGLAB@sccn.ucsd.edu">アーノード
 デルオルム</a> フィードバックと編集から <a href="mailto:EEGLAB@sccn.ucsd.edu">スコット・マディグ</a>お問い合わせ その他の重要なコントリビューターには、ダン・トゥルン、クレア・ブラボスツ、マコト・ミヤコシ、ラモン・マルティネス、デバプラティム・サルマ、デリック・ロック、ハイリット・セルビー、トービー・フェルンズラーなどがあります。</font><i>
-

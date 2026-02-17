@@ -170,7 +170,7 @@ CSFと脳を分離する追加の表面。
 
 メッシュ生成のインターフェイスは図8に示されます。 生成された
 メッシュファイルは、BEMソルバーから直接使用するのに適しています。 フォーマット
-メッシュファイルには [付録A](/NFT_Appendix_A "wikilink").
+メッシュファイルには [付録A](NFT-Appendix-A.html "wikilink").
 メッシュ生成プロセスは以下のとおりです。
 
 ![](NFT_from_MRI_mesh_gen.png "wikilink") .....

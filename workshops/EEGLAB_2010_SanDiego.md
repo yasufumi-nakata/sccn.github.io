@@ -25,10 +25,7 @@ grand_parent: Workshops
 
 <span style="color:purple">[採掘認知脳の動的I(Scott Makeig)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_I.html)</span> \- <span style="color:darkred">[インタビュー](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_I.html)</span> <span style="color:blue">[スライド](https://sccn.ucsd.edu/githubwiki/files/eeglab2010_sm_mining_brain_dynamics_i.pdf)</span>
 
-<span style="color:purple">[EEGLABとワークショップの概要]
-デルロメ)http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_overview.html)</span>
-<span style="color:darkred"> \- [インタビュー](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_overview.html) <span style="color:blue">[スライド](https://sccn.ucsd.edu
-/githubwiki/files/eeglab2010_ad_nov18_eeglab_overview.pdf
+<span style="color:purple">[EEGLABとワークショップの概要 (Arnaud Delorme)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_overview.html)</span> \- <span style="color:darkred">[インタビュー](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_overview.html)</span> <span style="color:blue">[スライド](https://sccn.ucsd.edu/githubwiki/files/eeglab2010_ad_nov18_eeglab_overview.pdf)</span>
 
 <span style="color:darkred"><b>エッグラボ EEGベースの機能的な脳イメージングのための方法</b></span>
 

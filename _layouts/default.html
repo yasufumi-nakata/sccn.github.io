@@ -200,6 +200,42 @@ layout: table_wrappers
   </div>
 {% include modal.html %}
 
+<script>
+  // Project Pages deployment can set a non-root baseurl (e.g. /repo-name).
+  // Rewrite root-relative links in page content to keep internal links/images working.
+  (function() {
+    var baseUrl = {{ site.baseurl | jsonify }};
+    if (!baseUrl || baseUrl === "/") return;
+
+    function needsPrefix(url) {
+      return (
+        url &&
+        url.charAt(0) === "/" &&
+        !url.startsWith("//") &&
+        !url.startsWith(baseUrl + "/") &&
+        url !== baseUrl
+      );
+    }
+
+    [
+      ["a", "href"],
+      ["img", "src"],
+      ["source", "src"],
+      ["script", "src"],
+      ["link", "href"]
+    ].forEach(function(pair) {
+      var tag = pair[0];
+      var attr = pair[1];
+      document.querySelectorAll(tag + "[" + attr + "]").forEach(function(el) {
+        var current = el.getAttribute(attr);
+        if (needsPrefix(current)) {
+          el.setAttribute(attr, baseUrl + current);
+        }
+      });
+    });
+  })();
+</script>
+
 <!-- OSA Chat Widget -->
 <script src="https://osa-demo.pages.dev/osa-chat-widget.js"></script>
 <script>
