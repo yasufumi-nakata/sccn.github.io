@@ -20,7 +20,7 @@ PACを計算するための伝統的な方法に加えて、プラグインに�
    1. [連続信号](#continuous-signal)
    2. [Epoched信号](#epoched-signal)
 3. [プラグインアーキテクチャとワークフロー](#plugin-architecture-and-workflow)
-	1. [プラグインアーキテクチャ]([#plugin-architecture])
+	1. [プラグインアーキテクチャ](#plugin-architecture)
 	2. [プラグインの設定](#plug-in-setup)
 	3. [グラフィカルなユーザーインターフェイス](#graphical-user-interface)
 	   1. [Pop_pacでPACを計算する](#computing-pac-with-pop_pac)
