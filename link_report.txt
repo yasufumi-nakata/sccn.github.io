@@ -1,0 +1,53 @@
+BROKEN or NOT UPDATED LINKS
+index.html
+	-Download EEGLAB from GIT: /How_to_download_EEGLAB
+	-Download EEGLAB test cases: /EEGLAB_test_cases
+	-Other TIPS and FAQ: /FAQ/TIPS_and_FAQ
+	-EEGLAB filtering FAQ: /FAQ/Firfilt_FAQ
+others/EEGLAB_Extensions.html
+	-How to contribute to EEGLAB: /tutorials/misc/Contributing_to_EEGLAB.html
+	-PACT: http://sccn.ucsd.edu/wiki/PACT
+others/Firfilt_FAQ.html
+	-Q3: http://sccn.ucsd.edu/wiki/Firfilt_FAQ#Q._What_is_the_difference_between_the_.E2.80.9CBasic_FIR_filter_.28new.29.E2.80.9D_and_the_.E2.80.9CWindowed_sinc_FIR_filter.E2.80.9D.3F
+others/How_to_download_EEGLAB.html
+	-page: /others/Fork_the_EEGLAB_repository.html
+	-page: /tutorials/misc/Contributing_to_EEGLAB.html
+others/Running_EEGLAB_on_Octave.html
+	-this page: /others/Fork_the_EEGLAB_repository.html
+	-This other page: /tutorials/misc/Contributing_to_EEGLAB.html
+tutorials/04_Import/Importing_Continuous_and_Epoched_Data.html
+	-quickstart guide: /Tutorials/quickstart.html
+	-quickstart guide: /Tutorials/quickstart.html
+tutorials/05_Preprocess/rereferencing.html
+	-Appendix: /tutorials/IV.Appendix/rereferencing_background.html
+tutorials/06_RejectArtifacts/RunICA.html
+	-Appendix: /tutorials/IV.Appendix/ICA_background.html
+	-Appendix: /tutorials/IV.Appendix/ICA_background.html#note-on-ica-algorithms
+	-this Appendix section: /tutorials/IV.Appendix/ICA_background.html#how-many-data-points-do-i-need-to-run-an-ica
+tutorials/06_RejectArtifacts/cleanrawdata.html
+	-this section of the tutorial: /Tutorials/Rejecting_Artifacts_Legacy_Menus.html
+tutorials/10_Group_analysis/working_with_study_designs.html
+	-STUDY design structure: /tutorials/multi-subject/EEGLAB-STUDY-data-structure.html
+	-STUDY structure: /tutorials/multi-subject/EEGLAB-STUDY-data-structure.html
+tutorials/ConceptsGuide/Data_Structures.html
+	-component clustering: /tutorial/10_Group_analysis/component_clustering_tools.html
+tutorials/contribute/Contributing_to_EEGLAB.html
+	-pull requests: /others/Fork_the_EEGLAB_repository.html
+	-plugin: /tutorials/misc/Contributing_to_EEGLAB.html
+tutorials/contribute/design_plugin.html
+	-example section: /contribute/design_plugin.html#eegplugin_-function-examples
+tutorials/misc/Rejecting_Artifacts_Legacy_Menus.html
+	-section: /tutorials/RejectArtifacts/
+workshops/EEGLAB_2010_SanDiego.html
+	-Browse the EEGLAB wikitutorial: http://sccn.ucsd.edu/wiki/eeglab
+	-Browse the ERICA DataSuite wiki tutorial: http://sccn.ucsd.edu/wiki/DataSuite
+	-Browse the ERICA MatRiver wiki tutorial: http://sccn.ucsd.edu/wiki/MatRiver
+	-Browse the ERICA Enactor wiki tutorial: http://sccn.ucsd.edu/wiki/Enactor
+	-Browse the SCCN MoBI lab wiki tutorial: http://sccn.ucsd.edu/wiki/MoBI_Lab
+workshops/EEGLAB_2012_Beijing.html
+	-this note on the importance of knowing skull conductivity: http://sccn.ucsd.edu/wiki/NFT_Appendix_C
+	-nf): /media:nft_presentation12.pdf
+workshops/EEGLAB_2020_Lublin.html
+	-here: /workshops/reading_material
+workshops/Online_EEGLAB_Workshop.html
+	-Ten lecture course on contemporary BCI design: http://sccn.ucsd.edu/wiki/Introduction_To_Modern_Brain-Computer_Interface_Design
