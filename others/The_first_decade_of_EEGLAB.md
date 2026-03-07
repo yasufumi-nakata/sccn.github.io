@@ -64,8 +64,7 @@ STUDY 関数から単一trial サブセットへ。
 2018年の終わりに、EEGLABの新バージョンがリリースされ、シングルトライアル分析のフルサポートを提供しました。 このバージョンでは、EEGLABプラグインマネージャも含まれています。
 
 各EEGLABの詳細
-[EEGLABリビジョン]でバージョンが使用可能
-ページ:(/others/EEGLAB_revision_history.html)
+[EEGLABリビジョンページ](/others/EEGLAB_revision_history.html)でバージョンが使用可能
 
 統計データ
 ----------
@@ -73,8 +72,7 @@ STUDY 関数から単一trial サブセットへ。
 コードの行数 (プラグインを除く) 現在 145,271
 636 スタンドアローン機能を比較します。 現在、15,265名の研究者が在籍しています。
 EEGLABニュース一覧 EEGLABが約350,000回ダウンロード 知識のISIウェブによると、
-オリジナル2004【EEGLAB】
-ペーパー:()http://sccn.ucsd.edu/eeglab/download/eeglab_jnm03.pdf) が
+オリジナル2004[EEGLABペーパー](http://sccn.ucsd.edu/eeglab/download/eeglab_jnm03.pdf) が
 引用符 14,400 回.
 
 EEGLAB は EEGLAB v0.9 との互換性も後方対応

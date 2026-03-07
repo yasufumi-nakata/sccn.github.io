@@ -6,8 +6,7 @@ parent: Past workshops
 grand_parent: Workshops
 ---
 
-![700px\]|thumb\|center\|upright=2.5\|[マイスルパレス、カルナタカ]
-インド(インド)https://en.wikipedia.org/wiki/Mysore_Palace)](/assets/images/Mysore.jpg)
+![700px|thumb|center|upright=2.5|マイスルパレス、カルナタカ インド](/assets/images/Mysore.jpg)
 
 第23回 EEGLABワークショップ
 ====================

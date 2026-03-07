@@ -20,8 +20,7 @@ OctaveでEEGLABを実行する
 OctaveとEEGLABをインストールする
 -------------------------
 
-Octaveの最新バージョンをダウンロード
-ページ:()https://www.gnu.org/software/octave/download.html)。 EEGLABは
+Octaveの最新バージョンを[ダウンロードページ](https://www.gnu.org/software/octave/download.html)からダウンロードしてください。 EEGLABは
 WindowsでOctave 6.1を使用してテストされたが、後で実行されるかもしれない
 バージョンやその他のプラットフォーム。 すべてのツールボックス(信号処理、統計など)がプリインストールされているWindows用のOctaveインストーラをお勧めします。 
 ### オプションのオクターブ設定
@@ -78,8 +77,7 @@ MATLAB、オクタブ
 インタラクティブな EEGLAB を変更した場合
 その目的のために機能し、他の人があなたの変更から利益を得るために望む,
 コードをフォークし、リクエストをプルとして作成します。
-ページ](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository) [その他] 
-page:(/tutorials/contribute/) は追加
+[EEGLABリポジトリをフォークする](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository)および[EEGLABへの貢献](/tutorials/contribute/)については、
 EEGLABへの貢献について
 
 Octave と Matlab の EEGLAB 出力の比較

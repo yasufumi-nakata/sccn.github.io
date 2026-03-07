@@ -8,12 +8,9 @@ grand_parent: Workshops
 
 ![700px\|thumb\|センター](/assets/images/Group.jpg)
 
-![250px\|thumb\|right\|upright=2.5\|サンタ・マルゲリータ
-リソース:(/assets/images/Ligure.jpg)
+![250px\|thumb\|right\|upright=2.5\|サンタ・マルゲリータ リソース](/assets/images/Ligure.jpg)
 
-<span style="color: red">参加者リソース: </span>[レストラン一覧]
-サンタのロケーション
-マルゲリタhttp://sccn.ucsd.edu/eeglab/workshop16Italy/SantaMargheritaTipsEEGLAB2016.pdf)
+<span style="color: red">参加者リソース: </span>[レストラン一覧 サンタマルゲリタのロケーション](http://sccn.ucsd.edu/eeglab/workshop16Italy/SantaMargheritaTipsEEGLAB2016.pdf)
 現地の組織や懸念、電話、または
 テキストアントニオ+ 44 7481 188079またはArno +33 6508 01366。
 

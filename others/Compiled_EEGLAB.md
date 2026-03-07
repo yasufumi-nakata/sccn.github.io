@@ -11,8 +11,7 @@ EEGLABのコンパイルバージョン
 お問い合わせ
 
 EEGLABは、Mac、Windows、Ubuntu、Ubuntuなどのコンパイルされたバイナリとして存在します。
-[EEGLABダウンロード]でダウンロードできます。
-ページ:()https://sccn.ucsd.edu/eeglab/download.php)。 EEGLABのコンパイル版をインストールする方法は次のとおりです。
+[EEGLABダウンロードページ](https://sccn.ucsd.edu/eeglab/download.php)でダウンロードできます。 EEGLABのコンパイル版をインストールする方法は次のとおりです。
 
 <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/_F-5spN1FL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> 
 

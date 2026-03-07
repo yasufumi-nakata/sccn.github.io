@@ -98,8 +98,7 @@ PythonからEEGLAB関数を呼び出す方法
 
 Python から EEGLAB 関数を呼び出すか、または必要であれば、最善
 ソリューションは、Python パッケージ Oct2py (pip install Oct2py) を使用することです。 お問い合わせ
-インストールする必要があります オクターブも。 見る [this]
-page:(/others/Running_EEGLAB_on_Octave.html) より詳細な情報
+インストールする必要があります オクターブも。 見る [このページ](/others/Running_EEGLAB_on_Octave.html) より詳細な情報
 Octave で EEGLAB を実行します。 この Python ライブラリの仕組みは、
 コンバーター Python のデータ構造を MATLAB/Octave のデータ構造に
 逆に。 私達の研究に基づいて、それは最も簡単で、最も安定した方法です

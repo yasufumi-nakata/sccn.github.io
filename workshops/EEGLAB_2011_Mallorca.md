@@ -251,11 +251,9 @@ Amica decompositionの結果を解釈することは実証されます。
 
 
 
-[PDF、補足機能、データを保存する]
-NFT:(ftp://sccn.ucsd.edu/pub/julie/extra2.zip)
+[PDF、補足機能、データを保存する NFT](ftp://sccn.ucsd.edu/pub/julie/extra2.zip)
 
-[補足機能とデータのみ]
-practicum(ftp://sccn.ucsd.edu/pub/julie/extra.zip)
+[補足機能とデータのみ practicum](ftp://sccn.ucsd.edu/pub/julie/extra.zip)
 
 <!-- -->
 

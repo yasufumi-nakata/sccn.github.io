@@ -44,8 +44,7 @@ Matlab と SIFT で良い経験を持つ人。 ご利用の際は、
 -   ほぼ100-120にデータをダウンサンプル 追加の2つを使用してHz
     この方法でオプション: pop_resample(EEG、100、0.8、0.4) 追加の
     任意変数は穏やかなローパス フィルター斜面をで使用することです
-    ARモデルの注文を抑制するアンチエイリアシング。 見る [this]
-    ページ:()https://sccn.ucsd.edu/wiki/Firfilt_FAQ#Q._For_Granger_Causality_analysis.2C_what_filter_should_be_used.3F_.2804.2F26.2F2018_Updated.29)
+    ARモデルの注文を抑制するアンチエイリアシング。     見る [this](https://sccn.ucsd.edu/wiki/Firfilt_FAQ#Q._For_Granger_Causality_analysis.2C_what_filter_should_be_used.3F_.2804.2F26.2F2018_Updated.29)
     詳しくはこちら
 -   **1つの.setファイル、1つの条件として条件を分離して下さい。** すべて
     SIFT関連の付加的な前処理は各々に適用する必要があります
@@ -123,8 +122,7 @@ rPDC の最も高い freq 結果。
 データポイント・ツー・パラメータ比の値(一番右側バー)。
 ARモデリングステージの妥当性を保証します。 ちなみに定義
 datapoint-to-parameter の比率は異なったから計算されます
-オリジナルの紙なので、注意してください。 詳しくは、「こちら」をご覧ください。
-ページ:()https://sccn.ucsd.edu/wiki/Makoto's_preprocessing_pipeline#SIFT_tips_.2808.2F06.2F2019_updated.29).
+オリジナルの紙なので、注意してください。     詳しくは、[こちら](https://sccn.ucsd.edu/wiki/Makoto's_preprocessing_pipeline#SIFT_tips_.2808.2F06.2F2019_updated.29)をご覧ください。
 
 ## 3。 グループ分析ROIへの変換
 
@@ -416,8 +414,7 @@ pop_groupSIFT_convertToGroupAnatomicalRois.m ライン 307-402、そこにあり
 重要な条件の欠如による頭皮測定可能なEEGの、すなわち
 並列に並ぶピラミッド細胞の大きい区域。 しかし、
 ダイポールフィッティングの誤差、約20%のフィッティングダイポールがこれらに入る
-生理学的に無効なディープ・レクション(詳細については、こちらを参照してください)
-ページ:()https://sccn.ucsd.edu/wiki/Makoto%27s_preprocessing_pipeline#Physiologically_invalid_deep_dipoles.3F_.28Special_contents_for_130.2C000_hit.2C_07.2F02.2F2020_Update.29)).
+    生理学的に無効なディープ・レクション(詳細については、[こちら](https://sccn.ucsd.edu/wiki/Makoto%27s_preprocessing_pipeline#Physiologically_invalid_deep_dipoles.3F_.28Special_contents_for_130.2C000_hit.2C_07.2F02.2F2020_Update.29)を参照してください)。
 ラベル「thalamus」が完全に不適切と判断した場合
 推定 EEG ソースを参照するには、特定の EEG ソースを提供する必要があります。
 今だけ誤解しているラベル? 代わりに、私たちが使うことを提案する
