@@ -30,17 +30,17 @@ mm。 このツールボックスのイメージを作成するには、Freesurf
 操作:
 
 1.  浸透補正:
-    mri_nu_correct ディレクティブ --i 入力_volume --o output_volume --n 2
+    mri_nu_correct.mni --i 入力_volume --o output_volume --n 2
 
 2.  入力ボリュームを1 mmのボリュームデータに変換:
     mri_コンバート -i 入力_volume --conform_size 1 --o output_volume
 
 3.  画像をオリエント:
-    mri_変換 -i 入力_volume --out_orientation ディレクティブ PSR -ot形式
+    mri_変換 -i 入力_volume --out_orientation PSR -ot形式
     -o output_volume(出力)
 
 4.  解析形式で保存:
-    mri_変換 -it 解析 -i output_file_name ディレクティブ -otファイル_type
+    mri_変換 -it 解析 -i output_file_name -otファイル_type
     -o入力_volume
 
 画像が読み込まれると、サギタール、軸、および

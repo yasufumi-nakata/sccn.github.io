@@ -275,7 +275,7 @@ UI の制御は、
 。
 幾何学が定義されたのか。 参照: [恋物癖](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) 関数は、ウィンドウの幅と高さを自動的に変化させます。
 キーワード *Help* ボタンを押してください。
-"pophelp(*pop_newtimef*);" の定義 [入力gui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=inputgui.m) command-line ディレクティブ
+"pophelp(*pop_newtimef*);" の定義 [入力gui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=inputgui.m) コマンドライン関数
 *Ok*と、*structout*の構造の分野
 . . . .
 

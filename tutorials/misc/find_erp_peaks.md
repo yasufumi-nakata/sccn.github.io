@@ -24,7 +24,7 @@ ERP は、Cyber に、TLAB を、TLAB に、
 
 ERPLAB と EEGLAB の Bioelectromag プラグイン
 ---------------
-EEGLABエクスカ(EEGLABエクスカ) [バイオエレクトロマー](https://sccn.ucsd.edu/eeglab/plugins/eeg_toolbox1.01.zip) そして、 [ERPラボ](https://github.com/lucklab/erplab/releases)は、より高度なERPの検出回路です。 EGLABは、EeGLABのライセンスを付与しています。 <span style="color: brown">EEGLABの機能拡張</span> メニュー項目。
+EEGLABエクスカ(EEGLABエクスカ) [Bioelectromagnetism](https://sccn.ucsd.edu/eeglab/plugins/eeg_toolbox1.01.zip) そして、 [ERPラボ](https://github.com/lucklab/erplab/releases)は、より高度なERPの検出回路です。 EGLABは、EeGLABのライセンスを付与しています。 <span style="color: brown">EEGLABの機能拡張</span> メニュー項目。
 
 以下は、EEGLABのeeglab_data_epochs_ica.set から [bioelectromag] までの距離です。
 

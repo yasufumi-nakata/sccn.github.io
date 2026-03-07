@@ -488,7 +488,7 @@ EEGLAB は、現在制作するイベントです。
 コマンドラインからのイベントは便利です。
 
 *EEG.ures* は、
-以下に示すように、元の連続データから実験的なイベント。 ファンクション [eeg_context.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) *urevents* ディレクティブ
+以下に示すように、元の連続データから実験的なイベント。 ファンクション [eeg_context.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) *urevents* 構造体
 近隣イベントのコンテキストで定義されたイベントを見つけるための情報
 実験(元のデータ)
 

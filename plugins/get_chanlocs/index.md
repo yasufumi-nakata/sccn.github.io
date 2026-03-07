@@ -1,7 +1,7 @@
 ---
 layout: default
 title: get_chanlocs
-nav_title: "get_chanlocs ディレクティブ"
+nav_title: "get_chanlocs"
 long_title: get_chanlocs
 parent: Plugins
 render_with_liquid: false

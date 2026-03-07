@@ -112,7 +112,7 @@ clean_rawdata1.10の特長（配布ファイルは現在未公開）
 
 -   [Chang C-Y, Hsu S-H, Pion-Tonachini L, Jung T-P. (2019年)]. 評価評価
     自動アーティファクトのためのアーティファクトサブスペースの復元
-    マルチチャネルのコンポーネント除去 エッグ レコーディング IEEEトランス
+    マルチチャネルのコンポーネント除去 EEG Recording IEEEトランス
     Biomed Eng. 2019年4月1日
     7月22日(日)https://ieeexplore.ieee.org/abstract/document/8768041)
     結論: 空中の結果は最適の ASR を示す

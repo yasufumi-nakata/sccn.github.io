@@ -68,7 +68,6 @@ EEGLABのレガシーは、EEGLABのレガシーのおすすめです。[Widmann
 MATLABの場合
 EEGLAB のレガシーは、MATLABルーチンで動作します。
 *filtfilt.m*。 先着順に進んでいる。
-導入事例 
 
 マトラボ シグナル処理ツール、EEGLAB レガシーは、
 逆のFourierの変換方法。 <span style="color: brown">基本FIR(レガシー)</span> メニュー項目は FIR の filtering* の代りにチェック ボックスです。 *FFT の線形を点検する。

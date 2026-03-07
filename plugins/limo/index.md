@@ -16,7 +16,7 @@ MEEGデータのLInear MOdelling(LIMO MEEG)ツールボックスは、MEEGデー
 
 このリポジトリは、EEGLAB(EEGLAB)で使用するLIMO MEEG(v2)の安定版です。https://sccn.ucsd.edu/eeglab/) しかし、FieldTripのような他のアプリケーションで使用することができます(http://www.fieldtriptoolbox.org/)またはBrainStorm ()https://neuroimage.usc.edu/brainstorm/) あなたの研究の適用のための。 以前のバージョン(1.5)がここにアーカイブされています: http://datashare.is.ed.ac.uk/handle/10283/2190
 
-## 導入事例
+## はじめに
 
 EEGLAB をインストール (一部の関数を呼び出すため) とプラグインディレクトリに LIMO をインストールします。
 

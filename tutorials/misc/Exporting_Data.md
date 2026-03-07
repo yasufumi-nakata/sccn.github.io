@@ -127,7 +127,7 @@ EEGLABメニューの項目は、EEGの形式に分けられます。
 タブ区切り値を含む)。
 Open, Open, Open, Open Calc、Microsoft では、
 
-チュートリアルデータをインポートすることができます <i>eeglab_data.set ディレクティブ</i>
+チュートリアルデータをインポートすることができます <i>eeglab_data.set</i>
 <i>サンプルデータ</i> EEGLABでは、
  現在 イベント イベント
 メニュー項目を選択 <span style="color: brown">ファイル → エクスポート → テキストファイルへのイベント</span> ダイアログウィンドウのポップアップ
