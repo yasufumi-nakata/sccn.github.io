@@ -32,14 +32,14 @@ EEGLAB をロードする
 選択する <span style="color: brown"> ツール → 抽出エポック</span>
 EEGLAB スタッフ
 
-![投稿ナビゲーション](/assets/images/I51pop_epoch.png)
+![](/assets/images/I51pop_epoch.png)
 
 
 右上のボタンをクリックし、*"..."* をマークします。 [人気カテゴリー](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_epoch.m) ブラウザボックスのリストを呼び出すウィンドウ
 利用可能なイベントタイプ。
 
 
-![投稿ナビゲーション](/assets/images/I51pop_epoch_event.png)
+![](/assets/images/I51pop_epoch_event.png)
 
 
 正方形 正方形  *
@@ -47,7 +47,7 @@ Ok* 選択項目に入力してください。
 イベントタイプは、上部のテキストボックスに直接 [人気カテゴリー](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_epoch.m) ウィンドウ。
 
 
-![投稿ナビゲーション](/assets/images/I51pop_epoch2.png)
+![](/assets/images/I51pop_epoch2.png)
 
 
 ここでは、デフォルトのエポック制限を保持します(1秒から2秒まで)
@@ -109,7 +109,7 @@ ICAとソースは、
 ---------
 データエポックを抽出した後でも、時間を短縮したサブエポックを抽出することができます。 これは関数を使って行われます [選択する](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_select.m) 選択によって呼ばれる <span style="color: brown">編集 → データの選択</span>1000 ms から ms まで . 
 
-![投稿ナビゲーション](/assets/images/pop_select_reepoch.png)
+![](/assets/images/pop_select_reepoch.png)
 
 データエポックの選択
 ---------
@@ -129,7 +129,7 @@ STUDY(略称解析)、STUDY(略称)、STUDY(略称解析)、STUDY(略称)、STUD
 データのエポックを除去する最も簡単な方法は、エポックインデックスを選択することによってです。 
 これは関数を使って行われます [選択する](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_select.m) 選択によって呼ばれる <span style="color: brown">編集 → データの選択</span>MATLABの名称は、1、2、3、4、5、6、7、8、9、10です。
 
-![投稿ナビゲーション](/assets/images/pop_select_epochs.png)
+![](/assets/images/pop_select_epochs.png)
 
 また、epoch の編集ボックスに隣接するチェックボックスに、epochs 1 から 10 へ削除されます。 
 

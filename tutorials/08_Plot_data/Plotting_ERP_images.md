@@ -342,7 +342,7 @@ stimulusの現在のところ。 値 *10.12 Hz* は、次のようになりま�
 *注記*:ICCの重要度は、より早くなります。
 ソリューション また、CICC、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、C、CRET、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、
 
-ERP Prott では、このサイトについて詳しく説明しています。 
+ERP Prott では、詳しく説明しています。 
 [アレンデックス](/tutorials/ConceptsGuide/erp_image_background.html)
 
 Plottings of Plottings and Plottings and Plottings and Plottings and Plottings and Plottings and Plottings and Plottings and Plottings and Plottings and Plottings, Plottings, Plottings, Plottings, Plottings, Plottings, Plottings, Plottings, Plottings, Plottings, Plotting, Plottings, Plottings, Plottings, Plottings, Plottings, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plot

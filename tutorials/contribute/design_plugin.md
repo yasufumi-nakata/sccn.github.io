@@ -10,7 +10,7 @@ nav_order: 1
 EEGLAB プラグイン
 ========================
 
-この投稿をお気に入りにする しかし、EEGLAB は、 急いでいるなら、 [例セクション](/tutorials/contribute/design_plugin.html#eegplugin_-function-examples) コードをコピーして貼り付けます。
+しかし、EEGLAB は、 急いでいるなら、 [例セクション](/tutorials/contribute/design_plugin.html#eegplugin_-function-examples) コードをコピーして貼り付けます。
 
 <details open markdown="block">
   <summary>

@@ -436,16 +436,16 @@ Excel の "response" の型でイベントに "rt" の型になります。
 
 たとえば、「正方形」イベントだけを保持するには、以下に示すようにイベントタイプに「正方形」を入力します。
 
-![投稿ナビゲーション](/assets/images/pop_select_events_new2.png)
+![](/assets/images/pop_select_events_new2.png)
 
 また、イベントの種類は「スクエア」と「rt」のみです。イベントの種類は「rt」に変わります。
 
-![投稿ナビゲーション](/assets/images/pop_select_events_new3.png)
+![](/assets/images/pop_select_events_new3.png)
 
 例えば、「rt」タイプのイベント名を「response」に変更するには、タイプフィールドに「rt」を入力し、名前変更フィールドに「response」を入力します。必ず *選択したイベントのみを選択* オプションを使用してください。それ以外の場合、タイプが「rt」でないすべてのイベント
 "rt" は削除されます。
 
-![投稿ナビゲーション](/assets/images/pop_select_events_new.png)
+![](/assets/images/pop_select_events_new.png)
 
 注意: 指定した範囲外のイベントを選択するには、フィールド範囲エントリの右側にある *NOT* チェックボックスを使用します。
 選択したイベントの型の名前を変更できます(オプション)

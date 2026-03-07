@@ -23,7 +23,7 @@ EEG-BIDSは、EEGLABのグループ解析方法を紹介しています。 [EEGL
 
 ## EEG-BIDSについて 
 
-このチュートリアルのデータは、 [EEG BIDSフォーマット](https://github.com/bids-standard/bids-specification/blob/master/src/04-modality-specific-files/03-electroencephalography.md)EEG-BIDSの特定性についてもっと読む [詳しくはこちら](https://www.nature.com/articles/s41597-019-0104-8)EEGLABは、 [EEG-BIDSについて](https://github.com/sccn/EEG-BIDS) BIDSデータセットのプラグインは、このプラグインは、EeGLABのプラグインです。 このBIDSでは、このサイトについて、以下の点について説明しています。
+このチュートリアルのデータは、 [EEG BIDSフォーマット](https://github.com/bids-standard/bids-specification/blob/master/src/04-modality-specific-files/03-electroencephalography.md)EEG-BIDSの特定性についてもっと読む [詳しくはこちら](https://www.nature.com/articles/s41597-019-0104-8)EEGLABは、 [EEG-BIDSについて](https://github.com/sccn/EEG-BIDS) BIDSデータセットのプラグインは、このプラグインは、EeGLABのプラグインです。 このBIDSでは、以下の点について説明しています。
 
 EEGLABにBIDSの統合について詳しく知る [EEG-BIDS wiki](https://github.com/sccn/EEG-BIDS/wiki) EEGLABのプラグイン 
 

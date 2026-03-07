@@ -309,7 +309,7 @@ DIPFIT → オートフィット(グリッドスキャン、プロット)</span>
 MNIのモデルを
 リードフィールド行列)。
 
-![投稿ナビゲーション](/assets/images/Dipole_summary2.gif)
+![](/assets/images/Dipole_summary2.gif)
 
 プロットに使用されるMRIは、[SPMソフトウェア](https://www.fil.ion.ucl.ac.uk/spm/)を使用してMNI座標系に正規化されたテンプレートMRIです。
 

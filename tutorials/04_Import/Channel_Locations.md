@@ -61,7 +61,7 @@ pop_chanedit( chanlocs );
 
 呼び出し <span style="color: brown">編集 → チャネルの場所</span> から *Plot 2-D* ボタンを押して（チャンネル編集ウィンドウは *Cancel* で閉じます）、以下のプロットが表示されます
 
-![投稿ナビゲーション](/assets/images/Topoplotlookup.gif)
+![](/assets/images/Topoplotlookup.gif)
 
 ファイルからチャネルの場所をロードする
 ------

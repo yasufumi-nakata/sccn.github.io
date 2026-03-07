@@ -382,7 +382,6 @@ EEGLAB ウィンドウが開きます。
 *CURRENTSET* は新しい番号セットです。
 EEGLABは、
 注意: *EEG* 現在データセットのみが配布されます。
-このサイトについて
 処理したいデータセットが含まれています。
 上記関数は関数を呼び出します [eeg_checkset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m)
 変更されたデータセットの内部の一貫性を確認してください。
@@ -538,7 +537,7 @@ EEG = eeg_retrieve(ALLEEG, 1); CURRENTSET = 1;
 関数と関数の高速化
 -------
 
-ErPのスカルプマップを0msから500msまで作成可能 [pop_topoplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m) EEGLABの歴史 EEGLAB では、このコマンドをロードする、 このサイトについて [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_history.m).
+ErPのスカルプマップを0msから500msまで作成可能 [pop_topoplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m) EEGLABの歴史 EEGLAB では、このコマンドをロードする、 [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_history.m).
 
 ``` matlab
 %% Plot ERP maps 

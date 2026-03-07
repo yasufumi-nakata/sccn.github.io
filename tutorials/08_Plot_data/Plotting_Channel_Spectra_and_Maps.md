@@ -9,7 +9,7 @@ grand_parent: Tutorials
 ---
 チャンネルのスペクトラとマップのプロット
 =====================
-以下の 以下の 以下の で で で で で で で で で で で この投稿をお気に入りにする Welch メソッドは、次のコマンドで、このコマンドは、次のコマンドを実行します。
+以下の 以下の 以下の で で で で で で で で で で で Welch メソッドは、次のコマンドで、このコマンドは、次のコマンドを実行します。
 
 <a href="https://www.youtube.com/playlist?list=PLXc9qfVbMMN2TAoLHVW5NvNmJtwiHurzw"><img align="center" width="400" src= "/assets/images/yt_spectopo2.png"></a>
 

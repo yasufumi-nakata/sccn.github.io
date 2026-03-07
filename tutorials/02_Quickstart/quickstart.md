@@ -52,7 +52,7 @@ EEGLAB は、EEGLAB のウィンドウをロードします。
 これらの値を読み、編集できるウィンドウ:
 
 
-![投稿ナビゲーション](/assets/images/Figure_pop_editeventvals3.png)
+![](/assets/images/Figure_pop_editeventvals3.png)
 
 
 
@@ -76,7 +76,7 @@ EEGLAB は、EEGLAB のウィンドウをロードします。
 *SAVE*は、
 
 
-![投稿ナビゲーション](/assets/images/I15about_this_dataset.png)
+![](/assets/images/I15about_this_dataset.png)
 
 データをスクロールする
 --------------------------
