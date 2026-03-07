@@ -8,10 +8,8 @@ grand_parent: Tutorials
 ---
 イベント処理スクリプト
 =====
-お問い合わせ
 
-この投稿は、EEGLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/ お問い合わせ
-指定したタイプにデータタイムロックされた、または処理するスクリプト
+この投稿は、EEGLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/MATLAB/ 指定したタイプにデータタイムロックされた、または処理するスクリプト
 イベント EEGLABは、
 EEGLABデータとイベントは、
 操作。 まず、説明するチュートリアルのセクションを読みたいと思うかもしれません [EEGLABイベント](/tutorials/ConceptsGuide/Data_Structures.html#eegevent).
@@ -20,9 +18,7 @@ EEGLABデータとイベントは、
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 
@@ -113,9 +109,8 @@ EEGLAB [データ構造](/tutorials/ConceptsGuide/Data_Structures.html) チュ�
 
 独立した変数を追加したい場合は、単にスクリプトを書くだけです。
 各データセットの EEG.event は、
-各データトライアルのタイムロックイベント(0時以降) お問い合わせ
-フィールド 'previous_event_type' は、
-お問い合わせ *STUDY* は、
+各データトライアルのタイムロックイベント(0時以降) フィールド 'previous_event_type' は、
+ *STUDY* は、
 ※STUDY*は、
 インターフェイス。 以下は、単純なスクリプトスキャンイベントの例であり、追加します。
 'square' のタイムロックイベントに注目してください。
@@ -124,7 +119,7 @@ STUDYを視聴する
 与えられた試験のために時間が欠落している、それは適切に対処されます
 *STUDY* は、STUDY* は、
 一般の場合、複数のデータセットから作成されます。 スクリプト 
-お問い合わせ [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=event_processing_study.m).
+ [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=event_processing_study.m).
 
 ``` matlab
 %% Modify the events of datasets for creating STUDY designs

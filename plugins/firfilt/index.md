@@ -19,11 +19,10 @@ FIRfilt EEGLAB プラグインは EEGLAB 環境で使用されるツールです
 * グラフィック インターフェイス: プラグインは EEGLAB GUI と統合し、データ処理タスクのグラフィカルなユーザーインターフェイスを好むユーザーのためにアクセス可能にします。
 * コマンドラインサポート: より高度なユーザーの場合、FIRfilt はコマンドライン操作もサポートし、スクリプトベースの自動化とより大きなデータ処理パイプラインへの統合を可能にします。
  
-お問い合わせ [こちら](https://eeglab.org/others/Firfilt_FAQ.html) または [ペーパー](https://home.uni-leipzig.de/biocog/eprints/widmann_a2015jneuroscimeth250_34.pdf) 追加のドキュメント。
+[こちら](https://eeglab.org/others/Firfilt_FAQ.html) または [ペーパー](https://home.uni-leipzig.de/biocog/eprints/widmann_a2015jneuroscimeth250_34.pdf) を参照 追加のドキュメント。
 
 参考文献
 -------------
-お問い合わせ
 
 > Widmann, A., Schröger, E., & Maess, B. (2015). 電気生理学的データのためのデジタルフィルタ設計 - 実用的なアプローチ。 神経科学法ジャーナル, 250, 34-46.
 

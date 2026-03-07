@@ -38,7 +38,6 @@ epochedデータがこの点は、
 エポックの境界線。
 
 選択する <span style="color: brown">デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト</span>*Lowerの端*の頻度で**1* (Hz)を好みます、
-お問い合わせ
 
 EEGLABのレガシーは、EEGLABのレガシーのおすすめです。[Widmann & Schröger(ウィドマン&シュロガー)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3391960/)).
 
@@ -84,7 +83,7 @@ EEGLAB のレガシーは、MATLABルーチンで動作します。
 
 無限のアクション(IIR)
 EEGLABは、 [エントリー](https://github.com/sccn/iirfilt) プラグインをインストールします。
-メニュー項目からアクセス <span style="color: brown">ショート  →  →  →  →  → </span>お問い合わせ この機能は同じを使用します
+メニュー項目からアクセス <span style="color: brown">ショート  →  →  →  →  → </span> この機能は同じを使用します
 上記のFIRフィルタオプション
 で で
 異なる周波数, これは、適用することによって補償されます

@@ -24,9 +24,7 @@ stimulusのオンセット、または等で、
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 基本的なプロットオプション
@@ -37,7 +35,7 @@ ERPをプロットする このチュートリアルでは、*POz* occipital の
 
 ### プロット
 
-選択する <span style="color: brown"> Plot → 空想</span>お問い合わせ お問い合わせ
+選択する <span style="color: brown"> Plot → 空想</span>
 ピックアップ [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) ウィンドウ(下)。 
 
 チャンネル番号(27 または "..." ) 、 チャンネル *POz*) 、 *1* の 試行錯誤値、 *Ok* 詳しくはこちら
@@ -107,7 +105,6 @@ decimate(reduce)の要素によって
 Altogether,5 別の方法
 *erpimage.m* は、*erpimage.m* は、
 - フィルタ変数 (*sortvar* ) で フィルタ変数(例えば、RT) の入力項目の試行(epochs) を呼び出します。
-お問い合わせ
 -   値(*valsort*)でオプションを呼び出します。
     ウィンドウの値は ERPでこのオプション
     サイズ(ただし、インタラクティブウィンドウでは選択できません)。
@@ -126,8 +123,8 @@ Altogether,5 別の方法
 ### 反応時間による試行のソート
 
 メニュー項目を使用する <span style="color: brown"> Plot → 空想</span> コールする [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) 再びウィンドウ:
-- お問い合わせ *Epoch-sorting フィールド*、および *latency* 。 
-- お問い合わせ *イベントタイプ*、および*rt*。 
+- *Epoch-sorting フィールド*、および *latency* 。 
+- *イベントタイプ*、および*rt*。 
 - ※イベント時間
 *-200 800* ms 対象 * は、
 stimulusのオンセット。
@@ -166,7 +163,7 @@ stimulusのオンセット。
 地域。
 
 *注記*: MATLABのコンセプト
-変数 explicitly (参照) [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) お問い合わせ
+変数 explicitly (参照) [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) を参照してください。
 
 
 ![](/assets/images/1ERPimageposition.gif)
@@ -212,7 +209,7 @@ ERPacts(以下)は、
 
 
 ### EEG の値を調べる
-お問い合わせ [2004](http://www.sccn.ucsd.edu/papers/TICS04.html) 出版物、私達は論議しました
+[2004](http://www.sccn.ucsd.edu/papers/TICS04.html) 出版物、私達は論議しました
 交通アクセス
 いくつかのイベントのいくつかのクラスにタイムロックされたエポックは、制限されていません
 タイムロックされた試験平均の特徴で完全に表現されるか、
@@ -265,7 +262,7 @@ ms から 150 ms まで。各試験に合格し、
 フェーズロック(またはない)を実験的なイベントに。 
 
 より明確に並べ替えるフェーズを見るには、同じ設定を維持しますが、
-今回は、*50* で入力してください。 無視する試み*。 お問い合わせ
+今回は、*50* で入力してください。 無視する試み*。
 パワーで試用回数の50%
 タイムウィンドウは拒否されます。他の40トライアルのみ(大文字50%)
 画像をイメージします。 ここで(下)、私たちはより良いアルファ波の見方を見ることができます
@@ -281,7 +278,7 @@ P400 ERPは、
 
 
 フェーズを代表するこれらの試験の私達の解釈(平均)
-視覚的な印象だけに基づく同期の必要性。 お問い合わせ
+視覚的な印象だけに基づく同期の必要性。
 アルファ活動が部分的に再同期されるかどうかを統計的に評価して下さい
 stimuli(stimuli), 部分真鍮, カスタマイズ
 段階の一貫性(または段階閉鎖の要因) 刺激の順序間の
@@ -363,7 +360,6 @@ Plottings of Plottings and Plottings and Plottings and Plottings and Plottings a
 プロフィール *2 50* を入力すると、この周波数の制限が指定されます。
 グラフ。
 - *Epoch-sorting field* を *latency* に置き換えてください。
-お問い合わせ 
 - *マークタイム*の下の*500*をプロットするために入れて下さい
 500 ms の 縦 の 印 (illustrative 目的 )
 - * 500 1500* の現在の* の制限時間* の

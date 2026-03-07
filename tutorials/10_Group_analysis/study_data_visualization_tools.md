@@ -54,7 +54,7 @@ GUIトップパネルでチャンネル変換可能。
 -  *チャネルの補間。* 視覚化および計算統計のために非常に推薦されます
 います で います EEGLAB は、Channel で、Channel で、EEGLAB で、EEGLAB で、Channel で動作します。
 異なるチャネルの場所(例えば、場所が
-チャンネルがスキャンされた)、コマンド ラインから各データセットの欠落したチャンネルをインターポレートしなければなりません。 [eeg_interp.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_interp.m)お問い合わせ
+チャンネルがスキャンされた)、コマンド ラインから各データセットの欠落したチャンネルをインターポレートしなければなりません。 [eeg_interp.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_interp.m) を参照してください。
 
 - ※ICAコンポーネントの取り扱いについて 特に チュートリアル では、 チュートリアル で チュートリアル を 翻訳する [アーティファクト除去のための独立したコンポーネント分析](/tutorials/06_RejectArtifacts/RunICA.html)このサイトでは、各データセットをタグ付けして、各データセットをタグ付けします。 [詳しくはこちら](/tutorials/10_Group_analysis/multiple_subject_proccessing_overview.html#perform-batch-processing))。 このオプションを選択することをお勧めします。
 

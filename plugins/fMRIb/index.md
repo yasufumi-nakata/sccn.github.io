@@ -21,7 +21,7 @@ nav_order: 14
 EEGLABプラグインマネージャを使用して、またはフォルダfmribX.X(X.Xはバージョンに依存します)を内部に配置します 
 EEGLABの'plugins'フォルダ。 EEGLABを実行すると、プラグインは 
 検出され、取付けられて。 Matlabのメッセージは以下のとおりです。 
-'eeglab: プラグイン "fmrib1.0b" を追加 (参照 >> ヘルプ eegplugin_fmrib) お問い合わせ
+'eeglab: プラグイン "fmrib1.0b" を追加 (参照 >> ヘルプ eegplugin_fmrib)
 EEGLABを始めるとき。
 
 ## ツール
@@ -47,7 +47,7 @@ FMRIB プラグインは EEGLAB に含まれており、2005 年に Rami Niazi �
 
 Niazy RK, Beckmann CF, Iannetti GD, Brady JM, スミサ SM. 神経画像. 2005, 28(3):720-737.
 
-# お問い合わせ
+# 参考文献
 
 * 3-T fMRIで同時に記録された聴覚イベント関連の潜在能力の質を改善しました:弾道のアーティファクトの除去。 Debener S, Strobel A, Sorger B, Peters J, Kranczioch C, Engel AK, Goebel R. Neuroimage. 2007, 34(2)587-97.
 
@@ -69,8 +69,8 @@ Niazy RK, Beckmann CF, Iannetti GD, Brady JM, スミサ SM. 神経画像. 2005, 
 それを修正しようとします。, NaNs になります。. 3) 脈拍のアーティファクトの昇華機能
 クラッシュをもたらすフラットリファレンスチャンネルを修正しようとします。 4) 脈拍のartifact
 指示されていないにもかかわらず、ECGチャネルを修正しようとする減算機能
-お問い合わせ 5) FASTRの適応ノイズキャンセルオプションは、ECGチャネルを修正しようとします
-そうしないと言われているにもかかわらず。 お問い合わせ https://sccn.ucsd.edu/bugzilla/show_bug.cgi?id=1520
+5) FASTRの適応ノイズキャンセルオプションは、ECGチャネルを修正しようとします
+そうしないと言われているにもかかわらず。 https://sccn.ucsd.edu/bugzilla/show_bug.cgi?id=1520
 
 * V2.1 -- - - - - - - - - EEGLABでバージョン表示の問題を修正し、他の変更はありません。
 

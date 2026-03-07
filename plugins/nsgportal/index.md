@@ -11,7 +11,7 @@ nav_order: 25
 プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/nsgportal).
 
 # NSGとnsgportalのEEGLAB
-EEGLABのオープンポータルを高性能化 コンピューティング: 2018年後半に、ESGLABスクリプトは、Neuroscience Gateway PortalをNSFスポンサーに無料で利用できる高性能コンピューティングリソースで実行できるようになりました。 [コメットスーパーコンピュータ](https://ucsdnews.ucsd.edu/pressrelease/sdsc_to_double_comet_supercomputers_graphic_processor_count/) お問い合わせ [サンディエゴスーパーコンピュータセンター](https://sdsc.edu/)お問い合わせ Neuroscience Gatewayのホームページは、以下のとおりです。 NSGアカウントは無料で、米国のユーザーに限定されませんが、ポータルは非商用の目的のためにのみ使用することができる(参照) [NSG利用規約](http://www.nsgportal.org/policy.html)).
+EEGLABのオープンポータルを高性能化 コンピューティング: 2018年後半に、ESGLABスクリプトは、Neuroscience Gateway PortalをNSFスポンサーに無料で利用できる高性能コンピューティングリソースで実行できるようになりました。 [コメットスーパーコンピュータ](https://ucsdnews.ucsd.edu/pressrelease/sdsc_to_double_comet_supercomputers_graphic_processor_count/)を参照 [サンディエゴスーパーコンピュータセンター](https://sdsc.edu/)を参照 Neuroscience Gatewayのホームページは、以下のとおりです。 NSGアカウントは無料で、米国のユーザーに限定されませんが、ポータルは非商用の目的のためにのみ使用することができる(参照) [NSG利用規約](http://www.nsgportal.org/policy.html)).
 
 ![スクリーンショット 2024-07-11 に 14 45 33](https://github.com/user-attachments/assets/ddccba01-f5f4-4337-ae08-2fd4cf96f916)
 

@@ -16,7 +16,7 @@ NSGポータルにログインします。 ログインすると、EEGLABスク�
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/500px-NSG3.png?raw=true" alt="drawing" width="500"/>
 </center>
 
-3.5-MBのサンプルzipファイル(EEGデータとサンプルスクリプトを含む)をダウンロードできます。 [お問い合わせ](https://sccn.ucsd.edu/mediawiki/images/7/7c/Testingeeglabonnsg.zip)お問い合わせ 以下は、コンテンツのリストです。
+3.5-MBのサンプルzipファイル(EEGデータとサンプルスクリプトを含む)をダウンロードできます。 [こちら](https://sccn.ucsd.edu/mediawiki/images/7/7c/Testingeeglabonnsg.zip) 以下は、コンテンツのリストです。
 
 <center>
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/200px-NSG32.png?raw=true" alt="drawing" width="200"/>

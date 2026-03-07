@@ -8,7 +8,6 @@ grand_parent: Tutorials
 ---
 EEGLABの特徴
 =======
-お問い合わせ
 
 このセクションは、少なくとも基礎を学んだユーザーのために意図されています
 MATLABのWeb制作とEEGLABの制作
@@ -18,9 +17,7 @@ MATLABのWeb制作とEEGLABの制作
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 EEGLABは、初心者と専門家のMATLABのユーザーインターフェイスで、カスタム設計されています。
@@ -81,12 +78,11 @@ EEG構造を命名し、POP_functionを命名する
 EEG = pop_loadset;
 ```
 
-な な を お問い合わせ [pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m) コマンドは、
+な な を [pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m) を参照してください。 コマンドは、
 EEGLABメニュー <span style="color: brown">ファイル → データの読み込み</span>. 
 
 ![こちら](/assets/images/Pop_loadset2.png)
 
-お問い合わせ
 一方、ユーザーは2つの文字列引数を引数に渡します。 [pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m) 関数、ファイル名を含む最初のファイル
 ファイルパスの2つ目は、インタラクティブなウィンドウが表示されず、データセット
 直接読み込まれます。
@@ -102,15 +98,15 @@ EEG = pop_eegfilt(EEG);
 ```
 
 これは、データをフィルタリングすることを可能にするインタラクティブなウィンドウをポップアップします
-ウィンドウに入力するパラメータに従って。 お問い合わせ
+ウィンドウに入力するパラメータに従って。
 このサイトは、以下のとおりです。
 
 ``` matlab
 EEG = pop_eegfilt( EEG, 1, 0);
 ```
 
-このコマンドは1Hzで実行されます。 この関数は、 [pop_eegfilt.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_eegfilt.m)
-お問い合わせ EEGLAB 関数が動作する
+このコマンドは1Hzで実行されます。 この関数は、 [pop_eegfilt.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_eegfilt.m) を参照してください。
+EEGLAB 関数が動作する
 EEG履歴
 必要に応じて関数入力。 機能助けメッセージは利用できます
 EEGLABの特長 <span style="color: brown">ヘルプ →
@@ -134,7 +130,7 @@ pop_ 関数対信号処理
 EE を を を
 データ マトリックスか。
 例えば、 [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) データ処理を呼び出し、
-機能のプロット [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m)お問い合わせ 入力パラメータを確認するため
+機能のプロット [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) を参照してください。 入力パラメータを確認するため
 EEGLABヘルプメニュー
 MATLAB 関数ヘルプ (MATLAB )
 例:
@@ -159,7 +155,7 @@ ones(1, EEG.trials)*EEG.xmax*1000, linspace(EEG.xmin*1000, EEG.xmax*1000, EEG.pn
 
 ![](/assets/images/erpimage_same.png)
 
-EEGLABのメニューは、 [eeglab.mの](https://github.com/sccn/eeglab/blob/develop/eeglab.m) 関数 お問い合わせ 
+EEGLABのメニューは、 [eeglab.mの](https://github.com/sccn/eeglab/blob/develop/eeglab.m) 関数 を参照してください。 
 
 ``` matlab
 help eeglab

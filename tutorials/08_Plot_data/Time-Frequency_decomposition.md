@@ -31,7 +31,7 @@ ERSP および ITC の頻度分析
 [(1993年)](http://sccn.ucsd.edu/~scott/ersp93.html)
 (パワースペクトラムのエベント関連シフト)と相互トリルコヒーレンス
 (ITC)イベントをEEGLABデータセットに、
-選択する <span style="color: brown">Plot → 周波数変換 → 温度調節</span> 呼び出し [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) 機能。 お問い合わせ
+選択する <span style="color: brown">Plot → 周波数変換 → 温度調節</span> 呼び出し [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) を参照してください。 機能。
 *Channel 番号* の *14* (Cz) は あります。 ※Ok* は です。
 
 デフォルト「Wavelet Cycles」のエントリは*3 0.8*です。
@@ -55,7 +55,7 @@ xxx "xxx は また
 青色EEGLABメニューウィンドウに表示します。
 最少の頻度のウィンドウ('winlen') は、XXX のウィンドウ
 長い(例えば、1秒の長さ)。 1サイクル使用していた場合、最も低い頻度
-3つの共通点は、 お問い合わせ
+3つの共通点は、
 
 ![](/assets/images/newtimef1.png)
 
@@ -77,7 +77,7 @@ ERP は、8Hz で約370ms の パワーを 変換する ( )
 
 - より深い**のは、すべてのInter-Trialコヒーレンス(ITC)です。
 ITC は、 
-[ERPプロサイン](Plotting_ERP_images.html)お問い合わせ
+[ERPプロサイン](Plotting_ERP_images.html) を参照してください。
 EEGでの試験時間と頻度
 フェーズロック(フェーズランダムではなく)
 ICT活用事例
@@ -106,7 +106,7 @@ False ディスカバリー レート メソッド 比較( 統計参照) [アレ
 
  注意:
 ITC および ERSP の出典は、
-お問い合わせ は、事前にコメントを受け付けております。 しかし、ITC は重要性を兼ね備えています。 重要性を重視するのは、 重要性を満たすのが現状です。
+しかし、ITC は重要性を兼ね備えています。 重要性を重視するのは、 重要性を満たすのが現状です。
 
 ### 時間頻度カーブ
 
@@ -134,7 +134,7 @@ ERP/ITC プロット
 値)は、使用してイメージすることができます。 [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) メニュー項目を選択するか <span style="color: brown">Plot → コンポーネント →</span>.
 
 コマンドラインから呼び出される 
-お問い合わせ [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) そして、 [newtimef.m リリース](http://sccn.ucsd.edu/eeglab/locatefile.php?file=newtimef.m) その その として として として として
+[pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) そして、 [newtimef.m リリース](http://sccn.ucsd.edu/eeglab/locatefile.php?file=newtimef.m) を参照してください。 その その として として として として
 ERSP と ITC の画像 (さらに ERSP のベース ライン と パフォーマンス )
 すべてのチャネルのための情報)は使用を可能にします
 別のツールボックスのルーチン, [tftopo.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=tftopo.m) (EEGLABメニューから使用可能) [EEGLAB の作成](/tutorials/11_Scripting/) 詳細については、チュートリアル。

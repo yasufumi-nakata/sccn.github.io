@@ -9,7 +9,6 @@ nav_order: 3
 ---
 EEGLABグループ
 ========================
-お問い合わせ
 
 EEGLAB は、EEGLAB が新しい関数の場所です。 外部リンク コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア に に コア コア コア に コア に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に 
 
@@ -17,9 +16,7 @@ EEGLAB は、EEGLAB が新しい関数の場所です。 外部リンク コア 
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 EEGLABモデル開発
@@ -66,7 +63,7 @@ EEGLABは、環境にやさしいソフトウェアです。
 任意のユーザに請求します。
 
 しかし、EEGLABでは、商用購入や登録を行っております。
-[環境方針](http://www.mathworks.com/store/)お問い合わせ マトラボ
+[環境方針](http://www.mathworks.com/store/) を参照してください。 マトラボ
 おすすめのサイトへ
 マトラボ MATLABとEEGLABは、Linux/Unix、Mac OS X、または
 ウィンドウズ。 MATLABの学生が高価な価格で購入
@@ -74,7 +71,7 @@ $ 50 アメリカ
 
 新規会員登録
 したがって コア コア コア しかしながら、より詳細なプラグインは、
-お問い合わせ MATLAB ツールボックス関数: ドキュメント。
+MATLAB ツールボックス関数: ドキュメント。
 詳しくはこちら
 
 EEGLAB の処理機能がすべて揃っています。
@@ -90,7 +87,7 @@ EEGLAB は [BSD] で います。
 コントリビューター GitHub に GitHub を 使おう 
 
 *extension* または *plugin* のオプション
-お問い合わせ EEGLAB の拡張機能により、Author は
+EEGLAB の拡張機能により、Author は
 EEGLABメニュー
 拡張子をダウンロード. 著者はまた、書き込み機能にすべての商用権利を保持します。
 
@@ -100,10 +97,10 @@ EEGLABメニュー
 [Ubuntu ] は、
 コミュニティhttps://ubuntu.com/community/code-of-conduct).
 
-### お問い合わせ
+### 貢献
 
 EEGLABのコアにコードを付与し、コードをフォークして作成する
-お問い合わせ Githubアカウント
+Githubアカウント
 これらの操作を実行するが、特別な許可を必要としません
 私たちから。
 
@@ -114,7 +111,7 @@ EEGLAB は、EEGLAB の新機能です。
 新機能:EEGLAB ドキュメント
 [プラグイン](/tutorials/contribute/Contributing_to_EEGLAB.html) 代わりに。
 
-### お問い合わせ
+### リポジトリのフォーク
 このページではjavascriptを使用しています。
 
 ソフトウェアリポジトリをフォーク(コピー)することで、リポジトリのコピーを作成
@@ -135,7 +132,6 @@ Github から EEGLAB へ直接、次の 2 へ
 
 1.  Github で [EEGLAB リポジトリ](https://github.com/sccn/eeglab)
 2.  ウィンドウの右上隅にある「*Fork*」
-    お問い合わせ
 
 ![\|thumb\|700px](/assets/images/Fork_link.jpg)
 

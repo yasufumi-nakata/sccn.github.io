@@ -25,12 +25,12 @@ EEGLAB をロードする
 -----------------
 
 チャンネルのスペクトルと関連するトポグラフィマップをプロットするには、
-<span style="color: brown">こちら</span>お問い合わせ これはポップアップ表示されます [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) ウィンドウ(下)。 
+<span style="color: brown">こちら</span> これはポップアップ表示されます [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) ウィンドウ(下)。 
 デフォルト設定は、
 
 ![](/assets/images/spectopo1gui.png)
 
-関数は戻るべきです [お問い合わせ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) プロット(下)。
+関数は戻るべきです [spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) を参照してください。 プロット(下)。
 だけ50% を を を
 上記)は、各呼び出しに若干異なる結果です。 (当然、
 編集ボックスに100%を入れた場合はこれが発生しません。
@@ -62,7 +62,7 @@ Welch のウィンドウサイズ128 のオーバーラップなし
 ![](/assets/images/spectopo2plot.png)
 
 
-関数は [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo) そして、 [お問い合わせ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) また、epochedデータで。
+関数は [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo) そして、 [spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) を参照してください。 また、epochedデータで。
 
 別のメニュー項目, <span style="color: brown">Plot → チャネル</span>, 選択したチャンネルのスカルプ位置をプロット, その
 活動の目的、およびその活動の

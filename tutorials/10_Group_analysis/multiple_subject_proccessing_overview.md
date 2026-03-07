@@ -8,7 +8,6 @@ grand_parent: Tutorials
 ---
 被写体のデータの一括処理
 ====
-お問い合わせ
 
 このチュートリアルでは、複数の被写体を想像してみてください。
 大規模な分析を成功にお勧め
@@ -22,9 +21,7 @@ grand_parent: Tutorials
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 複数のデータセットをロードする
@@ -33,7 +30,7 @@ EEGLABの様々なデータセットをロードして選択してください�
 
 このチュートリアルでは、 [5-サブジェクト実験](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (450Mb) [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html) このデータに関する詳細情報 
 
-このページではjavascriptを使用しています。 <span style="color: brown">ファイル → 既存のデータセットをロードする</span> メニュー項目. 複数のデータセットは, 以下は, EEGLAB お問い合わせ
+このページではjavascriptを使用しています。 <span style="color: brown">ファイル → 既存のデータセットをロードする</span> メニュー項目. 複数のデータセットは, 以下は, EEGLAB
 
 ![](/assets/images/multisub1.png)
 
@@ -103,7 +100,7 @@ ICAの実行
 つの つの つの つの つの つの つの つの に に に に に に に に に に に に に に に に に に に に に に に に に に します に に に に に 。 に に 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 に
 
 . 選択する
-メニュー項目 <span style="color: brown">ツール \"> ICAの実行</span>お問い合わせ 以下について
+メニュー項目 <span style="color: brown">ツール \"> ICAの実行</span> 以下について
 ウィンドウが表示されます。
 
 
@@ -120,7 +117,7 @@ ICAの実行
 これらのデータセットからのデータ試用を連結し、その後、添付します
 それぞれのデータセットは、
 連結用に選択したデータセットに関する情報は、
-マトラボ 参加方法 [pop_runica.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m) お問い合わせ
+マトラボ 参加方法 [pop_runica.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m) を参照してください。
 連結データセット、データセットのエポックの長さは
 等しいと仮定される。
 

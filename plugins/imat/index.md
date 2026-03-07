@@ -31,7 +31,7 @@ IMATを含むEEGLABのすべてのプラグインは、2つの方法でインス
 
 1. **EEGLABプラグインマネージャから:** EEGLABを起動し、メニュー項目を選択**ファイル> EEGLAB拡張機能**をメインのEEGLABウィンドウで管理します。 プラグインマネージャーウィンドウがポップアップ表示されます。 IMAT プラグインを探し、選択し、**Install/Update** を押します。
 
-2. **Webから:** IMATプラグインのzipファイルをダウンロードする [お問い合わせ](https://github.com/sccn/imat) GitHubのページ(「Zip」をダウンロード)または [EEGLAB wikiプラグインページ](https://sccn.ucsd.edu/wiki/Plugin_list_all) (*IMAT**を選択してください) メインEEGLABフォルダ(*../eeglab/plugins/*)のプラグインフォルダにzipファイルを解凍します。
+2. **Webから:** IMATプラグインのzipファイルをダウンロードする [こちら](https://github.com/sccn/imat) GitHubのページ(「Zip」をダウンロード)または [EEGLAB wikiプラグインページ](https://sccn.ucsd.edu/wiki/Plugin_list_all) (*IMAT**を選択してください) メインEEGLABフォルダ(*../eeglab/plugins/*)のプラグインフォルダにzipファイルを解凍します。
 
 EEGLABを再起動します。 インストールが成功した場合は、メニュー項目を入力、**ツール> IMAT**によるICスペクトグラムを分解し、EEGLABメニューに表示します。
  
@@ -306,7 +306,7 @@ IMAの構造には次の分野があります:
           freqvec: [1×229 ダブル]
           timevec: [2430×1 ダブル]
      timevec_cond: {[30×42倍] [30×39倍]}
-        freqscale: 「ログ」 お問い合わせ
+        freqscale: 「ログ」
           freqlim: [6 120]
              npcs: 21の
          コンリスト: [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30]
@@ -321,12 +321,12 @@ IMAの構造には次の分野があります:
       平均pwrCond: [2×14×229 ダブル]
       timepntCond: {[1×1260 ダブル] [1×1170 ダブル]}
         条件: {'EC' 'EO'}
-        STUDYname: RestECEO.study お問い合わせ
-    STUDYfilepath: '/ボリューム/IM/PreSTUDY/S03 お問い合わせ
+        STUDYname: RestECEO.study
+    STUDYfilepath: '/ボリューム/IM/PreSTUDY/S03'
              サブj: {'S3'}
      subjfilename: {'RestEC_S03_ContAMICAdip.set' 'RestEO_S03_ContAMICAdip.set'}
      サブjfilepath: {'/Volumes/IM/PreSTUDY/S03' '/Volumes/IM/PreSTUDY/S03'}
-         ファイル名: 'S3_RestECEO.ima お問い合わせ
+         ファイル名: 'S3_RestECEO.ima'
        前方: [1×1 struct]
 
 この例では、 IMA が 1 つの主題に対して複数の条件(別の EEG.set ファイルで保存)で実行されているため、 IMA ファイルが 2 つの EEG ファイル (同じ主題の 2 つの条件) に関連付けられています。
@@ -485,7 +485,7 @@ IMAが計算されたPCA-reducedのnormalized (mean logのスペクトラムは�
 
 1. **Freqの範囲** 関連する周波数範囲: これは指定された周波数範囲でピークを持っているテンプレートのみを含みます。 空のテンプレート(任意の周波数範囲でアクティブ)を選択すると、低活性化のテンプレートが削除されます。
 2. **Warp spectra ** スペクトラが与えられたピーク周波数に警告すべきかどうか:このリニアは、与えられた周波数範囲('Freq. range'によって定義される)でピークする周波数テンプレートを、サブジェクト固有のメディアンテンプレートピーク周波数('Freq. range'で定義されたバンド内)に拡張または縮小します。 定義済みのピーク('Target peak freq' で定義されている)に spectra をストレッチするためにこの関数を使用します。 注意して使用して下さい。 'Freq. range'、例えば、8-13で定義される狭い十分な周波数帯がときだけ推薦される Hz のアルファ、または等。ここでも自然なIMサブクラスター(低アルファ vs 高アルファ)を隠すことができます。         
-3. **ターゲットピークfreq** ターゲットピーク周波数は、'stretch_spectra' フラグが 'on' の場合、 'Target peak freq' が空の場合、 'Freq の中央周波数を使用します。 ラインナップ お問い合わせ
+3. **ターゲットピークfreq** ターゲットピーク周波数は、'stretch_spectra' フラグが 'on' の場合、 'Target peak freq' が空の場合、 'Freq の中央周波数を使用します。
 
 コマンドラインで: 
 *pop_collecttemplates(STUDY、'peakrange'、[8 12])、
@@ -525,7 +525,7 @@ IMAが計算されたPCA-reducedのnormalized (mean logのスペクトラムは�
 
 ここでは、以前に収集したスペクトルテンプレートを5クラスターに集約し、クラスタリング用の10 IMスペクトルテンプレートのプリンシパル寸法を保持しています。 周波数範囲 8-14 Hz のクラスターを選択します。 また、IC等分岐位置(クラスター化されたIMは周波数テンプレートと脳位置の両方を閉じる必要があります)を含むクラスタリングを実装することを選択します。 ここでは、スペクトルテンプレートの相対的な重み 5 と 2 のダイポールの場所を割り当てます。 
 
-各クラスターの遠心分離機からのIMのスペクトルの型板のクラスターのインデックスそして間隔(組み立てられた集約測定スペースで)は*STUDY.etcで貯えられます。 お問い合わせ 
+各クラスターの遠心分離機からのIMのスペクトルの型板のクラスターのインデックスそして間隔(組み立てられた集約測定スペースで)は*STUDY.etcで貯えられます。 
    
      clustidx: [15×4倍]
      距離: [15×3倍]

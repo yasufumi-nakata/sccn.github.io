@@ -24,7 +24,7 @@ EEGlabの宇宙に住んでいる場合:
 EEG = clean_data_with_zapline_plus_eeglab_wrapper(EEG,struct('noisefreqs',[50])) % specifying the config is optional
 ```
 
-# お問い合わせ
+# 参考文献
 
 オリジナルのザップライン紙:チェヴェーニョ、アライン・デ・2020。 「ZapLine:電力線アーティファクトを除去するシンプルで効果的な方法」 NeuroImage 207(2月):116356。 [https://www.sciencedirect.com/science/article/pii/S1053811919309474](https://www.sciencedirect.com/science/article/pii/S1053811919309474).
 

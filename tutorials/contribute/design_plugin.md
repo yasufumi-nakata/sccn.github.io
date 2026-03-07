@@ -9,16 +9,14 @@ nav_order: 1
 ---
 EEGLAB プラグイン
 ========================
-お問い合わせ
+
 この投稿をお気に入りにする しかし、EEGLAB は、 急いでいるなら、 [例セクション](/tutorials/contribute/design_plugin.html#eegplugin_-function-examples) コードをコピーして貼り付けます。
 
 <details open markdown="block">
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 EEGLAB関数の書き方
@@ -49,7 +47,7 @@ EEGLABに新機能が搭載されているので、機能の優先順位を上�
 シグナル処理関数を記述する。 MATLABのヘルプ
 各関数は、入力引数が何であるかを明確に記述する必要があります。
 関数は、ヘルプメッセージの形式を使用して、出力されたものと要求します
-お問い合わせ あなたが読む必要があります [EEGLABの機能](/tutorials/ConceptsGuide/EEGLAB_functions.html) チュートリアルのセクションを理解する
+あなたが読む必要があります [EEGLABの機能](/tutorials/ConceptsGuide/EEGLAB_functions.html) チュートリアルのセクションを理解する
 EEGLABの特徴
 
 ### 信号処理機能
@@ -126,10 +124,9 @@ EEGLABの強み
 { { { { {
 'text', 'string', 'Hello!' はコメントを受け付けていません。
 3行目は "OK" ボタン "{ 'style', 'pushbutton' , 'string' です。
-お問い合わせ
 
 しかし、*Ok* と、 問題は、
-お問い合わせ UI の制御は、
+UI の制御は、
 'callback' コマンド コマンド コマンド コマンド
 関連する文字列パラメータ。
 
@@ -302,7 +299,6 @@ EEGLABの強み
 
 ![センター](/assets/images/Supergui7.jpg)
 
-お問い合わせ
 上記の入力はヘルプセクションで詳細です [恋物癖](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) 機能。
 
 EEGLAB拡張機能の書き方
@@ -350,7 +346,7 @@ EEGLABビンは、EeGLABの
 その他(下記参照) 延長を望まないとします
 EEGLABのコメントとエラーメッセージの処理
 2つのパラメータ(*eegplugin_*) <em>callback</em>
-. . . お問い合わせ
+. . .
 
 ### 拡張メニュー項目またはサブメニューの追加
 
@@ -377,7 +373,7 @@ EEGLABの歴史とやりとり機能拡張
 2 サブドメインの指定例 ( *eegplugin_test.m* を参照)
 MATLAB に実装する
 コマンドを実行する。 第3引数('catch_string')
-LASTCOMは、 お問い合わせ
+LASTCOMは、
 変数を EEGLAB の文字列に変換します。
 
 
@@ -441,7 +437,7 @@ uimenu( plotmenu, 'label', 'Plot ERP', ...
 
 
 EEGLAB の *plugins* に EEGLAB の *plugins* の サブディレクトリに EEGLAB を 読み込みます。
-[詳しくはこちら](http://sccn.ucsd.edu/eeglab/download/eegplugin_erp.m) お問い合わせ
+[詳しくはこちら](http://sccn.ucsd.edu/eeglab/download/eegplugin_erp.m) を参照してください。
 この機能では、この機能が機能しています。
 アイテム <span style="color: brown">プロット → プロット ERP</span> ERP Purpleをプロットする
 すべてのデータセットのエポック。
@@ -452,8 +448,7 @@ PCA は、PCA は、
 *pca.m* は、
 EEGLABと
 EEGLAB を実装
-[詳しくはこちら](http://sccn.ucsd.edu/eeglab/download/eegplugin_pca.m) お問い合わせ
-お問い合わせ
+[詳しくはこちら](http://sccn.ucsd.edu/eeglab/download/eegplugin_pca.m) を参照してください。
 
 ``` matlab
 % eegplugin_pca() - a pca plugin
@@ -480,7 +475,7 @@ uimenu( menu, 'Label', 'Run PCA', 'CallBack', cmd, 'separator', 'on');
 タグは、 *import data* で、EEGLAB は、 テキスト から テキスト から テキスト から テキスト から テキスト まで テキスト から テキスト まで テキスト から テキスト から テキスト まで テキスト から テキスト まで テキスト から テキスト から テキスト まで テキスト から テキスト まで テキスト テキスト から テキスト テキスト から テキスト まで テキスト テキスト から テキスト テキスト まで テキスト テキスト テキスト テキスト から テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト テキスト
 アイテムへ <span style="color: brown">ファイル → インポートデータ</span> サブメニュー 使用方法
 タグ *import epoch* は、 いくつかの項目に追加します。
-お問い合わせ <span style="color: brown">ファイル → インポート エポック情報</span> サブメニュー タグ
+<span style="color: brown">ファイル → インポート エポック情報</span> サブメニュー タグ
 *importイベント* メニュー
 <span style="color: brown">ファイル → インポートイベント情報</span> メニュー タグ
 *export* は、
@@ -497,7 +492,7 @@ PCAの分解は、
 分解します。 (注:通常は不可)
 PCAとICAの融合
 
-EEGLABを見る [erpsource ファイル拡張子](https://github.com/sccn/erpsource) お問い合わせ
+EEGLABを見る [erpsource ファイル拡張子](https://github.com/sccn/erpsource) を参照してください。
 より精巧な延長の例。
 
 ### EEGLABメニュー
@@ -523,28 +518,28 @@ EEGLAB .EEGLAB は、現在、現在、EEGLAB にインストールされてい�
 <tbody>
 <tr class="odd">
 <td><strong>エポック</strong></td>
-<td style="background-color:lightgreen">お問い合わせ</td>
+<td style="background-color:lightgreen">オン</td>
 <td>設定する <strong>オフ</strong> メニュー</td>
 </tr>
 <tr class="even">
 <td><strong>連続的な</strong></td>
-<td style="background-color:lightgreen">お問い合わせ</td>
+<td style="background-color:lightgreen">オン</td>
 <td>設定する <strong>オフ</strong> 継続的なデータセットのメニュー項目を無効にするには</td>
 </tr>
 <tr class="odd">
 <td><strong>スタートアップ</strong></td>
 <td style="background-color:orange">オフ</td>
-<td>設定する <strong>お問い合わせ</strong> 起動時にメニュー項目を有効にする(データ読み込みなし)</td>
+<td>設定する <strong>オン</strong> 起動時にメニュー項目を有効にする(データ読み込みなし)</td>
 </tr>
 <tr class="even">
 <td><strong>トレーニング</strong></td>
 <td style="background-color:orange">オフ</td>
-<td>設定する <strong>お問い合わせ</strong> STUDYが処理をしているときのハッシュメニュー</td>
+<td>設定する <strong>オン</strong> STUDYが処理をしているときのハッシュメニュー</td>
 </tr>
 <tr class="odd">
 <td><strong>チャンロック</strong></td>
 <td style="background-color:orange">オフ</td>
-<td>設定する <strong>お問い合わせ</strong> チャネルの場所が不在である場合メニュー項目を無効にするため</td>
+<td>設定する <strong>オン</strong> チャネルの場所が不在である場合メニュー項目を無効にするため</td>
 </tr>
 </tbody>
 </table>
@@ -576,7 +571,7 @@ EEGLAB研究のこだわり
 
 EEGLAB ユーザが ユーザが ユーザが ユーザが ユーザを 拡張する ユーザが ユーザの ユーザが ユーザの ユーザが ユーザの ユーザが ユーザの ユーザが ユーザの ユーザが ユーザの ユーザが ユーザ を ユーザ に ユーザが ユーザ を ユーザ に ユーザ ユーザが ユーザ に ユーザが ユーザ を ユーザ ユーザ に ユーザが ユーザ ユーザが ユーザ を ユーザ ユーザ ユーザ に ユーザ ユーザ を ユーザ ユーザ ユーザ に ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ ユーザ
 EEGLABのプラグインについて
-フォームhttp://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)。 お問い合わせ
+フォームhttp://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)。
 プラグインの新しいバージョンをアップロードしたい、 
 [この単純化されたフォーム](http://sccn.ucsd.edu/eeglab/plugin_uploader/version_update.php).
 

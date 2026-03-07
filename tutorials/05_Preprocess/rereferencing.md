@@ -24,13 +24,13 @@ EEGLABの「sample_data」フォルダにあるツールボックスです。
 
 ソースのローカリゼーションに平均的な参照を計算することをお勧めします。
 
-選択する <span style="color: brown">ツール → データを再参照する</span> お問い合わせ
+選択する <span style="color: brown">ツール → データを再参照する</span>
 データセットを平均参照に変換するには [pop_reref](https://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_reref.m) 関数を使用します。 このメニュー項目を呼び出した場合
 指定したデータセットで、次のウィンドウがポップアップ表示されます。
 
 ![スクリーンショット 2025-03-19 に 14 32 56](https://github.com/user-attachments/assets/8f1644a9-95a8-46b6-aada-b80698946556)
 
-上記(サンプル)データをマストイド参照で記録しました。 お問い合わせ
+上記(サンプル)データをマストイド参照で記録しました。
 この参照チャンネルを含まない(データに必要)
 パープル参照でも、*Add current はクリックします。
 データ*チェックボックスの参照チャネル。
@@ -86,7 +86,7 @@ Cz("Cz") は、Cz("Cz") で、Cz("Cz") で、Cz("Cz") のチャンネルは、
 
 ![こちら](/assets/images/Pop_reref5.png)
 
-お問い合わせ 詳細は、こちらでご確認ください。
+詳細は、こちらでご確認ください。
 
 メニュー項目を使用してインターフェイスを再参照するようになりました <span style="color: brown">ツール → データを再参照する</span>*Retainer(Retainer) ボタンをつけて、 Cz 電極。
 

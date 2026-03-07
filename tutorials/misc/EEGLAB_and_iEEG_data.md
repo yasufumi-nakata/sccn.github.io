@@ -17,7 +17,7 @@ EEGLAB は、EEGLAB のソースコードを、EEGLAB は、EEGLAB のコード�
 例えば、MEF3 と BIDS-Matlab-tools は、 
 [ds003708 BIDSデータセット](https://nemar.org/dataexplorer/detail?dataset_id=ds003708&processed=0). 
 まず、データをダウンロードします。 第二に、メニュー項目を使用する <span style="color: brown">ファイル > BIDSツール > BIDSをフォルダにSTUDYにインポート</span>. 
-デフォルト デフォルト デフォルト デフォルト デフォルト お問い合わせ
+デフォルト
 メニュー項目 <span style="color: brown">EEGLABの機能とプラグイン ドキュメント</span> インポートする <i>メフッド</i> 
 フォルダにある <i>ds003708/sub-01/ses-ieeg01/ieeg/</i> BIDSデータセット
 
@@ -33,7 +33,7 @@ iEEGLABは、EEGLABが、EEEGLABに、再構築、再構築、再構築、再構
 
 ## スパイク情報のインポート
 
-EEGLAB,NWB(Neurodata without Border) は、以下のとおりです。 [サブ-01_ses-20140828T132700_ecephys+image.nwb](https://api.dandiarchive.org/api/assets/94ba06fc-c870-4698-9c31-f403ee733887/download/) お問い合わせ [ダンディセット](https://dandiarchive.org/dandiset/000576/)EEGLAB プラグイン(メニュー項目) <span style="color: brown">EEGLABエクスカ</span> NWB-io は、 よくある質問 お問い合わせ <span style="color: brown">EEGLABの機能とプラグイン NWBファイル</span>お問い合わせ チェックボックスをチェックしてスパイクのレイテンシーをインポートしてください。
+EEGLAB,NWB(Neurodata without Border) は、以下のとおりです。 [サブ-01_ses-20140828T132700_ecephys+image.nwb](https://api.dandiarchive.org/api/assets/94ba06fc-c870-4698-9c31-f403ee733887/download/) [ダンディセット](https://dandiarchive.org/dandiset/000576/) を参照してください。 EEGLAB プラグイン(メニュー項目) <span style="color: brown">EEGLABエクスカ</span> NWB-io は、 <span style="color: brown">EEGLABの機能とプラグイン NWBファイル</span> を参照してください。 チェックボックスをチェックしてスパイクのレイテンシーをインポートしてください。
 
 ![Screenshot 2024-04-17 に 10 00 59 午前](https://github.com/sccn/sccn.github.io/assets/1872705/88a21917-0b8e-4f1d-a6fa-cae1297994d2)
 

@@ -10,7 +10,6 @@ has_toc: true
 
 統計と可視化オプション
 ============================================
-お問い合わせ
 
 EGのコアは、
 科学研究 EEGLAB のドキュメントの解析 [統計理論](/tutorials/ConceptsGuide/statistics_theory.html) チュートリアルのセクションまたは以下の短いビデオのシリーズを見てください。 右上のアイコンをクリックして、プレイリスト内の動画のリストにアクセスします。
@@ -21,9 +20,7 @@ EGのコアは、
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 科学研究
@@ -72,7 +69,7 @@ permutation ディレクトリ
 
 ![画像が見つかりません](/assets/images/studystats05.png)
 
-お問い合わせ  以下の ポップアップ * * * * * * * * * * * * * * * * * * * * * * の の の の の の の の の の 。 。 。 の 。 。 。 。 の 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 の 。 。 。 。 ERPのプロットバックにブラックバーに約450msの写真を撮る ベースライン、100ms の pc の pc の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s s の s s の s s s の s s の s s s s s s の s s s s s s の s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s
+以下の ポップアップ * * * * * * * * * * * * * * * * * * * * * * の の の の の の の の の の 。 。 。 の 。 。 。 。 の 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 の 。 。 。 。 ERPのプロットバックにブラックバーに約450msの写真を撮る ベースライン、100ms の pc の pc の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s s の s s の s s s の s s の s s s s s s の s s s s s s の s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s
 
 ![画像が見つかりません](/assets/images/studystats06.png)
 
@@ -157,7 +154,7 @@ ERPs*Plot ERPs* は、 過去に 観測 は、 処理 は 0、1、2 は、 処�
 -------------------------------
 
 P/ITCのソリューション
-ERPss は、以下の手順で説明しています。 お問い合わせ
+ERPss は、以下の手順で説明しています。
 詳細は、関連する機能ヘルプメッセージを参照することができます。 
 
 ICAコンポーネントクラスタ

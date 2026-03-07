@@ -8,7 +8,6 @@ grand_parent: Tutorials
 ---
 コマンドラインから高度なプロット
 ======
-お問い合わせ
 
 この投稿は、MATLABからカスタムプロットを受け付けています。 EEGLABメニュー
 
@@ -16,9 +15,7 @@ grand_parent: Tutorials
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 すべての電極上の時間周波数プロット
@@ -76,8 +73,7 @@ tftopo(allersp,alltimes(:,:,1),allfreqs(:,:,1),'mode','ave','limits', …
 ### プロットの時間頻度分解
 
 ふりがな [特注品](http://sccn.ucsd.edu/eeglab/locatefile.php?file=metaplottopo.m) 関数は強力な機能です
-すべてのチャネルおよびコンポーネントのあらゆる測定をプロットできます。 お問い合わせ
-例えば、下のコードは時間頻度の分解をのためのプロットすることを可能にします
+すべてのチャネルおよびコンポーネントのあらゆる測定をプロットできます。 例えば、下のコードは時間頻度の分解をのためのプロットすることを可能にします
 すべてのデータチャネル。
 
 ``` matlab
@@ -94,8 +90,7 @@ figure; metaplottopo( EEG.data, 'plotfunc', 'newtimef', 'chanlocs', EEG.chanlocs
 
 次の例では、すべてのデータをERPimage にプロットする。
 ERPimage では、各関数の軸線が点在しています。
-必要に応じて、何百ものチャンネルをプロットするのが便利です。 お問い合わせ
-ICA交換する
+必要に応じて、何百ものチャンネルをプロットするのが便利です。 ICA交換する
 EEGデータ と EEG.icaact と *'chanlocs'* は、外に渡します。
 
 ``` matlab
@@ -113,8 +108,7 @@ figure; metaplottopo( EEG.data, 'plotfunc', 'erpimage', 'chanlocs', EEG.chanlocs
 
 ### eegmovie関数2Dspcaltopoグラフィ アニメーション
 
-scalpMap アニメーション へスキップ(limited) [eegmovie。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegmovie.m) コマンドラインから。 お問い合わせ
-例えば、レイテンシー範囲のムービーを作るために-100ミリ秒から600ミリ秒、タイプ:
+scalpMap アニメーション へスキップ(limited) [eegmovie。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegmovie.m) コマンドラインから。 例えば、レイテンシー範囲のムービーを作るために-100ミリ秒から600ミリ秒、タイプ:
 
 ```matlab
 %% Simple 2-D movie
@@ -184,8 +178,7 @@ close(vidObj);
 
 ### フレームから映画を作る
 
-別のソリューションは、映画に一連の画像を組み立てることです。 お問い合わせ
-例:
+別のソリューションは、映画に一連の画像を組み立てることです。 例:
 
 ``` matlab
 %% Using topoplot to make movie frames

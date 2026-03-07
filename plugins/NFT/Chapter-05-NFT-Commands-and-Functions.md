@@ -52,7 +52,7 @@ matlabの機能。 MRイメージをロードした後、次の関数が
 メッシュ生成のメインユーザーインターフェイスが始まります
 [メッシュ_ジェネレーション()](NFT-Appendix-B.html#Mesh_generation "wikilink") コマンド
 メッシュ生成用のGUIを開きます。 関数は読みます
-スカルプ、スカル、CSF、脳のメッシュのセグメンテーションと生成 お問い合わせ
+スカルプ、スカル、CSF、脳のメッシュのセグメンテーションと生成
 ユーザーは、メッシュをローカルに精製したい、
 [メッシュ_local_refinement()](NFT-Appendix-B.html#mesh_local_refinement "wikilink")
 関数は呼ばれます。 生成されたメッシュのトポロジーは、

@@ -60,7 +60,7 @@ Ok* 選択項目に入力してください。
 別のウィンドウがポップアップして、無意味の除去を容易にします
 この操作は、次の操作で行われます。
 セクション。
-この例では、stimulus-locked window は3秒です。 お問い合わせ
+この例では、stimulus-locked window は3秒です。
 多くの場合、長いデータエポックを抽出する方が良いです。
 10Hz以下で時間の頻度で
 頻度。
@@ -81,7 +81,7 @@ ICAとソースは、
 
 データが更新された後、次のウィンドウがポップアップ表示されます。
 自動的に。 選択することで直接呼び出しも可能
-お問い合わせ <span style="color: brown">ツール → ベースラインを削除</span> メニュー項目。
+<span style="color: brown">ツール → ベースラインを削除</span> メニュー項目。
 
 
 ![こちら](/assets/images/Pop_removebase.png)
@@ -138,7 +138,7 @@ STUDY(略称解析)、STUDY(略称)、STUDY(略称解析)、STUDY(略称)、STUD
 EEGLABは、その1位と1位をとって、
 この投稿では、すべてのページに投稿します。 チュートリアルでは、eeglab_data_epochs_ica.set にインストールします。
 
-選択する <span style="color: brown">編集 → エポックやイベントを選択</span>お問い合わせ ふりがな [pop_selectevent.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_selectevent.m) このページではjavascriptを使用しています。 * プレス *Ok*
+選択する <span style="color: brown">編集 → エポックやイベントを選択</span> ふりがな [pop_selectevent.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_selectevent.m) を参照してください。 * プレス *Ok*
 
 ![こちら](/assets/images/pop_select_epoch.png)
 

@@ -16,7 +16,7 @@ nav_order: 22
 ## RELICAとは?
 インディペンデントコンポーネント分析(ICA)は、頭皮電極へのボリューム伝導によって混合され、脳と非脳EEGソース信号を解析するための広く応用データ駆動方式で、最大温度および機能的に独立したコンポーネント(IC)プロセスのセットに使用されます。 詳しくはこちら ICは正確な脳生理学的(または非脳)の起源と識別することができる。 しかし、このプロセスは、ノイズ、非静止、または不十分なデータから発生する可能性のあるICA結果の部分的な不安定性によって妨げられます。 ここでは、Fiorenzo Artoni(Fiorenzo Artoni)による新しい方法であるRELICA(RELiable ICA)の分解を実行するためのEEGLAB拡張機能の使用について説明しています。[アルトーニ ら., 2014](https://www.sciencedirect.com/science/article/pii/S1053811914007526))ICAの分解によって識別されるICプロセスのデータセット内の統計的な信頼性を特徴付けるため。 
 
-大規模なデータセットの RELICA 分解を有効にするには、EEGLAB GUI または MATLAB コマンドラインから、米国の XCEDE ネットワークの高性能コンピューティング (HPC) リソースの RELICA 処理をオプションで実行できるようになりました。 [神経科学ゲートウェイ](https://www.nsgportal.org)お問い合わせ お問い合わせ [Delorme ら., 2019](https://sccn.ucsd.edu/~scott/pdf/Delorme_Open_EEGLAB_Portal_NER18.pdf) 詳しくはこちら
+大規模なデータセットの RELICA 分解を有効にするには、EEGLAB GUI または MATLAB コマンドラインから、米国の XCEDE ネットワークの高性能コンピューティング (HPC) リソースの RELICA 処理をオプションで実行できるようになりました。 [神経科学ゲートウェイ](https://www.nsgportal.org)を参照 [Delorme ら., 2019](https://sccn.ucsd.edu/~scott/pdf/Delorme_Open_EEGLAB_Portal_NER18.pdf) 詳しくはこちら
 
 RELICAの目標は、データフレームやエポックの多くのランダムなブートストラップ選択を渡る分解データから最も安定的に分離されるICプロセスを特定することです。 RUNICAの結果は、個々のICについて描画された結論や、対流ICクラスターの安定性について自信を判断することができます。
 
@@ -29,7 +29,7 @@ RELICA を含む EEGLAB のすべてのプラグインは 2 つの方法でイ�
 
 1. **EEGLABプラグインマネージャから:** EEGLABを起動し、メニュー項目を選択**ファイル> EEGLAB拡張機能**をメインのEEGLABウィンドウで管理します。 プラグインマネージャーウィンドウがポップアップ表示されます。 RELICA プラグインを探し、選択し、**Install/Update** を押します。
 
-2. **Webから:** RELICAプラグインのzipファイルをダウンロードする [お問い合わせ](https://github.com/sccn/relica) GitHub のページ (「Zip をダウンロード」) または [EEGLAB wikiプラグインページ](https://sccn.ucsd.edu/wiki/Plugin_list_all) (*RELICA**を選択してください) メインのeeglabフォルダ(*../eeglab/plugins/*)のプラグインフォルダにzipファイルを解凍します。
+2. **Webから:** RELICAプラグインのzipファイルをダウンロードする [こちら](https://github.com/sccn/relica) GitHub のページ (「Zip をダウンロード」) または [EEGLAB wikiプラグインページ](https://sccn.ucsd.edu/wiki/Plugin_list_all) (*RELICA**を選択してください) メインのeeglabフォルダ(*../eeglab/plugins/*)のプラグインフォルダにzipファイルを解凍します。
 
 EEGLABを再起動します。 インストールが成功すると、RELICA, **Tools > Run RELICA** を呼び出すメニュー項目が EEGLAB メニューに表示されます。
 

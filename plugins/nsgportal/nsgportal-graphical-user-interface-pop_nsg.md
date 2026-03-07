@@ -14,7 +14,7 @@ long_title: nsgportal-graphical-user-interface:-pop_nsg
 EEGLABのキー機能との相互作用は、主に、コマンドラインとグラフィカルユーザーインターフェイス(GUI)の両方でサポートされています。 プラグイン *nsgportal* もこの理念に従います。 このセクションでは、プラグイン *nsgportal* をメイン関数 *pop_nsg* でサポートする GUI を紹介します。 GUI からプラグインを使用するより高度なチュートリアルは、次のセクションにアドレスされます(参照) [詳しくはこちら](https://github.com/sccn/nsgportal/wiki/Creating-and-managing-a-job-from-pop_nsg-GUI)).
 
 ## *pop_nsg* GUI は
-*pop_nsg* GUI を呼び出すには、MATLAB コマンドウィンドウから *pop_nsg* を入力するだけです。 下記のGUIがポップアップ表示されます。 GUI は、EEGLAB のメイン GUI から呼び出すこともできます。 NSGジョブの管理*** このためには、プラグイン *nsgportal* をインストールする必要があります(参照) [お問い合わせ](https://github.com/sccn/nsgportal/wiki/Registering-on-NSG-R) セクション)。 
+*pop_nsg* GUI を呼び出すには、MATLAB コマンドウィンドウから *pop_nsg* を入力するだけです。 下記のGUIがポップアップ表示されます。 GUI は、EEGLAB のメイン GUI から呼び出すこともできます。 NSGジョブの管理*** このためには、プラグイン *nsgportal* をインストールする必要があります(参照) [こちら](https://github.com/sccn/nsgportal/wiki/Registering-on-NSG-R) セクション)。 
 
 <center>
 <img src="https://github.com/sccn/nsgportal/blob/master/docs/img/pop_nsgguineu.jpg?raw=true" alt="drawing" width="800"/>
@@ -41,7 +41,7 @@ GUIのこのセクションから、NSGで処理するジョブをテストし�
  3. **Matlabスクリプトを編集して実行**: ジョブ投稿時に実行するNSGのMatlabスクリプト
  4. ボタン **ローカルでテストジョブ**: このコンピューターにローカルでジョブをテストします。 ジョブのダウンスケールバージョンを使用する必要があります。
  5. 編集**Job ID(デフォルトまたはカスタム)**: NSGジョブのユニークな識別子。 このフィールドを利便性で変更します。   
- 6. 編集**NSG実行オプション(ヘルプを参照してください)**: 応募作品のNSGオプション お問い合わせ すべてのオプションのリストの pop_nsg ヘルプ*
+ 6. 編集**NSG実行オプション(ヘルプを参照してください)**: 応募作品のNSGオプション すべてのオプションのリストの pop_nsg ヘルプ*
  7. ボタン**NSGで実行するジョブ**:NSGで実行するジョブを送信                
                                   
 ### あなたの仕事とのやりとり

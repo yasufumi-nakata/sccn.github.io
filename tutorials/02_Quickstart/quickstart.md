@@ -70,7 +70,7 @@ EEGLAB は、EEGLAB のウィンドウをロードします。
 ここでは、テキストフィールドを編集し、表示する方法を説明します。
 現在のデータセットは、そのデータセットの一部として保存されます。
 
-選択する <span style="color: brown">編集 → このデータセットについて</span>お問い合わせ ツイート
+選択する <span style="color: brown">編集 → このデータセットについて</span>
 テキスト編集ウィンドウがポップアップし、ユーザーが編集できるようにします
 現在のデータセットの説明。 サンプルデータの入力
 *SAVE*は、
@@ -81,12 +81,11 @@ EEGLAB は、EEGLAB のウィンドウをロードします。
 データをスクロールする
 --------------------------
 
-ここでは、選択した部分を視覚化し、拒否する方法を学びます
-お問い合わせ
+ここでは、選択した部分を視覚化し、拒否する方法を学びます。
 
 現在のデータセットのチャネルデータをスクロールするには、
-<span style="color: brown">Plot → チャンネルデータ(有料)</span>お問い合わせ このポップアップ
-お問い合わせ [eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)
+<span style="color: brown">Plot → チャンネルデータ(有料)</span> このポップアップ
+[eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) を参照してください。
 下のスクロールデータ表示ウィンドウ。
 
 ![こちら](/assets/images/Scrollchannelactivities1.png)

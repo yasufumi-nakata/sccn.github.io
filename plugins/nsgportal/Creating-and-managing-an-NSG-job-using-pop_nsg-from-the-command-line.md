@@ -12,7 +12,7 @@ long_title: Creating-and-managing-an-NSG-job-using-pop_nsg-from-the-command-line
 
 チュートリアルに従う前に、プラグインをインストールし、NSGの資格情報を設定する必要があります。 もしそうしなかったら、 [このセクション](https://github.com/sccn/nsgportal/wiki/Setting-up-the-plug-in) 指示のため。
 
-セクションで作成した同じジョブを使用します。 [ファイルを準備してジョブを提出する](https://github.com/nucleuscub/pop_nsg_wiki/wiki/Preparing-your-files-to-submit-a-job) そして使用されて [デモ1](https://github.com/nucleuscub/pop_nsg_wiki/wiki/Demo-1:-Creating-and-managing-a-job-form-pop_nsg-GUI)お問い合わせ チュートリアルスクリプトをダウンロードできます [詳しくはこちら](https://github.com/sccn/nsgportal/blob/master/demos/demo_command_line_tools.m) お問い合わせ
+セクションで作成した同じジョブを使用します。 [ファイルを準備してジョブを提出する](https://github.com/nucleuscub/pop_nsg_wiki/wiki/Preparing-your-files-to-submit-a-job) そして使用されて [デモ1](https://github.com/nucleuscub/pop_nsg_wiki/wiki/Demo-1:-Creating-and-managing-a-job-form-pop_nsg-GUI)を参照 チュートリアルスクリプトをダウンロードできます [詳しくはこちら](https://github.com/sccn/nsgportal/blob/master/demos/demo_command_line_tools.m)
 
 ## _pop_nsg_ コマンドの概要
 **_pop_nsg_** コマンドは引数無しで呼び出すことができます。この場合、GUI インターフェイスが現れます(参照) [デモ1](https://github.com/sccn/nsgportal/wiki/Creating-and-managing-a-job-from-pop_nsg-GUI))。 Else、_pop_nsg_ の最初の引数は、次のアクションを指定する必要があります。
