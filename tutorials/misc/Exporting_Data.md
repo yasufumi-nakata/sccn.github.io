@@ -24,12 +24,12 @@ grand_parent: Tutorials
 以下のエクスポート形式がサポートされています。
 
 -  ASCII テキスト、.txt、.csv
--  エッグデータ:ヨーロッパのデータフォーマット(16ビット)、.edf 
--  エッグデータ:バイオセミ、.bdf  
--  エッグデータ: BIOSIG、.gdf  
+-  EEGデータ:ヨーロッパのデータフォーマット(16ビット)、.edf 
+-  EEGデータ:バイオセミ、.bdf  
+-  EEGデータ: BIOSIG、.gdf  
 -  脳の検光子、.dat、.vhdr、.vmrk 
 -  MFF EGIのフォーマット、.mff
--  エッグデータ:Neuroscan .cnt (β)
+-  EEGデータ:Neuroscan .cnt (β)
 -  アメリカ: ASCII テキスト、.txt               
 -  ASCIIのテキスト、.txt               
 -  最近の投稿 ASCIIのテキスト、.txt               
@@ -92,13 +92,13 @@ FPz             EOG1       F3          Fz    �
 
 EEGLABメニューの項目は、EEGの形式に分けられます。
 
--  エッグデータ: 無線データ(16ビット).edf、Biosemi .bdf、 BIOSIG .gdf. 利用する <span style="color: brown">ファイル → EDF/BDF/GDF ファイルへ</span> メニュー項目。、BIOSIG インストール(BIOSIG インストール)。
+-  EEGデータ: 無線データ(16ビット).edf、Biosemi .bdf、 BIOSIG .gdf. 利用する <span style="color: brown">ファイル → EDF/BDF/GDF ファイルへ</span> メニュー項目。、BIOSIG インストール(BIOSIG インストール)。
 
 -  BrainVision形式（.dat、.vhdr、.vmrk）。 <span style="color: brown">File → Export → BrainVision format</span> メニュー項目。 これは、 [bva-io(ババオ)](https://github.com/arnodelorme/bva-io) インストールするプラグイン。
 
 -  MFF EGIのフォーマット、.mff。 使い方 <span style="color: brown">ファイル → エクスポート → EGI .mff ファイル</span> メニュー項目。 これは、 [mffMatlabIOの動画](https://github.com/arnodelorme/mffMatlabIO) インストールするプラグイン。
 
--  エッグ・データ: Neuroscan .cnt (β)。 *writecnt.m*関数が実行されます。 [神経癌](https://github.com/sccn/neuroscanio) インストールするプラグイン。
+-  EEG・データ: Neuroscan .cnt (β)。 *writecnt.m*関数が実行されます。 [神経癌](https://github.com/sccn/neuroscanio) インストールするプラグイン。
 
 ### BIDSの現状
 

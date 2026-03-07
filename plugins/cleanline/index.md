@@ -228,8 +228,7 @@ EEG = pop_cleanline(EEG, 'Bandwidth',2,'ChanCompIndices',[1:EEG.nbchan] ,'Signal
                         入力データタイプ:実数(倍)                                                                 
                                                                                                                               
   **PaddingFactor:** FFTのパディングの要因                                                                                    
-                        信号は滑走窓の長さより大きい2つの望ましい力にゼロパッドを入れられます。 ふりがな    
-                        方式はNFFT = 2^nextpow2 (SlidingWinLen* (PadFactor+1)です。 例えば、SライディングWinLen = 500の場合、PadFactor = -1の場合、    
+                        信号は滑走窓の長さより大きい2つの望ましい力にゼロパッドを入れられます。                        方式はNFFT = 2^nextpow2 (SlidingWinLen* (PadFactor+1)です。 例えば、SライディングWinLen = 500の場合、PadFactor = -1の場合、    
                         PadFactor = 0 なら、PadFactor = 1 なら、FFT を 512 ポイントに渡します。PadFactor=1 なら、1024 ポイントなどにパッドを入れます。                                                                                                  
                         入力範囲: [-1 インフ]                                                                              
                         デフォルト値: 2                                                                                      

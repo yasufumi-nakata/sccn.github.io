@@ -42,8 +42,7 @@ EEGLABに新機能が搭載されているので、機能の優先順位を上�
 信号処理機能(例:
 [m 点](http://sccn.ucsd.edu/eeglab/download/sample.m))、および
 (例:
-[pop_sample.m](http://sccn.ucsd.edu/eeglab/download/pop_sample.m))。 ふりがな
-*pop_* 関数は、ユーザが指定するテキストの入力ウィンドウに
+[pop_sample.m](http://sccn.ucsd.edu/eeglab/download/pop_sample.m))。*pop_* 関数は、ユーザが指定するテキストの入力ウィンドウに
 シグナル処理関数を記述する。 MATLABのヘルプ
 各関数は、入力引数が何であるかを明確に記述する必要があります。
 関数は、ヘルプメッセージの形式を使用して、出力されたものと要求します

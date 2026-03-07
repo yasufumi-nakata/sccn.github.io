@@ -178,7 +178,7 @@ MATLAB は、STUDY は、
 >> [STUDY erpdata erptimes] = std_erpplot(STUDY,ALLEEG,'channels',{ 'FP1'}, 'noplot', 'on');
 ```
 
-ふりがな <i>エルプデータ</i> 開発者がERPデータを取得しています。
+<i>エルプデータ</i> 開発者がERPデータを取得しています。
 また、STUDY がデザインするので、
 第2弾の写実体をデザインする
 STUDYの細胞(*synonyms*)。

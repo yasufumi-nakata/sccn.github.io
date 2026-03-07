@@ -36,8 +36,7 @@ EEGLABの特徴は3つあります。
     または、EeGLAB のユーザから
     インターフェイス)、これらの機能は収集するために照会窓を現れます
     ユーザーからの追加のパラメータ選択。 それから一般的に呼ばれる
-    EEGLABのツールボックス処理機能の1つ以上。 ふりがな
-    MATLAB や
+    EEGLABのツールボックス処理機能の1つ以上。    MATLAB や
     MATLAB について
     [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m), [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m), [pop_topoplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m)など...
 
@@ -125,7 +124,6 @@ pop_ 関数対信号処理
 
 *pop_funcname.m* 関数は
 *EEG*データ操作 グラフィックユーザーインターフェイス(gui)機能
-ふりがな
 データセットの知識がないスタンドアローン処理機能
 EE を を を
 データ マトリックスか。

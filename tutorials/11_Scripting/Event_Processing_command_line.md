@@ -26,7 +26,6 @@ EEGLABデータとイベントは、
 ---------------------------
 <button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'event_processing_single_dataset.m'));">MATLABコマンド</button>
 
-ふりがな
 [EEGLAB チュートリアル](/tutorials/11_Scripting/Using_EEGLAB_history.html)
 EEGLAB は、MATLAB の Script の 方法 について 詳しく 説明しています。 
 まず、継続的なチュートリアルデータセットをインポートします。 以下のコード

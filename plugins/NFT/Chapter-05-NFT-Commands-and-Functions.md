@@ -136,11 +136,9 @@ BEM のマトリックスを発生させる機能。 個々のマトリックス
 [bem_load_transfer_matrix()](NFT-Appendix-B.html#bem_load_transfer_matrix "wikilink")
 機能。
 
-フォワードソリューションの取得には2つの機能があります。 ふりがな
-[bem_solve_dipoles_eeg()](NFT-Appendix-B.html#bem_solve_dipoles_eeg "wikilink")
+フォワードソリューションの取得には2つの機能があります。[bem_solve_dipoles_eeg()](NFT-Appendix-B.html#bem_solve_dipoles_eeg "wikilink")
 関数は、アクティベーションによるセンサーのポテンシャルを計算します
-ダイポールの数。 ふりがな
-[bem_solve_lfm_eeg()](NFT-Appendix-B.html#bem_solve_lfm_eeg "wikilink")
+ダイポールの数。[bem_solve_lfm_eeg()](NFT-Appendix-B.html#bem_solve_lfm_eeg "wikilink")
 関数は、それが返すので、リードフィールドマトリックスを生成するのに適しています
 単一のダイポールの解決のマトリックス。
 
@@ -155,7 +153,6 @@ BEM のマトリックスを発生させる機能。 個々のマトリックス
 ツールボックス。 ユーザーインターフェイス機能は取得するためにこの機能を呼び出す
 必要に応じて設定変数。
 
-ふりがな
 [utilbem_compute_cond() 関数](NFT-Appendix-B.html#utilbem_compute_cond "wikilink")
 そして、
 [utilbem_compute_indices()](NFT-Appendix-B.html#utilbem_compute_indices "wikilink")

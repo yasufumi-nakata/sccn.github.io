@@ -261,7 +261,7 @@ STUDY = std_dipplot(STUDY,ALLEEG,'clusters',2, 'design', 1);
 * [EEGLAB論文](https://www.frontiersin.org/articles/10.3389/fnins.2018.00097/full) EEGLABの概要。
 * [エポック](https://osf.io/cw5qv/) このプロジェクトでは、EEGLABを使用して分析を提供しています。 [神経科学のフロンティア](https://www.frontiersin.org/articles/10.3389/fnins.2021.660449/full).
 * [Apiceのこだわり](https://github.com/neurokidslab/eeg_preprocessing) 乳幼児向けデータ
-* [EEGLABのコンセプト](https://github.com/fardinafdideh/EEG-Signal-Cleaning-Pipeline-Management-EEGLAB-based-) エッグ 信号のクリーニングのパイプライン管理。
+* [EEGLABのコンセプト](https://github.com/fardinafdideh/EEG-Signal-Cleaning-Pipeline-Management-EEGLAB-based-) EEG信号のクリーニングのパイプライン管理。
 * [リラックス](https://github.com/NeilwBailey/RELAX) ICA と ICLabel は、Windows で自動 EEGLAB のプリプロセスを実装しています。
 
 EEGLAB、FieldTrip、Brainstorm、MNEは、それぞれの強みがあります。各ソフトウェアパッケージの比較は

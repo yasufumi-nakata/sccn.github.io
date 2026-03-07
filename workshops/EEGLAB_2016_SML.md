@@ -25,8 +25,7 @@ grand_parent: Workshops
 実践的なセッションに参加する チュートリアルワークショップは、
 EEGLABソフトウェア環境の使用導入と実証
 EEGと関連する高度な分析を実行するためのEEGLABリンクツール
-データ, 詳細な方法と実用的な演習で. ふりがな
-Best Western Hotel Regina Elenaでワークショップを開催します。
+データ, 詳細な方法と実用的な演習で.Best Western Hotel Regina Elenaでワークショップを開催します。
 利用できるレクリエーションの機会。
 
 

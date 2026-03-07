@@ -73,8 +73,7 @@ freqBins = logspace(log10(1+deviationFromLog), log10([user_input_value]+devia
     ICA分解データ
 2.  Hzの上の周波数制限を入力します。
 3.  パラメトリック方式(ピアソンの相関係数)または
-    非パラメトリック方式(スピアマンの相関係数) ふりがな
-    parametric メソッドは、感度が高いが、outlier に敏感です。
+    非パラメトリック方式(スピアマンの相関係数)    parametric メソッドは、感度が高いが、outlier に敏感です。
     非パラメトリック方式は堅牢で、感度が低下します。 詳しくはこちら
     詳細は、当紙(Thammasan and Miyakoshi, 2020)をご覧ください。
 4.  パーマテーションテストの反復の数を設定します。 デフォルトは
@@ -132,8 +131,7 @@ FDR が誤った p\<0.05 で保持されている。 comodulogramでは、11.5Hz
 デモンストレーション
 =============
 
-EEGLABワークショップチュートリアルデータ 'stern_125.set' を解析しました。 ふりがな
-連続71chのデータは50Hzでろ過されたローパスおよび非brain ICでした
+EEGLABワークショップチュートリアルデータ 'stern_125.set' を解析しました。連続71chのデータは50Hzでろ過されたローパスおよび非brain ICでした
 手動で拒否されました。 結果は以下です。
 
 ![Stern125_scalptopos.pngの特長](images/Stern125_scalptopos.png)

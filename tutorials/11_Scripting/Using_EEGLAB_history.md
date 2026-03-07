@@ -76,7 +76,7 @@ EEGLABフォーラム
 EEGLAB データセットをロードし、データウィンドウを転送します。
 - 電話番号 <span style="color: brown">ファイル → データの読み込み</span>EEGLABの「sample_data」フォルダに「eeglab_data.set」と書いてあります。
 - メニュー項目を使用する <span style="color: brown">Plot → チャンネルデータ(有料)</span> このポップアップ
-[エッグロット](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)
+[eegplot](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)
 下にデータをスクロールする。
 
 ![こちら](/assets/images/Scrollchannelactivities1.png)
@@ -126,7 +126,7 @@ EEGLABは、EEGLABを運営しています。 プロフィール 別のデータ
 再びスクリプトを実行します。
 
 EEGLAB *pop_* 関数は、EEGLAB *pop_* 関数の呼び出しをします。
-ふりがなな [EEGLABの特徴](/tutorials/ConceptsGuide/EEGLAB_functions.html) EEGLAB は、
+ [EEGLABの特徴](/tutorials/ConceptsGuide/EEGLAB_functions.html) EEGLAB は、
 
 詳細については、
 MATLABは、以下のとおりです。
