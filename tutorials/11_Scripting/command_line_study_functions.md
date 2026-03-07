@@ -268,8 +268,7 @@ writematrix(array, 'matlabarray4.csv');
 writetable(table(array), 'matlabarray5.csv')
 ```
 
-サイズ750ポイント×13の対象のERPデータに3つの条件をクリアする<i>erpdata</i> 前のセクションで得られた。 3つの条件があると想像してみてください <i>erpdata</i> 'erpfile.txt' は、 最近の投稿
-
+サイズ750ポイント×13の対象のERPデータに3つの条件をクリアする<i>erpdata</i> 前のセクションで得られた。 3つの条件があると想像してみてください <i>erpdata</i> 'erpfile.txt' は、 
 ``` matlab
 [STUDY erpdata erptimes] = std_erpplot(STUDY,ALLEEG,'channels',{ 'FP1'}, 'noplot', 'on');
 dlmwrite('erpfile.txt',squeeze([ erptimes' erpdata{1} ones(size(erpdata{1},1),1)*1 ]),'delimiter', '\t', 'precision', 2);

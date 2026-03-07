@@ -153,8 +153,7 @@ STUDYの定義
 
 外部パネル このプロパティは、より優れた周波数範囲、*memorize* および *ignore* の構成要素から構成されています。 [グループ分析統計チュートリアル](/tutorials/10_Group_analysis/study_statistics.html) 詳しくはこちら。
 
-STUDYとは 最近の投稿
-STUDYが設計を得意としています。
+STUDYとは STUDYが設計を得意としています。
 [STUDY構造](/tutorials/ConceptsGuide/Data_Structures.html#the-study-structure)
 チュートリアルの一部。
 

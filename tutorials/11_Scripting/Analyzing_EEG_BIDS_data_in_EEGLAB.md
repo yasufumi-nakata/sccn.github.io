@@ -239,4 +239,4 @@ STUDY = std_erpplot(STUDY,ALLEEG,'channels',{'EEG001','EEG002','EEG003','EEG004'
 
 ![](/assets/images/topo_wh_bids2.png)
 
-このチュートリアルでは、 このチュートリアルでは、 [統計情報](/tutorials/10_Group_analysis/study_statistics.html) または高度な処理 [脳のソース活動](/tutorials/10_Group_analysis/component_clustering_tools.html) このデータについて 見てみることもできます。 [LIMOプラグイン](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) 最近の投稿
+このチュートリアルでは、 このチュートリアルでは、 [統計情報](/tutorials/10_Group_analysis/study_statistics.html) または高度な処理 [脳のソース活動](/tutorials/10_Group_analysis/component_clustering_tools.html) このデータについて 見てみることもできます。 [LIMOプラグイン](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) 

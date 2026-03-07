@@ -275,12 +275,12 @@ Sporns, 2009 . これは**NodeColorMapping**によって達成され、
 <td><p>重要な外出エッジの数</p></td>
 </tr>
 <tr class="even">
-<td><p><strong>最近の投稿</strong></p></td>
+<td><p><strong></strong></p></td>
 <td><p>重要な着信エッジの数</p></td>
 </tr>
 <tr class="odd">
 <td><p><strong>偶然の程度</strong></p></td>
-<td><p><em>アウトタイム</em> - <em>最近の投稿</em></p></td>
+<td><p><em>アウトタイム</em> - <em></em></p></td>
 </tr>
 <tr class="even">
 <td><p><strong>アシムネトリー比率</strong></p></td>

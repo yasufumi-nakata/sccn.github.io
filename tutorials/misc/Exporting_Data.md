@@ -24,7 +24,7 @@ grand_parent: Tutorials
 以下のエクスポート形式がサポートされています。
 
 -  ASCII テキスト、.txt、.csv
--  EEGデータ:ヨーロッパのデータフォーマット(16ビット)、.edf 
+-  EEGデータ: European Data Format（16ビット）、.edf 
 -  EEGデータ:バイオセミ、.bdf  
 -  EEGデータ: BIOSIG、.gdf  
 -  脳の検光子、.dat、.vhdr、.vmrk 
@@ -32,7 +32,7 @@ grand_parent: Tutorials
 -  EEGデータ:Neuroscan .cnt (β)
 -  アメリカ: ASCII テキスト、.txt               
 -  ASCIIのテキスト、.txt               
--  最近の投稿 ASCIIのテキスト、.txt               
+-   ASCIIのテキスト、.txt               
 -  サポートされているデータフォーマットに関する詳細情報は [BIOSIGについて](http://biosig.sourceforge.net/) を参照してください。
 
 

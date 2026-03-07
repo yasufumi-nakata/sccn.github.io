@@ -274,8 +274,7 @@ eeglab redraw;
 
 ![](/assets/images/eeglab20191.png)
 
--  EEGLAB 最近の投稿
-
+-  EEGLAB 
 ``` matlab
 [ALLEEG EEG CURRENTSET] = eeg_store(ALLEEG, EEG, CURRENTSET);
 eeglab redraw;
