@@ -33,7 +33,7 @@ EEGLAB は、File-IO からファイル・IO まで、様々な情報を発信�
 
 CTF MEGについて
 ----------------------
-より より より ???????????????? [チュートリアルデータ](https://nemar.org/dataexplorer/detail?dataset_id=ds000246) Brainstorm、その大きさはそのままで、このデータセットのセンサーを閉じます。 
+この[チュートリアルデータ](https://nemar.org/dataexplorer/detail?dataset_id=ds000246)はBrainstormでも使用されているデータセットです。
 
  まず [チュートリアルデータ](https://nemar.org/dataexplorer/detail?dataset_id=ds000246) をダウンロードし、メニュー <span style="color: brown">ファイル > インポートデータ > File-IO インターフェイス</span> を選択します。 データを連続データとしてインポートします。詳細は [統計力の減少](https://www.biorxiv.org/content/10.1101/2022.12.03.518987v1) を参照してください。
 
@@ -86,7 +86,7 @@ EEGは、 このチュートリアルでは、このチュートリアルでは�
 
 ![スクリーンショット 2022-12-11 に 3 37 03](https://user-images.githubusercontent.com/1872705/206935920-b0f5e662-8571-40af-bba3-709eed80e306.png)
 
-MRIは、脳、脳頭脳、脳幹細胞、脳神経細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳細胞、脳 参照: [pop_dipfit_headmodel.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_headmodel.m) "bemcp" メソッド、 FieldTrip のモジュールをエクスポートします。 ?????????????????????????????????????????????????????????????????
+MRIからBEM（境界要素法）ヘッドモデルが自動生成されます。 詳細は [pop_dipfit_headmodel.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_headmodel.m) を参照してください。 "bemcp" メソッドを使用し、FieldTripの機能を呼び出します。
 
 ![スクリーンショット 2025-10-28 に 13 54 28](https://github.com/user-attachments/assets/149060b8-ec2e-4c98-b8c6-26de5691ddd2)
 
