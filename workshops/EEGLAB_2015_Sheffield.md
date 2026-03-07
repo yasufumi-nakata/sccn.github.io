@@ -162,7 +162,7 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 
 
-<span style="color: purple">9:00〜10:45 時間頻度分解: 理論と実践(ジョン・イヴァーン)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_jri_timefrequencytheorypractice_lores.pdf)
+<span style="color: purple">9:00〜10:45 時間頻度分解: 理論と実践(John Iversen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_jri_timefrequencytheorypractice_lores.pdf)
 <!-- -->
 
 

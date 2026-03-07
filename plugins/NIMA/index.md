@@ -9,7 +9,7 @@ nav_order: 16
 ---
 プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/NIMA).
 
-![P159_separatealpha.png はコメントを受け付けていません。](images/P159_separatealpha.png)
+![P159_separatealpha.png](images/P159_separatealpha.png)
 
 NIMA EEGLABプラグイン
 -------------------------------------------------------------

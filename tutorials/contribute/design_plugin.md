@@ -42,7 +42,7 @@ EEGLABに新機能が搭載されているので、機能の優先順位を上�
 信号処理機能(例:
 [m 点](http://sccn.ucsd.edu/eeglab/download/sample.m))、および
 (例:
-[人気カテゴリー](http://sccn.ucsd.edu/eeglab/download/pop_sample.m))。 ふりがな
+[pop_sample.m](http://sccn.ucsd.edu/eeglab/download/pop_sample.m))。 ふりがな
 *pop_* 関数は、ユーザが指定するテキストの入力ウィンドウに
 シグナル処理関数を記述する。 MATLABのヘルプ
 各関数は、入力引数が何であるかを明確に記述する必要があります。
@@ -85,7 +85,7 @@ EEGLAB のヘルプメッセージの構文 EEGLAB のユーザは、使い慣�
     *sbplot* は、複数の部分の図を、
     *pop_* は、通常実行されます。
     これを変更した場合、数分
-    [人気カテゴリー](http://sccn.ucsd.edu/eeglab/download/pop_sample.m)
+    [pop_sample.m](http://sccn.ucsd.edu/eeglab/download/pop_sample.m)
     機能ソース。
 
 ### EEGLABの関数
@@ -122,7 +122,7 @@ EEGLABの強み
 'uilist'.' 'geometry' は、このうちの日常の学習者です。 3 行 { 1 1 1 1 1 1 1 1 1 1
 'uilist' は、
 { { { { {
-'text', 'string', 'Hello!' はコメントを受け付けていません。
+'text', 'string', 'Hello!' のように指定します。
 3行目は "OK" ボタン "{ 'style', 'pushbutton' , 'string' です。
 
 しかし、*Ok* と、 問題は、

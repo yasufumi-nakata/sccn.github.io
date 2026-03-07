@@ -34,7 +34,7 @@ MATLABファイルの処理
 
 メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します <span style="color: brown">既存の研究をロードする</span>チュートリアル「animal.study」、*Open*など
 
-STUDY*は、 <span style="color: brown">研究 → 選択/編集研究設計</span> *animals* と *distractors* はコメントを受け付けていません。 
+STUDY*は、 <span style="color: brown">研究 → 選択/編集研究設計</span> *animals* と *distractors* の条件です。 
 
 ![](/assets/images/studyprecomp2.png)
 

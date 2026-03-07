@@ -35,7 +35,7 @@ EEGLAB スタッフ
 ![](/assets/images/I51pop_epoch.png)
 
 
-右上のボタンをクリックし、*"..."* をマークします。 [人気カテゴリー](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_epoch.m) ブラウザボックスのリストを呼び出すウィンドウ
+右上のボタンをクリックし、*"..."* をマークします。 [pop_epoch.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_epoch.m) ブラウザボックスのリストを呼び出すウィンドウ
 利用可能なイベントタイプ。
 
 
@@ -44,7 +44,7 @@ EEGLAB スタッフ
 
 正方形 正方形  *
 Ok* 選択項目に入力してください。
-イベントタイプは、上部のテキストボックスに直接 [人気カテゴリー](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_epoch.m) ウィンドウ。
+イベントタイプは、上部のテキストボックスに直接 [pop_epoch.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_epoch.m) ウィンドウ。
 
 
 ![](/assets/images/I51pop_epoch2.png)

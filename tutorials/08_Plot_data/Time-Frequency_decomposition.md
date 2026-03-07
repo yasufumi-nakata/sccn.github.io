@@ -17,7 +17,7 @@ grand_parent: Tutorials
 基本的な と と と
 数学 で で で で で [ で
 2004年(平成16年))http://sccn.ucsd.edu/eeglab/download/eeglab_jnm03.pdf).
-また、EEGLAB(Youtubeでホストする)では、時間制限の頻度で、ビデオのパフォーマンスについて説明しています。 人気カテゴリー
+また、EEGLAB(Youtubeでホストする)では、時間制限の頻度で、ビデオプレゼンテーションを参照してください。
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2TAoLHVW5NvNmJtwiHurzw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
 

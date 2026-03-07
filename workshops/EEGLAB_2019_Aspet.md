@@ -45,7 +45,7 @@ MATLABをインストールしたノートパソコン
 
 <span style="color: purple">13:00-13:10 - シンポジウム入門 - Scott Makeig </span>
 
-<span style="color: purple">13:10-14:40 - BIDSとは何ですか? - Cyrilパーネット </span>
+<span style="color: purple">13:10-14:40 - BIDSとは何ですか? - Cyril Pernet </span>
 
 
 <span style="color: purple">13:40-14:10 - BIDS EEG - ロバート・オオステンドヴェルド</span>

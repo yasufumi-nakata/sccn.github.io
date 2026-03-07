@@ -61,9 +61,9 @@ Cz をデータに追加する。
 電極は 0 です。 最初のステップは平均参照を計算することです。
 チャネルの追加
 
-この例では、 [品質保証](https://sccn.ucsd.edu/eeglab/download/TEST.CNT) データセット。 メニュー <span style="color: brown">ファイル → インポートデータ → EEGLAB関数とプラグイン → Neuroscan .CNT ファイルから</span>.
+この例では、 [TEST.CNT](https://sccn.ucsd.edu/eeglab/download/TEST.CNT) データセットを使用します。メニュー <span style="color: brown">File → Import data → Using EEGLAB functions and plugins → From Neuroscan .CNT file</span> からインポートします。
  
-クライアントは、Css が参照として、Css は、Windows を経由して、Cs が参照しています。 <span style="color: brown">編集 → チャンネルの場所</span> メニュー項目は、最後に行きます
+Czを参照電極として追加するには、<span style="color: brown">Edit → Channel locations</span> メニュー項目を開き、最後の行に移動します。
 *Append*ボタンで空のチャンネルが作成されます。
 *Channel label* の 編集ボックスの 読み込み中 “Cz” )
 それ チャンネル チャンネル X、Y、Z の場所、*XYZ - → ポーラ&

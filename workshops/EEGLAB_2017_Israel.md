@@ -65,7 +65,7 @@ EEGおよび関連データ、詳細な方法の博覧会および実用的
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">16:15～17:15 時間頻度分解: 理論と実践(ジョン・イヴァーン)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_jri_time_frequency.pdf)
+<span style="color: purple">16:15～17:15 時間頻度分解: 理論と実践(John Iversen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_jri_time_frequency.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 

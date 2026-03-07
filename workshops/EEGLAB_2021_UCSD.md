@@ -13,7 +13,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
 <h3 style="color:red"><b>注意:</b> 参加者の方は、最新のプログラムとオンラインイベントへのリンクを記載したメールが受け取ったリンクをご確認ください。</h3>
 
-6月14日から6月18日まで、第30回EEGLABワークショップがバーチャル脳会議場でオンライン開催されます。 [ガザータウン](https://gather.town/) 初日は無料で、講演会や社会イベントを盛り上げます。 ワークショップでは、EEGLABを使用してデータを処理する方法について、スクリプトや複数のプラグインの使用などについて説明します。 並列セッションでは、特定のトピック、特にウェアラブルなEEG、ディープラーニング、EEG、コネクティビティ分析、およびEEGについて説明します。
+6月14日から6月18日まで、第30回EEGLABワークショップがバーチャル脳会議場でオンライン開催されます。 [Gather.town](https://gather.town/) 初日は無料で、講演会や社会イベントを盛り上げます。 ワークショップでは、EEGLABを使用してデータを処理する方法について、スクリプトや複数のプラグインの使用などについて説明します。 並列セッションでは、特定のトピック、特にウェアラブルなEEG、ディープラーニング、EEG、コネクティビティ分析、およびEEGについて説明します。
 
 **<span style="color: red">会員登録 現在、営業終了 </span>**.
 
@@ -23,7 +23,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
 私たちは、オンライン会議をお待ちしています... 
 
-以下は、2021年の仮想EEGLABワークショップ(提案/依頼歓迎)のための暫定プログラムです。 ワークショップはオンラインで開催され、社会的なネットワーキングが可能 [ガザータウン](https://gather.town/) 環境。 パシフィック・デイライト・セービング・タイム(PDT)と、括弧、中央ヨーロッパ・サマー・タイム(CEST)で、全時間を表示しています。 滞在期間は、北米と南米、欧米のタイムゾーンのウェイク時間に対応するために配置されています。 「Night owl」の参加者も歓迎します。 後日、アジアのタイムゾーンに対応したイベントを予定しています。 
+以下は、2021年の仮想EEGLABワークショップ(提案/依頼歓迎)のための暫定プログラムです。 ワークショップはオンラインで開催され、社会的なネットワーキングが可能 [Gather.town](https://gather.town/) 環境。 パシフィック・デイライト・セービング・タイム(PDT)と、括弧、中央ヨーロッパ・サマー・タイム(CEST)で、全時間を表示しています。 滞在期間は、北米と南米、欧米のタイムゾーンのウェイク時間に対応するために配置されています。 「Night owl」の参加者も歓迎します。 後日、アジアのタイムゾーンに対応したイベントを予定しています。 
 
 **注意:** Gather. 町には、集会、集会、集会、集会など、様々な体験を楽しめる無料公開サンプルサイトがあります。 町 - ワークショップが始まる前に、ライブウォークスルーを試すことをお勧めします。
 
@@ -61,11 +61,11 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
 > - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時15分</span> - **実用的なアプリケーション**着用可能なEEG(Tzyy Ping Jung)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:15</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - **移動式脳/ボディ イメージ投射(MoBI)** (ジョン・イヴァーン)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:15</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - **移動式脳/ボディ イメージ投射(MoBI)** (John Iversen)</span>
 
 > <span style="color: gray">パラレルセッション 2 - **BIDSとHEDを使用してNeuroinformatics **
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span> -** \'Brain Imaging Data Structure\'(BIDS)とは何ですか?** (Cyrilパーネット)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span> -** \'Brain Imaging Data Structure\'(BIDS)とは何ですか?** (Cyril Pernet)</span>
 
 > - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:10pm</span> - **階層イベント記述子(HED)** (ロビンズ、マジグ&amp;Dung Truong)</span>
 
@@ -77,7 +77,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
 - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7月7日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – **EEGLABデータのインポートと\'bad\'のデータ可視化**(Julie Onton)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8月8日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">9:00</span> - **時間頻度分解: 理論** (ジョン・イヴァーン)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8月8日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">9:00</span> - **時間頻度分解: 理論** (John Iversen)</span>
 
 - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前9時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **ICA理論** (Jason Palmer &amp;Scott Makeig)</span>
 

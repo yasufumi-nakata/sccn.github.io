@@ -85,7 +85,7 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 
 <span style="color: orange">17:15 – 18:00 -- ICAコンポーネントの練習員の評価 (Luca Pion-Tonachini)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_lpt_evaluation_ica.pdf)
 
-<span style="color: purple">18:00 – 19:00 -- EEGデータの周波数分解:理論と実践(ジョン・イヴァーン)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_india_jri_timefrequencytheorypractice.pdf)
+<span style="color: purple">18:00 – 19:00 -- EEGデータの周波数分解:理論と実践(John Iversen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_india_jri_timefrequencytheorypractice.pdf)
 <!-- -->
 
 

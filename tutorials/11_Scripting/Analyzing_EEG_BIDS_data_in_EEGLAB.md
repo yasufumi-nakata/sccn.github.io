@@ -49,7 +49,7 @@ fMRI研究([Kanwisher et])の領域の領域の領域は、
 2006](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1857737/)または
 より一般的な専門家の個人識別をサポートする処理
 または重要なおよび長い規定された目的の大きいセットのためのサブカテゴリ
-特許取得済(Gauthier et)
+（Gauthier et al.）
 1999年(平成11年)https://www.ncbi.nlm.nih.gov/pubmed/10448223)). 
 
 一般的に、

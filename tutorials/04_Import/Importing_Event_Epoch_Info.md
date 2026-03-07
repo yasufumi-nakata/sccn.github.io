@@ -51,7 +51,7 @@ ASCII/floatファイル MATLAB は、</span> メニュー項目, 選択
 <span style="color: brown">ファイル → インポートイベント情報 → データから
 チャンネル</span> 関数を呼び出すためのメニュー項目 [ポップ_chanevent.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanevent.m) .
 
-![Ii21pop_chanevent.jpg はコメントを受け付けていません。](/assets/images/II21pop_chanevent.jpg)
+![Ii21pop_chanevent.jpg](/assets/images/II21pop_chanevent.jpg)
 
 *33*はイベントのチャンネルに必須項目です。 特許出願中
 (トップ)* (注記: テキストにマウスを置く * 変換 抽出する*
@@ -281,7 +281,7 @@ MATLABの3D配列はデータエポックとして自動的にインポートさ
 メニュー項目 <span style="color: brown">ファイル → epoch 情報 → MATLAB から
 array または ascii ファイル</span>, 次のウィンドウを上げます:
 
-![Ii33pop_inportepoch.jpg はコメントを受け付けていません。](/assets/images/II33pop_inportepoch.jpg)
+![Ii33pop_inportepoch.jpg](/assets/images/II33pop_inportepoch.jpg)
 
 
 は、*tutorial_epoch.txt*を参照して、フィールドに入力してください。

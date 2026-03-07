@@ -10,7 +10,7 @@ EEGの解析
 ============================
 
 EEGの分光解析は、EEGデータ解析の中央部です。
-この この この この この 人気カテゴリー
+このセクションでは、
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2TAoLHVW5NvNmJtwiHurzw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
 

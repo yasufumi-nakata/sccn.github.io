@@ -160,7 +160,7 @@ EEGLAB は、EEGLAB のパートナーです。 メニュー
 
 *EEG.history*は、
 EEGLABでは、バイナリデータセット(for)をインポートします。
-インスタンス, [品質保証](http://sccn.ucsd.edu/eeglab/download/TEST.CNT)) 以下のメニュー項目を使用しました。
+インスタンス, [TEST.CNT](http://sccn.ucsd.edu/eeglab/download/TEST.CNT)) 以下のメニュー項目を使用しました。
 1. メニュー項目を使用する <span style="color: brown">ファイル → インポートデータ → EEGLAB関数とプラグイン → Neuroscan .CNT ファイルから</span> ファイルをインポートする(すべてのデフォルトを使用する)
 2. メニュー項目を使用する <span style="color: brown">ツール → サンプリング速度の変更</span> サンプリングを250に Hz は、すべてのデフォルトで新しいデータセットに
 3. メニュー項目を使用する <span style="color: brown">基本のFIRをクリアする</span> 1 Hz のハイパスフィルタ
@@ -519,7 +519,7 @@ EEG.comments = pop_comments(EEG.comments,'','Extracted ''square'' epochs [-1 2] 
 eeglab redraw 
 ```
 
-EEGLAB にコメントを受け付けていません。
+EEGLABに対応しています。
 とりあえず、翻訳済みデータセット
 
 ``` matlab

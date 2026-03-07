@@ -13,7 +13,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
 # 2021年 バーチャル EEGLAB ワークショップ パシフィック/アジア
 
-11月29日から12月3日まで、第31回EEGLABワークショップがバーチャル脳会議場でオンライン開催されます。 [ガザータウン](https://gather.town/) 初日は無料で、講演会や社会イベントを盛り上げます。 ワークショップでは、EEGLABを使用してデータを処理する方法について、スクリプトや複数のプラグインの使用などについて説明します。 並列セッションでは、特定のトピック、特にウェアラブルなEEG、ディープラーニング、EEG、コネクティビティ分析、およびEEGについて説明します。
+11月29日から12月3日まで、第31回EEGLABワークショップがバーチャル脳会議場でオンライン開催されます。 [Gather.town](https://gather.town/) 初日は無料で、講演会や社会イベントを盛り上げます。 ワークショップでは、EEGLABを使用してデータを処理する方法について、スクリプトや複数のプラグインの使用などについて説明します。 並列セッションでは、特定のトピック、特にウェアラブルなEEG、ディープラーニング、EEG、コネクティビティ分析、およびEEGについて説明します。
  
 [<b>11月29日(月)の1日(月・祝)の1日(月・祝)まで無料登録</b>](https://www.eventbrite.com/e/eeglab-workshop-day-1-free-tickets-182128179287).
 
@@ -25,7 +25,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
 第31回EEGLAB Workshop I 宮医科大学 医学部 科学部 科学部 科学部 教授
 
-以下は、2021年の仮想EEGLABワークショップ(提案/依頼歓迎)のための暫定プログラムです。 ワークショップはオンラインで開催され、社会的なネットワーキングが可能 [ガザータウン](https://gather.town/) 環境。 太平洋標準時刻(PST)に全時間表示していますが、関連するタイムゾーンをクリックすることができます。 アメリカとアジアのタイムゾーンのウェイク時間に対応できる時間を設けました。 「Night owl」の参加者も歓迎します。
+以下は、2021年の仮想EEGLABワークショップ(提案/依頼歓迎)のための暫定プログラムです。 ワークショップはオンラインで開催され、社会的なネットワーキングが可能 [Gather.town](https://gather.town/) 環境。 太平洋標準時刻(PST)に全時間表示していますが、関連するタイムゾーンをクリックすることができます。 アメリカとアジアのタイムゾーンのウェイク時間に対応できる時間を設けました。 「Night owl」の参加者も歓迎します。
 
 一部のプレゼンテーションは事前に記録されるかもしれませんが、発表者は質問のために提示されます。
 
@@ -135,7 +135,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:15pm</span> - 
-				<strong>モバイルブレイン/ボディイメージング(MoBI)</strong> (ジョン・イヴァーン) 
+				<strong>モバイルブレイン/ボディイメージング(MoBI)</strong> (John Iversen) 
 			</span>
 		</li>
 	</ul>
@@ -218,7 +218,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">07:00pm</span>– 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00～20:00</span> – 
-				<strong>時間頻度分解: インフォメーション</strong> (ジョン・イヴァーン) 
+				<strong>時間頻度分解: インフォメーション</strong> (John Iversen) 
 			</span>
 		</p>
 	</li>
@@ -263,7 +263,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span> - 
-				<strong>時間頻度練習</strong> EEGLAB(ジョン・イヴァーン) 
+				<strong>時間頻度練習</strong> EEGLAB(John Iversen) 
 			</span>
 		</li>
 	</ul>
@@ -336,7 +336,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11月16日</span> - 
-				<strong>小さなデバイス &amp; 時間同期</strong> (トリスタンステンナー) 
+				<strong>小さなデバイス &amp; 時間同期</strong> (Tristan Stenner) 
 			</span>
 		</li>
 	</ul>
@@ -347,7 +347,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11月16日</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:30～14:00</span> - 
-				<strong>LSLトラブルシューティングI</strong> (デヴィッド・メディン) 
+				<strong>LSLトラブルシューティングI</strong> (David Medine) 
 			</span>
 		</li>
 	</ul>
@@ -527,7 +527,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00～20:00</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span> – 
-				<strong>複数の比較修正とブートストラップの使用</strong> (Cyrilパーネット) 
+				<strong>複数の比較修正とブートストラップの使用</strong> (Cyril Pernet) 
 			</span>
 		</p>
 	</li>
@@ -574,7 +574,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span> - 
-				<strong>リニアモデリングを用いた統計</strong> (Cyrilパーネット) 
+				<strong>リニアモデリングを用いた統計</strong> (Cyril Pernet) 
 			</span>
 		</li>
 	</ul>

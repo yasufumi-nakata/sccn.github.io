@@ -87,7 +87,6 @@ ICA は ICA から ICA へ [アーティファクト](/tutorials/06_RejectArtifa
 
 
 ![](/assets/images/I102spectopo.jpg)
-ツイート
 
 
 
