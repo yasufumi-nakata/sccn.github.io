@@ -36,7 +36,7 @@ EEG ダイナミクスを学習する
 
 EPOCEANERP は、EPSカルプマップ を、
 選択したレイテンシーのスカルプマップを表示するには、 <span style="color: brown">プロット → ERP → スカルプマップ</span>を選択します。 サンプルを使ったシンプルな例として
-dataset は、デフォルトで設定されます。 [pop_timtopo.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) 下のウィンドウ、および
+dataset は、デフォルトで設定されます。 [pop_timtopo.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) 下のウィンドウ、および
 プレス *Ok*.
 
 
@@ -53,7 +53,7 @@ ERPデータ分散 または1つに分ける
 ![こちら](/assets/images/Erpplot1.png)
 
 
-ふりがな [pop_timtopo.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) 関数は相対的な時間のコースをプロットします
+参照: [pop_timtopo.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) 関数は相対的な時間のコースをプロットします
 各レイテンシーでのERP、スカルプポテンシャルの時系列コースをプロットします。
 各レイテンシーで1つのスカルプトポグラムを表示し、
 *all* レイテンシーでERPのスカルプマップへ。
@@ -71,7 +71,7 @@ EpochedデータセットのERPは、
 ![こちら](/assets/images/Pop_plottopo.png)
 
 
-以下を生成します。 [pop_timtopo.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) プロフィール
+以下を生成します。 [pop_timtopo.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) プロフィール
 
 
 ![こちら](/assets/images/Erpplot2.png)
@@ -117,7 +117,7 @@ EpochedデータセットのERPは、
 製品のERPデータプロット
 選択した一連のトライアルレイテンシーで潜在的な分布。
 選択する <span style="color: brown"> Plot → ERPMapシリーズ → 2Dで</span>。
-結果のトップテキストボックス [pop_topoplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m) ウィンドウ
+結果のトップテキストボックス [pop_topoplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m) ウィンドウ
 (below)、ERPsカルプマップのエポックレイテンシー。 
 
 この場合、またはその他の数値テキストエントリボックスに入力してください。
@@ -153,7 +153,7 @@ Dsカルプマップのシリーズをプロットに、
 
 ![](/assets/images/pop_headplot1.png)
 
-3Dプロット機能 [pop_headplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m)、作成します
+3Dプロット機能 [pop_headplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m)、作成します
 3D チャンネル パス プ ライン ファイル。 進行バー が サブ
 3Dspline ファイルの読み込み
 生成されると、次のプロットが表示されます。
@@ -173,7 +173,7 @@ Dsカルプマップのシリーズをプロットに、
 ![](/assets/images/pop_headplot_view.png)
 
 
-ふりがな [ヘッドプロットム](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m) ウィンドウ(下)が現れます。 可能です。
+参照: [ヘッドプロットム](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m) ウィンドウ(下)が現れます。 可能です。
 また、マウスを使用して個々の頭を回転させます。 これはしばしば
 説明された空間分布を示すために必要です。
 

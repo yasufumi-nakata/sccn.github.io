@@ -109,7 +109,7 @@ MATLABの STUDY* は、
 
 ### コンピューティング対策
 
-関数を使う [pop_precomp.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) (関数を呼び出す)
+関数を使う [pop_precomp.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) (関数を呼び出す)
 [std_precomp.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) チャネル対策を優先します。 例えば、
 次のコードは、コンピューティング用のグラフィックユーザーインターフェイスを呼び出します
 チャネルにおける対策
@@ -146,7 +146,7 @@ std_plotcurve(erptimes, erpdata, 'plotconditions', 'together', 'plotstderr', 'on
 上記のように、 [std_plotcurve.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_plotcurve.m) 関数は付加的な持っています
 標準的な間違いをプロットする変数はから利用できません
 EEGLABの出力 [std_erpplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m) また、追加で制御することもできます
-ネイティブパラメータ [std_erpplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m) そして、 [pop_erpparams.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpparams.m). 
+ネイティブパラメータ [std_erpplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m) そして、 [pop_erpparams.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpparams.m). 
 
 
 たとえば、追加通知
@@ -328,10 +328,10 @@ end
 
 ### コンポーネントの複雑な対策
 
-関数 [pop_precomp.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) また、測定を計算するために使用することができます
+関数 [pop_precomp.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) また、測定を計算するために使用することができます
 コンポーネントを扱う。 チャネルを扱うときとして、機能 [std_precomp.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) また、プレコンピューティングコンポーネント
 対策 構文は両方のケースで非常に似ています。
-インスタンス、関数 [pop_precomp.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) 次の方法で呼ばれる
+インスタンス、関数 [pop_precomp.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) 次の方法で呼ばれる
 コンポーネントのコンピューティング対策のためのグラフィックユーザーインターフェイスを起動します。
 
 ``` matlab
@@ -404,7 +404,7 @@ ICAコンポーネントのクラスタリング、通常は順調に計算し�
 
 ### コンポーネントクラスターの可視化
 
-コンポーネントクラスターを視覚化するための主な機能 [pop_clustedit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m) このインターフェイスをポップアップするには、単にタイプします。
+コンポーネントクラスターを視覚化するための主な機能 [pop_clustedit.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m) このインターフェイスをポップアップするには、単にタイプします。
 
 ``` matlab
 >> [STUDY] = pop_clustedit(STUDY, ALLEEG);

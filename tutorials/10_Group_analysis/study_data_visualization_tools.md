@@ -77,7 +77,7 @@ GUIトップパネルでチャンネル変換可能。
 
 ![](/assets/images/studyplot2.png)
 
-これで、プロットパラメータを見てみましょう。 中央の列で [pop_chanplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanplot.m) GUI 、Proasett の横にある *Params* ボタン ・・・ *Plot ERPs* ボタンの横に*Params* ボタンを閉じます。 次のページ
+これで、プロットパラメータを見てみましょう。 中央の列で [pop_chanplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanplot.m) GUI 、Proasett の横にある *Params* ボタン ・・・ *Plot ERPs* ボタンの横に*Params* ボタンを閉じます。 次のページ
 
 ![](/assets/images/studyplot3.png)
 
@@ -154,7 +154,7 @@ ERPは、以下のとおりです。
 
 - *ERPs*/ *ITCs*:イベント参加者の分光処理(ERSP)の構成を構成します。 ERSP/またはITC対策を計算する、時間/頻度を調節する。 関連する 関連する には [newtimef.m リリース](http://sccn.ucsd.edu/eeglab/locatefile.php?file=newtimef.m) テキストボックスのキーワードと引数。 
 
-- 呼び出し時にカスタム対策を計算することもできます。 [pop_precomp.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) ラインからの機能、で説明するように [グループ分析スクリプトチュートリアル](/tutorials/11_Scripting/command_line_study_functions.html).
+- 呼び出し時にカスタム対策を計算することもできます。 [pop_precomp.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) ラインからの機能、で説明するように [グループ分析スクリプトチュートリアル](/tutorials/11_Scripting/command_line_study_functions.html).
 
 選択する <span style="color: brown">研究 → プレコンピュート対策</span> メニュー すべての すべての すべての また、*ERSP* パラメータは、以下のとおりです。*nfreqs* は 30 です。*ntimesout* は 60 に、計算を高速化します。
 
@@ -172,7 +172,7 @@ Spectra は ERP を 翻訳する *Plot spectra* ボタンに隣接する *Params
 
 ![](/assets/images/studyplot30.png) 
 
-チャンネル*FP1* Plot spectra*まで。 [pop_chanplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanplot.m) を実行すると以下のプロットがポップアップします。
+チャンネル*FP1* Plot spectra*まで。 [pop_chanplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanplot.m) を実行すると以下のプロットがポップアップします。
 
 ![](/assets/images/studyplot31.png)
 

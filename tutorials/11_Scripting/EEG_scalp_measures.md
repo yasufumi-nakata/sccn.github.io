@@ -25,7 +25,7 @@ grand_parent: Tutorials
 この例では、低レベルの電力の一部を示しています
 現在利用可能な機能の範囲を超えて行くスクリプト
 グラフィカル 以下は、このスクリプトをチュートリアルのepochedデータセットで実行します。
-ふりがな [tftopo.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=tftopo.m) 関数は強力な機能です
+参照: [tftopo.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=tftopo.m) 関数は強力な機能です
 すべてのチャネルで時間の頻度分解をプロットできます。
 
 ``` matlab
@@ -72,7 +72,7 @@ tftopo(allersp,alltimes(:,:,1),allfreqs(:,:,1),'mode','ave','limits', …
 
 ### プロットの時間頻度分解
 
-ふりがな [特注品](http://sccn.ucsd.edu/eeglab/locatefile.php?file=metaplottopo.m) 関数は強力な機能です
+参照: [特注品](http://sccn.ucsd.edu/eeglab/locatefile.php?file=metaplottopo.m) 関数は強力な機能です
 すべてのチャネルおよびコンポーネントのあらゆる測定をプロットできます。 例えば、下のコードは時間頻度の分解をのためのプロットすることを可能にします
 すべてのデータチャネル。
 

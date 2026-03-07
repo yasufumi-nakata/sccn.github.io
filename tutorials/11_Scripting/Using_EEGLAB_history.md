@@ -319,7 +319,7 @@ EEG = pop_loadset( 'eeglab_data.set', '/matlab/eeglab/sample_data');
 最初のコマンド ([eeglab.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m)) EEGLABは、初期化
 EEGLAB 変数を出力する。 対象外
 変数を継承する、EEGLAB関数() は、 [eeglab.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m) 呼び出しは他の何も変更しません
-MATLABワークスペース(EEGLABグローバル変数)[pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m)) データセットを
+MATLABワークスペース(EEGLABグローバル変数)[pop_loadset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m)) データセットを
 *EEG* および[eeg_store.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m)) ストア
 *ALLEEG*ファイルデータセット 
 
@@ -364,7 +364,7 @@ CURRENTSET = 2;
 dataset 2 は、最後のコマンド (above) は、
 EEGLAB ウィンドウが開きます。
 コマンド: *\>\> eeglab 再配置
-*ALLEEG*は、 [pop_newset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m) このコマンドは、広範な機能を実行します。
+*ALLEEG*は、 [pop_newset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m) このコマンドは、広範な機能を実行します。
 データセットの一貫性は、より有用な高度なオプションを持っています。
 蓄積された変更タイプで現在のデータセットを変更します。
 
@@ -384,7 +384,7 @@ EEGLABは、
 注意: *EEG* 現在データセットのみが配布されます。
 このサイトについて
 処理したいデータセットが含まれています。
-上記関数は関数を呼び出します [eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m)
+上記関数は関数を呼び出します [eeg_checkset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m)
 変更されたデータセットの内部の一貫性を確認してください。
 
 ``` matlab
@@ -538,7 +538,7 @@ EEG = eeg_retrieve(ALLEEG, 1); CURRENTSET = 1;
 関数と関数の高速化
 -------
 
-ErPのスカルプマップを0msから500msまで作成可能 [pop_topoplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m) EEGLABの歴史 EEGLAB では、このコマンドをロードする、 このサイトについて [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_history.m).
+ErPのスカルプマップを0msから500msまで作成可能 [pop_topoplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m) EEGLABの歴史 EEGLAB では、このコマンドをロードする、 このサイトについて [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_history.m).
 
 ``` matlab
 %% Plot ERP maps 
@@ -550,7 +550,7 @@ pop_topoplot(EEG,1, [0:100:500] , 'ERP scalp topographies',[2:3] ,0, 'electrodes
 ![](/assets/images/topoplot_history2.png)
 
 EEGLAB では、EEGLAB のライセンスを発行しています。
-イラストの目的で弊社から書いていただきました。 上記のコマンド [pop_topoplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m) 信号処理機能を直接呼び出して実行できます。 [topoplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m)
+イラストの目的で弊社から書いていただきました。 上記のコマンド [pop_topoplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m) 信号処理機能を直接呼び出して実行できます。 [topoplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m)
 以下に示すように:
 
 ``` matlab

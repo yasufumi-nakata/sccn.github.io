@@ -103,7 +103,7 @@ EEGLABの強み
 
 ### supergui関数
 
-ふりがな [恋物癖](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) 手動で作成する負担を軽減するように設計されました
+参照: [恋物癖](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) 手動で作成する負担を軽減するように設計されました
 各機能のグラフィックインターフェイス。 代わりに、一連の制御が
 近似の場所と図が自動的に作成されます。
 以下の例を示します。
@@ -181,7 +181,7 @@ UI の制御は、
 しかし、 [恋物癖](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) GUI は、 GUI は、
 イベントの制御フローは、UIによって処理する。つまり、
 ボタン *Ok*、ボタン *Cancel* およびイベントの処理
-これらのボタンはユーザーに残されます。 ふりがな [入力gui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=inputgui.m) 関数(その
+これらのボタンはユーザーに残されます。 参照: [入力gui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=inputgui.m) 関数(その
 呼び出し [恋物癖](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) 機能) 自動的にこれを補うのを助けて下さい
 出力を処理することで、これらのボタンやボタンを作成できます。 例えば:
 
@@ -275,7 +275,7 @@ UI の制御は、
 ```
 
 このページではjavascriptを使用しています。
-幾何学が定義されたのか。 ふりがな [恋物癖](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) 関数は、ウィンドウの幅と高さを自動的に変化させます。
+幾何学が定義されたのか。 参照: [恋物癖](http://sccn.ucsd.edu/eeglab/locatefile.php?file=supergui.m) 関数は、ウィンドウの幅と高さを自動的に変化させます。
 キーワード *Help* ボタンを押してください。
 "pophelp(*pop_newtimef*);" の定義 [入力gui.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=inputgui.m) command-line ディレクティブ
 *Ok*と、*structout*の構造の分野

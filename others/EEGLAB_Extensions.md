@@ -151,7 +151,7 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
 
 -   **[バイセッド](https://github.com/BUCANL/Vised-Marks):** EEGLABのVised Marks拡張機能は、ネイティブ*eegplot*データスクロール図に編集機能を追加します。 具体的には、イベントマーカーの追加/編集、チャネル/コンポーネントのフラグ付け、時間期間のフラグ付け、マーク構造のプロパティを表示することができます。
 
--   **[get_chanlocs ディレクティブ](https://github.com/sccn/get_chanlocs/wiki):** get_chanlocs EEGLAB プラグインは、3D のスキャンされたヘッドイメージから 3D の電極の位置を見つけます。 これらの画像をオフシェルフ機器で入手する方法に関するチュートリアルが含まれています。
+-   **[get_chanlocs 関数](https://github.com/sccn/get_chanlocs/wiki):** get_chanlocs EEGLAB プラグインは、3D のスキャンされたヘッドイメージから 3D の電極の位置を見つけます。 これらの画像をオフシェルフ機器で入手する方法に関するチュートリアルが含まれています。
 
 ### EEG/fMRIアーティファクト除去
 

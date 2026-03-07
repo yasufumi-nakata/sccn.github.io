@@ -27,7 +27,7 @@ git clone --recurse-submodules https://github.com/arnodelorme/eegstats.git
 
 ## グラフィックインターフェイス
 
-プラグインはコマンドラインやGUIから使うことができます。 EEGLABプラグインマネージャ(EEGLABメニュー項目**ファイル>EEGLAB拡張子の管理**)を使用してプラグインをインストールした後、eeglabの「sample_data.set」フォルダ(または単にMATLABコマンドラインで「eeglabコント」)からチュートリアルデータセットをロードできます。 次に、EEGLABメニュー項目**ツール > EEG freq/power 統計** を使用し、次の UI がポップアップ表示されます。 このUIでは、興味、電極、およびその他のスペクトルパラメータの周波数範囲を選択できます。 また、選択した電極間の個々のアルファ周波数またはアルファアシンセトリーを計算するために選択することもできます。 詳細はこちら [pop_eegstats.m ディレクティブ](https://github.com/arnodelorme/eegstats/blob/master/pop_eegstats.m) より多くの情報のためのヘッダー。
+プラグインはコマンドラインやGUIから使うことができます。 EEGLABプラグインマネージャ(EEGLABメニュー項目**ファイル>EEGLAB拡張子の管理**)を使用してプラグインをインストールした後、eeglabの「sample_data.set」フォルダ(または単にMATLABコマンドラインで「eeglabコント」)からチュートリアルデータセットをロードできます。 次に、EEGLABメニュー項目**ツール > EEG freq/power 統計** を使用し、次の UI がポップアップ表示されます。 このUIでは、興味、電極、およびその他のスペクトルパラメータの周波数範囲を選択できます。 また、選択した電極間の個々のアルファ周波数またはアルファアシンセトリーを計算するために選択することもできます。 詳細はこちら [pop_eegstats.m 関数](https://github.com/arnodelorme/eegstats/blob/master/pop_eegstats.m) より多くの情報のためのヘッダー。
 
 ![](eegstats_gui.png)
 

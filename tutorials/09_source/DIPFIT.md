@@ -113,7 +113,7 @@ EEGLABのデータセットでICAコンポーネントにダイポールをフ�
 3. 独立したコンポーネント分析を実行します。 <span style="color: brown">ICA は、</span> メニュー項目。
 4. ヘッドモデルを選択します。 <span style="color: brown">ツール → DIPFIT → ヘッドモデルと設定</span> メニュー項目を使用します。
 
-これらの手順の詳細については、チュートリアルの対応セクションを参照してください。 ダイポールフィッティングを説明するには、チュートリアルデータセットを使用します。 [eeglab_dipole.set ディレクティブ](https://sccn.ucsd.edu/eeglab/download/eeglab_dipole.set)を参照してください。
+これらの手順の詳細については、チュートリアルの対応セクションを参照してください。 ダイポールフィッティングを説明するには、チュートリアルデータセットを使用します。 [eeglab_dipole.set 関数](https://sccn.ucsd.edu/eeglab/download/eeglab_dipole.set)を参照してください。
 
 メニュー項目を選択 <span style="color: brown">ファイル → 既存のデータセットを読み込む</span> "eeglab_dipoles.set" のチュートリアルでは、
 
@@ -317,7 +317,7 @@ DIPFITリザーブ
 --------
 DIPFITは、ICAコンポーネントのeLoretaソリューションも提供しています。eLoretaは分散ソースローカリゼーション手法です。
 
-すでに行っていない場合は、 [eeglab_dipole.set ディレクティブ](https://sccn.ucsd.edu/eeglab/download/eeglab_dipole.set) EEGLABのチュートリアル <span style="color: brown">ファイル → 既存のデータセットを読み込む</span> "eeglab_dipoles.set" のチュートリアルでは、
+すでに行っていない場合は、 [eeglab_dipole.set 関数](https://sccn.ucsd.edu/eeglab/download/eeglab_dipole.set) EEGLABのチュートリアル <span style="color: brown">ファイル → 既存のデータセットを読み込む</span> "eeglab_dipoles.set" のチュートリアルでは、
 
 ソースローカリゼーションを実行するには、<span style="color: brown">ツール → DIPFIT → eLoreta</span> メニュー項目を選択します。コンポーネント番号を入力し、*Ok*を押します。
 
@@ -360,7 +360,7 @@ DIPFITの結果は、*EEG.dipfit*サブ構造体に格納されます。この�
 > | EEG.dipfit.current | 現行コンポーネントの構成要素
 
 DIPFIT関連の主な関数:
-- [pop_dipfit_settings.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_settings.m): DIPFIT パラメータ, アンカーヘッドモデル                                                                                                                          
+- [pop_dipfit_settings.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_dipfit_settings.m): DIPFIT パラメータ, アンカーヘッドモデル                                                                                                                          
 - [pop_multifit.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_multifit.m): 複数のコンポーネントに対する自動ダイポールフィッティング。
 
 機能の構成:

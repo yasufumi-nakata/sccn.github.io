@@ -76,7 +76,7 @@ EEGLABの動作オプションは、
 1. 独立したコンポーネント分析を実行します。 <span style="color: brown">ICA は、</span> メニュー項目。
 1. ラベルコンポーネントを使用して <span style="color: brown">ツール → IClabel → コンポーネントのラベルを構成する</span> メニュー項目。
 1. コンポーネントの分類 <span style="color: brown">ツール → IClabel → コンポーネントを識別する</span> メニュー項目。
-1. コンポーネントの同等のダイポールを割り当てる <span style="color: brown">DIPFIT ダイキャストの検索 → ヘッドモデルと設定</span> メニュー項目およびそれから <span style="color: brown">ツール → DIPFIT イヤホンの検索 → オートフィット</span> メニュー項目。
+1. コンポーネントの同等のダイポールを割り当てる <span style="color: brown">DIPFIT ダイポールの検索 → ヘッドモデルと設定</span> メニュー項目およびそれから <span style="color: brown">ツール → DIPFIT イヤホンの検索 → オートフィット</span> メニュー項目。
 1. データを する する する <span style="color: brown">ツール → 抽出エポック</span> メニュー項目。
 
 ### データセットをフィルタリング
@@ -107,22 +107,22 @@ ICAの実行
 ![](/assets/images/pop_runica_multiple.png)
 
 デフォルトでは、 
-[pop_runica.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m)
+[pop_runica.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m)
  同じデータセットを連結します。
 テーマとセッション。 たとえば、複数のデータセットがイベントの異なるクラスにタイムロックされ、複数の実験を構成できます。
 被写体ごとの条件、同じセッションで収集されるすべてのもの
 電極モンタージュ。 
 デフォルトでは(チェックボックスを最低限にしておく)、 
-[pop_runica.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m)  ICAの解任者。
+[pop_runica.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m)  ICAの解任者。
 これらのデータセットからのデータ試用を連結し、その後、添付します
 それぞれのデータセットは、
 連結用に選択したデータセットに関する情報は、
-マトラボ 参加方法 [pop_runica.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m) を参照してください。
+マトラボ 参加方法 [pop_runica.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m) を参照してください。
 連結データセット、データセットのエポックの長さは
 等しいと仮定される。
 
 ご希望の場合(笑) 
-[pop_runica.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m) 前にすべてのデータセットをロードして連結する
+[pop_runica.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m) 前にすべてのデータセットをロードして連結する
 ICAの運営について
 (そして不当に)非常に同じ脳および非脳を仮定します
 ソースと非常に同じ

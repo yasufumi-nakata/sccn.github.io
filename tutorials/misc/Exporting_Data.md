@@ -137,9 +137,9 @@ Open, Open, Open, Open Calc、Microsoft では、
 
 ![](/assets/images/Spreadsheet_event.png)
 
-エクスポートオプションをもっとコントロールしたい場合は、コマンドラインバージョンのコマンド・ライン・バージョンを使用する必要があります。 [pop_expevents.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_expevents.m) 機能。 代替手段 
-機能, [eeg_eventtable.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_eventtable.m)、でき事を輸出するための付加的な選択があります。
+エクスポートオプションをもっとコントロールしたい場合は、コマンドラインバージョンのコマンド・ライン・バージョンを使用する必要があります。 [pop_expevents.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_expevents.m) 機能。 代替手段 
+機能, [eeg_eventtable.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_eventtable.m)、でき事を輸出するための付加的な選択があります。
 
 STUDY 結果のエクスポート
 ---
-ふりがな [スクリプトチュートリアルセクション](/tutorials/11_Scripting/command_line_study_functions.html#saving-results-for-processing-in-other-software-packages) SPSS、統計学、Sta、R、SAS、Excel で で で で で で で で で で で で で で で で で で で で で で で で で で 。 。 で 。 。 。 。 。 。 。 で 。 。 。 。 。 。 で で で 。 。 。 。 。 。 。 。
+参照: [スクリプトチュートリアルセクション](/tutorials/11_Scripting/command_line_study_functions.html#saving-results-for-processing-in-other-software-packages) SPSS、統計学、Sta、R、SAS、Excel で で で で で で で で で で で で で で で で で で で で で で で で で で 。 。 で 。 。 。 。 。 。 。 で 。 。 。 。 。 。 で で で 。 。 。 。 。 。 。 。

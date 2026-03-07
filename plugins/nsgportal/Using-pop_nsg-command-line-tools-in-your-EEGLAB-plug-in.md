@@ -18,7 +18,7 @@ long_title: Using-pop_nsg-command-line-tools-in-your-EEGLAB-plug-in
   
 このチュートリアルで実装されているプラグイン(*pop_icansg*)は、*nsgportal*プラグインファイルで配布され、*nsgportal/demos/demo_plugin/icansg/*で見つけることができます。 プラグインをインストールするには、プラグイン(*icansg*)を含むフォルダを*./eeglab/plugins*に移動し、EEGLABを再起動します。
 
-プラグインフォルダには2つのファイルがあります。 [eegplugin_icansg.m ディレクティブ](https://github.com/sccn/nsgportal/blob/master/demos/demo_plugin/icansg/eegplugin_icansg.m) そして、 [pop_icansg.m](https://github.com/sccn/nsgportal/blob/master/demos/demo_plugin/icansg/pop_icansg.m).
+プラグインフォルダには2つのファイルがあります。 [eegplugin_icansg.m 関数](https://github.com/sccn/nsgportal/blob/master/demos/demo_plugin/icansg/eegplugin_icansg.m) そして、 [pop_icansg.m](https://github.com/sccn/nsgportal/blob/master/demos/demo_plugin/icansg/pop_icansg.m).
  最初の関数は、EEGLABメニューからプラグインを起動し、現在のEEGデータセット構造(現在EEGLABに読み込まれたデータセット)を*pop_icansg.m*に入力することができます。 この関数で使用される構文の説明は、 [この EEGLAB wiki セクション](https://sccn.ucsd.edu/wiki/A07:_Contributing_to_EEGLAB#How_to_write_an_EEGLAB_extension)  
  
 2番目の関数はこのチュートリアルの焦点になります。 プラグインの目的は、それぞれインフォマックスまたはJADE ICAの分解を実行する2つの実装された分解アプローチを使用して、NSGを介してICA分解を実行することです。 *eegplugin_icansg*関数で指定されたEEGLAB GUIメニュー項目を手動で選択することにより、EEGLABメニューから呼び出されると(下の図を参照)、プラグインはEEGLABに読み込まれた現在のEEGデータセット構造を使用し、ICAメソッドを使用するオプションのエントリウィンドウが表示されます。 下の図は、選択した*eegplugin_icansg*メニュー項目と、*pop_icansg*ウィンドウがポップアップして表示されます。 

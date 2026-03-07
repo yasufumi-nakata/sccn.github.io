@@ -18,7 +18,7 @@ ASRはもともと[Christian]によって開発されました
 [詳しくはこちら](https://www.youtube.com/watch?v=qYC_3SUxE-M) 春の春に
 2013年、クリスチャンにオフライン版を作るよう依頼しました。 応答で、彼は
 ASRのカスタムバージョンをオフラインで使用しました。 私はそれを包みました
-[clean_rawdata() ディレクティブ](https://sccn.ucsd.edu/mediawiki/index.php?title=Plugin_list_all&action=submit)
+[clean_rawdata() 関数](https://sccn.ucsd.edu/mediawiki/index.php?title=Plugin_list_all&action=submit)
 EEGLABプラグイン 以下は「宮越ら」のサプリメントから引用されています。
 (2020)](https://academic.oup.com/cercorcomms/article/1/1/tgaa046/5881803?login=true).
 
@@ -83,7 +83,7 @@ clean_rawdata1.10の特長（配布ファイルは現在未公開）
 参考文献
 ------------
 
--   [Plechawska-Wojcik M, Kaczorowska M, Zapala D. (2019)]. 工芸品
+-   [Plechawska-Wojcik M, Kaczorowska M, Zapala D. (2019)]. アーティファクト
     EEG信号補正用のサブスペース再構築(ASR)。 ツイート
     情報システムアーキテクチャの比較研究と
     技術。 第39回国際会議の進行について
@@ -167,7 +167,7 @@ clean_rawdata1.10の特長（配布ファイルは現在未公開）
     インターフェイス開発。 Jニューラルエン
     10:056014.](https://pubmed.ncbi.nlm.nih.gov/23985960/) "*bad"
     「シグナル処理アルゴリズム-アーティファクト」に基づくサブスペース除去*
-    拒絶反応」
+    除去」
 
 ### ASRは信号とノイズを完全に削除しますか? (2020年01月07日)
 
@@ -290,7 +290,7 @@ getFreePhysicalMemorySize() は、プライベートフォルダの下にあり�
 RAMの量は、瞬時に文字通り計算されます。
 この関数が呼び出されるたびに、異なる値を返します。
 異なるチャンク以来、最終データの長さを変動させる原因
-異なる ASR 結果、異なる最終的なウィンドウの拒絶反応の結果
+異なる ASR 結果、異なる最終的なウィンドウの除去の結果
 結果。 ここでは、修正するかどうかを決定するために下記の簡単なテストを作った
 利用可能なRAMの量は、出力データの長さを修正します。
 

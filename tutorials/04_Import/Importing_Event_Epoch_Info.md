@@ -316,11 +316,11 @@ EEGデータセットで試用してみる
 
 現在のセクションでは、イベントの処理に精通するのに役立つはずです
 EEGLABでのイベント処理方法を説明します。
-データを削除する関数()[pop_eegplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_eegplot.m), 
+データを削除する関数()[pop_eegplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_eegplot.m), 
 [選択する](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_select.m)) また、中に発生するイベントも削除します
 削除されたデータ(その対応するイベントではない)。
 連続データを処理する機能([pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m),
-[pop_resample.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_resample.m), [pop_mergeset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_mergeset.m)) 取ります
+[pop_resample.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_resample.m), [pop_mergeset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_mergeset.m)) 取ります
 'boundary' イベント (EEGLAB が追加データイベント)
 削除されたデータの部分または「ハード」境界
 統合データセット. イベント *type* フィールドは,データエポックを解析する,ERP-imageのプロットイベントを. [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) 機能。 最後に、グループレベルの解析にイベント情報を広く利用しています。
@@ -405,7 +405,7 @@ EEGイベントのレポート
 それぞれの編集ウィンドウに新しい値を入力するだけで変更
 フィールド。 イベントも削除できます(*イベント削除*ボタン)。
 
-ふりがな [EEGLABのプラグイン](https://github.com/jadesjardins/vised_marks)
+参照: [EEGLABのプラグイン](https://github.com/jadesjardins/vised_marks)
 EEGLAB プラグイン
 EEGブラウザで直接イベントを開催する
 例えば(例えば)

@@ -29,7 +29,7 @@ EEGLAB関数と構造解析
 EEGLABの特徴は3つあります。
 
 1.  EEGLAB の機能について
-    [eeglab.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m), [eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m), [eeg_store.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m), [pop_newset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m), [std_checkset.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_checkset.m), [eeg_checkchanlocs.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkchanlocs.m), [eeglab_error.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_error.m), [eeg_retrieve.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_retrieve.m)など...
+    [eeglab.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m), [eeg_checkset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m), [eeg_store.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m), [pop_newset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m), [std_checkset.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_checkset.m), [eeg_checkchanlocs.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkchanlocs.m), [eeglab_error.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_error.m), [eeg_retrieve.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_retrieve.m)など...
 
 
 2.  Pop_functions: MATLAB は、MATLAB の機能を実装しています。
@@ -39,7 +39,7 @@ EEGLABの特徴は3つあります。
     EEGLABのツールボックス処理機能の1つ以上。 ふりがな
     MATLAB や
     MATLAB について
-    [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m), [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m), [pop_topoplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m)など...
+    [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m), [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m), [pop_topoplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m)など...
 
 3.  信号処理機能: MATLAB,
     MATLAB より直接 EEGLAB の処理機能または
@@ -78,12 +78,12 @@ EEG構造を命名し、POP_functionを命名する
 EEG = pop_loadset;
 ```
 
-な な を [pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m) を参照してください。 コマンドは、
+な な を [pop_loadset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m) を参照してください。 コマンドは、
 EEGLABメニュー <span style="color: brown">ファイル → データの読み込み</span>. 
 
 ![こちら](/assets/images/Pop_loadset2.png)
 
-一方、ユーザーは2つの文字列引数を引数に渡します。 [pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m) 関数、ファイル名を含む最初のファイル
+一方、ユーザーは2つの文字列引数を引数に渡します。 [pop_loadset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m) 関数、ファイル名を含む最初のファイル
 ファイルパスの2つ目は、インタラクティブなウィンドウが表示されず、データセット
 直接読み込まれます。
 
@@ -105,7 +105,7 @@ EEG = pop_eegfilt(EEG);
 EEG = pop_eegfilt( EEG, 1, 0);
 ```
 
-このコマンドは1Hzで実行されます。 この関数は、 [pop_eegfilt.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_eegfilt.m) を参照してください。
+このコマンドは1Hzで実行されます。 この関数は、 [pop_eegfilt.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_eegfilt.m) を参照してください。
 EEGLAB 関数が動作する
 EEG履歴
 必要に応じて関数入力。 機能助けメッセージは利用できます

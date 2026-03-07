@@ -16,7 +16,7 @@ nav_order: 1
 EEGLAB ZIPファイルアーカイブをダウンロード
 ------------
 ZIP形式のEEGLABのダウンロードは、[EEGLABダウンロードページ](https://sccn.ucsd.edu/eeglab/download.php)でご利用いただけます。 これには、
-最新のリリースと旧バージョン。 ふりがな [EEGLABリビジョン履歴ページ](/others/EEGLAB_revision_history.html) EEGLABのバージョンの変更について説明しています。
+最新のリリースと旧バージョン。 参照: [EEGLABリビジョン履歴ページ](/others/EEGLAB_revision_history.html) EEGLABのバージョンの変更について説明しています。
 
 zipファイルをダウンロードしないでください [EEGLAB GitHubリポジトリ](https://github.com/sccn/eeglab.git) EEGLABコードベースに含まれていない重要なEEGLABプラグインが欠落しているため。 EEGLABの開発バージョンを使用する場合は、以下の説明としてサブモジュールをクローンし、含めます。
 

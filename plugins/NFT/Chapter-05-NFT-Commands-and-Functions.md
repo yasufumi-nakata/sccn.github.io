@@ -39,7 +39,7 @@ BEM のマトリックスの生成機能のほとんどは開始できます
 GUIインターフェイスから、各操作も実行できます。
 matlabの機能。 MRイメージをロードした後、次の関数が
 それぞれ:
-[segm_aniso_filtering() ディレクティブ](NFT-Appendix-B.html#segm_aniso_filtering "wikilink"),
+[segm_aniso_filtering() 関数](NFT-Appendix-B.html#segm_aniso_filtering "wikilink"),
 [segm_scalp() は](NFT-Appendix-B.html#segm_scalp "wikilink"),
 [segm_brain() は、](NFT-Appendix-B.html#segm_brain "wikilink"),
 [segm_outer_skull() は、](NFT-Appendix-B.html#segm_outer_skull "wikilink"),
@@ -156,7 +156,7 @@ BEM のマトリックスを発生させる機能。 個々のマトリックス
 必要に応じて設定変数。
 
 ふりがな
-[utilbem_compute_cond() ディレクティブ](NFT-Appendix-B.html#utilbem_compute_cond "wikilink")
+[utilbem_compute_cond() 関数](NFT-Appendix-B.html#utilbem_compute_cond "wikilink")
 そして、
 [utilbem_compute_indices()](NFT-Appendix-B.html#utilbem_compute_indices "wikilink")
 メッシュの導電率とインデックス情報を算出します。

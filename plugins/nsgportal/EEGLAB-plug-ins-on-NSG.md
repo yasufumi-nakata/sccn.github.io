@@ -12,7 +12,7 @@ NSGのEEGLABインストールは、EEGLABプラグインのほとんどへの�
 
 | プラグイン名 | プラグインの説明 | NSGの最適化 |
 | ---------        | -----------                                   | --------------  
-| [アメリカ](https://sccn.ucsd.edu/wiki/AMICA#How_to_run_AMICA.3F_Option_2:_Neuroscience_Gateway_.28NSG.29)            | エイミカ ICA のアルゴリズムプラグイン| 有り|
+| [AMICA](https://sccn.ucsd.edu/wiki/AMICA#How_to_run_AMICA.3F_Option_2:_Neuroscience_Gateway_.28NSG.29)            | AMICA ICA のアルゴリズムプラグイン| 有り|
 | ディップフィット | ICAコンポーネントのソースローカライズ | ナンバー|
 | filrfilt | フィルタリングデータのルーチン | ノー|
 

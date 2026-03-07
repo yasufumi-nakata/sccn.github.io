@@ -10,7 +10,7 @@ EEGLABとPython
 ===================
 
 EEGLAB は Python でネイティブで動作しません。EEGLAB が実行されているからです。
-MATLAB(および、オープンソースオクターブでかなりの程度まで)
+MATLAB(および、オープンソースOctaveでかなりの程度まで)
 プラットフォーム) それにもかかわらず、 Python とリンクできるので、
 詳しくはこちら
 
@@ -77,7 +77,7 @@ Pythonで構築されたのは面白い(と無料)使い方の代替です
     Microsoft または Adobe ライセンスは、無料の代替品、さらには
     もしそれが存在すれば、私たちのニーズを満たしません。 コンパイルされたバージョンの
     EEGLAB では、MATLAB および EEGLAB コードを購入するユーザーを必要としません。
-    また、オクターブで動作します。
+    また、Octaveで動作します。
 - **Jupyterのノート。** Matlabの相互インターフェイスへの最も近い代わりはあります
 ブラウザまたはVisual Studioコードで実行するJuppyter Notebook環境。 しかし、
 Jupyterのノートブックのグラフィカルな機能が限られる(それはあります
@@ -98,7 +98,7 @@ PythonからEEGLAB関数を呼び出す方法
 
 Python から EEGLAB 関数を呼び出すか、または必要であれば、最善
 ソリューションは、Python パッケージ Oct2py (pip install Oct2py) を使用することです。
-インストールする必要があります オクターブも。 見る [このページ](/others/Running_EEGLAB_on_Octave.html) より詳細な情報
+インストールする必要があります Octaveも。 見る [このページ](/others/Running_EEGLAB_on_Octave.html) より詳細な情報
 Octave で EEGLAB を実行します。 この Python ライブラリの仕組みは、
 コンバーター Python のデータ構造を MATLAB/Octave のデータ構造に
 逆に。 私達の研究に基づいて、それは最も簡単で、最も安定した方法です

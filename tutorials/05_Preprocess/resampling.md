@@ -24,7 +24,7 @@ EEGLABの「sample_data」フォルダにあるツールボックスです。
 
 最も一般的な用途 <span style="color: brown">ツール → サンプリングの変更
 レート</span> メモリとディスクを保存するためのサンプリング速度を減らすことです
-ストレージ。 ツイート [pop_resample.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_resample.m) ウィンドウがポップアップし、新しいことを尋ねます
+ストレージ。 ツイート [pop_resample.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_resample.m) ウィンドウがポップアップし、新しいことを尋ねます
 サンプリング。 関数は MATLAB *resample.m* (信号の) です。
 処理ツールボックス---このツールボックスを持っていない場合、それは使用します
 MATLABの機能*griddata*

@@ -152,7 +152,7 @@ AllEEG と入力 *\>\> allEEG(2)* は 2 です。
 データセット。 詳細はこちら [EEGLABの歴史](/tutorials/11_Scripting/Using_EEGLAB_history.html) もっとチュートリアルのセクション
 これらの構造を操作するための情報。
 *EEG*構造のフィールド、値が点在しています。
-[eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m))。しかし、*EEG*の項目
+[eeg_checkset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m))。しかし、*EEG*の項目
 構造はサブ構造を含んでいます。 簡潔に3つを記述します
 ※EEG.chanlocs*、*EEG.event*、*EEG.epoch*
 
@@ -448,7 +448,7 @@ ans =
 と5(第2のデータエポック内)は同じ元の
 イベント
 
-EEGLAB は、 [eeg_time2prev.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_time2prev.m), [eeg_urlatency.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_urlatency.m) そして、
+EEGLAB は、 [eeg_time2prev.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_time2prev.m), [eeg_urlatency.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_urlatency.m) そして、
 [eeg_context.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) を参照してください。
 *EEG.urevent*構造の詳細については、上記のチュートリアルセクションを参照してください。
 
@@ -488,7 +488,7 @@ EEGLAB は、現在制作するイベントです。
 コマンドラインからのイベントは便利です。
 
 *EEG.ures* は、
-以下に示すように、元の連続データから実験的なイベント。 ファンクション [eeg_context.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) *urevents* ディレクティブ
+以下に示すように、元の連続データから実験的なイベント。 ファンクション [eeg_context.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) *urevents* ディレクティブ
 近隣イベントのコンテキストで定義されたイベントを見つけるための情報
 実験(元のデータ)
 
@@ -506,13 +506,13 @@ type 'boundary' が、 'duration' 値、 *NaN* (MATLAB 数値)
 'not-a-number' は、 'not-a-number') を持ちます。
 *EEG.urevent*の「ハード」境界イベントは、*EEG.event*の「boundary」タイプで、
 'NaN' と *EEG.event.urevent* ポインタの 'duration' の 使い方
-尿道。 ハードドライブの「境界」イベントは、などの機能のために重要です [eeg_context.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) 一時的な関係に関係する
+尿道。 ハードドライブの「境界」イベントは、などの機能のために重要です [eeg_context.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) 一時的な関係に関係する
 実験中のイベント(例:ウレベント)
 
 ### EEG.epochの特長
 
 *EEG.epoch* 構造は、Everデータセットで、
-エポックエキス 機能 * EEG.event* 構造から計算される [eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m) (付き)
+エポックエキス 機能 * EEG.event* 構造から計算される [eeg_checkset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m) (付き)
 'eventconsistency' を、使用して、
 EEGLAB のドキュメントを参照してください。
 *EEG.epoch*の構造の詳細は [eeg_context.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) にあります。 エントリーは必須項目です。
@@ -618,7 +618,7 @@ floatwrite(data(:,:)', 'myfile.fdt');
 save -mat myfile.set EEG
 ```
 
-機能によって実行される追加のチェックがあります [pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m)EEGLAB のデータセット おすすめ
+機能によって実行される追加のチェックがあります [pop_loadset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m)EEGLAB のデータセット おすすめ
 
 ```matlab
 EEG = pop_loadset('myfile.set')
@@ -953,7 +953,7 @@ STUDY.cluster* は、
 ```
 
 この情報(クラスタリング結果を含む)は、すべてアクセスすることができます。
-MATLABの特徴 [pop_clustedit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.phpfile=pop_clustedit.m).
+MATLABの特徴 [pop_clustedit.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.phpfile=pop_clustedit.m).
 
 EEGLAB 14 は、顧客のニーズにお応えします。
 クラスター(ERP、スペクトラム、時間頻度など)
@@ -971,7 +971,7 @@ EEGLAB 2019以降では、より早く、より早く、より早くなります
 各クラスターの*cluster.name*サブフィールドは、
 クラスター番号(例:クラスター配列のインデックス)
 'cls 2','cls 3' など.
-(例: より有利な) [pop_clustedit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m) インターフェイス。
+(例: より有利な) [pop_clustedit.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m) インターフェイス。
 
 
 *cluster.comps* と *cluster.sets* は、 コンポーネントを 適切に管理します。
@@ -996,7 +996,7 @@ matrices(例えば、コンポーネントERP、ERSP、および/またはITCを
 コンポーネントをクラスターするために使用される各測定(例、平均またはセンチロイド)
 各クラスターコンポーネント ERSP、ERP、ITC、パワースペクトラなど
 *STUDY*条件)、クラスタリングの採用
-相互クラスターの視覚化および編集機能のプロットのために利用できる、 [pop_clustedit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m).
+相互クラスターの視覚化および編集機能のプロットのために利用できる、 [pop_clustedit.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m).
 
 *cluster.algorithm*サブフィールドは、クラスタリングをしています。
 (例:*kmeans*)

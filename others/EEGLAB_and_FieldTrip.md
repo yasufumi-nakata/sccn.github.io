@@ -186,7 +186,7 @@ EEGLAB で内部で使用して EEGLAB データセットを FieldTrip に変換
 DIPFIT/FieldTripを使用した高度なソースローカリゼーションを実行
 ---------------------------------------------------------------
 
-ふりがな [ソース ローカリゼーションセクション](/tutorials/09_source/EEG_sources)
+参照: [ソース ローカリゼーションセクション](/tutorials/09_source/EEG_sources)
 チュートリアルでは、FieldTrip関数を使用して、EEGアクティビティとICAコンポーネントをローカライズする方法について説明します。
 
 FieldTrip スクリプトを EEGLAB プラグイン メニュー項目にラップする

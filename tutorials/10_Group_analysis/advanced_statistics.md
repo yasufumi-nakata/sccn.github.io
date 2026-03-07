@@ -12,7 +12,7 @@ has_toc: true
 ============================================
 
 統計解析 Arnaud Delormeと共同で Cyril Pernet は、EyGLAB のプラグインです。 
-ふりがな [LIMOツールボックス](https://limo-eeg-toolbox.github.io/limo_meeg/) 仲裁大きめの一般的なリニアモデリングアプローチを使用することを可能にします 
+参照: [LIMOツールボックス](https://limo-eeg-toolbox.github.io/limo_meeg/) 仲裁大きめの一般的なリニアモデリングアプローチを使用することを可能にします 
 外部リンク EEGLAB は、EEGLAB の変数を より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より 
 LIMOの旧バージョンについて [詳しくはこちら](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) を参照してください。 あなたも参照することができます
 [LIMOチュートリアルビデオシリーズ](https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2Vrzte9ul3nrrG8AgB5OkU).

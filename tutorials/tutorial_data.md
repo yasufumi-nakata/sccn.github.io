@@ -14,7 +14,7 @@ parent: Tutorials
 匿名化されたデータをダウンロードして解凍することができます
 で使用されて [オンラインワークショップ](/workshops/Online_EEGLAB_Workshop) EEGLABチュートリアル
 
-- ふりがな [EEGLAB分布](https://sccn.ucsd.edu/eeglab/download.php) EEGLAB チュートリアルデータセット「eeglab_data.set」と「eeglab_data_epochs_ica.set」は、 "sample_data" の文字を
+- 参照: [EEGLAB分布](https://sccn.ucsd.edu/eeglab/download.php) EEGLAB チュートリアルデータセット「eeglab_data.set」と「eeglab_data_epochs_ica.set」は、 "sample_data" の文字を
 <blockquote>
 <details>
   <summary>サンプル実験の記述</summary>
@@ -74,8 +74,8 @@ EEGLAB、イベントは、
 
 - ツイート [こちら](https://sccn.ucsd.edu/~arno/fam2data/publicly_available_EEG_data.html) オンラインで 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002 2002
 
-- ふりがな [NEMARの特長](https://nemar.org/) コンテンツ BIDS勉強会
+- 参照: [NEMARの特長](https://nemar.org/) コンテンツ BIDS勉強会
 
-- ふりがな [ERPコア](https://erpinfo.org/erp-core) リソースは、最適化されたパラダイム、実験制御スクリプト、例えば40人からのデータで構成される、自由に利用できるオンラインリソースです。
+- 参照: [ERPコア](https://erpinfo.org/erp-core) リソースは、最適化されたパラダイム、実験制御スクリプト、例えば40人からのデータで構成される、自由に利用できるオンラインリソースです。
 
 - [ヘッドIT](https://headit.ucsd.edu/) 10件の実験を含むレガシーデータベースです。

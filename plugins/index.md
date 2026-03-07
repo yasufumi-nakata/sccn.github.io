@@ -17,14 +17,14 @@ nav_order: 7
 * [MFF-matlab-ioの特長](/plugins/MFF-matlab-io): MFFの入力/出力 EGIファイル形式
 * [Neuroscan-io(ネウロスキャン)](/plugins/Neuroscan-io): Neuroscanファイル形式の入力/出力
 * [CTFimportの特長](/plugins/CTFimport): Neuroscanファイル形式の入力/出力
-* [get_chanlocs ディレクティブ](/plugins/get_chanlocs): インポートスキャンされたチャンネルの場所
+* [get_chanlocs 関数](/plugins/get_chanlocs): インポートスキャンされたチャンネルの場所
 
 ## プロセス
 * [ICラベル](/plugins/ICLabel): EEGデータの独立したコンポーネントを分類
 * [ビュープロップ](/plugins/Viewprops): IClabel の ICA コンポーネント プロパティー表示
 * [ディップフィット](/plugins/DIPFIT): EEGデータの独立したコンポーネントをローカライズ
 * [ROIconnectについて](/plugins/ROIconnect): 関心のある地域間の接続解析を計算
-* [アメリカ](/plugins/AMICA): Computes Adaptive Mixture独立したコンポーネント分析
+* [AMICA](/plugins/AMICA): Computes Adaptive Mixture独立したコンポーネント分析
 * [Clean_rawdata(クリーンデータ)](/plugins/Clean_rawdata): ASR を使用してデータの悪いチャンネルと悪い部分を注入する
 * [リモ](/plugins/LIMO): EEGデータのリニアモデリング
 * [シャフト](/plugins/SIFT): ICAコンポーネント間の接続解析を計算

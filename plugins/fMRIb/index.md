@@ -59,7 +59,7 @@ Niazy RK, Beckmann CF, Iannetti GD, Brady JM, スミサ SM. 神経画像. 2005, 
 
 * 機能磁気共鳴イメージング(fMRI)で記録された連続電気脳図(EEG)時間シリーズからのパルス関連アーティファクト(PRA)のレジェクション。 Leclercq Y, Balteau E, Dang-Vu T, Schabus M, Luxen A, Maquet P, Phillips C. Neuroimage. 2009, 44(3):679-91.
 
-* [fMRIアーファクト拒絶反応と睡眠スコアリングツールボックス](http://www.montefiore.ulg.ac.be/~phillips/FASST.html)
+* [fMRIアーファクト除去と睡眠スコアリングツールボックス](http://www.montefiore.ulg.ac.be/~phillips/FASST.html)
 
 # バージョン履歴
 

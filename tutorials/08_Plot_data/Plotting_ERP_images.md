@@ -365,7 +365,7 @@ Plottings of Plottings and Plottings and Plottings and Plottings and Plottings a
 
 ![](/assets/images/I85pop_erpimage.jpg)
 
-ふりがな [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) 下の図が現れます。
+参照: [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) 下の図が現れます。
 
 ![](/assets/images/I85erpimage.jpg)
 

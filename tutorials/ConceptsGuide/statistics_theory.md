@@ -209,7 +209,7 @@ EEGLABのこだわり
 
 複雑な設計では、設計行列をこのように構築することも可能です。
 特許出願中
-パラメータに合った一般的なリニアモデル。 ふりがな [LIMOシリーズ](https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2Vrzte9ul3nrrG8AgB5OkU) EEGLABとEEGLABは、EEGLABとEEEGLABを融合し、 [LIMOツールボックス](https://limo-eeg-toolbox.github.io/limo_meeg/)このサイトでは、JavaScriptを有効にしてご覧ください。
+パラメータに合った一般的なリニアモデル。 参照: [LIMOシリーズ](https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2Vrzte9ul3nrrG8AgB5OkU) EEGLABとEEGLABは、EEGLABとEEEGLABを融合し、 [LIMOツールボックス](https://limo-eeg-toolbox.github.io/limo_meeg/)このサイトでは、JavaScriptを有効にしてご覧ください。
 
 追加のヒントとリソース
 ---------------------

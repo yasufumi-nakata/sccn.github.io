@@ -46,7 +46,7 @@ ICA は ICA から ICA へ [アーティファクト](/tutorials/06_RejectArtifa
 
 
 
-ふりがな [spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) ウィンドウ (below)
+参照: [spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) ウィンドウ (below)
 
 
 ![](/assets/images/Spectopocomps.gif)
@@ -83,7 +83,7 @@ ICA は ICA から ICA へ [アーティファクト](/tutorials/06_RejectArtifa
 
 
 
-ふりがな [spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) 図は(以下)表示されます。
+参照: [spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) 図は(以下)表示されます。
 
 
 ![](/assets/images/I102spectopo.jpg)
@@ -126,12 +126,12 @@ Pvaf は、100% より大きい場合があります(複数の
 どのコンポーネントが利益の周波数帯に貢献しているかを見た後、
 どのコンポーネントが最も貢献しているかを見ることは興味深いです。
 
-コンポーネントをプロットするには、選択する <span style="color: brown">コンポーネント ERP → アセンブリ</span>, 呼び出し [pop_plotdata.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_plotdata.m) 機能。 それから
+コンポーネントをプロットするには、選択する <span style="color: brown">コンポーネント ERP → アセンブリ</span>, 呼び出し [pop_plotdata.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_plotdata.m) 機能。 それから
 プレス *Ok*.
 
 ![](/assets/images/Rectarrayedit.gif)
 
-ふりがな [pop_plotdata.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_plotdata.m) ウィンドウ, パープル
+参照: [pop_plotdata.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_plotdata.m) ウィンドウ, パープル
 すべての31コンポーネント。
 
 ![](/assets/images/I103pop_plotdata.jpg)
@@ -278,7 +278,7 @@ ITC(*より)
 
 コンポーネントの3Dヘッドプロットをプロットする
 選択によるトポグラフィ <span style="color: brown">コンポーネントマップ → で
-3次元</span>。 これは呼び出します [pop_headplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m) 機能。 関数は
+3次元</span>。 これは呼び出します [pop_headplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m) 機能。 関数は
 ERPをプロットする
 3-Dsカルプマップ コンポーネントを選択 4,4,4,5,4,5,4,5,4,5,4,5,4,5,3,4,5,4,4,5,4,5,4,5,4,5,4,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 
@@ -286,7 +286,7 @@ ERPをプロットする
 ![](/assets/images/3Dcomponentedit.gif)
 
 
-ふりがな [pop_headplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m) 下のウィンドウが表示されます。 ご使用の際には
+参照: [pop_headplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m) 下のウィンドウが表示されます。 ご使用の際には
 MATELLABは3Dオプションを回転させ、ヘッドプロットを回転させます。
 ウィンドウを閉じる *view* は、
 

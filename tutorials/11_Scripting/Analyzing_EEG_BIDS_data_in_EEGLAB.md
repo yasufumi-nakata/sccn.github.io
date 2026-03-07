@@ -101,7 +101,7 @@ EEG=pop_chanedit(EEG, 'eval','chans = pop_chancenter( chans, [],[]);'); % center
 CURRENTSTUDY = 1; EEG = ALLEEG; CURRENTSET = [1:length(EEG)];
 ```
 
-3つのステップでアーティファクト拒絶反応を行います。
+3つのステップでアーティファクト除去を行います。
 1. ミルドアーティファクト拒絶による [clean_rawdata(クリーンロード)](https://github.com/sccn/clean_rawdata) プラグイン
 2. 人工の独立したコンポーネントの拒絶
 3. 攻撃的なアーティファクトの拒絶 [clean_rawdata(クリーンロード)](https://github.com/sccn/clean_rawdata) プラグイン

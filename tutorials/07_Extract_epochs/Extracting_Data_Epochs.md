@@ -90,7 +90,7 @@ ICAとソースは、
 翻訳済みepochedデータセットはデフォルトでoverwrittenです
 ベースライン削除されたデータセット。 注意: 'optimum' メソッドは、
 ベースライン期間またはベースライン値のいずれかを選択します。 使用方法
-前刺激期間における平均値( [pop_rmbase.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rmbase.m) デフォルト)は、分析の目的が一致する場合、多くのデータセットに有効です
+前刺激期間における平均値( [pop_rmbase.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rmbase.m) デフォルト)は、分析の目的が一致する場合、多くのデータセットに有効です
 データを次のデータで発生する変換を定義する
 タイムロックイベント。
 デフォルトでは、ベースライン除去は全てのチャネルに適用します。
@@ -137,7 +137,7 @@ STUDY(略称解析)、STUDY(略称)、STUDY(略称解析)、STUDY(略称)、STUD
 EEGLABは、その1位と1位をとって、
 この投稿では、すべてのページに投稿します。 チュートリアルでは、eeglab_data_epochs_ica.set にインストールします。
 
-選択する <span style="color: brown">編集 → エポックやイベントを選択</span> ふりがな [pop_selectevent.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_selectevent.m) を参照してください。 * プレス *Ok*
+選択する <span style="color: brown">編集 → エポックやイベントを選択</span> 参照: [pop_selectevent.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_selectevent.m) を参照してください。 * プレス *Ok*
 
 ![こちら](/assets/images/pop_select_epoch.png)
 
@@ -151,5 +151,5 @@ event* は、
 
 ![こちら](/assets/images/confirm_epoch.png)
 
-これから [pop_newset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m) 新規登録 この新しいデータセット「Square, Position 1」と入力し、*Ok* を入力してください。
+これから [pop_newset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m) 新規登録 この新しいデータセット「Square, Position 1」と入力し、*Ok* を入力してください。
 

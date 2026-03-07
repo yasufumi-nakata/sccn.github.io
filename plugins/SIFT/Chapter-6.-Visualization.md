@@ -345,7 +345,7 @@ GUI と下の表に示すように、残りのオプション:
 </tr>
 <tr class="odd">
 <td><p><strong>フットパネルディスプレイ仕様</strong></p></td>
-<td><p><strong>ICA_ERPenvelope(アメリカ)</strong></p></td>
+<td><p><strong>ICA_ERPenvelope(AMICA)</strong></p></td>
 <td><p>これは、ブレーンモアの下部にあるフッターパネルを設定します。 ここでは、いくつかのバックプロジェクトされたコンポーネントのERPエンベロープを表示するようにしました</p></td>
 </tr>
 <tr class="even">

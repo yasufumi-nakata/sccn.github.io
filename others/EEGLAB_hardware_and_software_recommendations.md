@@ -44,7 +44,7 @@ EEGLABツールボックス:
 -----
 
 -   EEGLABは無料ですが、MATLABソフトウェア環境はそのまま
-    のは、The Mathworksの商用製品です。 多くの場合、あなたの学校は、アクセスを交渉している可能性があります()[詳しくはこちら](https://www.mathworks.com/academia/tah-support-program/eligibility.html))。 EEGLABは、無料のオクターブ環境(コマンドラインのみ)でも機能し、MATLABライセンスを必要としないEEGLABのコンパイル版をダウンロードすることもできます。 
+    のは、The Mathworksの商用製品です。 多くの場合、あなたの学校は、アクセスを交渉している可能性があります()[詳しくはこちら](https://www.mathworks.com/academia/tah-support-program/eligibility.html))。 EEGLABは、無料のOctave環境(コマンドラインのみ)でも機能し、MATLABライセンスを必要としないEEGLABのコンパイル版をダウンロードすることもできます。 
     
 -   Ubuntuのlinuxユーザーの場合: 多くの場合、グラフィックの問題がある場合
     MATLABは、UbuntuでOpenGLグラフィックを使用しています。 それらを避けるために、

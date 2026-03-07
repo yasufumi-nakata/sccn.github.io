@@ -42,7 +42,7 @@ EEG = pop_loadset( 'eeglab_data.set', fullfile(eeglab_path, 'sample_data')); % l
 ```
 
 ツイート
-シフトイベントのレイテンシーを10サンプルで下回るシンプルなスクリプト。 このような操作は、アンプやコンピュータが行動イベントを収集する遅延のために時々必要です。 あるいは、使用してもよい [pop_adjustevents.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_adjustevents.m) 機能。 スクリプト 
+シフトイベントのレイテンシーを10サンプルで下回るシンプルなスクリプト。 このような操作は、アンプやコンピュータが行動イベントを収集する遅延のために時々必要です。 あるいは、使用してもよい [pop_adjustevents.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_adjustevents.m) 機能。 スクリプト 
 このセクションから使用可能 [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=event_processing_single_dataset.m).
 
 ``` matlab

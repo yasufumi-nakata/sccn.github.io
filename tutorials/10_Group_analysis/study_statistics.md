@@ -165,7 +165,7 @@ ICAコンポーネントクラスタ
 
 LIMOは、
 ----
-ふりがな [LIMOツールボックス](https://limo-eeg-toolbox.github.io/limo_meeg/) 任意の数の分類と連続変数の一般的な線形モデリングアプローチを使用することを可能にします。 詳細については、を参照してください。 [LIMOのプラグイン](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) そして、 [LIMOチュートリアルビデオシリーズ](https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2Vrzte9ul3nrrG8AgB5OkU).
+参照: [LIMOツールボックス](https://limo-eeg-toolbox.github.io/limo_meeg/) 任意の数の分類と連続変数の一般的な線形モデリングアプローチを使用することを可能にします。 詳細については、を参照してください。 [LIMOのプラグイン](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) そして、 [LIMOチュートリアルビデオシリーズ](https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2Vrzte9ul3nrrG8AgB5OkU).
 
 単一サブジェクト統計
 ----
@@ -205,4 +205,4 @@ EEGLAB は、EEGLAB をクラウドファンディングで管理します。 <s
 
 プロフィール 仮説は、この作品の試行錯誤です。 複数の被験者との関連性について、nullは被験者に被験者を被ったと関連しています。
 
-ふりがな [LIMOプラグイン](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) その他、EEGLAB で で
+参照: [LIMOプラグイン](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) その他、EEGLAB で で

@@ -43,7 +43,7 @@ EEGLAB をロードする
 他のスカルプマップ Hz の出力
 22の Hz。
 
-ふりがな [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) ウィンドウメニュー (above)
+参照: [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) ウィンドウメニュー (above)
 ふりがな
 *Percent data...* 値計算を高速化(by)
 0 に近い番号を入力するか、より明確な措置を返す

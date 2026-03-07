@@ -209,7 +209,7 @@ MCCオフ。 重要なエッジの数の変更に注意して下さい。 デー
 
 ![Mccon_currentデフォルト2.png](images/Mccon_currentdefault2.png)
 ![マコン_gfwer2.png](images/Mccon_gfwer2.png)
-![Nomcc_previousdefault2.png ディレクティブ](images/Nomcc_previousdefault2.png)
+![Nomcc_previousdefault2.png 関数](images/Nomcc_previousdefault2.png)
 
 # グループレベルのコネクティビティムービーを生成する方法
 
