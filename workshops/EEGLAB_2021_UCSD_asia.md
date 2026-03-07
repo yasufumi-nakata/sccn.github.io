@@ -146,7 +146,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:15pm</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
-				<strong>EEGとTMSのレビュー</strong> (マテウス・ゴラ) 
+				<strong>EEGとTMSのレビュー</strong> (Mateusz Gola) 
 			</span>
 		</li>
 	</ul>
@@ -625,7 +625,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時45分</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
-				<strong>ICAの信頼性の分析</strong> (フィオレンツォ・アルトーニ) 
+				<strong>ICAの信頼性の分析</strong> (Fiorenzo Artoni) 
 			</span>
 		</li>
 	</ul>
@@ -763,7 +763,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時20分</span> - 
-				<strong>ASR性能解析 I</strong> (フィオレンツォ・アルトーニ) 
+				<strong>ASR性能解析 I</strong> (Fiorenzo Artoni) 
 			</span>
 		</li>
 	</ul>
@@ -785,7 +785,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10時40分～</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
-				<strong>独立したコンポーネントを分類するためのICLabel</strong> (ルカピオントンチニ) 
+				<strong>独立したコンポーネントを分類するためのICLabel</strong> (Luca Pion-Tonachini) 
 			</span>
 		</li>
 	</ul>

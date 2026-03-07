@@ -67,7 +67,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
 > - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span> -** \'Brain Imaging Data Structure\'(BIDS)とは何ですか?** (Cyrilパーネット)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:10pm</span> - **階層イベント記述子(HED)** (ロビンズ、マジグ&amp;ダン・トゥルン)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">11:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">12:10pm</span> - **階層イベント記述子(HED)** (ロビンズ、マジグ&amp;Dung Truong)</span>
 
 > - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:10</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - **EEGLAB BIDSデータI/Oプラグイン** (Truong &amp;Delorme) )</span>
 
