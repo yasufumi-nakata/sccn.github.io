@@ -602,7 +602,7 @@ EEGLABデータセットは、*.set*ファイルです。 *.set*は、MATLABフ�
 save -mat myfile.set EEG
 ```
 
-EEGLABのこだわり デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト  20  20  20  20
+EEGLABのデフォルト設定では、20
 
 ```matlab
 save -mat myfile.set -struct EEG

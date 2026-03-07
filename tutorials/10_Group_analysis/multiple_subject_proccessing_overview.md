@@ -77,7 +77,7 @@ EEGLABの動作オプションは、
 1. ラベルコンポーネントを使用して <span style="color: brown">ツール → IClabel → コンポーネントのラベルを構成する</span> メニュー項目。
 1. コンポーネントの分類 <span style="color: brown">ツール → IClabel → コンポーネントを識別する</span> メニュー項目。
 1. コンポーネントの同等のダイポールを割り当てる <span style="color: brown">DIPFIT ダイポールの検索 → ヘッドモデルと設定</span> メニュー項目およびそれから <span style="color: brown">ツール → DIPFIT イヤホンの検索 → オートフィット</span> メニュー項目。
-1. データを する する する <span style="color: brown">ツール → 抽出エポック</span> メニュー項目。
+1. データをエポック化するには <span style="color: brown">Tools → Extract epochs</span> メニュー項目。
 
 ### データセットをフィルタリング
 
