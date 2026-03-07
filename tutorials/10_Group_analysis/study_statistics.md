@@ -69,7 +69,7 @@ permutation ディレクトリ
 
 ![画像が見つかりません](/assets/images/studystats05.png)
 
-以下の ポップアップ * * * * * * * * * * * * * * * * * * * * * * の の の の の の の の の の 。 。 。 の 。 。 。 。 の 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 の 。 。 。 。 ERPのプロットバックにブラックバーに約450msの写真を撮る ベースライン、100ms の pc の pc の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s s の s s の s s s の s s の s s s s s s の s s s s s s の s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s
+以下のポップアップウィンドウが表示されます。ERPプロットの約450ms付近にブラックバーが表示され、統計的に有意な差がある時間範囲を示しています。
 
 ![画像が見つかりません](/assets/images/studystats06.png)
 
