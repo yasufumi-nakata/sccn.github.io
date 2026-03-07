@@ -191,7 +191,7 @@ Hadoop Mapreduceは、大規模な計算を行うためのフレームワーク�
     ライン インターフェイス:(http://aws.amazon.com/developertools/2264) へ
     伸縮性があるMapreduce。 これにより、ジョブの設定と実行ができます。
     Amazonクラウド。 [AWS] を作成する必要があります。
-    ログインhttp://aws.amazon.com/)。 Hadoopは実行する必要があります
+    参照: [AWS](http://aws.amazon.com/))。 Hadoopは実行する必要があります
     ストリーミングモード、データが単に実行可能にストリーミングされる場所。
     ネイティブJavaモードでHadoopを実行することも可能です。
     Java ビルダーを使用して MATLAB のコードをコンパイルします(これは

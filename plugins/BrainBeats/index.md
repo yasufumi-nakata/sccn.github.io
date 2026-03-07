@@ -15,7 +15,7 @@ nav_order: 9
 
 <p align="center" width="100%">
   <img width="30%"alt="BrainBeatsロゴ"
-       ログインhttps://raw.githubusercontent.com/amisepa/BrainBeats/main/brainbeats_logo2.png">
+       src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/brainbeats_logo2.png">
 </p>
 
 
@@ -26,7 +26,7 @@ BrainBeatsツールボックスは、EEGLABプラグインとして実装され�
 
 <p align="center" width="100%">
   <img width="50%"alt="BrainBeats 図"
-       ログインhttps://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/diagram.png">
+       src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/diagram.png">
 </p>
 
 
@@ -38,7 +38,7 @@ BrainBeatsツールボックスは、EEGLABプラグインとして実装され�
 </p>
 <p align="center" width="100%">
   <imgの幅="50%"alt="BrainBeats fig11"
-       ログインhttps://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig11.png">
+       src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig11.png">
 </p>
 
 <p align="center">
@@ -46,7 +46,7 @@ BrainBeatsツールボックスは、EEGLABプラグインとして実装され�
 </p>
 <p align="center" width="100%">
   <imgの幅="50%"alt="BrainBeats fig17"
-       ログインhttps://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig17.png">
+       src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig17.png">
 </p>
 
 2) EEG および HRV を、時間、頻度および非線形ドメインの連続的なデータから抽出して下さい。 
@@ -63,7 +63,7 @@ BrainBeatsツールボックスは、EEGLABプラグインとして実装され�
 </p>
 <p align="center" width="100%">
   <img 幅="50%"alt="BrainBeats fig21"
-       ログインhttps://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig21.png">
+       src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig21.png">
 </p>
 
 <p align="center">
@@ -71,7 +71,7 @@ BrainBeatsツールボックスは、EEGLABプラグインとして実装され�
 </p>
 <p align="center" width="100%">
   <imgの幅="50%"alt="BrainBeats fig22"
-       ログインhttps://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig22.png">
+       src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig22.png">
 </p>
 
 3) ICAおよびICLabelを使用してEEG信号から中心の部品を取除いて下さい。
@@ -81,7 +81,7 @@ BrainBeatsツールボックスは、EEGLABプラグインとして実装され�
 </p>
 <p align="center" width="100%">
   <imgの幅="50%"alt="BrainBeats fig27"
-       ログインhttps://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig27.png">
+       src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig27.png">
 </p>
 
 4) 計算の脳中心の一貫性(ベータ版、テストし、フィードバックを与えて下さい)
@@ -91,7 +91,7 @@ BrainBeatsツールボックスは、EEGLABプラグインとして実装され�
 </p>
 <p align="center" width="100%">
   <img 幅="50%"alt="BrainBeats coh_all"
-       ログインhttps://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/coherence_allfreqs.png">
+       src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/coherence_allfreqs.png">
 </p>
 
 <p align="center">
@@ -99,7 +99,7 @@ BrainBeatsツールボックスは、EEGLABプラグインとして実装され�
 </p>
 <p align="center" width="100%">
   <img 幅="50%"alt="BrainBeats coh_topo"
-       ログインhttps://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/coherence_topo.png">
+       src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/coherence_topo.png">
 </p>
 
 

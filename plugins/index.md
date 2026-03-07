@@ -34,7 +34,7 @@ nav_order: 7
 * [クリーンライン](/plugins/CleanLine): 混合モデル独立したコンポーネント分析を計算
 * [エグスタット](/plugins/EEGstats): 計算 EEG 統計(パワー、アルファピーク、非対称)
 * [トリムアウター](/plugins/trimOutlier): EEG のアトリエを取除いて下さい
-* [ログイン ツイート](/plugins/fMRIb): EEGのfMRIアーティファクトを削除します。
+* [fMRIb](/plugins/fMRIb): EEGのfMRIアーティファクトを削除します。
 * [メニュー](/plugins/IMAT): : : EEGデータの独立したモジュレータを見つけます
 * [ニマ](/plugins/NIMA): 測定プロジェクトを用いたICAコンポーネントのクラスタリング
 * [パクト](/plugins/PACT): ECoG のための計算の位相差のカップリング

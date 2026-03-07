@@ -262,7 +262,7 @@ A と B を別々に実行します。(A と B は同じグラフエッジを持
 1.  ワークスペースを空にします。
 2.  条件AのためのXXXX_allSubjStack.matをロードして下さい。
 3.  "allConnectivityStack" を他のものに名前を変更します(ここでは、'tmp1')
-4.  ログイン YYY_allSubjStack.mat 条件Bの場合、AとBが
+4.  次に YYY_allSubjStack.mat を読み込みます。 条件Bの場合、AとBが
     内流条件(つまり、同じICA結果)は、
     'allConnectivityStack' 以外の同じデータ。
 5.  "allConnectivityStack" を他のものに名前を変更します(ここでは、'tmp2')
@@ -426,7 +426,7 @@ pop_groupSIFT_convertToGroupAnatomicalRois.m ライン 307-402、そこにあり
 # 出版作品
 
 専用のテクニカルペーパーは用意しておりません。 しかし、カップル
-グループSIFTを用いた臨床研究は既に公開されています。 ログイン
+グループSIFTを用いた臨床研究は既に公開されています。
 et al. (2019) は、メソッドの比較的詳細な説明を持っています
 補足(一部更新が必要)。
 
