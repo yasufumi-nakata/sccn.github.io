@@ -17,7 +17,7 @@ EEGLABのオープンポータルを高性能化 コンピューティング: 20
 
 全て(個人を除く)のスーパーコンピューターと同様に、Matlabのインタラクティブなスタイルではなく、通常はバッチモードでジョブを実行します。 しかし、コメットには、すべてのMatlab関数とEEGLAB関数と多くのプラグイン拡張機能がインストールされています。 NSGポータルから送信されたジョブが実行されると、NSGからメールを受信して結果をダウンロードします。 これは、Open EEGLABポータルの最良の使用が、複雑な集中的なプロセスや/または、大規模なEEG研究の並列、自動処理のためのものです。 最初のカテゴリでは、我々は今、彗星に最も計算的に集中的なEEGLAB関数をインストールしています: AMICA、RELICA、時間/周波数分析、NFTを介してモデリングするSCALE最適化された個々の被写体ヘッドなど。 インストールした機能を利用することで、より詳細な情報が得られます。
 
-Open EEGLABポータルの詳細な概要を読むには、 [会議用紙はIEEE/EMBS神経工学会議に提出しました](https://sccn.ucsd.edu/~scott/pdf/Delorme_Open_EEGLAB_Portal_NER18.pdf) サンフランシスコ(2019年3月)以降 [ネロイメージ](https://www.sciencedirect.com/science/article/pii/S1053811920302652) 記事。
+Open EEGLABポータルの詳細な概要を読むには、 [会議用紙はIEEE/EMBS神経工学会議に提出しました](https://sccn.ucsd.edu/~scott/pdf/Delorme_Open_EEGLAB_Portal_NER18.pdf) サンフランシスコ(2019年3月)以降 [NeuroImage](https://www.sciencedirect.com/science/article/pii/S1053811920302652) 記事。
 
 このリポジトリには、REST API: nsgportal を通じて NSG ポータルを横断する EEGLAB プラグインのコードが含まれています。 プラグインのコア機能は、Arnaud Delormeによって最初に作成され、さらに、Ramon Martinez-Cancino、Dung Troung、Scott Makeig(EEGLAB Team)がSDSCのNSGチームから大幅に貢献しました。
 

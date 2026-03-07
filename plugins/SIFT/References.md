@@ -59,7 +59,7 @@ Bresssler SL, Richter CG, Chen Y, Ding M (2007) 光学機能
 薬の統計量 26:3875–3885
 
 ブレスラーSL、セスAK(2010) ウィナー・レンジャー 死亡率: よく確立される
-方法論。 ネロイメージ
+方法論。 NeuroImage
 
 Brillinger DR(2001) タイムシリーズ:データ解析と理論。 サイアム。
 
@@ -89,10 +89,10 @@ Deshpande G, LaConte S, James GA, Peltier S, Hu X (2009) (a) 多変量体
 fMRIデータの解析 人間の脳のマッピング 30:1361-73
 
 Deshpande G、Sathian K、Hu X(2009)(b) 変異性分散性の影響
-fMRIのGRANGERの因果性分析。 ネロイメージ
+fMRIのGRANGERの因果性分析。 NeuroImage
 
 Dhamala M, Rangarajan G, Ding M (2008) 情報の流れを分析する
-比類のない造粒性を伴った脳ネットワーク。 ネロイメージ
+比類のない造粒性を伴った脳ネットワーク。 NeuroImage
 41:354-62
 
 Ding MZ、ブレスラーSL、Yang WM、Liang HL (2000) (a) ショートウィンドウスペクトル
@@ -147,7 +147,7 @@ Florian G、Pfurtscheller G (1995)の動的スペクトル解析
 
 フローリン E, 総体 J, Pfeifer J, Fink GR, ティマーマン L (2010) の効果の
 グランガーの因果性に基づく多変性因性測定のろ過。
-ネロイメージ
+NeuroImage
 
 
 50:577-88
@@ -370,7 +370,7 @@ Sparseの多変性の自動回帰を用いる機能結合。
 メソッド。 神経系国際ジャーナル 17:71
 
 王X、陳Y、Ding M (2008年) の後でGrangerの因果性を推定して下さい
-stimulusのオンセット:注意深いノート。 ネロイメージ41:767-76
+stimulusのオンセット:注意深いノート。 NeuroImage41:767-76
 
 Weiner N (1956) E. F. Beckenbachの予測理論, ed. Modern
 エンジニアのための数学 ニューヨーク、ニューヨーク、アメリカ:McGraw-Hill。

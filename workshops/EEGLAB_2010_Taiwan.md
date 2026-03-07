@@ -273,7 +273,7 @@ ICA/EEGLABによる関連する出版物
 --------------------------------------
 
 - Delorme、A.、Makeig、S. [EEGLAB:分析のためのオープンソースツールボックス
-    独立したコンポーネントを含む単一のtrial EEGの動的の分析](https://sccn.ucsd.edu/githubwiki/files/eeglab_published.pdf)。 J ネウロシ
+    独立したコンポーネントを含む単一のtrial EEGの動的の分析](https://sccn.ucsd.edu/githubwiki/files/eeglab_published.pdf)。 J Neurosci Methods
     方法。2004年3月15日、134(1):9-21。
 - Makeig、S.、Debener、S.、Onton、J.、Delorme、A. [Mining
     イベント関連脳ダイナミクス](https://sccn.ucsd.edu/githubwiki/files/ticsreview_published.pdf)。 トレンド ログイン
@@ -291,7 +291,7 @@ ICA/EEGLABによる関連する出版物
     EEGデータの分離について](https://sccn.ucsd.edu/githubwiki/files/delorme_unpub.pdf).
     公開されていない原稿。
 - Onton J、Delorme、A.、Makeig、S. [Frontal Midline EEG ダイナミクス]
-    作業中メモリ](https://sccn.ucsd.edu/githubwiki/files/onton_fmtheta_published.pdf)。 ネロイメージ。
+    作業中メモリ](https://sccn.ucsd.edu/githubwiki/files/onton_fmtheta_published.pdf)。 NeuroImage。
     2005;27, 341-356
 - Onton J, Makeig S. [高周波ブロードバンドの変調]
     電気脳卒

@@ -9,13 +9,12 @@ EEGLABと商用EEGソフトウェアパッケージ
 ====
 
 <blockquote>
-<i>計算に応じて新しい論文の結果を信頼できます
-非公開ソースコードで独自のソフトウェアによって実行されるか?</i> <a href="http://www.nature.com/nphys/journal/v12/n7/full/nphys3815.html?WT.feed_name=subjects_physical-sciences">M. Buchanan、自然物理学、2016年</a>
+<i>非公開ソースコードのプロプライエタリソフトウェアで実行された計算に基づく論文の結果を信頼できるか？</i> <a href="http://www.nature.com/nphys/journal/v12/n7/full/nphys3815.html?WT.feed_name=subjects_physical-sciences">M. Buchanan, Nature Physics, 2016</a>
 </blockquote>
 
-EEGLAB の許認可により、商用企業が EEGLAB のコード(MATLAB またはコンパイルフォーム)を自社製品で使用できるようになります。 これは、例えば、例えば、 [NeuroField(ニューロフィエルド)](https://neurofield.org/software) C-Sharp コンパイル版 EEGLAB を .NET ライブラリとして使用しているソフトウェア(2023) の後半。 EEGLABのライセンス条件の一部であるEEGLABの使用を認め、バグ報告を提出することにより、事業会社が開発に貢献します。
+EEGLAB の許認可により、商用企業が EEGLAB のコード(MATLAB またはコンパイルフォーム)を自社製品で使用できるようになります。 例えば、[NeuroField](https://neurofield.org/software) ソフトウェア（2023年後半）はC#コンパイル版のEEGLABを.NETライブラリとして使用しています。 EEGLABのライセンス条件の一部であるEEGLABの使用を認め、バグ報告を提出することにより、事業会社が開発に貢献します。
 
-下の表は、EEGLABの機能を比較します。, 業界で現在最高のものの最も一般的な機能のいくつか.
+以下の表は、EEGLABと現在の主要な商用EEGソフトウェアの機能を比較したものです。
 
 <table>
 <th></th>
@@ -28,12 +27,12 @@ EEGLAB の許認可により、商用企業が EEGLAB のコード(MATLAB また
 	<td style="background-color:#FFAAAA">ファイルのインポートとエクスポートは通常、いくつかのフォーマットに限定されています。</td>
 </tr>
 <tr>
-	<td>記憶条件</td>
+	<td>メモリ要件</td>
 	<td style="background-color:#FFAAAA">EEGLABは、単一のデータセットでメモリを保持できる必要があります。 複数のデータセットを処理する場合、ディスクに滞在する場合があります。</td>
 	<td style="background-color:lightgreen">ほとんどの商用ソフトウェアは、比較的小さなメモリを使用して大きなデータセットの処理を可能にするように設計されています。</td>
 </tr>
 <tr>
-	<td>特徴:</td>
+	<td>機能</td>
 	<td style="background-color:lightgreen">EEGLABは、現在の商用ソフトウェアよりも多くの機能を備えています。 一般的なEEGLABでは、より広範囲な加工選択をユーザーに提供します。</td>
 	<td style="background-color:#FFAAAA">主要な(多くの場合、高価な)商用ソフトウェアは、EEGLABツールで利用可能なよりも、ソースローカリゼーションのためのより多くの方法を提供するかもしれません。</td>
 </tr>

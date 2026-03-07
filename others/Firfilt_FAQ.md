@@ -322,7 +322,7 @@ Cedric Cannard(Andreas Widmannとのディスカッションから)によるカ�
 
 
 -   Widmann, A., Schröger, E., & Maess, B. (2015). デジタル フィルター設計
-    電気生理学的データ--実用的なアプローチのため。 J ネウロシ
+    電気生理学的データ--実用的なアプローチのため。 J Neurosci Methods
     方法, 250, 34-46. 土井: 10.1016/j.jneumeth.2014.08.002
     [こちら](http://home.uni-leipzig.de/~biocog/eprints/widmann_a2015jneuroscimeth250_34.pdf)
 
@@ -344,7 +344,7 @@ Cedric Cannard(Andreas Widmannとのディスカッションから)によるカ�
 -   Maess B、Schröger E、Widmann A.(2016)。 ハイパスフィルタと
     M/EEG分析におけるベースライン補正 コメント: "方法
     不適切なハイパスフィルタは、アーティファクトと誤りを生成できます
-    言語と認知のERP研究における結論。 J ネウロシ
+    言語と認知のERP研究における結論。 J Neurosci Methods
     メソッド。 \[プリント前のEpub\]
 
 
