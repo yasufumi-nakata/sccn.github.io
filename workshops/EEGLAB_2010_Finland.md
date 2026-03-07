@@ -43,7 +43,7 @@ grand_parent: Workshops
 
 <span style="color: green">**--- 12:30-1:30 ランチ-**</span>
 
-<span style="color: orange">1:30～14:30 お問い合わせ 成果物拒絶とICA分解の実行(ジュリー・オントン) [PDF]https://sccn.ucsd.edu/githubwiki/files/2_artrej_runningica.pdf
+<span style="color: orange">1:30～14:30 成果物拒絶とICA分解の実行(ジュリー・オントン) [PDF]https://sccn.ucsd.edu/githubwiki/files/2_artrej_runningica.pdf
 )</span>
 
 <span style="color: purple">午後2時15分～午後3時 時間頻度分解(Arnaud Delorme)の使用 [PDF](https://sccn.ucsd.edu/githubwiki/files/lecture_timefreq_finland2010.pdf)</span>
@@ -123,7 +123,7 @@ grand_parent: Workshops
 
 
 
-<span style="color: green">''--- ブレーク (10:30-11:00) -- '' お問い合わせ</span>
+<span style="color: green">''--- ブレーク (10:30-11:00) -- ''</span>
 
 **11:00～12:30～小グループ研究プロジェクト* * 必須
 
@@ -134,10 +134,10 @@ grand_parent: Workshops
 
 <span style="color: green">**--- ブレーク (3:00-3:30) --** </span>
 
-<span style="color: purple">3:30～16:30 お問い合わせ 電気生理学研究および適用(Scott Makeig)の新しい方向</span>
+<span style="color: purple">3:30～16:30 電気生理学研究および適用(Scott Makeig)の新しい方向</span>
 
 '4:30 - 4:45 午後 -- ディスカッション
 
 
 
-<span style="color: green">お問い合わせ ワークショップ終了 --**</span>
+<span style="color: green">ワークショップ終了 --**</span>

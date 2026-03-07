@@ -115,7 +115,7 @@ grand_parent: Workshops
 
 
 
-<span style="color: green">お問い合わせ ワークショップ終了 --**</span>
+<span style="color: green">ワークショップ終了 --**</span>
 
 **6:30～8:30pm ウェルカムレセプション** (ニューカッスルサーフライフセービングクラブ)
 

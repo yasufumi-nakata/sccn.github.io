@@ -39,7 +39,7 @@ MATLABをインストールしたノートパソコン
 構造 - MRI、fMRIおよびEEGのため</b>
 
 <i>所在地:</i> 主要な会議室、Pavillon Baudot、Purpanの病院、
-トゥールーズ([アクセス可能 お問い合わせ](http://www.cerco.ups-tlse.fr/-Acces-?lang=en))
+トゥールーズ([アクセス可能](http://www.cerco.ups-tlse.fr/-Acces-?lang=en))
 <i>登録:</i> このイベントは、全て無料です。
 <i>シンポジウムモデレータ:</i> スコット・マディグ
 

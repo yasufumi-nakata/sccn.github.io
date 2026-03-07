@@ -94,7 +94,7 @@ MRIは、脳、脳頭脳、脳幹細胞、脳神経細胞、脳細胞、脳細�
 
 ![2022年12月11日 7 43 48](https://user-images.githubusercontent.com/1872705/206956553-435a3f9f-48db-4bff-b714-4fddc37aa3f6.png)
 
-*Co-register*ボタン、コリベーションウィンドウで、*Align fiducials*、WindowsでOKを押して、チャンネルの音声を再生します。 ます ます ます ます の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の ウィンドウ の の の の の の の の の の の の の の の の の の の の 左 左 は は は は は は は は は は は は は は は は は は は は 差 差 差 は は は は 差 差 差 差 [フィデューシャルの選択](https://eeglab.org/tutorials/ConceptsGuide/coordinateSystem.html#eeglab-electrode-coordinate-systems). 
+*Co-register*ボタンを押し、コレジストレーションウィンドウで*Align fiducials*を選択してOKを押します。ウィンドウの左側に残差が表示されます。フィデューシャルの選択については[こちら](https://eeglab.org/tutorials/ConceptsGuide/coordinateSystem.html#eeglab-electrode-coordinate-systems)を参照してください。 
 
 ![2022-12-11 に 11 06 22 PM](https://user-images.githubusercontent.com/1872705/206982193-92e59b82-90b9-43c5-8e7a-d551a90d66d1.png)
 

@@ -6,7 +6,7 @@ parent: Past workshops
 grand_parent: Workshops
 ---
 
-お問い合わせ [thumb\|right\|upright=2.5\|Torrey Pinesのロックフォーメーション(一部ブロック)
+[thumb\|right\|upright=2.5\|Torrey Pinesのロックフォーメーション(一部ブロック)
 サンディエゴスーパーコンピュータセンターより)
 
 <span size =4><span color=red>オンラインEEGLABワークショップ</span></span>

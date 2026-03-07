@@ -13,11 +13,11 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
 # 2021年 バーチャル EEGLAB ワークショップ パシフィック/アジア
 
-11月29日から12月3日まで、第31回EEGLABワークショップがバーチャル脳会議場でオンライン開催されます。 [ガザータウン](https://gather.town/)お問い合わせ 初日は無料で、講演会や社会イベントを盛り上げます。 ワークショップでは、EEGLABを使用してデータを処理する方法について、スクリプトや複数のプラグインの使用などについて説明します。 並列セッションでは、特定のトピック、特にウェアラブルなEEG、ディープラーニング、EEG、コネクティビティ分析、およびEEGについて説明します。
+11月29日から12月3日まで、第31回EEGLABワークショップがバーチャル脳会議場でオンライン開催されます。 [ガザータウン](https://gather.town/) 初日は無料で、講演会や社会イベントを盛り上げます。 ワークショップでは、EEGLABを使用してデータを処理する方法について、スクリプトや複数のプラグインの使用などについて説明します。 並列セッションでは、特定のトピック、特にウェアラブルなEEG、ディープラーニング、EEG、コネクティビティ分析、およびEEGについて説明します。
  
 [<b>11月29日(月)の1日(月・祝)の1日(月・祝)まで無料登録</b>](https://www.eventbrite.com/e/eeglab-workshop-day-1-free-tickets-182128179287).
 
-[<b>ワークショップのお申し込みはこちらから11月30日(火)〜12月3日(火)</b>](https://na.eventscloud.com/ereg/index.php?eventid=641115&)お問い合わせ ※2回(11月29日、11月30日〜12月3日は1回)は、イベント全体にご参加ください。
+[<b>ワークショップのお申し込みはこちらから11月30日(火)〜12月3日(火)</b>](https://na.eventscloud.com/ereg/index.php?eventid=641115&) ※2回(11月29日、11月30日〜12月3日は1回)は、イベント全体にご参加ください。
 
 皆様のお越しをお待ちしております。
 
@@ -89,7 +89,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">8月15日</span>– 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span> – 
-				<strong>マイニングイベント関連の脳の動的 お問い合わせ</strong> (スコットメイク) 
+				<strong>マイニングイベント関連の脳の動的</strong> (スコットメイク) 
 			</span>
 		</p>
 	</li>

@@ -10,7 +10,7 @@ nav_order: 1
 
 # 完全なコース材料
 
-お問い合わせ [リポジトリ](https://github.com/sccn/EEGLAB_course) EEGLABコースセッションの教材が含まれています。 このコースはもともと行われていました。 [実用的なMEEG 2025の研修会](https://cuttingeeg.org/practicalmeeg2025/)お問い合わせ このコースはEEGLABに集中していますが、材料の90%はEEGLAB固有のものではありません。
+[リポジトリ](https://github.com/sccn/EEGLAB_course) EEGLABコースセッションの教材が含まれています。 このコースはもともと行われていました。 [実用的なMEEG 2025の研修会](https://cuttingeeg.org/practicalmeeg2025/)を参照 このコースはEEGLABに集中していますが、材料の90%はEEGLAB固有のものではありません。
 
 教材の作者を承諾してくださいが、あなた自身のコースに必要な資料を適応させることができます。
 

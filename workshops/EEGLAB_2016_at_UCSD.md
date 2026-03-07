@@ -56,7 +56,7 @@ EEGLAB は、より高度な EEGLAB ツールボックスや、
 ### <u><span style="color: dodgerblue">日 0 - 2016年11月17日(木)</span></u>
 
 
-<span style="color: saddlebrown">6:00～8:00 PM -- SCCNオープンハウス受付とSfNポスターセッション [(方向)](http://sccn.ucsd.edu/directions.html)お問い合わせ 軽食をご用意いたします。</span>
+<span style="color: saddlebrown">6:00～8:00 PM -- SCCNオープンハウス受付とSfNポスターセッション [(方向)](http://sccn.ucsd.edu/directions.html) 軽食をご用意いたします。</span>
 
 6:00～7:00 登録受付
 
@@ -90,7 +90,7 @@ EEGLAB は、より高度な EEGLAB ツールボックスや、
 
 午後2時～午後5時 同時基本セッションと上級コースセッション(D1) 
 
-お問い合わせ <span style="color: saddlebrown">3:30 コーヒーブレイク</span>
+<span style="color: saddlebrown">3:30 コーヒーブレイク</span>
 
 
 

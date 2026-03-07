@@ -26,7 +26,6 @@ grand_parent: Workshops
 [国立東大学校](http://www.nctu.edu.tw/)  
 [マイクロエレクトロニクス・情報システム研究センター](http://www.eic.nctu.edu.tw/eindex.htm)
 
-お問い合わせ
 ![](/assets/images/Nctu_map.jpg)
 
 プレワークショップ会議
@@ -317,13 +316,13 @@ EEGLAB:
 [チュートリアルスライド](https://sccn.ucsd.edu/githubwiki/files/tutorialpdfs.zip) PDFをダウンロード
 チュートリアル講座はこちら。
 
-[EEGLABデータセット:シングル件名](ftp://sccn.ucsd.edu/pub/julie/EEGLAB_Workshop/Data.zip) お問い合わせ
+[EEGLABデータセット:シングル件名](ftp://sccn.ucsd.edu/pub/julie/EEGLAB_Workshop/Data.zip)
 最初のチュートリアルセッションで使用するサンプルデータセット。 これは、
 Sternberg実験からのデータセット(フルSTUDYに用いられる)
 
 [EEGLAB STUDY with 13 対象 (2.3)]
 GB)](ftp://sccn.ucsd.edu/pub/julie/EEGLAB_Workshop/STUDY.zip) これは、
-非常に大きなファイルで、試してみると最初の数回失敗する可能性があります。 お問い合わせ
+非常に大きなファイルで、試してみると最初の数回失敗する可能性があります。
 これを試してみる前に、迅速かつ信頼性の高いインターネット接続を持っています
 ダウンロード
 
@@ -332,13 +331,12 @@ MB)(ftp://sccn.ucsd.edu/pub/julie/EEGLAB_Workshop/NFT-1.1-eeglab.zip)
 NFTプラグインソフトウェアをダウンロードします。
 
 [NFT:神経電磁気] フォワードヘッドモデリングデモデータ(2.3)
-GB)](ftp://sccn.ucsd.edu/pub/julie/EEGLAB_Workshop/NFT_demo.zip) お問い合わせ
+GB)](ftp://sccn.ucsd.edu/pub/julie/EEGLAB_Workshop/NFT_demo.zip)
 また、非常に大きなファイルであり、試してみると最初の数回失敗する可能性があります。 メイク
 試行する前に、迅速かつ信頼性の高いインターネット接続を持っていることを確認してください
 ダウンロード
 
 Tim Mullenの接続ツールボックスとサンプルデータ。 可能です。
-お問い合わせ
 
 このサイトから提示されたすべての資料をダウンロードすることもできます
 ワークショップ中以降は、ダウンロードできない場合は慌てません。
