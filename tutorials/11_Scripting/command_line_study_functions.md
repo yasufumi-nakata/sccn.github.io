@@ -118,9 +118,7 @@ MATLABの STUDY* は、
  >> [STUDY ALLEEG] = pop_precomp(STUDY, ALLEEG);
 ```
 
-コマンドラインから優先措置を使用する場合は、以下のコードスニペットがすべてのものを補う
-あらゆるデータセットのERP計算
-. . . . . . . . . . . . . . . . . . .
+コマンドラインから優先措置を使用する場合は、以下のコードスニペットがすべてのデータセットのERP計算を補います。
 
 ``` matlab
 >> [STUDY ALLEEG] = std_precomp(STUDY, ALLEEG, 'channels', 'erp', 'on', 'erpparams', {'rmbase' [-200 0]});
@@ -473,7 +471,7 @@ std_precomp(STUDY, ALLEEG, 'channels', 'customfunc', @(data)bsxfun(@minus, data,
 std_precomp(STUDY, ALLEEG, 'channels', 'customfunc', @(data)reshape(eegfilt(data(:,:), EEG(1).srate, 0,10,EEG(1).pnts,60,0,'fir1'), size(data)), 'interp', 'on');
 ```
 
-私たちが使うのは、 [std_readata.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_readata.m) つの つの つの つの つの つの つの *synonyms* versus *non-synonyms*。各データ配列は820時間です。
+私たちが使うのは、 [std_readata.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_readata.m) で *synonyms* versus *non-synonyms* の各データ配列(820時間)です。
 
 ```matlab
 [~, customdata] = std_readdata(STUDY, ALLEEG, 'channels', {ALLEEG(1).chanlocs.labels }, 'design', 1, 'datatype', 'custom');
@@ -508,7 +506,7 @@ std_plotcurve(EEG(1).times, customdata, 'chanlocs', ALLEEG(1).chanlocs);
 
 ![](/assets/images/custom_plot2.png)
 
-?????????????????????????????????????????????????????????????????????????????????????????????????????????????????? それぞれのチャンネルでroots(RMS)を計算します。
+それぞれのチャンネルでroots(RMS)を計算します。
 
 ```matlab
 figure;
@@ -525,7 +523,7 @@ setfont(gcf, 'fontsize', 16); % change font size
 
 ### カスタム対策に関する統計計算
 
-関数を使うことができることに注意して下さい [std_stat.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_stat.m) *customdata* と *customerp* のセルの配列を上回る。 上記は、61チャンネル分の値が返されます。 の の の の の の の の の の の の の 値 の の の の の の の の の 値 の の の の の の の の の の 
+関数を使うことができることに注意して下さい [std_stat.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_stat.m) で *customdata* と *customerp* のセルの配列を上回る。 上記は、61チャンネル分の値が返されます。
 
 ```matlab
 std_stat(erpdata, 'condstats', 'on', 'mcorrect', 'fdr', 'method', 'permutation')

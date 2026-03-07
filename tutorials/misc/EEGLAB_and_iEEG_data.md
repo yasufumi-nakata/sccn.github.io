@@ -11,8 +11,7 @@ EEGLABとiEEG、GSEE、またはECoGデータ
 
 EEGLAB は、EEGLAB のソースコードを、EEGLAB は、EEGLAB のコードを、EEGLAB のコードを、EEGLAB のコードで作成しています。 
 もしくは、 BIDS-Matlab-tools EEGLAB プラグイン
-また、BIDSフォーマット EEGLABは、EEGLAB(メニュー項目)から、 <span style="color: brown">ファイル > EEGLABエクスカ</span>). 
-ログイン
+また、BIDSフォーマットのデータはEEGLABのメニュー項目 <span style="color: brown">File > EEGLAB extensions</span> からインポートできます。
 ## データのインポート
 
 例えば、MEF3 と BIDS-Matlab-tools は、 
@@ -55,4 +54,4 @@ EEGLAB,NWB(Neurodata without Border) は、以下のとおりです。 [サブ-0
 iEEGについて
 - [FieldTrip sEEGチュートリアル](https://www.fieldtriptoolbox.org/tutorial/human_ecog/)
 - [マニア](http://www.neurotrack.fr/mia/) また、Brainstormのプラグインは、
-- [ログイン](https://rave.wiki/) ツールボックス(R言語)
+- [RAVE](https://rave.wiki/) ツールボックス（R言語）

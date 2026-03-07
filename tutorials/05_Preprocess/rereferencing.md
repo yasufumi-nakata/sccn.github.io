@@ -25,7 +25,7 @@ EEGLABの「sample_data」フォルダにあるツールボックスです。
 ソースのローカリゼーションに平均的な参照を計算することをお勧めします。
 
 選択する <span style="color: brown">ツール → データを再参照する</span> お問い合わせ
-データセットを呼び出して平均参照に変換 [ログイン](https://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_reref.m) 機能。 このメニュー項目を呼び出した場合
+データセットを平均参照に変換するには [pop_reref](https://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_reref.m) 関数を使用します。 このメニュー項目を呼び出した場合
 指定したデータセットで、次のウィンドウがポップアップ表示されます。
 
 ![スクリーンショット 2025-03-19 に 14 32 56](https://github.com/user-attachments/assets/8f1644a9-95a8-46b6-aada-b80698946556)
@@ -118,4 +118,4 @@ Cz("Cz") は、Cz("Cz") で、Cz("Cz") で、Cz("Cz") のチャンネルは、
 
 インフィニティでのリリファレンス
 -------------------------
-REST(Reference Electrode Standardization) は、Constructions から、Constructions へ直接アクセスする。 [ログイン](https://github.com/sccn/REST) EEGLAB プラグインは EEGLAB の プラグイン で デフォルト です。 <span style="color: brown">EEGLABの機能拡張</span> メニュー項目。
+REST(Reference Electrode Standardization) は、Constructions から、Constructions へ直接アクセスする。 [REST](https://github.com/sccn/REST) EEGLABプラグインはデフォルトでインストールされています。 <span style="color: brown">EEGLABの機能拡張</span> メニュー項目。

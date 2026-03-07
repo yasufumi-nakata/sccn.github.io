@@ -20,7 +20,7 @@ EEGLAB をロードする
 
 チュートリアルの残りの部分では、コンベンションを使用します。
 <span style="color: brown">メニュー</span> メニュー
-選択(例:サブメニュー項目を選択) <span style="color: brown">ログイン
+選択(例:サブメニュー項目を選択) <span style="color: brown">File
 既存のデータセット</span> トップレベルの下
 <span style="color: brown">ファイル</span> サブメニュー
 

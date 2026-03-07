@@ -64,7 +64,7 @@ ICA は ICA から ICA へ [アーティファクト](/tutorials/06_RejectArtifa
 インテンシブ。 
 
 そのためには、以前のインタラクティブウィンドウに戻ります。
- - 弊社では、お客様のご都合により、お客様のご要望にお応えいたします。
+ - 以下の手順を実行します:
 *10*最大入力 *電極番号 Hz
 分析...:*分野、 
 - コンポーネントのチェックを外す
@@ -142,9 +142,8 @@ Pvaf は、100% より大きい場合があります(複数の
 
 ![](/assets/images/I103single_plotdata.jpg)
 
-弊社では、以下の項目を、以下の項目に入力し、
-<span style="color: brown">Plot → コンポーネントERP → コンポーネントマップ</span>,
-コールする [ポップ ミュージック](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) 機能。 
+<span style="color: brown">Plot → コンポーネントERP → コンポーネントマップ</span> を選択し、
+[pop_envtopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) 関数を呼び出します。 
 プレス *7 をプロットする コンポーネントを
 データセットERPへ
 実際のコンポーネントは、以前のデータからサブトラクトすることができます。
@@ -165,7 +164,7 @@ Pvaf は、100% より大きい場合があります(複数の
 
 
 
-上の写真はメッシーに見えるので、再び呼び出します [ポップ ミュージック](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) 
+上の写真はメッシーに見えるので、再び呼び出します [pop_envtopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) 
 *200* ms から *500* ms までの時間範囲 ウィンドウズ で囲む
 以下に示すようにポスト刺激。
 

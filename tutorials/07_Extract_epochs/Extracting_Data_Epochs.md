@@ -8,15 +8,12 @@ nav_order: 7
 ---
 Epochsを抽出する
 ========================
-お問い合わせ
 
 <details open markdown="block">
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 EEGLAB をロードする

@@ -89,7 +89,7 @@ MATLAB パスのディレクトリ (英語)
 MATLABでは、*.m* ファイルとして保存します。
 
 *doitagain.m* は、
-たとえば で で で <span style="color: brown">オープン</span> MATLABのグラフィカルインターフェイスのボタン。
+たとえば <span style="color: brown">オープン</span> MATLABのグラフィカルインターフェイスのボタンで開く。
 
 ```matlab
 % EEGLAB history file generated on the 20-Dec-2020
@@ -114,7 +114,7 @@ eeglab redraw;
 メインのグラフィックインターフェイスが確実になるように、最後に追加されました。
 データセットが処理された後更新される。 
 
-今すぐプレス <span style="color: brown">Run</span> MATLABのボタンです。 テキストが作成されます。 テキストが実行されます。 <span style="color: brown">ファイル → 履歴スクリプト → スクリプトを実行</span> このメニュー項目は、MATLAB です。 グラフィカル は、EEGLAB のコンパイルを受け付けています。 また、MATLAB では、MATLAB では、以下の手順を実行できます。
+今すぐプレス <span style="color: brown">Run</span> MATLABのボタンです。 テキストが作成されます。 テキストが実行されます。 <span style="color: brown">ファイル → 履歴スクリプト → スクリプトを実行</span> このメニュー項目は、MATLAB です。 グラフィカル は、EEGLAB のコンパイルを受け付けています。 また、MATLAB では、以下の手順を実行できます。
 
 ``` matlab
 doitagain
@@ -226,11 +226,11 @@ ans =
 *EEG.history*のコマンドは、
 データセット(例えば、複数の被験者から)と同一を申請したい
 *EEG.history* は、
-EEGLAB は、EEGLAB で、EEGLAB を運営しています。
+EEGLAB を運営しています。
 例えば、新しいデータセットがあれば、同じように処理したい
-最近のデータセット EEGLAB に、*\>\>\>\>\>\>\>\>\>
+最近のデータセット EEGLAB に、*\>\>
 EEG.history* では、新しいデータセットで実行します。
-EEGLAB は、EEGLAB の略称で、
+EEGLAB は、
 MATLABは、
 
 具体的に、最初に処理するために
@@ -307,7 +307,7 @@ eegh
 ```
 
 MATLAB では、MATLAB では、EEGLAB のセッションを出力します。
-ラインウィンドウ。 <span style="color: brown">ファイル → データの読み込み</span>;;;;;;; EEGLAB の「sample_data」のフォルダにある「eeglab_data.set」のチュートリアルファイル。、*Open* など。
+ラインウィンドウ。 <span style="color: brown">ファイル → データの読み込み</span> で EEGLAB の「sample_data」のフォルダにある「eeglab_data.set」のチュートリアルファイルを開くなど。
 、入力 *eegh* の
 コマンドラインは、次のテキストを返す必要があります。
 
@@ -324,8 +324,7 @@ MATLABワークスペース(EEGLABグローバル変数)[pop_loadset.m ディレ
 *ALLEEG*ファイルデータセット 
 
 前のセクションで示されているスクリプトの種類は、戻ってくる可能性があり、
-EEGLABのグラフィックとMATLABのコラボレーション
-つの * * * * * * * *
+EEGLABのグラフィックとMATLABのコラボレーションで
 *ALLEEG*が変更されました。
 *EEG*追加または直接変更
 *EEG* は、MATLAB のファイルから構成されます。
@@ -503,7 +502,7 @@ eeglab redraw % Update the EEGLAB window to view changes
 コメントや追加のデータ管理コマンドなしで、コンパクト化。
 
 *注意事項:* 以前述べたように、関数は
-EEGLABの ウィンドウから、ウィンドウのタイトルバーのアンダーリング *pop_* 関数の呼び出し。 <span style="color: brown">ファイル → 既存のデータセットをロードする</span> EE で で で [pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m).
+EEGLABの ウィンドウから、ウィンドウのタイトルバーのアンダーリング *pop_* 関数の呼び出し。 <span style="color: brown">ファイル → 既存のデータセットをロードする</span> で [pop_loadset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m) を実行。
 
 ```matlab
 eeglab_path = fileparts(which('eeglab.m'));

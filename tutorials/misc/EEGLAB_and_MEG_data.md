@@ -19,11 +19,11 @@ EEGLAB は、File-IO からファイル・IO まで、様々な情報を発信�
 メールマガジン
 ---------------------------
 
-例えば、Neuromag Data は、 顔処理 [データセット](https://nemar.org/dataexplorer/detail?dataset_id=ds000117)*sub-01_ses-meg_task-facerecognition_run-01_meg.fif* を *sub-01/ses-meg/meg/meg* にダウンロードしてください。 メニュー <span style="color: brown">ファイル > インポートデータ > File-IO インターフェイス</span>お問い合わせ ファイルやフォルダをインポートしたい場合は、 ボタンを選択してファイルをインポートし、コンピュータ上のファイルを選択します。
+例えば、Neuromag Data は、 顔処理 [データセット](https://nemar.org/dataexplorer/detail?dataset_id=ds000117)*sub-01_ses-meg_task-facerecognition_run-01_meg.fif* を *sub-01/ses-meg/meg/meg* にダウンロードしてください。 メニュー <span style="color: brown">ファイル > インポートデータ > File-IO インターフェイス</span> を選択し、ファイルやフォルダをインポートしたい場合は、 ボタンを選択してファイルをインポートし、コンピュータ上のファイルを選択します。
 
 ![2018年12月22日](https://user-images.githubusercontent.com/1872705/209294989-34f958d5-6cc9-4639-9662-c96cf4217204.png)
 
-既定のオプション メニュー項目 <span style="color: brown">編集 > データの選択</span>このページではjavascriptを使用しています。 もう一度 もう一度 お問い合わせ 他の 他の 他の 他の 他の 他の
+既定のオプション メニュー項目 <span style="color: brown">編集 > データの選択</span>このページではjavascriptを使用しています。
 
 ![スクリーンショット 2022-12-22 に 10 56 53](https://user-images.githubusercontent.com/1872705/209293499-5f5a06c4-7cf4-45a8-8d89-e323e888cddc.png)
 
@@ -35,15 +35,15 @@ CTF MEGについて
 ----------------------
 より より より ???????????????? [チュートリアルデータ](https://nemar.org/dataexplorer/detail?dataset_id=ds000246) Brainstorm、その大きさはそのままで、このデータセットのセンサーを閉じます。 
 
- まず をダウンロード をダウンロード をダウンロード メニュー <span style="color: brown">ファイル > インポートデータ > File-IO インターフェイス</span>お問い合わせ このページではjavascriptを使用しています。 このページの先頭へ 大 大 で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で 。 。 で で で で 。 。 。 。 。 。 。 。 。 。 。 。 。 。 で で で で で で で で 。 。 。 。 データを つの に に つの つの つの つの つの つの つの つの つの つの つの つの つの つの つの つの つの つの つの つの つの つの つの つの つの つの に に に つの に に に に に に に に に に に に に に に に に に に に に 1〜2年前に意味をつけました。 連続 があります があります 連続 連続 連続 連続 連続 連続 連続 連続 を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を コンテンツの検索結果は、 [統計力の減少](https://www.biorxiv.org/content/10.1101/2022.12.03.518987v1)お問い合わせ
+ まず [チュートリアルデータ](https://nemar.org/dataexplorer/detail?dataset_id=ds000246) をダウンロードし、メニュー <span style="color: brown">ファイル > インポートデータ > File-IO インターフェイス</span> を選択します。 データを連続データとしてインポートします。詳細は [統計力の減少](https://www.biorxiv.org/content/10.1101/2022.12.03.518987v1) を参照してください。
 
 ![2022年12月23日 12:26 PM](https://user-images.githubusercontent.com/1872705/209402761-fcce17a6-aac0-47cb-8bb6-a5b501edf7f0.png)
 
-その後、MEG のチャンネルは、 Neuromag では、このデータセットでは、種類が異なります。 CTFについて コンテンツの検索 <span style="color: brown">編集 > データの選択</span>MZP01-4408*に、ブラウズシ、MLC11-4408*に*MZP01-4408*をつけて下さい。 もう一度 もう一度 お問い合わせ 274 274 274 274 274 274 274 274 274 で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で
+その後、MEG のチャンネルは、 Neuromag では、このデータセットでは、種類が異なります。 CTFについて コンテンツの検索 <span style="color: brown">編集 > データの選択</span>MZP01-4408*に、ブラウズし、MLC11-4408*に*MZP01-4408*をつけてください。
 
 ![スクリーンショット 2022-12-23 に 11 52 43](https://user-images.githubusercontent.com/1872705/209402624-82ab9561-a4a7-4631-8b39-da69bb81d449.png)
 
-次にセンサーの位置を割り当てる必要があります。 そのためには、メニュー項目を呼び出します <span style="color: brown">編集 > チャネルの場所</span>*Look up locs*ボタンを押します。 2D Protto は、Centre から、Centre から、Centre から、Centre から、Centre へ、Centre から、Centre へ、Centre へ、Centre へ、Centre へ直接アクセスします。 「4480」の「接尾辞」のチャンネルで、チャンネルを占領する。 このページではjavascriptを使用しています。 します します します します します します
+次にセンサーの位置を割り当てる必要があります。 そのためには、メニュー項目を呼び出します <span style="color: brown">編集 > チャネルの場所</span>*Look up locs*ボタンを押します。 2D Protto は、Centre から直接アクセスします。 「4480」の「接尾辞」のチャンネルで、チャンネルを占領する。 このページではjavascriptを使用しています。
 
 ![2018年12月23日](https://user-images.githubusercontent.com/1872705/209403077-a3abcf6b-104a-43fe-aecc-7b19bf7b237c.png)
 
@@ -51,7 +51,7 @@ CTF MEGについて
 
 ![2018年12月23日](https://user-images.githubusercontent.com/1872705/209403788-6ef250ea-ff64-416f-872c-5648fd6e1bd6.png)
 
-メニュー項目 <span style="color: brown">パロット > チャネルのスペクトルおよび地図</span> スペクトル を を を します 電極をプロットする お問い合わせ
+メニュー項目 <span style="color: brown">パロット > チャネルのスペクトルおよび地図</span> スペクトルをプロットし、電極をプロットします。
 
 ![2018年12月23日](https://user-images.githubusercontent.com/1872705/209403909-5cef619b-86db-481a-baad-f8a750f2bd25.png)
 
@@ -68,7 +68,7 @@ eeglab redraw
 
 ソース
 -----------------------------
-EEGは、 このチュートリアルでは、このチュートリアルでは、 [Henson-Wakeman データセット](https://nemar.org/dataexplorer/detail?dataset_id=ds000117)お問い合わせ 最初の被写体から一部のファイルのみが使用可能です。 [詳しくはこちら](https://sccn.ucsd.edu/eeglab/download/ds000117_sub-01.zip)DIPFIT は、EeGLAB の拡張機能で、FieldT の機能が搭載されています。 このチュートリアルは、 [EEGについて](../09_source/Custom_head_model.html) 同じデータで。
+EEGは、 このチュートリアルでは、このチュートリアルでは、 [Henson-Wakeman データセット](https://nemar.org/dataexplorer/detail?dataset_id=ds000117) を使用します。最初の被写体から一部のファイルのみが使用可能です。 [詳しくはこちら](https://sccn.ucsd.edu/eeglab/download/ds000117_sub-01.zip)DIPFIT は、EeGLAB の拡張機能で、FieldT の機能が搭載されています。 このチュートリアルは、 [EEGについて](../09_source/Custom_head_model.html) 同じデータで。
 
 ## MRI は、MRI と シリアス
 
@@ -120,7 +120,7 @@ MEGについて
 ------------
 パイプライン の しました しました の [詳しくはこちら](https://github.com/sccn/practical_MEEG)ソースのローカリゼーションは、 ソースの ソースの ソース ソース ソース ソース ソース ソース ソース ソース ソース ソース ソース ソース ソース ソース ソース ソース ソース
 
-お問い合わせ
+参考リンク
 --------------------
 EEGLABのMEGのソースローカリゼーションは、フィールドトリップ機能が機能します。 FieldTrip では、 EEGLAB のソフトウェアは、MATLAB のソフトウェアを、EEGLAB のソフトウェアにインストールしてください。
 

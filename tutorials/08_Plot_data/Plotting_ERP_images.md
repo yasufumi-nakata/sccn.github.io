@@ -328,7 +328,7 @@ Ok* は、
 
 ERPPanel(&micro;V)は、ERPPanel(&micro;V)を発売しました。
 ショー ショー ショー ショー ショー * 必須
-ログイン 青の領域は1%
+注: 青の領域は1%
 ランダムなデータから描画された代理データによると、自信の限界
 ベースラインの窓。 ここでは、選択した周波数で電力 (10.12)
 Hz は、epo に python に s を s から s へ s へ s へ s へ s へ s から s へ s へ s へ s から s へ s へ s へ s へ s へ s s へ s s へ s s へ s s s へ s s s s s s s へ s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s  

@@ -202,11 +202,11 @@ EEG = clean_artifacts( EEG,'FlatlineCriterion',5,'ChannelCriterion',0.8, ...
 
 ### なぜ2回参照できますか?
 
-*clean_rawdata* は、よりよく参考にしてください。 この投稿をお気に入りに追加しました。 よく見る 2 . . . . . . 1 つを undoes にします。 [こちら](../05_Preprocess/rereferencing.html).
+*clean_rawdata* は、よりよく参考にしてください。 2回目の参照は1回目を undoes にします。 [こちら](../05_Preprocess/rereferencing.html).
 
 ### 自動洗浄パラメータ
 
-*clean_artifacts* は、EEGLAB に あります。 特に、*'ChannelCriterion'* ????????????? *'BurstCriterion'* は別の変数です。 ???????????????????? 参照 [clean_rawdata](https://github.com/sccn/clean_rawdata).
+*clean_artifacts* は、EEGLAB にあります。 特に、*'ChannelCriterion'* と *'BurstCriterion'* は別の変数です。 参照 [clean_rawdata](https://github.com/sccn/clean_rawdata).
 
 データをクリーニングするための最適なパラメータを見つけることは、パイプラインの設計に不可欠です。 被験者数を実験してみると最高でしょう。 また、すべての被験者に対してパイプラインを実行すると、各被験者に対してどれだけのデータが削除されたかを確認する必要があります。 場合によっては、データの80%は、いくつかの被験者のために削除されます。
 
