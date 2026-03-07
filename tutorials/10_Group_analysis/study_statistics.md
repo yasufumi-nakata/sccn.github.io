@@ -57,7 +57,7 @@ EEGLAB ユーザが利用するのは、
 ![画像が見つかりません](/assets/images/studystats04.png)
 
 チャンネルの2つのリストの中央に、クリック
-このページではjavascriptを使用しています。 
+。 
 - *1st 変数の* は、
 本研究では、この研究の変数が選択的である、*Compute 2nd 変数の統計*が使用されます。 
 - *Parametrics* のデータベース *permutation を 使ってください。
@@ -138,7 +138,7 @@ ERPs*ボタンを押しながら、左の列に*Plot ERPs*ボタンを押しま�
 
 ![画像が見つかりません](/assets/images/studystats24.png)
 
-統計情報* このページではjavascriptを使用しています。
+統計情報* 。
 
 ![画像が見つかりません](/assets/images/studystats25.png)
 

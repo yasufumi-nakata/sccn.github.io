@@ -10,7 +10,7 @@ nav_order: 2
 クイックスタートガイド
 ================
 
-このページではjavascriptを使用しています。
+。
 
 EEGLAB をロードする
 ---------------------------
@@ -29,7 +29,7 @@ WindowsとMacOSが異なる
 
 ![こちら](/assets/images/Pop_loadset.png)
 
-このページではjavascriptを使用しています。
+。
 [データのインポートとイベント情報の追加](/tutorials/04_Import/Importing_Continuous_and_Epoched_Data.html)
 
 「eeglab_data.set」のチュートリアル

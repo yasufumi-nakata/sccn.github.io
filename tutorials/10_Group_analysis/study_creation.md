@@ -127,7 +127,7 @@ EEGLAB 総合研究
 再分析・再分析 フィールド *Subject* と *Condition* (above) は、
 自動的に。 既にデータセットが含まれているためです。
 インフォメーション たとえば、このデータセットをロードする
-EEGLABについて <span style="color: brown">編集 → データセット情報</span> メニュー項目は、*subject*、*condition*、*group*、*session*、*run*をこのデータセットに作成します。  また で で で このページではjavascriptを使用しています。
+EEGLABについて <span style="color: brown">編集 → データセット情報</span> メニュー項目は、*subject*、*condition*、*group*、*session*、*run*をこのデータセットに作成します。  また で で で 。
 
 *Browse* は、 
 

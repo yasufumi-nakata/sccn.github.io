@@ -18,7 +18,7 @@ grand_parent: Tutorials
 スタットパワーレベル、特定のレイテンシーウィンドウ、アルファフェーズの電圧を意味します
 stimulusのオンセット、または等で、
 隣接する試行と、ついに2次元で色分けして視覚化
-このページではjavascriptを使用しています。 [コンセプトガイド](/tutorials/ConceptsGuide/erp_image_background.html). 
+。 [コンセプトガイド](/tutorials/ConceptsGuide/erp_image_background.html). 
 
 <details open markdown="block">
   <summary>
@@ -97,7 +97,7 @@ decimate(reduce)の要素によって
 作品紹介
 ----------------------------------------------
 
-このページではjavascriptを使用しています。
+。
 実験中に起こる順序。 可能です。
 イベントフィールドとしてコードされている他の変数の順にそれらをソートする
 データセット内の各試験に所在します。

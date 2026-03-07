@@ -189,7 +189,7 @@ ans =
 EEGLAB 多重データセット変更が始まります。
 *EEG.history*は、現在のデータセットの変更のみとなります。
 
-このページではjavascriptを使用しています。
+。
 メニューを選択することにより、データセットに切り替える(元の連続データセット)
 アイテム <span style="color: brown">データセット → データセット 1</span>, と入力します。 *\>\>
 EEG.history*(以下に示す)、
@@ -298,7 +298,7 @@ EEGLAB MATLABのデータ構造は2つあります。*EEG*と*ALLEEG*。
 EEGLAB では、EEGLAB で勉強しています。
 処理中のデータセットに関する情報。 詳細はこちら [EEGLAB データ構造](/tutorials/ConceptsGuide/Data_Structures.html) 詳細については、.
 
-このページではjavascriptを使用しています。 多岐に渡る
+。 多岐に渡る
 現在の EEGLAB のセッションは、
 *eegh* (履歴) コマンド。
 

@@ -30,7 +30,7 @@ EEGLABの様々なデータセットをロードして選択してください�
 
 このチュートリアルでは、 [5-サブジェクト実験](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (450Mb) [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html) このデータに関する詳細情報 
 
-このページではjavascriptを使用しています。 <span style="color: brown">ファイル → 既存のデータセットをロードする</span> メニュー項目. 複数のデータセットは, 以下は, EEGLAB
+。 <span style="color: brown">ファイル → 既存のデータセットをロードする</span> メニュー項目. 複数のデータセットは, 以下は, EEGLAB
 
 ![](/assets/images/multisub1.png)
 

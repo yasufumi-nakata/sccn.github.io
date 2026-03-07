@@ -51,7 +51,7 @@ zipアーカイブは、PDF のドキュメント、変更の詳細は zip で�
 
 ![こちら](/assets/images/studydesign6.png)
 
-このインターフェイスには、特に、データセット、条件、セッションの一覧、およびそれらに関連する実行に関する情報が含まれています。 それは細部で記述されます [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html)このページではjavascriptを使用しています。 文字データエポック1つ、*probe* 文字1つに。
+このインターフェイスには、特に、データセット、条件、セッションの一覧、およびそれらに関連する実行に関する情報が含まれています。 それは細部で記述されます [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html)。 文字データエポック1つ、*probe* 文字1つに。
 
 ### 現在のデザインを見る
 

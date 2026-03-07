@@ -23,7 +23,7 @@ EEGLAB は、File-IO からファイル・IO まで、様々な情報を発信�
 
 ![2018年12月22日](https://user-images.githubusercontent.com/1872705/209294989-34f958d5-6cc9-4639-9662-c96cf4217204.png)
 
-既定のオプション メニュー項目 <span style="color: brown">編集 > データの選択</span>このページではjavascriptを使用しています。
+既定のオプション メニュー項目 <span style="color: brown">編集 > データの選択</span>。
 
 ![スクリーンショット 2022-12-22 に 10 56 53](https://user-images.githubusercontent.com/1872705/209293499-5f5a06c4-7cf4-45a8-8d89-e323e888cddc.png)
 
@@ -43,7 +43,7 @@ CTF MEGについて
 
 ![スクリーンショット 2022-12-23 に 11 52 43](https://user-images.githubusercontent.com/1872705/209402624-82ab9561-a4a7-4631-8b39-da69bb81d449.png)
 
-次にセンサーの位置を割り当てる必要があります。 そのためには、メニュー項目を呼び出します <span style="color: brown">編集 > チャネルの場所</span>*Look up locs*ボタンを押します。 2D Protto は、Centre から直接アクセスします。 「4480」の「接尾辞」のチャンネルで、チャンネルを占領する。 このページではjavascriptを使用しています。
+次にセンサーの位置を割り当てる必要があります。 そのためには、メニュー項目を呼び出します <span style="color: brown">編集 > チャネルの場所</span>*Look up locs*ボタンを押します。 2D Protto は、Centre から直接アクセスします。 「4480」の「接尾辞」のチャンネルで、チャンネルを占領する。 。
 
 ![2018年12月23日](https://user-images.githubusercontent.com/1872705/209403077-a3abcf6b-104a-43fe-aecc-7b19bf7b237c.png)
 
@@ -90,7 +90,7 @@ MRIは、脳、脳頭脳、脳幹細胞、脳神経細胞、脳細胞、脳細�
 
 ![スクリーンショット 2025-10-28 に 13 54 28](https://github.com/user-attachments/assets/149060b8-ec2e-4c98-b8c6-26de5691ddd2)
 
-これが完了したら、メニュー項目を呼び出します <span style="color:brown">DIPFIT ソースローカリゼーション > ヘッドモデルと設定</span>このページではjavascriptを使用しています。
+これが完了したら、メニュー項目を呼び出します <span style="color:brown">DIPFIT ソースローカリゼーション > ヘッドモデルと設定</span>。
 
 ![2022年12月11日 7 43 48](https://user-images.githubusercontent.com/1872705/206956553-435a3f9f-48db-4bff-b714-4fddc37aa3f6.png)
 

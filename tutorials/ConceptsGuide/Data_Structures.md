@@ -108,7 +108,7 @@ EEGLABデータセット
 EEGLAB 変数 *ALLEEG* は、すべてのデータセットを MATLAB は、
 現在の EEGLAB/MATLAB の作業現場です。
 *EEG*データセットの配列(上述)
-このページではjavascriptを使用しています。 MATLABのALLEEG*
+。 MATLABのALLEEG*
 コマンドラインリターン:
 
 ``` matlab

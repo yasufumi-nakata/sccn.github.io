@@ -42,7 +42,7 @@ scalp チャンネル (scalp )
 同等チャンネル(Cz)から記録されたデータ
 異なる被験者は、基礎の異なる混合物の活動を要約することができます
 同等電極の精度を正確に問わない
-このページではjavascriptを使用しています。
+。
 EEG研究。
 
 ### ICはICですか?
@@ -88,7 +88,7 @@ ICAコンポーネントクラスタリング
 すべてのデータセットを同時に編集できます。
 メニュー項目 <span style="color: brown">編集 → チャネルの場所</span>). 
 - キーワード <span style="color: brown">ICA は、</span> あらゆるデータセットで、
-- このページではjavascriptを使用しています。 <span style="color: brown">DIPFIT ダイポールの検索 → ヘッドモデルと設定</span>それから <span style="color: brown">ツール → DIPFIT イヤホンの検索 → オートフィット</span>.
+- 。 <span style="color: brown">DIPFIT ダイポールの検索 → ヘッドモデルと設定</span>それから <span style="color: brown">ツール → DIPFIT イヤホンの検索 → オートフィット</span>.
 - メニュー項目を使用して定期的に変更を保存しています <span style="color: brown">ファイル → 現在の学習を保存</span> 保存することができます
 STUDY* リリース
 テキストボックスにデフォルトファイル名を残します - または新しい入力で
@@ -100,7 +100,7 @@ STUDY* リリース
 
 ![](/assets/images/studyclust1.png)
 
-*STUDY*は、 [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html)このページではjavascriptを使用しています。 http://www.study.com/
+*STUDY*は、 [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html)。 http://www.study.com/
 ダイポールモデルの残留期間を設定する
 各コンポーネントに関連する。 このボタンを押します。 下記エントリーボックスが表示されます。 
 

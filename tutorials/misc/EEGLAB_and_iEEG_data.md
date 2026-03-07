@@ -41,7 +41,7 @@ EEGLAB,NWB(Neurodata without Border) は、以下のとおりです。 [サブ-0
 
 ![Screenshot 2024-04-17 に 10 02 28 午前](https://github.com/sccn/sccn.github.io/assets/1872705/d8ddf709-7963-4f05-adef-8bf4049cc484)
 
-このページではjavascriptを使用しています。 メニュー項目の検索 <span style="color: brown">ツール > エキスのエポック</span> 以下に示すように、最初のユニットに対応するイベントを選択します。
+。 メニュー項目の検索 <span style="color: brown">ツール > エキスのエポック</span> 以下に示すように、最初のユニットに対応するイベントを選択します。
 
 ![スクリーンショット 2024-04-17 に 11 45 31](https://github.com/sccn/sccn.github.io/assets/1872705/c9b4082c-33c3-4f75-8d0a-522e852a7009)
 

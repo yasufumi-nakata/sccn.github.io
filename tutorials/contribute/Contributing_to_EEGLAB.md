@@ -112,7 +112,7 @@ EEGLAB は、EEGLAB の新機能です。
 [プラグイン](/tutorials/contribute/Contributing_to_EEGLAB.html) 代わりに。
 
 ### リポジトリのフォーク
-このページではjavascriptを使用しています。
+。
 
 ソフトウェアリポジトリをフォーク(コピー)することで、リポジトリのコピーを作成
 あなたに属します。 これにより実験が可能
