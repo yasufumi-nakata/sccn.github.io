@@ -53,7 +53,7 @@ EEGおよび関連データの高度な分析、詳細な方法
 <span style="color: purple">10:30 – 11:15 -- ICA理論(Arnaud Delorme)</span>
 [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ad_lecture_ica.pdf)
 
-<span style="color: orange">11:15 – 12:00 -- データのインポート、アーティファクトの拒絶と実行 ICA (Claire Braboszcz)</span>
+<span style="color: orange">11:15 – 12:00 -- データのインポート、アーティファクトの除去と実行 ICA (Claire Braboszcz)</span>
 [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_cb_evaluate_ic.pdf)
 <!-- -->
 

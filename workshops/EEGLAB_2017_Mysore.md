@@ -68,7 +68,7 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 
 <span style="color: purple">14:30～15.15 -- ICA理論(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_lecture_ica.pdf)
 
-<span style="color: orange">15:15 – 16:15 -- EEGデータのインポート、アーティファクト拒絶(Luca Pion-Tonachini)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_lpt_preproc_new.pdf)
+<span style="color: orange">15:15 – 16:15 -- EEGデータのインポート、アーティファクト除去(Luca Pion-Tonachini)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_lpt_preproc_new.pdf)
 <!-- -->
 
 

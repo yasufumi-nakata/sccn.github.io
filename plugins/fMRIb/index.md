@@ -55,7 +55,7 @@ Niazy RK, Beckmann CF, Iannetti GD, Brady JM, スミサ SM. 神経画像. 2005, 
 
 * 同時EEG-fMRI記録のための再アライメントパラメータ非公式アーファクト補正。 Moosmann M, Schönfelder VH, Specht K, Scheeringa R, Nordby H, Hugdahl K. Neuroimage. 2009, 45(4):1144-50. http://sccn.ucsd.edu/wiki/EEGLAB_Plugins http://fmri.uib.no/tools/bergen_plugin.htm
 
-* この目的のために別の推奨アプリケーションは、SPM用のプラグインであるFASSTですが、EEGLABにデータをインポートすることができます。 これは、文字通り高速で機能し、BCG拒絶のための最も洗練されたソリューションの1つであるBCG拒絶のための禁忌のICAが装備されています。
+* この目的のために別の推奨アプリケーションは、SPM用のプラグインであるFASSTですが、EEGLABにデータをインポートすることができます。 これは、文字通り高速で機能し、BCG除去のための最も洗練されたソリューションの1つであるBCG除去のための禁忌のICAが装備されています。
 
 * 機能磁気共鳴イメージング(fMRI)で記録された連続電気脳図(EEG)時間シリーズからのパルス関連アーティファクト(PRA)のレジェクション。 Leclercq Y, Balteau E, Dang-Vu T, Schabus M, Luxen A, Maquet P, Phillips C. Neuroimage. 2009, 44(3):679-91.
 

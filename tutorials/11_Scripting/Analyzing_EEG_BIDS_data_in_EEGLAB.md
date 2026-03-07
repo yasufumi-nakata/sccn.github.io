@@ -102,9 +102,9 @@ CURRENTSTUDY = 1; EEG = ALLEEG; CURRENTSET = [1:length(EEG)];
 ```
 
 3つのステップでアーティファクト除去を行います。
-1. ミルドアーティファクト拒絶による [clean_rawdata](https://github.com/sccn/clean_rawdata) プラグイン
-2. 人工の独立したコンポーネントの拒絶
-3. 攻撃的なアーティファクトの拒絶 [clean_rawdata](https://github.com/sccn/clean_rawdata) プラグイン
+1. ミルドアーティファクト除去による [clean_rawdata](https://github.com/sccn/clean_rawdata) プラグイン
+2. 人工の独立したコンポーネントの除去
+3. 攻撃的なアーティファクトの除去 [clean_rawdata](https://github.com/sccn/clean_rawdata) プラグイン
 
 前に 1。 ICAは、*clean_rawdata* で全てが削除されます。 ICA は、データから削除/サブトラクト可能で、望ましくないコンポーネントを除去します。
 

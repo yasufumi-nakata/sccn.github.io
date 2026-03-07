@@ -117,7 +117,7 @@ EEGLABは、元のイベント情報を*EEG.urevent*構造体に保持してい�
 元のデータセットに戻るには、EEGLABウィンドウのメニューから
 <span style="color: brown">データセット → データセット1</span>を選択してください。
 
-### データの悪い部分を拒絶するための戦略
+### データの悪い部分を除去するための戦略
 
 *Stack*ボタン（[eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)ウィンドウの右上隅）を押し、約30秒のデータビューに設定してください。30秒のウィンドウ内でデータを確認し、ノイズの多い領域を特定できます。
 

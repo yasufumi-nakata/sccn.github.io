@@ -128,7 +128,7 @@ grand_parent: Workshops
 </td>
 <td align="left"><b>ワークショップ1:EEGLABメソッドI</b><br>
 <ul><li>クラウス・グラマン データインポートとチャネル分析 <a href="https://sccn.ucsd.edu/githubwiki/files/1_dataimport-chananalysis.pdf" class="internal" title="1 DataImport-ChanAnalysis.pdf">(PDF)</a><br>
-</li><li>Julie Onton - アーティファクト拒絶とランニングICA <a href="https://sccn.ucsd.edu/githubwiki/files/2_artrej_runningica.pdf" class="internal" title="2 ArtRej RunningICA.pdf">(PDF)</a><br>
+</li><li>Julie Onton - アーティファクト除去とランニングICA <a href="https://sccn.ucsd.edu/githubwiki/files/2_artrej_runningica.pdf" class="internal" title="2 ArtRej RunningICA.pdf">(PDF)</a><br>
 </li><li>Julie Onton - ICAコンポーネントの評価 パート1 <a href="https://sccn.ucsd.edu/githubwiki/files/3_evaluateics.pdf" class="internal" title="3 EvaluateICs.pdf">(PDF)</a>
 </li></ul>
 </td></tr>

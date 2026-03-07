@@ -48,7 +48,7 @@ EEGおよび関連データの高度な分析、詳細な方法
 
 <span style="color: purple">10:30 – 11:15 -- ICA理論(Tzyy-Ping Jung)</span>
 
-<span style="color: orange">11:15 – 12:00 -- データインポート、アーティファクト拒絶およびICA分解(Julie Onton) [(PDF)](https://sccn.ucsd.edu/githubwiki/files/1_gettingstarted_eeglab.pdf)[(タスク)](https://sccn.ucsd.edu/githubwiki/files/sternbergtaskexplanation.pdf)</span>
+<span style="color: orange">11:15 – 12:00 -- データインポート、アーティファクト除去およびICA分解(Julie Onton) [(PDF)](https://sccn.ucsd.edu/githubwiki/files/1_gettingstarted_eeglab.pdf)[(タスク)](https://sccn.ucsd.edu/githubwiki/files/sternbergtaskexplanation.pdf)</span>
 <!-- -->
 
 

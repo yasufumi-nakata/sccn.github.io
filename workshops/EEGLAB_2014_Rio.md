@@ -53,7 +53,7 @@ EEGLAB環境 メニュー
 
 
 
-<span style="color: orange">14:00 – 15:30 -- データをインポートし、データを拒絶し、ICA分解の練習(Arnaud Delorme)を実行</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_preprocessing.pdf)
+<span style="color: orange">14:00 – 15:30 -- データをインポートし、データを除去し、ICA分解の練習(Arnaud Delorme)を実行</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_preprocessing.pdf)
 
 <span style="color: orange">15:30-17:00 -- ICAコンポーネントの練習(Arnaud Delorme)の評価</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_evaluation_ica.pdf)
 

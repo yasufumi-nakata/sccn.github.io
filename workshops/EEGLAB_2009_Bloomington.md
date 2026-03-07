@@ -73,7 +73,7 @@ grand_parent: Workshops
 
 <span style="color: orange">8:30～9:20～ データのインポートとチャネル分析(Julie Onton)</span> [(PDF)](https://sccn.ucsd.edu/githubwiki/files/practicum_1_data_import.pdf)
 
-<span style="color: orange">9:20 – 10:10 午後 -- アーティファクト拒絶とランニング ICA (Julie Onton)</span> [(PDF)](https://sccn.ucsd.edu/githubwiki/files/practicum_2_preprocess_ica.pdf)
+<span style="color: orange">9:20 – 10:10 午後 -- アーティファクト除去とランニング ICA (Julie Onton)</span> [(PDF)](https://sccn.ucsd.edu/githubwiki/files/practicum_2_preprocess_ica.pdf)
 
 <span style="color: green">-- ブレーク -</span>
 

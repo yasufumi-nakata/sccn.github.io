@@ -82,7 +82,7 @@ EEGLABワークショップのwikiページには、スライドも含まれて�
 
 #### EEGLAB(2017年、Delorme)でマウスデータを処理する
 -   [パート1:データの取得](https://youtu.be/omn7y3TIsGc)
--   [Part 2:アーティファクト拒絶](https://youtu.be/H6-e3tNT9EQ)
+-   [Part 2:アーティファクト除去](https://youtu.be/H6-e3tNT9EQ)
 -   [パート3:複数のデータの解析ファイル](https://youtu.be/fB6TJjhO674)
 -   [パート4:統計分析](https://youtu.be/y8jK-bW1U3A)
 

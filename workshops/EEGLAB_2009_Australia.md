@@ -41,7 +41,7 @@ grand_parent: Workshops
 
 <span style="color: green">**-- 12:00-1:00 ランチ --**</span>
 
-<span style="color: orange">1:00 - 1:30 午後 -- アーティファクト拒絶とICA(Julie Onton)の実行</span>
+<span style="color: orange">1:00 - 1:30 午後 -- アーティファクト除去とICA(Julie Onton)の実行</span>
 
 <span style="color: purple">午後2時～午後2時30分 時間頻度分解(Tzyy-Ping Jung)</span>
 

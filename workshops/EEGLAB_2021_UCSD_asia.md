@@ -742,7 +742,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 <blockquote>
 	<p>
 		<span style="color: gray">パラレルセッション2 
-			<strong>自動化されたアーティファクト拒絶とコンポーネント分類</strong>
+			<strong>自動化されたアーティファクト除去とコンポーネント分類</strong>
 		</span>
 	</p>
 </blockquote>

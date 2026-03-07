@@ -91,7 +91,7 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 
 
-<span style="color: orange">14:00～15:30 データをインポートし、データを拒絶し、ICA分解を実行(John Iversen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_jri_preproc.pdf)
+<span style="color: orange">14:00～15:30 データをインポートし、データを除去し、ICA分解を実行(John Iversen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_jri_preproc.pdf)
 <!-- -->
 
 

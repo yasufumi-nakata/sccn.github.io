@@ -110,7 +110,7 @@ MATLABをインストールしたノートパソコン
 <span style="color: purple">10:30-11:30 -- ICA理論(Scott Makeig)</span>
 [サイトマップ](https://github.com/sccn/sccn.github.io/files/11948490/Makeig_ICA_Aspet23._pdf.pdf)
 
-<span style="color: orange">11:30 – 13:00 -- データインポート、アーティファクト拒絶(Ramon Martinez) [サイトマップ](https://github.com/sccn/sccn.github.io/files/11947670/EEGLAB_WS_ASPET_2023_preprocessing_Session1.pdf)
+<span style="color: orange">11:30 – 13:00 -- データインポート、アーティファクト除去(Ramon Martinez) [サイトマップ](https://github.com/sccn/sccn.github.io/files/11947670/EEGLAB_WS_ASPET_2023_preprocessing_Session1.pdf)
 </span>
 
 <span style="color: green">13:00～14:00 ランチ --</span>

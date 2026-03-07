@@ -108,7 +108,7 @@ MATLABをインストールしたノートパソコン
 <span style="color: purple">10:30-11:30 -- ICA理論(Scott Makeig)</span>
 <!--[PDF](https://github.com/sccn/sccn.github.io/files/11948490/Makeig_ICA_Aspet23._pdf.pdf)-->
 
-<span style="color: orange">11:30 – 13:00 -- データのインポート、アーティファクト拒絶(クレア・ブラボスツ)
+<span style="color: orange">11:30 – 13:00 -- データのインポート、アーティファクト除去(クレア・ブラボスツ)
 [サイトマップ](https://github.com/user-attachments/files/20995739/Preprocessing_braboszcz2025_edit.pdf)
 </span>
 

@@ -189,7 +189,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
 > - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時15分</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> - **EEGLABと高性能コンピューティング(Arnaud Delorme)</span>
 
-> <span style="color: gray">パラレルセッション 2**Automatedアーティファクト拒絶とコンポーネント分類**
+> <span style="color: gray">パラレルセッション 2**Automatedアーティファクト除去とコンポーネント分類**
 
 > - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - **アーティファクト・サブスペース再建**(Christian Kothe)</span>
 

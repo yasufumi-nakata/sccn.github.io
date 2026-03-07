@@ -61,7 +61,7 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 
 <span style="color: purple">10:15 – 11:15 -- ICA理論(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_lecture_ica.pdf)
 
-<span style="color: purple">11:15 – 12:00 -- データのインポート、アーティファクトの拒絶と実行 ICA (Claire Braboszcz)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_cb_artifact_and_ica.pdf)
+<span style="color: purple">11:15 – 12:00 -- データのインポート、アーティファクトの除去と実行 ICA (Claire Braboszcz)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_cb_artifact_and_ica.pdf)
 <!-- -->
 
 
@@ -73,7 +73,7 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 **ICAおよび時間頻度**
 
 
-<span style="color: orange">13:00 – 14:00 -- データをインポートし、データを拒絶し、ICA分解の練習(Claire Braboszcz)を実行</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_cb_evaluation_ica.pdf)
+<span style="color: orange">13:00 – 14:00 -- データをインポートし、データを除去し、ICA分解の練習(Claire Braboszcz)を実行</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_cb_evaluation_ica.pdf)
 
 <span style="color: orange">14:00 – 15:00 -- ICAコンポーネントの練習員の評価 (Claire Braboszcz)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_cb_evaluation_ica.pdf)
 

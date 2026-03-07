@@ -43,7 +43,7 @@ grand_parent: Workshops
 
 <span style="color: green">**--- 12:30-1:30 ランチ-**</span>
 
-<span style="color: orange">1:30～14:30 成果物拒絶とICA分解の実行(Julie Onton) [PDF]https://sccn.ucsd.edu/githubwiki/files/2_artrej_runningica.pdf
+<span style="color: orange">1:30～14:30 成果物除去とICA分解の実行(Julie Onton) [PDF]https://sccn.ucsd.edu/githubwiki/files/2_artrej_runningica.pdf
 )</span>
 
 <span style="color: purple">午後2時15分～午後3時 時間頻度分解(Arnaud Delorme)の使用 [PDF](https://sccn.ucsd.edu/githubwiki/files/lecture_timefreq_finland2010.pdf)</span>
