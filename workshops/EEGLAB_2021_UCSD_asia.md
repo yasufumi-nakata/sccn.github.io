@@ -390,7 +390,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">07:00pm</span>– 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00～20:00</span> – 
-				<strong>フォワード&amp;逆ヘッドモデリング</strong> (Zeynep アカリ) 
+				<strong>フォワード&amp;逆ヘッドモデリング</strong> (Zeynep Akalin Acar) 
 			</span>
 		</p>
 	</li>
@@ -435,7 +435,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span> - 
-				<strong>高解像度のソースイメージング</strong> (Zeynep アカリ) 
+				<strong>高解像度のソースイメージング</strong> (Zeynep Akalin Acar) 
 			</span>
 		</li>
 	</ul>
@@ -446,7 +446,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span>- 
-				<strong>NFT/NISTデモとPRACTICUM</strong> (Zeynep アカリ) 
+				<strong>NFT/NISTデモとPRACTICUM</strong> (Zeynep Akalin Acar) 
 			</span>
 		</li>
 	</ul>

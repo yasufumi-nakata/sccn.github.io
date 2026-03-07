@@ -94,7 +94,7 @@ SCCNで利用するイメージです。
 <b>3Dスカルプ電極の位置の正確な調整
 ヘッドモデル</b> いくつかのパッケージは、ファッショニングのために利用可能です
 アトミックMRヘッドイメージから幾何学的に正確なヘッドモデル。
-Zeynep Akalin Acarの[神経磁気フォワードの問題ツールボックス (NFT)](https://sccn.ucsd.edu/wiki/NFT)、彼女は今に結合している
+Zeynep Akalin Acarの[Neuroelectromagnetic Forward Head Modeling Toolbox (NFT)](https://sccn.ucsd.edu/wiki/NFT)は現在、
 推定のための最初の非侵襲的、普遍的な適用方法(SCALE)
 EEGデータ(Akalin Acar et al., 2016)からの個々の頭蓋骨伝導性;
 詳しくはこちら 被写体 MR ヘッドイメージが *not* の場合

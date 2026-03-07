@@ -132,7 +132,7 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
 - **[bva-io(ババオ)](https://github.com/arnodelorme/bva-io)**: インポート/エクスポートファイル from/ から Brain
     ビジョンソフトウェアアナライザースイート。
 
-- **[神経癌](https://github.com/sccn/neuroscanio)**:Neuroscanソフトウェアから/へのインポート/エクスポートファイル。
+- **[Neuroscan-io](https://github.com/sccn/neuroscanio)**:Neuroscanソフトウェアから/へのインポート/エクスポートファイル。
 
 - **[マフマトロビ](https://github.com/arnodelorme/MFFMATLABIO)**: MFF 形式の EGI 社のインポート/エクスポートファイル。
 
@@ -223,7 +223,7 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
     認知症で人気の神経活動の非侵襲的な測定
     神経科学。
 
--   **[バイオエレクトロマー](http://eeg.sourceforge.net/bioelectromagnetism.html)*:    バイオエレクトロマネシス
+-   **[Bioelectromagnetism](http://eeg.sourceforge.net/bioelectromagnetism.html)*:    バイオエレクトロマネシス
     MATLABツールボックスは、平均ERPをプロットするために、この拡張機能でインターフェイスしています。
     彼らのミニマとマキシマ(ピーク検索)を見つけるために。 このツールボックスからいくつかのファイルのみがこの拡張子に含まれています。
 

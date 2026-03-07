@@ -118,7 +118,7 @@ NFTをダウンロードするには、EEGLABプラグインマネージャを�
 
 # NFTの特長 参照のペーパー
 
-Zeynep Akalin Acar&Scott Makeig, [Neuroelectromagnetic] - ゼインプ・アカリン・アカル&スコット・メディグ フォワードヘッド
+Zeynep Akalin Acar&Scott Makeig, [Neuroelectromagnetic] - Zeynep Akalin Acar & Scott Makeig フォワードヘッド
 モデリングツールボックスhttp://sccn.ucsd.edu/%7Escott/pdf/Zeynep_NFT_Toolbox10.pdf).
 <em>神経科学研究</em>, 2010
 

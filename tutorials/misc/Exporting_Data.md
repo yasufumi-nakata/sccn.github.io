@@ -98,7 +98,7 @@ EEGLABメニューの項目は、EEGの形式に分けられます。
 
 -  MFF EGIのフォーマット、.mff。 使い方 <span style="color: brown">ファイル → エクスポート → EGI .mff ファイル</span> メニュー項目。 これは、 [mffMatlabIOの動画](https://github.com/arnodelorme/mffMatlabIO) インストールするプラグイン。
 
--  EEG・データ: Neuroscan .cnt (β)。 *writecnt.m*関数が実行されます。 [神経癌](https://github.com/sccn/neuroscanio) インストールするプラグイン。
+-  EEG・データ: Neuroscan .cnt (β)。 *writecnt.m*関数が実行されます。 [Neuroscan-io](https://github.com/sccn/neuroscanio) インストールするプラグイン。
 
 ### BIDSの現状
 

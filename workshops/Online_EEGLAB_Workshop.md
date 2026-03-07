@@ -146,7 +146,7 @@ EEGLABを使用して、ワークショップを見直し、および/または�
     4](https://www.youtube.com/watch?v=t_ECXVmSedU), [パート]
     5](https://www.youtube.com/watch?v=rA6jlAViu4s), [パート]
     6](https://www.youtube.com/watch?v=tuJRJsOJl-I)).
--   [Forward and inverse ソースモデリング (Zeynep Akalinアカル)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_forward_inverse_source_modeling.html)
+-   [Forward and inverse ソースモデリング (Zeynep Akalin Acar)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_forward_inverse_source_modeling.html)
 
 #### 被験者と条件を横断する
 - [再サンプリングベースの統計と複数の比較(David Groppe)の修正](http://www.cogsci.ucsd.edu/~dgroppe/EEGLAB12_statistics.html)
@@ -155,7 +155,7 @@ EEGLABを使用して、ワークショップを見直し、および/または�
 #### プラグインでEEGLABを拡張
 -   [EEGLABプラグインの構築(Arnaudデルロメ)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_eeglab_plugins.html)
 -   [SIFTソース情報フローツールボックス(Timムレン)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_info_flow.html)
--   [NFTヘッドモデリングツールボックス(Zeynep Akalinアカル)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_nft.html)
+-   [NFTヘッドモデリングツールボックス(Zeynep Akalin Acar)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_nft.html)
 -   [機械学習とEEG分類のためのBCILABツールボックス(クリスティアンコテ)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_bci.html).
     [現代BCI講座デザイン](https://sccn.ucsd.edu/wiki/Introduction_To_Modern_Brain-Computer_Interface_Design)
     クリスチャン・コテ
