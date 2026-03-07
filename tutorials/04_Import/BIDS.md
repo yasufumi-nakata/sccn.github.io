@@ -8,57 +8,55 @@ grand_parent: Tutorials
 ---
 BIDSについて
 ===========================
-お問い合わせ
-脳アーキテクチャとは、脳アーキテクチャ、脳アーキテクチャ、脳アーキテクチャ、脳アーキテクチャ、脳アーキテクチャ、脳アーキテクチャ、および脳アーキテクチャ、および脳アーキテクチャ、および脳アーキテクチャ、および脳アーキテクチャ、および脳アーキテクチャ、および脳アーキテクチャ、および仮想アーキテクチャ、および仮想アーキテクチャ、および仮想アーキテクチャ、および仮想アーキテクチャ、および仮想アーキテクチャ、および仮想アーキテクチャ、および仮想アーキテクチャ、および仮想アーキテクチャ、および仮想アーキテクチャ、および仮想アーキテクチャ、および仮想アーキテクチャ、および仮想アーキテクチャ、および仮想アーキテクチャ、およびセキュリティ、およびセキュリティ、およびセキュリティ、およびセキュリティ、セキュリティ、およびセキュリティ、およびセキュリティ、およびセキュリティ、およびセキュリティ、およびセキュリティ、およびセキュリティ、およびセキュリティ、およびセキュリティ、およびセキュリティ、およびセキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ、セキュリティ [電気生理学](https://github.com/bids-standard/bids-specification/blob/master/src/04-modality-specific-files/03-electroencephalography.md) EEGの慣用性EEG(iEEG)は、EEGLAB で、EEG の BIDS の形式を 共同で 開発しています。 [EEG-BIDSについて](https://github.com/sccn/bids-matlab-tools/wiki) EEGLABのプラグイン
+
+Brain Imaging Data Structure（BIDS）は、神経画像データを整理・共有するための標準的なデータ形式です。BIDSの[電気生理学](https://github.com/bids-standard/bids-specification/blob/master/src/04-modality-specific-files/03-electroencephalography.md)拡張により、EEGおよび頭蓋内EEG（iEEG）データもサポートされています。EEGLABでは、EEGのBIDS形式を共同で開発しており、[EEG-BIDS](https://github.com/sccn/bids-matlab-tools/wiki) EEGLABプラグインを提供しています。
 
 <details open markdown="block">
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
-- トピックス
-お問い合わせ
+  {: .text-delta }
+- TOC
+{:toc}
 </details>
 
 BIDSデータセット
 ----
 
-お問い合わせ [openneuro.org(オープンネロ)](https://openneuro.org)「EEG」の用語集です。 OpenNeuro は EEG データセットで表示しています。 する する [2021 記事](https://sccn.ucsd.edu/~arno/mypapers/Delorme_BIDS_IEEE_Tools20.pdf)お問い合わせ お問い合わせ [特定のデータセット](https://openneuro.org/datasets/ds002718)以下に示すように。
+[openneuro.org](https://openneuro.org) でBIDS形式のEEGデータセットを検索・ダウンロードできます。OpenNeuroには多数のEEGデータセットが公開されています。詳細については[2021年の記事](https://sccn.ucsd.edu/~arno/mypapers/Delorme_BIDS_IEEE_Tools20.pdf)を参照してください。以下に[特定のデータセット](https://openneuro.org/datasets/ds002718)の例を示します。
 
 ![](/assets/images/openneuro.png)
 
-このページではjavascriptを使用しています。 接続速度が向上する。
-
-????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????? ※Aws* は1つの異なるファイルのみです。 *git* や *git-annex* は、 より一層お待ちしています。 *openneuro* は、OpenNeuro にデータセットを、OpenNeuro にインストールします。 OpenNeuro の Web インターフェイスをそのままに、より一層、より一層のパフォーマンスを発揮します。
+OpenNeuroからデータセットをダウンロードするには複数の方法があります。*AWS* CLIは個々のファイルのダウンロードに便利です。*git* や *git-annex* はデータセット全体のクローンに使用できます。*openneuro* CLIツールはOpenNeuroへのデータセットのアップロードとダウンロードに使用できます。OpenNeuroのWebインターフェイスからも直接ダウンロードできます。
 
 BIDSデータセットをEEGLABにインストール
 ----
-EEGLAB は、 [bids-matlab-io - アダルトアフィリエイトプログラム モデル募集 モデルログイン](https://github.com/sccn/bids-matlab-tools/wiki) EEGLAB プラグインマネージャー <span style="color: brown">EEGLABの機能拡張</span> メニュー項目。
+EEGLABでは、[bids-matlab-tools](https://github.com/sccn/bids-matlab-tools/wiki) プラグインを使用してBIDSデータをインポートできます。このプラグインはEEGLABプラグインマネージャーの <span style="color: brown">EEGLABの機能拡張</span> メニュー項目からインストールできます。
 
 選択メニュー項目 <span style="color: brown">BIDS ツール → STUDY に BIDS を インストール</span> 次のウィンドウが開きます。
 
 ![](/assets/images/pop_importbids2.png)
 
-EEG(エッグ) チャンネル イベント の イベント イベント イベント イベント イベント イベント で で で で で で で で で で で で で で で で で で で で があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります があります
+このウィンドウでは、EEGチャンネル位置やイベント情報のインポートオプションを設定できます。
 
-イベント イベント イベント イベント イベント イベント BIDS は、イベント専用ファイルです。 BIDSイベントの開催にあたり、BIDSイベントの開催場所をご案内いたします。 BIDSイベントが「値か」に選ばれる インポート イベント を見る を見る を見る を見る ,*trial_type* . .
+BIDSでは、イベント情報は専用のファイル（*_events.tsv）に格納されています。BIDSイベントファイルの列名をEEGLABのイベントフィールドにマッピングできます。インポートするイベントフィールドとして *trial_type* 列を選択することを推奨します。
 
-最後に、EEGLAB STUDY は、 このページではjavascriptを使用しています。 EE のために に に する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する する
+最後に、EEGLAB STUDYが自動的に作成されます。各EEGファイルに対して前処理パイプラインを設定できます。
 
-*Ok*は、
+*Ok* を押すとインポートが実行されます。
 
 BIDS EEGLABに関する研究
 ----
-イーグルラボ STUDYは、機能性を生み出すために、プリプロセッシングは、このような点で、その選択をします。 <span style="color: brown">研究 → プレコプトチャネル対策</span> メニュー項目は、以下に示すように、*Power チェック * * *
+EEGLAB STUDYを使用してチャネル測定値の前処理計算を行うには、<span style="color: brown">研究 → チャネル測定値の前計算</span> メニュー項目を選択します。以下に示すように、*Power* のチェックボックスをオンにします。
 
 ![](/assets/images/bidsprecomp.png)
 
-メニュー項目を使用する <span style="color: brown">研究 → プロットチャネル対策</span> *Plot spectra* ボタン は、 すべての すべての
+メニュー項目 <span style="color: brown">研究 → チャネル測定値のプロット</span> を選択し、*Plot spectra* ボタンを押すと、すべての被験者のスペクトルが表示されます。
 
 ![](/assets/images/bidsplot.png)
 
-1人の被験者ヘルプ、そのデータでは、レイティファクトを次のようになります。 
+1人の被験者のデータにアーティファクトが含まれていることに注意してください。
 
-あなたはフォローすることができます [バッチ処理チュートリアル](/tutorials/10_Group_analysis/multiple_subject_proccessing_overview.html#perform-batch-processing) EEGLABガイド 取引条件 [EEGLABグループ](/tutorials/10_Group_analysis/).
+[バッチ処理チュートリアル](/tutorials/10_Group_analysis/multiple_subject_proccessing_overview.html#perform-batch-processing) に従ってデータを前処理できます。詳細については [EEGLABグループ解析](/tutorials/10_Group_analysis/) を参照してください。
 
-見てみることもできます。 [BIDSチュートリアル](/tutorials/11_Scripting/Analyzing_EEG_data_in_EEGLAB_The_Wakeman-Henson_dataset.html)MATLABは、
+[BIDSチュートリアル](/tutorials/11_Scripting/Analyzing_EEG_data_in_EEGLAB_The_Wakeman-Henson_dataset.html) でMATLABスクリプトを使用したBIDSデータの解析方法も参照できます。

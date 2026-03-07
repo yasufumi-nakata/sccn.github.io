@@ -7,116 +7,81 @@ parent: Reference Topics
 grand_parent: Tutorials
 nav_order: 12
 ---
-カリフォルニア大学卒業
-====================
-お問い合わせ
+ICAを用いたEEGアーティファクト除去クイックチュートリアル
+====================================================
 
-EEGLABは、
-EEGデータから非現実的なインティファクトの他のタイプ。 EEGLABは、偽りなく、偽りなく、偽りなく偽りを犯します。
-コンテンツ EEGLABLabでは、EEGLABに、EEGLABに、EEGLABに、EEGLABに、EEGLABに、EEGLABに、EggLabに、EggLabに、EggLabに、EggLabに、EggLabに、EEGLabに、EggLabに、EggLabに、EggLabに、EggLabに、EggLabに、EggLabに、EggLabに、EggLabに、EegLabに、EggLabに、EggLabに、EggLabに、Eggre、EggLabに、EggLabに、EggLabに、Ja、Ja、Ja、S、Ja、S、S、S、Ja、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、S、 最近の投稿 チュートリアル
+EEGLABは、EEGデータからアーティファクトを除去するための様々なツールを提供しています。EEGLABは独立成分分析（ICA）を用いて、眼球運動、瞬き、筋電図活動、その他のタイプの非脳由来アーティファクトを分離し、除去することができます。このチュートリアルでは、EEGLABを使用してEEGデータからアーティファクトを除去する基本的な手順を説明します。
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
-  お問い合わせ
-- トピックス
-お問い合わせ
+  {: .text-delta }
+- TOC
+{:toc}
 </details>
 
 
-## 1。 MATLABとEEGLABは、注文する。
-タイプ \>\> eeglab MATLAB で EEGLAB が リリースされました。 
+## 1. MATLABとEEGLABの起動
+MATLABコマンドウィンドウで \>\> eeglab と入力し、EEGLABを起動します。
 
 メニュー項目を選択
 <span style="color: brown">ファイル → インポートデータ</span> データファイルをインポートする
-さまざまなファイル形式で。 詳細はこちら [インポートデータ](/tutorials/04_Import/Importing_Continuous_and_Epoched_Data) セクション
-詳細情報。
+さまざまなファイル形式でデータファイルをインポートできます。詳細は[データのインポート](/tutorials/04_Import/Importing_Continuous_and_Epoched_Data)セクションを参照してください。
 
-メニュー項目を使用してデータをスクロールしてチェックする <span style="color: brown">Plot → チャンネルデータ(有料)</span>.
+メニュー項目 <span style="color: brown">Plot → チャンネルデータ（スクロール）</span> を使用してデータをスクロールして確認します。
 
-## 2。 チャンネルの場所ファイルをインポートする
+## 2. チャンネル位置ファイルのインポート
 
-チャンネルの場所ファイルをインポートすることは、視覚化のために不可欠です
-データの独立したコンポーネント。 選択する <span style="color: brown">編集 → チャネルの場所</span> メニュー項目。
+チャンネル位置ファイルのインポートは、データや独立成分の可視化に不可欠です。メニュー項目 <span style="color: brown">編集 → チャネル位置</span> を選択します。
 
-- ソリューション1 EGLabは、顧客のニーズにお応えします。 *Ok*は、
+- ソリューション1：EEGLABがチャンネルラベルを自動的に認識した場合、チャンネル位置が自動的に検索されます。*Ok*を押します。
 
-- ソリューション 2。 チャンネルラベルが存在しない場合は、ボタンを押します *チャンネル編集ウィンドウの右下隅にある場所を読み込みます。
-* * *
-EEGLABは、EEGLABの略称です。
-ファイル拡張子から。 
+- ソリューション2：チャンネルラベルが認識されない場合は、チャンネル編集ウィンドウの右下にある*Look up locs*ボタンを押します。EEGLABはファイル拡張子からチャンネル位置ファイルのフォーマットを自動的に検出します。
 
-プレス *Ok*
-チャンネル 編集ウィンドウ EEGLAB にインストールします。
+チャンネル編集ウィンドウで*Ok*を押します。
 
-チャンネルの場所が正しくインポートされていることを確認するには、
-メニュー項目 <span style="color: brown">Plot → チャンネル →</span>
+チャンネル位置が正しくインポートされたことを確認するには、メニュー項目 <span style="color: brown">Plot → チャンネル位置のプロット</span> を選択します。
 
-## 3。 アーティファクト・ラデンデータをレジェクト
+## 3. アーティファクトを含むデータの除去
 
- 良い
-. . . .
-固定スカルプマップの予測に関連付けられているもの。 
+ICAは、固定的な頭皮マップに関連付けられたステレオタイプのアーティファクトの除去に適しています。これには眼球運動、瞬き、筋電図活動、ライン・ノイズなどが含まれます。一方、単一の頭皮マップパターンに関連付けられていないアーティファクトの除去には効率的に使用できません。
 
-これらは目を含む
-動きおよび目の点滅、気道筋肉活動およびライン騒音。 アメリカ
-他の種類のアーティファクトを効率的に拒否するためには使用できません。
-1種類のスカルプマップのシリーズに関連付けられています。
+例えば、被験者が数秒間EEGキャップをかいた場合、チャネルやワイヤーの動きに関連するわずかに異なる頭皮マップの長いシリーズが生じます。そのため、このような「非定型的（non-stereotyped）」または「突発的（paroxysmal）」なアーティファクトは、ICAでは効果的に分離できません。
 
-例えば、
-被写体は、数秒間EEGCAPをスクラッチ、
-結果はわずかに異なるスカルプマップの長いシリーズになります
-チャネルおよびワイヤー動き、等に関連付けられて。 そのため、
-"non-stereotyped" または "paroxysmal" は、
-ICAのスタッフ
+悪いデータを除去するには2つの方法があります。
 
-悪いデータを拒否する2つのソリューションがあります。
+- 自動的な方法：メニュー項目 <span style="color: brown">ツール → Clean Rawdata と ASR</span> を選択し、適切なチェックボックスを有効にします。
 
-- 自動化された解決: メニュー項目を選択 <span style="color: brown">ツール → Clean Rawdata と ASR を調べる</span> チェックボックスを有効にしてください。
-新着情報
+- 手動的な方法：
+> - ノイズの多いチャンネルを連続データまたはエポックデータから除去するには、メニュー項目 <span style="color: brown">編集 → データの選択</span> を選択します。
 
-- 手動解決: 
-> - - - 連続的または露出したデータの「ノイズチャネル」を拒否するには、選択します
-メニュー項目 <span style="color: brown">データの編集 → 選択</span>. 
+> - 連続データのノイズの多い部分を除去するには、メニュー項目 <span style="color: brown">ツール → 目視でデータを検査する</span> を選択します。次に、連続データのノイズ部分をマウスで水平方向にドラッグしてマークし、*Reject*ボタンを押して除去します。
 
-> - - - 「連続データ」の騒々しい部分を拒絶するには、メニュー項目を選択します。
-<span style="color: brown">ツール → 目でデータを調べる</span>.
- 次に、連続したデータのノイズ部分をマークします。
-マウスを水平方向にドラッグして、左ボタンで解除
-*Reject* は、Windows がリリースされます。
-新着情報
+## 4. ICAの実行とアーティファクトコンポーネントの特定
 
-## 4。 ICAハンドブック、IDファクチュアルコンポーネント
+オプションですが、データを平均参照に再参照しておくことをお勧めします。メニュー項目 <span style="color: brown">ツール → データの再参照</span> を使用します。
 
-オプションですが、データを再参照して平均的な参照にしておくことをお勧めしています。 <span style="color: brown">ツール → データを再参照する</span> メニュー項目。
-
-メニュー <span style="color: brown">ICA は、</span> ICAを運営する
-デフォルトオプション お問い合わせ
+メニュー項目 <span style="color: brown">ツール → ICAの実行</span> を選択してICAを実行します。デフォルトオプションを使用してください。
 
 ソリューション
 
-- 自動化された解決: 
-> - ラベルコンポーネントを使用して <span style="color: brown">ツール → IClabel → コンポーネントのラベルを構成する</span> メニュー項目。
-> - コンポーネントの分類 <span style="color: brown">ツール → IClabel → コンポーネントを識別する</span> メニュー項目。
+- 自動的な方法：
+> - メニュー項目 <span style="color: brown">ツール → ICLabel → コンポーネントのラベル付け</span> を使用してコンポーネントにラベルを付けます。
+> - メニュー項目 <span style="color: brown">ツール → ICLabel → コンポーネントの分類</span> を使用してコンポーネントを分類します。
 > - メニュー項目を選択 <span style="color: brown">ツール → コンポーネントを削除</span>
 データから選択したコンポーネントを実際に削除します。
 
-- 手動解決:
-> - メニュー <span style="color: brown">ICA → コンポーネントをマップで拒否する</span> 実際のコンポーネントを選択する。 [データを見る]
-解析(実行)
-ICA)](/tutorials/06_RejectArtifacts/RunICA.html)チュートリアル
-詳細情報。
+- 手動的な方法：
+> - メニュー項目 <span style="color: brown">ツール → コンポーネントをマップで選択</span> を選択してアーティファクトコンポーネントを特定します。詳細は[データ解析（ICAの実行）](/tutorials/06_RejectArtifacts/RunICA.html)チュートリアルを参照してください。
 > - メニュー項目を選択 <span style="color: brown">ツール → コンポーネントを削除</span>
 データから選択したコンポーネントを実際に削除します。
 
-[データ解析(実行)]を参照してください。
-ICA)](/tutorials/06_RejectArtifacts/RunICA.html)チュートリアル
-詳細な情報と、アーティファクチュアルコンポーネントを選択する方法のヒント。
+アーティファクトコンポーネントの選択方法に関する詳細なヒントについては、[データ解析（ICAの実行）](/tutorials/06_RejectArtifacts/RunICA.html)チュートリアルを参照してください。
 
-## 5。 5。 洗浄されたデータのさらなる処理および/またはエクスポート
+## 5. クリーニングされたデータのさらなる処理とエクスポート
 
-EEGLAB GUIからデータセットのグループへ [このチュートリアル](/tutorials/10_Group_analysis/multiple_subject_proccessing_overview.html).
+複数の被験者データセットをEEGLAB GUIからグループ分析するには、[このチュートリアル](/tutorials/10_Group_analysis/multiple_subject_proccessing_overview.html)を参照してください。
 
-現在 現在 その を EEGLAB の処理をさらに進める。 [データをエクスポートする](/tutorials/misc/Exporting_Data.html) あなたの選択のフォーマットに。
+EEGLABでさらにデータ処理を行うか、[データをエクスポート](/tutorials/misc/Exporting_Data.html)してお好みのフォーマットで保存できます。
 

@@ -9,7 +9,6 @@ nav_order: 5
 ---
 EEGLAB データ構造
 =======================
-お問い合わせ
 
 EEGLAB は、EEGLAB と EEGLAB を組み合わせてユーザーを対象としています。
 MATLABの関数:(/tutorials/ConceptsGuide/EEGLAB_functions.html)
@@ -20,9 +19,7 @@ EEG構造は、
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 導入事例
@@ -46,8 +43,8 @@ EEGLAB は、グローバル変数の定義です。
 EEGLAB の変数です。
 主要な 相互 相互 EEGLABの機能 [eeglab.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m) (その他)
 display)関数 は、
-入力パラメータは、グローバル変数にアクセスしたり変更したりしません。 お問い合わせ
-望ましくない 'サイド 最小チャンス へ。
+入力パラメータは、グローバル変数にアクセスしたり変更したりしません。
+望ましくない副作用を最小限に抑えます。
 エフェクト
 
 EEGとアレグ
@@ -105,8 +102,7 @@ EEGLAB 変数 *EEG* は、 MATLABの構造です。
                  run: []
 ```
 
-ヘルプメッセージを見る
-お問い合わせ [eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m) 関数(一貫性をチェックする)
+ヘルプメッセージを見るには [eeg_checkset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m) 関数(一貫性をチェックする)を参照してください。
 EEGLABデータセット
 
 EEGLAB 変数 *ALLEEG* は、すべてのデータセットを MATLAB は、
@@ -232,16 +228,12 @@ MATLABが変更されました
 イベント構造:
 
 - ※type* はイベントタイプです。
-- * は、
-- *urevent*は、
-'ur' の 'ur' の 'ur' の 'ur' の 'ur' の 'ur' の 'ur' の 'ur' の 'ur' の 'ur' の 'ur' の 'ur' の ' の ' の 'ur' の ' の ' の 'ur' の ' の の 'ur'ur' の の の は 'ur'ur' ' の の の と の の が の の と の の の の の の の は、 は、 と の の の は、 は、 の は は の は、 は、 と は と と と と と の の の の の 'ur'ur'ur'ur'ur'ur'ur'ur'ur'ur'ur'ur'ur'ur'ur'ur'ur'
+- *latency* は、データ内のイベントの位置(サンプルポイント)です。
+- *urevent*は、'ur'はドイツ語の「元の」を意味し、*EEG.urevent*構造内の対応する元のイベントへのインデックスです。
 
-*ポジション* ユーザは、
-実験。 
+*position* は、ユーザーが定義した実験内の位置です。 
 
-?????????????????????????????????????????????????????????????????????????????????????????????????????????????????
-イベントの開催期間について
-削除された 削除された , フィールド *duration*
+削除されたデータ部分について、フィールド *duration*
 ブレイク(境界線)イベントの期間を自動的に保存します。
 
 epochsがデータセットから別のフィールド、*epoch*、
@@ -295,8 +287,7 @@ ans =
 イベント構造にカスタムイベントフィールドを追加できることを忘れないでください
 また、イベント情報を随時インポートします。
 データセットをロードします。 そのため、一部のイベントフィールドの名前は異なる場合があります。
-異なるデータセットで。 イベントフィールド情報を簡単に行うことができます。
-お問い合わせ
+異なるデータセットで。 イベントフィールド情報を簡単にインポートすることができます。
 例:
 
 ``` matlab
@@ -359,9 +350,9 @@ ans =
     1.0001 1.6954 2.0824 4.7032 5.1482
 ```
 
-一貫性のために、エッチングされたデータセットでは、イベントのレイテンシーも
-で で で で で で で で
-データが連続していた場合 したがって、エポックを抽出した後
+一貫性のために、エポック化されたデータセットでは、イベントのレイテンシーも
+エポックタイムロックイベント(エポックの開始)からの相対的なサンプルポイントで保存されます。
+データが連続していた場合と同様です。したがって、エポックを抽出した後
 [データ](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html) チュートリアル, 5 件のイベントレイテンシー:
 
 ``` matlab
@@ -387,8 +378,8 @@ ans =
 
 逆変換は機能を使って達成することができます [eeg_lat2point.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_lat2point.m).
 
-トリップアドバイザー EEGLAB 関数 [eeg_getepochevent.m の](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_getepochevent.m)お問い合わせ お問い合わせ
-関数は、任意の取得するために、連続およびエポックデータの両方に使用できます。
+便利な EEGLAB 関数 [eeg_getepochevent.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_getepochevent.m)
+は、任意のイベントフィールドを取得するために、連続およびエポックデータの両方に使用できます。
 イベントの種類を問わずイベントフィールド 例えば、チュートリアルデータを使用する
 (エポック抽出後)、タイプ:
 
@@ -396,14 +387,10 @@ ans =
 >> [rt_lat all_rt_lat] = eeg_getepochevent(EEG, 'rt', [], 'latency');
 ```
 
-の の の の の
-dataepoket1 の値を配列(*first*イベント)
-各データエポックに指定されたタイプ。 2番目の出力はセル配列です
-*all* のフィールド値が各関連イベントに含まれている
-エポック。 レイテンシー情報はミリ秒単位で返されます。 (注:第3項)
-入力は各々の特定の時間ウィンドウでイベントを検索できます
-空の 空の 空の が
-使用して下さい)。
+最初の出力は、各データエポックに指定されたタイプの*最初*のイベントのフィールド値を配列で返します。
+2番目の出力はセル配列で、*すべて*の関連イベントのフィールド値が各エポックに含まれています。
+レイテンシー情報はミリ秒単位で返されます。 (注:第3入力で各エポックの特定の時間ウィンドウ内でイベントを検索できます。
+空の場合は全エポックを検索します)。
 'square'イベント'position' は、
 各エポックのイベント, タイプ:
 
@@ -423,27 +410,21 @@ dataepoket1 の値を配列(*first*イベント)
 #### ウルビッツ
 
 別の 'ur' ('元の' Deutsch) イベント
-*EEG.urevent*は、元々の相談窓口です。
-データセットに読み込まれます。 一部のイベントやデータ領域を含む場合
-イベントはデータから削除され、これは影響しません
-*EEG.urevent* 新規イベントを投入する
-データセット、ウレベント構造は自動的に更新されます。 これは便利です
-お問い合わせ
-実験。 データエポックを抽出した後でも、前の*コンテキスト*の
-連続 イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント イベント は イベント は イベント イベント イベント は イベント は
-現在、*EEG.urevent*の構造は、
-コマンドライン
+*EEG.urevent*は、元々データセットに読み込まれたイベントの不変の記録です。
+一部のイベントやデータ領域がデータから削除されても、*EEG.urevent*は影響を受けません。
+新規イベントをデータセットに追加すると、ウレベント構造は自動的に更新されます。 これは実験のコンテキストを追跡するのに便利です。
+データエポックを抽出した後でも、前の連続データのイベントコンテキストは*EEG.urevent*構造に保持されています。
+コマンドラインから確認できます
 
 *EEG.urevent*の構造は*EEG.event*の構成要素です
 構造。 イベント構造の* urevent* フィールド(例、
 *EEG.event(n).urevent* は、
-urevent 構造を組み立てる - イベントからイベントへ お問い合わせ
-対応するイベント、例えば「オリジナルイベント」の番号など
-連続データイベントストリーム。 例えば、データの一部が
+urevent 構造を組み立てる - イベントからイベントへの対応付け、
+例えば元の連続データイベントストリーム内の「オリジナルイベント」の番号など。 例えば、データの一部が
 連続データセットから2番目のイベントが削除されます。
-※EEG.event*は、IDファクトの拒否、第2回イベントは中止となります。
-※*will* は、*EEG.urevent* の 構造に あります。
-例:2位*EEG.event* は 3位*EEG.urevent* を指す
+アーティファクト拒否後、*EEG.event*の第2イベントは削除されますが、
+*EEG.urevent*構造には残ります。
+例: *EEG.event*の2番目のエントリは*EEG.urevent*の3番目を指します
 
 ``` matlab
 >> EEG.event(2).urevent
@@ -468,9 +449,8 @@ ans =
 イベント
 
 EEGLAB は、 [eeg_time2prev.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_time2prev.m), [eeg_urlatency.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_urlatency.m) そして、
-[eeg_context.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m)お問い合わせ 次へ
-お問い合わせ より多くの より多くの より多くの
-*EEG.urevent*構造。
+[eeg_context.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) を参照してください。
+*EEG.urevent*構造の詳細については、上記のチュートリアルセクションを参照してください。
 
 #### イベントの境界
 
@@ -487,12 +467,11 @@ EEGLAB は、現在制作するイベントです。
 
 ![2018年11月12日](/assets/images/Eventcontinuous.gif)
 
-イベント の このイベントは、100.5 で、100 から 1950 が削除されました。 このサイトは、http://www.online.com/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/
+この図では、サンプル100から1950が削除され、境界イベントが100.5に挿入されました。
 
-イベント イベント は は は 1〜1000 (MATLABは1〜1000) レイテン0.5 と 1000.5 の型は、 とりあえず、 とりあえず、 とりあえず、 とりあえず
+サンプル1〜1000のイベントは、レイテンシー0.5と1000.5に境界イベントを持ちます。
 
-開催概要 ??????????????
-event.duration* フィールド
+*event.duration* フィールド
 拒否されたデータ部分(データサンプル)の期間。 それ以来
 データセット内のすべてのイベントは、データセットで同じフィールドを持つ必要があります。
 ' ' ' ' '
@@ -502,10 +481,8 @@ event.duration* フィールド
 データ(境界イベント間で)。 また、データエッチング機能
 境界イベントを含むエポックを抽出しません。
 
-*Epoched* は、データepochs の同時開催イベントです。
-チャンネル チャンネル チャンネル チャンネル チャンネル _ _
-永続化して、epoch に 3D を 保存する
-ユーザ名、サンプル名、サンプル名、データ名、
+*Epoched* データでは、各エポックのイベントは
+チャンネル×サンプル×エポックの3D形式で保存され、
 データを連続していれば、2次元配列としてデータを処理する効果
 フォーマットの処理は
 コマンドラインからのイベントは便利です。
@@ -526,8 +503,8 @@ event.duration* フィールド
 尿素は直接比較できません。 いわゆる「ハード」境界
 連結データセット間でのジョイントをマークするイベントは、通常どおり
 type 'boundary' が、 'duration' 値、 *NaN* (MATLAB 数値)
-'not-a-number' は、 'not-a-number' は、 'not-a-number' は、 'not-a-number' は、 'not-a-number' は、 'not-a-number' は、 'not-a-number' は、 ' は、 'not-a-number' は、 ' は、 'not-a-number' は、 ' は、 'not-a-a-number' は、 の は、 は、 ' ' は、 は、 ' ' は、 は、 は、 は、 は、 は、 は、 は、 ' は、 ' ' ' ' ' は、 ' ' ' ' ' は、 ' ' は、 は、 は、 ' ' ' ' ' ' ' ' は、 は、 は ' ' ' ' ' ' ' 
-*EEG.urevent*(イージー) は、*EEG.event* は、"境界線" です。
+'not-a-number' は、 'not-a-number') を持ちます。
+*EEG.urevent*の「ハード」境界イベントは、*EEG.event*の「boundary」タイプで、
 'NaN' と *EEG.event.urevent* ポインタの 'duration' の 使い方
 尿道。 ハードドライブの「境界」イベントは、などの機能のために重要です [eeg_context.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) 一時的な関係に関係する
 実験中のイベント(例:ウレベント)
@@ -537,9 +514,9 @@ type 'boundary' が、 'duration' 値、 *NaN* (MATLAB 数値)
 *EEG.epoch* 構造は、Everデータセットで、
 エポックエキス 機能 * EEG.event* 構造から計算される [eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m) (付き)
 'eventconsistency' を、使用して、
-EEGLAB は、EEGLAB のドキュメントを書いています。 EE の の
-*EEG.epoch*の構造はあります [eeg_context.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m)お問い合わせ エントリーは必須項目です。
-*epoch* は、epook のゲストのゲストをお待ちしています。
+EEGLAB のドキュメントを参照してください。
+*EEG.epoch*の構造の詳細は [eeg_context.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_context.m) にあります。 エントリーは必須項目です。
+*epoch* は、エポック化されたデータセットでのみ存在します。
 変換後に設定したチュートリアルで次の例を実行しました
 データエポックに。
 
@@ -631,8 +608,8 @@ EEGLABのこだわり デフォルト デフォルト デフォルト デフォ�
 save -mat myfile.set -struct EEG
 ```
 
-.fdt ファイル拡張子 .fdt ファイル拡張子 .float32 .float32 .float32 .fdt .float32 .float32 .fdt .float32 .float32 .float32 .float32 .float32 .float32 .float32 .float3 .float32 .float32 .float32 .float3 . .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 .float3 . お問い合わせ
-.fdt の別の形式は、.fdt  ファイル が が このサイトは、EeGLabが公開する10月1日を過ぎました。
+.fdt ファイルは .float32 形式でデータを保存します。
+.fdt の別の形式については、EEGLABのドキュメントを参照してください。
 
 ```matlab
 data = EEG.data;
@@ -649,7 +626,6 @@ EEG = pop_loadset('myfile.set')
 
 STUDYについて
 ---------
-このサイトについて お問い合わせ
 EEGLABでは、カスタムMATLAB、関数、プラグインを操作する
 STUDY構造とディスタセット。
 
@@ -659,7 +635,7 @@ STUDY*構造体は以下のとおりです。
 小さなサンプルスタディセットの解析から得られた例
 10つのデータセット、各5つの被験者から2つの条件を比較し、ダウンロードできます。 [詳しくはこちら](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (1.8
 GB)。
-関数を使用してスタディセットをロードした後(前のセクションを参照するか、または下述のように) [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadstudy.m)MATLABの*STUDY*を入力
+関数を使用してスタディセットをロードした後(前のセクションを参照するか、または下述のように) [pop_loadstudy](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadstudy.m)MATLABの*STUDY*を入力
 コマンドラインは以下のような結果を生み出します。
 
 ``` matlab
@@ -779,7 +755,7 @@ ans =
 
 トライアル情報のデータ構造のフィールドはイベントのフィールドをミラーリングします
 ふりがな
-フィールド 'type' は 、 は 'duration です。 お問い合わせ
+フィールド 'type' は 'duration' です。
 サンプルの刺激の提示の持続時間を示します。 その他
 フィールド ('chan', 'description', 'points') は、
 与えられたデータセット。 一般的に、異なるデータセットは異なる
@@ -789,7 +765,7 @@ ans =
 設計は、
 可能(独立変数の選択を含む)
 条件、グループ、セッション、特定の刺激関連試験、または
-サブセット お問い合わせ
+サブセット。
 
 STUDY.designサブ構造はこちら
 
@@ -897,13 +873,13 @@ STUDY. 'variable1' のエントリの
 STUDY.datasetinfo 構造のフィールドに似た方法
 STUDY.datasetinfo は動作と定義です。
 
-std_makestudy() の お問い合わせ
+std_makedesign() を使用します。
 
 ``` matlab
 >> STUDY = std_makedesign(STUDY, ALLEEG, 1, 'variable1', 'presentation');
 ```
 
-「表示」の特定の値を選択する お問い合わせ
+「表示」の特定の値を選択するには、
 
 ``` matlab
 >> STUDY = std_makedesign(STUDY, ALLEEG, 1, 'variable1', 'presentation', 'values1', { 'spontaneous1' 'spontaneous2' } );
@@ -931,9 +907,7 @@ std_makestudy() の お問い合わせ
 *changrp.name* は、チャンネル名('FP1') です。
 *changrp.channels* は、この名前をつけます。
 多岐に渡ります。
-全体 で
-で で RMS を計算します。
-お問い合わせ
+全体でRMSを計算します。
 
 ### STUDY.cluサブ構造
 
@@ -985,14 +959,13 @@ MATLABの特徴 [pop_clustedit.m ディレクティブ](http://sccn.ucsd.edu/eeg
 EEGLAB 14 は、顧客のニーズにお応えします。
 クラスター(ERP、スペクトラム、時間頻度など)
 クラスター) この情報は、この構造で利用可能になります
-与えられたクラスターがプロットされたとき。 これらの配列は、ユーザーにアクセス可能であった
-EE の の の の の の の の の
-それらをプロットされたたびに再ロードする必要はありません。
+与えられたクラスターがプロットされたとき。 これらの配列は、ユーザーがアクセス可能で、
+それらをプロットするたびに再ロードする必要はありません。
 
 EEGLAB 2019以降では、より早く、より早く、より早くなります。
  すべての されます STUDY では、
-キャッシュすると、キャッシュされた値が自動的に返されます。 お問い合わせ
-この情報にアクセスし、返り値を使用することをお勧めします
+キャッシュすると、キャッシュされた値が自動的に返されます。
+この情報にアクセスするには、返り値を使用することをお勧めします。
 プロット関数 std_erpplot, std_specplot, std_erspplot -
 必要な分解のプロット。 
 
@@ -1003,9 +976,8 @@ EEGLAB 2019以降では、より早く、より早く、より早くなります
 
 
 *cluster.comps* と *cluster.sets* は、 コンポーネントを 適切に管理します。
-現在のクラスターは次のようになります: *cluster.comps* は、 コンポーネントの処理を行います
-それぞれの それぞれの の の の
-複数のデータセットが同じように使用できることに注意してください。
+現在のクラスターは次のようになります: *cluster.comps* は、各データセットのコンポーネントインデックスを含みます。
+複数のデータセットが同じ被験者で使用できることに注意してください。
 コンポーネントの重みとスカルプマップ -- 例えば2つのデータセットを含む
 同じ被験者と異なる実験条件のデータ
 同じ で で
@@ -1141,10 +1113,8 @@ vSTUDY.cluster(クラスト).sets* と *STUDY.cluster(クラスト).comps*
 *STUDY.datasetinfo* は必須項目です。
 *STUDY.cluster(クラスト) および comps*。 *STUDY.cluster(クラスト).sets*
 ※STUDY.cluster(clust).comps* は必須です。
-*STUDY.cluster(clust).sets* は、データセット(from) は、
-は の の
-各コンポーネントが2つのデータセットに含まれている場合のクラスターの下(2
-同じ の の の
+*STUDY.cluster(clust).sets* は、データセットのインデックスを与える行列です。
+各コンポーネントが2つのデータセットに含まれている場合(同じ被験者の異なる条件など)、
 
 ``` matlab
 >> STUDY.cluster(clust)
@@ -1158,10 +1128,8 @@ vSTUDY.cluster(クラスト).sets* と *STUDY.cluster(クラスト).comps*
 
 STUDY.cluster(clust).sets*は、
 いくつかの主題は、同じ分解といくつかのデータセットを持っています
-他の被写体は、同じデータセットの異なる数を持っています
-ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます ます
-これらの欠落したデータセットの存在は、いくつかの分析を破る可能性があります(警告)
-関連するときにメッセージが表示されます。
+他の被験者は、同じデータセットの異なる数のコンポーネントを持っています。
+これらの欠落したデータセットの存在は、いくつかの分析を破る可能性があります(警告メッセージが関連するときに表示されます)。
 
 ### STUDYデータファイル
 
@@ -1180,9 +1148,8 @@ STUDY* は、
   S01.icatopo  % ICA component topographies
 ```
 
-*S01* は、 お問い合わせ
-*STUDY* の sanking の は、
-このファイルは 'xx01' で 'xx01' です。
+*S01* は、*STUDY* の被験者名のプレフィックスです。
+このファイルは 'xx01' 形式で命名されます。
 単に数字(1, 2, 3, 等)であるべきではない理由もあります。
 ほとんどのオペレーティングシステムは、起動するファイルを保存することができません
 番号。
@@ -1219,12 +1186,12 @@ EEGLAB 2019以降では、EEGLAB がリリースされました。
 ```
 
 *chanxx* は、アメリカ向けです。
-コンポーネント、プレフィックスは <i>コンプリート</i> 代わりに <i>チャン</i>お問い合わせ 詳しくはこちら
+コンポーネントの場合、プレフィックスは <i>コンプリート</i> の代わりに <i>チャン</i> を使用します。詳しくはこちら
 . . . . .
 追加フィールドの説明:
 
--   *labels*: 'Cz' 'Pz' のラベルは、
-    お問い合わせ このフィールドは、データチャネルのみに存在し、
+-   *labels*: 'Cz' 'Pz' などのラベルは、
+    このフィールドは、データチャネルのみに存在し、
     ICAコンポーネントを提示します。
 -   *データ型*: このフィールドには、ファイルに保存されたデータの種類が含まれています。 ニュース
     以下に詳細が記載されています。

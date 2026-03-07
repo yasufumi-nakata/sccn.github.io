@@ -8,7 +8,6 @@ grand_parent: Tutorials
 ---
 プロットイベント関連ポテンシャル
 ==================
-お問い合わせ
 
 EEGLABの特長
 プロット1-D ERPの試験セットの試験結果(例、epochs)。 EEGLABも
@@ -20,15 +19,15 @@ EEG ダイナミクスを学習する
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
-- トピックス
-お問い合わせ
+  {: .text-delta }
+- TOC
+{:toc}
 </details>
 
 両軸にERPカルプマップ
 -------------------------------------------------------- 
 
-チュートリアルデータセットをそのまま使用しました。 [データエポック抽出](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html)お問い合わせ メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
+チュートリアルデータセットを使用します。 [データエポック抽出](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html)を参照してください。 メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
 <span style="color: brown">既存のデータセットをロードする</span>EEGLABの「sample_data」フォルダにある「eeglab_data_epochs_ica.set」のチュートリアルファイルです。
 
 ![こちら](/assets/images/Pop_loadset2.png)
@@ -36,7 +35,7 @@ EEG ダイナミクスを学習する
 ### すべてのチャネルをプロット 採用情報
 
 EPOCEANERP は、EPSカルプマップ を、
-選択したレイテンシー、選択 <span style="color: brown">パロット → ERP → スカルプマップ</span>お問い合わせ サンプルを使ったシンプルなイラストとして
+選択したレイテンシーのスカルプマップを表示するには、 <span style="color: brown">プロット → ERP → スカルプマップ</span>を選択します。 サンプルを使ったシンプルな例として
 dataset は、デフォルトで設定されます。 [pop_timtopo.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) 下のウィンドウ、および
 プレス *Ok*.
 

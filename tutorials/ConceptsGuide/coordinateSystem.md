@@ -21,7 +21,7 @@ EEGLABは、2D表現にBESA電極モンタージュを使用し、ソースロ�
 
 ![2022-12-13 に 12 44 11](https://user-images.githubusercontent.com/1872705/207268589-53f5e8f4-9138-4273-ade5-c8d8ee8729f9.png)
 
-10-20 チャンネルモンタージュの球面と参考フレームです。 BEMからオンラインチャネルへ
+10-20チャンネルモンタージュの球面座標系と参照フレーム。BESAのオンラインチャンネル位置からBEM座標への変換。
 
 ### 2Dバイパス
 
@@ -45,7 +45,7 @@ EEG.chaninfo.topoplot = { 'headrad' 0.68 };
 [ALLEEG, EEG, CURRENTSET] = eeg_store(ALLEEG, EEG); % save data in ALLEEG
 ```
 
-あなたは実際に何かを追加することができます [topoplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m))オプション(例、'electrodes'、'on' は、すべてプロットで実行)。 デフォルト値は、0(左)、0(左)、0(右)のヘッド半径です。
+[topoplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m)の任意のオプションを追加できます（例：'electrodes', 'on' で全電極をプロットに表示）。デフォルトのヘッド半径は0.68です。
 
 ![2022-12-13 に 3 09 37](https://user-images.githubusercontent.com/1872705/207464956-99339d9d-e163-443d-8720-5f3add67a6c1.png)
 
@@ -57,7 +57,7 @@ EEGLABはさまざまな商用電極モンタージュをサポートしてい�
 
 ## 独自のモンタージュの作成と最適化
 
-自分のモンタージュを作りたいと思うこともあります。 たとえば、特定の場所にいくつかの電極を追加したい場合があり、キャップメーカーはこれらの変化に対応します。 電極をできるだけ低く追加するなど、ヘッドカバレッジを最大限に活用したい(これを参照してください) [プロジェクト](https://github.com/arnodelorme/optimize_montage)例) 頭上領域の密なカバレッジの代わりに、最大ヘッドカバレッジをお勧めします。 ボリューム伝導のため、ボトム電極は多くの深さ情報をキャプチャし、ソースのローカリゼーションに役立ちます。
+独自のモンタージュを作成したい場合もあります。例えば、特定の位置にいくつかの電極を追加し、キャップメーカーにその変更を依頼できます。電極をできるだけ低い位置に追加するなど、ヘッドカバレッジの最大化を目指すことが重要です（この[プロジェクト](https://github.com/arnodelorme/optimize_montage)を参照）。頭頂部の高密度カバレッジよりも、最大ヘッドカバレッジを推奨します。体積伝導により、下部の電極は多くの深部情報をキャプチャでき、ソースローカリゼーションに有用です。
 
 ## その他の2次元レイアウト
 
@@ -73,12 +73,12 @@ EEGLABは、*eeglab_data.set* のモンタージュを *eeglab_montage11_layout.
 
 EEGLABでは、'LPA' と 'RPA' が標準の基準点ラベルとして使用されます。[詳しくはこちら](https://www.fieldtriptoolbox.org/faq/how_are_the_lpa_and_rpa_points_defined/)を参照してください。
 
-耳の解剖学的ランドマーク、EEG、MEGデータ(AnatomicalLandmarkCoordinateSystemDescriptionfields) *_coordsystem.json にインストールします。 [BIDS仕様](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/03-electroencephalography.html#coordinate-system-json-_coordsystemjson))。 それは同じです [CTF座標系](https://www.fieldtriptoolbox.org/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/#details-of-the-ctf-coordinate-system) MEGデータセットについて
-- 単位はミリメートルにあります
+EEGおよびMEGデータの解剖学的ランドマーク座標系は、*_coordsystem.json* ファイル（AnatomicalLandmarkCoordinateSystemDescriptionフィールド）に記述されます（[BIDS仕様](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/03-electroencephalography.html#coordinate-system-json-_coordsystemjson)参照）。これはMEGデータセットの[CTF座標系](https://www.fieldtriptoolbox.org/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/#details-of-the-ctf-coordinate-system)と同じです。
+- 単位はミリメートルです
 - 'LPA' と 'RPA' は左右の前耳介点を示します
-- X軸のポイントは、ナシオン
-- 直角は「LPA」 X軸へ向かう
-- Z軸は、オルトゴナルから XYの制限点
+- X軸は鼻根点（nasion）の方向を指します
+- Y軸はLPAの方向で、X軸に直交します
+- Z軸はXY平面に直交します
 
 以下の図は、頭部モデル上の基準点の位置を示しています。
 
