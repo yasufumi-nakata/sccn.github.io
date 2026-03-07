@@ -178,7 +178,7 @@ MATLAB は、STUDY は、
 >> [STUDY erpdata erptimes] = std_erpplot(STUDY,ALLEEG,'channels',{ 'FP1'}, 'noplot', 'on');
 ```
 
-<i>エルプデータ</i> 開発者がERPデータを取得しています。
+<i>erpdata</i> 開発者がERPデータを取得しています。
 また、STUDY がデザインするので、
 第2弾の写実体をデザインする
 STUDYの細胞(*synonyms*)。
@@ -268,7 +268,7 @@ writematrix(array, 'matlabarray4.csv');
 writetable(table(array), 'matlabarray5.csv')
 ```
 
-サイズ750ポイント×13の対象のERPデータに3つの条件をクリアする<i>エルプデータ</i> 前のセクションで得られた。 3つの条件があると想像してみてください <i>エルプデータ</i> 'erpfile.txt' は、 最近の投稿
+サイズ750ポイント×13の対象のERPデータに3つの条件をクリアする<i>erpdata</i> 前のセクションで得られた。 3つの条件があると想像してみてください <i>erpdata</i> 'erpfile.txt' は、 最近の投稿
 
 ``` matlab
 [STUDY erpdata erptimes] = std_erpplot(STUDY,ALLEEG,'channels',{ 'FP1'}, 'noplot', 'on');

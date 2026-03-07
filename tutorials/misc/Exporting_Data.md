@@ -94,7 +94,7 @@ EEGLABメニューの項目は、EEGの形式に分けられます。
 
 -  EEGデータ: 無線データ(16ビット).edf、Biosemi .bdf、 BIOSIG .gdf. 利用する <span style="color: brown">ファイル → EDF/BDF/GDF ファイルへ</span> メニュー項目。、BIOSIG インストール(BIOSIG インストール)。
 
--  BrainVision形式（.dat、.vhdr、.vmrk）。 <span style="color: brown">File → Export → BrainVision format</span> メニュー項目。 これは、 [bva-io(ババオ)](https://github.com/arnodelorme/bva-io) インストールするプラグイン。
+-  BrainVision形式（.dat、.vhdr、.vmrk）。 <span style="color: brown">File → Export → BrainVision format</span> メニュー項目。 これは、 [bva-io](https://github.com/arnodelorme/bva-io) インストールするプラグイン。
 
 -  MFF EGIのフォーマット、.mff。 使い方 <span style="color: brown">ファイル → エクスポート → EGI .mff ファイル</span> メニュー項目。 これは、 [mffMatlabIOの動画](https://github.com/arnodelorme/mffMatlabIO) インストールするプラグイン。
 

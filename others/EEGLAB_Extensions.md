@@ -129,7 +129,7 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
 
 - **[ANTeepimport(アンテピムポート)](https://www.ant-neuro.com/support/supporting-documentation-and-downloads)**: ANT EEG社のEEP形式のデータをインポートします。
 
-- **[bva-io(ババオ)](https://github.com/arnodelorme/bva-io)**: インポート/エクスポートファイル from/ から Brain
+- **[bva-io](https://github.com/arnodelorme/bva-io)**: インポート/エクスポートファイル from/ から Brain
     ビジョンソフトウェアアナライザースイート。
 
 - **[Neuroscan-io](https://github.com/sccn/neuroscanio)**:Neuroscanソフトウェアから/へのインポート/エクスポートファイル。
