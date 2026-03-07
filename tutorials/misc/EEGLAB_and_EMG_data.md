@@ -173,7 +173,7 @@ EEG = pop_eegfiltnew(EEG, 'locutoff', lowcut, 'hicutoff', highcut);
 
 ### チャネルの品質チェック
 
-EMGについて ?????????????
+EMGデータの解析について
 
 ```matlab
 % Calculate variance for each channel
