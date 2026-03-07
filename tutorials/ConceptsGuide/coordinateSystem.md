@@ -9,15 +9,15 @@ nav_order: 5
 ---
 # EEGLAB電極系
 
-EEGLABは、方向+X(原点)、方向+Z方向の頭文字、方向+Z方向の頭文字を指しています。 別の方向の鼻の点が変換されます。, 鼻は + 鼻の点は、します。. 現在、EEGLABでは、クライアントが抱えているか、または、クライアントの立場で発言しています。 とおりに、BIDS の互換、CF は、 MEGの座標系と、左手方(LPA)と右前方(RPA)の図形(以下参照)の図形(以下参照)の図形と同等です。
+EEGLABは、鼻が+X方向、頭頂部が+Z方向を向き、原点が左前耳点（LPA）と右前耳点（RPA）の間に位置する座標系を使用しています。BIDSとの互換性のため、EEGLABの座標系はCTF MEG座標系と同等であり、LPAとRPAの基準点を基準としています。
 
- この つの つの つの つの つの つの つの つの つの つの  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この  この を見る [よくある質問](https://www.fieldtriptoolbox.org/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/#details-of-the-mni-coordinate-system) オリジンと軸が異なるシステムで定義される方法の詳細。
+異なる座標系における原点と軸の定義方法の詳細については、この[FAQ](https://www.fieldtriptoolbox.org/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/#details-of-the-mni-coordinate-system)を参照してください。
 
-デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト の の デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト 場合 場合 場合 場合 場合 場合 場合 場合 場合 場合 場合 場合 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 EEGLABにTシャツを着てみました。 EEGLABのチャンネル*Rotate Axis* ボタン、単語をオンにします。 <span style="color: brown">編集 → チャネルの場所</span>)。 特許取得済み [get_chanlocs ディレクティブ](https://github.com/sccn/get_chanlocs/wiki) 電極のデジタル化と [MRI映像](../09_source/Custom_head_model.html) このページの先頭へ
+デフォルトでは、チャンネル位置ファイルをインポートする際、EEGLABはテンプレート位置とのマッチングを試みます。非標準の座標系からチャンネル位置をインポートした場合は、チャンネルエディタの *Rotate Axis* ボタン（<span style="color: brown">編集 → チャネルの場所</span>）を使用して調整してください。[get_chanlocs プラグイン](https://github.com/sccn/get_chanlocs/wiki)は電極のデジタル化に、[MRIの共登録](../09_source/Custom_head_model.html)にも使用できます。
 
 ## EEGLAB テンプレート
 
-EEGLAB は、BESA の電極モンタージュです。 MNI BEM ソースローカリゼーション 幾 幾 幾 幾 の の は は は は は は は は は は は は は します します します します します します します します します します します します ので ので します ので ので ので します します します します します します ので ので ので ので ので ので ので ので ので ので ので ので お問い合わせ 特に、球頭が頭に浮かぶのが現状です。 球は、イオン陰、LPA、RPA座標のフレームを中央に取り付けて、頭につけてあります。
+EEGLABは、2D表現にBESA電極モンタージュを使用し、ソースローカリゼーションにはMNI BEMモデルを使用します。いずれもヒトの頭部形状に適合した球体に基づいています。球は、鼻根点（nasion）、LPA、RPAの基準座標を用いて頭部の中心に配置されます。
 
 ![2022-12-13 に 12 44 11](https://user-images.githubusercontent.com/1872705/207268589-53f5e8f4-9138-4273-ade5-c8d8ee8729f9.png)
 
@@ -25,19 +25,19 @@ EEGLAB は、BESA の電極モンタージュです。 MNI BEM ソースロー�
 
 ### 2Dバイパス
 
-2DのScalPmapは、ScalPMapの先頭に立っています。 [チャタリアンら., 1988](https://pubmed.ncbi.nlm.nih.gov/3250964/)), これは の の Cz。 
+2Dスカルプマップは、球面をCzが真上に来るように上方にシフトし前方に傾けた投影です（[Chatrian et al., 1988](https://pubmed.ncbi.nlm.nih.gov/3250964/)）。
 
 ![2022年12月6日午後5時](https://user-images.githubusercontent.com/1872705/207267890-43c43a92-53c8-483a-95f1-8c9483d57310.png)
 
-### お問い合わせ 2D 日
+### 2Dから3Dへの変換
 
-ソースのローカリゼーション ソースのローカリゼーション ソースのローカリゼーション EEG コミュニケーションラボ *Look up locs* は こちら をご覧ください。
+ソースローカリゼーションのために、EEGLABの *Look up locs* 機能を使用してチャンネル位置を球面座標からBEM座標に変換できます。
 
-関連する レイアウト に の の の の ヘッド は の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の 。 の の の の 。 の 。 。 の 。 。 。 。 の 。 。 。 。 の の の の の 。 の の 。 。 限界 の の * * お問い合わせ チャンネル編集ウィンドウのヘッドセンター*)で球の構成、BEMの構成要素を変換します。 
+関連するレイアウトにおいて、ヘッドの中心と半径はチャンネル編集ウィンドウの *Head Center* オプションで調整でき、球面座標からBEM座標への変換に使用されます。
 
 ![2022-12-13 に 2 00 53 PM](https://user-images.githubusercontent.com/1872705/207454927-54e15856-bead-4ff3-948d-639240449b15.png)
 
-外側 の の の の の の の の の の ではありません の の ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません ではありません デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト デフォルト このデータセット(EEGLAB 2023.0以降)は、2Dプロットで動作します。 ヘッドリミットは、
+デフォルトでは、ヘッドの外側にある電極は2Dプロットに表示されません。EEGLAB 2023.0以降では、これらの電極も2Dプロットに表示されるようになりました。ヘッドの表示範囲は以下のように調整できます。
 
 ```matlab
 EEG.saved = 'no';
@@ -51,7 +51,7 @@ EEG.chaninfo.topoplot = { 'headrad' 0.68 };
 
 ### EEGLABについて
 
-EE を を を を お問い合わせ © 2018 www.securehotelsreservations.com 著作権所有 EGI は 10-20 のシステムで構成されています。 [電極ファイル](https://www.fieldtriptoolbox.org/template/electrode/) FieldTripツールボックス内も表示しています。
+EEGLABはさまざまな商用電極モンタージュをサポートしています。EGIは10-20システムのバリエーションを使用しています。FieldTripツールボックスの[電極ファイル](https://www.fieldtriptoolbox.org/template/electrode/)も参照してください。
 
 ![スクリーンショット 2022-12-13 に 12 07 31 午前](https://user-images.githubusercontent.com/1872705/207260856-073113fb-cf7f-488a-8a5c-d118fccec67b.png)
 
@@ -61,33 +61,33 @@ EE を を を を お問い合わせ © 2018 www.securehotelsreservations.com �
 
 ## その他の2次元レイアウト
 
-表現 を を の の のみ のみ のみ のみ のみ を を を を を を する する する する
+EEGLABでは他の2D表現も使用できます。
 
-EEGLABは、Eeglab_data.set* を、Eeglab_montage11_layout.loc* に転送します。 メニュー <span style="color:brown">*編集 > チャンネルの場所*</span>*Look up locs*  up で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で で EEGLAB、FiaseldTrip のインポート [レイアウト](https://www.fieldtriptoolbox.org/template/layout/) 2D電極の2種類をご用意しました。
+EEGLABは、*eeglab_data.set* のモンタージュを *eeglab_montage11_layout.loc* に変換できます。メニューの<span style="color:brown">*編集 > チャンネルの場所*</span>から *Look up locs* ボタンを使用してください。EEGLABはFieldTripの[レイアウト](https://www.fieldtriptoolbox.org/template/layout/)ファイルもインポートでき、2D電極位置に対応しています。
 
 ![2022-12-13 に 3 16 02 PM](https://user-images.githubusercontent.com/1872705/207465671-1327aaf3-be3f-4185-81a2-6cbdef29bfe0.png)
 
-## 財務に関する考察
+## 基準点（Fiducials）
 
-左と右前方(LPA&RPA)のポイントは、耳の解剖学的ポイント(、顔の部分)の点です。 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 表面 の の の [(参考)](https://doi.org/10.1109/NER.2019.8717065).
+左前耳点（LPA）と右前耳点（RPA）は、耳の解剖学的ランドマーク（前耳介点）です。表面の解剖学的位置は個人間で異なる場合があります（[(参考)](https://doi.org/10.1109/NER.2019.8717065)）。
 
-EEGLAB は、EEGLAB と 'LPA' と 'RPA' のラベルを、EEGLAB のラベルに追加して、 オープンソースのラベルを 作成します。 このページではjavascriptを使用しています。 チェコ共和国 [詳しくはこちら](https://www.fieldtriptoolbox.org/faq/how_are_the_lpa_and_rpa_points_defined/) 詳細はこちら)
+EEGLABでは、'LPA' と 'RPA' が標準の基準点ラベルとして使用されます。[詳しくはこちら](https://www.fieldtriptoolbox.org/faq/how_are_the_lpa_and_rpa_points_defined/)を参照してください。
 
 耳の解剖学的ランドマーク、EEG、MEGデータ(AnatomicalLandmarkCoordinateSystemDescriptionfields) *_coordsystem.json にインストールします。 [BIDS仕様](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/03-electroencephalography.html#coordinate-system-json-_coordsystemjson))。 それは同じです [CTF座標系](https://www.fieldtriptoolbox.org/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/#details-of-the-ctf-coordinate-system) MEGデータセットについて
 - 単位はミリメートルにあります
-- 'LPA' と 'RPA' および 'LPA' および 'LPA' および 'LPA' および 'RPA' および ' および 'LPA' および 'LPA' および 'LPA' および 'LPA' および ' および 'LPA' および ' ' および 'LPA' および ' ' および 'LPA' および ' ' および ' ' ' および 'LPA' および ' ' および ' ' ' および ' ' ' ' ' および および ' ' ' ' ' ' ' ' ' ' ' ' および ' ' ' ' ' ' ' ' および ' ' ' ' ' ' および 'LPA' および ' および および ' ' ' ' ' ' ' ' ' ' ' ' 
+- 'LPA' と 'RPA' は左右の前耳介点を示します
 - X軸のポイントは、ナシオン
 - 直角は「LPA」 X軸へ向かう
 - Z軸は、オルトゴナルから XYの制限点
 
-以下 この この この この この この この この この この この この この この この この この この この この この この この この この この この この この この この この この この で で の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の 
+以下の図は、頭部モデル上の基準点の位置を示しています。
 
 ![ライン 2022-12-13 12 29 36 AM](https://user-images.githubusercontent.com/1872705/207265225-94db3e70-3dab-48db-950d-230d9cc9b93b.png)
 
-のこと のこと は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は は Fiducials は、MRIでヘッドモンタージュをそのままに、その瞬間に、より一層の価値を秘めています。  表示 は つ つ つ つ つ つ つ は は は の の は は は は は 。 は 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 どちら の の の の の の の の の の の の の の の の の の の の の によって によって によって によって によって によって によって しません しません しません しません によって しません しません しません しません しません 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。
+基準点（fiducials）は、EEG電極モンタージュをMRIの頭部モデルに共登録するために重要です。基準点の位置によって、電極モンタージュが頭部に正しく位置合わせされるかが決まります。前耳介点の具体的な定義は、結果に大きな影響を与えません。
 
 ## ヘリックス・トラガス・ジャンクションを使って
 
-プレオーラルポイントは、触発の解剖学的機能、解剖学的MRヘッドと3D EEG電極は、EEG電極の主流である。EEG電極は、EEG電極の主流である。 共同 共同 共同 共同 である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である である 電極 の の の の の の の の の の の の の の の は は は は です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です [<i>get_chanlocs ディレクティブ</i>](https://github.com/sccn/get_chanlocs/wiki)3Dヘッドモデル グラメトトロローカリゼーション用EEGLABプラグイン
+ヘリックス・トラガス・ジャンクション（耳珠と耳輪の交点）は、解剖学的に再現性の高いランドマークであり、MRIの解剖学的ヘッドモデルと3D EEG電極位置の共登録に使用されます。電極位置のデジタル化には、[<i>get_chanlocs プラグイン</i>](https://github.com/sccn/get_chanlocs/wiki)（ソースローカリゼーション用3Dヘッドモデル対応のEEGLABプラグイン）を使用できます。
 
 ![こちら](/assets/images/helixTragus.PNG)
