@@ -222,7 +222,7 @@ EEGLAB のデフォルトは *runica* (Infomax) です。 [ペーパー](https:/
 
 ### ICLabel
 
-*ICLabel* では、各コンポーネントの分類を自動的に計算します。 [ICラベル](https://github.com/sccn/ICLabel) を参照してください。
+*ICLabel* では、各コンポーネントの分類を自動的に計算します。 [ICLabel](https://github.com/sccn/ICLabel) を参照してください。
 
 ### ICAコンポーネントのクラスタリングのダイポール
 

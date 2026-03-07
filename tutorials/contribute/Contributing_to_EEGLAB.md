@@ -64,7 +64,7 @@ EEGLABは、環境にやさしいソフトウェアです。
 
 しかし、EEGLABでは、商用購入や登録を行っております。
 [環境方針](http://www.mathworks.com/store/) を参照してください。 マトラボ
-おすすめのサイトへ
+以下を参照してください。
 マトラボ MATLABとEEGLABは、Linux/Unix、Mac OS X、または
 ウィンドウズ。 MATLABの学生が高価な価格で購入
 $ 50 アメリカ

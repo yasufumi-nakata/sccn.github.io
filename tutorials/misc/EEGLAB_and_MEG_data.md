@@ -14,7 +14,7 @@ EEGLAB は、File-IO からファイル・IO まで、様々な情報を発信�
 
 参照: [BIDS-matlab-toolsの使い方](https://github.com/sccn/bids-matlab-tools) EEGLAB は、BIDS 形式のファイルです。 EEGLABは、EEGLAB(メニュー項目)からこのプラグインは、 <span style="color: brown">ファイル > EEGLABエクスカ</span>). 
 
-以下、Neuromag MEGとCFT MEG関連情報 おすすめの使い方 [clean_rawdata(クリーンロード)](https://github.com/sccn/clean_rawdata) EEGLAB では、様々な言語の言語の言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語、言語 ?????????????? [ICラベル](https://github.com/sccn/ICLabel) そして、 [マーラ](https://irenne.github.io/artifacts/) ICA’s は、再訓練で、MEGデータで再訓練をしています。
+以下、Neuromag MEGとCTF MEGに関する情報です。[clean_rawdata](https://github.com/sccn/clean_rawdata) プラグインの使用を推奨します。 [ICLabel](https://github.com/sccn/ICLabel) そして、 [MARA](https://irenne.github.io/artifacts/) ICA’s は、再訓練で、MEGデータで再訓練をしています。
 
 メールマガジン
 ---------------------------

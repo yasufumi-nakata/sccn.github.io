@@ -1,7 +1,7 @@
 ---
 layout: default
 title: ICLabel
-nav_title: "ICラベル"
+nav_title: "ICLabel"
 long_title: ICLabel
 parent: Plugins
 render_with_liquid: false
@@ -9,7 +9,7 @@ nav_order: 0
 ---
 プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/ICLabel).
 
-# ICラベル
+# ICLabel
 EEGLAB用の自動EEG独立したコンポーネントのclassiferプラグイン。
 詳しくは、 [ICLabelのウェブサイトチュートリアル](https://labeling.ucsd.edu/tutorial/about).
 

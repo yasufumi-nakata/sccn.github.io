@@ -107,7 +107,7 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
     球面または境界要素ヘッドモデル。 関数を使う
     FIELDTRIPツールボックス
 
--   **[ICラベル](https://github.com/sccn/IClabel):** EEGLAB用の自動EEG独立したコンポーネント分類プラグイン。
+-   **[ICLabel](https://github.com/sccn/IClabel):** EEGLAB用の自動EEG独立したコンポーネント分類プラグイン。
 
 ### データ収集
 
@@ -165,7 +165,7 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
 
 ### ICAベースのアーティファクト拒絶とコンポーネント分類
 
--   **[マーラ](http:in.de/irene.winkler/artifacts//www.user.tu-berl/):** 人工の独立した自動識別
+-   **[MARA](http:in.de/irene.winkler/artifacts//www.user.tu-berl/):** 人工の独立した自動識別
     コンポーネント。 MARAとは
     6つの抽出によって専門家の評価から学ぶ線形分類器
     空間、スペクトル、およびテンポラルドメインからの機能。

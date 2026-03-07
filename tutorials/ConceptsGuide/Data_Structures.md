@@ -618,7 +618,7 @@ floatwrite(data(:,:)', 'myfile.fdt');
 save -mat myfile.set EEG
 ```
 
-機能によって実行される追加のチェックがあります [pop_loadset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m)EEGLAB のデータセット おすすめ
+機能によって実行される追加のチェックがあります [pop_loadset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m)EEGLABのデータセットを読み込みます。
 
 ```matlab
 EEG = pop_loadset('myfile.set')
