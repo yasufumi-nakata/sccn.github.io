@@ -41,7 +41,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 ## 6月14日(土)(全開、無料登録)
 
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timeformat="12hr" data-timezone="PDT">06:30午前</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:00</span> – 参加登録は開講します。ワークショップを見学してください。 タウンサイト 新しくて古い友達と交流し、楽しく過ごす... </span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timeformat="12hr" data-timezone="PDT">06:30午前</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:00</span> – 参加登録は開講します。Gather.townのワークショップ会場を見学してください。新しい友達や旧友と交流し、楽しく過ごしましょう。 </span>
 
 - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7月7日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:55</span> – **ギャザー ** ギャザー. 町の研修会の場所。 **チューターの集合 ** </span>
 

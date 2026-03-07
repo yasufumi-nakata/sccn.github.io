@@ -77,4 +77,4 @@ pop_prop_extended(EEG, 1, component_array, NaN, spectopo_options, erpimage_optio
 ### 追加の能力
 **警告: このセクションは、EEGLABが他の場合、予期しない変更がEEGLABに既に行われている可能性があるため、上級ユーザーのみです。 メニュー
 
-Viewprops プラグインは、オリジナルの pop_prop() 関数のドロップイン置換を可能にするために書かれています。 そのため、「ツール」-> を使用したときに拡張プロパティウィンドウを生成したい場合 "ICA"-> "マップでコンポーネントを注入" は、単に "pop_prop_extended" に "pop_prop" を "pop_prop_extended" に変更するために、関数 pop_selectcomps() のコードを開きます。
+Viewprops プラグインは、オリジナルの pop_prop() 関数のドロップイン置換を可能にするために書かれています。 そのため、「ツール」-> を使用したときに拡張プロパティウィンドウを生成したい場合 "ICA"-> "Reject components by map" は、単に "pop_prop_extended" に "pop_prop" を "pop_prop_extended" に変更するために、関数 pop_selectcomps() のコードを開きます。

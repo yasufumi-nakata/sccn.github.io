@@ -78,7 +78,7 @@ Session Structure:  
   num_electrodes - number of EEG sensors
 ```
 
-bem_generate_eeg_matrices ディレクティブ
+bem_generate_eeg_matrices 関数
 -------------------------
 ```
 bem_generate_eeg_matrices() - Generates BEM matrices for a BEM model.  
@@ -116,7 +116,7 @@ Notes: The matrix is created using the name given in the session str
       using the bem_load_transfer_matrix().
 ```
 
-nft_get_config ディレクティブ
+nft_get_config 関数
 --------------
 ```
 nft_get_config() - Returns the toolbox configuration information  
@@ -183,7 +183,7 @@ Outputs:  
   model - model structure.
 ```
 
-bem_load_transfer_matrix ディレクティブ
+bem_load_transfer_matrix 関数
 ------------------------
 ```
 bem_load_transfer_matrix() Loads the BEM transfer matrix with extension ’ext’.  
@@ -202,7 +202,7 @@ Outputs:  
   session - updated session structure.
 ```
 
-bem_smatrix_from_nodes ディレクティブ
+bem_smatrix_from_nodes 関数
 ----------------------
 ```
 bem_smatrix_from_nodes() - Generates Smatrix from nodes of a mesh.  
@@ -241,7 +241,7 @@ Outputs:  
              loaded, modifying the underlying model.
 ```
 
-bem_solve_lfm_eeg ディレクティブ
+bem_solve_lfm_eeg 関数
 -----------------
 ```
 bem_solve_lfm_eeg() - Computes the LFM arising from given dipoles  
@@ -309,7 +309,7 @@ Optional Arguments:  
   ’subject’ - (string) Subject name. Output files will start with this name.
 ```
 
-Mesh_local_refinement ディレクティブ
+Mesh_local_refinement 関数
 ---------------------
 ```
 mesh_local_refinement() - Refines the meshes in a given folder. Loads  
@@ -370,7 +370,7 @@ Optional Arguments:  
   ’subject’ - (string) Subject name. The output files will start with this name.
 ```
 
-segm_aniso_filtering ディレクティブ
+segm_aniso_filtering 関数
 --------------------
 ```
 segm_aniso_filtering() - Performs anisotropic filtering.  
@@ -388,7 +388,7 @@ Outputs:  
   b - output image
 ```
 
-segm_scalp ディレクティブ
+segm_scalp 関数
 ----------
 ```
 segm_scalp() - Performs scalp segmentation  
@@ -419,7 +419,7 @@ Inputs:  
 Outputs:  
   Bra - brain mask
 ```
-segm_outer_skull ディレクティブ
+segm_outer_skull 関数
 ----------------
 ```
 segm_brain() - Performs outer skull segmentation  
@@ -454,7 +454,7 @@ Inputs:  
 Outputs:  
   Sk_in - inner skull mask  
 ```
-segm_final_skull ディレクティブ
+segm_final_skull 関数
 ----------------
 ```
 segm_final_skull() - Corrects scalp and outer skull masks wrt inner  
@@ -473,7 +473,7 @@ Outputs:  
   Sca    - scalp mask  
   Sk_out - outer skull mask
 ```
-utilbem_compute_cond ディレクティブ
+utilbem_compute_cond 関数
 --------------------
 ```
 utilbem_compute_cond() - Computes the average conductivity  

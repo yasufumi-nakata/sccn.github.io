@@ -52,7 +52,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 		<p>
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">2019年5月30日</span>– 
-				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00午後</span> – 参加登録は開講します。ワークショップを見学してください。 タウンサイト 新しくて古い友達と交流し、楽しく過ごす... 
+				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00午後</span> – 参加登録は開講します。Gather.townのワークショップ会場を見学してください。新しい友達や旧友と交流し、楽しく過ごしましょう。 
 			</span>
 		</p>
 	</li>
