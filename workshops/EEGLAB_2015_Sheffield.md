@@ -209,7 +209,7 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 <span style="color: purple">10:00 – 10:30 EEGLABエクステンション(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_plugins.pdf)
 
-<span style="color: orange">10:30〜10:45 EEGLABチャレンジ練習(オール)</span> [ニュース](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_questions.pdf)
+<span style="color: orange">10:30〜10:45 EEGLABチャレンジ練習(オール)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_questions.pdf)
 <!-- -->
 
 

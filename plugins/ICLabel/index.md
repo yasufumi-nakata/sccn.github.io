@@ -13,7 +13,7 @@ nav_order: 0
 EEGLAB用の自動EEG独立したコンポーネントのclassiferプラグイン。
 詳しくは、 [ICLabelのウェブサイトチュートリアル](https://labeling.ucsd.edu/tutorial/about).
 
-## 導入事例
+## インストール
 ICLabel プラグインを取得する最も簡単な方法は、EEGLAB プラグインマネージャです。 
 
 EEGLABプラグインマネージャではなくGitHubでプラグインをインストールする予定がある場合は、matconvnetがサブモジュールとして含まれていることに注意してください。 つまり、zip-fileのダウンロードには含まれません。 ダウンロードする必要があります [matconvnetの私のフォーク(バージョン)](https://github.com/lucapton/matconvnet) ICLabelフォルダにzipを抽出します。 また、コマンドラインでこのリポジトリをクローニングしている場合、サブモジュールをクローンする「---recusive」フラグを必ず含めてください。 必要なディレクトリにあると、正しいコマンドは次のようになります。
@@ -52,7 +52,7 @@ EEG.etc.ic_classification.ICLabel.classes{3}
 カテゴリーが「目」です。
 ## Viewprops プラグイン
 ![](Viewprops_eye.png)
-ICLabel プラグインは、組み込みのプロットやビジュアライゼーションを提供していません。したがって、インストールすることも強くお勧めします。 [Viewprops プラグイン](https://sccn.ucsd.edu/wiki/Viewprops) この記事の一番上に示したような数字を生成します。 詳細はこちら [導入事例](https://sccn.ucsd.edu/wiki/ICLabel#Installation) 取得方法に関するセクション [Viewprops プラグイン](https://sccn.ucsd.edu/wiki/Viewprops) 見る [wikiページ](https://sccn.ucsd.edu/wiki/Viewprops) 使用方法に関する情報
+ICLabel プラグインは、組み込みのプロットやビジュアライゼーションを提供していません。したがって、インストールすることも強くお勧めします。 [Viewprops プラグイン](https://sccn.ucsd.edu/wiki/Viewprops) この記事の一番上に示したような数字を生成します。 詳細はこちら [インストール](https://sccn.ucsd.edu/wiki/ICLabel#Installation) 取得方法に関するセクション [Viewprops プラグイン](https://sccn.ucsd.edu/wiki/Viewprops) 見る [wikiページ](https://sccn.ucsd.edu/wiki/Viewprops) 使用方法に関する情報
 
 ### FieldTripでICLabelを実行
 

@@ -322,7 +322,7 @@ ROIの各ペア間の重要な接続。** そのためには、2つのクラス�
 間隔)クラスターの遠心分離機の場所および間カルスターの
 接続性。 このメソッドは "missing変数" を考慮に入れます。
 問題は密接なクラスタリングのアプローチに固有のものであり、堅牢性を提供します。
-グループ接続統計。 ポスターは [ニュース](https://sccn.ucsd.edu/~scott/pdf/Thompson_and_Mullen_Poster_ICONXI.pdf) このトピックでは、コードはまだ利用できません。
+グループ接続統計。 ポスターは [ポスター](https://sccn.ucsd.edu/~scott/pdf/Thompson_and_Mullen_Poster_ICONXI.pdf) このトピックでは、コードはまだ利用できません。
 
 ### 7.4.3. グループSIFT
 

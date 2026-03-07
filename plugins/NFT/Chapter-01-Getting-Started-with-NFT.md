@@ -8,7 +8,7 @@ title: Chapter-01-Getting-Started-with-NFT
 nav_title: "第01章-Getting-Start-with-NFT"
 long_title: Chapter-01-Getting-Started-with-NFT
 ---
-導入事例
+インストール
 ------------
 
 神経電磁気 フォワードヘッドモデリング Toolboxはオープンソースです。

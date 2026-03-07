@@ -7,7 +7,7 @@ categories: preproc
 parent: 5. Preprocess data
 grand_parent: Tutorials
 ---
-# 導入事例
+# はじめに
 カットオフ周波数、パスバンド、ストップバンド、トランジションバンドの意味のグラフィカルな説明の下。
 ![こちら](https://user-images.githubusercontent.com/10362238/118734865-23797e00-b7f4-11eb-9eec-f52ffcba0585.png)
 

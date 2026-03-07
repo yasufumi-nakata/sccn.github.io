@@ -22,7 +22,7 @@ EEG構造は、
 - トピックス
 </details>
 
-導入事例
+はじめに
 ------------
 
 EEGLAB MATLAB は、EEGLAB MATLAB の略称です。
