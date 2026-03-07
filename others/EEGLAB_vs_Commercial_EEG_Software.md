@@ -44,7 +44,7 @@ EEGLAB の許認可により、商用企業が EEGLAB のコード(MATLAB また
 <tr>
 	<td>グラフィックインターフェイス</td>
 	<td style="background-color:#FFAAAA">EEGLABのグラフィックインターフェイスは商用ソフトウェアのように洗練されたものではないかもしれません。 EEGLAB のグラフィックユーザーインターフェイスは、このような処理を自動化するための便利な方法です。</td>
-	<td style="background-color:lightgreen">商用ソフトウェア開発者は通常、実装されたツールのパントの費用で、グラフィックインターフェイスを完成させます。</td>
+	<td style="background-color:lightgreen">商用ソフトウェア開発者は通常、実装するツールの範囲を犠牲にしてでも、グラフィックインターフェイスを洗練させます。</td>
 </tr>
 <tr>
 	<td>ドキュメント</td>
