@@ -1,15 +1,15 @@
 ---
 layout: default
 title: EEGLAB 2022 UCSD
-nav_title: "エグラボ2022 UCSD"
+nav_title: "EEGLAB2022 UCSD"
 long_title: EEGLAB 2022 UCSD workshop
 parent: Past workshops
 grand_parent: Workshops
 ---
 
-# 2022 エグラボUCSD ワークショップ
+# 2022 EEGLABUCSD ワークショップ
 
-公式サイト [サイトマップ](https://eeglabworkshop.ucsd.edu/) ワークショップ このページは、プレゼンターがプレゼンテーションをアップロードして共有し、プログラムのコピーを含むために使用されます。
+公式サイト [PDF](https://eeglabworkshop.ucsd.edu/) ワークショップ このページは、プレゼンターがプレゼンテーションをアップロードして共有し、プログラムのコピーを含むために使用されます。
 
 11月17日〜11月21日、UCSDにて第34回EEGLABワークショップを開催いたします。 ワークショップでは、EEGLABを使用してデータを処理する方法について、スクリプトや複数のプラグインの使用などについて説明します。 並列セッションでは、特定のトピック、特にウェアラブルなEEG、ディープラーニング、EEG、コネクティビティ分析、およびEEGについて説明します。 午後1時以降は無料でご利用いただけます。
 

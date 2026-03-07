@@ -124,7 +124,7 @@ EEGLAB は、EEGLAB のプログラムを準備中です。
 メニュー項目を選択 <span style="color: brown">ファイル → インポートイベント情報 → インポート
 MATLAB または ASCII ファイル</span>
 
-![サイトマップ](/assets/images/pop_importevent.png)
+![こちら](/assets/images/pop_importevent.png)
 
 チュートリアルテキストファイルのためにブラウズ [チュートリアル_eventtable.txt](http://sccn.ucsd.edu/eeglab/download/tutorial_eventtable.txt)ヘッダー行数を 1 に設定します。
 (ファイルの最初の行では、列フィールド名を与えます)
@@ -183,7 +183,7 @@ SMAデータファイル
 
 
 
-![サイトマップ](/assets/images/load_presentation_file.png)
+![こちら](/assets/images/load_presentation_file.png)
 
 
 
@@ -251,7 +251,7 @@ E-Primeファイル (sccn.ucsd.edu の eeglab で) は、ASCII が正常に実�
 
 DATファイル [TEST.DATの特長](http://sccn.ucsd.edu/eeglab/download/TEST.DAT) サンプルに関連付けられている [品質保証](http://sccn.ucsd.edu/eeglab/download/TEST.CNT) DATファイルとDATファイル イベント イベント イベント 100 100 100 100 100 CNTは、 に に に に に に に は は は <span style="color: brown">ツール → 抽出エポック</span>ウィンドウが大きかったので、 ウィンドウが開きます。 Neuroscan をインポートします。 メニュー <span style="color: brown">ファイル → インポート ソース ソースファイル</span>お問い合わせ インポートするファイルを選択すると、2番目のウィンドウが表示されます。
 
-![サイトマップ](/assets/images/Pop_loaddat.gif)
+![こちら](/assets/images/Pop_loaddat.gif)
 
 .DATファイルでは、
 エポック。 しかし、実験設計によっては反応がない場合もございます。

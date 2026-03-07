@@ -33,10 +33,8 @@ EEGLABメニューに紹介する新しいメニュー項目を選択します�
 以下のプラグインは、利用可能なプラグインのリストと同じです
 EEGLAB 対応する EEGLAB バージョンの EEGLAB プラグイン マネジャーを通して。
 
--   [EEGLAB 2019.1以降のプラグインの現在のリストを参照してください。
-    バージョンhttps://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php)
--   [EEGLABのプラグインの一覧を見る]
-    2019.0](https://sccn.ucsd.edu/wiki/Plugin_list_all)(このページのプラグインはなし
+-   [EEGLAB 2019.1以降のプラグインの現在のリスト](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php)を参照してください。
+-   [EEGLABのプラグインの一覧(2019.0)](https://sccn.ucsd.edu/wiki/Plugin_list_all)(このページのプラグインはなし
     更新しました)
 -   詳細はこちら [インポート](https://sccn.ucsd.edu/wiki/Plugin_list_import) そして、 [データ処理](https://sccn.ucsd.edu/wiki/Plugin_list_process) EEGLABの拡張
     13.xおよび14.x (プラグインおよびページは更新しません)
@@ -71,20 +69,16 @@ EEGLAB プラグインのフォルダーと EEGLAB を再起動します。
 新しいプラグインを作成する
 --------------------------------------
 
-簡単な手順を参照してください。 [どのように貢献するか]
-EEGLAB>(/tutorials/contribute/) EEGLAB互換コードを作成する。
+簡単な手順を参照してください。 [EEGLABへの貢献](/tutorials/contribute/) EEGLAB互換コードを作成する。
 
 次に、EEGLAB ユーザが使えるように、上記のリストに拡張機能を追加できます。
-EEGLABから自動的にダウンロードします。 これを行うには、[これを使用する]
-フォームhttp://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)。 お問い合わせ
+EEGLABから自動的にダウンロードします。 これを行うには、[このフォーム](http://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)を使用する。 お問い合わせ
 プラグインの新しいバージョンをアップロードしたい、 
 [この単純化されたフォーム](http://sccn.ucsd.edu/eeglab/plugin_uploader/version_update.php).
 
 管理者は、これらはメンテナンスページです。
-プラグイン
-リクエストhttps://sccn.ucsd.edu/eeglab/plugin_uploader/protected/pending_requests.php)
-[プラグインの編集]
-インフォメーションhttps://sccn.ucsd.edu/eeglab/plugin_uploader/protected/edit_plugin.php).
+[プラグインリクエスト](https://sccn.ucsd.edu/eeglab/plugin_uploader/protected/pending_requests.php)
+[プラグインの編集情報](https://sccn.ucsd.edu/eeglab/plugin_uploader/protected/edit_plugin.php).
 
 プラグイン/拡張子の古いバージョンにアクセスするには
 ------------------------------------------------------
@@ -184,7 +178,7 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
 
 -   **[ADJUSTについて](http://www.unicog.org/pm/pmwiki.php/MEG/RemovingArtifactsWithADJUST):** ステレオタイプのアーティファクト固有の空間と一時的な機能を組み合わせることで、アーティファクト関連インディペンデントコンポーネントを識別する完全自動アルゴリズム。
 
--   **[サイトマップ](https://github.com/sccn/corrmap):** 共通のEEGのアーティファクトの半自動同一証明
+-   **[こちら](https://github.com/sccn/corrmap):** 共通のEEGのアーティファクトの半自動同一証明
     テンプレートに基づく。 CORRMAP拡張は、セットのセットで構成されています
     MATLABの機能により、識別とクラスタリングが可能
     一般的なEEGアーティファクトを表す独立したコンポーネント。

@@ -15,7 +15,7 @@ EEGLAB をロードする
 メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
 <span style="color: brown">既存のデータセットをロードする</span>EEGLAB の「sample_data」フォルダに、Eeglab_data.set というファイルがあります。
 
-![サイトマップ](/assets/images/Pop_loadset.png)
+![こちら](/assets/images/Pop_loadset.png)
 
 Clean Rawdata プラグイン
 -------------------

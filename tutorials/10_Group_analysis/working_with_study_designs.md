@@ -6,7 +6,7 @@ work_title: c. How to work with STUDY designs
 parent: 10. Group analysis
 grand_parent: Tutorials 
 ---
-サイトマップ
+こちら
 ===========================
 お問い合わせ
 
@@ -52,7 +52,7 @@ zipアーカイブは、PDF のドキュメント、変更の詳細は zip で�
 
 メニュー項目を使用する <span style="color: brown">ファイル → 既存の研究をロードする</span> *stern.study*ファイル。 EEGLABに*STUDY*が読み込まれる、 <span style="color: brown">学習 → 学習情報編集</span> メニュー項目。 次のインターフェイスがポップアップ表示されます。
 
-![サイトマップ](/assets/images/studydesign6.png)
+![こちら](/assets/images/studydesign6.png)
 
 このインターフェイスには、特に、データセット、条件、セッションの一覧、およびそれらに関連する実行に関する情報が含まれています。 それは細部で記述されます [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html)このページではjavascriptを使用しています。 文字データエポック1つ、*probe* 文字1つに。
 
@@ -61,7 +61,7 @@ zipアーカイブは、PDF のドキュメント、変更の詳細は zip で�
 *STUDY*デザインを編集する、選択する
 メニュー <span style="color: brown">研究 → 選択/編集研究設計</span>お問い合わせ 以下のインターフェイスをポップアップします。
 
-![サイトマップ](/assets/images/studydesign7.png)
+![こちら](/assets/images/studydesign7.png)
 
 上部パネルの3つの押しボタンは、以下に使用できます。
  - 新しいデザインを追加(「追加」)
@@ -81,7 +81,7 @@ zipアーカイブは、PDF のドキュメント、変更の詳細は zip で�
 
 *Edit*ボタンを押します。 *条件*の変数が選択されます。また、2つの条件*ignore*(レター)、*memorize*(レター)、*probe*(レター)。
 
-![サイトマップ](/assets/images/studydesign8.png)
+![こちら](/assets/images/studydesign8.png)
 
 標準の EEGLAB の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s s の s s の s s の s s s s s の s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s  *LIMO* プラグインは、
 - Categorical 変数 は (ja*ignore* 対*memorize* 対* の*probe* の ) に分けられます。
@@ -107,14 +107,14 @@ zipアーカイブは、PDF のドキュメント、変更の詳細は zip で�
 - *r* は必須文字です。 *probe*(recall) の文字です。 *combine* ボタンを押して文字を文字通りにします。
 文字リストの下部に移動し、組み合わせたイベントタイプの3セットを選択します。 
 
-![サイトマップ](/assets/images/studydesign9.png)
+![こちら](/assets/images/studydesign9.png)
 
 このオプションは、 お問い合わせ 複数の試行錯誤を繰り返す。
 
 独立した変数のリストは自動的に生成されます
 STUDYの定義
 各データセット。 単一のイベントフィールド(表示されているように) <span style="color: brown">編集 → イベントの値</span>お問い合わせ タイムロックイベント開催中! しかしながら、EEGLABはイベントの開催を予定しています。 イベント 他の 他の 他の 他の イベント イベント イベント イベント イベント イベント 内の 内の 内の 内の 内の 内の 内の 内の 内の 内の として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として として インフォメーション
-データセットから抽出され、参照して下さい [サイトマップ](/tutorials/ConceptsGuide/Data_Structures.html#the-studydesign-sub-structure)
+データセットから抽出され、参照して下さい [こちら](/tutorials/ConceptsGuide/Data_Structures.html#the-studydesign-sub-structure)
 チュートリアル。 
 
 読むこともできます。 [イベントスクリプトチュートリアル](/tutorials/11_Scripting/Event_Processing_command_line.html#adding-event-information-for-group-analysis) イベントコンテキストに基づいて新しい独立した変数を定義する。

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2017 Israel
-nav_title: "EEGLAB 2017 イスラエル"
+nav_title: "EEGLAB 2017 Israel"
 parent: Past workshops
 grand_parent: Workshops
 ---
@@ -35,15 +35,15 @@ EEGおよび関連データ、詳細な方法の博覧会および実用的
 
 **概要とICA理論/実践* * 必須
 
-<span style="color: purple">8:30～9:45～ 鉱業イベント関連の脳力学I(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_israel_i.pdf)
+<span style="color: purple">8:30～9:45～ 鉱業イベント関連の脳力学I(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_israel_i.pdf)
 
-<span style="color: purple">9:45 – 10:15 -- EEGLABの概要 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_overview_israel.pdf)
+<span style="color: purple">9:45 – 10:15 -- EEGLABの概要 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_overview_israel.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">10:30-11:30 -- ICA理論(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab_israel_ica.pdf)
+<span style="color: purple">10:30-11:30 -- ICA理論(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab_israel_ica.pdf)
 
-<span style="color: orange">11:30～12:30～ データのインポート、アーティファクト拒否(John Iversen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_jri_preprocessing.pdf)
+<span style="color: orange">11:30～12:30～ データのインポート、アーティファクト拒否(John Iversen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_jri_preprocessing.pdf)
 <!-- -->
 
 
@@ -61,11 +61,11 @@ EEGおよび関連データ、詳細な方法の博覧会および実用的
 **ICAおよび時間頻度**
 
 
-<span style="color: orange">14:30～16:00 -- ICA分解練習(ヨハネイバース)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_jri_ica_practicum.pdf)
+<span style="color: orange">14:30～16:00 -- ICA分解練習(ヨハネイバース)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_jri_ica_practicum.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">16:15～17:15 時間頻度分解: 理論と実践(ジョン・イヴァーン)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_jri_time_frequency.pdf)
+<span style="color: purple">16:15～17:15 時間頻度分解: 理論と実践(ジョン・イヴァーン)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_jri_time_frequency.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
@@ -82,18 +82,18 @@ EEGおよび関連データ、詳細な方法の博覧会および実用的
 **EEGLABのグループ分析とICAクラスタリング* * 必須
 
 
-<span style="color: purple">8:45～9:15～ なぜクラスターICAコンポーネント? (スコットメイク)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_israel17_clustering.pdf)
+<span style="color: purple">8:45～9:15～ なぜクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_israel17_clustering.pdf)
 
-<span style="color: purple">9:15 - 10:15-- 複数の比較のための強力な統計と修正(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_statistics_israel2.pdf)
+<span style="color: purple">9:15 - 10:15-- 複数の比較のための強力な統計と修正(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_statistics_israel2.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">10:45 - 11:30 -- STUDY、STUDYの設計の作成、および基本的なプロットの作成(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_design_israel2.pdf)
+<span style="color: purple">10:45 - 11:30 -- STUDY、STUDYの設計の作成、および基本的なプロットの作成(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_design_israel2.pdf)
 <!-- -->
 
 
 
-<span style="color: purple">11:30 - 12:45 -- EEGLABによるグループ分析: クラスターICAコンポーネント(Arnaud Delorme)へのメソッド</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_clustering_israel2.pdf)
+<span style="color: purple">11:30 - 12:45 -- EEGLABによるグループ分析: クラスターICAコンポーネント(Arnaud Delorme)へのメソッド</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_clustering_israel2.pdf)
 <!-- -->
 
 
@@ -114,9 +114,9 @@ EEGおよび関連データ、詳細な方法の博覧会および実用的
 
 **Source ローカリゼーション**
 
-<span style="color: purple">8:45～9:30 フォワードと逆モデリング(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab_israel17_forwardinversemods.pdf)
+<span style="color: purple">8:45～9:30 フォワードと逆モデリング(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab_israel17_forwardinversemods.pdf)
 
-<span style="color: purple">9:30 – 10:00 -- DIPFIT 練習 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/dipfit_practicum_israel.pdf)
+<span style="color: purple">9:30 – 10:00 -- DIPFIT 練習 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/dipfit_practicum_israel.pdf)
 <!-- -->
 
 
@@ -129,9 +129,9 @@ EEGおよび関連データ、詳細な方法の博覧会および実用的
 **一般リニアモデリング* * 必須
 
 
-<span style="color: orange">10:15 – 12:00 -- LIMO EEGLABプラグイン(Arnaud Delorme)を使用して、一般的なリニアモデルをEEGデータに適用するための理論と実践</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/limo_israel_2017.pdf)
+<span style="color: orange">10:15 – 12:00 -- LIMO EEGLABプラグイン(Arnaud Delorme)を使用して、一般的なリニアモデルをEEGデータに適用するための理論と実践</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/limo_israel_2017.pdf)
 
-<span style="color: orange">12:00 – 12:30 -- EEGLABでのスクリプト (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/israel_scripting.pdf)([Oddball_file.bdf の使い方](https://sccn.ucsd.edu/githubwiki/files/oddball_file.zip))
+<span style="color: orange">12:00 – 12:30 -- EEGLABでのスクリプト (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/israel_scripting.pdf)([Oddball_file.bdf の使い方](https://sccn.ucsd.edu/githubwiki/files/oddball_file.zip))
 <!-- -->
 
 
@@ -153,16 +153,16 @@ EEGおよび関連データ、詳細な方法の博覧会および実用的
 
 
 
-<span style="color: purple">15:15 – 15:45 -- その他のトピック(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab_israel_misc.pdf)
+<span style="color: purple">15:15 – 15:45 -- その他のトピック(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab_israel_misc.pdf)
 
-<span style="color: purple">15:45～16:00 -- メグ(ヨハネイバース)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab_jri_meeg.pdf)
+<span style="color: purple">15:45～16:00 -- メグ(ヨハネイバース)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab_jri_meeg.pdf)
 <!-- -->
 
 
 **情報源流* * 必須
 
 
-<span style="color: purple">16:00 – 18:00 -- ソース情報フローとGranger-Causalモデリングツール(John Iversen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_israel_jri_connectivity2.pdf)
+<span style="color: purple">16:00 – 18:00 -- ソース情報フローとGranger-Causalモデリングツール(John Iversen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_israel_jri_connectivity2.pdf)
 <!-- -->
 
 
@@ -173,7 +173,7 @@ EEGおよび関連データ、詳細な方法の博覧会および実用的
 
 
 
-<span style="color: purple">8:45～9:30 マイニングイベント関連の脳力II(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_sm_israel.pdf)
+<span style="color: purple">8:45～9:30 マイニングイベント関連の脳力II(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_sm_israel.pdf)
 
 <span style="color: orange">9:30-10:00 -- 練習、小グループプロジェクト [可能な演習](https://sccn.ucsd.edu/githubwiki/files/eeglab_problems.pdf)</span>
 <!-- -->

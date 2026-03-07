@@ -20,7 +20,7 @@ nav_order: 4
 ## 2008年以前のEEGLABワークショップの一覧
 - [EEGLABワークショップ2004 UCSD](http://sccn.ucsd.edu/eeglab/workshop04/) 
 - [EEGLAB 2005 ポルト](http://sccn.ucsd.edu/eeglab/workshop05/) 
-- [エグラボ2006 シンガポール](http://sccn.ucsd.edu/eeglab/workshop06/)
-- [エグラボ2007 チリ](http://sccn.ucsd.edu/eeglab/workshops07/workshop_chile2007)
-- [エグラボ2007 サンディエゴ](http://sccn.ucsd.edu/eeglab/workshops07/workshop_ucsd07)
-- [エグラボ2007 フランス](http://sccn.ucsd.edu/eeglab/workshops07/workshop_france07)  
+- [EEGLAB2006 シンガポール](http://sccn.ucsd.edu/eeglab/workshop06/)
+- [EEGLAB2007 チリ](http://sccn.ucsd.edu/eeglab/workshops07/workshop_chile2007)
+- [EEGLAB2007 サンディエゴ](http://sccn.ucsd.edu/eeglab/workshops07/workshop_ucsd07)
+- [EEGLAB2007 フランス](http://sccn.ucsd.edu/eeglab/workshops07/workshop_france07)  

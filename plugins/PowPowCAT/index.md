@@ -36,8 +36,7 @@ freqBins = logspace(log10(1+deviationFromLog), log10([user_input_value]+devia
 -   すべてのチャンクを網羅して堅牢なスペクトルを計算し、
     洗浄のためのチャンクの20%を捨てる分散を計算します。
 -   相互周波数パワースペクトラムの計算式係数
-    すべてのIC(前選択ICが推奨されますので、こちらを参照してください)
-    ページ:()https://sccn.ucsd.edu/wiki/Std_selectICsByCluster) 方法
+    すべてのIC(    前選択ICが推奨されますので、[こちら](https://sccn.ucsd.edu/wiki/Std_selectICsByCluster)を参照してください。 方法
     効率的に行います。)
 -   分裂統計をランダム化して実行するチャンク (i.e.)
     datapoint) は各周波数の bin がビルドするごとに異なるインデックス

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2015 Sheffield
-nav_title: "EEGLAB 2015 シェフィールド"
+nav_title: "EEGLAB 2015 Sheffield"
 parent: Past workshops
 grand_parent: Workshops
 ---
@@ -17,7 +17,7 @@ EEGLABワークショップ
 EEGLABは、電気生理学のためのオープンソースソフトウェア環境です。
 世界中で広く使用されている信号処理、成長とともに
 多くの研究グループから入手可能な拡張子の数。 第20回
-エッグラボ ワークショップは9月2日(水)まで開催します。
+EEGLAB ワークショップは9月2日(水)まで開催します。
 2015年09月05日 英国シェフィールド大学にて ふりがな
 ワークショップはチュートリアル、デモンストレーション、実用的で構成されます
 セッション。 それはスコット・マディグ、Arnaud Delorme、およびジョンによって導かれます
@@ -69,9 +69,9 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 
 
-<span style="color: purple">9:00〜10:15 鉱業イベント関連の脳力学I(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_makeig_lecture_i.pdf)
+<span style="color: purple">9:00〜10:15 鉱業イベント関連の脳力学I(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_makeig_lecture_i.pdf)
 
-<span style="color: purple">10:15 - 10:45 EEGLABの概要(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_ad_eeglab_overview2.pdf)
+<span style="color: purple">10:15 - 10:45 EEGLABの概要(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_ad_eeglab_overview2.pdf)
 <!-- -->
 
 
@@ -81,9 +81,9 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 
 
-<span style="color: purple">11:00 – 11:45 ICA理論(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_ad_eeglab_lecture_ica2.pdf)
+<span style="color: purple">11:00 – 11:45 ICA理論(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_ad_eeglab_lecture_ica2.pdf)
 
-<span style="color: orange">11:45 – 12:30 ICA 評価(John Iversen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_jri_evaluateics_lores.pdf)
+<span style="color: orange">11:45 – 12:30 ICA 評価(John Iversen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_jri_evaluateics_lores.pdf)
 <!-- -->
 
 
@@ -93,7 +93,7 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 
 
-<span style="color: orange">14:00～15:30 データをインポートし、データを拒絶し、ICA分解を実行(John Iversen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_jri_preproc.pdf)
+<span style="color: orange">14:00～15:30 データをインポートし、データを拒絶し、ICA分解を実行(John Iversen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_jri_preproc.pdf)
 <!-- -->
 
 
@@ -103,7 +103,7 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 
 
-<span style="color: orange">15:45～17:00 ICAコンポーネントの練習(John Iversen)の評価</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_jri_evaluateics_practicum.pdf), [データセット情報](https://sccn.ucsd.edu/githubwiki/files/jri_readme.pdf)
+<span style="color: orange">15:45～17:00 ICAコンポーネントの練習(John Iversen)の評価</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_jri_evaluateics_practicum.pdf), [データセット情報](https://sccn.ucsd.edu/githubwiki/files/jri_readme.pdf)
 <!-- -->
 
 
@@ -118,18 +118,18 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 
 
-<span style="color: purple">9:00～9:45 なぜクラスターICAコンポーネント? (スコットメイク)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering_sheffield15.pdf)
+<span style="color: purple">9:00～9:45 なぜクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering_sheffield15.pdf)
 
-<span style="color: orange">9:45～10:45 STUDY、STUDYの設計、プロット、統計の作成(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_ad_studydesign.pdf)
+<span style="color: orange">9:45～10:45 STUDY、STUDYの設計、プロット、統計の作成(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_ad_studydesign.pdf)
 <!-- -->
 
 
 <span style="color: green">10:45～11:00 ブレイク。 エッジのバーに刻まれた紅茶とコーヒー</span>
 
 <!-- -->
-<span style="color: orange">11:00 - 11:45 EEGLAB STUDYクラスタリング(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_ad_clustering2.pdf)
+<span style="color: orange">11:00 - 11:45 EEGLAB STUDYクラスタリング(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_ad_clustering2.pdf)
 
-<span style="color: purple">11:45 - 12:30 統計 (Cyril Pernet)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/multiplecomparisoncorrection.pdf)
+<span style="color: purple">11:45 - 12:30 統計 (Cyril Pernet)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/multiplecomparisoncorrection.pdf)
 <!-- -->
 
 
@@ -139,7 +139,7 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 
 
-<span style="color: purple">14:00 – 15:30 LIMO EEGと階層モデリング(Cyril Pernet)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/hierarchical_linear_modelling_for_meeg.pdf)
+<span style="color: purple">14:00 – 15:30 LIMO EEGと階層モデリング(Cyril Pernet)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/hierarchical_linear_modelling_for_meeg.pdf)
 
 <span style="color: orange">15:30 – 15:45 LIMO EEGLAB統合(Arnaud Delorme)</span> (PDFなし)
 
@@ -162,7 +162,7 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 
 
-<span style="color: purple">9:00〜10:45 時間頻度分解: 理論と実践(ジョン・イヴァーン)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_jri_timefrequencytheorypractice_lores.pdf)
+<span style="color: purple">9:00〜10:45 時間頻度分解: 理論と実践(ジョン・イヴァーン)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_jri_timefrequencytheorypractice_lores.pdf)
 <!-- -->
 
 
@@ -174,7 +174,7 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 <span style="color: purple">11:00 – 11:45 Dipfit、NFT、NIST(Scott Makeig)のフォワードとインバースソースイメージング</span> [PDF1](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_makeig_dipfit.pdf), [PDF2](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_makeig_nft.pdf)
 
-<span style="color: orange">11:45 – 12:30 DIPFIT練習(アーナド・デローム)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_ad_dipole_modeling.pdf)
+<span style="color: orange">11:45 – 12:30 DIPFIT練習(アーナド・デローム)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_ad_dipole_modeling.pdf)
 <!-- -->
 
 
@@ -195,7 +195,7 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 
 
-<span style="color: orange">16:00 – 17:00 STUDYデータの EEGLAB スクリプト (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_ad_studyscripting.pdf), [スクリプト.zip](https://sccn.ucsd.edu/githubwiki/files/script.zip)
+<span style="color: orange">16:00 – 17:00 STUDYデータの EEGLAB スクリプト (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_ad_studyscripting.pdf), [スクリプト.zip](https://sccn.ucsd.edu/githubwiki/files/script.zip)
 
 
 ### <span style="color: dodgerblue">2015年9月5日(土)</span>
@@ -209,7 +209,7 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 <span style="color: purple">9:00～10:00 マイニングイベント関連の脳力II(Scott Makeig)</span>
 
-<span style="color: purple">10:00 – 10:30 EEGLABエクステンション(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_plugins.pdf)
+<span style="color: purple">10:00 – 10:30 EEGLABエクステンション(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_plugins.pdf)
 
 <span style="color: orange">10:30〜10:45 EEGLABチャレンジ練習(オール)</span> [ニュース](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_sheffield_questions.pdf)
 <!-- -->

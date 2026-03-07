@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2016 UCSD
-nav_title: "エグラボ2016 UCSD"
+nav_title: "EEGLAB2016 UCSD"
 parent: Past workshops
 grand_parent: Workshops
 ---
@@ -35,8 +35,7 @@ EEGデータの分析、詳細な方法の記述、および
 サンディエゴとUCSD
 ------------------
 
-60歳未満のお子様は、【カリフォルニア大学サンディエゴ校】
-サンディエゴ(Diego)http://ucsd.edu/)、UCLA、UC Berkeley、その他7つの姉妹
+60歳未満のお子様は、[カリフォルニア大学サンディエゴ校 サンディエゴ](http://ucsd.edu/)、UCLA、UC Berkeley、その他7つの姉妹
 UCキャンパスは、アメリカの研究機関です。 所在地:
 La Jollaのビーチと壮大な崖、UCSDは年中近く楽しめます
 気温の天気。

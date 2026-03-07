@@ -84,7 +84,7 @@ STUDYの特徴。
 また、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、様々なオプションのメニューから選択できます。 <span style="color: brown">ファイル → 環境設定</span>. 
 最初のオプションは、複数のデータセットがメモリに保存されているかどうかを決定します。 グループ分析を実行すると、メモリ内のすべてのデータセットを保持できないため、このオプションを選択します。
 
-![サイトマップ](/assets/images/preferences.png)
+![こちら](/assets/images/preferences.png)
 
 使用時間 *STUDY* は、
 EEGLAB にロードします。
@@ -117,7 +117,7 @@ MATLAB は、MATLAB をロード・アンド・リザーブ(2,300 は全時間�
  <span style="color: brown">ファイル → 研究の作成 → データセットの閲覧</span> メニュー項目。
 
 別のオプションは、
-エッグラボ 総合研究
+EEGLAB 総合研究
 お問い合わせ 
 <span style="color: brown">ファイル → 研究の作成 → 読み込まれたすべてのデータセットを使用する</span> メニュー項目。 
 下記のものと同様の空白インターフェイス
@@ -207,21 +207,21 @@ STUDYにデータセットをリストに、
 STUDYデザインを編集する
 2位STUDYメニュー <span style="color: brown">研究 → 選択/編集研究設計</span>.
 
-![サイトマップ](/assets/images/Studydesignmenu.jpg)
+![こちら](/assets/images/Studydesignmenu.jpg)
 
 以下のインターフェイスをポップアップします。
 
-![サイトマップ](/assets/images/studydesign1.png)
+![こちら](/assets/images/studydesign1.png)
 
 トップパネルには、デザインのリスト(この場合、単一デザイン)、下部パネルには、特定の設計で使用される変数が含まれています。
 
 *Rename* ボタンを *Synonym と non-synonym*  次の  次の  次の  次の  次の
 
-![サイトマップ](/assets/images/studydesign2.png)
+![こちら](/assets/images/studydesign2.png)
 
 とりあえず、 *condition*の変数が選択されます。 また、2つの条件は*non-synonyms*と*synonyms*です。
 
-![サイトマップ](/assets/images/studydesign3.png)
+![こちら](/assets/images/studydesign3.png)
 
 ### お問い合わせ
 

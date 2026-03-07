@@ -11,7 +11,7 @@ nav_order: 3
 
 # ROIconnectとは?
 
-ROIconnectは、オープンソースプラグインを自由に利用できるため [エッグラボ](https://github.com/sccn/eeglab) EEGデータ解析用 ソースレベルでの利息(ROI)の領域間の線形および非線形機能接続解析を実行できます。 結果は2次元、3次元で視覚化できます。 ROIは、一般的なfMRIアトラスに基づいて定義され、ソースローカリゼーションは、LCMVビームフォーミングまたはeLORETAを介して行うことができます。 コヒーレンスベースのメソッド、Granger Causality、Time-reversed Granger Causality、Multivariate Interaction Measure、Maximized Imaginary Coherency、Phase-amplitudeのカップリング、その他のメソッドを使用して、すべての脳領域間の接続解析を行うことができます。 このプラグインは、FieldTrip、Brainstorm、NFTヘッドモデルと互換性があります。
+ROIconnectは、オープンソースプラグインを自由に利用できるため [EEGLAB](https://github.com/sccn/eeglab) EEGデータ解析用 ソースレベルでの利息(ROI)の領域間の線形および非線形機能接続解析を実行できます。 結果は2次元、3次元で視覚化できます。 ROIは、一般的なfMRIアトラスに基づいて定義され、ソースローカリゼーションは、LCMVビームフォーミングまたはeLORETAを介して行うことができます。 コヒーレンスベースのメソッド、Granger Causality、Time-reversed Granger Causality、Multivariate Interaction Measure、Maximized Imaginary Coherency、Phase-amplitudeのカップリング、その他のメソッドを使用して、すべての脳領域間の接続解析を行うことができます。 このプラグインは、FieldTrip、Brainstorm、NFTヘッドモデルと互換性があります。
 
 お問い合わせ 次の論文をチェックして、コネクティビティ実験の推奨方法とパイプラインについて学びます。
 > Pellegrini、F.、Delorme、A.、Nikulin、V.、及びHafe、S. (2023)。 EEG からの相互地域線形機能接続を検出するための良い慣行を特定します。 NeuroImage、120218。 [土井: 10.1016/j.neuroimage.2023.120218](https://doi.org/10.1016/j.neuroimage.2023.120218)
@@ -30,7 +30,7 @@ Tien Dung Nguyen、Franziska Pellegrini、Stefan Haufe、EEGLABインターフ�
 まず、EEGLABをインストールします。 メニュー項目 *File > EEGLAB拡張機能*を管理し、*ROIconnect*を選択し、インストールします。 ROIconnectメニュー項目は、*Tools* EEGLABメニューにあります。
 
 # 手動取付け
-お問い合わせ [エッグラボ](https://github.com/sccn/eeglab#installingcloning) インストール。 プロジェクトレイアウトは次の通りです。
+お問い合わせ [EEGLAB](https://github.com/sccn/eeglab#installingcloning) インストール。 プロジェクトレイアウトは次の通りです。
 
 ```
 eeglab/	 				
@@ -49,7 +49,7 @@ cd <eeglab_install_location>/eeglab/plugins
 ```
 git clone https://github.com/sccn/roiconnect.git
 ```
-です。 プラグインを実行したい場合は、起動してください [エッグラボ](https://github.com/sccn/eeglab#to-use-eeglab) まずは。 EEGLAB を追加する必要があります。 [MATLABパス](https://de.mathworks.com/help/matlab/ref/addpath.html)お問い合わせ 一部の機能は追加のインストールが必要な場合があります  [フィールドトリップ(ライトまたはノーマル)](https://www.fieldtriptoolbox.org) そして、 [ブラインド映画](https://github.com/arnodelorme/brainmovie).
+です。 プラグインを実行したい場合は、起動してください [EEGLAB](https://github.com/sccn/eeglab#to-use-eeglab) まずは。 EEGLAB を追加する必要があります。 [MATLABパス](https://de.mathworks.com/help/matlab/ref/addpath.html)お問い合わせ 一部の機能は追加のインストールが必要な場合があります  [フィールドトリップ(ライトまたはノーマル)](https://www.fieldtriptoolbox.org) そして、 [ブラインド映画](https://github.com/arnodelorme/brainmovie).
 
 なぜこの EEGLAB プラグインは EEGLAB プラグインマネージャではありませんか? プラグインはベータです。 完了したら、EEGLABプラグインマネージャに追加されます。 
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2009 Aspet 
-nav_title: "EEGLAB 2009 アスペット"
+nav_title: "EEGLAB 2009 Aspet"
 parent: Past workshops
 grand_parent: Workshops
 ---
@@ -46,15 +46,15 @@ Eighth EEGLABワークショップ
 
 
 <span style="color: purple">8:00 – 9:00 -- EEGLAB 概要 (Arnaud Delorme) </span>
-([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/lecture_eeglaboverview2.pdf))
+([PDF](https://sccn.ucsd.edu/githubwiki/files/lecture_eeglaboverview2.pdf))
 
-<span style="color: purple">9:00 – 10:00 -- ICA理論(Arnaud Delorme) </span> ([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/lecture_ica.pdf))
+<span style="color: purple">9:00 – 10:00 -- ICA理論(Arnaud Delorme) </span> ([PDF](https://sccn.ucsd.edu/githubwiki/files/lecture_ica.pdf))
 
 
 <span style="color: green">-- ブレーク--</span>
 <br>
 
-<span style="color: purple">10:20 – 11:00 -- 周波数分解 (Arnaud Delorme) (Arnaud Delorme)[サイトマップ](https://sccn.ucsd.edu/githubwiki/files/lecture_timefreq.pdf))</span>
+<span style="color: purple">10:20 – 11:00 -- 周波数分解 (Arnaud Delorme) (Arnaud Delorme)[PDF](https://sccn.ucsd.edu/githubwiki/files/lecture_timefreq.pdf))</span>
 
 <span style="color: orange">11:00 – 12:00 -- 時間頻度練習 (Arnaud Delorme) </span>
 
@@ -101,15 +101,15 @@ Eighth EEGLABワークショップ
 **IC分析**
 
 
-<span style="color: purple">午前8時～午後9時 強力な統計(ロバート・オオステンド) </span> ([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/robust_statistics_aspet2009.pdf))
+<span style="color: purple">午前8時～午後9時 強力な統計(ロバート・オオステンド) </span> ([PDF](https://sccn.ucsd.edu/githubwiki/files/robust_statistics_aspet2009.pdf))
 
-<span style="color: purple">9:00 – 10:00 -- 独立系コンポーネントのクラスタリングとスタディ(Scott Makeig) </span> ([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab_aspet_clustering09.pdf))
+<span style="color: purple">9:00 – 10:00 -- 独立系コンポーネントのクラスタリングとスタディ(Scott Makeig) </span> ([PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab_aspet_clustering09.pdf))
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">10:20 – 11:20 -- フォワードとインバースモデル (ロバート・オオステンド) </span> ([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/forward_and_inverse_models_aspet2009.pdf))
+<span style="color: purple">10:20 – 11:20 -- フォワードとインバースモデル (ロバート・オオステンド) </span> ([PDF](https://sccn.ucsd.edu/githubwiki/files/forward_and_inverse_models_aspet2009.pdf))
 
-<span style="color: orange">11:20-12:00 -- EEGLAB「history」(A.Delorme)を用いた基本スクリプト</span> ([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/practicum_4_basic_scripting.pdf))
+<span style="color: orange">11:20-12:00 -- EEGLAB「history」(A.Delorme)を用いた基本スクリプト</span> ([PDF](https://sccn.ucsd.edu/githubwiki/files/practicum_4_basic_scripting.pdf))
 <br>
 
 <span style="color: green">12:00-1:00 ランチ --</span>

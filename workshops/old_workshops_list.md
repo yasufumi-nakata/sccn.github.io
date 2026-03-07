@@ -13,4 +13,4 @@ nav_order: 5
 {%- assign children_list = site.pages | where: "parent", "Past workshops" -%}
 {% include toc_nav.html nav=children_list %}
 
-テスト [サイトマップ](/assets/pdfs/EEGLAB2022_Lublin_Iversen_Intro_handout.pdf)
+テスト [PDF](/assets/pdfs/EEGLAB2022_Lublin_Iversen_Intro_handout.pdf)

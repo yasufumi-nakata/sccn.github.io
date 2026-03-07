@@ -274,29 +274,25 @@ ICA/EEGLABによる関連する出版物
 --------------------------------------
 
 - Delorme、A.、Makeig、S. [EEGLAB:分析のためのオープンソースツールボックス
-    独立したコンポーネントを含む単一のtrial EEGの動的の
-    分析:()https://sccn.ucsd.edu/githubwiki/files/eeglab_published.pdf)。 J ネウロシ
+    独立したコンポーネントを含む単一のtrial EEGの動的の分析](https://sccn.ucsd.edu/githubwiki/files/eeglab_published.pdf)。 J ネウロシ
     方法。2004年3月15日、134(1):9-21。
-- Makeig、S.、Debener、S.、Onton、J.、Delorme、A. [Mining]
-    イベント関連脳
-    ダイナミクスhttps://sccn.ucsd.edu/githubwiki/files/ticsreview_published.pdf)。 トレンド ログイン
+- Makeig、S.、Debener、S.、Onton、J.、Delorme、A. [Mining
+    イベント関連脳ダイナミクス](https://sccn.ucsd.edu/githubwiki/files/ticsreview_published.pdf)。 トレンド ログイン
     Sci. 2004年5月8日(5):204-10.
 - Jung、TP、Makeig、S、Westerfield、M、Townsend、J、Courchesne、E、
     Sejnowski、TJ。 [単trialの分析と可視化
-    イベント関連の可能性https://sccn.ucsd.edu/githubwiki/files/jung_hbm01.pdf)。 ヒューマン
+    イベント関連の可能性](https://sccn.ucsd.edu/githubwiki/files/jung_hbm01.pdf)。 ヒューマン
     脳マッピング。 2001; 14(3)、166-185。
 - Delorme、A.、Sejnowski、T.、Makeig、S. [Improved rejectの拒否]
     注文統計と独立したEEGデータからのアーティファクト
-    コンポーネント
-    分析:()https://sccn.ucsd.edu/githubwiki/files/neuroimage2007_reformated.pdf).
+    コンポーネント分析](https://sccn.ucsd.edu/githubwiki/files/neuroimage2007_reformated.pdf).
     神経画像. 2007; 34, 1443-1449.
 - Delorme、A.、Palmer、J. Oostenveld、R.、Onton、J.、Makeig、S。
-    [ブラインドソースを実装するアルゴリズムの比較結果]
-    EEGデータの分離についてhttps://sccn.ucsd.edu/githubwiki/files/delorme_unpub.pdf).
+    [ブラインドソースを実装するアルゴリズムの比較結果
+    EEGデータの分離について](https://sccn.ucsd.edu/githubwiki/files/delorme_unpub.pdf).
     公開されていない原稿。
 - Onton J、Delorme、A.、Makeig、S. [Frontal Midline EEG ダイナミクス]
-    作業中
-    メモリ:()https://sccn.ucsd.edu/githubwiki/files/onton_fmtheta_published.pdf)。 ネロイメージ。
+    作業中メモリ](https://sccn.ucsd.edu/githubwiki/files/onton_fmtheta_published.pdf)。 ネロイメージ。
     2005;27, 341-356
 - Onton J, Makeig S. [高周波ブロードバンドの変調]
     電気脳卒
@@ -311,7 +307,7 @@ ICA/EEGLABによる関連する出版物
 --------------------
 
 ご自身のノートパソコンをご利用の方は、最新バージョンをインストールしてください。
-エグラボ:
+EEGLAB:
 
 最新の EEGLAB バージョンはこちら: <http://sccn.ucsd.edu/eeglab/install.html>
 
@@ -321,8 +317,7 @@ ICA/EEGLABによる関連する出版物
 [チュートリアルスライド](https://sccn.ucsd.edu/githubwiki/files/tutorialpdfs.zip) PDFをダウンロード
 チュートリアル講座はこちら。
 
-[EEGLABデータセット:シングル]
-件名:(ftp://sccn.ucsd.edu/pub/julie/EEGLAB_Workshop/Data.zip) お問い合わせ
+[EEGLABデータセット:シングル件名](ftp://sccn.ucsd.edu/pub/julie/EEGLAB_Workshop/Data.zip) お問い合わせ
 最初のチュートリアルセッションで使用するサンプルデータセット。 これは、
 Sternberg実験からのデータセット(フルSTUDYに用いられる)
 

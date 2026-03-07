@@ -207,7 +207,7 @@ EEG = clean_artifacts( EEG,'FlatlineCriterion',5,'ChannelCriterion',0.8, ...
 
 ### なぜ2回参照できますか?
 
-*clean_rawdata* は、よりよく参考にしてください。 この投稿をお気に入りに追加しました。 よく見る 2 . . . . . . 1 つを undoes にします。 [サイトマップ](../05_Preprocess/rereferencing.html).
+*clean_rawdata* は、よりよく参考にしてください。 この投稿をお気に入りに追加しました。 よく見る 2 . . . . . . 1 つを undoes にします。 [こちら](../05_Preprocess/rereferencing.html).
 
 ### 自動洗浄パラメータ
 
@@ -254,7 +254,7 @@ STUDY = std_dipplot(STUDY,ALLEEG,'clusters',2, 'design', 1);
 
 ### より高度なパイプライン
 
-* ????? ERPs は、ERPs から、ERPs へ移行します。 [サイトマップ](command_line_study_functions.html).
+* ????? ERPs は、ERPs から、ERPs へ移行します。 [こちら](command_line_study_functions.html).
 * 統計解析 Eメール:erPssssss [他のセクション](../10_Group_analysis/study_statistics.html)お問い合わせ また、カスタムコードを書くことで、紙の数字を生成できます。
 * パイプライン で お問い合わせ [この紙](https://www.frontiersin.org/articles/10.3389/fnins.2020.610388/full) そして、 [リモウィキ](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) 参照のため。 
 

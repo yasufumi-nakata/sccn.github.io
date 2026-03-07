@@ -25,7 +25,7 @@ EEGLAB をロードする
 選択する <span style="color: brown">ファイル</span> メニュー項目および出版物 
 <span style="color: brown">既存のデータセットをロードする</span> サブメニュー EEGLABの「sample_data」フォルダに「eeglab_data.set」があります。
 
-![サイトマップ](/assets/images/Pop_loadset.png)
+![こちら](/assets/images/Pop_loadset.png)
 
 データのエポック抽出
 ---------
@@ -87,7 +87,7 @@ ICAとソースは、
 お問い合わせ <span style="color: brown">ツール → ベースラインを削除</span> メニュー項目。
 
 
-![サイトマップ](/assets/images/Pop_removebase.png)
+![こちら](/assets/images/Pop_removebase.png)
 
 ベースラインは、各エポック(ms)のベースラインを指しています。
 各エポックのレイテンシウィンドウで、その意味を計算する
@@ -143,7 +143,7 @@ EEGLABは、その1位と1位をとって、
 
 選択する <span style="color: brown">編集 → エポックやイベントを選択</span>お問い合わせ ふりがな [pop_selectevent.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_selectevent.m) このページではjavascriptを使用しています。 * プレス *Ok*
 
-![サイトマップ](/assets/images/pop_select_epoch.png)
+![こちら](/assets/images/pop_select_epoch.png)
 
 注意: *Cancel* ボタンを上回るオプション * epochs 削除
 選択したイベント*では参照されません。 このチェックボックスがリセットされていない場合
@@ -153,7 +153,7 @@ event* は、
 
 プレス *Ok*
 
-![サイトマップ](/assets/images/confirm_epoch.png)
+![こちら](/assets/images/confirm_epoch.png)
 
 これから [pop_newset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m) 新規登録 この新しいデータセット「Square, Position 1」と入力し、*Ok* を入力してください。
 

@@ -17,7 +17,7 @@ EEGLAB をロードする
 <span style="color: brown">既存のデータセットをロードする</span>「eeglab_data.set」の使い方
 EEGLABの「sample_data」フォルダにあるツールボックスです。
 
-![サイトマップ](/assets/images/Pop_loadset.png)
+![こちら](/assets/images/Pop_loadset.png)
 
 平均参照の計算
 -------------------------
@@ -78,23 +78,23 @@ Sph.* は 3 D のカルチェ・シアンを極端の球面に動かします
 10-20チャンネルのラベル(これはすべての場所を見上げることに注意してください)
 電極)。
 
-![サイトマップ](/assets/images/Pop_reref3.png)
+![こちら](/assets/images/Pop_reref3.png)
 
 詳細は、http://www.pressbutton.com/
 Cz("Cz") は、Cz("Cz") で、Cz("Cz") で、Cz("Cz") のチャンネルは、
 手動で入力する必要があります。
 
-![サイトマップ](/assets/images/Pop_reref5.png)
+![こちら](/assets/images/Pop_reref5.png)
 
 お問い合わせ 詳細は、こちらでご確認ください。
 
 メニュー項目を使用してインターフェイスを再参照するようになりました <span style="color: brown">ツール → データを再参照する</span>*Retainer(Retainer) ボタンをつけて、 Cz 電極。
 
-![サイトマップ](/assets/images/Pop_reref6.png)
+![こちら](/assets/images/Pop_reref6.png)
 
 再会議は、以下のとおりです。
 
-![サイトマップ](/assets/images/Pop_reref7.png)
+![こちら](/assets/images/Pop_reref7.png)
 
  この * * * * * * * * * の の の の の の の の の の の の の の の の の の の の の である の の である である の の の の の の の の の である の の である である である である の である である である である である である の の
 チャネルは場所があり、この場所は

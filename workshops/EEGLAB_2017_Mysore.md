@@ -1,13 +1,12 @@
 ---
 layout: default
 title: EEGLAB 2017 Mysore
-nav_title: "EEGLAB 2017 マイソール"
+nav_title: "EEGLAB 2017 Mysore"
 parent: Past workshops
 grand_parent: Workshops
 ---
 
-![700px\]|thumb\|center\|upright=2.5\|[マイスルパレス、カルナタカ]
-インド(インド)https://en.wikipedia.org/wiki/Mysore_Palace)](/assets/images/Mysore.jpg)
+![700px|thumb|center|upright=2.5|マイスルパレス、カルナタカ インド](/assets/images/Mysore.jpg)
 
 第23回 EEGLABワークショップ
 ====================
@@ -55,9 +54,9 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 **概要とICA理論/実践* * 必須
 
 
-<span style="color: purple">11:30～12:00 鉱業イベント関連の脳力学I(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_2017_eeglab_mining_i.pdf‎)
+<span style="color: purple">11:30～12:00 鉱業イベント関連の脳力学I(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_2017_eeglab_mining_i.pdf‎)
 
-<span style="color: purple">12:45 – 13:15 -- EEGLABの概要 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_overview.pdf‎)
+<span style="color: purple">12:45 – 13:15 -- EEGLABの概要 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_overview.pdf‎)
 <!-- -->
 
 
@@ -67,9 +66,9 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 
 
 
-<span style="color: purple">14:30～15.15 -- ICA理論(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_lecture_ica.pdf)
+<span style="color: purple">14:30～15.15 -- ICA理論(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_lecture_ica.pdf)
 
-<span style="color: orange">15:15 – 16:15 -- EEGデータのインポート、アーティファクト拒絶(Luca Pion-Tonachini)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_lpt_preproc_new.pdf)
+<span style="color: orange">15:15 – 16:15 -- EEGデータのインポート、アーティファクト拒絶(Luca Pion-Tonachini)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_lpt_preproc_new.pdf)
 <!-- -->
 
 
@@ -82,11 +81,11 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 **ICAおよび時間頻度**
 
 
-<span style="color: orange">16:30～17:15 -- EEGデータ練習のICA分解(宮古志誠)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/icadecompositionofeegdata4.pdf)
+<span style="color: orange">16:30～17:15 -- EEGデータ練習のICA分解(宮古志誠)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/icadecompositionofeegdata4.pdf)
 
-<span style="color: orange">17:15 – 18:00 -- ICAコンポーネントの練習員の評価 (Luca Pion-Tonachini)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_lpt_evaluation_ica.pdf)
+<span style="color: orange">17:15 – 18:00 -- ICAコンポーネントの練習員の評価 (Luca Pion-Tonachini)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_lpt_evaluation_ica.pdf)
 
-<span style="color: purple">18:00 – 19:00 -- EEGデータの周波数分解:理論と実践(ジョン・イヴァーン)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_india_jri_timefrequencytheorypractice.pdf)
+<span style="color: purple">18:00 – 19:00 -- EEGデータの周波数分解:理論と実践(ジョン・イヴァーン)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_india_jri_timefrequencytheorypractice.pdf)
 <!-- -->
 
 
@@ -103,15 +102,15 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 **EEGLABのグループ分析とICAクラスタリング* * 必須
 
 
-<span style="color: purple">9:00～9:45 なぜEEGデータのクラスターICAコンポーネント? (スコットメイク)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering_2017.pdf)
+<span style="color: purple">9:00～9:45 なぜEEGデータのクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering_2017.pdf)
 
-<span style="color: purple">9:45 - 10:45 -- EEGデータ(John Iversen)の複数の比較のための強力な統計、実験設計および修正</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_india_statistics_short.pdf)
+<span style="color: purple">9:45 - 10:45 -- EEGデータ(John Iversen)の複数の比較のための強力な統計、実験設計および修正</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_india_statistics_short.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">11:15 - 12:15 -- EEGLAB STUDY、STUDYの設計の作成とSTUDYの結果のプロット(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_study_design2.pdf)
+<span style="color: purple">11:15 - 12:15 -- EEGLAB STUDY、STUDYの設計の作成とSTUDYの結果のプロット(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_study_design2.pdf)
 
-<span style="color: purple">12:15 - 13:00 -- EEGLAB内のクラスタリングコンポーネント(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_study_clustering.pdf)
+<span style="color: purple">12:15 - 13:00 -- EEGLAB内のクラスタリングコンポーネント(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_study_clustering.pdf)
 <!-- -->
 
 
@@ -138,9 +137,9 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 **Source ローカリゼーション**
 
 
-<span style="color: purple">9:00〜10:15 フォワードと反転モデル - Dipfit/NFTツール(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_sm_sourcelocalization.pdf)
+<span style="color: purple">9:00〜10:15 フォワードと反転モデル - Dipfit/NFTツール(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_sm_sourcelocalization.pdf)
 
-<span style="color: purple">10:15 – 10:45 -- DIPFIT 練習 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_dipfit.pdf)
+<span style="color: purple">10:15 – 10:45 -- DIPFIT 練習 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_dipfit.pdf)
 <!-- -->
 
 
@@ -153,9 +152,9 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 **一般リニアモデリング* * 必須
 
 
-<span style="color: orange">11:15 – 12:00 -- LIMO EEGLABプラグイン(Arnaud Delorme)を使用して、一般的なリニアモデルをEEGデータに適用するための理論と実践</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab_limo_2017.pdf)
+<span style="color: orange">11:15 – 12:00 -- LIMO EEGLABプラグイン(Arnaud Delorme)を使用して、一般的なリニアモデルをEEGデータに適用するための理論と実践</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab_limo_2017.pdf)
 
-<span style="color: purple">12:00 – 13:00 -- ソース情報フローとGranger-Causalモデリングツール(John Iversen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_india_jri_connectivity.pdf)
+<span style="color: purple">12:00 – 13:00 -- ソース情報フローとGranger-Causalモデリングツール(John Iversen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_india_jri_connectivity.pdf)
 <!-- -->
 
 
@@ -167,13 +166,13 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 **ソース情報フローとスクリプト* * 必須
 
 
-<span style="color: orange">14:30～15:00 -- グループレベルのコネクティビティ分析用STUDYプラグイン(宮越真琴)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/studypluginforgrouplevelconnectivityanalysis.pdf)[AVIファイル(zip)](https://sccn.ucsd.edu/githubwiki/files/controlnetworksagittal.zip‎) [グループレベルでICを拒否する方法](https://sccn.ucsd.edu/githubwiki/files/groupicselection.pdf‎)
+<span style="color: orange">14:30～15:00 -- グループレベルのコネクティビティ分析用STUDYプラグイン(宮越真琴)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/studypluginforgrouplevelconnectivityanalysis.pdf)[AVIファイル(zip)](https://sccn.ucsd.edu/githubwiki/files/controlnetworksagittal.zip‎) [グループレベルでICを拒否する方法](https://sccn.ucsd.edu/githubwiki/files/groupicselection.pdf‎)
 
-<span style="color: orange">15:00～16:00 -- EEGLAB(Arnaud Delorme)を用いた基本スクリプト</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_script.pdf)
+<span style="color: orange">15:00～16:00 -- EEGLAB(Arnaud Delorme)を用いた基本スクリプト</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_script.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: orange">16:30 – 18:00 -- EEGLAB(Arnaud Delorme)内のSTUDYを用いたスクリプト</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_studyscript.pdf)
+<span style="color: orange">16:30 – 18:00 -- EEGLAB(Arnaud Delorme)内のSTUDYを用いたスクリプト</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_studyscript.pdf)
 <!-- -->
 
 
@@ -188,7 +187,7 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 
 
 
-<span style="color: purple">9:00〜10:15 マイニングイベント関連の脳力II(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_sm_miningii.pdf‎)
+<span style="color: purple">9:00〜10:15 マイニングイベント関連の脳力II(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_sm_miningii.pdf‎)
 
 <span style="color: orange">10:15 – 10:45 -- 練習、少人数のグループプロジェクト</span>
 

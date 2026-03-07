@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2018 Pittsburgh
-nav_title: "EEGLAB 2018に出展します。 ピッツバーグ"
+nav_title: "EEGLAB 2018 Pittsburgh"
 parent: Past workshops
 grand_parent: Workshops
 ---
@@ -39,13 +39,13 @@ EEGおよび関連データの分析、詳細な方法の記述および
 **概要とICA理論/実践* * 必須
 
 
-<span style="color: purple">8:30～9:45～ 鉱業イベント関連の脳力学I(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_mining1_pittsburgh2018.pdf)
+<span style="color: purple">8:30～9:45～ 鉱業イベント関連の脳力学I(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_mining1_pittsburgh2018.pdf)
 
-<span style="color: purple">午前9時45分～午前10時15分 -- EEGLABの概要(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/delorme_eeglab_overview_pittsburgh2018.pdf)
+<span style="color: purple">午前9時45分～午前10時15分 -- EEGLABの概要(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/delorme_eeglab_overview_pittsburgh2018.pdf)
 
 <span style="color: green">-- コーヒーブレイク-</span>
 
-<span style="color: purple">10:30AM – 12:30AM -- ICA理論(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_ica_pittsburgh2018.pdf)
+<span style="color: purple">10:30AM – 12:30AM -- ICA理論(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_ica_pittsburgh2018.pdf)
 <!-- -->
 
 
@@ -57,13 +57,13 @@ EEGおよび関連データの分析、詳細な方法の記述および
 **ICAおよび時間頻度**
 
 
-<span style="color: orange">午後2時～午後3時 データのインポート、アーティファクト拒否(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/delorme_eeglab_preprocesssing_pittsburgh2018.pdf)
+<span style="color: orange">午後2時～午後3時 データのインポート、アーティファクト拒否(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/delorme_eeglab_preprocesssing_pittsburgh2018.pdf)
 
-<span style="color: orange">3:00PM – 4:00PM -- ICA分解練習(アーナド・デコルメ)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/delorme_eeglab_icapracticum_pittsburgh2018.pdf)
+<span style="color: orange">3:00PM – 4:00PM -- ICA分解練習(アーナド・デコルメ)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/delorme_eeglab_icapracticum_pittsburgh2018.pdf)
 
 <span style="color: green">--コーヒーブレイク--</span>
 
-<span style="color: purple">午後4時15分～午後5時15分～ 時間頻度分解: 理論と実践(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_timefreq_pittsburgh2018.pdf)
+<span style="color: purple">午後4時15分～午後5時15分～ 時間頻度分解: 理論と実践(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_timefreq_pittsburgh2018.pdf)
 
 <u><span style="color: blue">2018年9月5日(水)</span></u>
 
@@ -71,9 +71,9 @@ EEGおよび関連データの分析、詳細な方法の記述および
 **Source ローカリゼーション**
 
 
-<span style="color: purple">8:30AM – 9:15AM -- フォワードとインバースモデリング(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_pittsburgh18_forwardinverse.pdf)
+<span style="color: purple">8:30AM – 9:15AM -- フォワードとインバースモデリング(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_pittsburgh18_forwardinverse.pdf)
 
-<span style="color: orange">9:15am – 10:00am -- EEGLAB(Arnaud Delorme)でのダイポールローカリゼーション</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/delorme_eeglab_dipfit2_pittsburgh2018.pdf)
+<span style="color: orange">9:15am – 10:00am -- EEGLAB(Arnaud Delorme)でのダイポールローカリゼーション</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/delorme_eeglab_dipfit2_pittsburgh2018.pdf)
 <!-- -->
 
 
@@ -84,9 +84,9 @@ EEGおよび関連データの分析、詳細な方法の記述および
 
 
 
-<span style="color: purple">10:15PM – 11:15PM -- ソース情報フローとGranger-Causalモデリングツール(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/delorme_eeglab_causal_model_pittsburgh2018.pdf)
+<span style="color: purple">10:15PM – 11:15PM -- ソース情報フローとGranger-Causalモデリングツール(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/delorme_eeglab_causal_model_pittsburgh2018.pdf)
 
-<span style="color: purple">11:15～12:30 なぜクラスターICAコンポーネント? (スコットメイク)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_pittsburgh18_clustering.pdf)
+<span style="color: purple">11:15～12:30 なぜクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_pittsburgh18_clustering.pdf)
 <!-- -->
 
 
@@ -97,13 +97,13 @@ EEGおよび関連データの分析、詳細な方法の記述および
 **EEGLABのグループ分析とICAクラスタリング* * 必須
 
 
-<span style="color: orange">2:00PM - 2:30PM -- STUDY、STUDYの設計、バシプロットの作成(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/delorme_pittsburgh18_study.pdf)
+<span style="color: orange">2:00PM - 2:30PM -- STUDY、STUDYの設計、バシプロットの作成(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/delorme_pittsburgh18_study.pdf)
 
-<span style="color: orange">午後2時30分～午後3時 EEGLABによるグループ分析: クラスターICAコンポーネント(Arnaud Delorme)へのメソッド</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/delorme_pittsburgh18_clustering.pdf)
+<span style="color: orange">午後2時30分～午後3時 EEGLABによるグループ分析: クラスターICAコンポーネント(Arnaud Delorme)へのメソッド</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/delorme_pittsburgh18_clustering.pdf)
 
-<span style="color: orange">3:00PM - 3:30PM -- 一般リニアモデリング(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/delorme_pittsburgh18_glm.pdf)
+<span style="color: orange">3:00PM - 3:30PM -- 一般リニアモデリング(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/delorme_pittsburgh18_glm.pdf)
 
-<span style="color: orange">3:30PM – 4:00PM -- EEGLAB(Arnaud Delorme)でのスクリプト</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/delorme_pittsburgh18_script.pdf)
+<span style="color: orange">3:30PM – 4:00PM -- EEGLAB(Arnaud Delorme)でのスクリプト</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/delorme_pittsburgh18_script.pdf)
 <!-- -->
 
 
@@ -114,4 +114,4 @@ EEGおよび関連データの分析、詳細な方法の記述および
 
 
 
-<span style="color: purple">午後4時30分～午後5時15分～ マイニングイベント関連の脳力II(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_pittsburgh18_mining_ii.pdf)
+<span style="color: purple">午後4時30分～午後5時15分～ マイニングイベント関連の脳力II(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_pittsburgh18_mining_ii.pdf)

@@ -98,8 +98,7 @@ PythonからEEGLAB関数を呼び出す方法
 
 Python から EEGLAB 関数を呼び出すか、または必要であれば、最善
 ソリューションは、Python パッケージ Oct2py (pip install Oct2py) を使用することです。 お問い合わせ
-インストールする必要があります オクターブも。 見る [this]
-page:(/others/Running_EEGLAB_on_Octave.html) より詳細な情報
+インストールする必要があります オクターブも。 見る [このページ](/others/Running_EEGLAB_on_Octave.html) より詳細な情報
 Octave で EEGLAB を実行します。 この Python ライブラリの仕組みは、
 コンバーター Python のデータ構造を MATLAB/Octave のデータ構造に
 逆に。 私達の研究に基づいて、それは最も簡単で、最も安定した方法です
@@ -145,7 +144,7 @@ EEG = mne.io.read_epochs_eeglab('eeglab_data_epochs_ica.set')
 
 ### Python または MATLAB コンパイルされた Python ライブラリで MATLAB のランタイムエンジンを使用する
 
-MATLAB から Python に渡される EEGLAB のデータ構造は複雑すぎるため、これらのソリューションはアドバイスしません。 Python のコードを実行すると、「1xN と Nx1 char 配列のみが MATLAB から返すことができます」というエラーが表示されます(これは技術的に多く正しいわけではありません) [異なるデータタイプ](https://www.mathworks.com/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html) お問い合わせ しかし、EEGLAB EEG構造は、イベントやチャネルの構成の配列を含み、処理されていない。 これは、視力で改善されたサポート無しで、2024年の4年以上のケースでした。 未サポートのデータタイプはこちら [サイトマップ](https://www.mathworks.com/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html) (2024年の時点では、サポートされていないデータ型として「構造配列」と「セル配列」をリストします)。 上述の Oct2Py インターフェイスは、これらのデータ型をうまく処理することに注意してください。 
+MATLAB から Python に渡される EEGLAB のデータ構造は複雑すぎるため、これらのソリューションはアドバイスしません。 Python のコードを実行すると、「1xN と Nx1 char 配列のみが MATLAB から返すことができます」というエラーが表示されます(これは技術的に多く正しいわけではありません) [異なるデータタイプ](https://www.mathworks.com/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html) お問い合わせ しかし、EEGLAB EEG構造は、イベントやチャネルの構成の配列を含み、処理されていない。 これは、視力で改善されたサポート無しで、2024年の4年以上のケースでした。 未サポートのデータタイプはこちら [こちら](https://www.mathworks.com/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html) (2024年の時点では、サポートされていないデータ型として「構造配列」と「セル配列」をリストします)。 上述の Oct2Py インターフェイスは、これらのデータ型をうまく処理することに注意してください。 
 
 EEGLAB は Python でネイティブに実行されることはありませんか?
 ----------------------------------------

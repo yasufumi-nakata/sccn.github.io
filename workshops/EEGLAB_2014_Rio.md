@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2014 Rio
-nav_title: "EEGLAB 2014出展のお知らせ ログイン"
+nav_title: "EEGLAB 2014 Rio"
 parent: Past workshops
 grand_parent: Workshops
 ---
@@ -39,13 +39,13 @@ EEGLAB環境 メニュー
 
 
 
-<span style="color: purple">9:00 – 10:00 -- マイニングイベント関連の脳のダイナミクスI(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_sm_eeglab_miningi.pdf)
+<span style="color: purple">9:00 – 10:00 -- マイニングイベント関連の脳のダイナミクスI(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_sm_eeglab_miningi.pdf)
 
-<span style="color: purple">10:00 – 10:30 -- EEGLAB 概要 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_eeglab_overview.pdf)
+<span style="color: purple">10:00 – 10:30 -- EEGLAB 概要 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_eeglab_overview.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">10:45 – 12:45 -- ICA 理論とアプリケーション (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_lecture_ica.pdf)
+<span style="color: purple">10:45 – 12:45 -- ICA 理論とアプリケーション (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_lecture_ica.pdf)
 
 
 
@@ -53,21 +53,21 @@ EEGLAB環境 メニュー
 
 
 
-<span style="color: orange">14:00 – 15:30 -- データをインポートし、データを拒絶し、ICA分解の練習(Arnaud Delorme)を実行</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_preprocessing.pdf)
+<span style="color: orange">14:00 – 15:30 -- データをインポートし、データを拒絶し、ICA分解の練習(Arnaud Delorme)を実行</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_preprocessing.pdf)
 
-<span style="color: orange">15:30-17:00 -- ICAコンポーネントの練習(Arnaud Delorme)の評価</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_evaluation_ica.pdf)
+<span style="color: orange">15:30-17:00 -- ICAコンポーネントの練習(Arnaud Delorme)の評価</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_evaluation_ica.pdf)
 
 ### <span style="color: dodgerblue">2日目 - 2014年9月8日(月)</span>
 
 
 
-<span style="color: purple">午前9時～午後10時 なぜクラスターICAコンポーネント? (スコットメイク)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_rio_clustering.pdf)
+<span style="color: purple">午前9時～午後10時 なぜクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_rio_clustering.pdf)
 
-<span style="color: purple">10:00 – 10:30 -- STUDY、STUDYデザイン、プロットの作成(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_study_design.pdf)
+<span style="color: purple">10:00 – 10:30 -- STUDY、STUDYデザイン、プロットの作成(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_study_design.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">11:00 – 11:30 -- EEGLABによるグループ分析: クラスターICAコンポーネント(Arnaud Delorme)へのメソッド</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_study_clustering.pdf)
+<span style="color: purple">11:00 – 11:30 -- EEGLABによるグループ分析: クラスターICAコンポーネント(Arnaud Delorme)へのメソッド</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_study_clustering.pdf)
 <!-- -->
 
 
@@ -77,9 +77,9 @@ EEGLAB環境 メニュー
 
 
 
-<span style="color: purple">14:00- 15:00 -- 強力な統計: 推論論論と実践 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_statistics.pdf)
+<span style="color: purple">14:00- 15:00 -- 強力な統計: 推論論論と実践 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_statistics.pdf)
 
-<span style="color: orange">15:00 – 15:30 -- EEGLAB(Arnaud Delorme)での基本的なスクリプト</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_basic_scripts.pdf)
+<span style="color: orange">15:00 – 15:30 -- EEGLAB(Arnaud Delorme)での基本的なスクリプト</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_basic_scripts.pdf)
 
 <span style="color: green">15:30-18:00-- シュガーローフへのグループツアー</span>
 

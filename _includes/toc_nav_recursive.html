@@ -59,9 +59,9 @@
 <ul>
   {% for item in pages_list %}
 	{% if item.long_title %}
-    	    <li><a href="{{ item.url }}">{{ item.long_title }}</a></li>
+    	    <li><a href="{{ item.url | relative_url }}">{{ item.long_title }}</a></li>
   	{%- else -%}
-    	    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+    	    <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
   	{%- endif -%}
     {%- assign children_list = site.pages | where: "parent", item.title -%}
     {% if children_list %}

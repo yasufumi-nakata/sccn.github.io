@@ -99,7 +99,7 @@ epochs の振動幅は、関数によって書かれたイベントを時間に�
 --------------
 <button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'event_processing_study.m'));">MATLABコマンド</button>
 
-エッグラボ [データ構造](/tutorials/ConceptsGuide/Data_Structures.html) チュートリアルのセクションでは、イベントがどのように行われるかを示します。
+EEGLAB [データ構造](/tutorials/ConceptsGuide/Data_Structures.html) チュートリアルのセクションでは、イベントがどのように行われるかを示します。
 グループ分析の処理 すべてのデータセットからイベント情報を引き出す
 *STUDY.datasetinfo.trialinfo*の構造は保存します。
 

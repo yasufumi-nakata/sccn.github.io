@@ -22,33 +22,22 @@ EEGLABワークショップのwikiページには、スライドも含まれて�
 <img class="float-right" width="250" height="250" src="/assets/images/EEGLAB_small.jpg">
 #### EEGLAB導入 (2019年)
 -   [パート1: なぜEEGLAB](https://www.youtube.com/watch?v=R_nf1HRScx4)
--   [パート2:EEGの起源]
-    信号:()https://www.youtube.com/watch?v=KhEKRHw0qFg)
--   [パート3: EEG脳を解決するソース
-    ダイナミクスhttps://www.youtube.com/watch?v=MzJTZuyznQ4)
--   【第4部:EEGLABの歴史と利用
-    統計情報:()https://www.youtube.com/watch?v=XtOIwaYjS1M)
--   【第5部:単体加工】
-    パイプラインhttps://www.youtube.com/watch?v=-V48rhAGzJI)
--   [第6部:多被写体解析と
-    スクリプト)https://www.youtube.com/watch?v=kofJh7biGsE)
+-   [パート2:EEGの起源信号](https://www.youtube.com/watch?v=KhEKRHw0qFg)
+-   [パート3: EEG脳を解決するソースダイナミクス](https://www.youtube.com/watch?v=MzJTZuyznQ4)
+-   [第4部:EEGLABの歴史と利用統計情報](https://www.youtube.com/watch?v=XtOIwaYjS1M)
+-   [第5部:単体加工パイプライン](https://www.youtube.com/watch?v=-V48rhAGzJI)
+-   [第6部:多被写体解析とスクリプト](https://www.youtube.com/watch?v=kofJh7biGsE)
 
 
 #### EEGLAB (2018年、Delorme)の事前処理データ
--   【パート1】生を輸入する方法
-    データ:()https://www.youtube.com/watch?v=gEk33jWB0MY)
+-   [パート1:生データを輸入する方法](https://www.youtube.com/watch?v=gEk33jWB0MY)
 <img class="float-right" width="250" height="200"  src="/assets/images/EEGLABWorkshops11.jpg">
--   [パート2:イベントやチャネルをインポートする方法
-    場所:()https://www.youtube.com/watch?v=2CPmmPG5Beo)
--   [パート3:再会議と
-    リサンプリングhttps://www.youtube.com/watch?v=hByLyGYecjI)
+-   [パート2:イベントやチャネルをインポートする方法](https://www.youtube.com/watch?v=2CPmmPG5Beo)
+-   [パート3:再会議とリサンプリング](https://www.youtube.com/watch?v=hByLyGYecjI)
 -   [パート4:フィルタリング](https://www.youtube.com/watch?v=nshi47blz7Q)
--   【第5部:データの見える化と探査
-    アーティファクトhttps://www.youtube.com/watch?v=SgQxdVgryVY)
--   [パート6:悪意を取り除く
-    チャンネル)https://www.youtube.com/watch?v=5BTT-L2Ab04)
--   [パート7:悪いデータを削除する
-    セグメント:()https://www.youtube.com/watch?v=ZvbRiX84mgc)
+-   [第5部:データの見える化と探査アーティファクト](https://www.youtube.com/watch?v=SgQxdVgryVY)
+-   [パート6:悪意を取り除くチャンネル](https://www.youtube.com/watch?v=5BTT-L2Ab04)
+-   [パート7:悪いデータを削除するセグメント](https://www.youtube.com/watch?v=ZvbRiX84mgc)
 
 
 
@@ -57,27 +46,19 @@ EEGLABワークショップのwikiページには、スライドも含まれて�
 -   [パート1:ICAとは何ですか?](https://youtu.be/kWAjhXr7pT4)
 -   [パート2: Infomax ICAの仕組みは?](https://youtu.be/l7io0u1kFhA)
 -   [パート3:EEGデータに適用されたICA](https://youtu.be/lCfYbwT0AA4)
--   [パート4:EEGにおけるICAコンポーネントのアーティファクトの削除
-    データ:()https://youtu.be/pSYqVBp5ZjU)
--   [パート5:ICAのソースローカリゼーション
-    コンポーネント:()https://youtu.be/kQI3Yzv1wqs)
--   [パート6:ICAの再現性
-    デコンポジション)https://youtu.be/0KiHpmEPyqw)
--   [パート7:EEGLABでICAを実行し、視覚化
-    コンポーネント:()https://youtu.be/2hrYEYSycGI)
--   [パート8:アーティファクチュアルコンポーネントの削除]
-    EEGLAB(エグラボ)https://youtu.be/ocJhWbV4b50)
--   [パート9:ICAコンポーネントを自動的に検出する
-    クラス:()https://youtu.be/Gi-0KiV_Az8)
+-   [パート4:EEGにおけるICAコンポーネントのアーティファクトの削除データ](https://youtu.be/pSYqVBp5ZjU)
+-   [パート5:ICAのソースローカリゼーションコンポーネント](https://youtu.be/kQI3Yzv1wqs)
+-   [パート6:ICAの再現性デコンポジション](https://youtu.be/0KiHpmEPyqw)
+-   [パート7:EEGLABでICAを実行し、視覚化コンポーネント](https://youtu.be/2hrYEYSycGI)
+-   [パート8:アーティファクチュアルコンポーネントの削除EEGLAB](https://youtu.be/ocJhWbV4b50)
+-   [パート9:ICAコンポーネントを自動的に検出するクラス](https://youtu.be/Gi-0KiV_Az8)
 -   [パート10:脳コンポーネントを見る](https://youtu.be/5-hMJ8VKXBU)
--   【第11部:ICAとICAに関する一般的な誤解
-    結論:()https://youtu.be/vQa6T7QqR-s)
+-   [第11部:ICAとICAに関する一般的な誤解結論](https://youtu.be/vQa6T7QqR-s)
 
 <img class="float-right" width="200" height="300" src="/assets/images/Dipfit.jpg">
 #### EEGタイムシリーズの時系列分析(2020年、Delorme)
 
--   【パート1:EEGのフーリエ分析
-    信号:()https://youtu.be/wB417SAbdak)
+-   [パート1:EEGのフーリエ分析信号](https://youtu.be/wB417SAbdak)
 -   [パート2:EEGスペクトルとERSP](https://youtu.be/BcOuRxeZTtA)
 -   [パート3:ウェーブレットは変形します](https://youtu.be/eUFf5eFpdLg)
 
@@ -102,8 +83,7 @@ EEGLABワークショップのwikiページには、スライドも含まれて�
 #### EEGLAB(2017年、Delorme)でマウスデータを処理する
 -   [パート1:データの取得](https://youtu.be/omn7y3TIsGc)
 -   [Part 2:アーティファクト拒絶](https://youtu.be/H6-e3tNT9EQ)
--   [パート3:複数のデータの解析]
-    ファイル:()https://youtu.be/fB6TJjhO674)
+-   [パート3:複数のデータの解析ファイル](https://youtu.be/fB6TJjhO674)
 -   [パート4:統計分析](https://youtu.be/y8jK-bW1U3A)
 
 ## <span style="color: darkred">UCSDのEEGLAB 2016ワークショップ</span>
@@ -125,7 +105,7 @@ EEGLABワークショップのwikiページには、スライドも含まれて�
 -   [SIFTイントロ: Tim Mullenによるソースコネクティビティの構築と可視化](https://www.youtube.com/watch?v=6_WW6EMHmWo)
 
 #### 実践講座
--   [エッグラボ Arnaud Delorme(アルナド・デロメ)](https://www.youtube.com/watch?v=oQ2CHqu4_OU)
+-   [EEGLAB Arnaud Delorme(アルナド・デロメ)](https://www.youtube.com/watch?v=oQ2CHqu4_OU)
 -   [ジュリー・オントンによるデータのインポート/処理と基本的なプロット](https://www.youtube.com/watch?v=cTuXe-rZjvk)
 -   [Julie OntonによるICAとICAの可視化](https://www.youtube.com/watch?v=H3dK0j6moII)
 -   [独立した評価 Luca Pion-Tonachini(ICLabel)によるコンポーネント](https://www.youtube.com/watch?v=e_Ccx_MCOUM)
@@ -145,26 +125,20 @@ EEGLABを使用して、ワークショップを見直し、および/または�
 
 <img class="float-right" width="180" height="250" src="/assets/images/MoBIPoster.jpg" > 
 
-#### エッグラボ 信号の概要
+#### EEGLAB 信号の概要
 
--   [認知脳の動態の最小化] I (スコット)
-    メイク)http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_I.html)
--   [認知脳の動態を最小にするII (Scott)
-    メイク)http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_II.html)
+-   [認知脳の動態の最小化I (スコットメイク)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_I.html)
+-   [認知脳の動態を最小にするII (Scottメイク)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_II.html)
 
 #### EEGLAB Toolboxの概要
 
--   [EEGLABとワークショップの概要]
-    デルロメ)http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_overview.html)
+-   [EEGLABとワークショップの概要デルロメ](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_overview.html)
 
-#### エッグラボ EEGベースの機能脳イメージングのための方法
+#### EEGLAB EEGベースの機能脳イメージングのための方法
 
--   [独立系コンポーネント解析(ICA)理論I(Jason)]
-    パルマー)](()http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_ica1.html)
--   [独立系コンポーネント解析(ICA)理論II(Jason)]
-    パルマー)](()http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_ica2.html)
--   [時間周波数分解 (Arnaud)]
-    デルロメ)http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_timefreqdecomp.html).
+-   [独立系コンポーネント解析(ICA)理論I(Jasonパルマー)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_ica1.html)
+-   [独立系コンポーネント解析(ICA)理論II(Jasonパルマー)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_ica2.html)
+-   [時間周波数分解 (Arnaudデルロメ)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_timefreqdecomp.html).
     YouTube版([パート]
     1](https://www.youtube.com/watch?v=Ncwook_iFDE), [パート]
     2](https://www.youtube.com/watch?v=H96-ymcR3vE), [パート]
@@ -172,25 +146,18 @@ EEGLABを使用して、ワークショップを見直し、および/または�
     4](https://www.youtube.com/watch?v=t_ECXVmSedU), [パート]
     5](https://www.youtube.com/watch?v=rA6jlAViu4s), [パート]
     6](https://www.youtube.com/watch?v=tuJRJsOJl-I)).
--   [Forward and inverse ソースモデリング (Zeynep Akalin)]
-    アカル)http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_forward_inverse_source_modeling.html)
+-   [Forward and inverse ソースモデリング (Zeynep Akalinアカル)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_forward_inverse_source_modeling.html)
 
 #### 被験者と条件を横断する
 - [再サンプリングベースの統計と複数の比較(David Groppe)の修正](http://www.cogsci.ucsd.edu/~dgroppe/EEGLAB12_statistics.html)
 - [STUDY ICAコンポーネントクラスタリング(Arnaud Delorme)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_study_component_clustering.html)
 
 #### プラグインでEEGLABを拡張
--   [EEGLABプラグインの構築(Arnaud)]
-    デルロメ)http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_eeglab_plugins.html)
--   [SIFTソース情報フローツールボックス(Tim)]
-    ムレン)http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_info_flow.html)
--   [NFTヘッドモデリングツールボックス(Zeynep Akalin)]
-    アカル)http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_nft.html)
--   [機械学習とEEG分類のためのBCILABツールボックス]
-    (クリスティアン)
-    コテ)http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_bci.html).
-    【現代BCI講座】
-    デザイン:()https://sccn.ucsd.edu/wiki/Introduction_To_Modern_Brain-Computer_Interface_Design)
+-   [EEGLABプラグインの構築(Arnaudデルロメ)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_eeglab_plugins.html)
+-   [SIFTソース情報フローツールボックス(Timムレン)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_info_flow.html)
+-   [NFTヘッドモデリングツールボックス(Zeynep Akalinアカル)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_nft.html)
+-   [機械学習とEEG分類のためのBCILABツールボックス(クリスティアンコテ)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_bci.html).
+    [現代BCI講座デザイン](https://sccn.ucsd.edu/wiki/Introduction_To_Modern_Brain-Computer_Interface_Design)
     クリスチャン・コテ
 -   [モバイル脳/ボディイメージング(MoBI)とモビラボツールボックス(Scott Makeig)によるイメージング人的機関](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_MoBI.html)
 

@@ -14,7 +14,7 @@ nav_order: 26
 
 # EEG-BIDSについて
 
-EEG-BIDS(旧**BIDS-MATLAB-tools**)リポジトリには、BIDS形式の実験をインポートおよびエクスポートする機能のコレクションが含まれています。 コードは、使用するコードを [エッグラボ](http://eeglab.org) プラグインは、EEGLABの独自に使用することもできます。 サポートされていないBIDSバイナリ形式からのデータフォーマットの変換は、EEGLABがインストールされている必要があります(サポートされている形式は、EEGLAB .setファイル、EDFファイル、BDFファイル、およびBrain Vision Exchange Formatファイルです)。
+EEG-BIDS(旧**BIDS-MATLAB-tools**)リポジトリには、BIDS形式の実験をインポートおよびエクスポートする機能のコレクションが含まれています。 コードは、使用するコードを [EEGLAB](http://eeglab.org) プラグインは、EEGLABの独自に使用することもできます。 サポートされていないBIDSバイナリ形式からのデータフォーマットの変換は、EEGLABがインストールされている必要があります(サポートされている形式は、EEGLAB .setファイル、EDFファイル、BDFファイル、およびBrain Vision Exchange Formatファイルです)。
 
 # ドキュメント
 

@@ -65,7 +65,7 @@ EEGの記録の参照は1つのMistのイドです。
 
 
 
-![サイトマップ](/assets/images/Averef.gif)
+![こちら](/assets/images/Averef.gif)
 
 
 

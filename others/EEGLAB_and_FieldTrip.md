@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB and FieldTrip
-nav_title: "EEGLABとフィールドトリップ"
+nav_title: "EEGLABとFieldTrip"
 long_title: EEGLAB and FieldTrip
 parent: Interoperability
 ---
@@ -102,7 +102,7 @@ EEGLABとFieldTripの開発者は、毎年、または毎年会います
 
 -   FieldTripをダウンロードすると、当日の*コードをダウンロードしてください*(
     開発コードの頭)、最近追加できる
-    バグ(将来は変化する可能性があります)。 エッグラボ
+    バグ(将来は変化する可能性があります)。 EEGLAB
     コアに加えて、構造化されたパッケージの多くを残します
     機能を最大限に活用するために注意深く考慮され、制御されます
     安定性。 EEGLABのサードパーティ拡張(プラグイン)施設
@@ -135,7 +135,7 @@ EEGLABとFieldTripの開発者は、毎年、または毎年会います
 -   新しい関数やツールボックスにMATLABコードを公開したい場合、
     EEGLABエクステンションは、あなたのコードを既知にし、
     より広い、容易な使用およびテストのために利用できる --から直接
-    拡張機能をダウンロードするユーザーの EEGLAB GUI。 エッグラボ
+    拡張機能をダウンロードするユーザーの EEGLAB GUI。 EEGLAB
     エクステンションマネージャは、ユーザーが現在の状態を維持するのに役立ちます
     拡張子のバージョン。
 
@@ -213,7 +213,7 @@ EEGLABとFieldTripの長期持続性は、
 (現在120以上のプラグイン)が表示されるので、
 EEGLABコミュニティ 
 
-このプラグインを投稿することができます [サイトマップ](https://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php) そして、
+このプラグインを投稿することができます [こちら](https://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php) そして、
 承認されると、EEGLABユーザー全員が瞬時に見えるようになります。
 EEGLAB のグラフィックインターフェース(EEGLAB による)に直接使用可能
 2019年のMixpanelの統計量、150,000〜200,000 EEGLABセッション

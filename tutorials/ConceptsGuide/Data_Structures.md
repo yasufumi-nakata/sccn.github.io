@@ -7,7 +7,7 @@ parent: Concepts guide
 grand_parent: Tutorials
 nav_order: 5
 ---
-エッグラボ データ構造
+EEGLAB データ構造
 =======================
 お問い合わせ
 
@@ -326,8 +326,7 @@ ans=
 
 回復したイベント名を使用してエポックを抽出することができます。 詳細はこちら
 エポック抽出手順と同等のコマンドライン
-上記のセクションで提示 [データの抽出]
-epochs(/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html).
+上記のセクションで提示 [データの抽出 epochs](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html).
 
 ``` matlab
 >> EEG = pop_epoch( EEG, { 'square' }, \[-1 2\], 'epochinfo', 'yes');
@@ -363,8 +362,7 @@ ans =
 一貫性のために、エッチングされたデータセットでは、イベントのレイテンシーも
 で で で で で で で で
 データが連続していた場合 したがって、エポックを抽出した後
-[データ]
-(/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html) チュートリアル, 5 件のイベントレイテンシー:
+[データ](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html) チュートリアル, 5 件のイベントレイテンシー:
 
 ``` matlab
 >> {EEG.event(1:5).latency}
@@ -593,7 +591,7 @@ epoch は、epoch が読み込まれています。
 (*EEG.urevent*)
 実験中は、この工程で消去された。
 
-![サイトマップ](/assets/images/Pop_selectevent.jpg)
+![こちら](/assets/images/Pop_selectevent.jpg)
 
 その後、タイピング
 

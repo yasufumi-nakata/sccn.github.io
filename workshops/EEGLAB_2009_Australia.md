@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2009 Australia
-nav_title: "エグラボ2009 オーストラリア"
+nav_title: "EEGLAB 2009 Australia"
 parent: Past workshops
 grand_parent: Workshops
 ---
@@ -10,8 +10,7 @@ grand_parent: Workshops
 ===
 <span style="color: blue">ニューカッスル、オーストラリア
 2009年11月25日 - 11月27日</span>
-(第19回オストララシアン・心理生理学会の議長)
-会議:()http://www.newcastle.edu.au/conference/asp2009/))
+[第19回オストララシアン・心理生理学会の議長会議](http://www.newcastle.edu.au/conference/asp2009/)
 
 
 ワークショッププログラム

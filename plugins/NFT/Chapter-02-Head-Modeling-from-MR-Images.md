@@ -106,10 +106,8 @@ cerebellum はユーザーによって選択する必要があります。 こ�
 画像。 脳のセグメンテーションの結果は、「脳」を選択することで見ることができます
 マスク。
 
-お問い合わせ 【図4】設定時のセグメンテーションのインターフェイス
-レベルム用。 ]() NFT_cerebellarlowpoint.png "wikilink")...
-お問い合わせ 【図5】種子点におけるセグメンテーションのインターフェイス
-WM.(NFT_WMpointselection.png "wikilink")
+![図4:設定時のセグメンテーションのインターフェイス レベルム用](NFT_cerebellarlowpoint.png)
+![図5:種子点におけるセグメンテーションのインターフェイス WM](NFT_WMpointselection.png)
 
 ### 外スクールセグメンテーション
 
@@ -173,9 +171,7 @@ CSFと脳を分離する追加の表面。
 メッシュファイルには [付録A](NFT-Appendix-A.html "wikilink").
 メッシュ生成プロセスは以下のとおりです。
 
-![](NFT_meshgeneration_ui.png "wikilink") .....
-お問い合わせ [図8:メッシュのインターフェイス]
-ジェネレーション ]() NFT_meshジェネレーション_ui.png "wikilink"
+![図8:メッシュのインターフェイス ジェネレーション](NFT_meshgeneration_ui.png)
 
 
 網の世代別モジュールは合う三角の網を作成します
@@ -189,7 +185,7 @@ BEMソルバーのリソースから。 メッシュによるアプローチ
 この目的のために、3つの外部プログラムとさまざまなMaatlab関数
 使用しています。 外部プログラムは、適応型スケルトンクライミング(ASC)
 (http://www.cse.cuhk.edu.hk/ttwong/papers/asc/asc.html) のための
-トリアンギュレーション、Qslim (Qslim)http://mgarland.org/software/qslim.html)網のための
+トリアンギュレーション、[Qslim](http://mgarland.org/software/qslim.html)網のための
 滑らかで、トポロジーの訂正のための粗く、およびShowmesh。
 このプロセスを運転し、ローカルメッシュを行うMATLABで書かれた機能
 精製。 ローカルメッシュの精錬の目的は、それが確実であることを確認することです

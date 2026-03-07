@@ -58,7 +58,7 @@ figure; pop_topoplot(TMPEEG,0,1, [ 'ERP 100ms, fit with a single dipole (RV ' nu
 
 クリック [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=dipfit_erpeegtest.m) 上記のスクリプトをダウンロードします。 スクリプトを実行すると、以下の2つのプロットが作成されます。
 
-![サイトマップ](/assets/images/scalp_topo_dipole.png)
+![こちら](/assets/images/scalp_topo_dipole.png)
 
 eLoreta ソース ソース
 シンプルに書かれている [プラグイン](https://github.com/sccn/erpsource) その目的のために。
@@ -138,7 +138,7 @@ cfg.channel    = { 'all' };
 eLoreta がリリースされました。
 コ コ コ の ログイン
 (FieldTrip参照)
-ページ:()http://www.fieldtriptoolbox.org/tutorial/beamformer) から
+[ページ](http://www.fieldtriptoolbox.org/tutorial/beamformer) から
 このセクションは、より多くの情報に触発されています。
 
 ``` matlab
@@ -231,8 +231,7 @@ ft_sourceplot(cfg, sourceInt);
 DIPFIT のヘッドモデル
 設定メニュー 異なるメッシュバージョンが異なる
 解像度。 詳しくはこちら
-[このフィールドトリップ]
-チュートリアル:()http://www.fieldtriptoolbox.org/template/sourcemodel/) のための
+[このフィールドトリップチュートリアル](http://www.fieldtriptoolbox.org/template/sourcemodel/) のための
 詳細情報。 以下のコードは実行していると仮定します
 上記のコード。
 
@@ -266,7 +265,7 @@ source            = ft_sourceanalysis(cfg, dataAvg);
 今、私たちはグローバルパワーをプロットします。 同じアプローチで、
 MNEのソリューションは、いつまでも、
 このページのトップへ
-ページ:()http://www.fieldtriptoolbox.org/tutorial/minimumnormestimate/).
+[ページ](http://www.fieldtriptoolbox.org/tutorial/minimumnormestimate/).
 
 ``` matlab
 %% Surface source plot
@@ -297,18 +296,13 @@ hold on; ft_plot_mesh(vol.vol.bnd(1), 'facecolor', 'red', 'facealpha', 0.05, 'ed
 
 Tripチュートリアル
 --------
--   [ソースを作成する方法]
-    モデル:()http://www.fieldtriptoolbox.org/tutorial/sourcemodel/)と
-    [利用可能なテンプレートソース]
-    モデル:()http://www.fieldtriptoolbox.org/template/sourcemodel/) ( 1 つ
+-   [ソースを作成する方法モデル](http://www.fieldtriptoolbox.org/tutorial/sourcemodel/)と
+    [利用可能なテンプレートソースモデル](http://www.fieldtriptoolbox.org/template/sourcemodel/) ( 1 つ
     上記で使用しているもの)
--   [ボリューム伝導を定義する方法]
-    モデル:()http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem/)
--   [ビームフォーマー]
-    メソッド:()http://www.fieldtriptoolbox.org/tutorial/beamformer/) -
+-   [ボリューム伝導を定義する方法モデル](http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem/)
+-   [ビームフォーマーメソッド](http://www.fieldtriptoolbox.org/tutorial/beamformer/) -
     'eloreta' によって'dics' は、
--   [最小限の規範]
-    見積りhttp://www.fieldtriptoolbox.org/tutorial/minimumnormestimate/)
+-   [最小限の規範見積り](http://www.fieldtriptoolbox.org/tutorial/minimumnormestimate/)
     MEG は、EEG に適応する
 -  [DIPFITのチュートリアル](https://sccn.ucsd.edu/eeglab/dipfittut/dipfit.htmlold)
 

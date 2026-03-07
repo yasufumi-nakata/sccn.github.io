@@ -43,8 +43,7 @@ EEGLABプラグイン 以下は「宮越ら」のサプリメントから引用�
 1.  clean_flatlines()-これは、デッドフラットを持っているチャネルを削除することです
     特定の長さより長いライン。
 2.  clean_drifts()-これはIIRフィルタです。 移行を入力する必要があります
-    帯域幅(わからない場合は、こちらを参照してください)
-    ページ:()https://sccn.ucsd.edu/wiki/Firfilt_FAQ#Q._What_are_passband.2C_stopband.2C_transition_band_width.2C_cutoff_frequency.2C_passband_ripple.2Fringing.2C_and_stopband_ripple.2Fattenuation.3F)).
+    帯域幅(わからない場合は、[こちら](https://sccn.ucsd.edu/wiki/Firfilt_FAQ#Q._What_are_passband.2C_stopband.2C_transition_band_width.2C_cutoff_frequency.2C_passband_ripple.2Fringing.2C_and_stopband_ripple.2Fattenuation.3F)を参照してください)。
 3.  clean_channels()/clean_channels_nolocs()- これは、いわゆる拒否する
     'badチャンネル'. チャネル位置データが利用可能な場合、計算
     各チャネルの相関関係は、各チャネルが各チャネルの RANSAC 再構築に相関する
@@ -69,8 +68,7 @@ EEGLABプラグイン 以下は「宮越ら」のサプリメントから引用�
 
 ASR は EEGLAB プラグイン clean_rawdata() で実装されています。
 EEGLABプラグインマネージャー(EEGLABメインGUIからダウンロードしてインストールします)
-あるいは、手動でダウンロードできます。
-ページ:()http://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php),
+あるいは、[こちら](http://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php)から手動でダウンロードできます。
 それを解凍し、eeglab/plugins の下のフォルダーを見つけます。
 
 ### ダウンロード ver 1.10 (旧)
@@ -212,7 +210,7 @@ SD=10 や
 20は異常に高く、現在の不適切な使用を示す
 メトリック。 確かに、当社の未公開のクリーニング方法比較のデータ
 Nima Bigdely-Shamlo (開発しました)
-映写:()https://github.com/bigdelys/measure_projection),
+[measure_projection](https://github.com/bigdelys/measure_projection)),
 [プレス](https://www.frontiersin.org/articles/10.3389/fninf.2015.00016/full),
 等)、SD==20のASRは他の20方法の中で最もよく記録しました。 お問い合わせ
 SD==10 から 20 への開始は推奨されます。

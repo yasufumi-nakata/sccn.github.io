@@ -22,9 +22,7 @@ Nijmegen は、Scalp の計算位置を FieldTrip に関数を置く
 記録された3D画像から1つの3Dカメラ、
 [構造の走査器](https://structure.io/) Apple iPadに取り付けました。
 (読みます) [Homölle と Oostenveld
-(2019)](https://doi.org/10.1016/j.jneumeth.2019.108378)および[注記]
-組み込みフィールドトリップ
-関数:()http://www.fieldtriptoolbox.org/tutorial/electrode/)。 お問い合わせ
+(2019)](https://doi.org/10.1016/j.jneumeth.2019.108378)および[組み込みフィールドトリップ関数](http://www.fieldtriptoolbox.org/tutorial/electrode/)。 お問い合わせ
 SCCN は EEGLAB プラグイン拡張機能 (*get_chanlocs*) を作成しました。
 電極の位置をデジタル化するプロセス
 3Dを取得して、*EEG.chanlocs*データ構造に入力
@@ -76,8 +74,7 @@ EEGデータを使って。 *get_chanlocs* は *.obj* 3D のイメージの使�
 *get_chanlocs* は速度および最小に便利な視覚参照として
 電極のデジタル化プロセスにおけるヒューマンエラー。
 
-<B>ユーザーガイド</B> 説明されている[*get_chanlocs*]を参照してください。 ユーザー登録
-ガイド:()https://sccn.ucsd.edu/mediawiki/images/5/5f/Get_chanlocs_userguide.pdf) 細部のため。
+<B>ユーザーガイド</B> 説明されている[*get_chanlocs* ユーザーガイド](https://sccn.ucsd.edu/mediawiki/images/5/5f/Get_chanlocs_userguide.pdf)を参照してください。 細部のため。
 
 <B>使用:</B> 数値化した電極の位置が保存されると
 データセット、さらに(スカルプフィールドプロットとソースローカリゼーション)
@@ -98,8 +95,7 @@ SCCNで利用するイメージです。
 <b>3Dスカルプ電極の位置の正確な調整
 ヘッドモデル</b>お問い合わせ いくつかのパッケージは、ファッショニングのために利用可能です
 アトミックMRヘッドイメージから幾何学的に正確なヘッドモデル。 お問い合わせ
-Zeynep Akalin Acarの[神経磁気フォワードの問題ツールボックス]
-(NFT))https://sccn.ucsd.edu/wiki/NFT)、彼女は今に結合している
+Zeynep Akalin Acarの[神経磁気フォワードの問題ツールボックス (NFT)](https://sccn.ucsd.edu/wiki/NFT)、彼女は今に結合している
 推定のための最初の非侵襲的、普遍的な適用方法(SCALE)
 EEGデータ(Akalin Acar et al., 2016)からの個々の頭蓋骨伝導性;
 詳しくはこちら 被写体 MR ヘッドイメージが *not* の場合
@@ -137,17 +133,15 @@ scalpの3D位置を計算するためにFieldTripに機能を追加
 
 *get_chanlocs* プラグインは Matlab 9.1 (R2016) でテストされました
 Windows 10およびOS X 10.10.5。 ご意見をお寄せください。
-[GitHub] を使用して任意の非互換性、バグ、または機能の提案
-問題の追跡者]()https://github.com/cll008/get_chanlocs/issues/).
+[GitHub 問題の追跡者](https://github.com/cll008/get_chanlocs/issues/)を使用して任意の非互換性、バグ、または機能の提案
 
 <b>スキャン ソフトウェア:</B> 理論では、3Dスキャンの任意の組み合わせ
 Wavefront OBJファイル(.obj)を生成するハードウェアとソフトウェア
 対応する素材のテクスチャライブラリ(.mtl)とJPEG(.jpg)ファイルは、
 プラグインに使用されます。 ※get_chanlocs* はヘッドでのみテスト済みです。
-[構造センサー]で生成されたモデル
-カメラ:()https://store.structure.io/storeiPad Air(モデル)に付属
-A1474). デフォルト [キャリブレータ] を使用します。
-アプリケーション:()https://itunes.apple.com/us/app/structure-sensor-calibrator/id914275485?mt=8)
+[構造センサー](https://store.structure.io/store)で生成されたモデル
+iPad Air(モデル)に付属
+A1474). デフォルト [キャリブレータ](https://itunes.apple.com/us/app/structure-sensor-calibrator/id914275485?mt=8) を使用します。
 センサーのカメラおよびタブレットのカメラおよびデフォルトを並べるために
 スキャンソフトウェア
 ([スキャナ](https://itunes.apple.com/us/app/scanner-structure-sensor-sample/id891169722?mt=8))
@@ -166,8 +160,7 @@ A1474). デフォルト [キャリブレータ] を使用します。
 400,000以上のモデルのポリゴン数を増加させる
 決断の達成可能な増加を提供しないで処理時間。
 残念ながら、スキャンが無料で、モデルのエクスポート(必須)
-*get_chanlocs*) は [エクスポートまたはサブスクリプションごと]
-費用:()https://itseez3d.com/pricing.html)。 お問い合わせ
+*get_chanlocs*) は [エクスポートまたはサブスクリプションごと](https://itseez3d.com/pricing.html)。 お問い合わせ
 [itSeez3Dの特長](mailto:support@itseez3d.com) 割引について
 教育機関および他の非商業目的のために。
 
@@ -180,8 +173,7 @@ A1474). デフォルト [キャリブレータ] を使用します。
 平均値よりも大きくても小さくてもエラーが発生します。 プロジェクトの場合
 大型バストスキャンなどの大型モデルをスキャンする必要があります。
 ECGの電極、EMGの袖のための腕のスキャン、等を含む)、手動で置きました
-obj.unit - [使用の代わりに
-*ft_determine_units*(半角)https://github.com/cll008/get_chanlocs/blob/master/private/ft_convert_units.m#L86)
+obj.unit - [使用の代わりに *ft_determine_units*](https://github.com/cll008/get_chanlocs/blob/master/private/ft_convert_units.m#L86)
 - あなたの走査器 {'m'、'dm'、'cm'、'mm'} によって使用される正しい単位に避けて下さい
 合併症。
 
@@ -212,22 +204,18 @@ MATLAB では まず回転工具を選択し、電極をマークします。
 --------
 
 ※get_chanlocs* をダウンロードするには、EEGLAB 内の拡張マネージャを使用してください。
-または、プラグインは手動ダウンロードのために利用可能です
-[EEGLABプラグイン]
-リスト:()https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php).
+または、プラグインは[EEGLABプラグインリスト](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php)から手動ダウンロードのために利用可能です。
 
 改定履歴
 ----------------
 
-[commit] をご確認ください。
-歴史:()https://github.com/cll008/get_chanlocs/commits/master) の
+[commit 履歴](https://github.com/cll008/get_chanlocs/commits/master)をご確認ください。
 プラグインのGitHubリポジトリ。
 
 ※get_chanlocs* は必須項目です。 ユーザーガイド
 -------------------------
 
-[*get_chanlocs*] を表示/ダウンロード ユーザー登録
-ガイド:()https://sccn.ucsd.edu/eeglab/download/Get_chanlocs_userguide.pdf)
+[*get_chanlocs* ユーザーガイド](https://sccn.ucsd.edu/eeglab/download/Get_chanlocs_userguide.pdf) を表示/ダウンロード
 
 <div align=left>
 

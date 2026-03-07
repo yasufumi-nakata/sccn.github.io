@@ -36,7 +36,7 @@ MATLAB のリリース EEGLAB は、EEGLAB の略称です。 を を を
 
 90% の場合、EEGデータが生成されます。 このページの先頭へ
 
-EEGLAB(エグラボ)
+EEGLAB(EEGLAB)
 --------------------
 
 EEGLAB と LabStrdreamingLayer (LSL) は、UCSD の SCCN ラボで発起点と接地に接近する。 [*lsl_app_MATLABビューア*](https://github.com/labstreaminglayer/App-MATLABViewer/) 拡張子、メニュー項目 <span style="color: brown">MATLAB LSLビューア</span>EEG LSL に mac と Windows の に 、 で 、 で 、 で 、 で 、 で 、 で 、 で 、 で 、 と の 、 と の 、 と の 、 と の 、 と の 、 と の 、 と の は 、 と の に 、 と の は 、 と と の と の 、 と と の と の は 、 と と と の と と と と の と の は と と と と と と の の と と の と と の と と の と と と の と と と と と の と と と は と と と と と と と と と と と と と と と と と  EEGLAB .set ファイルの読み込み  この に に に ストリーム として として として として として として として Mobilab は、EEGLAB が XDF を オープンソース に インストールします。
@@ -117,7 +117,7 @@ MATLABの配列
 
 ### データ平均のインポートセット
 
-エッグラボ は は は は <b>チュートリアルのこのセクションにもかかわらず、データ平均の処理とインポートを強くお勧めします</b> お問い合わせ  お問い合わせ  お問い合わせ  お問い合わせ
+EEGLAB は は は は <b>チュートリアルのこのセクションにもかかわらず、データ平均の処理とインポートを強くお勧めします</b> お問い合わせ  お問い合わせ  お問い合わせ  お問い合わせ
 緊急事態(ERP)
 視覚化されるが、直接輸入してはならない。
 
@@ -171,8 +171,8 @@ ascii/floatファイル MATLABの配列</span> 前のセクションの1つに�
 
 EEGLAB のコメントアーカイブ、ユーザーからメッセージまで。
 特定のデータフォーマットをインポートします。 リストアーカイブを検索できます。
-サイトマップ Webサイトについて
+こちら Webサイトについて
 
 追加する意欲
-EEGLABにコメントする [サイトマップ](http://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)EEGLAB は、EEGLAB のソフトウェアを開発し、EEGLAB のソフトウェア開発を行ないます。
+EEGLABにコメントする [こちら](http://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)EEGLAB は、EEGLAB のソフトウェアを開発し、EEGLAB のソフトウェア開発を行ないます。
 

@@ -21,9 +21,7 @@ EEGLABのバグ
 EEGLABのバグと提案に対処する
 ---
 
-EEGLAB のバグは [Github EEGLAB] で管理されます。
-課題:()https://github.com/sccn/eeglab/issues)。 古い [EEGLAB Bugzilla]
-インターフェイス:()https://sccn.ucsd.edu/bugzilla/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_status=ON%20HOLD&bug_status=CHECKDEV&f0=OP&f1=OP&f3=CP&f4=CP&list_id=549&query_format=advanced)
+EEGLAB のバグは [Github EEGLABの課題](https://github.com/sccn/eeglab/issues) で管理されます。 古い [EEGLAB Bugzillaインターフェイス](https://sccn.ucsd.edu/bugzilla/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_status=ON%20HOLD&bug_status=CHECKDEV&f0=OP&f1=OP&f3=CP&f4=CP&list_id=549&query_format=advanced)
 それでも潜在能力を追跡するために使用されているが、非推奨されている
 改善。
 
@@ -40,8 +38,7 @@ MATLABの利用
     機能ソースファイル。 パフォーマンスを調整するには、編集する
     お問い合わせ 注意: うまくいけば、
     Githubのプルリクエストを発行します。 詳細情報を見る
-    [コントリビュート]
-    EEGLAB:(チュートリアル/コントリビュート/コントリビュート_to_EEGLAB)
+    [EEGLABへの貢献](/tutorials/contribute/Contributing_to_EEGLAB.html)
 
 バグを報告する方法
 ---
@@ -49,8 +46,7 @@ MATLABの利用
 -  まず、MATLAB コマンドラインとエラーウィンドウのテキストを注意深くお読みください。
     直接問題を避けることができます。
 -  次に、エラーかどうかをテストする
-    EEGLABの現在のリリースで発生します。 もしそうなら[Github]をチェックしてください
-    EEGLABの課題https://github.com/sccn/eeglab/issues) あなたのかどうかを確認する
+    EEGLABの現在のリリースで発生します。 もしそうなら[Github EEGLABの課題](https://github.com/sccn/eeglab/issues)をチェックしてください あなたのかどうかを確認する
     問題は既に報告されています:
     -   問題が報告されている場合は、バグについてコメントする場合があります。
     -   問題が報告されていない場合は、新しいバグを提出することができます。
@@ -71,8 +67,7 @@ precompiled関数(mex関数とも呼ばれます)。 "mexファイルが見つ�
 ファイル。
 
 -   FieldTrip機能: 一部の機能がエラーになる場合
-    FieldTripフォルダが見つからない場合は、[FieldTrip]を参照してください。
-    ドキュメントhttps://www.fieldtriptoolbox.org/faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do/)
+    FieldTripフォルダが見つからない場合は、[FieldTripドキュメント](https://www.fieldtriptoolbox.org/faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do/)を参照してください。
     このような機能を再コンパイルする方法。
 
 -   BIOSIG:BIOSIGのいくつかのリリースには、いくつかの更新されたmexファイルが含まれています

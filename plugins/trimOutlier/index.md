@@ -40,8 +40,7 @@ logical\ チャンネル拒否と EEG.etc.trimOutlier.cleanChannelMask の
 --------
 
 このチュートリアルでは、ユーザーがロードの基本的なステップを理解していると仮定します
-EEGLABへのデータ 詳細は【EEGLAB】をご覧ください。
-チュートリアル:()http://sccn.ucsd.edu/wiki/EEGLAB_Wiki#EEGLAB_Tutorial).
+EEGLABへのデータ 詳細は[EEGLABチュートリアル](http://sccn.ucsd.edu/wiki/EEGLAB_Wiki#EEGLAB_Tutorial)をご覧ください。
 
 開始するには、連続した(非推奨)データセットをロードし、プラグインを開始します。
 EEGLABウィンドウのツール いくつかの数字とチャートがポップアップ表示されます

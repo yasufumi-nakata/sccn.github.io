@@ -31,7 +31,7 @@ EEG ダイナミクスを学習する
 チュートリアルデータセットをそのまま使用しました。 [データエポック抽出](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html)お問い合わせ メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
 <span style="color: brown">既存のデータセットをロードする</span>EEGLABの「sample_data」フォルダにある「eeglab_data_epochs_ica.set」のチュートリアルファイルです。
 
-![サイトマップ](/assets/images/Pop_loadset2.png)
+![こちら](/assets/images/Pop_loadset2.png)
 
 ### すべてのチャネルをプロット 採用情報
 
@@ -41,7 +41,7 @@ dataset は、デフォルトで設定されます。 [pop_timtopo.m ディレ�
 プレス *Ok*.
 
 
-![サイトマップ](/assets/images/Pop_timtopo.png)
+![こちら](/assets/images/Pop_timtopo.png)
 
 
 図(下)が表示されます。 各トレースはプロットします
@@ -51,7 +51,7 @@ ERPデータ分散 または1つに分ける
 上記のポップアップウィンドウでレイテンシーを指定できます。
 
 
-![サイトマップ](/assets/images/Erpplot1.png)
+![こちら](/assets/images/Erpplot1.png)
 
 
 ふりがな [pop_timtopo.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) 関数は相対的な時間のコースをプロットします
@@ -62,20 +62,20 @@ ERP映画(例えば、ScalpuのERPの再生)、
 関数 [eegmovie。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegmovie.m) コマンドラインから記述されている [チュートリアルのスクリプトセクション](/tutorials/11_Scripting/EEG_scalp_measures.html#using-the-eegmovie-function-to-make-2-d-scalp-topography-animations).
 
 
-### サイトマップ
+### こちら
 
 EpochedデータセットのERPは、
 2Dトポグラフィの配置は、トレースで行います。 
 選択する <span style="color: brown">パロット → ERP → scalp 配列/rect で . 配列</span>Ok* では、デフォルトウィンドウで設定できます。
 
 
-![サイトマップ](/assets/images/Pop_plottopo.png)
+![こちら](/assets/images/Pop_plottopo.png)
 
 
 以下を生成します。 [pop_timtopo.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_timtopo.m) プロフィール
 
 
-![サイトマップ](/assets/images/Erpplot2.png)
+![こちら](/assets/images/Erpplot2.png)
 
 
 特定のチャンネルタイムコースを視覚化できます。
@@ -84,7 +84,7 @@ EpochedデータセットのERPは、
 このトレースのフルサイズのビュー(以下)。
 
 
-![サイトマップ](/assets/images/Zoom1.png)
+![こちら](/assets/images/Zoom1.png)
 
 
 ルーチンをプロットする [axcopy. m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=axcopy.m) サブ軸プロットウィンドウをいつでもポップアップする
@@ -98,16 +98,16 @@ EpochedデータセットのERPは、
 
 2連載中のPerpleERPデータトレース
 メニュー項目を選択 <span style="color: brown"> パロット → ERP → scalp/rect で。配列</span>デフォルト設定 Rect. array 'Plot' をリクエストします。
-サイトマップ *Ok*。
+こちら *Ok*。
 
 
-![サイトマップ](/assets/images/Pop_topoplotrectarray.png)
+![こちら](/assets/images/Pop_topoplotrectarray.png)
 
 
 その結果 [pop_plottopo.m の](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_plottopo.m) 図(下)が表示されます。
 
 
-![サイトマップ](/assets/images/Erpplot3.png)
+![こちら](/assets/images/Erpplot3.png)
 
 
 前のプロットと同様に、上のトレースをクリックしてフルポップアップします
@@ -132,7 +132,7 @@ EpochedデータセットのERPは、
 指定されたレイテンシーのスカルプマップ。 ここでは、プロットグリッドは3を持っています
 *Plot の ジオメトリ は、*Plot の ジオメトリ は、*Plot の ジオメトリ の GUI ウィンドウで指定します。
 
-![サイトマップ](/assets/images/2dscalpmap.png)
+![こちら](/assets/images/2dscalpmap.png)
 
 
 3次元ERPSカルプマップ

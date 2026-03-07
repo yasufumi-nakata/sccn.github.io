@@ -157,7 +157,7 @@ EEGLAB関数は、非パラレルを計算する。nullの
 
 
 
-![サイトマップ](/assets/images/Statistics.gif)
+![こちら](/assets/images/Statistics.gif)
 
 
 

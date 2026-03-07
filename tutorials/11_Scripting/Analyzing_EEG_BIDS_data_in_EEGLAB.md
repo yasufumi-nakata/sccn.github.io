@@ -9,7 +9,7 @@ grand_parent: Tutorials
 # EEG-BIDSについて
 お問い合わせ
 
-EEG-BIDSEEGLABに、EEGLABの通信方法を紹介しています。 [エグラボスタディ](https://sccn.github.io/tutorials/10_Group_analysis) 以下の グループ グループ グループ グループ グループ グループ グループ します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します を を を を を を を を を を を を を を 人気カテゴリー
+EEG-BIDSEEGLABに、EEGLABの通信方法を紹介しています。 [EEGLABスタディ](https://sccn.github.io/tutorials/10_Group_analysis) 以下の グループ グループ グループ グループ グループ グループ グループ します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します を を を を を を を を を を を を を を 人気カテゴリー
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN3II4EnVQNjOeVl-UprWlnM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
@@ -72,7 +72,7 @@ FUsiform BOの強み
 EEGとMEGは、翻訳済みで、翻訳済みです。 データは、、、、 Ramon Martinez、Arnaud Delorme 作成者(EEG抽出、修正、再処理、イベントレイテンシー修正) [オープンニューロ](https://openneuro.org/datasets/ds002718).
 
 ## データの事前処理
-データをダウンロードしたら [オープンニューロ](https://openneuro.org/datasets/ds002718/versions/1.0.2)下記のコードを実行できます。 [サイトマップ](/tutorials/04_Import/BIDS.html) データのダウンロードに問題がある場合)。
+データをダウンロードしたら [オープンニューロ](https://openneuro.org/datasets/ds002718/versions/1.0.2)下記のコードを実行できます。 [こちら](/tutorials/04_Import/BIDS.html) データのダウンロードに問題がある場合)。
 
 ### EEGLABについて 
 

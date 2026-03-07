@@ -7,7 +7,7 @@ parent: EEGLAB news
 has_children: false
 has_toc: false
 ---
-エッグラボ ニュースレター
+EEGLAB ニュースレター
 ===
 <img class="float-right" style="margin-left:20px" width="250" height="250" src="/assets/images/newsletter_screenshot2.jpg">
 EEGLABニュースレター、EEGLABニュース、以下が含まれます。

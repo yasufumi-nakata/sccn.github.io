@@ -20,7 +20,7 @@ nav_order: 6
 
 ## コミュニティに問い合わせる
 
-コミュニティに尋ねるには、最も簡単な方法は、購読することです [エグラボリスト](/others/EEGLAB_mailing_lists.html) メッセージの送信 
+コミュニティに尋ねるには、最も簡単な方法は、購読することです [EEGLABリスト](/others/EEGLAB_mailing_lists.html) メッセージの送信 
 
 ## バグの再現
 

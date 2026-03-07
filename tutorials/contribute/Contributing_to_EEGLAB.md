@@ -133,8 +133,7 @@ EEGLABは、 Githubは、
 Github から EEGLAB へ直接、次の 2 へ
 ステップ:
 
-1.  Github で [EEGLAB]
-    リポジトリ(リポジトリ)https://github.com/sccn/eeglab)
+1.  Github で [EEGLAB リポジトリ](https://github.com/sccn/eeglab)
 2.  ウィンドウの右上隅にある「*Fork*」
     お問い合わせ
 

@@ -50,7 +50,7 @@ LIMO プロット機能を使用して表示するたびに、Matlab ワーク�
 
 チュートリアルは、 [ウェイクマンとヘンソン (2015)](https://www.nature.com/articles/sdata20151) 顔データ。 短い、有名な、非有名でスクランブルされた顔が提示され、すぐに繰り返されます。 被験者は、それらを従事し続けるために、設計に判断タスクの矯正を行う必要があります。 EEGチャンネルを抽出し、前処理しました。 [このチュートリアルのデータをここにダウンロード](https://openneuro.org/datasets/ds002718/versions/1.0.5) BIDS形式
 
-このチュートリアルでは、最新の使い方を想定しています。 [エッグラボ](https://github.com/sccn/eeglab) 使用するバージョン(2020.0以降) [スタディ](https://sccn.ucsd.edu/wiki/Chapter_02:_STUDY_Creation) リンクについて [LIMOツール](https://github.com/LIMO-EEG-Toolbox/limo_tools).
+このチュートリアルでは、最新の使い方を想定しています。 [EEGLAB](https://github.com/sccn/eeglab) 使用するバージョン(2020.0以降) [スタディ](https://sccn.ucsd.edu/wiki/Chapter_02:_STUDY_Creation) リンクについて [LIMOツール](https://github.com/LIMO-EEG-Toolbox/limo_tools).
 
 
  

@@ -1,13 +1,12 @@
 ---
 layout: default
 title: EEGLAB 2019 Aspet
-nav_title: "EEGLAB 2019 アスペット"
+nav_title: "EEGLAB 2019 Aspet"
 parent: Past workshops
 grand_parent: Workshops
 ---
 
-![250px\|thumb\|right\|upright=2.5\|【公式】 Pyreneesの風景
-山)(/assets/images/Pyrennees.png)
+![250px\|thumb\|right\|upright=2.5\|【公式】 Pyreneesの風景 山](/assets/images/Pyrennees.png)
 
 第20回 EEGLABワークショップ
 ============================
@@ -40,8 +39,7 @@ MATLABをインストールしたノートパソコン
 構造 - MRI、fMRIおよびEEGのため</b>
 
 <i>所在地:</i> 主要な会議室、Pavillon Baudot、Purpanの病院、
-トゥールーズ([アクセス可能]
-お問い合わせhttp://www.cerco.ups-tlse.fr/-Acces-?lang=en))
+トゥールーズ([アクセス可能 お問い合わせ](http://www.cerco.ups-tlse.fr/-Acces-?lang=en))
 <i>登録:</i> このイベントは、全て無料です。
 <i>シンポジウムモデレータ:</i> スコット・マディグ
 
@@ -81,32 +79,32 @@ MATLABをインストールしたノートパソコン
 
 **概要とICA理論/実践* * 必須
 
-<span style="color:purple"> 8:30～9:45～ 鉱業イベント関連の脳力学I(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_aspet19_mining_i.pdf)
+<span style="color:purple"> 8:30～9:45～ 鉱業イベント関連の脳力学I(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_aspet19_mining_i.pdf)
 
-<span style="color: purple">9:45 – 10:15 -- EEGLABの概要 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2019_ad_eeglab_overview.pdf)
+<span style="color: purple">9:45 – 10:15 -- EEGLABの概要 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2019_ad_eeglab_overview.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
 
-<span style="color: purple">10:30-11:30 -- ICA理論(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_aspet19_ica.pdf)
+<span style="color: purple">10:30-11:30 -- ICA理論(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_aspet19_ica.pdf)
 
 
-<span style="color: orange">11:30～12:30～ データインポート、アーティファクト拒否(Tracy Brandmeyer)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2019_aspet_artifact_and_ica.pdf)
+<span style="color: orange">11:30～12:30～ データインポート、アーティファクト拒否(Tracy Brandmeyer)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2019_aspet_artifact_and_ica.pdf)
 
 <span style="color: green">12:30-13:45 ランチ</span>
 
 **ICAおよび時間頻度**
 
-<span style="color: orange">13:45 - 15:15 -- ICA 分解 練習 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/delorme_ica_practicum.pdf)
+<span style="color: orange">13:45 - 15:15 -- ICA 分解 練習 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/delorme_ica_practicum.pdf)
 
 <span style="color: orange">15:15 - 15:45 -- ICAをブートストラップして、ICAの前にPCAを使用する(Fiorenzo Artoni)</span>
 
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">16:00 – 17:00 -- 時間頻度分解: 理論と実践 (Tim Mullen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_time_frequency_analysis2019.pdf)
+<span style="color: purple">16:00 – 17:00 -- 時間頻度分解: 理論と実践 (Tim Mullen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_time_frequency_analysis2019.pdf)
 
-<span style="color: purple">17:00～17:30 段階の広さのカップリング(ラモン・マルティネス)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/rmc_pac_aspet_2019.pdf)
+<span style="color: purple">17:00～17:30 段階の広さのカップリング(ラモン・マルティネス)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/rmc_pac_aspet_2019.pdf)
 <!-- -->
 
 
@@ -123,15 +121,15 @@ MATLABをインストールしたノートパソコン
 **EEGLABのグループ分析とICAクラスタリング* * 必須
 
 
-<span style="color: purple">8:30～9:00 なぜクラスターICAコンポーネント? (スコットメイク)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_aspet19_clustering.pdf)
+<span style="color: purple">8:30～9:00 なぜクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_aspet19_clustering.pdf)
 
-<span style="color: purple">9:00 - 9:45 -- 複数の比較のためのBootstrapそして修正(Cyril Pernet)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/pernet_2019_bootstrap&eeg-mcc_eegworkshop.pdf)
+<span style="color: purple">9:00 - 9:45 -- 複数の比較のためのBootstrapそして修正(Cyril Pernet)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/pernet_2019_bootstrap&eeg-mcc_eegworkshop.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">10:45 - 11:45 -- STUDY と STUDY デザインの作成 - チャンネルのプロットとコンピューティングの統計 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2019_ad_study_design.pdf)
+<span style="color: purple">10:45 - 11:45 -- STUDY と STUDY デザインの作成 - チャンネルのプロットとコンピューティングの統計 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2019_ad_study_design.pdf)
 
-<span style="color: purple">11:45 - 12:45 -- ICAコンポーネントのクラスタリングとプロット(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2019_ad_study_clustering.pdf‎)
+<span style="color: purple">11:45 - 12:45 -- ICAコンポーネントのクラスタリングとプロット(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2019_ad_study_clustering.pdf‎)
 <!-- -->
 
 
@@ -158,9 +156,9 @@ MATLABをインストールしたノートパソコン
 **Source ローカリゼーション**
 
 
-<span style="color: purple">8:30～9:30 フォワードと反転モデル - Dipfitツール(Robert Oostenveld)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/dipfit-oostenveld.pdf)
+<span style="color: purple">8:30～9:30 フォワードと反転モデル - Dipfitツール(Robert Oostenveld)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/dipfit-oostenveld.pdf)
 
-<span style="color: purple">9:30 – 10:00 -- EEGLAB(Arnaud Delorme)のDipfitプラグインを使用する</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/delorme2019_dipfit.pdf)
+<span style="color: purple">9:30 – 10:00 -- EEGLAB(Arnaud Delorme)のDipfitプラグインを使用する</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/delorme2019_dipfit.pdf)
 <!-- -->
 
 
@@ -173,7 +171,7 @@ MATLABをインストールしたノートパソコン
 **一般リニアモデリング* * 必須
 
 
-<span style="color: orange">10:15～12:30～ LIMO EEGLABプラグイン(Cyril Pernet)を使用して、一般的なリニアモデルをEEGデータに適用する理論と実践</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/2019_aspet_hlm-glm.pdf)
+<span style="color: orange">10:15～12:30～ LIMO EEGLABプラグイン(Cyril Pernet)を使用して、一般的なリニアモデルをEEGデータに適用する理論と実践</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/2019_aspet_hlm-glm.pdf)
 <!-- -->
 
 
@@ -185,9 +183,9 @@ MATLABをインストールしたノートパソコン
 **情報源流* * 必須
 
 
-<span style="color: purple">13:45～15:30～ ソース情報の流れとGranger-Causalモデリングツール(Tim Mullen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_sift_lecture.pdf)
+<span style="color: purple">13:45～15:30～ ソース情報の流れとGranger-Causalモデリングツール(Tim Mullen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_sift_lecture.pdf)
 
-<span style="color: orange">15:45 – 17:30 -- SIFT ツールボックス: practicum (Tim Mullen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/sift_i_practicum.pdf)
+<span style="color: orange">15:45 – 17:30 -- SIFT ツールボックス: practicum (Tim Mullen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/sift_i_practicum.pdf)
 
 
 <span style="color: green">19:45～ ディナー </span>
@@ -197,7 +195,7 @@ MATLABをインストールしたノートパソコン
 <span style="color: green">7:30～8:30 朝食</span>
 
 
-<span style="color: purple">8:30-10:00 -- マイニングイベント関連の脳力学II(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_aspet19_mining_ii.pdf)
+<span style="color: purple">8:30-10:00 -- マイニングイベント関連の脳力学II(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_aspet19_mining_ii.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
@@ -206,8 +204,7 @@ MATLABをインストールしたノートパソコン
 
 <span style="color: orange">10:15 – 11:30 -- 練習、少人数のグループプロジェクト</span>
 
-<span style="color: orange">11:30 – 12:00 -- 参加者のプロジェクトプレゼンテーションと一般的なディスカッション</span> [一覧]
-プロジェクトhttps://sccn.ucsd.edu/githubwiki/files/project_list_aspet.pdf)
+<span style="color: orange">11:30 – 12:00 -- 参加者のプロジェクトプレゼンテーションと一般的なディスカッション</span> [一覧プロジェクト](https://sccn.ucsd.edu/githubwiki/files/project_list_aspet.pdf)
 <!-- -->
 
 
