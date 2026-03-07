@@ -12,34 +12,33 @@ grand_parent: Tutorials
 EEGLAB をロードする
 -------------------
 
-メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
-<span style="color: brown">既存のデータセットをロードする</span>EEGLAB の「sample_data」フォルダに、Eeglab_data.set というファイルがあります。
+メニュー項目<span style="color: brown">ファイル</span>からサブメニュー項目<span style="color: brown">既存のデータセットをロードする</span>を選択してください。EEGLABの「sample_data」フォルダにある「eeglab_data.set」ファイルを選択します。
 
 ![こちら](/assets/images/Pop_loadset.png)
 
 Clean Rawdata プラグイン
 -------------------
 
-<a href="https://github.com/sccn/clean_rawdata">Clean_rawdata(クリーンデータ)</a> EEGLAB のデフォルトでは、EEGLAB のデフォルトでは、EEGLAB のデフォルトでは、EEGLAB のデフォルトでは、EEGLAB のデフォルトでは、EEGLAB のプラグインが使用されます。 メニュー項目 <span style="color: brown">ツール</span> サブメニュー項目を押します
-<span style="color: brown">クリーンなローデータ と ASR を調べる</span>.
+<a href="https://github.com/sccn/clean_rawdata">Clean_rawdata</a>はEEGLABにデフォルトでインストールされているプラグインです。メニュー項目<span style="color: brown">ツール</span>のサブメニュー項目
+<span style="color: brown">Clean Rawdata と ASR によるデータ除去</span>を選択してください。
 
-![投稿ナビゲーション](/assets/images/pop_clean_rawdata_new.png)
+![](/assets/images/pop_clean_rawdata_new.png)
 
 異なるシーケンシャルプロセスを示すこのメニューにはいくつかのセクションがあります。
 - 1番目のオプションは、EEGLABが実行するハイパスフィルタの周波数指定です。 
 
-- 2番目のオプションは、悪いチャンネルを削除して取引します。 悪いチャンネルを削除するには3つの方法があります。 フラットチャンネルを削除できます。 標準偏差に基づいて大量のノイズを除去することができ、他のチャネルと相関するチャネルが削除される場合があります。 チャネル相関の拒絶しきい値が0.8に設定されます。 チャンネルの場所(アカウントチャンネルの場所を取る異なるヒューリスティックは、それらを持っている場合に使用されます - そして、我々は強く、自動化されたアーティファクト拒絶前にチャネルの場所をインポートする助言)、チャネルの拒否が異なることに注意してください。
+- 2番目のオプションは、不良チャンネルの検出と除去を扱います。不良チャンネルを除去するには3つの方法があります。フラットチャンネルを除去できます。標準偏差に基づいてノイズの多いチャンネルを除去でき、他のチャネルとの相関が低いチャネルを除去できます。チャネル相関の拒絶しきい値はデフォルトで0.8に設定されています。チャンネルの位置情報がある場合は、それを考慮した異なるヒューリスティックが使用されます（自動アーティファクト拒絶の前にチャネル位置をインポートすることを強く推奨します）。チャネル位置の有無によりチャネル拒否の結果が異なることに注意してください。
 
-- 3 アーティファクト サブスペースの復元 (ASR) は、 データの校正差を補正します。このチュートリアルでは、 <a href="https://www.frontiersin.org/articles/10.3389/fnhum.2019.00141/full">ASRに関する解説記事</a> を参照してください。Riemannian 幾何学を用いた手法で、実験中に公開されています。 <a href="https://www.frontiersin.org/articles/10.3389/fnhum.2019.00141/full">ニュース</a> お問い合わせ - ASRの著者C.コテーは、今日の対比を争います。
+- 3番目のセクションはアーティファクトサブスペース再構成（ASR）で、キャリブレーションデータに基づいてデータを補正します。詳しくは<a href="https://www.frontiersin.org/articles/10.3389/fnhum.2019.00141/full">ASRに関する解説記事</a>を参照してください。Riemannian幾何学を用いた手法も<a href="https://www.frontiersin.org/articles/10.3389/fnhum.2019.00141/full">発表されています</a>。なお、ASRの著者であるC. Kotheは、この論文の一部の比較結果に異議を唱えています。
 
 - 4番目のオプションは、コマンドラインから実行することもできます。
 
 - 最後のオプションは、拒否されたデータを強調した結果をプロットすることができます。
 
-以下に示すようにします。詳細は、Redmark のアカウントでご確認ください。このオーバーレイは、EEGポストプロセッシングでアーティファクト除去の結果を表示します。
+以下に示すように、赤色のオーバーレイは除去されたデータ部分を示しています。このプロットはEEG前処理におけるアーティファクト除去の結果を表示します。
 
-![投稿ナビゲーション](/assets/images/pop_clean_rawdata_new2.png)
+![](/assets/images/pop_clean_rawdata_new2.png)
 
 他の方法による自動アーティファクト拒絶
 -------------------
-EEGLABのプラグインとレガシー EEGLAB のメニューは、顧客データと言語を組み合わせて、メニューは異なります。 <span style="color: brown">ファイル → 環境設定</span> チェックボックス *もし、EEGLAB*** を、EEGLAB** に、EEGLAB* を、 EEGLAB は、EEGLAB を、 する を を <span style="color: brown">ツール → 自動チャンネル拒否</span> (ヘルプメッセージを参照してください) [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejchan.m) 関数)および <span style="color: brown">ツール → 自動連続拒絶</span> (ヘルプを参照してください) [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejcont.m) .),EEGLAB のデフォルトメソッド な な な [このチュートリアルのセクション](/tutorials/misc/Rejecting_Artifacts_Legacy_Menus.html).
+EEGLABのプラグインとレガシーメニューでは、異なるアーティファクト除去手法を提供しています。<span style="color: brown">ファイル → 環境設定</span>でレガシーメニューを有効にすると、<span style="color: brown">ツール → 自動チャンネル拒否</span>（[pop_rejchan.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejchan.m)関数のヘルプを参照）および<span style="color: brown">ツール → 自動連続拒絶</span>（[pop_rejcont.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejcont.m)関数のヘルプを参照）が利用できます。EEGLABのデフォルトの手法については[このチュートリアルのセクション](/tutorials/misc/Rejecting_Artifacts_Legacy_Menus.html)を参照してください。

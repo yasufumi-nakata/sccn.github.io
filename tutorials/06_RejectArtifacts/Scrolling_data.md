@@ -10,45 +10,35 @@ grand_parent: Tutorials
 データのスクロールと拒否 
 ======
 
-ここでは、選択した部分を視覚化し、拒否する方法を学びます
-お問い合わせ
+ここでは、連続EEGデータの選択した部分を視覚化し、拒否する方法を学びます。
 
 EEGLAB をロードする
 --------------------------
-選択する <span style="color: brown">ファイル → 既存のデータセットをロードする</span> メニュー項目。
-EEGLABの「sample_data」フォルダにあるツールボックスです。
+メニュー項目<span style="color: brown">ファイル → 既存のデータセットをロードする</span>を選択してください。EEGLABの「sample_data」フォルダにある「eeglab_data.set」ファイルを選択します。
 
 ![こちら](/assets/images/Pop_loadset.png)
 
 データのスクロール
 --------------------------
 現在のデータセットのチャネルデータをスクロールするには、
-<span style="color: brown">Plot → チャンネルデータ(有料)</span>お問い合わせ このポップアップ
-お問い合わせ [eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)
-下のスクロールデータ表示ウィンドウ。
+<span style="color: brown">Plot → チャンネルデータ（スクロール）</span>を選択してください。これにより
+[eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)関数が呼び出され、
+下のスクロールデータ表示ウィンドウが開きます。
 
-このサイトは、EEGデータが公開されています。
-この「pseudo-continuous」は、
-人工的には、8秒を別々に構成
-データエポック(後日別々)。 これはいくつか説明
-突然、一部のデータチャネルで表示されることがあります。
+このサンプルEEGデータは「擬似連続」形式で表示されます。
+実際には、8秒間の個別のデータエポックが連結されて構成されています
+（エポックは後のチュートリアルで別途説明します）。
+このため、一部のデータチャネルで突然の不連続が表示されることがあります。
 
 
 ![こちら](/assets/images/Scrollchannelactivities1.png)
 
 
-プロットウィンドウの右側には、垂直スケール値(およびその
-垂直スケールの「振幅」を示す単位、マイクロボルト)
-バー。 この場合、その値は80(マイクロボルト)です。 同じ値が
-また、右下の編集ボックスに表示され、そのまま変更できます。
-お問い合わせ
+プロットウィンドウの右側には、垂直スケールバーがあり、スケール値（単位はマイクロボルト）が表示されています。この場合、値は80（マイクロボルト）です。同じ値が右下の編集ボックスにも表示されており、直接変更することもできます。
 
 電圧スケール
 --------------------------
-"Scale" の 編集 テキスト を 50 回 します。
-*"-"*ボタンを繰り返し、またはテキスト値を編集することにより
-キーボードから、*Enter* のキーを押します
-ウィンドウ。
+「Scale」の編集ボックスの値を50に変更します。*"-"*ボタンを繰り返しクリックするか、テキストボックスの値をキーボードから直接編集し、*Enter*キーを押してください。
 
 
 ![こちら](/assets/images/Scrollchannelactivities2.png)
@@ -56,18 +46,15 @@ EEGLABの「sample_data」フォルダにあるツールボックスです。
 
 スクロール時間ウィンドウの幅を調整する
 --------------------------
-表示される時間範囲を調節するため(すなわち、横のスケール)、
-選択する [eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) メニュー
-アイテム <span style="color: brown">設定 → 表示する時間範囲</span>と
-目的のウィンドウの長さを「10」秒に以下のように設定します。
+表示される時間範囲（横方向のスケール）を調節するには、[eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)のメニュー項目<span style="color: brown">設定 → 表示する時間範囲</span>を選択し、ウィンドウの長さを以下のように「10」秒に設定します。
 
 
-![© 2018 I16change_window_length.png 禁無断転載](/assets/images/I16change_window_length.png)
+![](/assets/images/I16change_window_length.png)
 
 
 
 
-※Ok*は、別途変更となります。
+*Ok*を押すと、表示が以下のように変わります。
 
 
 ![こちら](/assets/images/Scrollchannelactivities3.png)
@@ -76,98 +63,68 @@ EEGLABの「sample_data」フォルダにあるツールボックスです。
 
 表示するチャネルの数
 --------------------------
-表示されるチャンネル数を調整するには、
-[eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) メニュー
-アイテム <span style="color: brown">設定 → チャンネル数
-ディスプレイ</span> そして表示するチャネルの望ましい数を書き入れて下さい
-画面(たとえば「16」)
+表示されるチャンネル数を調整するには、[eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)のメニュー項目<span style="color: brown">設定 → 表示チャンネル数</span>を選択し、表示したいチャンネル数（例えば「16」）を入力してください。
 
 
-![i16chan_to_display.png はコメントを受け付けていません。](/assets/images/I16chan_to_display.png)
+![](/assets/images/I16chan_to_display.png)
 
 
-表示されるチャンネルの数を減らすと、スクロールを返す
-[eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) ウィンドウ
-プロットの左に垂直チャンネルセットスライダー付き。 使用する
-すべてのチャネルを通して表示(口頭)をスクロールして下さい。
+表示チャンネル数を減らすと、[eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)ウィンドウのプロット左側に垂直スライダーが表示されます。このスライダーを使用して、すべてのチャンネルをスクロール表示できます。
 
 
 ![こちら](/assets/images/Scrollchannelactivities4.png)
 
 データのズーム
 --------------------------
-データウィンドウの特定の領域でズームするには、
-[eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) メニュー
-アイテム <span style="color: brown">設定 → ズームオフ/オン → ズームオン</span>お問い合わせ マウスを使用して、データの領域の周りの矩形をドラッグしてズーム
-お問い合わせ 下にスクロールウィンドウが似ています。
-マウスの右ボタンをクリックし、もう一度ズームアウトします。 メニュー項目を使用する
-<span style="color: brown">設定→ズームオフ/オン→ズームオフ</span> ターンする
-ズームオプションをオフにします。
+データウィンドウの特定の領域をズームするには、[eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)のメニュー項目<span style="color: brown">設定 → ズームオフ/オン → ズームオン</span>を選択します。マウスを使用してデータ領域上に矩形をドラッグし、ズームしてください。以下のようなスクロールウィンドウが表示されます。マウスの右ボタンをクリックするとズームアウトします。メニュー項目<span style="color: brown">設定 → ズームオフ/オン → ズームオフ</span>を選択してズームオプションをオフにします。
 
 
-![投稿ナビゲーション](/assets/images/I16scroll_zoom.png)
+![](/assets/images/I16scroll_zoom.png)
 
-データを注入する
+データの拒否
 --------------------------
-ふりがな [eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)
-ウィンドウはまた(消去)任意部分を拒絶することを可能にします
-連続データ。 関数
-[eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) できます
-両方のメニュー項目から呼び出される <span style="color: brown">ツール → 目でデータをインスペクト/レジェクトする</span> そして、 <span style="color: brown">Plot → チャンネルデータ(有料)</span>お問い合わせ *続きを読む 
+[eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)ウィンドウでは、連続データの任意の部分を拒否（除去）することもできます。[eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)関数は、メニュー項目<span style="color: brown">ツール → データを目視でインスペクト/リジェクト</span>と<span style="color: brown">Plot → チャンネルデータ（スクロール）</span>の両方から呼び出すことができます。
 
-選択したデータを消去するには、最初にデータをドラッグします
-マウス(左マウスボタンを押したまま)を水平方向に
-拒絶のためにマークする興味の時領域。 好きならマーク
-この方法で拒絶する複数の領域。
+選択したデータを拒否するには、マウスの左ボタンを押したまま水平方向にドラッグして、拒否したい時間領域をマークします。この方法で複数の領域をマークすることもできます。
 
 ![](/assets/images/I16reject_scroll.png)
 
 注意: ズームは、データの部分を選択するために無効でなければなりません。
 
-注意: プロットウィンドウから拡張するデータの部分を選択するには、
-マウスを新しい領域にドラッグして、先に接続するだけです。
-マークされた地域。 例えば、次のプロットウィンドウで、
-既に選択された時間間隔2.1秒から3.4秒がありました(として)
-上記の)マウスを 6.9 秒から 4.7 にドラッグします。
+注意: プロットウィンドウを超えてデータ部分を選択するには、マウスを新しい領域にドラッグして、既にマークされた領域に接続してください。例えば、次のプロットウィンドウでは、既に時間間隔2.1秒から3.4秒が選択されており（上記参照）、マウスを6.9秒から4.7秒にドラッグしています。
 
-注意: *de* , ローカル選択 です。
-これは、拒否のためにマークされたデータ部分の再検査を可能にします
-2つ以上のパス、例えば、ユーザーがより一貫した開発をした後
-拒絶戦略または閾値。 
+注意: マークされた領域をクリックすると選択を解除できます。
+これにより、拒否のためにマークされたデータ部分を再検査することが可能になります。
+例えば、ユーザーがより一貫した拒否基準やしきい値を
+確立した後に再確認できます。
 
 ![](/assets/images/Iii1eegplot2.jpg)
 
-データの一部をマークした後
-*REJECT*と、新規データセットの作成
-削除されたデータを省略しました。 新しいデータセットはマーク付きで作成されます
-削除された地域。 
+データの一部をマークした後、*REJECT*ボタンを押すと、マークされた部分が除去された新しいデータセットが作成されます。
 
-*Ok* で、マークされたデータを新しいデータセットに
-削除された部分。
+*Ok*を押すと、マークされた部分が除去された新しいデータセットが作成されます。
 
-EEGLAB は、EEGLAB は、EEGLAB が、EEGLAB は、
-フィールドとインサート *境界* データが拒否されたイベント
-データ部分の持続期間を保持する期間フィールドで
-免責事項 EEGLABは、実験の練習場でイベントをリンクします。
-*EEG.urevent*の構造に出席します。
-境界イベントは、その後のエポック選択が交差しないことを確認します
-非連続拒絶境界。 したがって、継続的なデータに対する拒絶
-'before' に 'before' を 'before' に 'before' に 'before' を 'before' に 'before' に 'before' を ' に 'before' に ' に 'before' を ' に 'before' に ' を に 'before' <span style="color: brown">Plot → チャンネルデータ(有料)</span> 以下に示すように新しいデータセットに(厚い赤いでき事の印は境界イベントです)。
+EEGLABは、データが拒否された位置に*boundary*（境界）イベントを挿入し、
+拒否されたデータ部分の持続時間を保持する期間フィールドを設定します。
+EEGLABは、元のイベント情報を*EEG.urevent*構造体に保持しています。
+境界イベントにより、その後のエポック選択が非連続的な
+拒否境界を横断しないことが保証されます。したがって、連続データでの拒否は
+エポック化の前に行う必要があります。<span style="color: brown">Plot → チャンネルデータ（スクロール）</span>で以下のように新しいデータセットを表示できます（太い赤線のイベントマークが境界イベントです）。
 
 ![](/assets/images/Iii1eegplot1.jpg)
 
-イラストの目的は、この拒絶反応のみを実行します。
-EEGLAB は、Windowsメニューの項目を翻訳しました。
-<span style="color: brown">データセット→データセット1:</span>.
+説明のために、この拒否操作は一時的なものとします。
+元のデータセットに戻るには、EEGLABウィンドウのメニューから
+<span style="color: brown">データセット → データセット1</span>を選択してください。
 
 ### データの悪い部分を拒絶するための戦略
 
-Stack*ボタンボタンボタンボタンボタンボタンを押します [eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) ウィンドウ(右上隅)と、約30秒のデータビュー(ウィンドウを眺める)。 ??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????? 30秒のウィンドウで、 連続 連続 連続 以下は、各地域に問い合わせておきます。
+*Stack*ボタン（[eegplot.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)ウィンドウの右上隅）を押し、約30秒のデータビューに設定してください。30秒のウィンドウ内でデータを確認し、ノイズの多い領域を特定できます。
 
 ![こちら](/assets/images/eegplot_norm.png)
 
-### イベントを囲むデータの悪い部分を注入する
+### イベント周辺の不良データを除去する
 
-関心 は は 参加申し込みフォーム <span style="color: brown">編集 → イベントを使用してデータを選択</span> 「TMS_pulse」*type* の項目は、イベントの構成要素の削除です。
+特定のイベント周辺のデータを削除するには、<span style="color: brown">編集 → イベントを使用してデータを選択</span>を使用します。例えば、「TMS_pulse」タイプのイベント周辺のデータを削除できます。
 
 ![こちら](/assets/images/rm_event_tms_pulse.png)
