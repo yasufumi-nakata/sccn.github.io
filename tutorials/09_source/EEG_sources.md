@@ -136,7 +136,6 @@ cfg.channel    = { 'all' };
 次に生成されたリードフィールド行列を使用してソースを実行します
 再構築。 以下では、シンプルな例をモデル化します。
 eLoreta がリリースされました。
-コ コ コ の ログイン
 (FieldTrip参照)
 [ページ](http://www.fieldtriptoolbox.org/tutorial/beamformer) から
 このセクションは、より多くの情報に触発されています。

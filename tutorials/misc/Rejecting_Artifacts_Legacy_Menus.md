@@ -223,7 +223,7 @@ epoch (50, epoch に相当する)
 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始 開始
 EEGデータとラインの最小限値
 最小限の制限は、R字測定の実行時に行います。
-次の 次の 次の 次の 次の 次の 次の [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejtrend.m))、および
+[pop_rejtrend.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_rejtrend.m) を呼び出し、および
 プレス *CALC/PLOT*
 
 
