@@ -20,7 +20,7 @@ EEGおよび関連データのMATLAB信号処理用 このリストにメッセ�
 <!-- -->
 
 -   EEGLABの議論リストに退会するには、(空)電子メールを送信してください
-    お問い合わせ <eeglablist-unsubscribe@sccn.ucsd.edu>
+    <eeglablist-unsubscribe@sccn.ucsd.edu>
 
 <!-- -->
 
@@ -33,7 +33,7 @@ EEGおよび関連データのMATLAB信号処理用 このリストにメッセ�
 メッセージは適度に適しています。
 
 eeglablist メッセージのアーカイブをブラウズする
-[詳しくはこちら](http://sccn.ucsd.edu/pipermail/eeglablist/)お問い合わせ Googleを使用して検索
+[詳しくはこちら](http://sccn.ucsd.edu/pipermail/eeglablist/)を参照してください。 Googleを使用して検索
 Google クエリに "eeglablist" を追加してアーカイブします。
 
 ### リストの基準

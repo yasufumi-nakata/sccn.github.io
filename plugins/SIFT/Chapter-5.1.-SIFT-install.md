@@ -17,7 +17,7 @@ long_title: Chapter-5.1.-SIFT-install
 
 1円 MATLABを起動する
 
-2\) [ダウンロード EEGLAB](https://sccn.ucsd.edu/eeglab/download.php)お問い合わせ パスに EEGLAB ルートフォルダーを追加します。 (**File -\> Set Path; Add
+2\) [ダウンロード EEGLAB](https://sccn.ucsd.edu/eeglab/download.php) パスに EEGLAB ルートフォルダーを追加します。 (**File -\> Set Path; Add
 フォルダ**
 
 3円 タイプ: `eeglab` コマンドプロンプトで
@@ -27,12 +27,12 @@ long_title: Chapter-5.1.-SIFT-install
 5円 オプション: ARfit を使う場合
 モデルフィットアルゴリズム。 手動でインストールする必要があります
 次のようにします。 無料のARfitパッケージをダウンロード
-<https://climate-dynamics.org/software/#arfit>お問い合わせ ダウンロード後
+<https://climate-dynamics.org/software/#arfit> ダウンロード後
 ARfitパッケージを解凍し、**/arfit/**フォルダを
 **SIFT-path/external/** **SIFT-path** が完全なパスである場合
 SIFTルートディレクトリ。
 
-6円 EEGLABメインGUIが見えると、行くのは良い! お問い合わせ
+6円 EEGLABメインGUIが見えると、行くのは良い!
 EEGLABメニューでSIFTを見つけます。 **Tools-\>SIFT**. SIFTは
 EEGLABを起動すると自動的にアクセス可能になります。
 

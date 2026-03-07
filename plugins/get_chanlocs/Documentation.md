@@ -22,7 +22,7 @@ Nijmegen は、Scalp の計算位置を FieldTrip に関数を置く
 記録された3D画像から1つの3Dカメラ、
 [構造の走査器](https://structure.io/) Apple iPadに取り付けました。
 (読みます) [Homölle と Oostenveld
-(2019)](https://doi.org/10.1016/j.jneumeth.2019.108378)および[組み込みFieldTrip関数](http://www.fieldtriptoolbox.org/tutorial/electrode/)。 お問い合わせ
+(2019)](https://doi.org/10.1016/j.jneumeth.2019.108378)および[組み込みFieldTrip関数](http://www.fieldtriptoolbox.org/tutorial/electrode/)。
 SCCN は EEGLAB プラグイン拡張機能 (*get_chanlocs*) を作成しました。
 電極の位置をデジタル化するプロセス
 3Dを取得して、*EEG.chanlocs*データ構造に入力
@@ -33,7 +33,7 @@ SCCN は EEGLAB プラグイン拡張機能 (*get_chanlocs*) を作成しまし�
 電極の位置はそれです: 1) <b>3D画像はすぐに録画できます
 (\<1 min)</b>、それによって貴重な主題の時間(および注意を節約して下さい
 容量) EEGデータを記録するために使用されるよりよい! 過去の研究者
-最も熱心に耳を傾ける <em>get_chanlocs ディレクティブ</em> お問い合わせ
+最も熱心に耳を傾ける <em>get_chanlocs ディレクティブ</em>
 お子様や乳幼児からのデータ収集 - 通常の大人でも
 参加者は実験の認知能力を低下させる必要があります
 座ってからタスク, EEGモンタージュを着用, のために 20 研究しながら分
@@ -93,8 +93,8 @@ SCCNで利用するイメージです。
 達成するため <b>高分解能 EEG(有効)ソースイメージング</b>
 必須 (a) <b>正確な3D電気ヘッドモデル</b>と (b)
 <b>3Dスカルプ電極の位置の正確な調整
-ヘッドモデル</b>お問い合わせ いくつかのパッケージは、ファッショニングのために利用可能です
-アトミックMRヘッドイメージから幾何学的に正確なヘッドモデル。 お問い合わせ
+ヘッドモデル</b> いくつかのパッケージは、ファッショニングのために利用可能です
+アトミックMRヘッドイメージから幾何学的に正確なヘッドモデル。
 Zeynep Akalin Acarの[神経磁気フォワードの問題ツールボックス (NFT)](https://sccn.ucsd.edu/wiki/NFT)、彼女は今に結合している
 推定のための最初の非侵襲的、普遍的な適用方法(SCALE)
 EEGデータ(Akalin Acar et al., 2016)からの個々の頭蓋骨伝導性;
@@ -155,12 +155,12 @@ A1474). デフォルト [キャリブレータ](https://itunes.apple.com/us/app/
 副作用を最小限に抑えながらスキャンを高速化
 条件。 itSeez3Dはユーザーフレンドリーなオンラインアカウントシステムを備えています
 クラウド上で処理される高解像度モデルへのアクセス
-サーバー。 利用者が連絡する場合があります。 [itSeez3Dの特長](mailto:support@itseez3d.com) お問い合わせ
+サーバー。 利用者が連絡する場合があります。 [itSeez3Dの特長](mailto:support@itseez3d.com)
 処理パラメータを変更します。 *get_chanlocs* では、
 400,000以上のモデルのポリゴン数を増加させる
 決断の達成可能な増加を提供しないで処理時間。
 残念ながら、スキャンが無料で、モデルのエクスポート(必須)
-*get_chanlocs*) は [エクスポートまたはサブスクリプションごと](https://itseez3d.com/pricing.html)。 お問い合わせ
+*get_chanlocs*) は [エクスポートまたはサブスクリプションごと](https://itseez3d.com/pricing.html)。
 [itSeez3Dの特長](mailto:support@itseez3d.com) 割引について
 教育機関および他の非商業目的のために。
 

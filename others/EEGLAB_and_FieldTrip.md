@@ -8,14 +8,12 @@ parent: Interoperability
 
 EEGLABとFieldTrip
 =========================
-お問い合わせ
+
 <details open markdown="block">
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 プロフィール
@@ -223,5 +221,4 @@ EEGLAB のグラフィックインターフェース(EEGLAB による)に直接�
 15,000 研究者は、新しいプラグインの要求をそれらから提供しています
 著者。
 
-お気軽にお問い合わせください。 [お問い合わせ](mailto:eeglab@sccn.ucsd.edu) お問い合わせ
-お問い合わせ
+お気軽にお問い合わせください。 [こちら](mailto:eeglab@sccn.ucsd.edu)

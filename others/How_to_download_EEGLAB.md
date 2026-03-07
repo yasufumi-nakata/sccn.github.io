@@ -25,7 +25,7 @@ GitHubからEEGLABをクローニング
 2014年以降、GITを利用して最新ダウンロードが可能
 EEGLAB の開発バージョンは GitHub からいつでも - このバージョンは
 上記ZIPよりも最新です。 開発スキームのため、
-EEGLABの最新バージョンは通常最も安定しています。 お問い合わせ
+EEGLABの最新バージョンは通常最も安定しています。
 使用方法 [ソース ツリー](https://www.sourcetreeapp.com/) ブランチを可視化する
 [EEGLAB GitHubリポジトリ](https://github.com/sccn/eeglab.git)をクローンして、どんなことでも標準 git パッケージで使用できます。 クローニング時は必ずご使用ください。
 *---recurse-submodule* オプション。 それ以外の場合、重要な EEGLAB プラグインはダウンロードされず、EEGLAB は完全に機能しません。
@@ -48,7 +48,7 @@ git clone --recurse-submodules https://github.com/sccn/eeglab.git
 ### EEGLABへのコード提供
 
 EEGLABにコードを付与し、コードをフォークしてプルリクエストを作成する
-以下に示す [こちら](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository)お問い合わせ その他
+以下に示す [こちら](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository)を参照してください。 その他
 [こちら](/tutorials/contribute) 追加が含まれています
 EEGLABへの貢献について
 

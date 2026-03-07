@@ -13,12 +13,12 @@ nav_order: 3
 
 ROIconnectは、オープンソースプラグインを自由に利用できるため [EEGLAB](https://github.com/sccn/eeglab) EEGデータ解析用 ソースレベルでの利息(ROI)の領域間の線形および非線形機能接続解析を実行できます。 結果は2次元、3次元で視覚化できます。 ROIは、一般的なfMRIアトラスに基づいて定義され、ソースローカリゼーションは、LCMVビームフォーミングまたはeLORETAを介して行うことができます。 コヒーレンスベースのメソッド、Granger Causality、Time-reversed Granger Causality、Multivariate Interaction Measure、Maximized Imaginary Coherency、Phase-amplitudeのカップリング、その他のメソッドを使用して、すべての脳領域間の接続解析を行うことができます。 このプラグインは、FieldTrip、Brainstorm、NFTヘッドモデルと互換性があります。
 
-お問い合わせ 次の論文をチェックして、コネクティビティ実験の推奨方法とパイプラインについて学びます。
+次の論文をチェックして、コネクティビティ実験の推奨方法とパイプラインについて学びます。
 > Pellegrini、F.、Delorme、A.、Nikulin、V.、及びHafe、S. (2023)。 EEG からの相互地域線形機能接続を検出するための良い慣行を特定します。 NeuroImage、120218。 [土井: 10.1016/j.neuroimage.2023.120218](https://doi.org/10.1016/j.neuroimage.2023.120218)
 > 
 > Pellegrini, F., Nguyen, T. D., Herrera, T., Nikulin, V., Nolte, G., & Haufe, S. (2023). アンチシムエマル化ビスペラを使用して、サイト内位相差カップリングから区別します。 バイオRxiv 2023.10.26.564193. [https://doi.org/10.1101/2023.10.26.564193](https://doi.org/10.1101/2023.10.26.564193)
 
-⚠️ 免責事項: このプラグインは、我々が研究設定のために特定したベストプラクティスパイプラインを実装します。 こういった環境では、躊躇することなく使用できると確信しています。 実験を完全に再現するための追加コードが提供されます。 [別のリポジトリ](https://github.com/fpellegrini/FCsim)お問い合わせ 中期では、このプラグインを他のユースケースに拡張し、それぞれのバリデーション試験でバックアップします。
+⚠️ 免責事項: このプラグインは、我々が研究設定のために特定したベストプラクティスパイプラインを実装します。 こういった環境では、躊躇することなく使用できると確信しています。 実験を完全に再現するための追加コードが提供されます。 [別のリポジトリ](https://github.com/fpellegrini/FCsim) 中期では、このプラグインを他のユースケースに拡張し、それぞれのバリデーション試験でバックアップします。
 
 EEGLAB GUIからコア機能にアクセスすることができます。 経験豊富なユーザーは、コマンドラインから追加のユーティリティにアクセスすることができます。 コマンドラインから関数を実行する場合は、コードで提供される各ドキュメントを参照してください。 
 
@@ -30,7 +30,7 @@ Tien Dung Nguyen、Franziska Pellegrini、Stefan Haufe、EEGLABインターフ�
 まず、EEGLABをインストールします。 メニュー項目 *File > EEGLAB拡張機能*を管理し、*ROIconnect*を選択し、インストールします。 ROIconnectメニュー項目は、*Tools* EEGLABメニューにあります。
 
 # 手動取付け
-お問い合わせ [EEGLAB](https://github.com/sccn/eeglab#installingcloning) インストール。 プロジェクトレイアウトは次の通りです。
+[EEGLAB](https://github.com/sccn/eeglab#installingcloning) インストール。 プロジェクトレイアウトは次の通りです。
 
 ```
 eeglab/	 				
@@ -49,20 +49,20 @@ cd <eeglab_install_location>/eeglab/plugins
 ```
 git clone https://github.com/sccn/roiconnect.git
 ```
-です。 プラグインを実行したい場合は、起動してください [EEGLAB](https://github.com/sccn/eeglab#to-use-eeglab) まずは。 EEGLAB を追加する必要があります。 [MATLABパス](https://de.mathworks.com/help/matlab/ref/addpath.html)お問い合わせ 一部の機能は追加のインストールが必要な場合があります  [FieldTrip(ライトまたはノーマル)](https://www.fieldtriptoolbox.org) そして、 [ブラインド映画](https://github.com/arnodelorme/brainmovie).
+です。 プラグインを実行したい場合は、起動してください [EEGLAB](https://github.com/sccn/eeglab#to-use-eeglab) まずは。 EEGLAB を追加する必要があります。 [MATLABパス](https://de.mathworks.com/help/matlab/ref/addpath.html) 一部の機能は追加のインストールが必要な場合があります  [FieldTrip(ライトまたはノーマル)](https://www.fieldtriptoolbox.org) そして、 [ブラインド映画](https://github.com/arnodelorme/brainmovie).
 
 なぜこの EEGLAB プラグインは EEGLAB プラグインマネージャではありませんか? プラグインはベータです。 完了したら、EEGLABプラグインマネージャに追加されます。 
 
 📌 `test_pipes/` 始めるために使用できるテストパイプラインが含まれています。
 
 # 主な特長
-ツールボックスの特徴は、次の3つの主な機能で実装されています。 `pop_roi_activity`, `pop_roi_connect` そして、 `pop_roi_connectplot`お問い合わせ これらの関数は対応するメニュー(ドキュメントが近日公開)を持っています。 現在、これらの関数のコマンドライン版のみを以下に文書化します。
+ツールボックスの特徴は、次の3つの主な機能で実装されています。 `pop_roi_activity`, `pop_roi_connect` そして、 `pop_roi_connectplot` これらの関数は対応するメニュー(ドキュメントが近日公開)を持っています。 現在、これらの関数のコマンドライン版のみを以下に文書化します。
 
 ## データの準備
 ROIconnectを使用するために、関連するアトラスでリードフィールド行列が必要になります。 リードフィールド行列は、DIPFIT EEGLABプラグイン(メニュー項目 *ツール >)を使用して計算することができます DIPFITを用いたソースローカリゼーション > ヘッドモデル設定*以降 *ツール > DIPFIT > 分散型リードフィールドマトリクス*を用いたソースローカリゼーション このリードフィールドマトリクスは、ROIconnectによって自動的に認識されます。
 
 ## 源の復興
-`pop_roi_activity` EEGセンサーのアクティビティ、ヘッドモデルのポインタ、ソースモデル、アトラス名、および寸法減少のためのPCの数を含むEEGの指示を要求して下さい。 また、この機能もサポートしています。 [FOOOF分析](https://fooof-tools.github.io/fooof/)お問い合わせ FOOOF を含むコマンドライン例は次のとおりです。
+`pop_roi_activity` EEGセンサーのアクティビティ、ヘッドモデルのポインタ、ソースモデル、アトラス名、および寸法減少のためのPCの数を含むEEGの指示を要求して下さい。 また、この機能もサポートしています。 [FOOOF分析](https://fooof-tools.github.io/fooof/) FOOOF を含むコマンドライン例は次のとおりです。
 
 ```matlab
 EEG = pop_roi_activity(EEG, 'leadfield',EEG.dipfit.sourcemodel,'model','LCMV','modelparams',{0.05},'atlas','LORETA-Talairach-BAs','nPCA',3, 'fooof', 'on', 'fooof_frange', [1 30]);
@@ -87,7 +87,7 @@ EEG = pop_roi_connect(EEG, 'methods', { 'MIM', 'TRGC'}, 'snippet', 'on', 'snip_l
 > スニペット分析は、エッチングと同等ではありません。 データ長が接続推定のバイアスを阻害していることを発見しました。 したがって、データの長さ(スニペットの長さ、デフォルト60秒)を比較すべきすべての実験条件に保つことをお勧めします。 iCOHとMIM/MICに最も適しています。 デフォルトでは、スニペット解析がオフになります(デフォルト: `'snippet', 'off'`)。 詳しくはこちら [詳しくはこちら](https://github.com/arnodelorme/roiconnect/pull/14#issuecomment-1263531505).
 
 ## 可視化
-さまざまなモードでパワーとFCを呼び出して見える化 `pop_roi_connectplot`お問い合わせ 以下では、[[[1]](#1)]の実際のデータ例から1つの被写体の結果を表示します。 MATLABのコードと対応する分析をご覧いただけます。 [詳しくはこちら](https://github.com/fpellegrini/MotorImag)お問い合わせ プロットは、左モーターの画像条件でパワーまたはFCを表示します。 タスクの性質上、8〜13Hzの周波数帯で結果を表示しますが、あなたが望む任意の周波数または周波数帯域を選択することは自由です。 
+さまざまなモードでパワーとFCを呼び出して見える化 `pop_roi_connectplot` 以下では、[[[1]](#1)]の実際のデータ例から1つの被写体の結果を表示します。 MATLABのコードと対応する分析をご覧いただけます。 [詳しくはこちら](https://github.com/fpellegrini/MotorImag) プロットは、左モーターの画像条件でパワーまたはFCを表示します。 タスクの性質上、8〜13Hzの周波数帯で結果を表示しますが、あなたが望む任意の周波数または周波数帯域を選択することは自由です。 
 
 :プッシュピン: あなたにとって画像のどれも小さい場合は、クリックするだけで、別のタブでフルサイズで開きます。<br>
 :round_pushpin: PlottingはPSD、MIM/MICおよびGC/TRGCのために特に最大限に活用されます。 

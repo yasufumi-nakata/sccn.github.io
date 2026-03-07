@@ -7,7 +7,6 @@ parent: Download EEGLAB
 ---
 EEGLABエクステンションとプラグイン
 ====
-お問い合わせ
 
 EEGLABエクステンションまたはプラグインにより、ユーザーは新しいデータをビルドして公開することができます。
 EEGLABのデータ構造を用いた処理および/または可視化機能
@@ -19,9 +18,7 @@ EEGLABメニューに紹介する新しいメニュー項目を選択します�
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 異なるEEGLABバージョン用のプラグインのリスト
@@ -72,7 +69,7 @@ EEGLAB プラグインのフォルダーと EEGLAB を再起動します。
 簡単な手順を参照してください。 [EEGLABへの貢献](/tutorials/contribute/) EEGLAB互換コードを作成する。
 
 次に、EEGLAB ユーザが使えるように、上記のリストに拡張機能を追加できます。
-EEGLABから自動的にダウンロードします。 これを行うには、[このフォーム](http://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)を使用する。 お問い合わせ
+EEGLABから自動的にダウンロードします。 これを行うには、[このフォーム](http://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)を使用する。
 プラグインの新しいバージョンをアップロードしたい、 
 [この単純化されたフォーム](http://sccn.ucsd.edu/eeglab/plugin_uploader/version_update.php).
 
@@ -158,7 +155,7 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
 
 ### EEG/fMRIアーティファクト除去
 
--   **[FMRIBについて](http://www.fmrib.ox.ac.uk/%7Erami/fmribplugin):** EEGLABのデータからfMRI-environmentアーティファクトを削除します。 お問い合わせ
+-   **[FMRIBについて](http://www.fmrib.ox.ac.uk/%7Erami/fmribplugin):** EEGLABのデータからfMRI-environmentアーティファクトを削除します。
     エクステンションにより、スキャナー関連のアーティファクトの除去が可能
     fMRIスキャン中に収集したEEGデータから。 詳しくはこちら [GitHubリポジトリ](https://github.com/sccn/fmrib).
 

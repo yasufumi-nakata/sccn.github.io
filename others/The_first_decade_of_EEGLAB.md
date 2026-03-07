@@ -10,7 +10,7 @@ EEGLABの最初の2年
 
 EEGLAB(v0.9)は、2001年4月23日に発売されました。そのため、EEGLABは20歳になりました!
 
-![お問い合わせ](/assets/images/EEGLAB10years.jpg)
+![EEGLAB 10周年記念](/assets/images/EEGLAB10years.jpg)
 
 歴史のビット
 ----------------
@@ -23,7 +23,7 @@ La Jollaの生物学的研究のためのサーク研究所で研究室。
 eegplot()、topoplot()、 headplot() を含む EEGLAB で使用される関数、
 envtopo(), timtopo(), erpimage(). 2000年、Arnaud Delorme
 サークインスティテュートに入社し、EEGLAB初版を拒絶
-EEGデータに自動的に(または半自動)アーティファクト。 お問い合わせ
+EEGデータに自動的に(または半自動)アーティファクト。
 EEGLABのバージョンは、データ処理のいくつかのために上記のICAツールボックスを使用しました。 弊社では、
 EEGLABの現在のバージョンが後方互換性を維持する方法の下
 EEGLAB(v0.9)の初期バージョンです。 EEGLABバージョン1と2
@@ -104,7 +104,6 @@ EEGLAB は、データセットをロードし、ERP-image の図をプロット
 ![左|150px](/assets/images/eeglab09_plot.png)
 
 
-お問い合わせ
 次に、データセットを保存します。 <span style="color: brown">ファイル → セットを保存</span> メニュー項目。
 
 EEGLAB の現在のバージョンに戻る: パスを削除します。

@@ -78,7 +78,7 @@ EEG電極チャネル(またはMEGセンサー)間の接続が苦しむ
 分離とローカリゼーション技術により、近似できる
 このような解剖学的座標の十分な精度の特定
 さまざまな認知に有利な分析的洞察をもたらす
-神経科学および神経工学の適用(Michel et al.、2004)。 お問い合わせ
+神経科学および神経工学の適用(Michel et al.、2004)。
 限られた状況でも人を取得することも可能
 比類のない EEG (ICE, ECoG, iEEG) は、
 侵略的、高い空間的分解能と(多くの場合)削減
@@ -148,7 +148,7 @@ EEGLABソフトウェアスイートと組み合わせて、対処したい。
 | グランジェ・キャサリティ・コネクティビティ分析(GCCA) ツールボックス | アニルセス | <https://www.sussex.ac.uk/research/centres/sussex-centre-for-consciousness-science/resources/connectivity> | GPL 3 | GPL 3 | GPL 3 | GPL 3 |
 | 時系列分析(TSA) ツールボックス | アロワス・シュロゲル | <https://sourceforge.net/p/octave/tsa/ci/default/tree/>                 | GPL2 | GPL2 | GPL2 | GPL2 |
 | E-Connectome | ビン・ヘ | <https://www.nitrc.org/projects/econnectome>                               | GPL 3 | GPL 3 | GPL 3 | GPL 3 |
-| FieldTrip | ロバート・オオステヴェル お問い合わせ  <http://fieldtrip.fcdonders.nl/>                            | GPL2 | GPL2 | GPL2 | GPL2 |
+| FieldTrip | ロバート・オオステヴェル <http://fieldtrip.fcdonders.nl/>                            | GPL2 | GPL2 | GPL2 | GPL2 |
 | 多品種オートレグレッシブ・タイムズシリーズ(BSMART)用脳システム | ジー・クイ |  <http://www.brain-smart.org/>                               | --      |
 
 

@@ -19,9 +19,9 @@ Delorme A&Makeig S(2004) EEGLAB:単一のtrial EEGの分析のためのオープ
 
 ## EEGLABの人気のサードパーティの分析
 
-モハンマド・ファヤズ (2023) 科学インデックス記事、神経科学情報学、第4巻1号、ISSN 2772-5286、 [https://www.sciencedirect.com/science/article/pii/S2772528623000390](https://doi.org/10.1016/j.neuri.2023.100154)お問い合わせ この記事は、他のEEGソフトウェアパッケージと比較してEEGLABの使用状況を分析し、2023年に最も人気のあるEEGソフトウェアです。 
+モハンマド・ファヤズ (2023) 科学インデックス記事、神経科学情報学、第4巻1号、ISSN 2772-5286、 [https://www.sciencedirect.com/science/article/pii/S2772528623000390](https://doi.org/10.1016/j.neuri.2023.100154) この記事は、他のEEGソフトウェアパッケージと比較してEEGLABの使用状況を分析し、2023年に最も人気のあるEEGソフトウェアです。 
 
-Hanke、M.、Halchenko、Y.O.(2011)。 GNU/Linux上でNeuroscienceが実行されます。 神経情報学のフロンティア, 5, 8. [https://doi.org/10.3389/fninf.2011.00008](https://doi.org/10.3389/fninf.2011.00008)お問い合わせ この記事では、EEGLABが最も人気のあるEEGソフトウェアであること(フットノート)を示しています。
+Hanke、M.、Halchenko、Y.O.(2011)。 GNU/Linux上でNeuroscienceが実行されます。 神経情報学のフロンティア, 5, 8. [https://doi.org/10.3389/fninf.2011.00008](https://doi.org/10.3389/fninf.2011.00008) この記事では、EEGLABが最も人気のあるEEGソフトウェアであること(フットノート)を示しています。
 
 ## EEGLAB ICAメソッド紹介
 

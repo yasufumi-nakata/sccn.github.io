@@ -22,7 +22,7 @@ SIFTをインストールできます。 [EEGLABエクステンションマネ�
 </tr>
 <tr class="odd">
 <td><p><img src="images/Dlpdf.jpeg"></p></td>
-<td><p>70ページ <a href="https://sccn.ucsd.edu/githubwiki/files/sift_manual_0.1a.pdf" title="wikilink">SIFTマニュアル</a>お問い合わせ SIFTメソッド理論と実用ガイドの両方が、ダウンロード可能なサンプルデータを使用してSIFTを使用するようにします(PDF文書のコンテンツの一部が古いため、このwikiは最新です)。</p></td>
+<td><p>70ページ <a href="https://sccn.ucsd.edu/githubwiki/files/sift_manual_0.1a.pdf" title="wikilink">SIFTマニュアル</a> SIFTメソッド理論と実用ガイドの両方が、ダウンロード可能なサンプルデータを使用してSIFTを使用するようにします(PDF文書のコンテンツの一部が古いため、このwikiは最新です)。</p></td>
 </tr>
 <tr class="even">
 <td><p><img src="images/Dlpdf.jpeg"></p></td>
@@ -31,14 +31,14 @@ SIFTをインストールできます。 [EEGLABエクステンションマネ�
 <tr class="even">
 <td><p><img src="images/Dlpdf.jpeg"></p></td>
 <td><p>EEGの分散脳の動的をモデル化するためのSIFTの基本的な理論と応用に関する短いビデオ講義が利用可能です
-<a href="https://www.youtube.com/watch?v=6_WW6EMHmWo&list=PLXc9qfVbMMN2xFa3w5ceJB52Dx-3Sgg2Z&index=12l">詳しくはこちら</a>お問い合わせ 長いビデオが利用可能 <a href="https://youtu.be/NO3hbYlqNF0">詳しくはこちら</a>.</p></td>
+<a href="https://www.youtube.com/watch?v=6_WW6EMHmWo&list=PLXc9qfVbMMN2xFa3w5ceJB52Dx-3Sgg2Z&index=12l">詳しくはこちら</a> 長いビデオが利用可能 <a href="https://youtu.be/NO3hbYlqNF0">詳しくはこちら</a>.</p></td>
 </tr>
 </tbody>
 </table>
 
 ## 追加リソース
 
-* SIFTには、このチュートリアルでは説明されていないデータをシミュレートするモジュール全体があります。 お問い合わせ [こちら](https://sccn.ucsd.edu/wiki/How_to_run_SIFT_simulation) 説明する(バックアップPDF) [詳しくはこちら](https://github.com/sccn/SIFT/files/12446930/SIFT_simulation.pdf))。 SIFTシミュレータを使用すると、ポイントのようなソース、コルティカル表面上のソースをシミュレートしたり、脳のファジー領域のソースをシミュレートすることができます。
+* SIFTには、このチュートリアルでは説明されていないデータをシミュレートするモジュール全体があります。 [こちら](https://sccn.ucsd.edu/wiki/How_to_run_SIFT_simulation) 説明する(バックアップPDF) [詳しくはこちら](https://github.com/sccn/SIFT/files/12446930/SIFT_simulation.pdf))。 SIFTシミュレータを使用すると、ポイントのようなソース、コルティカル表面上のソースをシミュレートしたり、脳のファジー領域のソースをシミュレートすることができます。
 
 * SIFTにはスクリプトを持つフォルダがあります([SIFT/スクリプト](https://github.com/sccn/SIFT/tree/master/scripts) フォルダ)、データセットを処理する方法についての詳細なコメントを含む例。 チェックアウトする価値があります。
 
