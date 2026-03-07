@@ -5,19 +5,16 @@ nav_title: "e. 自動パイプライン"
 parent: 11. Write scripts
 grand_parent: Tutorials 
 ---
-EEGLABの電子化
+EEGLABの自動化
 =====
-お問い合わせ
 
-STUDYは、すべての言語を翻訳する [ビデオ](https://www.youtube.com/watch?v=-jL3PuHD3aY) EEGLABの特長 この投稿をお気に入りにする
+STUDYは、[ビデオ](https://www.youtube.com/watch?v=-jL3PuHD3aY) でEEGLABの特長を紹介しています。
 
 <details open markdown="block">
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 <button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'simple_study_pipeline.m'));">MATLABコマンド</button>
@@ -27,16 +24,14 @@ STUDYやBIDSを実装
 
 データのダウンロード [https://openneuro.org/datasets/ds003061/](https://openneuro.org/datasets/ds003061/) そしてこのフォルダに移動し、次のセクションでスクリプトを実行します。
 
-または、利用可能ないずれかを使用する [EEGLAB研究](../tutorial_data.html)お問い合わせ これらの研究のいくつかは既にそのデータが処理済みであり、自動化された処理には適さないことに注意してください。
+または、利用可能ないずれかを使用する [EEGLAB研究](../tutorial_data.html)。これらの研究のいくつかは既にそのデータが処理済みであり、自動化された処理には適さないことに注意してください。
 
 ERPの実行
 ----------------
 
-下の すべての から から から から から の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の を の の の の の の の の の の の の の の の
+以下のスクリプトを実行すると、ERPパイプラインが実行されます。
 
-現在、CLabel は、CLabel は、CLabel は、CLabel は、CLabel は、CLabel が実行するにあたり、Casino で実行されます。 
-
-EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEGLAB では、EEG では、様々なイベントの開催を予定しています。
+EEGLAB では、様々なイベントの開催を予定しています。
 
 ```matlab
 % check folder
@@ -105,14 +100,14 @@ STUDY = std_erpplot(STUDY,ALLEEG,'channels', {chanlocs.labels}, 'design', 1);
 pop_editoptions( 'option_storedisk', 0);
 ```
 
-お問い合わせ とりあえず、 とりあえず、 とりあえず 「 「 「 *pop_importbids()* にすべての参加者が更新されます。
+*pop_importbids()* を実行すると、すべての参加者が更新されます。
 
 ![](/assets/images/p300_simple_study.png)
 
 スペクトルパイプラインを実行
 ----------------
 
-下の に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に は、 このページの先頭へ エポックは、 このページではjavascriptを使用しています。
+以下のスクリプトを実行すると、スペクトルパイプラインが実行されます。エポックデータが必要です。
 
 ```matlab
 % check folder
@@ -211,29 +206,27 @@ EEG = clean_artifacts( EEG,'FlatlineCriterion',5,'ChannelCriterion',0.8, ...
 
 ### 自動洗浄パラメータ
 
-*clean_artifacts* は、EEGLAB に あります。 特に、*'ChannelCriterion'* ????????????? *'BurstCriterion'* は別の変数です。 ???????????????????? お問い合わせ [ツイート](https://github.com/sccn/clean_rawdata).
+*clean_artifacts* は、EEGLAB に あります。 特に、*'ChannelCriterion'* ????????????? *'BurstCriterion'* は別の変数です。 ???????????????????? 参照 [clean_rawdata](https://github.com/sccn/clean_rawdata).
 
 データをクリーニングするための最適なパラメータを見つけることは、パイプラインの設計に不可欠です。 被験者数を実験してみると最高でしょう。 また、すべての被験者に対してパイプラインを実行すると、各被験者に対してどれだけのデータが削除されたかを確認する必要があります。 場合によっては、データの80%は、いくつかの被験者のために削除されます。
 
-データを データを は は は は は は は は は は は は は は は は は は は は は は は は は は は は は ことです ことです は ことです ことです ことです ことです ことです ことです は は は ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです ことです 偽物や偽物、偽物、偽物、偽物など より、より高度なファクト処理を行ないます。 このサイトは、以下のとおりです。 この例は、 [このチュートリアルのセクション](Analyzing_EEG_BIDS_data_in_EEGLAB.html).
+より高度なアーティファクト処理の例は、[このチュートリアルのセクション](Analyzing_EEG_BIDS_data_in_EEGLAB.html) を参照してください。
 
-### アメリカ
+### ICAアルゴリズム
 
-EEGLAB のデフォルトは *runica* (Infomax) です。 お問い合わせ [ペーパー](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135)お問い合わせ 要するに、理想的なアルゴリズムはありません。
-- *Runica* は、 偽物 を 使っている。
-- *picard* は、*runica* の機能を利用できるようにします。 より より より また、ICAの先駆者であるオランダジャン=フランコワ・カルドソが設計されました。  それ ユーザー ユーザー です です 20 20 20 20 です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です
-- *FastICA* はEEGデータで購入可能です。 デフォルト デフォルト デフォルト デフォルト
-- *Amica* は、ベースで英語を勉強しています。 [比較比較](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135)お問い合わせ お問い合わせ また、EyGデータセットは、
+EEGLAB のデフォルトは *runica* (Infomax) です。 [ペーパー](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135) を参照。要するに、理想的なアルゴリズムはありません。
+- *Runica* は、Infomaxを使用しています。
+- *picard* は、*runica* の機能を利用できるようにします。また、ICAの先駆者であるジャン=フランソワ・カルドソが設計しました。
+- *FastICA* はEEGデータで利用可能です。
+- *Amica* は、ベースで動作します。 [比較](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135) を参照。EEGデータセットは、
 
-### アー の の
+### ICLabel
 
-上記の で で * * * * * * * * * * * * * * * です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です です 
-
-※ICLabel* では、一般公開中でも可視性が向上します。 のみ のみ のみ のみ のみ ふりがな [ICラベル](https://github.com/sccn/ICLabel) このページには、この件に関する詳細情報が含まれています。
+*ICLabel* では、各コンポーネントの分類を自動的に計算します。 [ICラベル](https://github.com/sccn/ICLabel) を参照してください。
 
 ### ICAコンポーネントのクラスタリングのダイキャスト
 
-ICA コンポーネントのクラスタリングのダイキャストを スタディ ?????????????????????
+ICA コンポーネントのクラスタリングの詳細は、STUDY チュートリアルを参照してください。
 
 ```matlab
 % find dipoles for all ICA components of all subjects
@@ -254,25 +247,23 @@ STUDY = std_dipplot(STUDY,ALLEEG,'clusters',2, 'design', 1);
 
 ### より高度なパイプライン
 
-* ????? ERPs は、ERPs から、ERPs へ移行します。 [こちら](command_line_study_functions.html).
-* 統計解析 Eメール:erPssssss [他のセクション](../10_Group_analysis/study_statistics.html)お問い合わせ また、カスタムコードを書くことで、紙の数字を生成できます。
-* パイプライン で お問い合わせ [この紙](https://www.frontiersin.org/articles/10.3389/fnins.2020.610388/full) そして、 [リモウィキ](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) 参照のため。 
+* ERPs の詳細は [こちら](command_line_study_functions.html) を参照。
+* 統計解析 [他のセクション](../10_Group_analysis/study_statistics.html) を参照。また、カスタムコードを書くことで、紙の数字を生成できます。
+* パイプライン [この紙](https://www.frontiersin.org/articles/10.3389/fnins.2020.610388/full) および [リモウィキ](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) を参照。 
 
-ほんご
+参考文献
 ----------------------
 
-お問い合わせ 
-
-* [プレプ](https://vislab.github.io/EEG-Clean-Tools/) EEGLAB は、現在、現在、現在、現在、現在、現在、現在、現在、現在、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界
-* [マコトの加工パイプライン](https://sccn.ucsd.edu/wiki/Makoto's_preprocessing_pipeline) お問い合わせ お問い合わせ
-* [Danielle Gruberさん](https://medium.datadriveninvestor.com/streamline-your-eeglab-experience-8803c805c5a7)Danielle Gruber は、Danielle Gruber の略称です。Danielle Gruber は、Danielle Gruber の略称です。
+* [プレプ](https://vislab.github.io/EEG-Clean-Tools/) EEGLAB のクリーニングツール。世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界中、世界
+* [マコトの加工パイプライン](https://sccn.ucsd.edu/wiki/Makoto's_preprocessing_pipeline)
+* [Danielle Gruberさん](https://medium.datadriveninvestor.com/streamline-your-eeglab-experience-8803c805c5a7) EEGLABの使い方。
 * [BIDSファイル](Analyzing_EEG_BIDS_data_in_EEGLAB.html) このチュートリアルの一部であり、このページに提示されたものと比較して、同様のパイプライン(より複雑なもの)です。
-* [お問い合わせ](https://www.frontiersin.org/articles/10.3389/fnins.2018.00097/full)EEGLABLabは、EEGLABを信頼しています。
-* [エポック](https://osf.io/cw5qv/) このプロジェクトでは、EEGLABの を使用して 分析 分析 を提供します を提供します を提供します を提供します を提供します を提供します を提供します を提供します 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載   掲載 掲載 掲載 掲載 掲載     掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 掲載 [神経科学のフロンティア](https://www.frontiersin.org/articles/10.3389/fnins.2021.660449/full).
+* [EEGLAB論文](https://www.frontiersin.org/articles/10.3389/fnins.2018.00097/full) EEGLABの概要。
+* [エポック](https://osf.io/cw5qv/) このプロジェクトでは、EEGLABを使用して分析を提供しています。 [神経科学のフロンティア](https://www.frontiersin.org/articles/10.3389/fnins.2021.660449/full).
 * [Apiceのこだわり](https://github.com/neurokidslab/eeg_preprocessing) 乳幼児向けデータ
 * [EEGLABのコンセプト](https://github.com/fardinafdideh/EEG-Signal-Cleaning-Pipeline-Management-EEGLAB-based-) エッグ 信号のクリーニングのパイプライン管理。
 * [リラックス](https://github.com/NeilwBailey/RELAX) ICA と ICLabel は、Windows で自動 EEGLAB のプリプロセスを実装しています。
 
-EEGLAB、FieldTrip、Brainstorm、MNEは、各々の業務を担当しています。 各ソフトウェアパッケージは、偽物に誤りを許さないため、 最高 を を
+EEGLAB、FieldTrip、Brainstorm、MNEは、それぞれの強みがあります。各ソフトウェアパッケージの比較は
 
 [https://github.com/sccn/eeg_pipelines](https://github.com/sccn/eeg_pipelines)

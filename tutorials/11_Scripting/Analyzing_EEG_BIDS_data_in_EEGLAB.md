@@ -7,9 +7,8 @@ parent: 11. Write scripts
 grand_parent: Tutorials 
 ---
 # EEG-BIDSについて
-お問い合わせ
 
-EEG-BIDSEEGLABに、EEGLABの通信方法を紹介しています。 [EEGLABスタディ](https://sccn.github.io/tutorials/10_Group_analysis) 以下の グループ グループ グループ グループ グループ グループ グループ します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します を を を を を を を を を を を を を を 人気カテゴリー
+EEG-BIDSは、EEGLABのグループ解析方法を紹介しています。 [EEGLABスタディ](https://sccn.github.io/tutorials/10_Group_analysis) 以下のグループ解析を行います。
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN3II4EnVQNjOeVl-UprWlnM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
@@ -17,9 +16,7 @@ EEG-BIDSEEGLABに、EEGLABの通信方法を紹介しています。 [EEGLABス�
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 <button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'bids_process_face_experiment.mlx'));">MATLABコマンド</button>
@@ -28,15 +25,15 @@ EEG-BIDSEEGLABに、EEGLABの通信方法を紹介しています。 [EEGLABス�
 
 このチュートリアルのデータは、 [EEG BIDSフォーマット](https://github.com/bids-standard/bids-specification/blob/master/src/04-modality-specific-files/03-electroencephalography.md)EEG-BIDSの特定性についてもっと読む [詳しくはこちら](https://www.nature.com/articles/s41597-019-0104-8)EEGLABは、 [EEG-BIDSについて](https://github.com/sccn/EEG-BIDS) BIDSデータセットのプラグインは、このプラグインは、EeGLABのプラグインです。 このBIDSでは、このサイトについて、以下の点について説明しています。
 
-EEGLABにBIDSの統合について詳しく知る [bids-matlab-io - アダルトアフィリエイトプログラム モデル募集 モデルログイン](https://github.com/sccn/EEG-BIDS/wiki) EEGLABのプラグイン 
+EEGLABにBIDSの統合について詳しく知る [EEG-BIDS wiki](https://github.com/sccn/EEG-BIDS/wiki) EEGLABのプラグイン 
 
 ## データのダウンロード
-この例では、 [ウェイクマンとヘンソン (2015)](https://www.nature.com/articles/sdata20151)このサイトでは、このサイトを運営しています。 各画像は3回繰り返しますが、それぞれの画像はパープル比例比例比例比例対称性分布です。
+この例では、 [ウェイクマンとヘンソン (2015)](https://www.nature.com/articles/sdata20151)このサイトでは、このサイトを運営しています。 各画像は3回繰り返しますが、それぞれの画像はパープル対称性分布です。
 
 突然提示された顔のイメージの人間の認識は大きい作り出します
 パーキールイベントの関連性について170ms(N170をdubbed)
 ポスタースカルプチャンネル([ベントイン ら.,
-1996](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2927138/)。 お問い合わせ
+1996](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2927138/)。 N170は、
 直接を含むいくつかの方法によって局在する可能性
 耐腐食性(ECoG)
 二国間fusiformジャイラス。 
@@ -92,7 +89,7 @@ filepath = fullfile(eeglabPath, 'sample_data', 'ds002718');
 
 ### BIDSについて
 *pop_importbids.m* は、BIDS は、EEGLAB にインポートします。 
-'bidsevent' は、 BIDS .tsv は、 BIDS .tsv のファイルから、 BIDS .tsv は、 BIDS .tsv ファイルから BIDS .tsv ファイルへ、 EEG 'studyName' では、 お問い合わせ [BIDSのチュートリアル](/tutorials/04_Import/BIDS.html) BIDS研究は、
+'bidsevent' は、BIDS .tsv ファイルからイベントをインポートします。'studyName' では、[BIDSのチュートリアル](/tutorials/04_Import/BIDS.html) を参照してください。BIDS研究は、
 
 ``` matlab
 [STUDY, ALLEEG] = pop_importbids(filepath, 'eventtype','trial_type', 'bidsevent','on','bidschanloc','on', ...
@@ -115,7 +112,7 @@ CURRENTSTUDY = 1; EEG = ALLEEG; CURRENTSET = [1:length(EEG)];
 
 ### 極端なアーティファクトで活動の悪いチャンネルや地域を削除
 
-関数,*pop_clean_rawdata.m* 関数,0.5 Hz で s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s s の s s の s s s の s s の s s s s s s の s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s
+*pop_clean_rawdata.m* 関数は、0.5 Hz のハイパスフィルタでデータを前処理します。
 *pop_clean_rawdata.m* は、 [アーティファクト・サブスペースの復興](https://sccn.github.io/tutorials/ConceptsGuide/ASR_background.html) EEGLABに統合(ASR)モジュール [clean_rawdata() プラグイン](https://sccn.github.io/tutorials/ConceptsGuide/ASR_background.html) (EEGLABではデフォルトで) 
 
 ``` matlab
@@ -138,7 +135,7 @@ EEG = pop_reref( EEG,[],'interpchan',[]);
 
 IClabel は、EeGLAB でデフォルトで設定する EEGLAB では、各々のコンポーネントの型(CRA、目、位置、線維など)を計算します。
 *pop_icflag.m* 'thresh' の2つの基本引数は、 コンポーネントを レイティファクトとして 選択値 最小値と最大値 値 です。 *Brain*、*Muscle*、*Eye*、*Heart*、*Line Noise*、*Channel Noise*、*Other*の6つの分類の...
-Eye* または *Muscle* に 80% の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s に s の s の s の s の s の s の s の s s の s の s s s s s の の s s s s s の の の に の s s s s の s s の の の の の s s s s の の s の の s s s s s s s s s s s s s s s の の s s s s s s s s コンポーネントのみが削除されます。 IClabel は、 ICA コンポーネントが、データから削除されます。
+Eye* または *Muscle* に 80% 以上のコンポーネントのみが削除されます。 IClabel は、 ICA コンポーネントが、データから削除されます。
 
 ``` matlab
 EEG = pop_runica(EEG, 'icatype','runica','concatcond','on',...
@@ -151,7 +148,7 @@ EEG = pop_subcomp(EEG, [], 0, 0); %remove bad components
 
 ### 汚染されたデータの残りの部分を削除します。
 ASR と *pop_clean_rawdata.m* は、現在では、より詳細な機能が提供されます。
-ASRは、より複雑な部分(キャリブレーション)を、PCAの解析コンポーネントの構成要素を計算します。 それから それから 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 します します します します 。 します します します 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。  この より より より
+ASRは、より複雑な部分(キャリブレーション)を、PCAの解析コンポーネントの構成要素を計算します。それから20秒間のデータでキャリブレーションを行います。
 
 ``` matlab
 EEG = pop_clean_rawdata( EEG,'FlatlineCriterion','off','ChannelCriterion','off',...
@@ -166,7 +163,7 @@ help pop_clean_rawdata
 ```
 
 ### 測定結果 
-このイベントでは、このイベントの参加者は、イベントの参加者全員が、イベントの参加者全員が、イベントの参加者全員が、イベントの参加者全員が、イベントの参加者全員に、イベントの参加者全員が参加しています。 
+このイベントでは、参加者全員が参加しています。 
 ベースラインを削除しない(上記のハイパスフィルタリングは、この段階で十分です)。
 
 ```matlab
@@ -204,7 +201,7 @@ eeglab redraw
     'recompute','on','erp','on','erpparams',{'rmbase',[-200 0] });
 ```
 
-### サインイン プロットERP
+### ERPのプロット
 それぞれの条件の1つを ERP でプロットする。 ファーストプロットパラメータ
 
 ``` matlab

@@ -9,25 +9,19 @@ grand_parent: Tutorials
 EEGLABメニュー
 ========================
 
-この投稿は、EEGLAB が公開されています。 お気に入りに追加する 
+EEGLAB設定メニューには、<span style="color: brown">ファイル → 環境設定</span> からアクセスします。 
 
-EEGLAB 設定メニュー
----
-
-お問い合わせ
-お問い合わせ <span style="color: brown">ファイル → 環境設定</span>. 
-
-デフォルトでは、EEGLABオプションファイル(*eeg_options.m*)が使われています。 EEGLAB は、Windows がリリースされました。
+デフォルトでは、EEGLABオプションファイル(*eeg_options.m*)が使われています。
 
 ![](/assets/images/eeglaboptions_warning.png)
 
-, *icadefs.m* , *EEGOPTION_PATH* , *eeg_options.m* , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , .
+(*icadefs.m*, *EEGOPTION_PATH*, *eeg_options.m* などのパスを確認してください。)
 
 次のウィンドウがポップアップ表示されます。
 
 ![](/assets/images/eeglaboptions.png)
 
-EGLAB STUDY では、様々なデータセットの選択肢があります。
+EEGLAB STUDY では、様々なデータセットの選択肢があります。
 
 - 上記は1つ以上保存されます。
 一度にデータセット。 ほとんどの操作で新しいデータセットを作成
@@ -54,10 +48,9 @@ EEGLAB は、EEGLAB が、EEGLAB は、
 
 - このページではjavascriptを使用しています。
 
-- EEGLAB接続に関するお問い合わせはこちら
-EEGLABでは、 EEGLABのメニュー 
-  
-- 最後のオプションは、EEGLAB で で 作業 に 、 で s を s に s に s を s に s に s を s に s に s を s に s に s を s に s に s を s に s に s s s s s s s s s s s s s s s s s s s
+- EEGLABの接続とサポートについては、EEGLABのメニューからアクセスできます。
+
+- 最後のオプションは、EEGLABで作業する際に使用するオプションです。
 
 ### 高度なオプションインターフェイス
 
@@ -65,33 +58,15 @@ EEGLABでは、 EEGLABのメニュー
 
 - である である である このオプションは、Matlab 7.3 で . . . . . . . . .
 
-- EEGLAB は、EEGLAB です。 が の
-お問い合わせ とりあえず、 とりあえず、 とりあえず、 とりあえず、 とりあえず、 とりあえず、 とりあえず、 とりあえず、 とりあえず、 とりあえず、 とりあえず、 とりあえず。
+- このオプションは、EEGLABがメモリ上でデータを保持する方法を制御します。
 
-- EEGLAB は、EEG のデータセットを直接実行して利用する。
-のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ です です のみ です です です です です です です です です です です です です です です です です です です です です です です です です です です です です このオプションは、EEGLAB のプラグインです。
+- このオプションは、EEGLABがEEGデータセットをディスク上で直接利用することを可能にします。このオプションは、EEGLABのプラグインです。
 
-- EEG構造について
-ユーザーの視点から、何も変化しません。 しかし、
-EEGLAB は、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB を、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB を、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB を、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB に、EEGLAB を、EEGLAB に、EEGLAB を、EEGLAB に、EEGLAB に、EEGLAB を、EEGLAB に、E を、EEGLAB に、E に、EEGLAB に、EEGLAB を、EEG
-別のソフトウェア EEGLAB は、
-特定の方法で動作する限りオブジェクト。 このオプション
-専門家のユーザーのみが機能するので、
+- EEG構造について、ユーザーの視点からは何も変化しません。しかし、EEGLABは内部的にEEGオブジェクトを特定の方法で処理します。このオプションは専門家のユーザーのみが使用することを想定しています。
 
-- コンポーネントのオプションは、 microvoltにアップしました。 
-  お問い合わせ
-scaling は、データ処理の面をクリアする。
-ICASカルプトポグラフィは、
-まあ、2つの製品が定数のままです。 このスケーリングはなかった
-EEGLABの初期実行中。
-後方互換性を早期に保持したくない場合
-EEGLABについて
+- コンポーネントのオプションは、マイクロボルト単位のスケーリングをデータ処理の観点で明確にします。ICAスカルプトグラフィでは、2つの製品が定数のままです。このスケーリングはEEGLABの初期バージョンにはありませんでした。後方互換性を保持したくない場合は、EEGLABについてこのオプションを変更できます。
 
-- 別のオプション、MAtherTLABツールボックスをそのままに
-パスに存在するとしても。 お役に立ちますと便利です。
-大学は、ツールボックスユーザーの面でそのクォータに達しました。 お問い合わせ
-ケース, 追加のツールボックス関数はパスに存在します, しかし、あなたは使用することはできません
-お問い合わせ MATLABは、不安定な雰囲気を醸し出しています。
+- 別のオプションとして、MATLABツールボックスをパスに存在するとしても無視する設定があります。大学のライセンスでツールボックスのユーザー数制限に達した場合に便利です。この場合、追加のツールボックス関数はパスに存在しますが、使用することはできません。MATLABが不安定になる可能性があります。
 
 icadefs.m ファイル
 -------------------
@@ -106,7 +81,7 @@ EEGLABは、 EEGLAB について
 - EEGLABのフォントとカラー設定
 
 -   *runica.m* ICAのバイナリ版参照
-    *ica* (参照) [バイナリ](https://github.com/sccn/binica)お問い合わせ ,*ICABINARY = 'ica_linux2.4'*.
+    *ica* (参照) [バイナリ](https://github.com/sccn/binica)、*ICABINARY = 'ica_linux2.4'*。
 
 dipfitdefs.m ファイル
 ----------------------

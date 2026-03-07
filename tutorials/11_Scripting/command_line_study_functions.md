@@ -8,12 +8,9 @@ grand_parent: Tutorials
 ---
 EEGLABの解析
 =====
-お問い合わせ
 
-プロフィール
-呼 呼 呼
-直接ユーザーによって。 これらの関数を簡潔に記述します。 お問い合わせ
-MATLAB は、現在、MATLAB は、
+これらの関数は直接ユーザーによって呼び出されます。 これらの関数を簡潔に記述します。
+MATLAB は、現在、
 *std_* は、 *STUDY* または *EEG* は、
 チャネルまたはクラスターに直接信号処理および/またはプロットを実行
 活動内容 関係なく、記述するチュートリアルの部分で文書を調べるのは自由です [STUDYについて](/tutorials/ConceptsGuide/Data_Structures.html#the-study-structure).
@@ -22,9 +19,7 @@ MATLAB は、現在、MATLAB は、
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 <button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'study_script.m'));">MATLABコマンド</button>
@@ -32,8 +27,8 @@ MATLAB は、現在、MATLAB は、
 STUDYについて
 -----------------
 
-*STUDY* は、STUDY* を、STUDY* に、STUDY* を、STUDY* に、STUDY* を、STUDY* に、STUDY* を、STUDY* に、STUDY* を、STUDY* に、STUDY* を、STUDY* に、STUDY* に、STUDY* を、STUDY* に、STUDY* を、STUDY* に、STUDY* に、STUDY* より、STUDY* に、STUDY* を、STU... [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_study.m) ログイン 多くの研究を造る必要がある場合や、
-STUDY* に 参加する
+*STUDY* は、 [pop_study.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_study.m) で多くの研究を造る必要がある場合や、
+*STUDY* に参加する
 
 *STUDY構造は、 STUDYチェック機能(STUDYチェック機能)[std_checkset.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_checkset.m)) 複数のチェックを実行して、それが表しているデータセットと互換性を保つことができます。 だからこの機能
 変更を解除する可能性があります(コマンドラインで警告が発行されます)。
@@ -67,14 +62,14 @@ GUI-equi同等主義者 [std_editset.m は](http://sccn.ucsd.edu/eeglab/locatefi
 
 最後の行
 同等のダイポールモデルが15%未満のコンポーネントを選択
-コンポーネントのスカルプマップからの残留分散。 お問い合わせ サポート
+コンポーネントのスカルプマップからの残留分散。
 詳細は std_editset* を参照してください。 
 
 データセットへのパスについて
 上のコードは相対パスです。 その後、同じコードを実行する
 snippet,MATLABの現在のディレクトリ,データセットは、現在に至る。
 
-STUDY*(または、STUDY*) は、
+*STUDY* 構造 (または *STUDY*) は、
 *STUDY* 構造と対応 *ALLEEG* は、
 MATLAB ワークスペースは 
 
@@ -107,7 +102,7 @@ MATLABの STUDY* は、
           saved: 'yes'
 ```
 
-*conditions*は必須項目です。(*synonyms*と*non-synonyms*)は、EeGLABは2つの条件を構成しています。 お問い合わせ [std_makedesign.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_makedesign.m) 注文する EEGLABのデザイナーがデザインを手がける [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegh.m) 関数)。 デザインを作成するためのイベント情報を追加する場合は、チュートリアルのセクションを参照してください。 [グループ分析のためのイベント情報の追加](http://localhost:4000/tutorials/11_Scripting/Event_Processing_command_line.html#adding-event-information-for-group-analysis).
+*conditions*は必須項目です。(*synonyms*と*non-synonyms*)は、EEGLABは2つの条件を構成しています。 [std_makedesign.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_makedesign.m) で EEGLABのデザイナーがデザインを手がける [eegh.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegh.m) 関数)。 デザインを作成するためのイベント情報を追加する場合は、チュートリアルのセクションを参照してください。 [グループ分析のためのイベント情報の追加](http://localhost:4000/tutorials/11_Scripting/Event_Processing_command_line.html#adding-event-information-for-group-analysis).
 
 チャネル対策の計算とプロット
 ----------------------------------------
@@ -162,12 +157,12 @@ EEGLABの出力 [std_erpplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.ph
 
 ![ダウンロード:Erp_chann_oz](/assets/images/Erp_chann_Oz.png)
 
-グラフィックインターフェイスをプロットするチャンネルから他のコマンドを試し、履歴で返されたものを見る (ビア [ログイン](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegh.m) . . .
+グラフィックインターフェイスをプロットするチャンネルから他のコマンドを試し、履歴で返されたものを見る ([eegh.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegh.m) 経由)。
 
 ### その後の処理のための計算された対策の取得
 
 STUDYプロット、プロット結果がわかる
-STUDY のブログ記事一覧<i>ログイン</i> から
+STUDY プロット関数を <i>実行</i> すると、
 MATLAB は、STUDY は、
 この関数の助けを見てみましょう。 通常は追加可能です
 追加パラメータ。
@@ -264,7 +259,7 @@ ANOVAの利用規約
 
 ### 他のソフトウェアパッケージで処理する結果を保存する
 
-SPSS、Statistica、Stata、R、SAS、Excelの処理 STUDYを飲む MATLAB は、MATLAB のライセンスをそのまま使用しています。 以下は、 デフォルトではコンマ区の値を格納します。 お問い合わせ
+SPSS、Statistica、Stata、R、SAS、Excelの処理 STUDYを飲む MATLAB は、MATLAB のライセンスをそのまま使用しています。 以下は、 デフォルトではコンマ区の値を格納します。
 
 ``` matlab
 array = erpdata{1}; % or array = rand(100,200); 
@@ -283,8 +278,7 @@ dlmwrite('erpfile.txt',squeeze([ erptimes' erpdata{1} ones(size(erpdata{1},1),1)
 dlmwrite('erpfile.txt',squeeze([ erptimes' erpdata{2} ones(size(erpdata{2},1),1)*2 ]),'-append', 'delimiter', '\t', 'precision', 2);
 dlmwrite('erpfile.txt',squeeze([ erptimes' erpdata{3} ones(size(erpdata{3},1),1)*3 ]),'-append', 'delimiter', '\t', 'precision', 2);
 ```
-
-n x m の 条件 の 設定 の 設定 の 設定 の 設定 の 設定 の 設定 の 設定 の 設定 の 設定 の 設定 の 行 の 行 の 行 の 行 の 行 の 行 の 行 の 行 の 行 の 行 の 行 の 行 の 行 の 行 の 行 の 行 の 行 の 行 行 の の 行 の 行 行 行 の 行 行 の 行 行 行 の 行 行 行 行 の の の 行 行 行 行 の 行 行 行 の の の 行 の 行 行 行 行 行 の の 行 行 行 行 行 行 行 行 の の 行 行 の 行 行 行 行 行 行 行 行 行 行 行 行 
+n x m の条件設定の場合:
 
 ``` matlab
 dlmwrite('erpfile.txt',squeeze([ erpdata{1,1} ones(size(erpdata{1,1},1),1)*[1 1] ]),'delimiter', '\t', 'precision', 2);
@@ -293,7 +287,7 @@ dlmwrite('erpfile.txt',squeeze([ erpdata{2,1} ones(size(erpdata{2,1},1),1)*[2 1]
 dlmwrite('erpfile.txt',squeeze([ erpdata{2,2} ones(size(erpdata{2,2},1),1)*[2 2] ]),'-append', 'delimiter', '\t', 'precision', 2);
 ```
 
-被写体をケースとして使用してみる として として として 通常 通常 通常 通常 通常 通常 フォーム フォーム フォーム フォーム できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます できます より長い変換をします。 お問い合わせ <i>エルプデータ</i> 条件 1 は 750 ポイントと 13 件を含み、長いフォームでデータを保存すると、このように見えます。 このファイルは、2つの列のみ、対象のインデックスの1つと1つが含まれます。
+被写体をケースとして使用する場合、通常のフォームでデータを保存できます。 <i>erpdata</i> 条件 1 は 750 ポイントと 13 件を含み、長いフォームでデータを保存すると、このように見えます。 このファイルは、2つの列のみ、対象のインデックスの1つと1つが含まれます。
 
 ``` matlab
 dlmwrite('erpfile.txt',[ erpdata{1}(:,1) ones(size(erpdata{1},1),1)*1],'delimiter', '\t', 'precision', 2);
@@ -302,7 +296,7 @@ for iSubject = 2:size(erpdata{1},2)
 end
 ```
 
-ERPとは この例では、 12 の 分 の 分 の 分 の 分 の 分 の 分 の 分 の 分 数 の 分 数 の 分 数 の 分 数 の 分 数 の 分 数 の 分 数 の 分 数 の 分 数 の 分 数 の 分 数 の 分 数 の 分 数 の 分 の 分 の 分 の 数 数 の 分 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数 数   これ より より
+ERPとは この例では、12の周波数×12の時間×71チャンネル×13被験者です。
 
 ```matlab
 chanlocs = eeg_mergelocs(ALLEEG.chanlocs);
@@ -327,9 +321,9 @@ for iFreq = 1:10
 end
 ```
 
-以下は、保存したファイルの先頭に列名を追加しています。 スクリプトを変更して、自動的に追加することもできます。 これは一例です。 実際の周波数と時間は保存されるだけでなく、交換する <i>フィードバック</i> そして、 <i>ログイン</i> お問い合わせ <i>erpfreqs(iFreq)</i> そして、 <i>erptimes(iTime) は、</i> 上記のスクリプトで。 
+以下は、保存したファイルの先頭に列名を追加しています。 スクリプトを変更して、自動的に追加することもできます。 これは一例です。 実際の周波数と時間は保存されるだけでなく、交換する <i>erspfreqs(iFreq)</i> そして、 <i>ersptimes(iTime)</i> 上記のスクリプトで。 
 
-![お電話でのお問い合わせは、お電話にて承っております。](https://user-images.githubusercontent.com/1872705/200086058-98a10d7a-27f8-4f60-8bd4-e70d6170f6a6.png)
+![ERP data export](https://user-images.githubusercontent.com/1872705/200086058-98a10d7a-27f8-4f60-8bd4-e70d6170f6a6.png)
 
 コンポーネント対策の計算とプロット
 -----------------------------
@@ -338,7 +332,7 @@ end
 
 関数 [pop_precomp.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) また、測定を計算するために使用することができます
 コンポーネントを扱う。 チャネルを扱うときとして、機能 [std_precomp.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) また、プレコンピューティングコンポーネント
-対策 構文は両方のケースで非常に似ています。 お問い合わせ
+対策 構文は両方のケースで非常に似ています。
 インスタンス、関数 [pop_precomp.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_precomp.m) 次の方法で呼ばれる
 コンポーネントのコンピューティング対策のためのグラフィックユーザーインターフェイスを起動します。
 
@@ -357,7 +351,7 @@ end
 
 計算された措置の種類は、密接な関係にあります
 仮説をテストし、措置の選択
-技術的に実行できる分析の種類を制約します。 お問い合わせ
+技術的に実行できる分析の種類を制約します。
 例えば、次のセクションでは、各コンポーネントからの対策は、
 ICAコンポーネントのクラスタリングについて。 EEGLAB jargon は、
 先着順
@@ -412,7 +406,7 @@ ICAコンポーネントのクラスタリング、通常は順調に計算し�
 
 ### コンポーネントクラスターの可視化
 
-コンポーネントクラスターを視覚化するための主な機能 [pop_clustedit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m)お問い合わせ このインターフェイスをポップアップするには、単にタイプします。
+コンポーネントクラスターを視覚化するための主な機能 [pop_clustedit.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_clustedit.m) このインターフェイスをポップアップするには、単にタイプします。
 
 ``` matlab
 >> [STUDY] = pop_clustedit(STUDY, ALLEEG);
@@ -490,7 +484,7 @@ customdata
     {820×61×1×5 single}
 ```
 
-特定非営利活動法人 特定非営利活動法人 特定非営利活動法人 最終寸法はそのままです。 カスタム機能が汎用性のため、各々の2-Dの構成要素を構成します。
+最終寸法はそのままです。 カスタム機能が汎用性のため、各々の2-Dの構成要素を構成します。
 
 ```matlab
 [~, erpdata] = std_readdata(STUDY, ALLEEG, 'channels', {ALLEEG(1).chanlocs.labels }, 'design', 1, 'datatype', 'erp');
@@ -531,7 +525,7 @@ setfont(gcf, 'fontsize', 16); % change font size
 
 ### カスタム対策に関する統計計算
 
-関数を使うことができることに注意して下さい [std_stat.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_stat.m) *customdata* と *customerp* のセルの配列を上回る。 上記は、 61 の 61 の 61 の 61 の 61 の 部分の 61 の 部分の 部分の 値 の 値 の 値 の 値 の 値 の 値 の 値 の 値 の 値 の 値 の 値 の 値 の 値 の 値 の 値 の の 値 の の 値 の 値 の の の 値 の の 値 の の の 値 の の 値 の の の の の の 値 の の の の の の 値 の の の の の の の の の の の の の の の の の の の の の の の 値 の の の の の の の の の 値 の の の の の の の の の の 
+関数を使うことができることに注意して下さい [std_stat.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_stat.m) *customdata* と *customerp* のセルの配列を上回る。 上記は、61チャンネル分の値が返されます。 の の の の の の の の の の の の の 値 の の の の の の の の の 値 の の の の の の の の の の 
 
 ```matlab
 std_stat(erpdata, 'condstats', 'on', 'mcorrect', 'fdr', 'method', 'permutation')

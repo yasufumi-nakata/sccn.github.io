@@ -8,7 +8,6 @@ grand_parent: Tutorials
 ---
 ICAコンポーネントのプロット
 ================================
-お問い合わせ
 
 ICA は ICA から ICA へ [アーティファクト](/tutorials/06_RejectArtifacts/RunICA.html)このサイトは、Cyber のサイトです。 交通アクセス
 
@@ -16,9 +15,8 @@ ICA は ICA から ICA へ [アーティファクト](/tutorials/06_RejectArtifa
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
+  {: .text-delta }
 - トピックス
-お問い合わせ
 </details>
 
 
@@ -30,11 +28,11 @@ ICA は ICA から ICA へ [アーティファクト](/tutorials/06_RejectArtifa
 ![こちら](/assets/images/Pop_loadset2.png)
 
 どのコンポーネントが最も強く貢献しているかを見るのは関心です
-データの頻度。 お問い合わせ <span style="color: brown">コンポーネントのスペクトラとマップ</span>. 
+データの頻度。 選択する <span style="color: brown">コンポーネントのスペクトラとマップ</span>. 
 これは呼び出します [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) 機能。
 
-最初の入力はエポック時間の範囲です
-お問い合わせ 4つ目の入力は、ランダムでサンプルするデータの割合です
+最初の入力はエポック時間の範囲です。
+4つ目の入力は、ランダムでサンプルするデータの割合です
 (計算速度が小さく、割合が大きい)
 より EEGデータセットは、
 *100*(=すべてのデータ)にこの値を変更します。 それから視覚化します
@@ -48,7 +46,7 @@ ICA は ICA から ICA へ [アーティファクト](/tutorials/06_RejectArtifa
 
 
 
-ふりがな [お問い合わせ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) ウィンドウ (below)
+ふりがな [spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) ウィンドウ (below)
 
 
 ![](/assets/images/Spectopocomps.gif)
@@ -85,7 +83,7 @@ ICA は ICA から ICA へ [アーティファクト](/tutorials/06_RejectArtifa
 
 
 
-ふりがな [お問い合わせ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) 図は(以下)表示されます。
+ふりがな [spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) 図は(以下)表示されます。
 
 
 ![](/assets/images/I102spectopo.jpg)
@@ -116,7 +114,7 @@ MATLABでは、次の手順を実行します。
 コンポーネントのバックプロジェクションは0 で、pvaf は100% です。
 コンポーネントは ゼロヴァリアンス のアカウント、pvaf =
 0%. 
-Pvaf は、100% より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より より 大きい より より より より より より より より より より より より
+Pvaf は、100% より大きい場合があります(複数の
 コンポーネント、スペクトル出力は、実際には大きくなり、小さくなります!) 
 に従って
 上記出力に占める分散、コンポーネント10アカウント以上
@@ -126,11 +124,9 @@ Pvaf は、100% より より より より より より より より より �
 コンポーネント
 ------------------------------------
 どのコンポーネントが利益の周波数帯に貢献しているかを見た後、
-どのコンポーネントが最も貢献しているかを見ることは興味深いです
-お問い合わせ
- 
-コンポーネント コンポーネント コンポーネント Plot コンポーネント
-選択する <span style="color: brown">コンポーネント ERP → アセンブリ</span>, 呼び出し [pop_plotdata.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_plotdata.m) 機能。 それから
+どのコンポーネントが最も貢献しているかを見ることは興味深いです。
+
+コンポーネントをプロットするには、選択する <span style="color: brown">コンポーネント ERP → アセンブリ</span>, 呼び出し [pop_plotdata.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_plotdata.m) 機能。 それから
 プレス *Ok*.
 
 ![](/assets/images/Rectarrayedit.gif)
@@ -149,7 +145,7 @@ Pvaf は、100% より より より より より より より より より �
 弊社では、以下の項目を、以下の項目に入力し、
 <span style="color: brown">Plot → コンポーネントERP → コンポーネントマップ</span>,
 コールする [ポップ ミュージック](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) 機能。 
-プレス *7 をプロットする お問い合わせ
+プレス *7 をプロットする コンポーネントを
 データセットERPへ
 実際のコンポーネントは、以前のデータからサブトラクトすることができます。
 コンポーネントの *Indices は、ERP をプロットしてサブディレクトリへ...* 編集
@@ -161,9 +157,8 @@ Pvaf は、100% より より より より より より より より より �
 
 
 
-お問い合わせ [ポップ ミュージック](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) プロット(下)、厚い黒線
+[pop_envtopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) プロット(下)、厚い黒線は
 データ封筒(つまり、すべてのチャネルの最小値と最大値)を示します。
-とりあえず、 は、 とりあえず、 とりあえず、 とりあえず、 とりあえず、 とりあえず、 とりあえず。
 
 
 ![375](/assets/images/Envtopo.gif)
@@ -180,7 +175,6 @@ Pvaf は、100% より より より より より より より より より �
 
 
 400 ms コンポーネント 1 近く する
-お問い合わせ
 
 
 ![375](/assets/images/Envtopo2.gif)
@@ -209,10 +203,9 @@ Pvaf は、100% より より より より より より より より より �
 クラウドサービス
 1つの電極は、ここに1つのコンポーネントの活性化をプロットする機能です。
 
-インタラクティブウィンドウ内のパラメータをコピーして試用をソートします
-10 の Hz0 の ms の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の の s の s の s の s の の s の の s の s の の の の s の s s の の の の の の s の の の の の の s s の の の の の の の の の の の の s の の の の の の の の の s s s の の s の の の s の の の の s の の の の の の
-Inter-Trial Coherence (チャンネル参照) [チュートリアル](/tutorials/08_Plot_data/Plotting_ERP_images.html) 詳しくはこちら
-インフォメーション
+インタラクティブウィンドウ内のパラメータをコピーして試行をソートします
+(10 Hz、0 ms など)。
+Inter-Trial Coherence (チャンネル参照) [チュートリアル](/tutorials/08_Plot_data/Plotting_ERP_images.html) 詳しくはこちら。
 
 ![](/assets/images/Componenterpedit.gif)
 
@@ -220,8 +213,7 @@ Inter-Trial Coherence (チャンネル参照) [チュートリアル](/tutorials
 以下に示すコンポーネント6については、 [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) プロフィール
 解析周波数(9Hz〜11Hz)
 時ウィンドウ -300 へ 0 ms (底の跡によって)
-相互にトリルコヒーレンス(ITC) または 宇宙飛行士 
-お問い合わせ
+相互にトリルコヒーレンス(ITC) または位相ロック係数。
 10 Hz の EEG のコンポーネントのアカウントは、
 パーキープ
  全体的に、分析周波数での平均電力
@@ -233,10 +225,9 @@ Inter-Trial Coherence (チャンネル参照) [チュートリアル](/tutorials
 
 
 ICA では、極性性を兼ね備えています。
-* * * * * * の の の の の の
-逆 * * *
+コンポーネントの活性化は無意味であり、
 有利化のメリット(*EEG.icaact*)
-コンポーネントのアクティベーションが無意味であり、アクティベーションは無意味です。
+コンポーネントの活性化は極性が任意です。
 測定単位(注)、*proportional to* microvolt。 
 1つに占める活動の絶対値と極性を回復するため
 与えられたチャネルでまたはより多くのコンポーネントは、バックプロジェクションをイメージします
@@ -262,8 +253,8 @@ ERPが極性で逆転する
 コンポーネントの時間周波数変換をプロットするには、 <span style="color: brown">コンポーネントの頻度</span> 
 (電話) [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) 関数) それから:
 - *コンポーネント番号* に *1* を入力してください
-- *Bootstrap のリリース よくある質問 
-- お問い合わせ
+- *Bootstrap のリリース* を有効にしてください。
+- プレス *Ok*。
 
 注意: [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) FFTの分解
 波形よりも低い周波数の計算。
@@ -288,7 +279,7 @@ ITC(*より)
 
 コンポーネントの3Dヘッドプロットをプロットする
 選択によるトポグラフィ <span style="color: brown">コンポーネントマップ → で
-3次元</span>お問い合わせ これは呼び出します [pop_headplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m) 機能。 関数は
+3次元</span>。 これは呼び出します [pop_headplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_headplot.m) 機能。 関数は
 ERPをプロットする
 3-Dsカルプマップ コンポーネントを選択 4,4,4,5,4,5,4,5,4,5,4,5,4,5,3,4,5,4,4,5,4,5,4,5,4,5,4,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 
@@ -314,6 +305,6 @@ MATELLABは3Dオプションを回転させ、ヘッドプロットを回転さ�
 
 さらなる質問はより重要であるかもしれません: アクティベーションの方法は?
 主に独立したコンポーネントの相互関連のペア? どうすればよいですか?
-関係は、時折進化し、条件全体で変化するのか? お問い合わせ
-関連する その その その EEGLABグループの分析ツールは、
+関係は、時折進化し、条件全体で変化するのか?
+EEGLABグループの分析ツールは、
 脳の動的について、両方のために [シングルサブジェクト](/tutorials/10_Group_analysis/study_statistics.html#single-subject-statistics) そしてのために [被写体のグループ](/tutorials/10_Group_analysis/).

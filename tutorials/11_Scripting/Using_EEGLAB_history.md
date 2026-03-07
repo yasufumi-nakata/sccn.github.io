@@ -8,7 +8,6 @@ grand_parent: Tutorials
 ---
 EEGLABの歴史
 =====
-お問い合わせ
 
 このセクションは、少なくとも基礎を学んだユーザーのために意図されています
 MATLABのWeb制作とEEGLABの制作
@@ -18,9 +17,7 @@ MATLABのWeb制作とEEGLABの制作
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
 - トピックス
-お問い合わせ
 </details>
 
 <button onclick="showModal(this)" data-command="eeglabp = fileparts(which('eeglab.m')); open(fullfile(eeglabp, 'tutorial_scripts', 'eeglab_history.m'));">MATLABコマンド</button>
@@ -46,7 +43,6 @@ MATLABは、EEGLABの分析の実行をしています。
 スクリプト、特に複数のデータセットを同じ方法で処理するか、または
 複数の方法で1つのデータセットを処理する。
 
-EEGLAB MATLAB は、EEGLAB MATLAB は、EEGLAB MATLAB は、EEGLAB MATLAB は、EEGLAB MATLAB は、EEGLAB MATLAB は、EEGLAB MATLAB は、EEGLAB は、EEGLab MATLAB は、EEGLab MATLAB は、EEGLab MATLAB は、EEGLab MATLAB は、EEGLAB は、MATLAB は、MATLAB は、EEGLAB は、MATLAB は、MATLAB は、E は、MATLAB は、MATLAB は、MATLAB は、E は、E は、MATLAB は、MATLAB は、MATLAB は、E は、E は、MATLAB は、MATLAB は、S は、E は、E は、E は、E は、E は、MATLAB は、 は、MATLAB は、S は、E は、
 EEGLABデータ構造(EEG)とサブ構造(EEGLAB)
 *EEG.data*、*EEG.event*、*EEG.urevent*、*EEG.epoch*、*EEG.chanlocs*、
 *EEG.history*は必須です。
@@ -69,7 +65,6 @@ EEGLAB の 最近のコメント
 データセット履歴が保存されるように、新しいセッション履歴を作成します。
 *EEG.history* 保存時に EEG のデータセット構造のフィールド
 セッション終了時のデータセット。 そのため、いつか回収されます。
-EE で で で で
 現在のセッションの最後にデータセットを保存します)。
 
 EEGLABフォーラム
@@ -80,8 +75,8 @@ EEGLABフォーラム
 
 EEGLAB データセットをロードし、データウィンドウを転送します。
 - 電話番号 <span style="color: brown">ファイル → データの読み込み</span>EEGLABの「sample_data」フォルダに「eeglab_data.set」と書いてあります。
-- メニュー項目を使用する <span style="color: brown">Plot → チャンネルデータ(有料)</span>お問い合わせ このポップアップ
-お問い合わせ [エッグロット](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)
+- メニュー項目を使用する <span style="color: brown">Plot → チャンネルデータ(有料)</span> このポップアップ
+[エッグロット](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)
 下にデータをスクロールする。
 
 ![こちら](/assets/images/Scrollchannelactivities1.png)
@@ -91,8 +86,7 @@ EEGLAB データセットをロードし、データウィンドウを転送し�
 MATLAB パスのディレクトリ (英語)
 *\>\> パス* セッションコマンドを保存する
 *doitagain.m*(必須)
-MATLABでは、
-.m. .m.
+MATLABでは、*.m* ファイルとして保存します。
 
 *doitagain.m* は、
 たとえば で で で <span style="color: brown">オープン</span> MATLABのグラフィカルインターフェイスのボタン。
@@ -120,7 +114,7 @@ eeglab redraw;
 メインのグラフィックインターフェイスが確実になるように、最後に追加されました。
 データセットが処理された後更新される。 
 
-今すぐプレス <span style="color: brown">ログイン</span> MATLABのボタンです。 テキストが作成されます。 テキストが実行されます。 <span style="color: brown">ファイル → 履歴スクリプト → スクリプトを実行</span> このメニュー項目は、MATLAB です。 グラフィカル は、EEGLAB のコンパイルを受け付けています。 また、MATLAB では、MATLAB では、以下の手順を実行できます。
+今すぐプレス <span style="color: brown">Run</span> MATLABのボタンです。 テキストが作成されます。 テキストが実行されます。 <span style="color: brown">ファイル → 履歴スクリプト → スクリプトを実行</span> このメニュー項目は、MATLAB です。 グラフィカル は、EEGLAB のコンパイルを受け付けています。 また、MATLAB では、MATLAB では、以下の手順を実行できます。
 
 ``` matlab
 doitagain
@@ -128,7 +122,6 @@ doitagain
 
 EEGLABは、EEGLABを運営しています。 プロフィール 別のデータセット
 現在のデータセットを処理するために使用した同じコマンドを使用して、試します
-お問い合わせ MATLAB は、
 *doitagain.m* は、データセットで行います。
 再びスクリプトを実行します。
 
@@ -137,8 +130,8 @@ EEGLAB *pop_* 関数は、EEGLAB *pop_* 関数の呼び出しをします。
 
 詳細については、
 MATLABは、以下のとおりです。
-お問い合わせ [pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m)、ビア <span style="color: brown"> ヘルプ → EEGLAB
-関数 → インタラクティブなポップアップ関数</span> または <span style="color: brown"> EEGLABメニュー</span>お問い合わせ お問い合わせ [eeg_store.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m)、ビア <span style="color: brown"> → EEGLAB → 管理者機能</span>以下は、MATLAB にインストールします。
+参照 [pop_loadset.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m)、<span style="color: brown"> ヘルプ → EEGLAB
+関数 → インタラクティブなポップアップ関数</span> または <span style="color: brown"> EEGLABメニュー</span> [eeg_store.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m)、ビア <span style="color: brown"> → EEGLAB → 管理者機能</span>以下は、MATLAB にインストールします。
 
 ``` matlab
 help pop_loadset
@@ -149,14 +142,13 @@ EEGLABデータセット
 -----------------------
 
 EEGLAB、現時点では、
-*\>\>\>\> お問い合わせ
 変数 *EEG* は EEGLAB が MATLAB 構造で、保存されます。
 データセットに関する情報 データセット名と
 filename, チャンネル数と場所, サンプリング
 料金、試行回数、各イベントに関する情報
 トライアル/エポック、データ自体など。 完了のため
 *EEG* フィールド情報と関連情報
-[EEGLAB データ構造](/tutorials/ConceptsGuide/Data_Structures.html)お問い合わせ コンテンツ
+[EEGLAB データ構造](/tutorials/ConceptsGuide/Data_Structures.html) コンテンツ
 *EEG*構造のフィールドは、*EEG.fieldname*の構成要素です。
 MATLABでは、 EEG.nbchan* を入力
 現在のデータセットのチャンネル数を返します。
@@ -171,10 +163,10 @@ EEGLABでは、バイナリデータセット(for)をインポートします。
 インスタンス, [品質保証](http://sccn.ucsd.edu/eeglab/download/TEST.CNT)) 以下のメニュー項目を使用しました。
 1. メニュー項目を使用する <span style="color: brown">ファイル → インポートデータ → EEGLAB関数とプラグイン → Neuroscan .CNT ファイルから</span> ファイルをインポートする(すべてのデフォルトを使用する)
 2. メニュー項目を使用する <span style="color: brown">ツール → サンプリング速度の変更</span> サンプリングを250に Hz は、すべてのデフォルトで新しいデータセットに
-3. メニュー項目を使用する <span style="color: brown">基本のFIRをクリアする</span> 1 Hz の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s の s s の s s の s s の s s の s s の s s s s s s の s s s s s s の s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s
+3. メニュー項目を使用する <span style="color: brown">基本のFIRをクリアする</span> 1 Hz のハイパスフィルタ
 4. メニュー項目を使用する <span style="color: brown">Plot → チャンネルデータ(有料)</span> データの視覚化
 
-お問い合わせ EEG.history*について
+*EEG.history*について
 コマンドライン 次のテキストを取得する必要があります。
 
 ```matlab
@@ -193,7 +185,6 @@ ans =
 また、メニューを選択することで、現在のデータセット履歴を保存できます。
 アイテム <span style="color: brown">ファイル → 履歴を保存 → データセット履歴スクリプトを保存</span>.
 
-実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行されます。
 保存する *session* の履歴
 EEGLAB 多重データセット変更が始まります。
 *EEG.history*は、現在のデータセットの変更のみとなります。
@@ -229,7 +220,6 @@ ans =
      EEG = eeg_checkset( EEG );
 ```
 
-EEGLAB の 管理 の 管理 の 管理 と 管理 の 管理 の 管理 の 管理 の 管理 の 管理 の 管理 の 管理 の 管理 と 管理 の 管理 と 管理 の 管理 の 管理 と 管理 の 管理 と 管理 の 管理 の 管理 と 管理 の 管理 と 管理 の 管理 と 管理 管理 の 管理 と 管理 の 管理 と 管理 の 管理 の 管理 管理 管理 の 管理 管理 の 管理 管理 管理 管理 管理 の 管理 管理 管理 管理 管理 管理 の 管理 管理 管理 の 管理 管理 管理 管理 管理 管理 と 管理 管理 管理 管理 管理 管理 管理 管理 管理 管理 管理 管理 管理 管理 管理 管理 と 管理 管理 管理 管理 管理 管理 管理 管理 管理 管理 管理 管理 
 そのため、データセットを繰り返し読み込むと、
 繰り返しロードコマンドをデータセット履歴にしたい。
 
@@ -353,8 +343,8 @@ ALLEEG(2) = EEG;
 CURRENTSET = 2;
 ```
 
-'might' は 'might' が 'might' の 'might' の 'might' が 'might' の 'might' に 'might' が 'might' の 'might' の 'might' が 'might' に 'might' の が 'might' の に 'might' の が あります。
-過去のものとは内部的に一貫しています。 しかし、コマンドを使用する方が良い [eeg_store.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m)', 広範囲を実行します。
+新しいデータセットは過去のものとは内部的に一貫しているかもしれません。
+しかし、コマンドを使用する方が良い [eeg_store.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m)、広範囲を実行します。
 変更されたデータセットを保存する前に、データセットの一貫性をチェックします。
 次のコマンドを使用して、新しいデータセットをデータセットに設定します。
 番号2
@@ -375,8 +365,8 @@ CURRENTSET = 2;
 dataset 2 は、最後のコマンド (above) は、
 EEGLAB ウィンドウが開きます。
 コマンド: *\>\> eeglab 再配置
-*ALLEEG*は、 [pop_newset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m)お問い合わせ このコマンドは、広範な機能を実行します。
-データセットの一貫性は、より有用な高度なオプションを持っています。 お問い合わせ
+*ALLEEG*は、 [pop_newset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m) このコマンドは、広範な機能を実行します。
+データセットの一貫性は、より有用な高度なオプションを持っています。
 蓄積された変更タイプで現在のデータセットを変更します。
 
 ``` matlab
@@ -395,7 +385,7 @@ EEGLABは、
 注意: *EEG* 現在データセットのみが配布されます。
 このサイトについて
 処理したいデータセットが含まれています。
-上記関数は関数を呼び出します [eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m) お問い合わせ
+上記関数は関数を呼び出します [eeg_checkset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_checkset.m)
 変更されたデータセットの内部の一貫性を確認してください。
 
 ``` matlab
@@ -440,7 +430,7 @@ EEGLAB は、グローバル変数の定義です。
 EEGLAB の変数です。
 主要な 相互 相互 EEGLABの機能 [eeglab.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m) (その他)
 display)関数 は、
-入力パラメータは、グローバル変数にアクセスしたり変更したりしません。 お問い合わせ
+入力パラメータは、グローバル変数にアクセスしたり変更したりしません。
 望ましくない 'サイド 最小チャンス へ。
 データセットのエフェクト
 
@@ -454,7 +444,7 @@ EEGLABメニューからEEGLABコマンド履歴書、再実行
 
 以下は、メインの最初のいくつかのステップの次の例です。
 パート から パート まで
-データセットで実行しなければならない最初の基本的な操作。 お問い合わせ
+データセットで実行しなければならない最初の基本的な操作。
 チュートリアルデータセット *eeglab_data.set* と、
 対応するチャンネルファイル *eeglab_chan32.locs*. 追加しました
 コンピュータ と コード
@@ -532,7 +522,7 @@ eeglab redraw
 ```
 
 EEGLAB にコメントを受け付けていません。
-お問い合わせ とりあえず、 翻訳済みデータセット
+とりあえず、翻訳済みデータセット
 
 ``` matlab
 %% Reduce sampling rate
@@ -560,7 +550,6 @@ pop_topoplot(EEG,1, [0:100:500] , 'ERP scalp topographies',[2:3] ,0, 'electrodes
 
 ![](/assets/images/topoplot_history2.png)
 
- pop _ _ _ お問い合わせ
 EEGLAB では、EEGLAB のライセンスを発行しています。
 イラストの目的で弊社から書いていただきました。 上記のコマンド [pop_topoplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m) 信号処理機能を直接呼び出して実行できます。 [topoplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=topoplot.m)
 以下に示すように:

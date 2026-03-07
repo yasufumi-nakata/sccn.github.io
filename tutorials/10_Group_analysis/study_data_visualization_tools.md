@@ -9,7 +9,6 @@ grand_parent: Tutorials
 
 チャネルデータの事前入力と可視化
 ========================
-お問い合わせ
 
 EEGLAB は、EEGLAB で、EEGLAB は、EEGLAB で、EEGLAB で、EEGLAB は、EEGLAB で、EEGLAB は、EEGLAB で、EEGLAB は、EEGLAB で、EEGLAB は、EEGLAB で、EEGLAB は、EEGLAB で、EEGLAB は、EEGLAB で、EEGLAB は、EEGLAB は、S で動作します。 チュートリアルでは、このチュートリアルでは、このチュートリアルでは、
 
@@ -17,12 +16,11 @@ EEGLAB は、EEGLAB で、EEGLAB は、EEGLAB で、EEGLAB で、EEGLAB は、EE
   <summary>
     コンテンツの表
   </summary>
-  お問い合わせ
+ 
 - トピックス
-お問い合わせ
 </details>
 
-お問い合わせ EEGLAB STUDYセット
+EEGLAB STUDYセット
 ---------------------------------
 チュートリアル EEGLAB について この1つに、14個の動物/非動物が生息しています。
 
@@ -40,10 +38,9 @@ STUDY*は、 <span style="color: brown">研究 → 選択/編集研究設計</sp
 
 ![](/assets/images/studyprecomp2.png)
 
-お問い合わせ
 ------------------------------
 
-### お問い合わせ
+###
 
 チャンネル対策をプロットする前に、事前にコンプトする必要があります
 それらを使って <span style="color: brown">研究 → プレコプトチャネル対策</span> 以下に示すようにメニュー項目。
@@ -57,7 +54,7 @@ GUIトップパネルでチャンネル変換可能。
 -  *チャネルの補間。* 視覚化および計算統計のために非常に推薦されます
 います で います EEGLAB は、Channel で、Channel で、EEGLAB で、EEGLAB で、Channel で動作します。
 異なるチャネルの場所(例えば、場所が
-チャンネルがスキャンされた)、コマンド ラインから各データセットの欠落したチャンネルをインターポレートしなければなりません。 [eeg_interp.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_interp.m)お問い合わせ お問い合わせ
+チャンネルがスキャンされた)、コマンド ラインから各データセットの欠落したチャンネルをインターポレートしなければなりません。 [eeg_interp.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_interp.m)お問い合わせ
 
 - ※ICAコンポーネントの取り扱いについて 特に チュートリアル では、 チュートリアル で チュートリアル を 翻訳する [アーティファクト除去のための独立したコンポーネント分析](/tutorials/06_RejectArtifacts/RunICA.html)このサイトでは、各データセットをタグ付けして、各データセットをタグ付けします。 [詳しくはこちら](/tutorials/10_Group_analysis/multiple_subject_proccessing_overview.html#perform-batch-processing))。 このオプションを選択することをお勧めします。
 
@@ -71,7 +68,7 @@ GUIトップパネルでチャンネル変換可能。
 ### Plotting 美しい ERPs
 
 チャンネルの対策を事前に入力した後、それらをプロットすることができます。
-お問い合わせ <span style="color: brown">研究 → プロットチャネル対策</span> メニュー項目。
+<span style="color: brown">研究 → プロットチャネル対策</span> メニュー項目。
 
 ![](/assets/images/studyplot5.png)
 
@@ -94,7 +91,6 @@ GUIトップパネルでチャンネル変換可能。
 潜在的な。 
 - *表示フィルター*の編集箱は入ることができます
 ERPをフィルタリングする
-お問い合わせ
 このページではjavascriptを使用しています。
 トピック
 
@@ -122,8 +118,8 @@ ERPをフィルタリングする
 
 ### ユーザ名
 
-最後に、すべてのスカルプチャネルを同時にプロットすることもできます。 お問い合わせ
-ボタンを押します。 お問い合わせ
+最後に、すべてのスカルプチャネルを同時にプロットすることもできます。
+ボタンを押します。
 チャンネル.
 
 ![](/assets/images/studyplot10.png)
@@ -139,13 +135,11 @@ ERPs は、Windows のプロット エキスパートです。
 
 ### Plotting ERPsカルプトポグラフィ
 
-中央の列で、*Params*ボタンを右折します。 * 時間範囲 * 編集ボックスに「300 400」時間。 * パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル パープル
+中央の列で、*Params*ボタンを右折します。 * 時間範囲 * 編集ボックスに「300 400」時間。 * パラメータ(例: パープル値)を設定します。
 
 ![](/assets/images/studyplot11.png)
 
-*Plot ERPs*ボタンは、Plot ERPs*ボタンから、300〜400ms まで、Plot ERPs*ボタンは、Plot ERPs*ボタンを押します。 つの この つの つの つの つの つの つの つの の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の
-
-![](/assets/images/studyplot12.png)
+*Plot ERPs*ボタンを押すと、300〜400ms の時間範囲でトポグラフィが表示されます。
 
 その他の施策のプロット
 -----------
@@ -154,7 +148,7 @@ ERPs は、Windows のプロット エキスパートです。
 
 ERPは、以下のとおりです。
 
-- *パワースペクトラ*:各条件および電極のためのスペクトル分解を行います。 ここに特定のパラメーターを入力することができます。  [お問い合わせ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) 機能。
+- *パワースペクトラ*:各条件および電極のためのスペクトル分解を行います。 ここに特定のパラメーターを入力することができます。  [spectopo](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) 機能。
 
 - *ERP-image*:事前入力P-images
 
@@ -166,7 +160,7 @@ ERPは、以下のとおりです。
 
 ![](/assets/images/studyprecomp3.png)
 
-お問い合わせ スペクトラとERP-image を高速化し、数秒で完了します。 ERSPとITCの計算は2〜5分程度です。 <span style="color: brown">研究 → プロットチャネル対策</span> メニュー項目。 プロットが可能になりました。
+スペクトラとERP-image を高速化し、数秒で完了します。 ERSPとITCの計算は2〜5分程度です。 <span style="color: brown">研究 → プロットチャネル対策</span> メニュー項目。 プロットが可能になりました。
 
 ![](/assets/images/studyplot1.png) 
 
@@ -178,7 +172,7 @@ Spectra は ERP を 翻訳する *Plot spectra* ボタンに隣接する *Params
 
 ![](/assets/images/studyplot30.png) 
 
-チャンネル*FP1* Plot spectra*まで。 [pop_chanplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanplot.m) ログイン 以下のプロットがポップアップします。
+チャンネル*FP1* Plot spectra*まで。 [pop_chanplot.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanplot.m) を実行すると以下のプロットがポップアップします。
 
 ![](/assets/images/studyplot31.png)
 
@@ -188,23 +182,19 @@ Spectra は ERP を 翻訳する *Plot spectra* ボタンに隣接する *Params
 
 ![](/assets/images/studyplot32.png) 
 
-特に10列のルールは、 すべての の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 。 [ドラメ ら (2014)](https://pubmed.ncbi.nlm.nih.gov/25447029/).
+特に10列のルールは、すべての試行で適用されます。 [ドラメ ら (2014)](https://pubmed.ncbi.nlm.nih.gov/25447029/).
 
 ### Plotting ERSPs と ITCs
 
-*Plot ITC*ボタンが開きます。 *animal* および *distractor* の 条件 の 相互trial の 条件 は *distractor* の 条件 の の の の の の の の の の の の の の の の の の の の の の の の の の は の の の の の の の の の の の の の の は の の の に の の の の の の の の の の の の の の の の の の の は の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の の
+*Plot ITC*ボタンが開きます。 *animal* および *distractor* の 条件の相互trial coherenceが表示されます。 
 
-![](/assets/images/studyplot34.png) 
-
-*Plot ERSPs* は、Plot ERSPs* で、Plot ERSPs* は、Plot ERSPs* で、Plot ERSPs* は、Plot ERSPs* で、Plot ERSPs* は、Plot で、Plot ERSPs* は、Plot で、Plot ERSPs* は、Plot で、Plot は、Plot で、Plot は、Plot で、Plot は、Plot は、Plot で、Plot は、Plot は、Plot は、Plot は、Plot は、Plot は、Plot で、Plot は、Plot は、Plot は、Plot は、Plot は、Plot は、Plot は、Plot は、Plot は、Plot は、Plot は、Plot は、Plot は、Plot は、Plot は、Plot は、
-
-![](/assets/images/studyplot33.png) 
+*Plot ERSPs* ボタンで、 
 
 ERPやスペクトラム、Scalプトプトポグラフィをプロットする。 *Plot ERSP* ボタンを閉じる *Params* ボタン、周波数範囲の "500 800" と 4。 プレス *Ok*.
 
 ![](/assets/images/studyplot35.png) 
 
-*Plot ERSPs*ボタンを押します。 この この この
+*Plot ERSPs*ボタンを押します。
 
 ![](/assets/images/studyplot36.png) 
 
@@ -214,4 +204,4 @@ ERPやスペクトラム、Scalプトプトポグラフィをプロットする�
 複数の *STUDIES* と、異なる信号の呼び出し。
 .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 1時間/頻度測定を1つの計算し、
-他人 のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ のみ STUDY*フォルダとすべてのデータ通信 別のファイル
+他は表示のみです。 STUDY*フォルダとすべてのデータ通信 別のファイル
