@@ -101,7 +101,7 @@ git clone --recurse-submodules https://github.com/sccn/eeglab.git
 
 これは、ステップが重要であるか、または多くの演習が実行されません。 これは、downlaodへのプラグインのリストです。
 * ファイルIO
-*  フィールドトリップライト
+*  FieldTripライト
 * リモ
 
 EEGLABプラグインマネージャ(EEGLABメニュー項目**ファイル>)を使用するのが最善です。 拡張** を管理し、インストールするプラグインを選択します。

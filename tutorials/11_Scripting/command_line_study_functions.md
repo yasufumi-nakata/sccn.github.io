@@ -543,7 +543,7 @@ ans =
     {820×61 double}
 ```
 
-また、低レベル関数を呼び出すこともできます。 [スタコンド。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) そして、 [スタコンドフィールドトリップ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) 直接(追加情報のための機能ヘルプメッセージを参照)。 例えば:
+また、低レベル関数を呼び出すこともできます。 [スタコンド。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) そして、 [スタコンドFieldTrip](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) 直接(追加情報のための機能ヘルプメッセージを参照)。 例えば:
 
 ```matlab
 res = statcond(erpdata); size(res)

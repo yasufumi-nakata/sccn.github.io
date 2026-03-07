@@ -15,14 +15,14 @@ long_title: Documentation
 ### *get_chanlocs*とは?
 
 *get_chanlocs* EEGLABプラグインは、関数に組み込まれています
-[フィールドトリップ](http://www.fieldtriptoolbox.org/) 検索する 3-D電極
+[FieldTrip](http://www.fieldtriptoolbox.org/) 検索する 3-D電極
 3Dスキャンしたヘッドイメージからの位置。 ロバート・オオオステンド
 FieldTripツールボックスは、2017年に生徒たちと生徒達に警告しました。
 Nijmegen は、Scalp の計算位置を FieldTrip に関数を置く
 記録された3D画像から1つの3Dカメラ、
 [構造の走査器](https://structure.io/) Apple iPadに取り付けました。
 (読みます) [Homölle と Oostenveld
-(2019)](https://doi.org/10.1016/j.jneumeth.2019.108378)および[組み込みフィールドトリップ関数](http://www.fieldtriptoolbox.org/tutorial/electrode/)。 お問い合わせ
+(2019)](https://doi.org/10.1016/j.jneumeth.2019.108378)および[組み込みFieldTrip関数](http://www.fieldtriptoolbox.org/tutorial/electrode/)。 お問い合わせ
 SCCN は EEGLAB プラグイン拡張機能 (*get_chanlocs*) を作成しました。
 電極の位置をデジタル化するプロセス
 3Dを取得して、*EEG.chanlocs*データ構造に入力

@@ -207,7 +207,7 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
 
 ### 統計と信号処理
 
--   **[ フィールドトリップライト](https://github.com/fieldtrip/fieldtrip):** フィールド トリップはスタンドアローンのツールボックスですが、ソースローカリゼーション方法と追加の統計方法を提供する EEGLAB 拡張機能として機能することもできます。
+-   **[ FieldTripライト](https://github.com/fieldtrip/fieldtrip):** フィールド トリップはスタンドアローンのツールボックスですが、ソースローカリゼーション方法と追加の統計方法を提供する EEGLAB 拡張機能として機能することもできます。
 
 -   **[リモ](https://github.com/LIMO-EEG-Toolbox/limo_tools):** MEEGデータ(LIMO MEEG)ツールボックスのLInear MOdellingは、MEEGデータの統計解析に専用のEEGLABプラグインです。
 

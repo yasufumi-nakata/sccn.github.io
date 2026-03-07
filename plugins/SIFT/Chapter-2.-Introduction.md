@@ -148,7 +148,7 @@ EEGLABソフトウェアスイートと組み合わせて、対処したい。
 | グランジェ・キャサリティ・コネクティビティ分析(GCCA) ツールボックス | アニルセス | <https://www.sussex.ac.uk/research/centres/sussex-centre-for-consciousness-science/resources/connectivity> | GPL 3 | GPL 3 | GPL 3 | GPL 3 |
 | 時系列分析(TSA) ツールボックス | アロワス・シュロゲル | <https://sourceforge.net/p/octave/tsa/ci/default/tree/>                 | GPL2 | GPL2 | GPL2 | GPL2 |
 | E-Connectome | ビン・ヘ | <https://www.nitrc.org/projects/econnectome>                               | GPL 3 | GPL 3 | GPL 3 | GPL 3 |
-| フィールドトリップ | ロバート・オオステヴェル お問い合わせ  <http://fieldtrip.fcdonders.nl/>                            | GPL2 | GPL2 | GPL2 | GPL2 |
+| FieldTrip | ロバート・オオステヴェル お問い合わせ  <http://fieldtrip.fcdonders.nl/>                            | GPL2 | GPL2 | GPL2 | GPL2 |
 | 多品種オートレグレッシブ・タイムズシリーズ(BSMART)用脳システム | ジー・クイ |  <http://www.brain-smart.org/>                               | --      |
 
 

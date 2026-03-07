@@ -49,7 +49,7 @@ cd <eeglab_install_location>/eeglab/plugins
 ```
 git clone https://github.com/sccn/roiconnect.git
 ```
-です。 プラグインを実行したい場合は、起動してください [EEGLAB](https://github.com/sccn/eeglab#to-use-eeglab) まずは。 EEGLAB を追加する必要があります。 [MATLABパス](https://de.mathworks.com/help/matlab/ref/addpath.html)お問い合わせ 一部の機能は追加のインストールが必要な場合があります  [フィールドトリップ(ライトまたはノーマル)](https://www.fieldtriptoolbox.org) そして、 [ブラインド映画](https://github.com/arnodelorme/brainmovie).
+です。 プラグインを実行したい場合は、起動してください [EEGLAB](https://github.com/sccn/eeglab#to-use-eeglab) まずは。 EEGLAB を追加する必要があります。 [MATLABパス](https://de.mathworks.com/help/matlab/ref/addpath.html)お問い合わせ 一部の機能は追加のインストールが必要な場合があります  [FieldTrip(ライトまたはノーマル)](https://www.fieldtriptoolbox.org) そして、 [ブラインド映画](https://github.com/arnodelorme/brainmovie).
 
 なぜこの EEGLAB プラグインは EEGLAB プラグインマネージャではありませんか? プラグインはベータです。 完了したら、EEGLABプラグインマネージャに追加されます。 
 

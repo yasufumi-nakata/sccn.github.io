@@ -54,7 +54,7 @@ EEG.etc.ic_classification.ICLabel.classes{3}
 ![](Viewprops_eye.png)
 ICLabel プラグインは、組み込みのプロットやビジュアライゼーションを提供していません。したがって、インストールすることも強くお勧めします。 [Viewprops プラグイン](https://sccn.ucsd.edu/wiki/Viewprops)お問い合わせ この記事の一番上に示したような数字を生成します。 詳細はこちら [導入事例](https://sccn.ucsd.edu/wiki/ICLabel#Installation) 取得方法に関するセクション [Viewprops プラグイン](https://sccn.ucsd.edu/wiki/Viewprops) 見る [wikiページ](https://sccn.ucsd.edu/wiki/Viewprops) 使用方法に関する情報
 
-### フィールドトリップでICLabelを実行
+### FieldTripでICLabelを実行
 
 まず EEGLAB をインストールします(デフォルトでは ICLabel プラグインを含みます)。 以下のスクリプトを使用します。
 

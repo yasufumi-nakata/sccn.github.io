@@ -64,7 +64,7 @@ DIPFITは現在、FieldTripのソースイメージング機能を統合して�
 
 まず、DIPFITでヘッドモデルを設定し、電極位置を共同登録します（メニュー項目 <span style="color: brown">ツール → DIPFIT → ヘッドモデルと設定</span>）。DIPFIT
 情報は、ソースのローカリゼーションを実行するために使用することができる
-フィールドトリップ
+FieldTrip
 
 ### ボリュームでソースの再構築を実行
 
@@ -191,7 +191,7 @@ ft_sourceplot(cfg, sourceInt);
 ### 表面にソースを再構築する
 
 あるいは、下のコードは皮質表面上のリードフィールド行列を生成します。DIPFITのヘッドモデル設定で指定した座標系を使用します。異なるメッシュ解像度のバージョンが利用可能です。詳しくは
-[このフィールドトリップチュートリアル](http://www.fieldtriptoolbox.org/template/sourcemodel/) のための
+[このFieldTripチュートリアル](http://www.fieldtriptoolbox.org/template/sourcemodel/) のための
 詳細情報。 以下のコードは実行していると仮定します
 上記のコード。
 

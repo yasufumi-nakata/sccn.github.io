@@ -235,7 +235,7 @@ Ok* と A の 共同作業
 9チャンネルのA値表(シフト3D、回転)の
 3D, scaling, 3-Dで, ユーザ名*Talairach-model変換行*フィールドにコピーする [ヘッドプロットム](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m) ウィンドウ。 チャンネルの共同登録の詳細については、を参照してください。 [ソース再構築チュートリアル](/tutorials/09_source/DIPFIT.html).
 
-可能であり、比較的簡単に、カスタムを生成する [ヘッドプロットム](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m) ヘッドメッシュ。 フリーサーファー か、 [フィールドトリップ](https://www.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
+可能であり、比較的簡単に、カスタムを生成する [ヘッドプロットム](http://sccn.ucsd.edu/eeglab/locatefile.php?file=headplot.m) ヘッドメッシュ。 フリーサーファー か、 [FieldTrip](https://www.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
 
 異なる条件を比較し、統計を実行
 ---------------------------

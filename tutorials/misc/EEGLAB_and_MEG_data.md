@@ -122,7 +122,7 @@ MEGについて
 
 参考リンク
 --------------------
-EEGLABのMEGのソースローカリゼーションは、フィールドトリップ機能が機能します。 FieldTrip では、 EEGLAB のソフトウェアは、MATLAB のソフトウェアを、EEGLAB のソフトウェアにインストールしてください。
+EEGLABのMEGのソースローカリゼーションは、FieldTrip機能が機能します。 FieldTrip では、 EEGLAB のソフトウェアは、MATLAB のソフトウェアを、EEGLAB のソフトウェアにインストールしてください。
 
 -   <http://www.nitrc.org/projects/fieldtrip>
 -   <http://www.nitrc.org/projects/cuda_sphere_fwd>

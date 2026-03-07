@@ -6,7 +6,7 @@ long_title: EEGLAB and FieldTrip
 parent: Interoperability
 ---
 
-EEGLABとフィールドトリップ
+EEGLABとFieldTrip
 =========================
 お問い合わせ
 <details open markdown="block">
@@ -32,7 +32,7 @@ EEGLAB DIPFITプラグインによるEEGLABへの基本的なソースローカ�
 MATLABコードロバートがダイポールフィッティングのために開発されました。 多岐に渡る
 ドナーズ脳研究所で書かれた他の機能, 認知,
 と Behavior(オランダ・ニジメゲン)、ソースコードが貢献
-Robert Oostenveld に DIPFIT は、フィールドトリップの基礎として機能しました。
+Robert Oostenveld に DIPFIT は、FieldTripの基礎として機能しました。
 2005年 ドナーズ・インスティテュートより発売 パッケージの実行
 MATLAB(マツワークス株式会社)
 
@@ -68,7 +68,7 @@ EEGLABとFieldTripの開発者は、毎年、または毎年会います
     EEGLAB関数を使用してカスタム分析スクリプトを書く
     EEGLAB GUI の使い方
 
--   フィールドトリップは、グループデータを処理するための限られたツールを提供しています。 マネージング
+-   FieldTripは、グループデータを処理するための限られたツールを提供しています。 マネージング
     グループデータは、ユーザーの選択に意図的に残されます
     ユーザーが事前定義された使用を余儀なくされない合理的
     実験設計をモデル化するためのスキーム。 対照的に、EEGLAB 
@@ -92,7 +92,7 @@ EEGLABとFieldTripの開発者は、毎年、または毎年会います
 
 -   一般的なFieldTripに新しい貢献を追加
     ドナーズセンターがサポートするパッケージ。 練習では、これはそれを作る
-    外部開発者がコード(フィールドトリップ)を貢献するのは難しい
+    外部開発者がコード(FieldTrip)を貢献するのは難しい
     開発者はこれについて開いていますが。 EEGLABでは、すべての第三者
     EEGLABの拡張機能(旧)として、コントリビュートが利用可能
     'プラグイン' 現在、120以上のEEGLAB拡張機能があります。
@@ -146,7 +146,7 @@ EEGLABとFieldTripの開発者は、毎年、または毎年会います
     特定のデータ構造(FieldTrip)の変換に焦点を合わせる
     それらのいくつかは、すべての目的関数であることを意味しません。
     EEGLABはFILE-IOからデータをインポートすることもできます。
-    フィールドトリップによって保存されたMATLABファイル。 注目すべき関数名があります
+    FieldTripによって保存されたMATLABファイル。 注目すべき関数名があります
     EEGLABとFieldTripを併用するときの競合 -
     *topoplot.m* 関数は、ツールボックス(EEGLAB は、競合を処理します)に存在します。
 
@@ -196,7 +196,7 @@ FieldTrip スクリプトを EEGLAB プラグイン メニュー項目にラッ�
 
 歴史のコラボレーションから、
 EEGLAB チャネルの場所は、FieldTrip と簡単に整列できます。
-EEGLAB のグラフィックインターフェースからヘッドモデルを生成し、EEGLAB のフィールドトリップソース再構築方法を最大限に活用できます。
+EEGLAB のグラフィックインターフェースからヘッドモデルを生成し、EEGLAB のFieldTripソース再構築方法を最大限に活用できます。
 データセットは、
 [ソース ローカリゼーションセクション](/tutorials/09_source/EEG_sources.html#advanced-source-reconstruction-using-dipfitfieldtrip) チュートリアルの。
 
