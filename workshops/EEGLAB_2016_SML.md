@@ -96,7 +96,7 @@ Best Western Hotel Regina Elenaでワークショップを開催します。
 **EEGLABのグループ分析とICAクラスタリング* * 必須
 
 
-<span style="color: purple">9:00～9:45 なぜEEGデータのクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering.pdf)
+<span style="color: purple">9:00～9:45 なぜEEGデータのクラスターICAコンポーネント? (Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering.pdf)
 
 <span style="color: purple">9:45 - 10:45 -- EEGデータ(Cyril Pernet)の複数の比較のための強力な統計、実験設計および修正</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/robuststats_ci_mcc_for_eeg.pdf)
 

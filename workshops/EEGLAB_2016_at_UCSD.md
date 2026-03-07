@@ -100,11 +100,11 @@ EEGLAB は、より高度な EEGLAB ツールボックスや、
 
 
 
-<span style="color: mediumblue"> 2:00 - 3:00 -- D1.A1: データのインポート/処理と基本的なプロット (ジュリー・オントン)</span> [PDFダウンロード](https://sccn.ucsd.edu/githubwiki/files/1_eeglab2016_jo_preproc_new.pdf)
+<span style="color: mediumblue"> 2:00 - 3:00 -- D1.A1: データのインポート/処理と基本的なプロット (Julie Onton)</span> [PDFダウンロード](https://sccn.ucsd.edu/githubwiki/files/1_eeglab2016_jo_preproc_new.pdf)
 
 <span style="color: saddlebrown">午後3時～午後3時 コーヒーブレイク</span>
 
-3:15 - 4:15 -- D1.A2:ICAとICの視覚化の実行(ジュリー・オントン) [PDFダウンロード](https://sccn.ucsd.edu/githubwiki/files/2_eeglab2016_jo_artifact_and_ica.pdf)
+3:15 - 4:15 -- D1.A2:ICAとICの視覚化の実行(Julie Onton) [PDFダウンロード](https://sccn.ucsd.edu/githubwiki/files/2_eeglab2016_jo_artifact_and_ica.pdf)
 
 4:15 - 5:00 -- D1.A3:独立したコンポーネントの評価(Luca Pion-Tonachini) [PDFダウンロード](https://sccn.ucsd.edu/githubwiki/files/3_eeglab2015_lpt_evaluation_ica.pdf)
 
@@ -213,7 +213,7 @@ EEGLAB は、より高度な EEGLAB ツールボックスや、
 
 <span style="color: saddlebrown">8:00 AM - 受付開始 -- コーヒーあり </span>
 
-<span style="color: mediumblue"> 午前8時30分～午後9時15分 被験者間でEEGデータの独立したコンポーネントのクラスタリング: なぜ? とどのように? (スコットメイク)</span>
+<span style="color: mediumblue"> 午前8時30分～午後9時15分 被験者間でEEGデータの独立したコンポーネントのクラスタリング: なぜ? とどのように? (Scott Makeig)</span>
 
 <span style="color: mediumblue"> 9:15 - 10:15 午前 -- EEGLAB(Arnaud Delorme)で独立したコンポーネントクラスター分析を実行 [PDFダウンロード](https://sccn.ucsd.edu/githubwiki/files/delorme2016_clustering2.pdf) </span>
 

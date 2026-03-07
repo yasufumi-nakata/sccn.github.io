@@ -14,8 +14,8 @@ nav_order: 7
 
 ## ソース情報フローツールボックス
 
-開発:ティム・ムレン2009-
-維持: ティム・ムレンとアルナード・デローム
+開発:Tim Mullen2009-
+維持: Tim MullenとArnaud Delorme
 
 SIFTは、EEGLAB対応のツールボックスです。
 ソース間の多variateの因性および情報の流れ

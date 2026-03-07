@@ -41,9 +41,9 @@ MATLABをインストールしたノートパソコン
 <i>所在地:</i> 主要な会議室、Pavillon Baudot、Purpanの病院、
 トゥールーズ([アクセス可能](http://www.cerco.ups-tlse.fr/-Acces-?lang=en))
 <i>登録:</i> このイベントは、全て無料です。
-<i>シンポジウムモデレータ:</i> スコット・マディグ
+<i>シンポジウムモデレータ:</i> Scott Makeig
 
-<span style="color: purple">13:00-13:10 - シンポジウム入門 - スコット・マディグ </span>
+<span style="color: purple">13:00-13:10 - シンポジウム入門 - Scott Makeig </span>
 
 <span style="color: purple">13:10-14:40 - BIDSとは何ですか? - Cyrilパーネット </span>
 
@@ -121,7 +121,7 @@ MATLABをインストールしたノートパソコン
 **EEGLABのグループ分析とICAクラスタリング* * 必須
 
 
-<span style="color: purple">8:30～9:00 なぜクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_aspet19_clustering.pdf)
+<span style="color: purple">8:30～9:00 なぜクラスターICAコンポーネント? (Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_aspet19_clustering.pdf)
 
 <span style="color: purple">9:00 - 9:45 -- 複数の比較のためのBootstrapそして修正(Cyril Pernet)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/pernet_2019_bootstrap&eeg-mcc_eegworkshop.pdf)
 

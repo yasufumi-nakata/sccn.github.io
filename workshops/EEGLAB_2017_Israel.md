@@ -82,7 +82,7 @@ EEGおよび関連データ、詳細な方法の博覧会および実用的
 **EEGLABのグループ分析とICAクラスタリング* * 必須
 
 
-<span style="color: purple">8:45～9:15～ なぜクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_israel17_clustering.pdf)
+<span style="color: purple">8:45～9:15～ なぜクラスターICAコンポーネント? (Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_israel17_clustering.pdf)
 
 <span style="color: purple">9:15 - 10:15-- 複数の比較のための強力な統計と修正(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_statistics_israel2.pdf)
 

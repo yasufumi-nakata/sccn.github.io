@@ -86,7 +86,7 @@ EEGおよび関連データの分析、詳細な方法の記述および
 
 <span style="color: purple">10:15PM – 11:15PM -- ソース情報フローとGranger-Causalモデリングツール(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/delorme_eeglab_causal_model_pittsburgh2018.pdf)
 
-<span style="color: purple">11:15～12:30 なぜクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_pittsburgh18_clustering.pdf)
+<span style="color: purple">11:15～12:30 なぜクラスターICAコンポーネント? (Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_pittsburgh18_clustering.pdf)
 <!-- -->
 
 

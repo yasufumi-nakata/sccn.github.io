@@ -71,7 +71,7 @@ EEGおよび関連データの高度な分析、詳細な方法
 [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_cb_evaluate_ic.pdf)
 
 <span style="color: purple">14:00- 15:00 -- 時間頻度分解
-practicum (ティム・ムレン)</span>
+practicum (Tim Mullen)</span>
 [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_tm_time_frequency.pdf)
 <!-- -->
 

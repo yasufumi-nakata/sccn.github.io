@@ -140,7 +140,7 @@ MATLABをインストールしたノートパソコン
 **EEGLABのグループ分析とICAクラスタリング* * 必須
 
 
-<span style="color: purple">8:30～9:15～ なぜクラスターICAコンポーネント? (スコットメイク)</span>
+<span style="color: purple">8:30～9:15～ なぜクラスターICAコンポーネント? (Scott Makeig)</span>
 
 <span style="color: purple">9:15 - 10:00 -- クラスタのpermutationのテスト(Robert Oostenveld)</span> 
 [サイトマップ](https://github.com/sccn/sccn.github.io/files/11954943/cluster.statistics.pdf)

@@ -95,7 +95,7 @@ EEGおよび関連データの高度な分析を実行し、詳細
 **EEGLABのグループ分析とICAクラスタリング* * 必須
 
 
-<span style="color: purple">8:30～9:00 なぜクラスターICAコンポーネント? (スコットメイク)</span>
+<span style="color: purple">8:30～9:00 なぜクラスターICAコンポーネント? (Scott Makeig)</span>
 
 <span style="color: purple">9:00～9:30 複数の比較のための強力な統計と修正(Cyril Pernet)</span>
 

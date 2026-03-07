@@ -20,7 +20,7 @@ EEGLABは、電気生理学のためのオープンソースソフトウェア�
 EEGLAB ワークショップは9月2日(水)まで開催します。
 2015年09月05日 英国シェフィールド大学にて ふりがな
 ワークショップはチュートリアル、デモンストレーション、実用的で構成されます
-セッション。 それはスコット・マディグ、Arnaud Delorme、およびジョンによって導かれます
+セッション。 それはScott Makeig、Arnaud Delorme、およびジョンによって導かれます
 Swartz Center for Computational Neuroscience、UCSDのイヴァーン。 ふりがな
 住宅コースは50名までしか限られません。
 高度な EEG 分析と会議についての詳細を学ぶための素晴らしい機会
@@ -118,7 +118,7 @@ EEGLABワークショップは、9月1日(火)までに予定されます。
 
 
 
-<span style="color: purple">9:00～9:45 なぜクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering_sheffield15.pdf)
+<span style="color: purple">9:00～9:45 なぜクラスターICAコンポーネント? (Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering_sheffield15.pdf)
 
 <span style="color: orange">9:45～10:45 STUDY、STUDYの設計、プロット、統計の作成(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2015_ad_studydesign.pdf)
 <!-- -->

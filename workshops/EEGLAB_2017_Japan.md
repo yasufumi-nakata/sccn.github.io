@@ -88,7 +88,7 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 **EEGLABのグループ分析とICAクラスタリング* * 必須
 
 
-<span style="color: purple">10:00 - 11:00 - 11:00 なぜクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering_tokyo17.pdf)
+<span style="color: purple">10:00 - 11:00 - 11:00 なぜクラスターICAコンポーネント? (Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering_tokyo17.pdf)
 
 <span style="color: green">11:00～15:30 -- エクスカーション(野外実験と新宿御苑でのハイキング) </span>
 

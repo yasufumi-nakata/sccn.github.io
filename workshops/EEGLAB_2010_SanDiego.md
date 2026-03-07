@@ -77,7 +77,7 @@ grand_parent: Workshops
 
 
 
-<span style="color:purple">[DIPFITツールボックスの使用 (ジューリー Onton)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_dipfit.html)</span>
+<span style="color:purple">[DIPFITツールボックスの使用 (Julie Onton)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_dipfit.html)</span>
 [スライド](https://sccn.ucsd.edu/githubwiki/files/eeglab2010_jo_nov19_dipolemodeling.pdf) 
 
 <span style="color:darkred"><b>被写体全体での計算
@@ -133,7 +133,7 @@ grand_parent: Workshops
 [インタビュー](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_info_flow.html)
 [スライド](https://sccn.ucsd.edu/githubwiki/files/eeglab_12th_workshop_talk_2010_mullen.pdf)
 
-<span style="color:purple">Practicum(ティム・ムレン)</span>
+<span style="color:purple">Practicum(Tim Mullen)</span>
 [SIFT Toolbox(アルファ)をダウンロード](ftp://sccn.ucsd.edu/pub/SIFT_01_alpha.zip)
 
 <!-- -->

@@ -62,7 +62,7 @@ grand_parent: Workshops
 
 <span style="color: purple">3:50 – 4:30 午後 -- ICAクラスタリング(Scott Makeig)</span> ([PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab_indiana_clustering.pdf))
 
-<span style="color: purple">4:30～17:00 - アメリカ クラスタリング例(ジュリー・オントン)</span>([PDF](https://sccn.ucsd.edu/githubwiki/files/clusteringexamples.pdf))
+<span style="color: purple">4:30～17:00 - アメリカ クラスタリング例(Julie Onton)</span>([PDF](https://sccn.ucsd.edu/githubwiki/files/clusteringexamples.pdf))
 
 <u><span style="color: blue">4月21日(火)</span></u>
 
@@ -73,7 +73,7 @@ grand_parent: Workshops
 
 <span style="color: orange">8:30～9:20～ データのインポートとチャネル分析(Julie Onton)</span> [(PDF)](https://sccn.ucsd.edu/githubwiki/files/practicum_1_data_import.pdf)
 
-<span style="color: orange">9:20 – 10:10 午後 -- アーティファクト拒絶とランニング ICA (ジュリー・オントン)</span> [(PDF)](https://sccn.ucsd.edu/githubwiki/files/practicum_2_preprocess_ica.pdf)
+<span style="color: orange">9:20 – 10:10 午後 -- アーティファクト拒絶とランニング ICA (Julie Onton)</span> [(PDF)](https://sccn.ucsd.edu/githubwiki/files/practicum_2_preprocess_ica.pdf)
 
 <span style="color: green">-- ブレーク -</span>
 
@@ -105,7 +105,7 @@ grand_parent: Workshops
 
 
 
-<span style="color: orange"> 8:30～9:20 -- STUDYGUI入門(ジュリー・オントン)</span>
+<span style="color: orange"> 8:30～9:20 -- STUDYGUI入門(Julie Onton)</span>
 [(PDF)](https://sccn.ucsd.edu/githubwiki/files/practicum_8_studygui.pdf)
 
 <span style="color: orange">9:20 – 10:10 午後 – プロットと編集クラスター (Arnaud Delorme)</span>
@@ -113,7 +113,7 @@ grand_parent: Workshops
 
 <span style="color: green">-- ブレイク -- </span>
 
-<span style="color: orange">10:30– 11:20 – STUDYスクリプトの構築(ジュリー・オントン)</span>
+<span style="color: orange">10:30– 11:20 – STUDYスクリプトの構築(Julie Onton)</span>
 [(PDF)](https://sccn.ucsd.edu/githubwiki/files/practicum_10_studyscripting.pdf)
 
 <span style="color: orange">11:20 – 12:10 午前 -- STUDY 解析 (Julie Onton)</span>

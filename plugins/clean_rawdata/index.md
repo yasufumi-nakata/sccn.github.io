@@ -26,7 +26,7 @@ Clean Rawdata プラグイン (バージョン 2.0) インターフェイスが�
 BCILAB ToolboxのChristian Kotheによる復元、ASR) 
 (Kothe & Makeig, 2013), 最初にEEGLABプラグインにラップ 
 宮越真琴とArnaud Delormeが開発した 
-スコット・マディグ。
+Scott Makeig。
 
 このプラグインは、生EEGデータをクリーンアップします。 BCILABツールボックスのメソッド
 使用される(特にアーティファクトサブスペース復元)

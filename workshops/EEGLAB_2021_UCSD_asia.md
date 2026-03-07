@@ -80,7 +80,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">07:00pm</span>– 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">8月10日</span>– 
-				 <strong>EEGLABの新機能</strong> (アルナード・デローム)
+				 <strong>EEGLABの新機能</strong> (Arnaud Delorme)
 			</span>
 		</p>
 	</li>
@@ -89,7 +89,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">8月15日</span>– 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span> – 
-				<strong>マイニングイベント関連の脳の動的</strong> (スコットメイク) 
+				<strong>マイニングイベント関連の脳の動的</strong> (Scott Makeig) 
 			</span>
 		</p>
 	</li>
@@ -209,7 +209,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00午後</span>– 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:45午後</span> – 
-				<strong>EEGLABデータのインポートと「bad」のデータ可視化</strong> (ジュリー・オントン) 
+				<strong>EEGLABデータのインポートと「bad」のデータ可視化</strong> (Julie Onton) 
 			</span>
 		</p>
 	</li>
@@ -227,7 +227,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00～20:00</span>– 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span> – 
-				<strong>ICA理論</strong> (スコットメイク) 
+				<strong>ICA理論</strong> (Scott Makeig) 
 			</span>
 		</p>
 	</li>
@@ -303,7 +303,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時45分</span> - 
-				<strong>LSL導入と実証</strong> (クリスティアン・コーテ) 
+				<strong>LSL導入と実証</strong> (Christian Kothe) 
 			</span>
 		</li>
 	</ul>
@@ -314,7 +314,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時45分</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span> - 
-				<strong>lsl_app_matlabviewer は、 EEGLABプラグイン</strong> (アルナード・デローム) 
+				<strong>lsl_app_matlabviewer は、 EEGLABプラグイン</strong> (Arnaud Delorme) 
 			</span>
 		</li>
 	</ul>
@@ -325,7 +325,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span> - 
-				<strong>LSLの同期とその他のトピック</strong> (クリスティアン・コーテ) 
+				<strong>LSLの同期とその他のトピック</strong> (Christian Kothe) 
 			</span>
 		</li>
 	</ul>
@@ -358,7 +358,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:30～14:00</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
-				<strong>LSLラップアップ</strong> (キム・ムレン) 
+				<strong>LSLラップアップ</strong> (Tim Mullen) 
 			</span>
 		</li>
 	</ul>
@@ -381,7 +381,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00午後</span>– 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:45午後</span> – 
-				<strong>ICA分解PRACTICUM</strong> (ジュリー・オントン) 
+				<strong>ICA分解PRACTICUM</strong> (Julie Onton) 
 			</span>
 		</p>
 	</li>
@@ -399,7 +399,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00～20:00</span>– 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">09:00pm(最終受付)</span> – 
-				<strong>EEG接続解析</strong> (キム・ムレン) 
+				<strong>EEG接続解析</strong> (Tim Mullen) 
 			</span>
 		</p>
 	</li>
@@ -464,7 +464,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span> - 
-				<strong>DIPFITとROIconnectプラグイン</strong> (アルナード・デローム) 
+				<strong>DIPFITとROIconnectプラグイン</strong> (Arnaud Delorme) 
 			</span>
 		</li>
 	</ul>
@@ -475,7 +475,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時45分</span> - 
-				<strong>SIFTを用いた接続解析</strong> (キム・ムレン) 
+				<strong>SIFTを用いた接続解析</strong> (Tim Mullen) 
 			</span>
 		</li>
 	</ul>
@@ -486,7 +486,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時45分</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span>- 
-				<strong>シフト練習</strong> (キム・ムレン) 
+				<strong>シフト練習</strong> (Tim Mullen) 
 			</span>
 		</li>
 	</ul>
@@ -509,7 +509,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:00午後</span>– 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">06:45午後</span> – 
-				<strong>ICAクラスタリング練習</strong> (ジュリー・オントン) 
+				<strong>ICAクラスタリング練習</strong> (Julie Onton) 
 			</span>
 		</p>
 	</li>
@@ -518,7 +518,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">07:00pm</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">08:00～20:00</span> – 
-				<strong>EEGLABグループ分析</strong> (アルナード・デローム) 
+				<strong>EEGLABグループ分析</strong> (Arnaud Delorme) 
 			</span>
 		</p>
 	</li>
@@ -563,7 +563,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span> - 
-				<strong>リニアモデリング入門</strong> (アルナード・デローム) 
+				<strong>リニアモデリング入門</strong> (Arnaud Delorme) 
 			</span>
 		</li>
 	</ul>
@@ -657,7 +657,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">07:00pm</span>– 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後8時30分</span> – 
-				<strong>マイニングイベント関連の脳の動的 第2回</strong> (スコットメイク) 
+				<strong>マイニングイベント関連の脳の動的 第2回</strong> (Scott Makeig) 
 			</span>
 		</p>
 	</li>
@@ -701,7 +701,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span> - 
-				<strong>EEGLABスタディの作成</strong> (アルナード・デローム) 
+				<strong>EEGLABスタディの作成</strong> (Arnaud Delorme) 
 			</span>
 		</li>
 	</ul>
@@ -712,7 +712,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時45分</span>- 
-				<strong>EEGLABの研究、実践</strong> (アルナード・デローム) 
+				<strong>EEGLABの研究、実践</strong> (Arnaud Delorme) 
 			</span>
 		</li>
 	</ul>
@@ -723,7 +723,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後10時45分</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:15pm</span>- 
-				<strong>EEGLABの研究、実践とスクリプト</strong> (アルナード・デローム) 
+				<strong>EEGLABの研究、実践とスクリプト</strong> (Arnaud Delorme) 
 			</span>
 		</li>
 	</ul>
@@ -734,7 +734,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11:15pm</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
-				<strong>EEGLABと高性能コンピューティング</strong> (アルナード・デローム) 
+				<strong>EEGLABと高性能コンピューティング</strong> (Arnaud Delorme) 
 			</span>
 		</li>
 	</ul>
@@ -752,7 +752,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後9時30分</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月10日</span> - 
-				<strong>アーティファクト・サブスペースの復興</strong> (クリスティアン・コーテ) 
+				<strong>アーティファクト・サブスペースの復興</strong> (Christian Kothe) 
 			</span>
 		</li>
 	</ul>

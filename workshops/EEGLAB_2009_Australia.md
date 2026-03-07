@@ -27,7 +27,7 @@ grand_parent: Workshops
 
 <span style="color: purple">8:30 – 9:30 am--- マイニングイベント関連の脳力学I(Scott Makeig)</span>
 
-<span style="color: purple">9:30 - 10:00 am -- EEGLABの概要(ジュリー・オントン)</span>
+<span style="color: purple">9:30 - 10:00 am -- EEGLABの概要(Julie Onton)</span>
 
 
 
@@ -41,7 +41,7 @@ grand_parent: Workshops
 
 <span style="color: green">**-- 12:00-1:00 ランチ --**</span>
 
-<span style="color: orange">1:00 - 1:30 午後 -- アーティファクト拒絶とICA(ジュリー・オントン)の実行</span>
+<span style="color: orange">1:00 - 1:30 午後 -- アーティファクト拒絶とICA(Julie Onton)の実行</span>
 
 <span style="color: purple">午後2時～午後2時30分 時間頻度分解(Tzyy-Ping Jung)</span>
 
@@ -59,7 +59,7 @@ grand_parent: Workshops
 
 
 
-<span style="color: orange">8:30 - 9:00 am -- EEGLABの歴史を使った基本スクリプト(ジュリー・オントン)</span>
+<span style="color: orange">8:30 - 9:00 am -- EEGLABの歴史を使った基本スクリプト(Julie Onton)</span>
 
 <span style="color: purple">9:30 - 10:00 am -- フォワードと逆モデル(Tzyy-Ping Jung)</span>
 
@@ -75,7 +75,7 @@ grand_parent: Workshops
 
 <span style="color: green">**-- 12:00-1:00 ランチ --**</span>
 
-<span style="color: orange">1:00 - 1:45 午後 -- 先端IC解析(ジュリー・オントン)</span>
+<span style="color: orange">1:00 - 1:45 午後 -- 先端IC解析(Julie Onton)</span>
 
 <span style="color: purple">1:45～14:30 -- ICのクラスタリング(Julieのオントン)</span>
 
@@ -83,17 +83,17 @@ grand_parent: Workshops
 
 <span style="color: green">**---ブレイク(2:30-3:00) --** </span>
 
-<span style="color: purple">3:00 - 3:30 am -- STUDYGUI入門(ジュリー・オントン)</span>
+<span style="color: purple">3:00 - 3:30 am -- STUDYGUI入門(Julie Onton)</span>
 
-<span style="color: orange">午後3時30分～午後5時 プロットと編集クラスター(ジュリー・オントン)</span>
+<span style="color: orange">午後3時30分～午後5時 プロットと編集クラスター(Julie Onton)</span>
 
 <span style="color:  blue">**11月27日(金)**</span>
 
 
 
-<span style="color: orange">8:30 -9:15 am -- STUDY(ジュリー・オントン)の構築</span>
+<span style="color: orange">8:30 -9:15 am -- STUDY(Julie Onton)の構築</span>
 
-<span style="color: orange">9:15 - 10:00 am -- STUDY分析(ジュリー・オントン)</span>
+<span style="color: orange">9:15 - 10:00 am -- STUDY分析(Julie Onton)</span>
 
 
 

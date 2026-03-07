@@ -144,7 +144,7 @@ MATLABをインストールしたノートパソコン
 <span style="color: purple">11:20 – 11:50 -- PCA対ICAとRELICA(Fiorenzo Artoni)を使用してICAをブートストラップ
 [サイトマップ](https://github.com/user-attachments/files/21012617/RELICA_presentation_2025.pdf)
 
-<span style="color: purple">11:50～12:30～ なぜクラスターICAコンポーネント? (スコットメイク)</span>
+<span style="color: purple">11:50～12:30～ なぜクラスターICAコンポーネント? (Scott Makeig)</span>
 [サイトマップ](https://github.com/user-attachments/files/21024507/Makeig_Aspet25_Clustering.pdf)
 
 <span style="color: green">12:30～14:00 ランチ --</span>

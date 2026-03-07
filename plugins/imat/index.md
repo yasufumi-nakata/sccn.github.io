@@ -23,7 +23,7 @@ IMA法では、複数のチャネルEEGデータは、独立したコンポー�
 
 <img src="./Docs/figs/IMA.png" width="600"> 
 
-ヨハンダ・ワグナー、ラモン・マルティネズ・カンチーノ、スコット・マシェイグがジュリー・オントンとスコットによる研究をベースとした開発[Onton & Makeig, 2009 _ オントン&メイク](https://www.frontiersin.org/articles/10.3389/neuro.09.061.2009/full), [Onton & Makeig, 2006年, 2006年, 2006年, 2006年, 2006年, 2006年, 2006年](https://sccn.ucsd.edu/~julie/HBM2006PosterMini.pdf)) Julie による Matlab スクリプト。
+ヨハンダ・ワグナー、ラモン・マルティネズ・カンチーノ、スコット・マシェイグがJulie Ontonとスコットによる研究をベースとした開発[Onton & Makeig, 2009 _ オントン&メイク](https://www.frontiersin.org/articles/10.3389/neuro.09.061.2009/full), [Onton & Makeig, 2006年, 2006年, 2006年, 2006年, 2006年, 2006年, 2006年](https://sccn.ucsd.edu/~julie/HBM2006PosterMini.pdf)) Julie による Matlab スクリプト。
 
 
 ## EEGLABにIMATプラグインをインストールする

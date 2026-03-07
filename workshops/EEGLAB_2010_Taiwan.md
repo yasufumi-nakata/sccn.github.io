@@ -53,7 +53,7 @@ grand_parent: Workshops
 <td align="center">09:30~10:30
 </td>
 <td align="left"><b>招待講演1:</b><br>
-<p>スコット・マディグ - マイニングイベント関連の脳力学 <a href="https://sccn.ucsd.edu/githubwiki/files/makeig_i_taiwan10lo.pdf" class="internal" title="Makeig I Taiwan10lo.pdf">(PDF)</a>
+<p>Scott Makeig - マイニングイベント関連の脳力学 <a href="https://sccn.ucsd.edu/githubwiki/files/makeig_i_taiwan10lo.pdf" class="internal" title="Makeig I Taiwan10lo.pdf">(PDF)</a>
 </p>
 </td></tr>
 <tr>
@@ -72,7 +72,7 @@ grand_parent: Workshops
 <td align="center">11:40~12:30
 </td>
 <td align="left"><b>招待講演3:</b><br>
-<p>ジュリー・オントン – 感情的なイメージの間にEEGのスペクトル調節 <a href="https://sccn.ucsd.edu/githubwiki/files/nctu_talk.pdf" class="internal" title="NCTU Talk.pdf">(PDF)</a>
+<p>Julie Onton – 感情的なイメージの間にEEGのスペクトル調節 <a href="https://sccn.ucsd.edu/githubwiki/files/nctu_talk.pdf" class="internal" title="NCTU Talk.pdf">(PDF)</a>
 </p>
 </td></tr>
 <tr>
@@ -128,8 +128,8 @@ grand_parent: Workshops
 </td>
 <td align="left"><b>ワークショップ1:EEGLABメソッドI</b><br>
 <ul><li>クラウス・グラマン データインポートとチャネル分析 <a href="https://sccn.ucsd.edu/githubwiki/files/1_dataimport-chananalysis.pdf" class="internal" title="1 DataImport-ChanAnalysis.pdf">(PDF)</a><br>
-</li><li>ジュリー・オントン - アーティファクト拒絶とランニングICA <a href="https://sccn.ucsd.edu/githubwiki/files/2_artrej_runningica.pdf" class="internal" title="2 ArtRej RunningICA.pdf">(PDF)</a><br>
-</li><li>ジュリー・オントン - ICAコンポーネントの評価 パート1 <a href="https://sccn.ucsd.edu/githubwiki/files/3_evaluateics.pdf" class="internal" title="3 EvaluateICs.pdf">(PDF)</a>
+</li><li>Julie Onton - アーティファクト拒絶とランニングICA <a href="https://sccn.ucsd.edu/githubwiki/files/2_artrej_runningica.pdf" class="internal" title="2 ArtRej RunningICA.pdf">(PDF)</a><br>
+</li><li>Julie Onton - ICAコンポーネントの評価 パート1 <a href="https://sccn.ucsd.edu/githubwiki/files/3_evaluateics.pdf" class="internal" title="3 EvaluateICs.pdf">(PDF)</a>
 </li></ul>
 </td></tr>
 <tr>
@@ -155,7 +155,7 @@ grand_parent: Workshops
 </td>
 <td align="left"><b>ワークショップ3:EEGLAB法II</b><br>
 <ul><li>Tzyy-Ping Jung - ICA理論とアプリケーション <a href="https://sccn.ucsd.edu/githubwiki/files/ica_theory_taiwan.pdf" class="internal" title="ICA Theory taiwan.pdf">(PDF)</a><br>
-</li><li>ジュリー・オントン - ICAコンポーネントの評価 パート2 <a href="https://sccn.ucsd.edu/githubwiki/files/5_advancedicanalysis.pdf" class="internal" title="5 AdvancedICanalysis.pdf">(PDF)</a>
+</li><li>Julie Onton - ICAコンポーネントの評価 パート2 <a href="https://sccn.ucsd.edu/githubwiki/files/5_advancedicanalysis.pdf" class="internal" title="5 AdvancedICanalysis.pdf">(PDF)</a>
 </li></ul>
 </td></tr>
 <tr>
@@ -167,7 +167,7 @@ grand_parent: Workshops
 <td align="center">15:20~16:30
 </td>
 <td align="left"><b>ワークショップ4:EEGLAB法II</b><br>
-<ul><li>スコット・マディグ - EEGフォワード/インバースモデル <a href="https://sccn.ucsd.edu/githubwiki/files/forwardinv_taiwan10lo.pdf" class="internal" title="ForwardInv Taiwan10lo.pdf">(PDF)</a><br>
+<ul><li>Scott Makeig - EEGフォワード/インバースモデル <a href="https://sccn.ucsd.edu/githubwiki/files/forwardinv_taiwan10lo.pdf" class="internal" title="ForwardInv Taiwan10lo.pdf">(PDF)</a><br>
 </li><li>Julie Onton - DIPFITプラグインでダイポールモデリング <a href="https://sccn.ucsd.edu/githubwiki/files/6_dipolemodeling.pdf" class="internal" title="6 DipoleModeling.pdf">(PDF)</a>
 </li></ul>
 </td></tr>
@@ -189,9 +189,9 @@ grand_parent: Workshops
 <td align="center">09:00~11:00
 </td>
 <td align="left"><b>ワークショップ5:EEGLABメソッドIII</b><br>
-<ul><li>スコット・マディグ - ICクラスタリング <a href="https://sccn.ucsd.edu/githubwiki/files/clustering_taiwan10lo.pdf" class="internal" title="Clustering Taiwan10lo.pdf">(PDF)</a><br>
+<ul><li>Scott Makeig - ICクラスタリング <a href="https://sccn.ucsd.edu/githubwiki/files/clustering_taiwan10lo.pdf" class="internal" title="Clustering Taiwan10lo.pdf">(PDF)</a><br>
 </li><li>Arnaud Delorme - ブートストラップ統計 <a href="https://sccn.ucsd.edu/githubwiki/files/lecture_statistics_taiwan.pdf" class="internal" title="Lecture statistics taiwan.pdf">(PDF)</a>
-</li><li>ジュリー・オントン - EEGLAB STUDYの構築  <a href="https://sccn.ucsd.edu/githubwiki/files/7_studyintro_build.pdf" class="internal" title="7 STUDYintro Build.pdf">(PDF)</a> <a rel="nofollow" class="external text" href="ftp://sccn.ucsd.edu/pub/julie/EEGLAB_Workshop/Scripts.zip">(新しいスクリプト)</a><br>
+</li><li>Julie Onton - EEGLAB STUDYの構築  <a href="https://sccn.ucsd.edu/githubwiki/files/7_studyintro_build.pdf" class="internal" title="7 STUDYintro Build.pdf">(PDF)</a> <a rel="nofollow" class="external text" href="ftp://sccn.ucsd.edu/pub/julie/EEGLAB_Workshop/Scripts.zip">(新しいスクリプト)</a><br>
 </li></ul>
 </td></tr>
 <tr>
@@ -204,7 +204,7 @@ grand_parent: Workshops
 </td>
 <td align="left"><b>ワークショップ6:EEGLAB法IV</b><br>
 <ul><li>Arnaud Delorme - メニューからSTUDYクラスターをプロットして編集する <a href="https://sccn.ucsd.edu/githubwiki/files/studyplot.pdf" class="internal" title="studyplot.pdf">(PDF)</a><br>
-</li><li>ジュリー・オントン - STUDY 解析部 I  <a href="https://sccn.ucsd.edu/githubwiki/files/8_studyanalysisi.pdf" class="internal" title="8 STUDYanalysisI.pdf">(PDF)</a><br>
+</li><li>Julie Onton - STUDY 解析部 I  <a href="https://sccn.ucsd.edu/githubwiki/files/8_studyanalysisi.pdf" class="internal" title="8 STUDYanalysisI.pdf">(PDF)</a><br>
 </li></ul>
 </td></tr>
 <tr>
@@ -216,7 +216,7 @@ grand_parent: Workshops
 <td align="center">13:30~15:20
 </td>
 <td align="left"><b>ワークショップ7:EEGLABメソッドV</b><br>
-<ul><li>ジュリー・オントン - STUDY分析パートII <a href="https://sccn.ucsd.edu/githubwiki/files/8_studyanalysisi.pdf" class="internal" title="8 STUDYanalysisI.pdf">(PDF)</a><br>
+<ul><li>Julie Onton - STUDY分析パートII <a href="https://sccn.ucsd.edu/githubwiki/files/8_studyanalysisi.pdf" class="internal" title="8 STUDYanalysisI.pdf">(PDF)</a><br>
 </li><li>Arnaud Delorme - EEGLABをプラグインで拡張する <a href="https://sccn.ucsd.edu/githubwiki/files/eeglab_plugins_taiwan.pdf" class="internal" title="EEGLAB plugins taiwan.pdf">(PDF)</a><br>
 </li></ul>
 </td></tr>

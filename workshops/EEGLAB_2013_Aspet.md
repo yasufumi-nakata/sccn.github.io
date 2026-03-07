@@ -103,7 +103,7 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 **概要とICA理論/実践* * 必須
 
 
-<span style="color: purple">8:30～9:00 なぜクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_aspet13_clustering.pdf)
+<span style="color: purple">8:30～9:00 なぜクラスターICAコンポーネント? (Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_aspet13_clustering.pdf)
 
 <span style="color: purple">9:00 – 10:00 -- STUDYとSTUDYデザイン(Arnaud Delorme)の作成</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_ad_study_design.pdf)
 

@@ -96,8 +96,8 @@ EEGLABワークショップのwikiページには、スライドも含まれて�
 2010年および2016年版を比較する価値がある。
 
 #### 理論的な講義
--   [鉱業イベント - スコット・マディグによる脳ダイナミクス](https://www.youtube.com/watch?v=JUkOuFyLFS4)
--   [電気生理学の独立した構成の分析 スコット・マディグによるデータ](https://www.youtube.com/watch?v=NIPq16s1G4A)
+-   [鉱業イベント - Scott Makeigによる脳ダイナミクス](https://www.youtube.com/watch?v=JUkOuFyLFS4)
+-   [電気生理学の独立した構成の分析 Scott Makeigによるデータ](https://www.youtube.com/watch?v=NIPq16s1G4A)
 -   [John Iversenによる時間頻度測定](https://www.youtube.com/watch?v=Jj2Ke_e6DR0)
 -   [Cyril Pernetによる階層GLM統計とBootstrapの紹介](https://www.youtube.com/watch?v=sbyDqh-Olb4)
 -   [ソースローカリゼーション: ゼインプ・アカリン・アカルによるEEGフォワードと逆の問題](https://www.youtube.com/watch?v=Rep09kR9o7c)
@@ -106,7 +106,7 @@ EEGLABワークショップのwikiページには、スライドも含まれて�
 
 #### 実践講座
 -   [EEGLAB Arnaud Delorme(アルナド・デロメ)](https://www.youtube.com/watch?v=oQ2CHqu4_OU)
--   [ジュリー・オントンによるデータのインポート/処理と基本的なプロット](https://www.youtube.com/watch?v=cTuXe-rZjvk)
+-   [Julie Ontonによるデータのインポート/処理と基本的なプロット](https://www.youtube.com/watch?v=cTuXe-rZjvk)
 -   [Julie OntonによるICAとICAの可視化](https://www.youtube.com/watch?v=H3dK0j6moII)
 -   [独立した評価 Luca Pion-Tonachini(ICLabel)によるコンポーネント](https://www.youtube.com/watch?v=e_Ccx_MCOUM)
 -   [Arnaud DelormeによるEEGLAB STUDYとスタディデザインの紹介](https://www.youtube.com/watch?v=HAGrNeh-kgA)
@@ -127,7 +127,7 @@ EEGLABを使用して、ワークショップを見直し、および/または�
 
 #### EEGLAB 信号の概要
 
--   [認知脳の動態の最小化I (スコットメイク)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_I.html)
+-   [認知脳の動態の最小化I (Scott Makeig)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_I.html)
 -   [認知脳の動態を最小にするII (Scottメイク)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_II.html)
 
 #### EEGLAB Toolboxの概要

@@ -67,7 +67,7 @@ grand_parent: Workshops
 
 [Phase/Amplitude Coupling (ラモン マルティネス・カンチーノ)](https://sccn.ucsd.edu/githubwiki/files/pac_rmc.pdf)
 
-[データのインポート、前処理およびプロット(ジューリー オントン)](https://sccn.ucsd.edu/githubwiki/files/data_import_preprocessing_and_plotting_onton.pdf)
+[データのインポート、前処理およびプロット(Julie Onton)](https://sccn.ucsd.edu/githubwiki/files/data_import_preprocessing_and_plotting_onton.pdf)
 
 [ICA分解と視覚化のパフォーマンス オントン](https://sccn.ucsd.edu/githubwiki/files/performing_ica_decomposition_visualization_onton.pdf)
 

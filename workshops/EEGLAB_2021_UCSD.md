@@ -49,7 +49,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
 - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8月8日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">9:10</span>– **イベント関連の脳のダイナミクスのマイニング I** (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig)) (Scott Makeig (Scott Makeig)) (Scott Makeig) (Scott Makeig)) (Scott Makeig (Scott Makeig)) (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig) (Scott Makeig)) (Scott Makeig (Scott Makeig)) (Scott Makeig (Scott Makeig (Scott) (Scott)))) (Scott Makeig (S...</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前9時15分</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **EEGLABで新しくなった&#39;s?** (アルナード・デローム)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前9時15分</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **EEGLABで新しくなった&#39;s?** (Arnaud Delorme)</span>
 
 - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前10時</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">11:00</span> - ポスターホールにパラレル**参加ポスター発表**。 ワークショップ全体にポスターを提示するために登録する必要があります。</span>
 
@@ -79,7 +79,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
 - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8月8日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">9:00</span> - **時間頻度分解: 理論** (ジョン・イヴァーン)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前9時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **ICA理論** (Jason Palmer &amp;スコット・マディグ)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前9時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **ICA理論** (Jason Palmer &amp;Scott Makeig)</span>
 
 - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前10時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span> – 社会的な時間. **Q&amp;Aのチューター** </span>
 
@@ -105,17 +105,17 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
 > - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:00</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時30分</span> -**LSLのトラブルシューティングI**(David Medine)</span>
 
-> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> -**LSLラップアップ** (キム・ムレン)</span>
+> - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">12:30</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">午後12時45分</span> -**LSLラップアップ** (Tim Mullen)</span>
 
 > <span style="color: gray">パラレルセッション3(スポンサー、TBD)</span>
 
 ## WEDNESDAY、6月16日(有料)
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7月7日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – **ICA分解PRACTICUM**(ジュリー・オントン)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7月7日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – **ICA分解PRACTICUM**(Julie Onton)</span>
 
 - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8月8日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">9:00</span> - **フォワード&インバース;インバースヘッドモデリング**(Zeynep Akalin Acar)</span>
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前9時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **EEG接続解析** (キム・ムレン)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前9時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:00</span> – **EEG接続解析** (Tim Mullen)</span>
 
 - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">午前10時</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">10:30</span> – 社会的な時間. **Q&amp;Aのチューター**。</span>
 
@@ -139,7 +139,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 
 ## 6月17日(金) THURSDAY
 
-- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7月7日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – **ICAクラスタリング PRACTICUM** (ジュリー・オントン)</span>
+- <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">7月7日</span>–<span class="time" data-timeformat="12hr" data-timezone="PDT">7:45</span> – **ICAクラスタリング PRACTICUM** (Julie Onton)</span>
 
 - <span style="color: black"><span class="time" data-timeformat="12hr" data-timezone="PDT">8月8日</span>-<span class="time" data-timeformat="12hr" data-timezone="PDT">9:00</span> -**EEGLABグループ分析**(Arnaud Delorme)</span>
 

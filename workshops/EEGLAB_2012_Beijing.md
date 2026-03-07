@@ -48,7 +48,7 @@ EEGおよび関連データの高度な分析、詳細な方法
 
 <span style="color: purple">10:30 – 11:15 -- ICA理論(Tzyy-Ping Jung)</span>
 
-<span style="color: orange">11:15 – 12:00 -- データインポート、アーティファクト拒絶およびICA分解(ジュリー・オントン) [(PDF)](https://sccn.ucsd.edu/githubwiki/files/1_gettingstarted_eeglab.pdf)[(タスク)](https://sccn.ucsd.edu/githubwiki/files/sternbergtaskexplanation.pdf)</span>
+<span style="color: orange">11:15 – 12:00 -- データインポート、アーティファクト拒絶およびICA分解(Julie Onton) [(PDF)](https://sccn.ucsd.edu/githubwiki/files/1_gettingstarted_eeglab.pdf)[(タスク)](https://sccn.ucsd.edu/githubwiki/files/sternbergtaskexplanation.pdf)</span>
 <!-- -->
 
 
@@ -101,7 +101,7 @@ EEGおよび関連データの高度な分析、詳細な方法
 <span style="color: purple">8:30～9:15～ フォワードと逆 EEG ソースモデリング - (ScottMakeig)</span> [(PDF)](https://sccn.ucsd.edu/githubwiki/files/forwardinverse_beijing12.pdf)
 
 <span style="color: orange">9:15 – 10:00 -- NFT および Dipfit プラグインの使用
-(ジュリー・オントン)</span>
+(Julie Onton)</span>
 <!-- -->
 
 
@@ -141,7 +141,7 @@ EEGおよび関連データの高度な分析、詳細な方法
 
 
 
-<span style="color: orange">15:15 – 16:00 -- 実験的なデータ可視化と生データへのアクセス (ジュリー・オントン) [(PDF)](https://sccn.ucsd.edu/githubwiki/files/4_singletrialscripting.pdf)</span>
+<span style="color: orange">15:15 – 16:00 -- 実験的なデータ可視化と生データへのアクセス (Julie Onton) [(PDF)](https://sccn.ucsd.edu/githubwiki/files/4_singletrialscripting.pdf)</span>
 <!-- -->
 
 

@@ -61,7 +61,7 @@ EEGLAB環境 メニュー
 
 
 
-<span style="color: purple">午前9時～午後10時 なぜクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_rio_clustering.pdf)
+<span style="color: purple">午前9時～午後10時 なぜクラスターICAコンポーネント? (Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_rio_clustering.pdf)
 
 <span style="color: purple">10:00 – 10:30 -- STUDY、STUDYデザイン、プロットの作成(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2014_ad_study_design.pdf)
 

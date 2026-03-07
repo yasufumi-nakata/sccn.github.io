@@ -38,7 +38,7 @@ UCSDに資金を提供し、専用の研究センターを作成することに�
 EEGを用いた高順序の人間認知の研究。 基本情報
 Terry Sejnowskiのイニシアチブ
 Swartz Center for Computational Neuroscience (SCCN) が設立されました。
-UCSDでニューラルコンピューティングの小研究所。 スコット・マディグは、この新しいセンターのディレクターとなり、Arnaud Delorme博士、また、Salk Instituteから新しいセンターに移転しました。
+UCSDでニューラルコンピューティングの小研究所。 Scott Makeigは、この新しいセンターのディレクターとなり、Arnaud Delorme博士、また、Salk Instituteから新しいセンターに移転しました。
 
 SCCN では、ICA Electrophysiology ツールボックスと
 EEGLABのプロト版が融合されました。 *EEGLAB v3*、内部バージョン、
