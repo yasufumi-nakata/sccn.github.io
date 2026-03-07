@@ -12,7 +12,7 @@ STUDYは、[ビデオ](https://www.youtube.com/watch?v=-jL3PuHD3aY) でEEGLABの
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
 - トピックス
 </details>

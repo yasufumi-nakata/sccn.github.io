@@ -16,7 +16,7 @@ EEGLABメニューに紹介する新しいメニュー項目を選択します�
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
 - トピックス
 </details>

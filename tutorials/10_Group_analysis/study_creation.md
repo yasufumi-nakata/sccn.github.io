@@ -22,7 +22,7 @@ STUDY*の学習、実験的研究の専攻、研究をまとめます。 チュ�
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
  
 - トピックス

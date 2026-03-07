@@ -21,7 +21,7 @@ EEGLAB では、ユーザが他の言語でも利用することができます�
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
   {: .text-delta }
 - TOC

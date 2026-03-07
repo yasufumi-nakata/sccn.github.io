@@ -16,7 +16,7 @@ ICA(または他の)コンポーネントは1つまたは複数のチュート�
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
 - トピックス
 </details>

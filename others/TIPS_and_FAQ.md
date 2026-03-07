@@ -16,7 +16,7 @@ eeglablist アーカイブで他のヒントを利用できます。 リスト�
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
 - トピックス
 </details>

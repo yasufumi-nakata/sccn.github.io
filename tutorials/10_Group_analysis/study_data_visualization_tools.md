@@ -14,7 +14,7 @@ EEGLAB は、EEGLAB で、EEGLAB は、EEGLAB で、EEGLAB で、EEGLAB は、EE
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
  
 - トピックス

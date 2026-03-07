@@ -55,7 +55,7 @@ CTF MEGについて
 
 ![2018年12月23日](https://user-images.githubusercontent.com/1872705/209403909-5cef619b-86db-481a-baad-f8a750f2bd25.png)
 
-このサイトは、以下のとおりです。 [NMH内外ヘルシーなボランティアデータセット](https://openneuro.org/datasets/ds004215/versions/1.0.1) それを持っています。 [統一研究の母](https://data.donders.ru.nl/collections/di/dccn/DSC_3011020.09_236?0) データセットはそれらも持っています)。 これらのデータセットをインポートしたら、メニュー項目を使うことができます。 <span style="color: brown">編集 > データセット情報</span>、およびチャネルの場所については、ボタン *他のデータセット*から。 2つのデータセットが同じデータチャネルと同じチャネルラベルを持っていることを確認する必要があります。
+。 [NMH内外ヘルシーなボランティアデータセット](https://openneuro.org/datasets/ds004215/versions/1.0.1) それを持っています。 [統一研究の母](https://data.donders.ru.nl/collections/di/dccn/DSC_3011020.09_236?0) データセットはそれらも持っています)。 これらのデータセットをインポートしたら、メニュー項目を使うことができます。 <span style="color: brown">編集 > データセット情報</span>、およびチャネルの場所については、ボタン *他のデータセット*から。 2つのデータセットが同じデータチャネルと同じチャネルラベルを持っていることを確認する必要があります。
 
 EEGLAB は、MEG の処理、topoグラフィ プロット、自動検出 の実行を行います。 タイプ:
 

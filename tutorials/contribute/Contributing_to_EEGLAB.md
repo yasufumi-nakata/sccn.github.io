@@ -14,7 +14,7 @@ EEGLAB は、EEGLAB が新しい関数の場所です。 外部リンク コア 
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
 - トピックス
 </details>

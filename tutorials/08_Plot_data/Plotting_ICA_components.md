@@ -13,7 +13,7 @@ ICA は ICA から ICA へ [アーティファクト](/tutorials/06_RejectArtifa
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
   {: .text-delta }
 - トピックス

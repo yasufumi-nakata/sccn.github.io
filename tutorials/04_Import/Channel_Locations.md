@@ -13,7 +13,7 @@ EEGのスカルプマップを2Dまたは3Dフォーマットでプロットし�
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
   {: .text-delta }
 - TOC

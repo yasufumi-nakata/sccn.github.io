@@ -15,7 +15,7 @@ MATLABのWeb制作とEEGLABの制作
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
 - トピックス
 </details>
@@ -99,7 +99,7 @@ EEG = pop_eegfilt(EEG);
 
 これは、データをフィルタリングすることを可能にするインタラクティブなウィンドウをポップアップします
 ウィンドウに入力するパラメータに従って。
-このサイトは、以下のとおりです。
+。
 
 ``` matlab
 EEG = pop_eegfilt( EEG, 1, 0);

@@ -13,7 +13,7 @@ grand_parent: Tutorials
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
 - トピックス
 </details>

@@ -14,7 +14,7 @@ EEG-BIDSは、EEGLABのグループ解析方法を紹介しています。 [EEGL
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
 - トピックス
 </details>

@@ -14,7 +14,7 @@ nav_order: 19
 PACを計算するための伝統的な方法に加えて、プラグインには、相互情報フェーズ振幅カップリング方法(MIPAC)の即時およびイベント関連実装(Martinez-Cancino et al 2019参照)が含まれます。
 このツールボックスは、UCSD、La Jolla、カリフォルニアのComputational NeurosciencesのSwartz CenterでEEGLABチームによって開発され、現在、主要な開発者であるRamon Martinez-Cancinoによって維持されています。
 
-## コンテンツの表
+## 目次
 1. [神経科学における位相差結合](#phase-amplitude-coupling-in-neurosciences)
 2. [ツールボックスで実装されたメソッド](#methods-implemented-in-the-toolbox)
    1. [連続信号](#continuous-signal)

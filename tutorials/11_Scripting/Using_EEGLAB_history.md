@@ -15,7 +15,7 @@ MATLABのWeb制作とEEGLABの制作
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
 - トピックス
 </details>

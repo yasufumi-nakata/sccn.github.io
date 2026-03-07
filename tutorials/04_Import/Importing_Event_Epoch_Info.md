@@ -15,7 +15,7 @@ EEGLABは、実験イベントの情報をMATLABの構造体配列 *EEG.event* �
 
 <details open markdown="block">
   <summary>
-    コンテンツの表
+    目次
   </summary>
   {: .text-delta }
 - TOC
