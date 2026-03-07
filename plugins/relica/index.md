@@ -52,7 +52,7 @@ RELICAを実行する前に、EEGLABを起動し、EEGデータセットをロ�
 次のセクションで他のインターフェイス要素が導入されます。
 
 ### 神経科学ゲートウェイ(NSGportal.org)を用いた高性能コンピューティングリソースでRELICAを実行
-Open EEGLABポータルからNeuroscience Gateway(NSGportal.org)までのXSEDEネットワークスーパーコンピュータでRELICAの計算を実行するには、Neuroscience Gateway(NSGportal.org)に最初に無料のNSGユーザ資格**を取得し、EEGLABプラグインを持っている必要があります。 [ログイン](https://github.com/sccn/nsgportal/) コンピュータにインストールします。 そのためには、 [こちら](https://github.com/sccn/nsgportal/wiki).
+Open EEGLABポータルからNeuroscience Gateway(NSGportal.org)までのXSEDEネットワークスーパーコンピュータでRELICAの計算を実行するには、Neuroscience Gateway(NSGportal.org)に最初に無料のNSGユーザ資格**を取得し、EEGLABプラグインを持っている必要があります。 [nsgportal](https://github.com/sccn/nsgportal/) プラグインがインストールされている必要があります。 そのためには、 [こちら](https://github.com/sccn/nsgportal/wiki).
 
 次に、上記のRELICAメインウィンドウから:
 

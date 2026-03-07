@@ -76,7 +76,7 @@ precompiled関数(mex関数とも呼ばれます)。 "mexファイルが見つ�
     BIOSIGを更新した後のデータを読むとき経験問題。
 
 -   ANT プラグイン: ANT のプラグインは ANT の会社によって作られました。 お問い合わせ
-    [ログイン](mailto:info@ant-neuro.com) 更新されたバージョンの
+    [info@ant-neuro.com](mailto:info@ant-neuro.com) 更新されたバージョンの
     コンパイルされたバイナリ。
 
 -   ERPSS プラグイン: 単にrecompile decompresserpss.c (タイプ "mex"

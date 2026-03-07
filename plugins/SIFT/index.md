@@ -53,7 +53,7 @@ SIFT では、以下のオープンソースパッケージ(またはインス�
 
 - [アフィット](https://github.com/tapios/arfit) (シュナイダーら)
 - [TSA/バイオシグ](http://octave.sourceforge.net/tsa/) (Schlögl ら)
-- [ログイン](https://chronux.org) (Mitra ら)
+- [Chronux](https://chronux.org) (Mitra ら)
 - [ダル/SCSA](https://ttic.uchicago.edu/~ryotat/softwares/dal/) (富岡 / ハウフェ ら)
 - [BCILAB株式会社](http://sccn.ucsd.edu/wiki/BCILAB) (コテら)
 

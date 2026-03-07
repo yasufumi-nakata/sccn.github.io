@@ -31,7 +31,7 @@ scalp、skull、csf、および合計16016ノードと32024の脳層
 (c) 
 ![ツイート](NFM_Toolboox_UsersManual19x.png "wikilink") ... 
 (d) )
-![ログイン](NFM_Toolboox_UsersManual_html_m69f7a676.gif "wikilink")
+![NFTメッシュ生成例](NFM_Toolboox_UsersManual_html_m69f7a676.gif "wikilink")
 
 図13:頭皮、頭皮、csf、脳のBEMモデル
 MRイメージから。 (a)スカルプメッシュ、(b)スカルメッシュ、(c)CSFメッシュ、(d)
@@ -55,7 +55,7 @@ MRイメージから。 (a)スカルプメッシュ、(b)スカルメッシュ�
 (c)
 ![ツイート](NFM_Toolboox_UsersManual_html_m350221ff.gif "wikilink") ...
 (d) ) 
-![ログイン](NFM_Toolboox_UsersManual_html_m788a9795.gif "wikilink")
+![NFTソースローカリゼーション例](NFM_Toolboox_UsersManual_html_m788a9795.gif "wikilink")
 
 図15:頭皮、頭蓋骨、歪むことによって得られる脳のBEMモデル
 電極の位置へのテンプレートヘッドモデル。 (a)スカルプメッシュ、(b)スカルプ

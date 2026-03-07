@@ -148,7 +148,7 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
 -   **[IIRfiltの](https://github.com/sccn/IIRfilt):** 短い適用
     EEGLABのデータに対する非線形無限衝動応答フィルタ。
 
-- **[ログイン](https://github.com/sccn/REST):** scalp EEGの記録の参照を無限点に標準化する方法。
+- **[REST](https://github.com/sccn/REST):** scalp EEGの記録の参照を無限点に標準化する方法。
 
 -   **[アアール](http://kasku.org/aar/):** 自動アーティファクト除去ツールボックスは、電気脳グラム(EEG)における楕円および筋肉のアーティファクトの自動除去のためのいくつかの最新の方法を統合することを目指しています。
 
@@ -252,4 +252,4 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
 
 ### 高性能コンピューティング
 
--   **[ログイン](https://github.com/sccn/nsgportal)*: NSG EEGLABポータルから、高性能コンピューティングリソースで、サンディエゴスーパーコンピュータセンターのNSF主催のExpanseスーパーコンピュータに、Neuroscience Gateway Portal(NSG)を自由に利用できるようにEEGLABスクリプトを実行するために、High-Performance Computingに使用することができます。 
+-   **[nsgportal](https://github.com/sccn/nsgportal)**: NSG EEGLABポータルから、高性能コンピューティングリソースで、サンディエゴスーパーコンピュータセンターのNSF主催のExpanseスーパーコンピュータに、Neuroscience Gateway Portal(NSG)を自由に利用できるようにEEGLABスクリプトを実行するために、High-Performance Computingに使用することができます。 

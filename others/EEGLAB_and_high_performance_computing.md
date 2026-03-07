@@ -244,7 +244,7 @@ Hadoop Mapreduceは、大規模な計算を行うためのフレームワーク�
     その機械。 互換性のあるAMIを選ぶ必要があります。
     ハドープも。 また、MATLABには簡単な機構はありません。
     STDINから読み込むことができます。 最も簡単な解決策は、サードパーティのコンパイルされたMexファイルを使用して行うことです(例えば、参照してください
-    [ログイン](http://www.mathworks.com/matlabcentral/fileexchange/13851-popen-read-and-write)).
+    [popen](http://www.mathworks.com/matlabcentral/fileexchange/13851-popen-read-and-write)).
     別のソリューションは、ディスクにSTDINを書くシェルコマンドを持つことです。
     MATLAB実行可能(ただし、これは不公平である可能性があります)
     パフォーマンス)。
