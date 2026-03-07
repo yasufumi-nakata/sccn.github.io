@@ -110,14 +110,14 @@ MATLABをインストールしたノートパソコン
 <span style="color: purple">10:30-11:30 -- ICA理論(Scott Makeig)</span>
 [サイトマップ](https://github.com/sccn/sccn.github.io/files/11948490/Makeig_ICA_Aspet23._pdf.pdf)
 
-<span style="color: orange">11:30 – 13:00 -- データインポート、アーティファクト拒絶(ラモン・マルティネス) [サイトマップ](https://github.com/sccn/sccn.github.io/files/11947670/EEGLAB_WS_ASPET_2023_preprocessing_Session1.pdf)
+<span style="color: orange">11:30 – 13:00 -- データインポート、アーティファクト拒絶(Ramon Martinez) [サイトマップ](https://github.com/sccn/sccn.github.io/files/11947670/EEGLAB_WS_ASPET_2023_preprocessing_Session1.pdf)
 </span>
 
 <span style="color: green">13:00～14:00 ランチ --</span>
 
 **ICAおよびソース分析**
 
-<span style="color: orange">14:00～16:00 -- ICA分解練習(ラモン・マルティネス)</span> [サイトマップ](https://github.com/sccn/sccn.github.io/files/11947670/EEGLAB_WS_ASPET_2023_preprocessing_Session1.pdf) (前回と同じPDF)
+<span style="color: orange">14:00～16:00 -- ICA分解練習(Ramon Martinez)</span> [サイトマップ](https://github.com/sccn/sccn.github.io/files/11947670/EEGLAB_WS_ASPET_2023_preprocessing_Session1.pdf) (前回と同じPDF)
 
 
 <span style="color: green">-- ブレーク--</span>
@@ -150,7 +150,7 @@ MATLABをインストールしたノートパソコン
 <span style="color: purple">10:15 - 10:45 -- データの作成 <i>フェア</i> BIDS(ロバート・オオステンド)</span> 
 [サイトマップ](https://github.com/sccn/sccn.github.io/files/11954944/fair.and.bids.pdf)
 
-<span style="color: purple">10:45 - 11:45 -- HW データセット(ICA)(ラモン・マルティネス)の連続処理</span> [サイトマップ](https://github.com/sccn/sccn.github.io/files/11980297/EEGLAB_WS_ASPET_2023_preprocessing_Session1_cont.pdf)
+<span style="color: purple">10:45 - 11:45 -- HW データセット(ICA)(Ramon Martinez)の連続処理</span> [サイトマップ](https://github.com/sccn/sccn.github.io/files/11980297/EEGLAB_WS_ASPET_2023_preprocessing_Session1_cont.pdf)
 
 
 <span style="color: purple">11:45 - 12:45 -- HW データセット(STUDY design)の連続処理(Ramon Martinez)</span> [サイトマップ](https://github.com/sccn/sccn.github.io/files/11965428/EEGLAB_WS_Aspet_2023_GroupAnalysis.pdf)
@@ -204,7 +204,7 @@ MATLABをインストールしたノートパソコン
 
 **情報源流* * 必須
 
-<span style="color: orange">13:45 – 15:00 -- HWデータセット(STUDYデザインとLIMO)の継続的な処理(ラモン・マルティネスとアーナド・デローム)</span>
+<span style="color: orange">13:45 – 15:00 -- HWデータセット(STUDYデザインとLIMO)の継続的な処理(Ramon Martinezとアーナド・デローム)</span>
 
 <span style="color: green">-- ブレーク--</span>
 

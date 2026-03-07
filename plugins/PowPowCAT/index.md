@@ -266,4 +266,4 @@ Yeh C-H, Lo MT, Hu K. (2016). 洗練されたクロス周波数
 Gyorgy Buzsaki と Tim Mullen 博士の感謝を申し上げます。
 有益なコミュニケーション。
 
-(このページは宮越真琴著)
+(このページはMakoto Miyakoshi著)

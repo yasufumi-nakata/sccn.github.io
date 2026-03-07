@@ -137,4 +137,4 @@ T. シュナイダーとA. Neumaier, 2001: Algorithm 808: ARfit – Matlab
 多variateの変数そしてeigenmodesの推定のためのパッケージ
 自動回帰モデル。 ACMについて トランス。 数学。 ソフト、27、58-65。
 
-作者:宮越真琴とムレン。 SCCN株式会社、UCSD
+作者:Makoto Miyakoshiとムレン。 SCCN株式会社、UCSD

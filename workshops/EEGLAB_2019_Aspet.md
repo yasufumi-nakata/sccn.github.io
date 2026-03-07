@@ -104,7 +104,7 @@ MATLABをインストールしたノートパソコン
 
 <span style="color: purple">16:00 – 17:00 -- 時間頻度分解: 理論と実践 (Tim Mullen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_time_frequency_analysis2019.pdf)
 
-<span style="color: purple">17:00～17:30 段階の広さのカップリング(ラモン・マルティネス)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/rmc_pac_aspet_2019.pdf)
+<span style="color: purple">17:00～17:30 段階の広さのカップリング(Ramon Martinez)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/rmc_pac_aspet_2019.pdf)
 <!-- -->
 
 

@@ -25,7 +25,7 @@ Clean Rawdata プラグイン (バージョン 2.0) インターフェイスが�
 このプラグイン、clean_rawdata はメソッド(例、アーティファクトサブスペース)を使用します。 
 BCILAB ToolboxのChristian Kotheによる復元、ASR) 
 (Kothe & Makeig, 2013), 最初にEEGLABプラグインにラップ 
-宮越真琴とArnaud Delormeが開発した 
+Makoto MiyakoshiとArnaud Delormeが開発した 
 Scott Makeig。
 
 このプラグインは、生EEGデータをクリーンアップします。 BCILABツールボックスのメソッド
@@ -77,7 +77,7 @@ checkbox **(11)** で不良データ期間の追加削除を実行します。 �
 
 ## 追加文書
 
-宮越真琴がページを書いてみた [wikiセクション](https://github.com/sccn/clean_rawdata/wiki) ASRに関するこのリポジトリ。
+Makoto Miyakoshiがページを書いてみた [wikiセクション](https://github.com/sccn/clean_rawdata/wiki) ASRに関するこのリポジトリ。
 
 # バージョン履歴
 v0.34 以降 - 元のバージョン

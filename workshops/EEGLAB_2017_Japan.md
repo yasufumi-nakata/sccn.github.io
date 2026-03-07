@@ -72,9 +72,9 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 
 **ICAおよび時間頻度**
 
-<span style="color: orange">14:00- 15:00 -- ICA(宮越真琴)のためのEEG前処理</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/preicaprocessing.pdf)
+<span style="color: orange">14:00- 15:00 -- ICA(Makoto Miyakoshi)のためのEEG前処理</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/preicaprocessing.pdf)
 
-<span style="color: orange">15:00～15:45 -- ICA分解実践Q&A(宮越真琴)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/icadecompositionpracticum.pdf)
+<span style="color: orange">15:00～15:45 -- ICA分解実践Q&A(Makoto Miyakoshi)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/icadecompositionpracticum.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
@@ -165,7 +165,7 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 
 <span style="color: purple">15:00～15:30 -- パイプライン・ユーティリティツール(宮古志誠) </span> [PDF](https://sccn.ucsd.edu/githubwiki/files/preprocessingpipelineandutilitytools.pdf)
 
-<span style="color: purple">15:30～16:00 -- グループSIFT: 後期グループレベルの統計のためのソリューション(宮越真琴) </span> [PDF](https://sccn.ucsd.edu/githubwiki/files/groupsift.pdf) [サプリメント映画1](https://sccn.ucsd.edu/githubwiki/files/groupsift_sagital.zip)
+<span style="color: purple">15:30～16:00 -- グループSIFT: 後期グループレベルの統計のためのソリューション(Makoto Miyakoshi) </span> [PDF](https://sccn.ucsd.edu/githubwiki/files/groupsift.pdf) [サプリメント映画1](https://sccn.ucsd.edu/githubwiki/files/groupsift_sagital.zip)
 
 <span style="color: green">-- ブレーク--</span>
 

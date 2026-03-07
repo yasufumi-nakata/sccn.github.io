@@ -200,7 +200,7 @@ EEG 構造フィールドは、EEG を構成します。
 ```
 
 これらの値は、チャネルの位置座標とラベルを保存します。
-チャンネル ('FPz'). の の [チャンネル登録](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanedit.m)
+チャンネル ('FPz'). の の [チャネル](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_chanedit.m)
 機能またはメニュー項目 <span style="color: brown">編集 → チャネルの場所</span>
 チャンネルの場所情報を編集または再入力する。 任意の値
 MATLABが変更されました

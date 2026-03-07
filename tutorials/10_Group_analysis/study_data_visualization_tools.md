@@ -129,7 +129,7 @@ ERPをフィルタリングする
 ![](/assets/images/studyplot19.png)
 
 ERPs は、Windows のプロット エキスパートです。
-チャンネル登録 *FP1* は、
+チャネル *FP1* は、
 
 ![](/assets/images/studyplot20.png)
 

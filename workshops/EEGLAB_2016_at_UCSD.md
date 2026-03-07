@@ -252,7 +252,7 @@ EEGLAB は、より高度な EEGLAB ツールボックスや、
 
 <span style="color: mediumblue">3:00 - 3:30 -- D3.B2: 自動ソース分類とリアルタイム ICA (Luca Pion-Tonachini & Sean Hsu)</span> [PDFダウンロード](https://sccn.ucsd.edu/githubwiki/files/eeglab_workshop_2016-_automated_source_classification_and_real_time_ica.pdf)
 
-<span style="color: mediumblue">3:30 - 4:00 -- D3.B3: フェーズ/振幅カップリング (PAC) と PACT (ラモン・マルティネス・カンチーノ&ジョセフ・ヘン) [PDFダウンロード](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_phaseamplitudecoupling.pdf)</span>
+<span style="color: mediumblue">3:30 - 4:00 -- D3.B3: フェーズ/振幅カップリング (PAC) と PACT (Ramon Martinez Cancino&ジョセフ・ヘン) [PDFダウンロード](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_phaseamplitudecoupling.pdf)</span>
 
 <span style="color: saddlebrown">午後4時～午後4時 コーヒーブレイク</span>
 

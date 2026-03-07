@@ -166,7 +166,7 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 **ソース情報フローとスクリプト* * 必須
 
 
-<span style="color: orange">14:30～15:00 -- グループレベルのコネクティビティ分析用STUDYプラグイン(宮越真琴)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/studypluginforgrouplevelconnectivityanalysis.pdf)[AVIファイル(zip)](https://sccn.ucsd.edu/githubwiki/files/controlnetworksagittal.zip‎) [グループレベルでICを拒否する方法](https://sccn.ucsd.edu/githubwiki/files/groupicselection.pdf‎)
+<span style="color: orange">14:30～15:00 -- グループレベルのコネクティビティ分析用STUDYプラグイン(Makoto Miyakoshi)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/studypluginforgrouplevelconnectivityanalysis.pdf)[AVIファイル(zip)](https://sccn.ucsd.edu/githubwiki/files/controlnetworksagittal.zip‎) [グループレベルでICを拒否する方法](https://sccn.ucsd.edu/githubwiki/files/groupicselection.pdf‎)
 
 <span style="color: orange">15:00～16:00 -- EEGLAB(Arnaud Delorme)を用いた基本スクリプト</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_script.pdf)
 

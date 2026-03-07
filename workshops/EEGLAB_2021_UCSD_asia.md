@@ -274,7 +274,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">10月30日</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11月16日</span> - 
-				<strong>フェーズ/振幅コヒーレンス(PAC)プラグイン</strong> (ラモン・マルティネス・カンチーノ) 
+				<strong>フェーズ/振幅コヒーレンス(PAC)プラグイン</strong> (Ramon Martinez Cancino) 
 			</span>
 		</li>
 	</ul>
@@ -285,7 +285,7 @@ redirect_link: https://sites.google.com/ucsd.edu/eeglab2020/eeglab-workshop -->
 			<span style="color: black">
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">11月16日</span>- 
 				<span class="time" data-timeformat="12hr" data-timezone="PST" data-date="2020-04-13">午後11時45分</span> - 
-				<strong>PowPowCATプラグイン</strong> (宮越真琴) 
+				<strong>PowPowCATプラグイン</strong> (Makoto Miyakoshi) 
 			</span>
 		</li>
 	</ul>

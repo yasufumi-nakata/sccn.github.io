@@ -327,4 +327,4 @@ ROIの各ペア間の重要な接続。** そのためには、2つのクラス�
 
 ### 7.4.3. グループSIFT
 
-[グループSIFT](https://github.com/sccn/groupSIFT) 宮越真琴とコラボレーターが開発した。 その妥当性は、SIFTの著者によって評価されていないので、あなた自身のリスクでそれを使用してください。
+[グループSIFT](https://github.com/sccn/groupSIFT) Makoto Miyakoshiとコラボレーターが開発した。 その妥当性は、SIFTの著者によって評価されていないので、あなた自身のリスクでそれを使用してください。
