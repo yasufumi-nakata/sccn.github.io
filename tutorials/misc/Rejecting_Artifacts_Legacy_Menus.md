@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Legacy rejection
-nav_title: "レガシー拒絶"
+nav_title: "レガシーアーティファクト除去"
 long_title: Legacy artifact rejection methods in EEGLAB
 parent: Reference Topics
 grand_parent: Tutorials

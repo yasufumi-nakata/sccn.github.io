@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB preferences menu
-nav_title: "EEGLAB 好み メニュー"
+nav_title: "EEGLAB設定メニュー"
 long_title: The EEGLAB preferences menu
 parent: Reference Topics
 grand_parent: Tutorials

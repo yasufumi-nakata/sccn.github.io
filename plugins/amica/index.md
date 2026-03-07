@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AMICA
-nav_title: "アメリカ"
+nav_title: "AMICA"
 long_title: AMICA
 parent: Plugins
 render_with_liquid: false

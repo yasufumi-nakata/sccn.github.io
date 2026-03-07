@@ -1,7 +1,7 @@
 ---
 layout: default
 title: DIPFIT
-nav_title: "ディップフィット"
+nav_title: "DIPFIT"
 long_title: DIPFIT
 parent: Plugins
 render_with_liquid: false

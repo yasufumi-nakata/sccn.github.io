@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Two decades of EEGLAB
-nav_title: "EEGLABの2年間"
+nav_title: "EEGLABの最初の20年"
 long_title: The first two decades of EEGLAB
 parent: EEGLAB news
 ---

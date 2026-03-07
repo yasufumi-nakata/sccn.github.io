@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Indep. Comp. Analysis
-nav_title: "Indep. 解析"
+nav_title: "独立成分分析"
 long_title: Independent Component Analysis of EEG data
 parent:  Concepts guide
 grand_parent: Tutorials

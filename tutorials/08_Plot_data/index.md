@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 8. Plot data
-nav_title: "8. Plotデータ"
+nav_title: "8. データのプロット"
 long_title: 8. Plot data
 parent: Tutorials
 has_children: true

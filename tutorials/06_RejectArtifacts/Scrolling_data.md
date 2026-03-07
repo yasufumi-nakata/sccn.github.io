@@ -1,7 +1,7 @@
 ---
 layout: default
 title: b. Remove bad data
-nav_title: "b. 悪いデータを削除する"
+nav_title: "b. 不良データの除去"
 long_title: b. Remove bad data by visual inspection
 categories: artifact
 parent: 6. Reject artifacts

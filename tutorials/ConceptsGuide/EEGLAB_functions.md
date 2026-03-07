@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB functions
-nav_title: "EEGLABの機能"
+nav_title: "EEGLAB関数"
 long_title: EEGLAB functions
 parent: Concepts guide
 grand_parent: Tutorials

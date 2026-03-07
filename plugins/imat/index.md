@@ -1,7 +1,7 @@
 ---
 layout: default
 title: IMAT
-nav_title: "メニュー"
+nav_title: "IMAT"
 long_title: IMAT
 parent: Plugins
 render_with_liquid: false

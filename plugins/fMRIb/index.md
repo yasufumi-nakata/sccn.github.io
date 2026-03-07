@@ -1,7 +1,7 @@
 ---
 layout: default
 title: fMRIb
-nav_title: "ログイン ツイート"
+nav_title: "fMRIb"
 long_title: fMRIb
 parent: Plugins
 render_with_liquid: false

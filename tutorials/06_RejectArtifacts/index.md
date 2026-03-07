@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 6. Reject artifacts
-nav_title: "6. 工芸品を注入する"
+nav_title: "6. アーティファクト除去"
 long_title: 6. Reject artifacts
 parent: Tutorials
 has_children: true

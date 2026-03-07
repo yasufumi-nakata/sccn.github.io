@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Re-referencing
-nav_title: "再会議"
+nav_title: "再参照"
 long_title: Re-referencing EEG data
 parent: Concepts guide
 grand_parent: Tutorials

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: a. Using EEGLAB history
-nav_title: "a. EEGLABの歴史"
+nav_title: "a. EEGLAB履歴の使い方"
 long_title: a. Using EEGLAB history
 parent: 11. Write scripts
 grand_parent: Tutorials
