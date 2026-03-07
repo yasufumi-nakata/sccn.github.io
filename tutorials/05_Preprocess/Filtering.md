@@ -9,7 +9,7 @@ grand_parent: Tutorials
 ---
 # 導入事例
 カットオフ周波数、パスバンド、ストップバンド、トランジションバンドの意味のグラフィカルな説明の下。
-![サイトマップ](https://user-images.githubusercontent.com/10362238/118734865-23797e00-b7f4-11eb-9eec-f52ffcba0585.png)
+![こちら](https://user-images.githubusercontent.com/10362238/118734865-23797e00-b7f4-11eb-9eec-f52ffcba0585.png)
 
 デフォルトでは、 ウィンドウズ 同期、フィルタ 20〜40%のカットオフ周波数は、ローパスとストリップパスのカットオフFreq(カットオフ<2Hz)です。 20〜40%のカットオフ周波数は、ローパスとラインオフのための1〜5です。 . . . . . . . . . . . . . . .
 
@@ -26,7 +26,7 @@ EEGLAB をロードする
 <span style="color: brown">既存のデータセットをロードする</span>eeglab_data.set の使い方
 EEGLABの「sample_data」のフォルダにあるツールボックス。 *Open*ファイルの開き。
 
-![サイトマップ](/assets/images/Pop_loadset.png)
+![こちら](/assets/images/Pop_loadset.png)
 
 リニアトレンドの除去
 -------------------
@@ -56,7 +56,7 @@ EEGLABのレガシーは、EEGLABのレガシーのおすすめです。[Widmann
  
 データをフィルタリングした後、
 フィルターが選択によって加えられたことを点検して下さい 
-<span style="color: brown">サイトマップ</span> メニュー項目をプロットする
+<span style="color: brown">こちら</span> メニュー項目をプロットする
 データスペクトル。 フィルタアウト周波数領域に気づくかもしれません
 'ripples', な が ' ' ' '
 工芸品。 
@@ -96,4 +96,4 @@ MATLABでは、もっともっともっともっともっともっともっと�
 
 バンド の の の を を を を を を を を を を しかし、ラインは、 [クリーンライン](https://github.com/sccn/cleanline) EEGLABのプラグインは、様々なテーパリングとトンプソンFの統計を融合し、シンプソド(例えば、ライン)のソリューションを組み合わせるものです。 導入事例 CleanLine は、顧客を満足させ、 [プレス](https://github.com/VisLab/EEG-Clean-Tools) しかし、この主張はまだ検証されていません。 以下の比較図に示すように、このメソッドが動作する(そして必ずしも動作しません)、結果は壮観です。
 
-![サイトマップ](/assets/images/cleanline.png)
+![こちら](/assets/images/cleanline.png)

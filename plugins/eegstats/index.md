@@ -76,7 +76,7 @@ p =
     {[0.0345]}
 ```
 
-またはデータをテーブルに変換し、MATLAB統計ツールボックスを使用して統計を実行したり、外部ソフトウェアを使用して実行します。 これらのコマンドを STERN EEGLAB STUDY のサブセットに適用することで、以下の表が取得されました。 [サイトマップ](https://eeglab.org/tutorials/tutorial_data.html)
+またはデータをテーブルに変換し、MATLAB統計ツールボックスを使用して統計を実行したり、外部ソフトウェアを使用して実行します。 これらのコマンドを STERN EEGLAB STUDY のサブセットに適用することで、以下の表が取得されました。 [こちら](https://eeglab.org/tutorials/tutorial_data.html)
 
 ```matlab
 res = std_cell2table([], [], aa, info, 'design', STUDY.design(2),  'dimensions', {'subjects' 'alpha_asymmetry' })

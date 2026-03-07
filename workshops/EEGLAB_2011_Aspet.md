@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2011 Aspet
-nav_title: "EEGLAB 2011 アスペット"
+nav_title: "EEGLAB 2011 Aspet"
 parent: Past workshops
 grand_parent: Workshops
 ---
@@ -45,17 +45,17 @@ EEGおよび関連データの高度な分析、詳細な方法
 **概要とICA理論/実践* * 必須
 
 
-<span style="color: purple">8:30～9:30 鉱業イベント関連の脳力学I(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_sm_mining_brain_dynamics.pdf)
+<span style="color: purple">8:30～9:30 鉱業イベント関連の脳力学I(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_sm_mining_brain_dynamics.pdf)
 
-<span style="color: purple">9:30-10:00 -- EEGLABの概要(アーナド・デローム)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ad_eeglab_overview.pdf)
+<span style="color: purple">9:30-10:00 -- EEGLABの概要(アーナド・デローム)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ad_eeglab_overview.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
 <span style="color: purple">10:30 – 11:15 -- ICA理論(Arnaud Delorme)</span>
-[サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ad_lecture_ica.pdf)
+[PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ad_lecture_ica.pdf)
 
 <span style="color: orange">11:15 – 12:00 -- データのインポート、アーティファクトの拒絶と実行 ICA (Claire Braboszcz)</span>
-[サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_cb_evaluate_ic.pdf)
+[PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_cb_evaluate_ic.pdf)
 <!-- -->
 
 
@@ -68,11 +68,11 @@ EEGおよび関連データの高度な分析、詳細な方法
 
 
 <span style="color: purple">13:00 – 14:00 -- ICAコンポーネントの評価 (Claire Braboszcz)</span>
-[サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_cb_evaluate_ic.pdf)
+[PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_cb_evaluate_ic.pdf)
 
 <span style="color: purple">14:00- 15:00 -- 時間頻度分解
 practicum (ティム・ムレン)</span>
-[サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_tm_time_frequency.pdf)
+[PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_tm_time_frequency.pdf)
 <!-- -->
 
 
@@ -84,7 +84,7 @@ practicum (ティム・ムレン)</span>
 
 
 <span style="color: purple">15:30 – 16:30 -- SIFTツールボックス: 情報の流れと悲しみのキャサリティツール(Tim Mullen)</span>
-[サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_tm_sift.pdf), [マニュアル](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_tm_sift.pdf)
+[PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_tm_sift.pdf), [マニュアル](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_tm_sift.pdf)
 
 <span style="color: orange">16:30 – 17:30 -- SIFT ツールボックス: practicum (Tim Mullen)</span>
 
@@ -111,10 +111,10 @@ practicum (ティム・ムレン)</span>
 
 
 <span style="color: purple">8:30～9:30 Dipfitプラグイン(Robert Oostenveld)</span>
-[サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ro_source_modeling.pdf)
+[PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ro_source_modeling.pdf)
 
 <span style="color: purple">9:30～10:00 ・・・ なぜクラスター独立したコンポーネント(Scott Makeig)</span>
-[サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_sm_why_cluster.pdf)
+[PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_sm_why_cluster.pdf)
 <!-- -->
 
 
@@ -127,9 +127,9 @@ practicum (ティム・ムレン)</span>
 **部品クラスタリング* * 必須
 
 
-<span style="color: orange">10:30-11:00 -- STUDY デザインの作成 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ad_study_design.pdf)
+<span style="color: orange">10:30-11:00 -- STUDY デザインの作成 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ad_study_design.pdf)
 
-<span style="color:  orange">11:00 – 12:00 -- 独立系コンポーネントのクラスタリング(ローメイン・グランチャンプ)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_rm_study_clustering.pdf)
+<span style="color:  orange">11:00 – 12:00 -- 独立系コンポーネントのクラスタリング(ローメイン・グランチャンプ)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_rm_study_clustering.pdf)
 <!-- -->
 
 
@@ -142,13 +142,13 @@ practicum (ティム・ムレン)</span>
 
 
 <span style="color: purple">13:00 – 13:30 -- EEGLABと将来の方向に実装された統計ツール(Guillaume Rousselet)</span>
-[サイトマップ](https://sccn.ucsd.edu/githubwiki/files/11_aspet_eeglab_statistics.pdf)
+[PDF](https://sccn.ucsd.edu/githubwiki/files/11_aspet_eeglab_statistics.pdf)
 
 <span style="color: orange">13:30～14:30～ 調査(Arnaud Delorme)におけるプロット対策と計算統計</span>
-[サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ad_study_plot_stats.pdf)
+[PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ad_study_plot_stats.pdf)
 
 <span style="color: orange">14:30 – 15:30 -- 研究でスクリプト (Arnaud Delorme)</span>
-[サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ad_study_advanced_and_scripts.pdf)
+[PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ad_study_advanced_and_scripts.pdf)
 <!-- -->
 
 
@@ -169,10 +169,10 @@ practicum (ティム・ムレン)</span>
 
 
 <span style="color: purple">8:30～9:30 マイニングイベント関連の脳力II(Scott Makeig)</span>
-[サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_sm_mining_brain_dynamics2.pdf)
+[PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_sm_mining_brain_dynamics2.pdf)
 
 <span style="color: orange">9:30 – 10:00 -- EEGLABプラグイン(Arnaud Delorme)</span>
-[サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ad_eeglab_plugins.pdf)
+[PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2011_ad_eeglab_plugins.pdf)
 <!-- -->
 
 

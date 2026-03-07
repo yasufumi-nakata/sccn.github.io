@@ -45,7 +45,7 @@ grand_parent: Tutorials
 
 ### ASCII は、
 
-エッグラボ メニュー ASCIIファイルとして
+EEGLAB メニュー ASCIIファイルとして
 <span style="color: brown">テキストファイルデータとICAのチュートリアル</span>. 
 ファイル名: *mydata.txt*
 このページではjavascriptを使用しています。
@@ -54,7 +54,7 @@ grand_parent: Tutorials
 時刻値チェックボックスに最も近い編集ボックスに指定します。
 最後に、保存する前に行列をトランスポーズするために3番目のチェックボックスを確認してください。
 
-![サイトマップ](/assets/images/pop_export1.png)
+![こちら](/assets/images/pop_export1.png)
 
 ディスクに書かれているファイルは次のようになります:
 

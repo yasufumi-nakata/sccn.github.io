@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB revision history
-nav_title: "EEGLABリビジョンの歴史"
+nav_title: "EEGLABリビジョン履歴"
 parent: Download EEGLAB
 ---
 EEGLABリビジョンの歴史
@@ -196,7 +196,7 @@ MATLABおよび実行可能フォーマットでEEGLABのダウンロードが�
 ## EEGLAB バージョン 2020.0
 
 -   発行日:2020年7月31日; GITタグ: 2020.0
--   <b>エッグラボ プラグインマネージャー</b>: 固定バグ、プラグイン検出
+-   <b>EEGLAB プラグインマネージャー</b>: 固定バグ、プラグイン検出
     ケース感度、プラグイン検索機能を追加しました。
 -   <b>EEGLAB自動更新装置</b>: 新しいバージョンのインストールを許可する
     EEGLAB から EEGLAB まで。
@@ -233,7 +233,7 @@ MATLABおよび実行可能フォーマットでEEGLABのダウンロードが�
     clean\_rawdata プラグイン), ICA を実行, 悪いコンポーネントを検出 (デフォルトは
     ICLabel の使用
 -   <b>デフォルトプラグイン</b>お問い合わせ 現在4 EEGLABプラグインがインストールされています
-    エグラボ Dipfitとfirfilt - デフォルトで既にインストールされていた
+    EEGLAB Dipfitとfirfilt - デフォルトで既にインストールされていた
     以前の EEGLAB のリビジョン - そして今 clean\_rawdata と ICLabel.
     Clean\_rawdataは、ASR(アーティファクトサブスペース)に基づく強力なプラグインです。
     再構築)自動的に削除または正しいアーティファクト。

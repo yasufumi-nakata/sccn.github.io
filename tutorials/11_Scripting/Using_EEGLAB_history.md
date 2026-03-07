@@ -57,7 +57,7 @@ EEGLABおよび使用:
 - AllEEG: 全てを 記憶する
 - 現在のデータセット
 
-いつでも参照できます [エッグラボ データ構造](/tutorials/ConceptsGuide/Data_Structures.html) 詳しくはこちら
+いつでも参照できます [EEGLAB データ構造](/tutorials/ConceptsGuide/Data_Structures.html) 詳しくはこちら
 EEG構造について [EEGLABの特徴](/tutorials/ConceptsGuide/EEGLAB_functions.html) EEGLABの学習方法、およびストリーミング方法。
 
 EEGLABの「データセット履歴」との違いは2つあります。
@@ -78,13 +78,13 @@ EEGLABフォーラム
 このセクションでは、歴史の活用方法を説明します
 スクリプトを書くための現在のデータセットの変更。
 
-エッグラボ データセットをロードし、データウィンドウを転送します。
+EEGLAB データセットをロードし、データウィンドウを転送します。
 - 電話番号 <span style="color: brown">ファイル → データの読み込み</span>EEGLABの「sample_data」フォルダに「eeglab_data.set」と書いてあります。
 - メニュー項目を使用する <span style="color: brown">Plot → チャンネルデータ(有料)</span>お問い合わせ このポップアップ
 お問い合わせ [エッグロット](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)
 下にデータをスクロールする。
 
-![サイトマップ](/assets/images/Scrollchannelactivities1.png)
+![こちら](/assets/images/Scrollchannelactivities1.png)
 
 メニュー項目 <span style="color: brown">ファイル → 履歴スクリプト → セッション履歴スクリプトを保存</span> コマンド テンプレート
 スクリプトファイル。 ファイルを現在のディレクトリに保存するか、
@@ -156,7 +156,7 @@ filename, チャンネル数と場所, サンプリング
 料金、試行回数、各イベントに関する情報
 トライアル/エポック、データ自体など。 完了のため
 *EEG* フィールド情報と関連情報
-[エッグラボ データ構造](/tutorials/ConceptsGuide/Data_Structures.html)お問い合わせ コンテンツ
+[EEGLAB データ構造](/tutorials/ConceptsGuide/Data_Structures.html)お問い合わせ コンテンツ
 *EEG*構造のフィールドは、*EEG.fieldname*の構成要素です。
 MATLABでは、 EEG.nbchan* を入力
 現在のデータセットのチャンネル数を返します。
@@ -195,7 +195,7 @@ ans =
 
 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行中は、 実行されます。
 保存する *session* の履歴
-エッグラボ 多重データセット変更が始まります。
+EEGLAB 多重データセット変更が始まります。
 *EEG.history*は、現在のデータセットの変更のみとなります。
 
 このページではjavascriptを使用しています。
@@ -274,7 +274,7 @@ EEGLAB ウィンドウを閉じる
 ------
 
 EEGデータセット
-エッグラボ は、
+EEGLAB は、
 以下の2つのコマンドのいずれかを実行してください。
 
 - EEGLABウィンドウが実行中の場合、タイプ:
@@ -284,7 +284,7 @@ eeglab redraw;
 
 ![](/assets/images/eeglab20191.png)
 
--  エッグラボ 最近の投稿
+-  EEGLAB 最近の投稿
 
 ``` matlab
 [ALLEEG EEG CURRENTSET] = eeg_store(ALLEEG, EEG, CURRENTSET);
@@ -306,7 +306,7 @@ EEGLABデータ構造
 EEGLAB MATLABのデータ構造は2つあります。*EEG*と*ALLEEG*。
 *ALLEEG*は、現在進行中のデータセットです。
 EEGLAB では、EEGLAB で勉強しています。
-処理中のデータセットに関する情報。 詳細はこちら [エッグラボ データ構造](/tutorials/ConceptsGuide/Data_Structures.html) 詳細については、.
+処理中のデータセットに関する情報。 詳細はこちら [EEGLAB データ構造](/tutorials/ConceptsGuide/Data_Structures.html) 詳細については、.
 
 このページではjavascriptを使用しています。 多岐に渡る
 現在の EEGLAB のセッションは、

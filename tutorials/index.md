@@ -21,7 +21,7 @@ EEGLAB チュートリアルでは、多くの部分を分割して、
 
 EE EE EE 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順 手順
 
-<h3><a href="/tutorials"><span style="color: black;">エッグラボ チュートリアル</span></a></h3>
+<h3><a href="/tutorials"><span style="color: black;">EEGLAB チュートリアル</span></a></h3>
 {%- assign children_list = site.pages | where: "parent", page.title -%}
 {% include toc_nav_recursive.html nav=children_list %}
 

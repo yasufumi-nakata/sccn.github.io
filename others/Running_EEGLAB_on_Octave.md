@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB on Octave
-nav_title: "オクターブのEEGLAB"
+nav_title: "OctaveでのEEGLAB"
 long_title: EEGLAB on Octave
 parent: Interoperability
 ---
@@ -46,7 +46,7 @@ Octaveを始めるたびに。
 
 ### EEGLABをインストールする
 
-EEGLAB(エグラボ) Octaveは進行中です。 EEGLAB 2021.0 では、開発バージョンの使い方をおすすめします。 [GitHubでEEGLABを](https://github.com/sccn/eeglab)お問い合わせ EEGLABの公式バージョンでは、EEGLABの公式リリースを使用できます。
+EEGLAB(EEGLAB) Octaveは進行中です。 EEGLAB 2021.0 では、開発バージョンの使い方をおすすめします。 [GitHubでEEGLABを](https://github.com/sccn/eeglab)お問い合わせ EEGLABの公式バージョンでは、EEGLABの公式リリースを使用できます。
 
 EEGLABの開発バージョンをインストールするには、インストールします [窓のためのGit](https://git-scm.com/download/win) リポジトリをサブモジュールでクローンします。 オクターブに問題が発生した場合は、問題の提出をお願いします。 [GitHubで](https://github.com/sccn/eeglab/issues).
 

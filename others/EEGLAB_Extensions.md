@@ -178,7 +178,7 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
 
 -   **[ADJUSTについて](http://www.unicog.org/pm/pmwiki.php/MEG/RemovingArtifactsWithADJUST):** ステレオタイプのアーティファクト固有の空間と一時的な機能を組み合わせることで、アーティファクト関連インディペンデントコンポーネントを識別する完全自動アルゴリズム。
 
--   **[サイトマップ](https://github.com/sccn/corrmap):** 共通のEEGのアーティファクトの半自動同一証明
+-   **[こちら](https://github.com/sccn/corrmap):** 共通のEEGのアーティファクトの半自動同一証明
     テンプレートに基づく。 CORRMAP拡張は、セットのセットで構成されています
     MATLABの機能により、識別とクラスタリングが可能
     一般的なEEGアーティファクトを表す独立したコンポーネント。

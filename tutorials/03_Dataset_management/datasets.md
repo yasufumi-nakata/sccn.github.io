@@ -18,7 +18,7 @@ EEGLAB をロードする
 <span style="color: brown">既存のデータセットをロードする</span>eeglab_data.set の使い方
 EEGLABの「sample_data」のフォルダにあるツールボックス。 *Open*ファイルの開き。
 
-![サイトマップ](/assets/images/Pop_loadset.png)
+![こちら](/assets/images/Pop_loadset.png)
 
 データセットの変更と保存
 ------
@@ -33,7 +33,7 @@ EEGLABの「sample_data」のフォルダにあるツールボックス。 *Open
 
 新規データセット(上書きなし)を、EEGLABメニューの項目へ。 <span style="color: brown">データセット</span> 以下に示すように、メモリ内で利用可能なデータセットを視覚化し、ナビゲートします。 このメニューでデータセットを選択することも可能です。
 
-![サイトマップ](/assets/images/eeglab_dataset_menu.png)
+![こちら](/assets/images/eeglab_dataset_menu.png)
 
 データセットを保存
 ------
@@ -49,7 +49,7 @@ MATLABに新しいデータセット
 歴史等、また加えられたかもしれない独特な構造分野
 お問い合わせ
 
-![サイトマップ](/assets/images/Saveepoch.png)
+![こちら](/assets/images/Saveepoch.png)
 
 データセットを削除する
 ------
@@ -59,7 +59,7 @@ MATLABに新しいデータセット
 <span style="color: brown">編集 → データセットの削除</span> 入る
 "2" は、以下のとおりです。
 
-![サイトマップ](/assets/images/Delete.png)
+![こちら](/assets/images/Delete.png)
 
 EEGLAB/MATLABから2位データセットが削除されます。
 ワークスペース。 (注意: 最初に戻って切り替える必要はありません
@@ -74,7 +74,7 @@ MATLABの外部ファイルへ
 
 コールメニュー項目 <span style="color: brown">ファイル → 環境設定</span>お問い合わせ データセットとファイルの好みは、以下に示す最初の3つの項目です。
 
-![サイトマップ](/assets/images/preferences.png)
+![こちら](/assets/images/preferences.png)
 
 最初のオプションは、複数のデータセットがメモリに保存されているかどうかを決定します。 グループ分析を実行すると、メモリ内のすべてのデータセットを保持できないため、このオプションを選択します。 このオプションを選択すると、欠点は、以下に示すように、ユーザーが親を保存または上書きする必要があります(下セクションのチェックボックスのいずれかを選択する必要があります)。
 

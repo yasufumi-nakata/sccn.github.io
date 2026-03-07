@@ -9,7 +9,7 @@ nav_order: 19
 ---
 プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/sccn/PACTools).
 
-# エッグラボ イベント関連パックツール
+# EEGLAB イベント関連パックツール
 イベント関連PACTools(PACTools)は、単一の被験者データにおける相振度結合を計算するEEGLABプラグインです。 
 PACを計算するための伝統的な方法に加えて、プラグインには、相互情報フェーズ振幅カップリング方法(MIPAC)の即時およびイベント関連実装(Martinez-Cancino et al 2019参照)が含まれます。
 このツールボックスは、UCSD、La Jolla、カリフォルニアのComputational NeurosciencesのSwartz CenterでEEGLABチームによって開発され、現在、主要な開発者であるRamon Martinez-Cancinoによって維持されています。
@@ -80,7 +80,7 @@ PACを計算するための伝統的な方法に加えて、プラグインに�
 PACToolsはEEGLABのプラグインです。 したがって、EEGLABプラグインマネージャから直接インストールすることができます(EEGLAB GUIで参照:ファイル -> EEGLAB拡張機能の管理
 代替方法は、PACToolsファイルをユーザーのローカルコンピュータにダウンロードすることです。 その後、フォルダを全てのファイルとコピーして、EEGLABフォルダに*./eeglab/plugins/*にあるEEGLABフォルダにコピーし、EEGLABを再起動します。 ツールボックスは、EEGLAB のメニュー *Tools* の下に設置できます(下の図を参照)。
 
-![サイトマップ](https://github.com/user-attachments/assets/2cb685bd-9c6c-4935-aa0c-c39402d928a4)
+![こちら](https://github.com/user-attachments/assets/2cb685bd-9c6c-4935-aa0c-c39402d928a4)
 
 ### グラフィカルなユーザーインターフェイス
 現在のバージョンでは、ツールボックスは、コマンドラインコールから実行できるPACを計算し、またはこれらの端のために作成されたグラフィカルなユーザーインターフェイス(GUI)から視覚化するための基本的な機能を提供します。 EEGLAB GUI から *Tools > PAC Tools* から GUI へのアクセスを実行できます。 ここでは、*Estimate PAC* または *Visualize PAC* のオプションを付与します。 
@@ -88,7 +88,7 @@ PACToolsはEEGLABのプラグインです。 したがって、EEGLABプラグ�
 #### Pop_pacでPACを計算する 
 EEGLAB GUI から PAC を計算するために GUI を呼び出すには、メニュー *Tools > PAC Tools > PAC* を刺激します。そうしないと、MATLAB コマンドウィンドウから GUI を起動できます。 `EEG = pop_pac(EEG)` (下図参照) ここでは、PACが計算したいEEGセットを既に読み込まれていると仮定します。  
 
-![サイトマップ](https://github.com/user-attachments/assets/9f6c95cf-002c-4895-88ec-a4b25c474dd3)
+![こちら](https://github.com/user-attachments/assets/9f6c95cf-002c-4895-88ec-a4b25c474dd3)
     
 GUI はラベルによって指定された5つの部分に分けられます。 **データ型**, **PACメソッド**, **任意入力**、**Significanceのテスト**および** NSG**の計算。
 最初のセクション(**Data type**)では、PAC計算に使用されるデータの種類は、チャネルデータ(*Channels*)またはICA分解データ(*Components*)の間で選択できます。 
@@ -107,7 +107,7 @@ GUI はラベルによって指定された5つの部分に分けられます。
 #### Pop_plotpacでPACを可視化
  PACが*pop_pac.m*を使用して計算されると、結果はEEG構造に格納されます(次のセクションの詳細は参照)。 結果の可視化は、コマンドラインから関数 *pop_plotpac* を呼び出して実行できます。`pop_plotpac(EEG)`) または EEGLAB メニューから *ツール > PAC ツール > PAC*を視覚化(下図参照)。  
 
-![サイトマップ](https://github.com/user-attachments/assets/7d340eed-d694-4dec-a8f2-2abc8a93a3ed)
+![こちら](https://github.com/user-attachments/assets/7d340eed-d694-4dec-a8f2-2abc8a93a3ed)
   
 poc_pacplot の GUI は 4 つの主要なセクション (上の図で記述) で構成されます。
 セクションA: このセクションでは、ユーザーは、現在のEEGセットに格納されているPACの計算に使用されるパラメータの迅速な一目を得ることができます。
@@ -194,11 +194,11 @@ Note: このサンプルコードでは、現在のディレクトリがツー�
 
 このデータセットは、信号の2つのセグメント(下の図を参照)の間に、60Hzの即時フェーズと60Hzの瞬時の振幅が相まって、シミュレートされたPAC信号が含まれています。
 
-![サイトマップ](https://github.com/user-attachments/assets/253d0a6c-620e-4328-b8d1-ea7e0637f7e1)
+![こちら](https://github.com/user-attachments/assets/253d0a6c-620e-4328-b8d1-ea7e0637f7e1)
 
 データセットをロードした後、PACToolsとPACToolsを*pop_pac* GUIで計算します。 GUI を起動するには、*Tools > PAC Tools > EEGLAB GUI で PAC* を推定します。 代わりに、あなたは使用することができます `EEG = pop_pac(EEG)` MATLABコマンドウィンドウから。 ここでは、範囲内の10相周波数間の平均ベクトル長さ変調インデックスメソッド(*mvlmi*)を使用してPACを計算します [4 15]Hz および範囲内の20の振幅周波数 [30 100]Hz. この計算を実行するには、以下の図に示すように*pop_pac* GUIを設定し、**Ok**をクリックします。
 
-![サイトマップ](https://github.com/user-attachments/assets/f2dbe558-8096-4062-b828-67e5f8b8a6c8)
+![こちら](https://github.com/user-attachments/assets/f2dbe558-8096-4062-b828-67e5f8b8a6c8)
 
 この計算を実行するための同等のコマンドライン呼び出しは、コマンドで再処理できます `eegh`お問い合わせ この場合、最後のエントリで返します。
 
@@ -243,7 +243,7 @@ Note: このサンプルコードでは、現在のディレクトリがツー�
 #### 可視化
 以前に計算した PAC 値を視覚化するには、 *pop_plotpac* GUI を使用します( *Tools > PAC Tools > PAC* を視覚化)。 *pop_plotpac* GUI では、チャンネルのペアと視覚化のための測定を選択し、GUI のセクション D で有効なプロットを使用して PAC 結果をプロットします。 以下の図は、この測定のために利用可能なプロットオプションのそれぞれからInstantaneous MIPAC(*instmipac*)のために生成されたプロットを示しています。 *Comodulogram*、*Temporal comodulogram*および*Freq.-time PAC*。 ここではデフォルトのプロットオプションを使用しますが、ユーザーは異なるプロットパラメータオプションが視覚化をどのように変更するかを調べることをお勧めします。
 
-![サイトマップ](https://github.com/user-attachments/assets/ed4dd87d-9d9f-4c26-ada4-41be78a910f0)
+![こちら](https://github.com/user-attachments/assets/ed4dd87d-9d9f-4c26-ada4-41be78a910f0)
 
 ### 貢献とフィードバック
 定番開発に関するオープンソースプロジェクトです。 投稿者への連絡は、nuruuscub@gmail.comまでお願いします。 問題トラッカーの使用は推奨されます。 

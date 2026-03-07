@@ -81,7 +81,7 @@ EEGLAB は EEGLAB v0.9 との互換性も後方対応
 
 EEGLABの最初のバージョンのオリジナルファイルをダウンロードできます
 2001年4月23日(金)に公開(全文も可)
-オリジナル EEGLAB [サイトマップ](http://sccn.ucsd.edu/~arno/eeglab.html)).
+オリジナル EEGLAB [こちら](http://sccn.ucsd.edu/~arno/eeglab.html)).
 EEGLAB、ICAツールボックス、テストファイルのアーカイブをダウンロードして解凍してください。
 -   [eeglab0.9.tar.gzの](http://sccn.ucsd.edu/eeglab/download/eeglab0.9.tar.gz)
     (\< 1Mb)

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2015 Aspet
-nav_title: "EEGLAB 2015 アスペット"
+nav_title: "EEGLAB 2015 Aspet"
 parent: Past workshops
 grand_parent: Workshops
 ---

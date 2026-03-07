@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2009 Australia
-nav_title: "エグラボ2009 オーストラリア"
+nav_title: "EEGLAB 2009 Australia"
 parent: Past workshops
 grand_parent: Workshops
 ---

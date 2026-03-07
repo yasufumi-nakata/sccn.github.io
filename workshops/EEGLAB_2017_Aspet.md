@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2017 Aspet
-nav_title: "EEGLAB 2017 アスペット"
+nav_title: "EEGLAB 2017 Aspet"
 parent: Past workshops
 grand_parent: Workshops
 ---
@@ -57,13 +57,13 @@ EEGおよび関連データの高度な分析を実行し、詳細
 
 <span style="color: purple">8:30～9:45～ 鉱業イベント関連の脳力学I(Scott Makeig)</span>
 
-<span style="color: purple">9:45 – 10:15 -- EEGLABの概要 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_overview2.pdf)
+<span style="color: purple">9:45 – 10:15 -- EEGLABの概要 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_overview2.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
 <span style="color: purple">10:30-11:30 -- ICA理論(Scott Makeig)</span>
 
-<span style="color: orange">11:30～12:30～ データのインポート、アーティファクト拒否(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_aspet_artifact_and_ica.pdf)
+<span style="color: orange">11:30～12:30～ データのインポート、アーティファクト拒否(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_aspet_artifact_and_ica.pdf)
 <!-- -->
 
 
@@ -75,9 +75,9 @@ EEGおよび関連データの高度な分析を実行し、詳細
 **ICAおよび時間頻度**
 
 
-<span style="color: orange">13:45 – 14:30 -- ICA分解練習(アーナド・デローム)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/tuesday_run_ica_and_plot.pdf)
+<span style="color: orange">13:45 – 14:30 -- ICA分解練習(アーナド・デローム)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/tuesday_run_ica_and_plot.pdf)
 
-<span style="color: orange">14:30～15:15 -- ICAコンポーネントの練習(Arnaud Delorme)の評価</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/tuesday_ica_evaluation.pdf‎)
+<span style="color: orange">14:30～15:15 -- ICAコンポーネントの練習(Arnaud Delorme)の評価</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/tuesday_ica_evaluation.pdf‎)
 
 <span style="color: orange">15:15 – 15:45 -- ボストントラッピング ICA (Fiorenzo Artoni)</span>
 
@@ -99,13 +99,13 @@ EEGおよび関連データの高度な分析を実行し、詳細
 
 <span style="color: purple">9:00～9:30 複数の比較のための強力な統計と修正(Cyril Pernet)</span>
 
-<span style="color: purple">9:30 - 10:30 -- STUDY と STUDY デザインの作成 - チャンネルのプロットとコンピューティングの統計 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_design.pdf)
+<span style="color: purple">9:30 - 10:30 -- STUDY と STUDY デザインの作成 - チャンネルのプロットとコンピューティングの統計 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_design.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">10:45 - 11:45 -- ICAコンポーネントのクラスタリングとプロット(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_clustering.pdf)
+<span style="color: purple">10:45 - 11:45 -- ICAコンポーネントのクラスタリングとプロット(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_clustering.pdf)
 
-<span style="color: purple">11:45 - 12:45 -- EEGLABの研究とスクリプトを用いたグループ分析(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_scipting.pdf)
+<span style="color: purple">11:45 - 12:45 -- EEGLABの研究とスクリプトを用いたグループ分析(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_scipting.pdf)
 <!-- -->
 
 
@@ -170,7 +170,7 @@ EEGおよび関連データの高度な分析を実行し、詳細
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: orange">15:45 – 17:30 -- SIFT ツールボックス: practicum (Tim Mullen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/sift_i_practicum.pdf)
+<span style="color: orange">15:45 – 17:30 -- SIFT ツールボックス: practicum (Tim Mullen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/sift_i_practicum.pdf)
 
 
 

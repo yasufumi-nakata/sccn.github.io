@@ -159,7 +159,7 @@ EEGLABのコンパイルとMATLABバージョンの類似性
     コンパイルされたバージョンに含まれていない(プラグインを含む)
     ソースの再構築など。
 -   トラブルシューティング! バグ報告を投稿することを躊躇しないでください
-    [エッグラボ GitHubの問題トラッカー](https://github.com/sccn/eeglab/issues)
+    [EEGLAB GitHubの問題トラッカー](https://github.com/sccn/eeglab/issues)
     EEGLABのコンパイルされたバージョンを実行している問題が発生した場合。
 
 コンパイルされたバージョンの完全性を確認する方法

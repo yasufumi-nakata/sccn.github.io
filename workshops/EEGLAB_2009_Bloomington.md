@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2009 Indiana
-nav_title: "EEGLAB 2009 インディアナ"
+nav_title: "EEGLAB 2009 Bloomington"
 parent: Past workshops
 grand_parent: Workshops
 ---
@@ -32,15 +32,15 @@ grand_parent: Workshops
 
 **概要とICA理論/実践* * 必須
 
-<span style="color: purple"> 8:30～9:30 鉱業イベント関連の脳力学I(Scott Makeig)</span> ([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab_intro.pdf))
+<span style="color: purple"> 8:30～9:30 鉱業イベント関連の脳力学I(Scott Makeig)</span> ([PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab_intro.pdf))
 
-<span style="color: purple"> 9:30 – 10:00 午前 -- EEGLAB 概要 (Arnaud Delorme)</span> ([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/lecture_eeglaboverview.pdf))
+<span style="color: purple"> 9:30 – 10:00 午前 -- EEGLAB 概要 (Arnaud Delorme)</span> ([PDF](https://sccn.ucsd.edu/githubwiki/files/lecture_eeglaboverview.pdf))
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple"> 10:20 – 11:05 am -- ICA理論(Arnaud Delorme)</span> ([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/ica_indiana.pdf))
+<span style="color: purple"> 10:20 – 11:05 am -- ICA理論(Arnaud Delorme)</span> ([PDF](https://sccn.ucsd.edu/githubwiki/files/ica_indiana.pdf))
 
-<span style="color: purple"> 11:05 – 12:00 午後 -- ICAアプリケーション(Julie Onton)</span> ([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/ica_application.pdf))
+<span style="color: purple"> 11:05 – 12:00 午後 -- ICAアプリケーション(Julie Onton)</span> ([PDF](https://sccn.ucsd.edu/githubwiki/files/ica_application.pdf))
 
 
 
@@ -49,20 +49,20 @@ grand_parent: Workshops
 **IC分析**
 
 
-<span style="color: purple">1:00 – 1:40 午後 -- 時間の頻度分解(Arnaud Delorme) </span> ([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/lecture_timefreq.pdf))
+<span style="color: purple">1:00 – 1:40 午後 -- 時間の頻度分解(Arnaud Delorme) </span> ([PDF](https://sccn.ucsd.edu/githubwiki/files/lecture_timefreq.pdf))
 
-<span style="color: purple">1:40 – 2:20 午後 – EEG, ERPとフェーズロック (Scott Makeig)</span> ([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/indiana_phaselocking.pdf))
+<span style="color: purple">1:40 – 2:20 午後 – EEG, ERPとフェーズロック (Scott Makeig)</span> ([PDF](https://sccn.ucsd.edu/githubwiki/files/indiana_phaselocking.pdf))
 
 <span style="color: purple">2:20 - 2:40 午後 -- 質問と一般的な議論(すべて)</span>
 
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">3:00 – 3:50 午後 -- ブートストラップ統計(Arnaud Delorme) ([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/lecture_statistics.pdf)) </span>
+<span style="color: purple">3:00 – 3:50 午後 -- ブートストラップ統計(Arnaud Delorme) ([PDF](https://sccn.ucsd.edu/githubwiki/files/lecture_statistics.pdf)) </span>
 
-<span style="color: purple">3:50 – 4:30 午後 -- ICAクラスタリング(Scott Makeig)</span> ([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab_indiana_clustering.pdf))
+<span style="color: purple">3:50 – 4:30 午後 -- ICAクラスタリング(Scott Makeig)</span> ([PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab_indiana_clustering.pdf))
 
-<span style="color: purple">4:30～17:00 - アメリカ クラスタリング例(ジュリー・オントン)</span>([サイトマップ](https://sccn.ucsd.edu/githubwiki/files/clusteringexamples.pdf))
+<span style="color: purple">4:30～17:00 - アメリカ クラスタリング例(ジュリー・オントン)</span>([PDF](https://sccn.ucsd.edu/githubwiki/files/clusteringexamples.pdf))
 
 <u><span style="color: blue">4月21日(火)</span></u>
 

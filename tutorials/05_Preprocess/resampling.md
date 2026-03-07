@@ -17,7 +17,7 @@ EEGLAB をロードする
 <span style="color: brown">既存のデータセットをロードする</span>「eeglab_data.set」の使い方
 EEGLABの「sample_data」フォルダにあるツールボックスです。
 
-![サイトマップ](/assets/images/Pop_loadset.png)
+![こちら](/assets/images/Pop_loadset.png)
 
 サンプリングレートを変更する
 ---------------------------------
@@ -29,7 +29,7 @@ EEGLABの「sample_data」フォルダにあるツールボックスです。
 処理ツールボックス---このツールボックスを持っていない場合、それは使用します
 MATLABの機能*griddata*
 
-![サイトマップ](/assets/images/pop_resample.png)
+![こちら](/assets/images/pop_resample.png)
 
 既に許容サンプリングレートであるため、チュートリアルデータを処理するためのサンプリングレートを変更する必要はありません。
 

@@ -10,7 +10,7 @@ long_title: Chapter-5.1.-SIFT-install
 ---
 ※Matlab® 2008a** 以降、シグナルをお持ちのお客様
 ツールボックス、統計ツールボックス、
-[エッグラボ](http://sccn.ucsd.edu/eeglab/) そして、
+[EEGLAB](http://sccn.ucsd.edu/eeglab/) そして、
 [シャフト](http://sccn.ucsd.edu/wiki/SIFT#SIFT_Downloads) ツールボックス。 SIFT は EEGLAB (10 以降) のすべてのバージョンで動作します。 EEGLAB 2023.1でチュートリアルのこのバージョンがテストされました。
 
 *get が起動しました**, これらの手順に従ってください:

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2011 Mallorca
-nav_title: "EEGLAB 2011 マヨルカ"
+nav_title: "EEGLAB 2011 Mallorca"
 parent: Past workshops
 grand_parent: Workshops
 ---
@@ -27,7 +27,7 @@ grand_parent: Workshops
 部品:
 
 
-1円 9月22日(木)は終日 <b>Novice EEGLAB(エグラボ)
+1円 9月22日(木)は終日 <b>Novice EEGLAB(EEGLAB)
 ワークショップ</b> EEGLABの使い方の基礎を学びたい方
 EEG(または)を分析するための独立したコンポーネント分析(ICA)
 関連)データ。

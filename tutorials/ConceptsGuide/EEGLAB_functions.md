@@ -84,7 +84,7 @@ EEG = pop_loadset;
 な な を お問い合わせ [pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m) コマンドは、
 EEGLABメニュー <span style="color: brown">ファイル → データの読み込み</span>. 
 
-![サイトマップ](/assets/images/Pop_loadset2.png)
+![こちら](/assets/images/Pop_loadset2.png)
 
 お問い合わせ
 一方、ユーザーは2つの文字列引数を引数に渡します。 [pop_loadset.m ディレクティブ](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m) 関数、ファイル名を含む最初のファイル
@@ -171,7 +171,7 @@ help eeglab
 EEGLAB インターフェイスから出てきた、POP_ 関数は、
 変数。 すなわち、EEGデータが生成される(出典時)
 構造自体。 しかし、コマンドラインから呼び出されると、
-エッグラボ ツールのbox の
+EEGLAB ツールのbox の
 有用な場合(例えば、結果がプロットされた)。 変数を決定するため
 関数で返されると、どのように動作するかを理解することが重要です。
 必要なデータ処理を実行するには、ほとんどのポップアップ_関数

@@ -30,7 +30,7 @@ EEGLAB をロードする
 選択する <span style="color: brown">ファイル</span> メニュー項目および出版物
 <span style="color: brown">既存のデータセットをロードする</span> サブメニュー項目。
 
-![サイトマップ](/assets/images/Pop_loadset.png)
+![こちら](/assets/images/Pop_loadset.png)
 
 チュートリアルファイル「eeglab_data.set」
 EEGLABの「sample_data」のフォルダにあるツールボックス。 *Open*ファイルの開き。
@@ -58,7 +58,7 @@ BESA の球面のファイル。
 デスクトップファイル
 延長インターナショナル10-20システム。
 
-![サイトマップ](/assets/images/Editchannelinfo_auto.png)
+![こちら](/assets/images/Editchannelinfo_auto.png)
 
 複数のテンプレートから選ぶことができます。 出演予定者
 ソースのローカリゼーション, あなたが第二を選択することを強くお勧め
@@ -90,7 +90,7 @@ pop_chanedit( chanlocs );
 (EEGLABの*sample_data*サブディレクトリへ)
 分布)。
 
-![サイトマップ](/assets/images/Loadchannellocation.png)
+![こちら](/assets/images/Loadchannellocation.png)
 
 指定しない場合
 関数は、
@@ -129,7 +129,7 @@ EEGLABのWindows、*channel Location*は、
 *注記:
 このプロットは、チャンネル番号を参照するために任意のチャンネルラベルをクリックします。
 
-![サイトマップ](/assets/images/Channellocationname.png)
+![こちら](/assets/images/Channellocationname.png)
 
 <span style="color: red">警告</span>: 'チャンネルの場所' を 'チャンネルの場所'
 *electrode* は、任意の場所から始まる
@@ -389,7 +389,7 @@ pop_chanedit([]);
 
 空のチャンネル編集ウィンドウが表示されます。
 
-![サイトマップ](/assets/images/Editchannelinfo.jpg)
+![こちら](/assets/images/Editchannelinfo.jpg)
 
 *Read Location*は、*scanned72.dat*のファイルです。
 EEGLAB分布の*sample_data*サブフォルダから。
@@ -398,7 +398,7 @@ Neuroscan では、Polhemus のシステムで測定されたチャンネルで
 ドキュメント ファイルが * * * * * * * * * * * * * * * * * * * * * します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します します *Plot 2-D*は、
 ボタン。 以下のプロットがポップアップ表示されます。
 
-![サイトマップ](/assets/images/Scanlocs1.gif)
+![こちら](/assets/images/Scanlocs1.gif)
 
 測定された3Dチャンネルは、
 2Dモデルのモデル
@@ -407,7 +407,7 @@ Neuroscan では、Polhemus のシステムで測定されたチャンネルで
 インポート * * * *
 (ヘッドセンターの最適化) 次のウィンドウがポップアップ表示されます。
 
-![サイトマップ](/assets/images/Pop_chancenter.gif)
+![こちら](/assets/images/Pop_chancenter.gif)
 
 おそらく、チャンネルの一部はヘッドセンターに含まれるべきではありません
 ヘッドや/または録音されていない場合の最適化
@@ -418,19 +418,19 @@ Neuroscan では、Polhemus のシステムで測定されたチャンネルで
 それから それから 後
 ※Plot 2-D*ボタンを入力してください。
 
-![サイトマップ](/assets/images/Scanlocs2.gif)
+![こちら](/assets/images/Scanlocs2.gif)
 
 上記のビューでは、いくつかのチャンネルの場所はまだ間違っています。 お問い合わせ
 「Cz」は「Cz」で紹介しています。
 こちらのウィンドウでは、
 ポップアップ:
 
-![サイトマップ](/assets/images/Forcelocs.gif)
+![こちら](/assets/images/Forcelocs.gif)
 
 'Cz' を 'Cz' に 'Cz' に 整列 (デフォルト) に 'Cz' を 'Cz' に 'Cz' に 'Cz'
 *Plot 2-D*ボタンを右折すると、Plot 2D*ボタンを押します。
 
-![サイトマップ](/assets/images/Scanlocs3.gif)
+![こちら](/assets/images/Scanlocs3.gif)
 
 このセクションでは、適応するために実行したい操作を説明します
 測定器 EEGLABの使い方は?????????????

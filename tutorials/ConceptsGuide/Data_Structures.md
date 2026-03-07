@@ -7,7 +7,7 @@ parent: Concepts guide
 grand_parent: Tutorials
 nav_order: 5
 ---
-エッグラボ データ構造
+EEGLAB データ構造
 =======================
 お問い合わせ
 
@@ -591,7 +591,7 @@ epoch は、epoch が読み込まれています。
 (*EEG.urevent*)
 実験中は、この工程で消去された。
 
-![サイトマップ](/assets/images/Pop_selectevent.jpg)
+![こちら](/assets/images/Pop_selectevent.jpg)
 
 その後、タイピング
 

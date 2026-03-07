@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Filtering FAQ
-nav_title: "フィルタリングFAQ"
+nav_title: "フィルターFAQ"
 long_title: Filtering frequently asked questions
 parent: Support
 nav_order: 2
@@ -329,7 +329,7 @@ Cedric Cannard(Andreas Widmannとのディスカッションから)によるカ�
 -   Widmann, A., Schröger, E., & Maess, B. (2015). デジタル フィルター設計
     電気生理学的データ--実用的なアプローチのため。 J ネウロシ
     方法, 250, 34-46. 土井: 10.1016/j.jneumeth.2014.08.002
-    [サイトマップ](http://home.uni-leipzig.de/~biocog/eprints/widmann_a2015jneuroscimeth250_34.pdf)
+    [こちら](http://home.uni-leipzig.de/~biocog/eprints/widmann_a2015jneuroscimeth250_34.pdf)
 
 
 

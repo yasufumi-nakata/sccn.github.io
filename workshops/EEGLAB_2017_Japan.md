@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2017 Japan
-nav_title: "EEGLAB 2017 ジャパン"
+nav_title: "EEGLAB 2017 Japan"
 parent: Past workshops
 grand_parent: Workshops
 ---
@@ -60,27 +60,27 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 **概要とICA理論/実践* * 必須
 
 
-<span style="color: purple">10:00 – 11:00 -- マイニングイベント関連の脳のダイナミクスI(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_japan_i.pdf)
+<span style="color: purple">10:00 – 11:00 -- マイニングイベント関連の脳のダイナミクスI(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_japan_i.pdf)
 
-<span style="color: purple">11:00 – 11:30 -- EEGLAB 概要 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_overview_japan.pdf)
+<span style="color: purple">11:00 – 11:30 -- EEGLAB 概要 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_overview_japan.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">11:45 – 12:45 -- ICA理論(Jason Palmer)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_jp_lecture_ica.pdf)
+<span style="color: purple">11:45 – 12:45 -- ICA理論(Jason Palmer)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_jp_lecture_ica.pdf)
 
 <span style="color: green">12:45-14:00 ランチ</span>
 
 **ICAおよび時間頻度**
 
-<span style="color: orange">14:00- 15:00 -- ICA(宮越真琴)のためのEEG前処理</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/preicaprocessing.pdf)
+<span style="color: orange">14:00- 15:00 -- ICA(宮越真琴)のためのEEG前処理</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/preicaprocessing.pdf)
 
-<span style="color: orange">15:00～15:45 -- ICA分解実践Q&A(宮越真琴)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/icadecompositionpracticum.pdf)
+<span style="color: orange">15:00～15:45 -- ICA分解実践Q&A(宮越真琴)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/icadecompositionpracticum.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: orange">16:00 – 17:00 -- ICAコンポーネントの練習員の評価 (ヨハネイバース)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_tokyo_jri_evaluateics.pdf)
+<span style="color: orange">16:00 – 17:00 -- ICAコンポーネントの練習員の評価 (ヨハネイバース)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_tokyo_jri_evaluateics.pdf)
 
-<span style="color: purple">17:00 – 18:00 -- 時間頻度分解: 理論と実践(ヨハネイヴァーン)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_tokyo_jri_timefrequencytheorypractice.pdf)
+<span style="color: purple">17:00 – 18:00 -- 時間頻度分解: 理論と実践(ヨハネイヴァーン)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_tokyo_jri_timefrequencytheorypractice.pdf)
 
 <u><span style="color: blue">9月27日(水)</span></u>
 
@@ -88,7 +88,7 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 **EEGLABのグループ分析とICAクラスタリング* * 必須
 
 
-<span style="color: purple">10:00 - 11:00 - 11:00 なぜクラスターICAコンポーネント? (スコットメイク)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering_tokyo17.pdf)
+<span style="color: purple">10:00 - 11:00 - 11:00 なぜクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering_tokyo17.pdf)
 
 <span style="color: green">11:00～15:30 -- エクスカーション(野外実験と新宿御苑でのハイキング) </span>
 
@@ -108,32 +108,32 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 
 
 
-<span style="color: purple">16:00 - 16:45 -- STUDY と STUDY デザイン (Arnaud Delorme) の作成</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_design_japan2.pdf)
+<span style="color: purple">16:00 - 16:45 -- STUDY と STUDY デザイン (Arnaud Delorme) の作成</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_design_japan2.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">17:00-18:30 -- EEGLABstudiesを用いたグループ分析: クラスターICAコンポーネント(Arnaud Delorme)へのメソッド</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_clustering_japan2.pdf)
+<span style="color: purple">17:00-18:30 -- EEGLABstudiesを用いたグループ分析: クラスターICAコンポーネント(Arnaud Delorme)へのメソッド</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_study_clustering_japan2.pdf)
 
 
 <u><span style="color: blue">9月28日(木)</span></u>
 
 **Source ローカリゼーション**
 
-<span style="color: purple">10:00 – 11:30 -- Neuroelectromagnetic Forward Head Modeling (NFT) と NIST (Inverse Source Imaging) ツールキット (Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_forwardinverse_compressed.pdf)
+<span style="color: purple">10:00 – 11:30 -- Neuroelectromagnetic Forward Head Modeling (NFT) と NIST (Inverse Source Imaging) ツールキット (Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_forwardinverse_compressed.pdf)
 
-<span style="color: purple">11:30 – 12:00 -- フォワードと逆モデル - ディップフィットツール(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_dipfit_japan.pdf)
+<span style="color: purple">11:30 – 12:00 -- フォワードと逆モデル - ディップフィットツール(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_dipfit_japan.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
 **一般線形モデリングと統計**
 
-<span style="color: purple">12:15 - 13:00 -- 複数の比較(Arnaud Delorme)の統計と修正を強化</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_statistics_japan2.pdf)
+<span style="color: purple">12:15 - 13:00 -- 複数の比較(Arnaud Delorme)の統計と修正を強化</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_statistics_japan2.pdf)
 
 <span style="color: green">13:00-14:15 ランチ --</span>
 
 **一般線形モデリングと統計の継続* * 必須
 
-<span style="color: orange">14:15～14:45～ LIMO EEGLABプラグイン(Arnaud Delorme)を使用して、一般的なリニアモデルをEEGデータに適用する理論と実践</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/limo_japan_2017.pdf)
+<span style="color: orange">14:15～14:45～ LIMO EEGLABプラグイン(Arnaud Delorme)を使用して、一般的なリニアモデルをEEGデータに適用する理論と実践</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/limo_japan_2017.pdf)
 
 <span style="color: orange">14:45 – 15:15 -- LIMO と EEGLAB の練習 (Arnaud Delorme)</span>
 
@@ -141,31 +141,31 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 
 **情報源流* * 必須
 
-<span style="color: purple">15:30 – 17:00 -- ソース情報の流れとGranger-Causalモデリングツール(Tim Mullen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab_2017_japan_sift_lecture.pdf)
+<span style="color: purple">15:30 – 17:00 -- ソース情報の流れとGranger-Causalモデリングツール(Tim Mullen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab_2017_japan_sift_lecture.pdf)
 
 <span style="color: orange">17:00 – 18:00 -- SIFT ツールボックス:概要と実践(Tim Mullen)</span> [PDF(SIFTの概要)](https://sccn.ucsd.edu/githubwiki/files/eeglab_2017_japan_sift_intro_blitz.pdf)
 [PDF (練習)](https://sccn.ucsd.edu/githubwiki/files/eeglab_2017_japan_sift_practicum.pdf)
 
 <u><span style="color: blue">9月29日(金)</span></u>
 
-<span style="color: purple">10:00 – 11:30 -- マイニングイベント関連の脳のダイナミクスII(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_ii_tokyo17_compressed.pdf)
+<span style="color: purple">10:00 – 11:30 -- マイニングイベント関連の脳のダイナミクスII(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_ii_tokyo17_compressed.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: orange">11:45 – 12:15 -- EEGLABエクステンション/プラグイン(Arnaud Delorme)の使用と構築</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_plugin_japan.pdf)
+<span style="color: orange">11:45 – 12:15 -- EEGLABエクステンション/プラグイン(Arnaud Delorme)の使用と構築</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_plugin_japan.pdf)
 
 <span style="color: green">12:15-13:30 ランチ --</span>
 
 
 **高度なスクリプト**
 
-<span style="color: orange">13:30 – 14:45 -- EEGLAB(Arnaud Delorme)を使ったスクリプト</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_scripting_japan3.pdf)
+<span style="color: orange">13:30 – 14:45 -- EEGLAB(Arnaud Delorme)を使ったスクリプト</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2017_ad_eeglab_scripting_japan3.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">15:00～15:30 -- パイプライン・ユーティリティツール(宮古志誠) </span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/preprocessingpipelineandutilitytools.pdf)
+<span style="color: purple">15:00～15:30 -- パイプライン・ユーティリティツール(宮古志誠) </span> [PDF](https://sccn.ucsd.edu/githubwiki/files/preprocessingpipelineandutilitytools.pdf)
 
-<span style="color: purple">15:30～16:00 -- グループSIFT: 後期グループレベルの統計のためのソリューション(宮越真琴) </span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/groupsift.pdf) [サプリメント映画1](https://sccn.ucsd.edu/githubwiki/files/groupsift_sagital.zip)
+<span style="color: purple">15:30～16:00 -- グループSIFT: 後期グループレベルの統計のためのソリューション(宮越真琴) </span> [PDF](https://sccn.ucsd.edu/githubwiki/files/groupsift.pdf) [サプリメント映画1](https://sccn.ucsd.edu/githubwiki/files/groupsift_sagital.zip)
 
 <span style="color: green">-- ブレーク--</span>
 

@@ -38,7 +38,7 @@ SIFTをインストールできます。 [EEGLABエクステンションマネ�
 
 ## 追加リソース
 
-* SIFTには、このチュートリアルでは説明されていないデータをシミュレートするモジュール全体があります。 お問い合わせ [サイトマップ](https://sccn.ucsd.edu/wiki/How_to_run_SIFT_simulation) 説明する(バックアップPDF) [詳しくはこちら](https://github.com/sccn/SIFT/files/12446930/SIFT_simulation.pdf))。 SIFTシミュレータを使用すると、ポイントのようなソース、コルティカル表面上のソースをシミュレートしたり、脳のファジー領域のソースをシミュレートすることができます。
+* SIFTには、このチュートリアルでは説明されていないデータをシミュレートするモジュール全体があります。 お問い合わせ [こちら](https://sccn.ucsd.edu/wiki/How_to_run_SIFT_simulation) 説明する(バックアップPDF) [詳しくはこちら](https://github.com/sccn/SIFT/files/12446930/SIFT_simulation.pdf))。 SIFTシミュレータを使用すると、ポイントのようなソース、コルティカル表面上のソースをシミュレートしたり、脳のファジー領域のソースをシミュレートすることができます。
 
 * SIFTにはスクリプトを持つフォルダがあります([SIFT/スクリプト](https://github.com/sccn/SIFT/tree/master/scripts) フォルダ)、データセットを処理する方法についての詳細なコメントを含む例。 チェックアウトする価値があります。
 
@@ -49,6 +49,6 @@ SIFTをインストールできます。 [EEGLABエクステンションマネ�
 SIFT を紙に使用したり、 PLEASE を話したりすると、SIFT の使用 (この wiki に URL を provide) という言及を忘れず、以下の引用を 含めてください。
 
 - Mullen、T. R. 動的脳: 人間の電気生理学的記録(第3639187)からの神経動的および相互作用を模倣する。 2014. から利用できる [カリフォルニア大学 教授](https://escholarship.org/uc/item/7kk2c4nd); ProQuest Dissertations &amp;これらA&amp;I. (1619637939)
-- Delorme, A., Mullen, T., Kothe, C., ら. 「EEGLAB、SIFT、NFT、BCILAB、ERICA:高度なEEG処理のための新しいツール」 <em>計算インテリジェンスと神経科学</em>, vol. 2011, 記事ID 130714, 12ページ, 2011, <a href="http://www.hindawi.com/journals/cin/2011/130714/">サイトマップ</a>.
+- Delorme, A., Mullen, T., Kothe, C., ら. 「EEGLAB、SIFT、NFT、BCILAB、ERICA:高度なEEG処理のための新しいツール」 <em>計算インテリジェンスと神経科学</em>, vol. 2011, 記事ID 130714, 12ページ, 2011, <a href="http://www.hindawi.com/journals/cin/2011/130714/">こちら</a>.
 
 特に、研究者が利用できるデータやスクリプトを作るために、このツールボックスを使用して公開した論文を聞いて、非常に満足しています。

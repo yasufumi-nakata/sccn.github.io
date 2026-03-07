@@ -21,7 +21,7 @@ SIFTパラメータの決定方法 だから、このプラグインは、高度
 Matlab と SIFT で良い経験を持つ人。 ご利用の際は、
 ご自身の責任で行ってください。
 
-独自の組み込みシミュレータを使用して基本的なSIFT関数を学習に興味がある場合は、参照してください [サイトマップ](https://sccn.ucsd.edu/wiki/How_to_run_SIFT_simulation)
+独自の組み込みシミュレータを使用して基本的なSIFT関数を学習に興味がある場合は、参照してください [こちら](https://sccn.ucsd.edu/wiki/How_to_run_SIFT_simulation)
 
 # 環境方針
 

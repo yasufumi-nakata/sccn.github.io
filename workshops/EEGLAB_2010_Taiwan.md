@@ -307,7 +307,7 @@ ICA/EEGLABによる関連する出版物
 --------------------
 
 ご自身のノートパソコンをご利用の方は、最新バージョンをインストールしてください。
-エグラボ:
+EEGLAB:
 
 最新の EEGLAB バージョンはこちら: <http://sccn.ucsd.edu/eeglab/install.html>
 

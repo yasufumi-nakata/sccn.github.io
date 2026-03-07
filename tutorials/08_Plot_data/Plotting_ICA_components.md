@@ -27,7 +27,7 @@ ICA は ICA から ICA へ [アーティファクト](/tutorials/06_RejectArtifa
 
 データエポックを抽出した後、チュートリアルデータセットをここで使用します。 選択する <span style="color: brown">ファイル → 既存のデータセットを読み込む</span> メニューの項目は、Eeglab_data_epochs_ica.set です。
 
-![サイトマップ](/assets/images/Pop_loadset2.png)
+![こちら](/assets/images/Pop_loadset2.png)
 
 どのコンポーネントが最も強く貢献しているかを見るのは関心です
 データの頻度。 お問い合わせ <span style="color: brown">コンポーネントのスペクトラとマップ</span>. 

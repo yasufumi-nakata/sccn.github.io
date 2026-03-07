@@ -18,7 +18,7 @@ EEGLAB をロードする
 選択する <span style="color: brown">ファイル → 既存のデータセットをロードする</span> メニュー項目。
 EEGLABの「sample_data」フォルダにあるツールボックスです。
 
-![サイトマップ](/assets/images/Pop_loadset.png)
+![こちら](/assets/images/Pop_loadset.png)
 
 データのスクロール
 --------------------------
@@ -34,7 +34,7 @@ EEGLABの「sample_data」フォルダにあるツールボックスです。
 突然、一部のデータチャネルで表示されることがあります。
 
 
-![サイトマップ](/assets/images/Scrollchannelactivities1.png)
+![こちら](/assets/images/Scrollchannelactivities1.png)
 
 
 プロットウィンドウの右側には、垂直スケール値(およびその
@@ -51,7 +51,7 @@ EEGLABの「sample_data」フォルダにあるツールボックスです。
 ウィンドウ。
 
 
-![サイトマップ](/assets/images/Scrollchannelactivities2.png)
+![こちら](/assets/images/Scrollchannelactivities2.png)
 
 
 スクロール時間ウィンドウの幅を調整する
@@ -70,7 +70,7 @@ EEGLABの「sample_data」フォルダにあるツールボックスです。
 ※Ok*は、別途変更となります。
 
 
-![サイトマップ](/assets/images/Scrollchannelactivities3.png)
+![こちら](/assets/images/Scrollchannelactivities3.png)
 
 
 
@@ -92,7 +92,7 @@ EEGLABの「sample_data」フォルダにあるツールボックスです。
 すべてのチャネルを通して表示(口頭)をスクロールして下さい。
 
 
-![サイトマップ](/assets/images/Scrollchannelactivities4.png)
+![こちら](/assets/images/Scrollchannelactivities4.png)
 
 データのズーム
 --------------------------
@@ -164,10 +164,10 @@ EEGLAB は、Windowsメニューの項目を翻訳しました。
 
 Stack*ボタンボタンボタンボタンボタンボタンを押します [eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m) ウィンドウ(右上隅)と、約30秒のデータビュー(ウィンドウを眺める)。 ??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????? 30秒のウィンドウで、 連続 連続 連続 以下は、各地域に問い合わせておきます。
 
-![サイトマップ](/assets/images/eegplot_norm.png)
+![こちら](/assets/images/eegplot_norm.png)
 
 ### イベントを囲むデータの悪い部分を注入する
 
 関心 は は 参加申し込みフォーム <span style="color: brown">編集 → イベントを使用してデータを選択</span> 「TMS_pulse」*type* の項目は、イベントの構成要素の削除です。
 
-![サイトマップ](/assets/images/rm_event_tms_pulse.png)
+![こちら](/assets/images/rm_event_tms_pulse.png)

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2010 San Diego
-nav_title: "エグラボ2010 サンディエゴ"
+nav_title: "EEGLAB 2010 San Diego"
 parent: Past workshops
 grand_parent: Workshops
 ---
@@ -20,14 +20,14 @@ grand_parent: Workshops
 ワークショップ内容
 ----------------
 
-<span style="color:darkred"><b>エッグラボ 概要:コンセプトとコンセプト
+<span style="color:darkred"><b>EEGLAB 概要:コンセプトとコンセプト
 建築設計</b></span>  
 
 <span style="color:purple">[採掘認知脳の動的I(Scott Makeig)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_I.html)</span> \- <span style="color:darkred">[インタビュー](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_I.html)</span> <span style="color:blue">[スライド](https://sccn.ucsd.edu/githubwiki/files/eeglab2010_sm_mining_brain_dynamics_i.pdf)</span>
 
 <span style="color:purple">[EEGLABとワークショップの概要 (Arnaud Delorme)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_overview.html)</span> \- <span style="color:darkred">[インタビュー](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_overview.html)</span> <span style="color:blue">[スライド](https://sccn.ucsd.edu/githubwiki/files/eeglab2010_ad_nov18_eeglab_overview.pdf)</span>
 
-<span style="color:darkred"><b>エッグラボ EEGベースの機能的な脳イメージングのための方法</b></span>
+<span style="color:darkred"><b>EEGLAB EEGベースの機能的な脳イメージングのための方法</b></span>
 
 <span style="color:purple">[独立成分分析(ICA)理論I(Jason Palmer)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_ica1.html)</span><span style="color:darkred">[インタビュー](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_ica1.html) <span style="color:blue">[スライド](https://sccn.ucsd.edu/githubwiki/files/ica_concepts.pdf)
 <!-- -->

@@ -27,7 +27,7 @@ EEGLAB をロードする
 Unix、次のウィンドウは、このアスペクト比
 WindowsとMacOSが異なる
 
-![サイトマップ](/assets/images/Pop_loadset.png)
+![こちら](/assets/images/Pop_loadset.png)
 
 このページではjavascriptを使用しています。
 [データのインポートとイベント情報の追加](/tutorials/04_Import/Importing_Continuous_and_Epoched_Data.html)
@@ -89,4 +89,4 @@ EEGLAB は、EEGLAB のウィンドウをロードします。
 お問い合わせ [eegplot.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eegplot.m)
 下のスクロールデータ表示ウィンドウ。
 
-![サイトマップ](/assets/images/Scrollchannelactivities1.png)
+![こちら](/assets/images/Scrollchannelactivities1.png)

@@ -105,7 +105,7 @@ EEGLABワークショップのwikiページには、スライドも含まれて�
 -   [SIFTイントロ: Tim Mullenによるソースコネクティビティの構築と可視化](https://www.youtube.com/watch?v=6_WW6EMHmWo)
 
 #### 実践講座
--   [エッグラボ Arnaud Delorme(アルナド・デロメ)](https://www.youtube.com/watch?v=oQ2CHqu4_OU)
+-   [EEGLAB Arnaud Delorme(アルナド・デロメ)](https://www.youtube.com/watch?v=oQ2CHqu4_OU)
 -   [ジュリー・オントンによるデータのインポート/処理と基本的なプロット](https://www.youtube.com/watch?v=cTuXe-rZjvk)
 -   [Julie OntonによるICAとICAの可視化](https://www.youtube.com/watch?v=H3dK0j6moII)
 -   [独立した評価 Luca Pion-Tonachini(ICLabel)によるコンポーネント](https://www.youtube.com/watch?v=e_Ccx_MCOUM)
@@ -125,7 +125,7 @@ EEGLABを使用して、ワークショップを見直し、および/または�
 
 <img class="float-right" width="180" height="250" src="/assets/images/MoBIPoster.jpg" > 
 
-#### エッグラボ 信号の概要
+#### EEGLAB 信号の概要
 
 -   [認知脳の動態の最小化I (スコットメイク)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_I.html)
 -   [認知脳の動態を最小にするII (Scottメイク)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_II.html)
@@ -134,7 +134,7 @@ EEGLABを使用して、ワークショップを見直し、および/または�
 
 -   [EEGLABとワークショップの概要デルロメ](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_overview.html)
 
-#### エッグラボ EEGベースの機能脳イメージングのための方法
+#### EEGLAB EEGベースの機能脳イメージングのための方法
 
 -   [独立系コンポーネント解析(ICA)理論I(Jasonパルマー)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_ica1.html)
 -   [独立系コンポーネント解析(ICA)理論II(Jasonパルマー)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_ica2.html)

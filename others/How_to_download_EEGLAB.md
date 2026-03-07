@@ -18,7 +18,7 @@ EEGLAB ZIPファイルアーカイブをダウンロード
 ZIP形式のEEGLABのダウンロードは、[EEGLABダウンロードページ](https://sccn.ucsd.edu/eeglab/download.php)でご利用いただけます。 これには、
 最新のリリースと旧バージョン。 ふりがな [EEGLABリビジョン履歴ページ](/others/EEGLAB_revision_history.html) EEGLABのバージョンの変更について説明しています。
 
-zipファイルをダウンロードしないでください [エッグラボ GitHubリポジトリ](https://github.com/sccn/eeglab.git) EEGLABコードベースに含まれていない重要なEEGLABプラグインが欠落しているため。 EEGLABの開発バージョンを使用する場合は、以下の説明としてサブモジュールをクローンし、含めます。
+zipファイルをダウンロードしないでください [EEGLAB GitHubリポジトリ](https://github.com/sccn/eeglab.git) EEGLABコードベースに含まれていない重要なEEGLABプラグインが欠落しているため。 EEGLABの開発バージョンを使用する場合は、以下の説明としてサブモジュールをクローンし、含めます。
 
 GitHubからEEGLABをクローニング
 ------------------
@@ -48,8 +48,8 @@ git clone --recurse-submodules https://github.com/sccn/eeglab.git
 ### EEGLABへのコード提供
 
 EEGLABにコードを付与し、コードをフォークしてプルリクエストを作成する
-以下に示す [サイトマップ](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository)お問い合わせ その他
-[サイトマップ](/tutorials/contribute) 追加が含まれています
+以下に示す [こちら](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository)お問い合わせ その他
+[こちら](/tutorials/contribute) 追加が含まれています
 EEGLABへの貢献について
 
 ### リポジトリシステム

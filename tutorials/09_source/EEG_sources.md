@@ -58,7 +58,7 @@ figure; pop_topoplot(TMPEEG,0,1, [ 'ERP 100ms, fit with a single dipole (RV ' nu
 
 クリック [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=dipfit_erpeegtest.m) 上記のスクリプトをダウンロードします。 スクリプトを実行すると、以下の2つのプロットが作成されます。
 
-![サイトマップ](/assets/images/scalp_topo_dipole.png)
+![こちら](/assets/images/scalp_topo_dipole.png)
 
 eLoreta ソース ソース
 シンプルに書かれている [プラグイン](https://github.com/sccn/erpsource) その目的のために。

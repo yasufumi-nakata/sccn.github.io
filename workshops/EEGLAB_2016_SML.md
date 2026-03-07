@@ -58,15 +58,15 @@ Best Western Hotel Regina Elenaでワークショップを開催します。
 **概要とICA理論/実践* * 必須
 
 
-<span style="color: purple">9:00〜10:15 鉱業イベント関連の脳力学I(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_mining_i.pdf)
+<span style="color: purple">9:00〜10:15 鉱業イベント関連の脳力学I(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_mining_i.pdf)
 
-<span style="color: purple">10:15 - 10:45 -- EEGLABの概要(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_eeglab_overview.pdf)
+<span style="color: purple">10:15 - 10:45 -- EEGLABの概要(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_eeglab_overview.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">11:15 – 12:00 -- ICA理論(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_lecture_ica.pdf)
+<span style="color: purple">11:15 – 12:00 -- ICA理論(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_lecture_ica.pdf)
 
-<span style="color: orange">12:00 – 13:00 -- EEGデータのインポート、アーティファクト拒否(Tracy Brandmeyer)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_tb_artifact_and_ica.pdf)
+<span style="color: orange">12:00 – 13:00 -- EEGデータのインポート、アーティファクト拒否(Tracy Brandmeyer)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_tb_artifact_and_ica.pdf)
 <!-- -->
 
 
@@ -78,13 +78,13 @@ Best Western Hotel Regina Elenaでワークショップを開催します。
 **ICAおよび時間頻度**
 
 
-<span style="color: orange">14:30～15:15 -- EEGデータ練習のICA分解(John Iversen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_italia_jri_ica_decompositionevaluation_lores2.pdf)
+<span style="color: orange">14:30～15:15 -- EEGデータ練習のICA分解(John Iversen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_italia_jri_ica_decompositionevaluation_lores2.pdf)
 
-<span style="color: orange">15:15 - 16:30 - 16:30 - 16:30 ICAコンポーネントの練習(John Iversen)の評価</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_italia_jri_evaluateics_practicum.pdf)
+<span style="color: orange">15:15 - 16:30 - 16:30 - 16:30 ICAコンポーネントの練習(John Iversen)の評価</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_italia_jri_evaluateics_practicum.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">17:00 – 18:00 -- EEGデータの周波数分解:理論と実践(John Iversen)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_italia_jri_timefrequencytheorypractice_lores.pdf)
+<span style="color: purple">17:00 – 18:00 -- EEGデータの周波数分解:理論と実践(John Iversen)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_italia_jri_timefrequencytheorypractice_lores.pdf)
 
 <span style="color: green">ディナー</span>
 
@@ -96,15 +96,15 @@ Best Western Hotel Regina Elenaでワークショップを開催します。
 **EEGLABのグループ分析とICAクラスタリング* * 必須
 
 
-<span style="color: purple">9:00～9:45 なぜEEGデータのクラスターICAコンポーネント? (スコットメイク)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering.pdf)
+<span style="color: purple">9:00～9:45 なぜEEGデータのクラスターICAコンポーネント? (スコットメイク)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/makeig_eeglab_clustering.pdf)
 
-<span style="color: purple">9:45 - 10:45 -- EEGデータ(Cyril Pernet)の複数の比較のための強力な統計、実験設計および修正</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/robuststats_ci_mcc_for_eeg.pdf)
+<span style="color: purple">9:45 - 10:45 -- EEGデータ(Cyril Pernet)の複数の比較のための強力な統計、実験設計および修正</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/robuststats_ci_mcc_for_eeg.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">11:15 - 12:15 -- EEGLAB STUDY、STUDYの設計の作成とSTUDYの結果のプロット(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_study_design2.pdf)
+<span style="color: purple">11:15 - 12:15 -- EEGLAB STUDY、STUDYの設計の作成とSTUDYの結果のプロット(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_study_design2.pdf)
 
-<span style="color: purple">12:15 - 13:00 -- EEGLAB内のクラスタリングコンポーネント(Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_study_clustering.pdf)
+<span style="color: purple">12:15 - 13:00 -- EEGLAB内のクラスタリングコンポーネント(Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_study_clustering.pdf)
 
 <span style="color: green">13:00-14:30 ランチ</span>
 
@@ -126,9 +126,9 @@ Best Western Hotel Regina Elenaでワークショップを開催します。
 **Source ローカリゼーション**
 
 
-<span style="color: purple">9:00〜10:15 フォワードと反転モデル - Dipfit/NFTツール(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_sm_sourcelocalization.pdf)
+<span style="color: purple">9:00〜10:15 フォワードと反転モデル - Dipfit/NFTツール(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2013_sm_sourcelocalization.pdf)
 
-<span style="color: purple">10:15 – 10:45 -- DIPFIT 練習 (Arnaud Delorme)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_dipfit.pdf)
+<span style="color: purple">10:15 – 10:45 -- DIPFIT 練習 (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_dipfit.pdf)
 
 
 <span style="color: green">-- ブレーク--</span>
@@ -136,7 +136,7 @@ Best Western Hotel Regina Elenaでワークショップを開催します。
 **一般リニアモデリング* * 必須
 
 
-<span style="color: orange">11:15 – 12:00 -- LIMO EEGLABプラグイン(Cyril Pernet)を使用して、一般的なリニアモデルをEEGデータに適用するための理論と実践</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab_limo_2016.pdf)
+<span style="color: orange">11:15 – 12:00 -- LIMO EEGLABプラグイン(Cyril Pernet)を使用して、一般的なリニアモデルをEEGデータに適用するための理論と実践</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab_limo_2016.pdf)
 
 <span style="color: green">13:00-14:30 ランチ</span>
 
@@ -146,13 +146,13 @@ Best Western Hotel Regina Elenaでワークショップを開催します。
 **ソース情報フローとスクリプト* * 必須
 
 
-<span style="color: purple">14:30～16:00 -- ソース情報の流れとGranger-Causalモデリングツール(John Iversen )</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_italia_jri_connectivity.pdf)
+<span style="color: purple">14:30～16:00 -- ソース情報の流れとGranger-Causalモデリングツール(John Iversen )</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_italia_jri_connectivity.pdf)
 
-<span style="color: orange">16:00 – 16:30 -- EEGLABとICAの分解最適化のためのRELICAプラグイン(Fiorenzo Artoni)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_fa_relica.pdf)
+<span style="color: orange">16:00 – 16:30 -- EEGLABとICAの分解最適化のためのRELICAプラグイン(Fiorenzo Artoni)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_fa_relica.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: orange">17:00 – 18:00 -- EEGLAB(Arnaud Delorme)内のSTUDYを用いたスクリプト</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_eeglab_script.pdf)
+<span style="color: orange">17:00 – 18:00 -- EEGLAB(Arnaud Delorme)内のSTUDYを用いたスクリプト</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_eeglab_script.pdf)
 <!-- -->
 
 
@@ -167,9 +167,9 @@ Best Western Hotel Regina Elenaでワークショップを開催します。
 
 
 
-<span style="color: purple">9:00〜10:15 マイニングイベント関連の脳力II(Scott Makeig)</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_sm_miningii.pdf)
+<span style="color: purple">9:00〜10:15 マイニングイベント関連の脳力II(Scott Makeig)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_sm_miningii.pdf)
 
-<span style="color: orange">10:15 – 10:45 -- EEGLAB拡張/プラグイン(Arnaud Delorme)の使用と構築</span> [サイトマップ](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_eeglab_plugins.pdf)
+<span style="color: orange">10:15 – 10:45 -- EEGLAB拡張/プラグイン(Arnaud Delorme)の使用と構築</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab2016_ad_eeglab_plugins.pdf)
 
 
 <span style="color: green">-- ブレーク--</span>
