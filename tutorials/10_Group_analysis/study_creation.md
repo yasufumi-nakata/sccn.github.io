@@ -142,7 +142,7 @@ EEGLABについて <span style="color: brown">編集 → データセット情�
 - 次のセクションには、10つのデータセットに関する情報が含まれています。
 STUDYの部分。各データセット、サブジェクトコードを指定します。
 条件名。 
-- これらは、以下のとおりです。 実験のブロック、各ブロックのデータが別々のファイルです。 STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* は、STUDY* が、STUDY* は、STUDY* が、STUDY* は、STUDY* が、STUDY* は、STUDY* は、STUDY* が、STUDY* は、STUDY* は、STUDY* から始まる。
+- これらは、以下のとおりです。 実験のブロックで、各ブロックのデータが別々のファイルに保存されている場合、STUDYでは各セッションのデータを統合して解析できます。
 - *条件* ????????????????? 対象のファイルとEEGLABイベントの試用版を組み合わせる [チュートリアル](/tutorials/10_Group_analysis/working_with_study_designs.html).
 - *group* は、STUDY の関連性について
 1つのグループのみでした。
