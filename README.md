@@ -1,6 +1,6 @@
 # ログイン
 EEGLAB wikiのWebコンテンツをホストする。
-ライブページ: https://www.yasufumi.net
+ライブページ: https://www.yasufumi.net/sccn.github.io
 
 ## メンテナーのノート
 * ワークショップとチュートリアルページの内容は、保存されます [ワークショップ](https://github.com/yasufumi-nakata/sccn.github.io/tree/main/workshops) そして、 [チュートリアル](https://github.com/yasufumi-nakata/sccn.github.io/tree/main/tutorials) それぞれフォルダ。 使用条件 [Githubのマークダウン](https://guides.github.com/features/mastering-markdown) 編集とスタイルページのコンテンツ。
