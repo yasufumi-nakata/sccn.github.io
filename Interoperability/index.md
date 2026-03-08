@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Interoperability
+nav_title: "他ソフトとの連携"
 long_title: EEGLAB interoperability with other software
 has_children: true
 has_toc: true
