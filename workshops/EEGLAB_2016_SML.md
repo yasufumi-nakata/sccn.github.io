@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB 2016 SML
-nav_title: "EEGLAB 2016年SML"
+nav_title: "EEGLAB 2016 SML"
 parent: Past workshops
 grand_parent: Workshops
 ---

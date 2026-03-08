@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contribute
-nav_title: "貢献する"
+nav_title: "EEGLABへの貢献"
 long_title: How to contribute to the EEGLAB project
 parent: Tutorials
 has_children: true

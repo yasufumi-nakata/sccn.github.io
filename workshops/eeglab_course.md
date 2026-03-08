@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Complete Course Material
-nav_title: "完全なコース材料"
+nav_title: "EEGLABコース教材"
 long_title: Complete Course Material
 parent: Workshops
 nav_order: 1

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 5. Preprocess data
-nav_title: "5. プリプロセスデータ"
+nav_title: "5. データの前処理"
 long_title: 5. Preprocess data
 parent: Tutorials
 has_children: true

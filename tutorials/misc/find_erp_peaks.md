@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Find ERP peaks
-nav_title: "ERPピークを見つける"
+nav_title: "ERPピークの検出"
 long_title: How to find ERP peaks
 parent: Reference Topics
 grand_parent: Tutorials

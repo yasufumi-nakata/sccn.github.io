@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Past workshops
-nav_title: "ワークショップ"
+nav_title: "過去のワークショップ"
 long_title: Past EEGLAB workshop
 parent: Workshops
 has_children: true

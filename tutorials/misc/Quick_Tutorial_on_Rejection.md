@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quick rejection tutorial
-nav_title: "アーティファクト除去クイックチュートリアル"
+nav_title: "ICAアーティファクト除去クイックガイド"
 long_title: Quick tutorial on rejecting EEG artifacts using ICA
 parent: Reference Topics
 grand_parent: Tutorials

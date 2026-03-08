@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB dev philosophy
-nav_title: "EEGLAB 開発哲学"
+nav_title: "EEGLAB開発の理念"
 long_title: EEGLAB dev philosophy
 parent: Contribute
 grand_parent: Tutorials

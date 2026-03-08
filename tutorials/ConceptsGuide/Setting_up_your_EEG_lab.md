@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Setting up your lab
-nav_title: "ラボの設定"
+nav_title: "EEGラボのセットアップ"
 long_title: Setting up your lab
 parent: Concepts guide
 grand_parent: Tutorials

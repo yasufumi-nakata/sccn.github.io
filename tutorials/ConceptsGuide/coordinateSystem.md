@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Coordinate systems
-nav_title: "座標系システム"
+nav_title: "座標系"
 long_title: Coordinate systems
 parent: Concepts guide
 grand_parent: Tutorials
