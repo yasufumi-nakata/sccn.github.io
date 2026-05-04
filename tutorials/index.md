@@ -16,11 +16,10 @@ EEGLABの動画プレゼンテーションは[オンラインEEGLABワークシ�
 EEGLABチュートリアルは多くのセクションに分かれています。
 概念ガイドでは、入力データ、MATLABおよびEEGLABのデータ構造など、より高度なトピックを紹介します。
 
-<h3><a href="/tutorials"><span style="color: black;">EEGLABチュートリアル</span></a></h3>
+### [EEGLABチュートリアル](/tutorials/)
 {%- assign children_list = site.pages | where: "parent", page.title -%}
 {% include toc_nav_recursive.html nav=children_list %}
 
 MATLABについて
 ---------------
 MATLABに初めて触れる方は、[MATLABチュートリアル](/tutorials/misc/tutorial_matlab.html)を参照してください。
-

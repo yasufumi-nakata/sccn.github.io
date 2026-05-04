@@ -237,7 +237,7 @@ EEG = eeg_checkset(EEG);
 1. **BurstCriterion** (デフォルト: EMGの20、EEGの5)
    - より高い値=より少ない積極的なクリーニング
    - EEGクリア
-   - は の の の
+   - EMGでは、15-25程度を目安に設定します。
    - EMGの推奨:15-25
 
 2. **ChannelCriterion** (0.8推奨)
@@ -526,14 +526,14 @@ ERPの振動・振動・振動・振動・振動・振動・振動・振動・�
 
 8. **個別トライアルの仮想化**: 使用条件 `pop_eegplot(EEG_epoched, 0, 1, 1)` トライアルバイトライアルの分散性を検査します。
 
-9. サブジェクトの場合**: EEGLABのSTUDYを継承するデータベース
+9. 被験者の場合**: EEGLABのSTUDYを継承するデータベース
 
-10. **ERPを比較する** - 異なる条件間のERPを比較します。 
+10. **ERPを比較する** - 異なる条件間のERPを比較します。
 
 ## 追加リソース
 
 - **データセット**: [NEMAR の emg2qwerty](https://nemar.org/dataexplorer/detail?dataset_id=nm000104)
-- **ペーパー**: [NeurIPS 2024のemg2qwerty](https://arxiv.org/abs/2410.20081)
+- **論文**: [NeurIPS 2024のemg2qwerty](https://arxiv.org/abs/2410.20081)
 
 ## 関連チュートリアル
 

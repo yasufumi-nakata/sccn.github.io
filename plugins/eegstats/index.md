@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGstats
-nav_title: "エグスタット"
+nav_title: "EEGstats"
 long_title: EEGstats
 parent: Plugins
 render_with_liquid: false
@@ -64,7 +64,7 @@ Alpha Asymmetry	0.62408
 ```
 {% endraw %}
 
-EEGLAB ビルド機能を使用して統計を実行できます。 
+EEGLAB ビルド機能を使用して統計を実行できます。
 
 ```
 [~,p] = std_stat(aa, 'groupstats', 'on'), % perform some statistics based on the current STUDY design
@@ -89,10 +89,10 @@ res =
      condition      subjects    alpha_asymmetry
     ____________    ________    _______________
 
-    {'ignore'  }       1            -1.4385    
-    {'ignore'  }       2              1.882    
-    {'memorize'}       1            -1.1305    
-    {'memorize'}       2             1.9947    
+    {'ignore'  }       1            -1.4385
+    {'ignore'  }       2              1.882
+    {'memorize'}       1            -1.1305
+    {'memorize'}       2             1.9947
 ```
 
 

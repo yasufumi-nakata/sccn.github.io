@@ -5,10 +5,10 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Creating-and-managing-an-NSG-job-using-pop_nsg-from-the-command-line
-nav_title: "作成と管理-an-NSG-job-using-pop_nsg-from-the-command-line"
+nav_title: "コマンドラインでのNSGジョブ作成と管理"
 long_title: Creating-and-managing-an-NSG-job-using-pop_nsg-from-the-command-line
 ---
-このチュートリアルでは、_pop_nsg_ のコマンドラインオプションを使用してジョブの送信と管理のプロセスについて説明します。 
+このチュートリアルでは、_pop_nsg_ のコマンドラインオプションを使用してジョブの送信と管理のプロセスについて説明します。
 
 チュートリアルに従う前に、プラグインをインストールし、NSGの資格情報を設定する必要があります。 もしそうしなかったら、 [このセクション](https://github.com/sccn/nsgportal/wiki/Setting-up-the-plug-in) 指示のため。
 
@@ -32,7 +32,7 @@ path2zip = '/Users/amon-ra/program_files/eeglab/plugins/nsgportal/demos/demo_job
 ```
 ここに2つ目のパラメーターが使われていたことに注意しましょう。```'filename', 'run_ica_nsg.m'```)。 ジョブを実行するには、NSG が実行するスクリプトを指定するには、_'run'_ オプションを使用する必要があります。 したがって、オプション _'run'_ を使うと 'filename' が必須です。
 
-デフォルトオプションは、ランダムに生成されたIDをジョブに割り当て、デフォルトのジョブパラメータを使用してNSGで実行するジョブを送信します。 
+デフォルトオプションは、ランダムに生成されたIDをジョブに割り当て、デフォルトのジョブパラメータを使用してNSGで実行するジョブを送信します。
 
 また、Key-Value ペア引数を関数呼び出しに提供することで、ジョブパラメータを指定することもできます。 オプションの引数には:
 * 'jobid' : クライアントジョブ ID 文字列 [デフォルト値は、 randon 生成された番号 eg: _jobname_1234_] によって追跡されるジョブ名になります。
@@ -42,7 +42,7 @@ path2zip = '/Users/amon-ra/program_files/eeglab/plugins/nsgportal/demos/demo_job
 
 指定されたオプション引数で 'run' コマンドの例:
 ```
-[NSGjobstruct, alljobs] = pop_nsg('run', path2zip, 'filename', 'run_ica_nsg.m', 'jobid', 'runica_testing', 'runtime', 0.3); 
+[NSGjobstruct, alljobs] = pop_nsg('run', path2zip, 'filename', 'run_ica_nsg.m', 'jobid', 'runica_testing', 'runtime', 0.3);
 ```
 
 この関数は、送信されたジョブ(_currentjob1_)のMATLAB NSGジョブ構造と、NSGクレデンシャル(_alljobs_)の全てのジョブに関する情報を含む構造を返します。
@@ -62,17 +62,16 @@ _nsg_recurspoll_ [argument:jobid] は指定されたジョブのステータス�
 ## ジョブ結果の取得
 _jobid_、ジョブURL、ジョブ構造を _pop_nsg_ に提供するジョブ結果にアクセスします。
 ```
-[NSGjobstruct, alljobs] = pop_nsg('output', NSGjobstruct); 
+[NSGjobstruct, alljobs] = pop_nsg('output', NSGjobstruct);
 ```
 入力 _NSGjobstruct_ から結果を取得したいジョブのNSGジョブ構造が含まれています。 出力 _NSGjobstruct_ には、ジョブの出力ステータスも含まれています。 出力変数 _alljobs_ には、ユーザ認証に関連するすべての NSG ジョブの現在のステータス情報が含まれています。
 
 ## NSGジョブの削除
 ユーザ NSG のクレデンシャルに関連付けられている NSG レコードからジョブを削除するには、_jobid_、ジョブ URL またはジョブ構造を 2 番目の引数として指定します。
 ```
-[NSGjobstruct, alljobs] = pop_nsg('delete',NSGjobstruct); 
+[NSGjobstruct, alljobs] = pop_nsg('delete',NSGjobstruct);
 ```
 出力は、上記のように、変更されたNSGジョブ構造とユーザー認証に関連するすべてのNSGジョブの情報です。 このコマンドを実行すると、NSG のアカウントからジョブが削除されます。 出力で返された構造 _NSGjobstruct_ は削除されたジョブの参照です(フィールドに見られるように) ```NSGjobstruct.jobStage``` 'DELETED' に設定され、もう使用してジョブにアクセスできません。
-
 
 
 

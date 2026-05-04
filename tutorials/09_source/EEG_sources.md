@@ -54,7 +54,7 @@ figure; pop_topoplot(TMPEEG,0,1, [ 'ERP 100ms, fit with a single dipole (RV ' nu
 ![こちら](/assets/images/scalp_topo_dipole.png)
 
 eLoretaソースローカリゼーションのためのシンプルな[プラグイン](https://github.com/sccn/erpsource)も利用可能です。
-このプラグインはミニマルなファッションで設計されており、他のプラグインのテンプレートとして使用できます。
+このプラグインは最小構成で設計されており、他のプラグインのテンプレートとして使用できます。
 そのグラフィカルな出力は、次のセクションに示すスクリプトと同じです。
 
 DIPFIT/FieldTrip ソース再構築

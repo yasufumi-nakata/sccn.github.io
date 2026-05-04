@@ -20,9 +20,9 @@ EEGLABとFieldTrip
 --------
 
 最初は少し歴史があります。 EEGLABは2000年にThe Salkで誕生しました。
-Arnaud DelormeとScott Makeigの研究所(La Jolla CA)。 EEGLABは 
-Swartz Center for Computational Neuroscienceにて2002年発売 
-UCSD(米国カリフォルニア州La Jolla) 
+Arnaud DelormeとScott Makeigの研究所(La Jolla CA)。 EEGLABは
+Swartz Center for Computational Neuroscienceにて2002年発売
+UCSD(米国カリフォルニア州La Jolla)
 
 2003-04年 EEGLABソフトウェアアーキテクトArnaud
 Delormeは、FieldTripシニアライターRobert Oostenveldと協力して提供しました
@@ -47,7 +47,7 @@ FieldTrip コードには、EEGLAB の機能も含まれます。
 
 EEGLABとFieldTripの開発者は、毎年、または毎年会います
 フィールドと可能なコラボレーションの進行状況について議論する年
-2つのソフトウェア間のまたは新しい橋。 
+2つのソフトウェア間のまたは新しい橋。
 
 オープンソースの精神で
 プログラミングは、よりコラボレーションが優れていると信じています。 からの仕事
@@ -69,7 +69,7 @@ EEGLABとFieldTripの開発者は、毎年、または毎年会います
 -   FieldTripは、グループデータを処理するための限られたツールを提供しています。 マネージング
     グループデータは、ユーザーの選択に意図的に残されます
     ユーザーが事前定義された使用を余儀なくされない合理的
-    実験設計をモデル化するためのスキーム。 対照的に、EEGLAB 
+    実験設計をモデル化するためのスキーム。 対照的に、EEGLAB
     さまざまな統計モデルを適用するためのツールを提供し、
     実験データをグループ化するためのサブモデル。
 
@@ -169,7 +169,7 @@ EEG = fieldtrip2eeglab(hdr, dat, events);
 ```
 
 FieldTrip で EEGLAB のデータセットをインポートするには、EEGLAB のデータセットを読み込みます。
-ファイル IO インターフェイスは標準の FILE-IO インターフェイスを使用して下さい
+ファイル IO インターフェイスは標準の FILE-IO インターフェイスを使用してください
 またはFILE-IOの低レベルEEGLAB読書機能を使用して以下のようにします。
 
 ``` matlab
@@ -209,7 +209,7 @@ EEGLABとFieldTripの長期持続性は、
 先進的なMEEGのためのコミュニティによる新しい方法の貢献
 処理。 FieldTrip コードを EEGLAB プラグインとして利用できるようにする
 (現在120以上のプラグイン)が表示されるので、
-EEGLABコミュニティ 
+EEGLABコミュニティ
 
 このプラグインを投稿することができます [こちら](https://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php) そして、
 承認されると、EEGLABユーザー全員が瞬時に見えるようになります。

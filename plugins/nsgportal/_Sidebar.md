@@ -5,8 +5,9 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: _Sidebar
-nav_title: "_サイドバー"
+nav_title: "サイドバー"
 long_title: _Sidebar
+nav_exclude: true
 ---
 # NSGのEEGLAB
 * [NSGに登録](Registering-at-NSG)

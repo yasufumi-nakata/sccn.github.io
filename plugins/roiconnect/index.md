@@ -1,7 +1,7 @@
 ---
 layout: default
 title: ROIconnect
-nav_title: "ROIconnectについて"
+nav_title: "ROIconnect"
 long_title: ROIconnect
 parent: Plugins
 render_with_liquid: false
@@ -15,12 +15,12 @@ ROIconnectは、オープンソースプラグインを自由に利用できる�
 
 次の論文をチェックして、コネクティビティ実験の推奨方法とパイプラインについて学びます。
 > Pellegrini、F.、Delorme、A.、Nikulin、V.、及びHafe、S. (2023)。 EEG からの相互地域線形機能接続を検出するための良い慣行を特定します。 NeuroImage、120218。 [土井: 10.1016/j.neuroimage.2023.120218](https://doi.org/10.1016/j.neuroimage.2023.120218)
-> 
+>
 > Pellegrini, F., Nguyen, T. D., Herrera, T., Nikulin, V., Nolte, G., & Haufe, S. (2023). アンチシムエマル化ビスペラを使用して、サイト内位相差カップリングから区別します。 バイオRxiv 2023.10.26.564193. [https://doi.org/10.1101/2023.10.26.564193](https://doi.org/10.1101/2023.10.26.564193)
 
 ⚠️ 免責事項: このプラグインは、我々が研究設定のために特定したベストプラクティスパイプラインを実装します。 こういった環境では、躊躇することなく使用できると確信しています。 実験を完全に再現するための追加コードが提供されます。 [別のリポジトリ](https://github.com/fpellegrini/FCsim) 中期では、このプラグインを他のユースケースに拡張し、それぞれのバリデーション試験でバックアップします。
 
-EEGLAB GUIからコア機能にアクセスすることができます。 経験豊富なユーザーは、コマンドラインから追加のユーティリティにアクセスすることができます。 コマンドラインから関数を実行する場合は、コードで提供される各ドキュメントを参照してください。 
+EEGLAB GUIからコア機能にアクセスすることができます。 経験豊富なユーザーは、コマンドラインから追加のユーティリティにアクセスすることができます。 コマンドラインから関数を実行する場合は、コードで提供される各ドキュメントを参照してください。
 
 
 Tien Dung Nguyen、Franziska Pellegrini、Stefan Haufe、EEGLABインターフェイス、Coregistration、3-Dビジュアライゼーション、Arnaud DelormeによるFieldTrip統合により開発されたコード。
@@ -33,25 +33,25 @@ Tien Dung Nguyen、Franziska Pellegrini、Stefan Haufe、EEGLABインターフ�
 [EEGLAB](https://github.com/sccn/eeglab#installingcloning) インストール。 プロジェクトレイアウトは次の通りです。
 
 ```
-eeglab/	 				
-├── functions/ 							
-├── plugins/ 								
-├── sample_data/ 					
-├── sample_locs/		
-├── tutorial_scripts/						
-└── /.../ 					
+eeglab/
+├── functions/
+├── plugins/
+├── sample_data/
+├── sample_locs/
+├── tutorial_scripts/
+└── /.../
 ```
-ROIconnect プラグインをインストールする必要があります。 `plugins` フォルダ。 一番簡単な方法は、リポジトリをクローンするだけです。 ナビゲート `plugins` 型づけによるフォルダ。 
+ROIconnect プラグインをインストールする必要があります。 `plugins` フォルダ。 一番簡単な方法は、リポジトリをクローンするだけです。 ナビゲート `plugins` 型づけによるフォルダ。
 ```
 cd <eeglab_install_location>/eeglab/plugins
-``` 
+```
 次にリポジトリをクローンします。
 ```
 git clone https://github.com/sccn/roiconnect.git
 ```
-です。 プラグインを実行したい場合は、起動してください [EEGLAB](https://github.com/sccn/eeglab#to-use-eeglab) まずは。 EEGLAB を追加する必要があります。 [MATLABパス](https://de.mathworks.com/help/matlab/ref/addpath.html) 一部の機能は追加のインストールが必要な場合があります  [FieldTrip(ライトまたはノーマル)](https://www.fieldtriptoolbox.org) そして、 [ブラインド映画](https://github.com/arnodelorme/brainmovie).
+です。 プラグインを実行したい場合は、起動してください [EEGLAB](https://github.com/sccn/eeglab#to-use-eeglab) まずは。 EEGLAB を追加する必要があります。 [MATLABパス](https://de.mathworks.com/help/matlab/ref/addpath.html) 一部の機能は追加のインストールが必要な場合があります  [FieldTrip(ライトまたはノーマル)](https://www.fieldtriptoolbox.org) そして、 [BrainMovie](https://github.com/arnodelorme/brainmovie).
 
-なぜこの EEGLAB プラグインは EEGLAB プラグインマネージャではありませんか? プラグインはベータです。 完了したら、EEGLABプラグインマネージャに追加されます。 
+なぜこの EEGLAB プラグインは EEGLAB プラグインマネージャではありませんか? プラグインはベータです。 完了したら、EEGLABプラグインマネージャに追加されます。
 
 📌 `test_pipes/` 始めるために使用できるテストパイプラインが含まれています。
 
@@ -75,7 +75,7 @@ EEG = pop_roi_activity(EEG, 'leadfield',EEG.dipfit.sourcemodel,'model','LCMV','m
 エポック数を60(2秒)に設定します。 連続データを提供すると、非重複エポックが抽出されます。 60 以上の場合、関数は 60 をランダムに選択します。 60 未満の場合、機能が epoch オーバーラップを増加させ、データを抽出しようとすると、再び epoch を抽出します。 入力(単一試用ERP)としてデータepochsを提供し、それらに十分でないと、それらは目的の番号に達するためにブートストラップされています。
 
 ## 接続性分析
-`pop_roi_connect` 下記の入力を受け付けます: EEG の指示は、 `pop_roi_activity` FCメトリックの名前。 データの長さによるバイアスを避けるため、すべての条件の定数のデータを保存することをお勧めします。 そのため、60 s の長さ (デフォルト) のタイムスニペットで FC を推定する関数を、平均値 (デフォルト) または後で統計分析のために入力として使用することができます。 以下のコマンドライン例では、デフォルト値(この例の入力パラメータとして明示的に渡された)を使用してスニペットのFC解析を実行する関数を要求します。 
+`pop_roi_connect` 下記の入力を受け付けます: EEG の指示は、 `pop_roi_activity` FCメトリックの名前。 データの長さによるバイアスを避けるため、すべての条件の定数のデータを保存することをお勧めします。 そのため、60 s の長さ (デフォルト) のタイムスニペットで FC を推定する関数を、平均値 (デフォルト) または後で統計分析のために入力として使用することができます。 以下のコマンドライン例では、デフォルト値(この例の入力パラメータとして明示的に渡された)を使用してスニペットのFC解析を実行する関数を要求します。
 
 ```matlab
 EEG = pop_roi_connect(EEG, 'methods', { 'MIM', 'TRGC'}, 'snippet', 'on', 'snip_length', 60, 'fcsave_format', 'mean_snips');
@@ -87,18 +87,18 @@ EEG = pop_roi_connect(EEG, 'methods', { 'MIM', 'TRGC'}, 'snippet', 'on', 'snip_l
 > スニペット分析は、エッチングと同等ではありません。 データ長が接続推定のバイアスを阻害していることを発見しました。 したがって、データの長さ(スニペットの長さ、デフォルト60秒)を比較すべきすべての実験条件に保つことをお勧めします。 iCOHとMIM/MICに最も適しています。 デフォルトでは、スニペット解析がオフになります(デフォルト: `'snippet', 'off'`)。 詳しくはこちら [詳しくはこちら](https://github.com/arnodelorme/roiconnect/pull/14#issuecomment-1263531505).
 
 ## 可視化
-さまざまなモードでパワーとFCを呼び出して見える化 `pop_roi_connectplot` 以下では、[[[1]](#1)]の実際のデータ例から1つの被写体の結果を表示します。 MATLABのコードと対応する分析をご覧いただけます。 [詳しくはこちら](https://github.com/fpellegrini/MotorImag) プロットは、左モーターの画像条件でパワーまたはFCを表示します。 タスクの性質上、8〜13Hzの周波数帯で結果を表示しますが、あなたが望む任意の周波数または周波数帯域を選択することは自由です。 
+さまざまなモードでパワーとFCを呼び出して見える化 `pop_roi_connectplot` 以下では、[[[1]](#1)]の実際のデータ例から1つの被験者の結果を表示します。 MATLABのコードと対応する分析をご覧いただけます。 [詳しくはこちら](https://github.com/fpellegrini/MotorImag) プロットは、左モーターの画像条件でパワーまたはFCを表示します。 タスクの性質上、8〜13Hzの周波数帯で結果を表示しますが、あなたが望む任意の周波数または周波数帯域を選択することは自由です。
 
 :プッシュピン: あなたにとって画像のどれも小さい場合は、クリックするだけで、別のタブでフルサイズで開きます。<br>
-:round_pushpin: PlottingはPSD、MIM/MICおよびGC/TRGCのために特に最大限に活用されます。 
+:round_pushpin: PlottingはPSD、MIM/MICおよびGC/TRGCのために特に最大限に活用されます。
 
 ### 地域のバープロットとしての電力
-パワーをバープロットだけ可視化したい場合、必ず明示的にターンしてください `plotcortex` デフォルトでオンになっているのでオフ。 
+パワーをバープロットだけ可視化したい場合、必ず明示的にターンしてください `plotcortex` デフォルトでオンになっているのでオフ。
 ```matlab
 EEG = pop_roi_connectplot(EEG, 'measure', 'roipsd', 'plotcortex', 'off', 'plotbarplot', 'on', 'freqrange', [8 13]) % alpha band;
 ```
 <p float="middle">
-  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/power_barplot_left.jpg?raw=true" width="400"/>     
+  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/power_barplot_left.jpg?raw=true" width="400"/>
   &nbsp;&nbsp;
 </p>
 
@@ -107,17 +107,17 @@ EEG = pop_roi_connectplot(EEG, 'measure', 'roipsd', 'plotcortex', 'off', 'plotba
 EEG = pop_roi_connectplot(EEG, 'measure', 'roipsd', 'plotcortex', 'on', 'freqrange', [8 13]);
 ```
 <p float="middle">
-  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/power_cortex_left.jpg?raw=true" width="400"/>     
+  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/power_cortex_left.jpg?raw=true" width="400"/>
   &nbsp;&nbsp;
 </p>
 
-### 地域対地域行列としてのFC 
+### 地域対地域行列としてのFC
 繰り返しますが、コルテックスプロットを見たい場合は、明示的にターンする必要があります `plotcortex` オフ。 フルサイズで見たい場合は、図をクリックしてください。
 ```matlab
 EEG = pop_roi_connectplot(EEG, 'measure', 'mim', 'plotcortex', 'off', 'plotmatrix', 'on', 'freqrange', [8 13]);
 ```
 <p float="middle">
-  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/FC_MIM_matrix.png?raw=true" width="400"/>     
+  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/FC_MIM_matrix.png?raw=true" width="400"/>
   &nbsp;&nbsp;
 </p>
 
@@ -127,7 +127,7 @@ pop_roi_connectplot(EEG, 'measure', 'mim', 'plotcortex', 'off', 'plotmatrix', 'o
 ```
 
 <p float="middle">
-  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/FC_MIM_matrix_groupedhems.png?raw=true" width="400"/>     
+  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/FC_MIM_matrix_groupedhems.png?raw=true" width="400"/>
   &nbsp;&nbsp;
 </p>
 
@@ -137,35 +137,35 @@ pop_roi_connectplot(EEG, 'measure', 'mim', 'plotcortex', 'off', 'plotmatrix', 'o
 pop_roi_connectplot(EEG, 'measure', 'mim', 'plotcortex', 'off', 'plotmatrix', 'on', 'freqrange', [8 13], 'hemisphere', 'left');
 ```
 <p float="middle">
-  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/FC_MIM_matrix_left.png?raw=true" width="400"/>     
+  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/FC_MIM_matrix_left.png?raw=true" width="400"/>
   &nbsp;&nbsp;
 </p>
 
 ### 表面地形としてのネットFC
 ここは、全ての地域から全ての地域へ FC を視覚化しています。
 ```matlab
-pop_roi_connectplot(EEG, 'measure', 'mim', 'plotcortex', 'on', 'freqrange', [8 13]);  
+pop_roi_connectplot(EEG, 'measure', 'mim', 'plotcortex', 'on', 'freqrange', [8 13]);
 ```
 <p float="middle">
-  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/FC_MIM_cortex_left.jpg?raw=true" width="400"/>     
+  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/FC_MIM_cortex_left.jpg?raw=true" width="400"/>
   &nbsp;&nbsp;
 </p>
 
 ### シーズFCは、角面地形として
 ここには、種地域のFCを他の地域に可視化しています。
 ```matlab
-pop_roi_connectplot(EEG, 'measure', 'mim', 'plotcortex', 'on', 'freqrange', [8 13], 'plotcortexseedregion', 49); 
+pop_roi_connectplot(EEG, 'measure', 'mim', 'plotcortex', 'on', 'freqrange', [8 13], 'plotcortexseedregion', 49);
 ```
 <p float="middle">
-  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/FC_MIM_cortex_seed49_left.jpg?raw=true" width="400"/>     
+  <img src="https://github.com/Hiyeri/roiconnect/blob/master/resources/FC_MIM_cortex_seed49_left.jpg?raw=true" width="400"/>
   &nbsp;&nbsp;
 </p>
 
 ### グループ分析
 
-ROIconnect プラグインは EEGLAB STUDY フレームワークと互換性があります。 つまり、グループ分析用のSTUDYを作成したら、データセットのグループで接続を計算するためにROIconnectメニューを選択できます。 接続が完了すると、グループレベルでROIconnectの結果を集計する方法が2つあります。 この段階では、コマンドラインコードのどちらの方法も含まれます。 最も簡単な方法は、すべてのデータセットでROIconnectを実行し、それらの上でマトリックスを収集し、統計を実行することです。 
+ROIconnect プラグインは EEGLAB STUDY フレームワークと互換性があります。 つまり、グループ分析用のSTUDYを作成したら、データセットのグループで接続を計算するためにROIconnectメニューを選択できます。 接続が完了すると、グループレベルでROIconnectの結果を集計する方法が2つあります。 この段階では、コマンドラインコードのどちらの方法も含まれます。 最も簡単な方法は、すべてのデータセットでROIconnectを実行し、それらの上でマトリックスを収集し、統計を実行することです。
 
-すべてのデータセットの接続(例えば、多変量的相互作用測定)と各被写体に対して、条件1と条件2のためのデータセット(配列では、最初のデータセットは1条件1、第2の第2の主題1条件1、第2の主題1条件2、第3は2条件1、等で、コードを使うことができます:
+すべてのデータセットの接続(例えば、多変量的相互作用測定)と各被験者に対して、条件1と条件2のためのデータセット(配列では、最初のデータセットは1条件1、第2の第2の被験者1条件1、第2の被験者1条件2、第3は2条件1、等で、コードを使うことができます:
 
 ```matlab
 % aggregate all subjects for each condition in one matrix
@@ -173,8 +173,8 @@ numSubject = length(ALLEEG)/2; % number os subjects
 cond1 = zeros( [ size(ALLEEG(1).roi.MIM) numSubject] ); % dimensions are frequency x roi x roi x subject
 cond2 = zeros( [ size(ALLEEG(1).roi.MIM) numSubject] );
 for iSubj = 1:numSubject
-	cond1(:,:,:,iSubj) = ALLEEG(((iSubj-1)*2+1)).roi.MIM; % get the MIM (multivariate interaction measure) for all odd datasets 
-	cond2(:,:,:,iSubj) = ALLEEG(((iSubj-1)*2+2)).roi.MIM; % get the MIM (multivariate interaction measure) for all even datasets 
+	cond1(:,:,:,iSubj) = ALLEEG(((iSubj-1)*2+1)).roi.MIM; % get the MIM (multivariate interaction measure) for all odd datasets
+	cond2(:,:,:,iSubj) = ALLEEG(((iSubj-1)*2+2)).roi.MIM; % get the MIM (multivariate interaction measure) for all even datasets
 end
 
 % compute statistics and plot
@@ -187,7 +187,7 @@ figure; subplot(1,2,2); imagesc(-log10(pAlpha)); title('p-value (0 for p=1; 1 fo
 % or replace matrix MIM in one of the dataset and plot using the ROIconnect menus or command line functions
 ```
 
-または、任意の研究設計(双方向ANOVAを含む)からROIconnectデータを取得するには、強力なstd_readdata関数を、ドキュメントに記載されているように使用できます。 [eegstats プラグイン](https://github.com/sccn/eegstats). 
+または、任意の研究設計(双方向ANOVAを含む)からROIconnectデータを取得するには、強力なstd_readdata関数を、ドキュメントに記載されているように使用できます。 [eegstats プラグイン](https://github.com/sccn/eegstats).
 
 {% raw %}
 ```matlab
@@ -202,16 +202,15 @@ figure; subplot(1,2,2); imagesc(-log10(pAlpha)); title('p-value (0 for p=1; 1 fo
 ROIconnectのテストフォルダには様々なスクリプトが含まれています。 関心のあるのは、EEGLABチュートリアルデータセットで接続解析を実行する*test_pipes/pipeline_connectivity.m*です。 このスクリプトは他のデータを処理するために簡単に変更できます。
 
 # 参考文献
-<a id="1">[1]</a> 
+<a id="1">[1]</a>
 Pellegrini、F.、Delorme、A.、Nikulin、V.、及びHafe、S. (2023)。 EEG からの相互地域線形機能接続を検出するための良い慣行を特定します。 NeuroImage、120218。 [土井: 10.1016/j.neuroimage.2023.120218](https://doi.org/10.1016/j.neuroimage.2023.120218)
 
-<a id="3">[2]</a> 
+<a id="3">[2]</a>
 Pellegrini, F., Nguyen, T. D., Herrera, T., Nikulin, V., Nolte, G., & Haufe, S. (2023). アンチシムエマル化ビスペラを使用して、サイト内位相差カップリングから区別します。 バイオRxiv 2023.10.26.564193. [https://doi.org/10.1101/2023.10.26.564193](https://doi.org/10.1101/2023.10.26.564193)
 
-<a id="2">[3]</a> 
+<a id="2">[3]</a>
 https://github.com/fpellegrini/FCsim
 
-<a id="3">[4]</a> 
+<a id="3">[4]</a>
 https://github.com/fpellegrini/MotorImag
-
 

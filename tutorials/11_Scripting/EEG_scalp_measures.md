@@ -143,7 +143,7 @@ close(vidObj);
 
 ### eegmovie関数3Dsプカルトポグラフィ
 
-下の 下の は は は は は は
+以下のコードは、3Dヘッドモデル上にERPの時間変化を描画し、動画として保存する簡単な例です。
 
 ```matlab
 %% Simple 3-D movie

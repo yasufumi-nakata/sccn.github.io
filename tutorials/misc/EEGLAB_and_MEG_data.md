@@ -12,7 +12,7 @@ EEGLABとMEGデータ
 EEGLAB は、File-IO からファイル・IO まで、様々な情報を発信しています。
 エクスカ 大手メーカーからのデータが届きました。(CTF、Neuromag、Neuroimaging 4-D、BTi)。 File-IO 拡張機能
 
-参照: [BIDS-matlab-toolsの使い方](https://github.com/sccn/bids-matlab-tools) EEGLAB は、BIDS 形式のファイルです。 EEGLABは、EEGLAB(メニュー項目)からこのプラグインは、 <span style="color: brown">ファイル > EEGLABエクスカ</span>). 
+参照: [BIDS-matlab-toolsの使い方](https://github.com/sccn/bids-matlab-tools) EEGLAB は、BIDS 形式のファイルです。 EEGLABは、EEGLAB(メニュー項目)からこのプラグインは、 <span style="color: brown">ファイル > EEGLABエクスカ</span>).
 
 以下、Neuromag MEGとCTF MEGに関する情報です。[clean_rawdata](https://github.com/sccn/clean_rawdata) プラグインの使用を推奨します。 [ICLabel](https://github.com/sccn/ICLabel) そして、 [MARA](https://irenne.github.io/artifacts/) ICA’s は、再訓練で、MEGデータで再訓練をしています。
 
@@ -27,7 +27,7 @@ EEGLAB は、File-IO からファイル・IO まで、様々な情報を発信�
 
 ![スクリーンショット 2022-12-22 に 10 56 53](https://user-images.githubusercontent.com/1872705/209293499-5f5a06c4-7cf4-45a8-8d89-e323e888cddc.png)
 
-メニュー項目 <span style="color: brown">パロット > チャネルのスペクトルおよび地図</span>電力を715 Hzにプロットする 電極をプロットする EEGチュートリアル 
+メニュー項目 <span style="color: brown">パロット > チャネルのスペクトルおよび地図</span>電力を715 Hzにプロットする 電極をプロットする EEGチュートリアル
 
 ![2018年12月22日](https://user-images.githubusercontent.com/1872705/209294152-ee22cc89-46d5-429d-a0de-31fa31a83d37.png)
 
@@ -47,7 +47,7 @@ CTF MEGについて
 
 ![2018年12月23日](https://user-images.githubusercontent.com/1872705/209403077-a3abcf6b-104a-43fe-aecc-7b19bf7b237c.png)
 
-現在データセットは、CentreMRT27をそのまま使用しています。 また、データセットには、最後の2チャンネル、*COMNT*、*SCALE*の削除が必要です。 チャンネル MRT27 、 *delete* ボタン など。 最後の 最後の 最後の 274 274 274 274 274 274 274 274 274 274 274 274 の場所 の場所 を を を を を を を を を を を を を を を を を を の場所 を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を
+現在のデータセットでは、CentreMRT27の位置情報をそのまま使用します。また、最後の2チャンネル*COMNT*と*SCALE*は削除する必要があります。チャネル編集画面でこれらのチャンネルを選択し、*delete*ボタンを押します。残りの274チャンネルの位置情報が保持されます。
 
 ![2018年12月23日](https://user-images.githubusercontent.com/1872705/209403788-6ef250ea-ff64-416f-872c-5648fd6e1bd6.png)
 
@@ -64,11 +64,11 @@ EEG.chaninfo.topoplot = { 'headrad' 0.3 'conv' 'on'};
 eeglab redraw
 ```
 
-これらのコマンドは、ヘッドのサイズを変更し、コンベックスのハブを使用して、チャンネルのプロット限界を決定します。 
+これらのコマンドは、ヘッドのサイズを変更し、コンベックスのハブを使用して、チャンネルのプロット限界を決定します。
 
 ソース
 -----------------------------
-EEGは、 このチュートリアルでは、このチュートリアルでは、 [Henson-Wakeman データセット](https://nemar.org/dataexplorer/detail?dataset_id=ds000117) を使用します。最初の被写体から一部のファイルのみが使用可能です。 [詳しくはこちら](https://sccn.ucsd.edu/eeglab/download/ds000117_sub-01.zip)DIPFIT は、EeGLAB の拡張機能で、FieldT の機能が搭載されています。 このチュートリアルは、 [EEGについて](../09_source/Custom_head_model.html) 同じデータで。
+EEGは、 このチュートリアルでは、このチュートリアルでは、 [Henson-Wakeman データセット](https://nemar.org/dataexplorer/detail?dataset_id=ds000117) を使用します。最初の被験者から一部のファイルのみが使用可能です。 [詳しくはこちら](https://sccn.ucsd.edu/eeglab/download/ds000117_sub-01.zip)DIPFIT は、EeGLAB の拡張機能で、FieldT の機能が搭載されています。 このチュートリアルは、 [EEGについて](../09_source/Custom_head_model.html) 同じデータで。
 
 ## MRI は、MRI と シリアス
 
@@ -94,7 +94,7 @@ MRIからBEM（境界要素法）ヘッドモデルが自動生成されます�
 
 ![2022年12月11日 7 43 48](https://user-images.githubusercontent.com/1872705/206956553-435a3f9f-48db-4bff-b714-4fddc37aa3f6.png)
 
-*Co-register*ボタンを押し、コレジストレーションウィンドウで*Align fiducials*を選択してOKを押します。ウィンドウの左側に残差が表示されます。フィデューシャルの選択については[こちら](https://eeglab.org/tutorials/ConceptsGuide/coordinateSystem.html#eeglab-electrode-coordinate-systems)を参照してください。 
+*Co-register*ボタンを押し、コレジストレーションウィンドウで*Align fiducials*を選択してOKを押します。ウィンドウの左側に残差が表示されます。フィデューシャルの選択については[こちら](https://eeglab.org/tutorials/ConceptsGuide/coordinateSystem.html#eeglab-electrode-coordinate-systems)を参照してください。
 
 ![2022-12-11 に 11 06 22 PM](https://user-images.githubusercontent.com/1872705/206982193-92e59b82-90b9-43c5-8e7a-d551a90d66d1.png)
 
@@ -114,7 +114,7 @@ EEGとMEGの融合モデル MEG、モデルの内面のみが公開されます�
 
 センサーとモデルがソースのスペースを調整
 ----------------------------------
-EEGは、Constitute of EEG、Constitute of EEG、Constitute of EEG、Constitución とCasino の略称です。 宇宙空間モデルのソースは、宇宙の宇宙空間のソースです。 
+EEGは、Constitute of EEG、Constitute of EEG、Constitute of EEG、Constitución とCasino の略称です。 宇宙空間モデルのソースは、宇宙の宇宙空間のソースです。
 
 MEGについて
 ------------

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: BrainBeats
-nav_title: "ブラインビート"
+nav_title: "BrainBeats"
 long_title: BrainBeats
 parent: Plugins
 render_with_liquid: false
@@ -10,22 +10,22 @@ nav_order: 9
 プラグインソースコードを表示するには、プラグインのコードをご覧ください [GitHubリポジトリ](https://github.com/amisepa/BrainBeats).
 
 <!-- <p align="center"> -->
-# ブラインビート
+# BrainBeats
 <!-- </p> -->
 
 <p align="center" width="100%">
-  <img width="30%"alt="BrainBeatsロゴ"
+  <img width="30%" alt="BrainBeatsロゴ"
        src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/brainbeats_logo2.png">
 </p>
 
 
 BrainBeatsツールボックスは、EEGLABプラグインとして実装され、脳心臓のインタープレイ研究のためのEEGおよび心臓血管信号(ECGおよびPPG)の共同処理と分析を可能にします。 一般的なユーザーインターフェイス(GUI)とコマンドラインの両方がサポートされています(チュートリアルを参照してください)。 BrainBeatsは現在サポートしています: 1)ハートビートが進化する潜在能力(HEP)と振動(HEO); 2) EEGおよびHRVの特徴の抽出; 3) EEG信号からの心アーティファクトの抽出; 4) 脳中心の凝集。
 
- 
+
 ## 4つの方法利用できる
 
 <p align="center" width="100%">
-  <img width="50%"alt="BrainBeats 図"
+  <img width="50%" alt="BrainBeats 図"
        src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/diagram.png">
 </p>
 
@@ -34,10 +34,10 @@ BrainBeatsツールボックスは、EEGLABプラグインとして実装され�
 
 
 <p align="center">
-    被写体レベルでのHEPの例は、同時EEG-ECG信号(心臓フィールドアーティファクトはイラスト用に保存されました)から得られたものです。
+    被験者レベルでのHEPの例は、同時EEG-ECG信号(心臓フィールドアーティファクトはイラスト用に保存されました)から得られたものです。
 </p>
 <p align="center" width="100%">
-  <imgの幅="50%"alt="BrainBeats fig11"
+  <img width="50%" alt="BrainBeats fig11"
        src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig11.png">
 </p>
 
@@ -45,15 +45,15 @@ BrainBeatsツールボックスは、EEGLABプラグインとして実装され�
     被験者レベルのHEPの例では、同時EEG-PPG信号から得られる(PPGでは、電気および機械式心臓イベント間の遅延が正しいため、推定心拍時間はECGのRピークに相当する;～200-400 ms)。
 </p>
 <p align="center" width="100%">
-  <imgの幅="50%"alt="BrainBeats fig17"
+  <img width="50%" alt="BrainBeats fig17"
        src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig17.png">
 </p>
 
-2) EEG および HRV を、時間、頻度および非線形ドメインの連続的なデータから抽出して下さい。 
+2) EEG および HRV を、時間、頻度および非線形ドメインの連続的なデータから抽出して下さい。
     - HRVの時間ドメイン:SDNN、RMSSD、pNN50。
-    - HRVの頻度ドメイン:VLF力、ULF力、LF力、HF力、LF:HFの比率、合計力。 
-    - HRV 非線形ドメイン: ポーンケア、ファジーエントロピー、フラクタルディメンション、PRSA。 
-    
+    - HRVの頻度ドメイン:VLF力、ULF力、LF力、HF力、LF:HFの比率、合計力。
+    - HRV 非線形ドメイン: ポーンケア、ファジーエントロピー、フラクタルディメンション、PRSA。
+
     - EEG周波数ドメイン:平均帯域電力(デルタ、テタ、アルファ、ベータ、ガンマ)、個々のアルファ周波数(IAF)、アルファ非対称。
     - EEG非線形ドメイン: 不潔なエントロピー、僅かな次元
 
@@ -62,7 +62,7 @@ BrainBeatsツールボックスは、EEGLABプラグインとして実装され�
     HRVおよびEEGデータから推定される電力スペクトル密度(PSD)の例
 </p>
 <p align="center" width="100%">
-  <img 幅="50%"alt="BrainBeats fig21"
+  <img width="50%" alt="BrainBeats fig21"
        src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig21.png">
 </p>
 
@@ -70,27 +70,27 @@ BrainBeatsツールボックスは、EEGLABプラグインとして実装され�
     サンプルデータセットから抽出されたEEG機能の例
 </p>
 <p align="center" width="100%">
-  <imgの幅="50%"alt="BrainBeats fig22"
+  <img width="50%" alt="BrainBeats fig22"
        src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig22.png">
 </p>
 
 3) ICAおよびICLabelを使用してEEG信号から中心の部品を取除いて下さい。
-   
+
 <p align="center">
     EEG信号からの心血管成分の抽出例
 </p>
 <p align="center" width="100%">
-  <imgの幅="50%"alt="BrainBeats fig27"
+  <img width="50%" alt="BrainBeats fig27"
        src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/fig27.png">
 </p>
 
 4) 計算の脳中心の一貫性(ベータ版、テストし、フィードバックを与えて下さい)
-   
+
 <p align="center">
     同時EEGおよびECG信号からBrainBeatsと計算される複数の脳心臓のコヒーレンス対策の例
 </p>
 <p align="center" width="100%">
-  <img 幅="50%"alt="BrainBeats coh_all"
+  <img width="50%" alt="BrainBeats coh_all"
        src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/coherence_allfreqs.png">
 </p>
 
@@ -98,7 +98,7 @@ BrainBeatsツールボックスは、EEGLABプラグインとして実装され�
     各周波数帯域のECG信号と共存するスカルプ地域を示すスカルプトポグラフィ
 </p>
 <p align="center" width="100%">
-  <img 幅="50%"alt="BrainBeats coh_topo"
+  <img width="50%" alt="BrainBeats coh_topo"
        src="https://raw.githubusercontent.com/amisepa/BrainBeats/main/figures/coherence_topo.png">
 </p>
 

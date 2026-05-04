@@ -5,12 +5,12 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-5.5.-Connectivity-Estimation
-nav_title: "第5.5章-Connectivity-Estimation"
+nav_title: "第5.5章 接続性推定"
 long_title: Chapter-5.5.-Connectivity-Estimation
 ---
 モデルが合っているので、いくつか計算したい
 スペクトラム、コヒーレンス、および
-悲しみの因果。 メニュー項目を選択することで、コネクティビティの推定GUIを立ち上げる 
+悲しみの因果。 メニュー項目を選択することで、コネクティビティの推定GUIを立ち上げる
 ツール > SIFT > コネクティビティ** コマンド行から、単一のデータセット EEG を使用できます。
 
 ``` matlab
@@ -78,6 +78,5 @@ GUI を使いたくない場合は、コマンドラインから以下のよう�
 
 ```matlab
 EEG = pop_est_mvarConnectivity( EEG, 'nogui', 'ConnectivityMeasures', ...
-             {'dDTF08' 'Coh' 'pCoh' 'S'}, 'Frequencies', [2:50], 'VerbosityLevel', 1); 
+             {'dDTF08' 'Coh' 'pCoh' 'S'}, 'Frequencies', [2:50], 'VerbosityLevel', 1);
 ```
-

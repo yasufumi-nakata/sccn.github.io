@@ -14,11 +14,11 @@ grand_parent: Tutorials
 脳 * * * * * * * * * * *
 シングルトライアルのコレクション, 任意の多くの可能性関連でソート
 変数。 ERP-image では、EEG のデータエポック (trials) は、 並行して実行します。
-関連する寸法(例えば、被写体反応時間、内部致命的
+関連する寸法(例えば、被験者反応時間、内部致命的
 スタットパワーレベル、特定のレイテンシーウィンドウ、アルファフェーズの電圧を意味します
 stimulusのオンセット、または等で、
 隣接する試行と、ついに2次元で色分けして視覚化
-。 [コンセプトガイド](/tutorials/ConceptsGuide/erp_image_background.html). 
+。 [コンセプトガイド](/tutorials/ConceptsGuide/erp_image_background.html).
 
 <details open markdown="block">
   <summary>
@@ -36,7 +36,7 @@ ERPをプロットする このチュートリアルでは、*POz* occipital の
 ### プロット
 
 選択する <span style="color: brown"> Plot → 空想</span>
-ピックアップ [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) ウィンドウ(下)。 
+ピックアップ [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) ウィンドウ(下)。
 
 チャンネル番号(27 または "..." ) 、 チャンネル *POz*) 、 *1* の 試行錯誤値、 *Ok* 詳しくはこちら
 
@@ -50,7 +50,7 @@ ERPは、あらゆる方向のカラーイメージです。
 
 標準で [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) 出力図(下)、ERPの最終工程
 サイトマップ
-イメージしたデータのエポックの平均。 
+イメージしたデータのエポックの平均。
 
 ヘッドプロット(左上)を含む
 赤い点は、選択したチャンネルの位置を示す
@@ -74,7 +74,7 @@ ERPは、あらゆる方向のカラーイメージです。
 
 *注記: 利用可能なオプションの数が多いため、パラメーター
 最後の呼び出しから (もしあれば) はデフォルトとしてリコールされます (オプションとして)
-テキストボックスで入力した引数はそのままです。 
+テキストボックスで入力した引数はそのままです。
 体験してみると
 この機能は、 MATLABの*\>\>eegh(0)*を入力してください。
 コマンドラインで履歴をクリアします。
@@ -82,8 +82,7 @@ ERPは、あらゆる方向のカラーイメージです。
 
 ![](/assets/images/1ERPimage27.gif)
 
-*ERP画像は、お試し用版です。 多数の を を
-水平線として各(スムース)の試験。 (スクリーンおよび/またはプリンター)
+*ERP画像は、各(平滑化された)試行を水平線として多数表示します。画面やプリンターの
 解像度は、それらをすべて表示するのに不十分な場合があります)。 減らすために
 イメージング遅延(および保存されたプロットファイルサイズを減らすために)、1つはできます
 ERP-image行を解読します。 *4*入力
@@ -123,19 +122,19 @@ Altogether,5 別の方法
 ### 反応時間による試行のソート
 
 メニュー項目を使用する <span style="color: brown"> Plot → 空想</span> コールする [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) 再びウィンドウ:
-- *Epoch-sorting フィールド*、および *latency* 。 
-- *イベントタイプ*、および*rt*。 
+- *Epoch-sorting フィールド*、および *latency* 。
+- *イベントタイプ*、および*rt*。
 - ※イベント時間
 *-200 800* ms 対象 * は、
 stimulusのオンセット。
 
 結果のERP画像は、
 *rt* イベントの*latency* は、
-*rt* イベント/エポック 
+*rt* イベント/エポック
 もしそうでなければ、 [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m)
 エポックでプロットする
- 
- 
+
+
 
 ![](/assets/images/ERPimagelatency.gif)
 
@@ -152,7 +151,7 @@ stimulusのオンセット。
 例えば、コールバック [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) ウィンドウ、プレス
 *Epoch-sorting Field*は、
 *レイテンシー* *イベントタイプ*ボックスから* rt* まで
-*Rescale*の箱。出版物*Ok*。 
+*Rescale*の箱。出版物*Ok*。
 
 の 結果 プロット の, は stimulus によって stimulus
 または2、ポスト刺激空間に合うように自動的に正規化された値
@@ -225,8 +224,8 @@ stimulusのオンセット
 - *Epoch-sorting field*、*Event type(s)*、*Align*の入力*Sort/alignの構成要素をクリア
 
 次の 次の 次の
-- ※相→周波数*:*10* (Hz) 試験 
-- ※2 は、英語のみの対応となります。 
+- ※相→周波数*:*10* (Hz) 試験
+- ※2 は、英語のみの対応となります。
 
 ![](/assets/images/I84pop_erpimage.jpg)
 
@@ -255,7 +254,7 @@ ms から 150 ms まで。各試験に合格し、
 異なるスムージングウィンドウを使用できます。 結果は選択した強度に依存します
 データ内の頻度、特にその量の運動量(すなわち、
 データがこの周波数で長いバーストを展示しました。
-フェーズロック(またはない)を実験的なイベントに。 
+フェーズロック(またはない)を実験的なイベントに。
 
 より明確に並べ替えるフェーズを見るには、同じ設定を維持しますが、
 今回は、*50* で入力してください。 無視する試み*。
@@ -278,7 +277,7 @@ P400 ERPは、
 アルファ活動が部分的に再同期されるかどうかを統計的に評価して下さい
 stimuli(stimuli), 部分真鍮, カスタマイズ
 段階の一貫性(または段階閉鎖の要因) 刺激の順序間の
-そしてポスト刺激データ。 
+そしてポスト刺激データ。
 
 この測定値、*Inter-Trial Coherence
 (ITC)* 用語集は 0 と 1 の 値が あります。1 の 値が あります。
@@ -287,7 +286,7 @@ stimuli(stimuli), 部分真鍮, カスタマイズ
 単位の円。 練習では、0よりも若干大きい値が期待されます
 ランダムな位相分布試験の任意の有限数。
 
-Plotting インタートライアルコヒーレンス ERP 
+Plotting インタートライアルコヒーレンス ERP
 ------------------------------------------
 
 Inter-Trial Coherence (ITC) は、詳細を記述しています。 [時間頻度分解セクション](/tutorials/08_Plot_data/Time-Frequency_decomposition.html) チュートリアルとオンラインチュートリアルで。
@@ -323,7 +322,7 @@ ERPPanel(&micro;V)は、ERPPanel(&micro;V)を発売しました。
 注: 青の領域は1%
 ランダムなデータから描画された代理データによると、自信の限界
 ベースラインの窓。 ここでは、選択した周波数で電力 (10.12)
-Hz は、epo に python に s を s から s へ s へ s へ s へ s へ s から s へ s へ s へ s から s へ s へ s へ s へ s へ s s へ s s へ s s へ s s s へ s s s s s s s へ s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s  
+Hz は、epo に python に s を s から s へ s へ s へ s へ s へ s から s へ s へ s へ s から s へ s へ s へ s へ s へ s s へ s s へ s s へ s s s へ s s s s s s s へ s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s
 
 数字
 *25.93 dB*のベース ラインの絶対的な
@@ -340,17 +339,17 @@ stimulusの現在のところ。 値 *10.12 Hz* は、次のようになりま�
 *注記*:ICCの重要度は、より早くなります。
 ソリューション また、CICC、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、CRE、C、CRET、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、COR、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、CORD、
 
-ERP Prott では、詳しく説明しています。 
+ERP Prott では、詳しく説明しています。
 [アレンデックス](/tutorials/ConceptsGuide/erp_image_background.html)
 
 Plottings of Plottings and Plottings and Plottings and Plottings and Plottings and Plottings and Plottings and Plottings and Plottings and Plottings and Plottings, Plottings, Plottings, Plottings, Plottings, Plottings, Plottings, Plottings, Plottings, Plottings, Plotting, Plottings, Plottings, Plottings, Plottings, Plottings, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plotting, Plot
 --------------------------------------------------------------------
 他にもいくつかあります [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) オプション
-以下の例で簡単に説明する: 
+以下の例で簡単に説明する:
 
 - *イメージアンプ*エントリー [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) ウィンドウはイメージの広さを可能にしました
 シグナル(関心の頻度)を単一の試験で、代わりに
-生の信号自体。 チェックボックス 
+生の信号自体。 チェックボックス
 - *Plot の は、Plot の は、Plot の に あります。
 プロフィール *2 50* を入力すると、この周波数の制限が指定されます。
 グラフ。
@@ -366,4 +365,3 @@ Plottings of Plottings and Plottings and Plottings and Plottings and Plottings a
 参照: [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) 下の図が現れます。
 
 ![](/assets/images/I85erpimage.jpg)
-

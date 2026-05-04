@@ -26,11 +26,11 @@ EEGLABワークショップのwikiページには、スライドも含まれて�
 -   [パート3: EEG脳を解決するソースダイナミクス](https://www.youtube.com/watch?v=MzJTZuyznQ4)
 -   [第4部:EEGLABの歴史と利用統計情報](https://www.youtube.com/watch?v=XtOIwaYjS1M)
 -   [第5部:単体加工パイプライン](https://www.youtube.com/watch?v=-V48rhAGzJI)
--   [第6部:多被写体解析とスクリプト](https://www.youtube.com/watch?v=kofJh7biGsE)
+-   [第6部:多被験者解析とスクリプト](https://www.youtube.com/watch?v=kofJh7biGsE)
 
 
 #### EEGLAB (2018年、Delorme)の事前処理データ
--   [パート1:生データを輸入する方法](https://www.youtube.com/watch?v=gEk33jWB0MY)
+-   [パート1:生データをインポートする方法](https://www.youtube.com/watch?v=gEk33jWB0MY)
 <img class="float-right" width="250" height="200"  src="/assets/images/EEGLABWorkshops11.jpg">
 -   [パート2:イベントやチャネルをインポートする方法](https://www.youtube.com/watch?v=2CPmmPG5Beo)
 -   [パート3:再会議とリサンプリング](https://www.youtube.com/watch?v=hByLyGYecjI)
@@ -69,7 +69,7 @@ EEGLABワークショップのwikiページには、スライドも含まれて�
 -   [パート4:Bootstrapとpermutation](https://youtu.be/odR8UlsJg0U)
 -   [パート5:複数の比較の修正](https://youtu.be/DQQAkID0vNQ)
 
-#### EEGLAB/LIMO(2020年、Delorme)を用いたEEGの一般リニアモデル
+#### EEGLAB/LIMO(2020年、Delorme)を用いたEEGの一般線形モデル
 -   [パート1:基本理論](https://youtu.be/mZbK6KvMF2I)
 -   [パート2:練習](https://youtu.be/7EWN2w0kSy4)
 
@@ -123,7 +123,7 @@ EEGLABを使用して、ワークショップを見直し、および/または�
 オンライン EEGLAB ワークショップサイト(メール) <eeglab@sccn.ucsd.edu>).
 
 
-<img class="float-right" width="180" height="250" src="/assets/images/MoBIPoster.jpg" > 
+<img class="float-right" width="180" height="250" src="/assets/images/MoBIPoster.jpg" >
 
 #### EEGLAB 信号の概要
 
@@ -172,12 +172,12 @@ MATLABに新しくなったり、リピーターが必要な場合は、素材�
 
 ## <span style="color: darkred">EEGLABの機能を示す関連出版物</span>
 
-関連するEEGLAB紙のリストを調べることができます [詳しくはこちら](/others/EEGLAB_References.html) 
+関連するEEGLAB紙のリストを調べることができます [詳しくはこちら](/others/EEGLAB_References.html)
 
 ## <span style="color: darkred">資料ダウンロード</span>
 
 トークスライドやビデオにアクセスするには、プログラム内のリンクを使用してください
-上記のリスト。 
+上記のリスト。
 また、匿名化されたデータをダウンロードし、解凍することもできます。
 研修会で使用される [詳しくはこちら](/tutorials/tutorial_data.html)を参照 これらのファイルは2010年と2010年の両方で有効です。
 2016年ワークショップ

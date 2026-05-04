@@ -215,7 +215,7 @@ Hadoop Mapreduceは、大規模な計算を行うためのフレームワーク�
 
 -   ソリューション1(実装が最も簡単です) EEGLABコマンドライン
     コードは互換性があります
-    [オタク](/others/Running_EEGLAB_on_Octave)を参照してください。 Octaveは
+    [Octave](/others/Running_EEGLAB_on_Octave)を参照してください。 Octaveは
     ノードの各ノードに比較的簡単にインストール
     boottrappingメソッド(ソフトウェアを自動的にインストールする方法)
     各ノード。 Octave を自動的にインストールするコマンド
@@ -225,7 +225,7 @@ Hadoop Mapreduceは、大規模な計算を行うためのフレームワーク�
     メインスクリプトの先頭で。 これは実行可能になり、
     STDINでデータを処理できるようにします。 可能です。
     *printf* または *disp* MATLAB を使用してデータ処理の出力を書きます
-    コマンド。 
+    コマンド。
 
     ``` matlab
     #!/usr/bin/octave -qf

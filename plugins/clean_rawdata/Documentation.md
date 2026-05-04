@@ -190,7 +190,7 @@ HAPPE論文へのコメント、および重要なパラメータの選択方法
 1円 使用されるSDのしきい値があまりにも攻撃的だった: [Chang ら.
 (2018)](https://www.researchgate.net/publication/325921646_Evaluation_of_Artifact_Subspace_Reconstruction_for_Automatic_EEG_Artifact_Removal),
 SD = 5 が使用されていれば、データポイントの 90% は変更されます
-この紙によると、元の分散の80%が失われます。
+この論文によると、元の分散の80%が失われます。
 これを行う必要はありません。 同じ紙は、しきい値SD =
 10-100 が推奨されます。 重要な注意:SDの定義はここにあります
 
@@ -224,7 +224,7 @@ SD==10 から 20 への開始は推奨されます。
 HAPPE紙に展示されているのは残念だが理解できない。
 Chiyuanの紙から学ぶ[Chang et al]
 (2018)](https://www.researchgate.net/publication/325921646_Evaluation_of_Artifact_Subspace_Reconstruction_for_Automatic_EEG_Artifact_Removal),
-HAPPE ペーパーの直後に ASR および
+HAPPE 論文の直後に ASR および
 関連機能 合理的に.
 
 補足材料

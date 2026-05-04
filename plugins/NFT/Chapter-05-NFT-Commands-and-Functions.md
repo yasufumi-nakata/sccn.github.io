@@ -5,7 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-05-NFT-Commands-and-Functions
-nav_title: "第5章-NFT-Commands-and-Functions"
+nav_title: "第5章 NFTコマンドと関数"
 long_title: Chapter-05-NFT-Commands-and-Functions
 ---
 このセクションでは、MATLAB コマンドとデータ構造をまとめました。

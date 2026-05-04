@@ -5,7 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-03-Forward-Model-Generation
-nav_title: "Chapter-03-Forward-モデル生成"
+nav_title: "第3章 フォワードモデル生成"
 long_title: Chapter-03-Forward-Model-Generation
 ---
 フォワードの問題: 境界要素法
@@ -56,7 +56,7 @@ long_title: Chapter-03-Forward-Model-Generation
 
 -   あなたは、nthダイポールの潜在的な分布をプロットすることができます.
 
-'session_name'_LFM を Matlab .mat ファイルとして保存します。
+'session_name'_LFM を MATLAB .mat ファイルとして保存します。
 ユーザインタフェースは図12で表示されます。
 
 <center>

@@ -5,10 +5,10 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-5.1.-SIFT-install
-nav_title: "第5.1章-SIFT-install"
+nav_title: "第5.1章 SIFTのインストール"
 long_title: Chapter-5.1.-SIFT-install
 ---
-※Matlab® 2008a** 以降、シグナルをお持ちのお客様
+※MATLAB® 2008a** 以降、シグナルをお持ちのお客様
 ツールボックス、統計ツールボックス、
 [EEGLAB](http://sccn.ucsd.edu/eeglab/) そして、
 [シャフト](http://sccn.ucsd.edu/wiki/SIFT#SIFT_Downloads) ツールボックス。 SIFT は EEGLAB (10 以降) のすべてのバージョンで動作します。 EEGLAB 2023.1でチュートリアルのこのバージョンがテストされました。
@@ -37,4 +37,3 @@ EEGLABメニューでSIFTを見つけます。 **Tools-\>SIFT**. SIFTは
 EEGLABを起動すると自動的にアクセス可能になります。
 
 **SIFT GUIの重要な注意:** 残念ながら、SIFT GUI は、Mathworks (MATLAB のメーカー) がそれをサポートする機能を変更しました(パラメーターの一部を変更すると、機能がクラッシュしたり、エラーを返すことがあります)。 例えばMACのMATLAB 2023aではGUI編集ボックスは使用できません。 そのため、コマンドラインを使用して異なるオプションを設定することは、場合によっては好ましいです。 このチュートリアルでは、GUIと同等のコマンドライン呼び出しが含まれています。
-

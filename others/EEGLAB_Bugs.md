@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB Bugs
-nav_title: "EEGLAB バグ"
+nav_title: "EEGLABのバグ"
 long_title: EEGLAB Bugs
 parent: Support
 ---
@@ -105,4 +105,3 @@ precompiled関数(mex関数とも呼ばれます)。 "mexファイルが見つ�
     異なるOSとこれらのバグ - 通常、グラフィカルバグ - かもしれない
     EEGLABに影響します。 私たちが知っている最新のものは、MATLABが
     version 2018a (すべてのOS) は、EEGLAB が動作するパッチが必要です。
-

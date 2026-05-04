@@ -1,7 +1,7 @@
 ---
 layout: default
 title: BVA-io
-nav_title: "BVA-ioの特長"
+nav_title: "BVA-io"
 long_title: BVA-io
 parent: Plugins
 render_with_liquid: false

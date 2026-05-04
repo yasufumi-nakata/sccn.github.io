@@ -21,12 +21,12 @@ MATLABベースのツールやPythonベースのツールを使用する必要�
 コミュニティが大きく、ソフトウェアが普及している場合は、より安全です。
 これは多くの問題の人々が遭遇していることを保障するので選択
 解決された - それはまたコードがおそらくより安定していることを意味します
-バグが少ない。 
+バグが少ない。
 
 以下は独立した数字です [2024 記事](https://apertureneuro.org/article/116386-the-art-of-brainwaves-a-survey-on-event-related-potential-visualization-practices) すべてのソフトウェアパッケージの人気が表示されます。
 ![画像ライブラリ](https://github.com/sccn/sccn.github.io/assets/1872705/4a2de7bc-ee1d-450f-8314-48d3294d54f4)
 
-このサードパーティーも参照 [2023 報告書](https://doi.org/10.1016/j.neuri.2023.100154) そして、 [2024報告書](https://www.preprints.org/manuscript/202411.0750/v1)EEGLAB 引用を他の EEG 解析ソフトウェアパッケージと比較する。 
+このサードパーティーも参照 [2023 報告書](https://doi.org/10.1016/j.neuri.2023.100154) そして、 [2024報告書](https://www.preprints.org/manuscript/202411.0750/v1)EEGLAB 引用を他の EEG 解析ソフトウェアパッケージと比較する。
 
 MATLABとPythonの大きな違い
 -------------------------------------------
@@ -34,7 +34,7 @@ MATLABとPythonの大きな違い
 脳イメージングを移行するためのイメージングツール開発の傾向があります
 Python へのツール。 もちろん、Python(およびnumpy/scipy mathパッケージ)
 Pythonで構築されたのは面白い(と無料)使い方の代替です
-マトラボ しかし、Pythonの愛好家が何を主張する可能性があるかの見解は、
+MATLAB しかし、Pythonの愛好家が何を主張する可能性があるかの見解は、
 プログラミング言語のままのPythonは理想的ではない
 プログラマーのために設計されている。 例えば、
 
@@ -64,7 +64,7 @@ Pythonで構築されたのは面白い(と無料)使い方の代替です
     2020年1月1日以降は、数が多いためまだまだ広く使われています。
     Python 3 では Python ライブラリは利用できません。
     初心者を遅くできる予期しない問題の種類
-    プログラマー 
+    プログラマー
 -   **図書館はどこにありますか?** Pythonは通常、複数の外部をインストールするためにユーザーが必要
     ライブラリ; これは退屈であり、自然に来ない
     コメントはありません。 経験豊富なユーザーでも、時々自分の時間を得る時間を費やす
@@ -78,13 +78,13 @@ Pythonで構築されたのは面白い(と無料)使い方の代替です
     もしそれが存在すれば、私たちのニーズを満たしません。 コンパイルされたバージョンの
     EEGLAB では、MATLAB および EEGLAB コードを購入するユーザーを必要としません。
     また、Octaveで動作します。
-- **Jupyterのノート。** Matlabの相互インターフェイスへの最も近い代わりはあります
+- **Jupyterのノート。** MATLABの相互インターフェイスへの最も近い代わりはあります
 ブラウザまたはVisual Studioコードで実行するJuppyter Notebook環境。 しかし、
 Jupyterのノートブックのグラフィカルな機能が限られる(それはあります
 時には数字を操作しにくい、ズームできない、など...)。
 マトラブと試してみたところほとんどの人
 ジュピターノートブックはジュピターノートブックとは異なります - その後、一緒に生きるために学ぶ
-作業に必要な場合の制限。 対照的に、あまり人気 [スパイダーIDE](https://www.spyder-ide.org/) MATLABのグラフィカルインターフェイスとの違いは深刻です。 
+作業に必要な場合の制限。 対照的に、あまり人気 [スパイダーIDE](https://www.spyder-ide.org/) MATLABのグラフィカルインターフェイスとの違いは深刻です。
 -   **機能の欠如。** MATLABのMEEGソフトウェアパッケージは、主にEEGLAB、FieldTrip、および
     ブレインストーム。 Python上でMEEGソフトウェアは、EEGユーザーよりもMEGユーザーに合わせたMNEです。
     利用可能なソフトウェアのMATLABスイートは、現在よりも成熟しています
@@ -144,7 +144,7 @@ EEG = mne.io.read_epochs_eeglab('eeglab_data_epochs_ica.set')
 
 ### Python または MATLAB コンパイルされた Python ライブラリで MATLAB のランタイムエンジンを使用する
 
-MATLAB から Python に渡される EEGLAB のデータ構造は複雑すぎるため、これらのソリューションはアドバイスしません。 Python のコードを実行すると、「1xN と Nx1 char 配列のみが MATLAB から返すことができます」というエラーが表示されます(これは技術的に多く正しいわけではありません) [異なるデータタイプ](https://www.mathworks.com/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html) しかし、EEGLAB EEG構造は、イベントやチャネルの構成の配列を含み、処理されていない。 これは、視力で改善されたサポート無しで、2024年の4年以上のケースでした。 未サポートのデータタイプはこちら [こちら](https://www.mathworks.com/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html) (2024年の時点では、サポートされていないデータ型として「構造配列」と「セル配列」をリストします)。 上述の Oct2Py インターフェイスは、これらのデータ型をうまく処理することに注意してください。 
+MATLAB から Python に渡される EEGLAB のデータ構造は複雑すぎるため、これらのソリューションはアドバイスしません。 Python のコードを実行すると、「1xN と Nx1 char 配列のみが MATLAB から返すことができます」というエラーが表示されます(これは技術的に多く正しいわけではありません) [異なるデータタイプ](https://www.mathworks.com/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html) しかし、EEGLAB EEG構造は、イベントやチャネルの構成の配列を含み、処理されていない。 これは、視力で改善されたサポート無しで、2024年の4年以上のケースでした。 未サポートのデータタイプはこちら [こちら](https://www.mathworks.com/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html) (2024年の時点では、サポートされていないデータ型として「構造配列」と「セル配列」をリストします)。 上述の Oct2Py インターフェイスは、これらのデータ型をうまく処理することに注意してください。
 
 EEGLAB は Python でネイティブに実行されることはありませんか?
 ----------------------------------------
@@ -164,4 +164,4 @@ EEG活動) 最後に、MATLABコンパイラが作成できるようにします
 ユーザがMATLABを持っていないEEGLABのコンパイルバージョン
 -- MATLABスクリプトは[コンパイル]で実行できます
 EEGLAB:(/others/Compiled_EEGLAB.html) インタラクティブセッション
-サポートされていません。 
+サポートされていません。

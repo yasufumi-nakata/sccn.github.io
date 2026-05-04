@@ -135,7 +135,7 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 **一般リニアモデリング* * 必須
 
 
-<span style="color: orange">11:15 – 12:00 -- LIMO EEGLABプラグイン(Cyril Pernet)を使用して、一般的なリニアモデルをEEGデータに適用するための理論と実践</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab_limo_2016.pdf)
+<span style="color: orange">11:15 – 12:00 -- LIMO EEGLABプラグイン(Cyril Pernet)を使用して、一般的な線形モデルをEEGデータに適用するための理論と実践</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/eeglab_limo_2016.pdf)
 
 <span style="color: green">13:00-14:30 ランチ</span>
 

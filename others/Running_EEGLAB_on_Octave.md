@@ -15,14 +15,14 @@ OctaveでEEGLABを実行する
 
 # OctaveでEEGLABを実行する
 
-OctaveのEEGLABは、マトラブのEEGLABとして安定していません。 MatlabのEEGLABは、あなたの最初の選択肢でなければなりません。 あなたの2番目の選択肢は、EEGLABのコンパイルされたバージョンであり、3番目の最後の選択は、OctaveのEEGLABであるべきです。
+OctaveのEEGLABは、マトラブのEEGLABとして安定していません。 MATLABのEEGLABは、あなたの最初の選択肢でなければなりません。 あなたの2番目の選択肢は、EEGLABのコンパイルされたバージョンであり、3番目の最後の選択は、OctaveのEEGLABであるべきです。
 
 OctaveとEEGLABをインストールする
 -------------------------
 
 Octaveの最新バージョンを[ダウンロードページ](https://www.gnu.org/software/octave/download.html)からダウンロードしてください。 EEGLABは
 WindowsでOctave 6.1を使用してテストされたが、後で実行されるかもしれない
-バージョンやその他のプラットフォーム。 すべてのツールボックス(信号処理、統計など)がプリインストールされているWindows用のOctaveインストーラをお勧めします。 
+バージョンやその他のプラットフォーム。 すべてのツールボックス(信号処理、統計など)がプリインストールされているWindows用のOctaveインストーラをお勧めします。
 ### オプションのOctave設定
 
 避ける Octave は、常に警告メッセージを表示し、起動オプションを変更し、「---traditional --brainless --quiet」(Windows では、Octave アイコンのプロパティを選択し、*Target* フィールドに次のオプションを追加します)。
@@ -80,7 +80,7 @@ MATLAB、オクタブ
 [EEGLABリポジトリをフォークする](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository)および[EEGLABへの貢献](/tutorials/contribute/)については、
 EEGLABへの貢献について
 
-Octave と Matlab の EEGLAB 出力の比較
+Octave と MATLAB の EEGLAB 出力の比較
 ----------------------------------------------
 以下は、Octave4.4によってプロットされた時間頻度分解です
 EEGLAB/MATLABコードによるEEGLABチュートリアルデータセット

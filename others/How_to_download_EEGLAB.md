@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Download EEGLAB MATLAB
-nav_title: "ダウンロード EEGLAB MATLAB"
+nav_title: "MATLAB版EEGLAB"
 long_title: Download MATLAB version of EEGLAB
 parent: Download EEGLAB
 nav_order: 1
@@ -57,4 +57,3 @@ EEGLABへの貢献について
 EEGLABはRCS(2002-2005)で初めて、CVS(2005-2010)の下、
 GIT(2014-)への移行前のSVN(2010-2014)の下。 すべて
 移行プロセスでコミットメッセージが保存されています。
-

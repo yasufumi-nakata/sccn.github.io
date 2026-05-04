@@ -128,14 +128,11 @@ ITC および ERSP の出典は、
 
 ERP/ITC プロット
 ---------------------
-単一の の の
-シングルエポックのチャンネル (いくつかの関連性によってソート)
-値)は、使用してイメージすることができます。 [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) メニュー項目を選択するか <span style="color: brown">Plot → コンポーネント →</span>.
+単一エポックのチャネルデータは、関連する値で並べ替えたうえで、[erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m)を使って画像化できます。メニューからは<span style="color: brown">Plot → コンポーネント →</span>を選択します。
 
 コマンドラインから呼び出される 
 [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) そして、 [newtimef.m リリース](http://sccn.ucsd.edu/eeglab/locatefile.php?file=newtimef.m) を参照してください。 その その として として として として
 ERSP と ITC の画像 (さらに ERSP のベース ライン と パフォーマンス )
 すべてのチャネルのための情報)は使用を可能にします
 別のツールボックスのルーチン, [tftopo.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=tftopo.m) (EEGLABメニューから使用可能) [EEGLAB の作成](/tutorials/11_Scripting/) 詳細については、チュートリアル。
-
 

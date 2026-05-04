@@ -34,7 +34,7 @@ EEGおよび関連データの高度な分析を実行し、詳細
 
 登録費用は、学生のための280ユーロ(宿泊施設のための490ユーロ)とポストドキュメント、380ユーロ(宿泊施設のための490ユーロ)です。
 教員、その他の専門家。 専門家は580ユーロ(宿泊施設の490ユーロ以上)です。 これらの登録費用には、
-会議スペースレンタル、コーヒーブレイク、ショートエクスカーション 
+会議スペースレンタル、コーヒーブレイク、ショートエクスカーション
 ご登録いただくと、ボイ・ペルチェ・リトリート・センター(合計490ユーロ)の宿泊料やすべての食事代の支払いも対象となります。 4日間のボイ・ペルチェ・リゾートのプライベート・ルームに宿泊施設が含まれています。 CNRSから付与されるため、最初の3人のCNRS従業員(PhDの学生とポストドキュメントを含む)の登録(および宿泊施設)は参加者に無料です。
 
 [お申し込みはこちらから](https://dr14.azur-colloque.fr/inscription/fr/239/inscription)
@@ -71,9 +71,7 @@ USBフラッシュドライブでワークショップ資料を配布してい�
 ワークショッププログラム(PDF対応)
 ------------------------------------------
 
-提示されたスライドはなされます
-このページの先頭へ あなただけの持参する必要があります
-MATLABをインストールしたノートパソコン
+提示スライドはPDFで配布されます。参加者は、MATLABをインストールしたノートパソコンを持参してください。
 
 <span style="color: purple">パープルレター = 講義</span>
 <span style="color: orange">オレンジレター = チュートリアル</span>
@@ -118,12 +116,12 @@ MATLABをインストールしたノートパソコン
 
 <span style="color: orange">14:00- 15:00 -- ICA分解練習(クレア・ブラボスツ)</span> [ICLabel の練習](https://labeling.ucsd.edu/tutorial/practice) [サイトマップ](https://github.com/user-attachments/files/20999025/ICLabel.pdf)
 
-<span style="color: purple">15:00 – 16:15 -- フォワードとインバースモデル - Dipfitツール(Robert Oostenveld)</span> 
+<span style="color: purple">15:00 – 16:15 -- フォワードとインバースモデル - Dipfitツール(Robert Oostenveld)</span>
 [サイトマップ](https://github.com/user-attachments/files/20999227/forward_and_inverse_models_2025.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">16:30 - 17:45 -- EEGLAB Dipfitプラグイン(Arnaud Delorme)</span> 
+<span style="color: purple">16:30 - 17:45 -- EEGLAB Dipfitプラグイン(Arnaud Delorme)</span>
 [PDFのDIPFIT](https://github.com/user-attachments/files/21000200/Delorme2025_dipole_connectivity.pdf)
 <!-- -->
 
@@ -153,8 +151,8 @@ MATLABをインストールしたノートパソコン
 <span style="color: purple">14:00 - 14:30 -- 実践的な ICA クラスタリング (Arnaud Delorme)</span>
 [サイトマップ](https://github.com/user-attachments/files/21015560/PracticalMEEG2022_GroupAnalysis.pdf)
 
-<span style="color: purple">14:30～16:00 -- 統計解析: EEGデータの階層リニアモデリング(Cyril Pernet)</span> 
-[PDFのリモ](https://github.com/user-attachments/files/20999644/2025_LIMO_QuickStarter.pdf) [サイトマップ](https://github.com/user-attachments/files/20999647/2025_HLM_LIMO_EEGLAB.pdf)
+<span style="color: purple">14:30～16:00 -- 統計解析: EEGデータの階層リニアモデリング(Cyril Pernet)</span>
+[LIMO PDF](https://github.com/user-attachments/files/20999644/2025_LIMO_QuickStarter.pdf) [サイトマップ](https://github.com/user-attachments/files/20999647/2025_HLM_LIMO_EEGLAB.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
@@ -166,12 +164,12 @@ MATLABをインストールしたノートパソコン
 <span style="color: green">19:45～ ディナー</span>
 
 ### 7月3日(木)
- 
+
 <span style="color: green">7:30 - 8:30 朝食</span>
 
 **高度なEEG信号処理方法**
 
-<span style="color: purple">8:30～9:30 時間頻度分解: 理論と実践(Scott Makeig)</span> 
+<span style="color: purple">8:30～9:30 時間頻度分解: 理論と実践(Scott Makeig)</span>
 
 <span style="color: purple">9月30日〜10日 clean_rawdata/ASR (Fiorenzo Artoni) の最良のパラメータを見つける
 [サイトマップ](https://github.com/user-attachments/files/21012611/ASRPresentation_2025.pdf)
@@ -185,9 +183,9 @@ MATLABをインストールしたノートパソコン
 <span style="color: orange">10:50 - 11:30 -- 複数の比較を修正 (Cyril Pernet) [サイトマップ](https://github.com/user-attachments/files/20999665/2025_MCC_and_boot_EEGLAB_workshop.pdf)
 
 <span style="color: orange">11:30 - 12:00 -- その他のSTUDYデザインとGLM(Cyril PernetとArnaud Delorme)
-[PDFのリモ](https://github.com/user-attachments/files/20999644/2025_LIMO_QuickStarter.pdf) [サイトマップ](https://github.com/user-attachments/files/20999647/2025_HLM_LIMO_EEGLAB.pdf)
+[LIMO PDF](https://github.com/user-attachments/files/20999644/2025_LIMO_QuickStarter.pdf) [サイトマップ](https://github.com/user-attachments/files/20999647/2025_HLM_LIMO_EEGLAB.pdf)
 
-<span style="color: orange">12:00 – 13:00 -- LIMO EEGLABプラグイン(Cyril Pernet)を使用して、一般的なリニアモデルをEEGデータに適用するための理論と実践</span>
+<span style="color: orange">12:00 – 13:00 -- LIMO EEGLABプラグイン(Cyril Pernet)を使用して、一般的な線形モデルをEEGデータに適用するための理論と実践</span>
 [サイトマップ](https://github.com/user-attachments/files/21040782/2025_GLM_design.pdf)
 
 <span style="color: green">13:00-14:30 ランチ</span>
@@ -202,15 +200,15 @@ MATLABをインストールしたノートパソコン
 [PDF接続](https://github.com/user-attachments/files/21000181/Connectivity_lecture2025.pdf)
 
 <span style="color: green">19:45～ ディナー </span>
- 
+
 ### 7月4日(金)
 
 <span style="color: green">7:30～8:30 朝食</span>
 
-<span style="color: purple">8:30～9:30 ディープラーニングとEEG(アーナド・デルロメ)</span> 
+<span style="color: purple">8:30～9:30 ディープラーニングとEEG(アーナド・デルロメ)</span>
 [サイトマップ](https://github.com/user-attachments/files/21043470/workshop_DL-EEG_2025.pdf)
 
-<span style="color: purple">9:30〜10:15 マイニングイベント関連の脳力II(Scott Makeig)</span> 
+<span style="color: purple">9:30〜10:15 マイニングイベント関連の脳力II(Scott Makeig)</span>
 
 <span style="color: green">-- ブレーク--</span>
 
@@ -231,4 +229,4 @@ MATLABをインストールしたノートパソコン
 
 さらなる読書
 ----------------
-関連するEEGLAB紙のリストを調べることができます [詳しくはこちら](/others/EEGLAB_References.html) 
+関連するEEGLAB紙のリストを調べることができます [詳しくはこちら](/others/EEGLAB_References.html)

@@ -27,10 +27,7 @@ EEGLAB をロードする
 データのエポック抽出
 ---------
 
-記録 記録 を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を を
-関心のあるイベントのエポックを抽出するには、メニューから
-選択する <span style="color: brown"> ツール → 抽出エポック</span>
-EEGLAB スタッフ
+関心のあるイベントに時間ロックしたエポックを抽出するには、EEGLABメニューから<span style="color: brown">ツール → 抽出エポック</span>を選択します。
 
 ![](/assets/images/I51pop_epoch.png)
 
@@ -152,4 +149,3 @@ event* は、
 ![こちら](/assets/images/confirm_epoch.png)
 
 これから [pop_newset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newset.m) 新規登録 この新しいデータセット「Square, Position 1」と入力し、*Ok* を入力してください。
-

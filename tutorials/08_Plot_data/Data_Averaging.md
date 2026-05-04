@@ -25,7 +25,7 @@ EEG ダイナミクスを学習する
 </details>
 
 両軸にERPカルプマップ
--------------------------------------------------------- 
+--------------------------------------------------------
 
 チュートリアルデータセットを使用します。 [データエポック抽出](/tutorials/07_Extract_epochs/Extracting_Data_Epochs.html)を参照してください。 メニュー項目を選択 <span style="color: brown">ファイル</span> サブメニュー項目を押します
 <span style="color: brown">既存のデータセットをロードする</span>EEGLABの「sample_data」フォルダにある「eeglab_data_epochs_ica.set」のチュートリアルファイルです。
@@ -64,7 +64,7 @@ ERP映画(例えば、ScalpuのERPの再生)、
 ### こちら
 
 EpochedデータセットのERPは、
-2Dトポグラフィの配置は、トレースで行います。 
+2Dトポグラフィの配置は、トレースで行います。
 選択する <span style="color: brown">パロット → ERP → scalp 配列/rect で . 配列</span>Ok* では、デフォルトウィンドウで設定できます。
 
 
@@ -118,7 +118,7 @@ EpochedデータセットのERPは、
 選択した一連のトライアルレイテンシーで潜在的な分布。
 選択する <span style="color: brown"> Plot → ERPMapシリーズ → 2Dで</span>。
 結果のトップテキストボックス [pop_topoplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m) ウィンドウ
-(below)、ERPsカルプマップのエポックレイテンシー。 
+(below)、ERPsカルプマップのエポックレイテンシー。
 
 この場合、またはその他の数値テキストエントリボックスに入力してください。
 例:MATLAB.com
@@ -144,7 +144,7 @@ Dsカルプマップのシリーズをプロットに、
 
 ![](/assets/images/3Dscalpmessage.png)
 
-下のウィンドウがポップアップ表示されます。 テンプレートの電極の位置を使うので、 
+下のウィンドウがポップアップ表示されます。 テンプレートの電極の位置を使うので、
 3Dヘッドプロット(*Talairach-model変換行*エントリ) の変換は、次のようになります。
 
 トライアルレイテンシーを入力する
@@ -227,7 +227,7 @@ Polhemus のシステム 経験者など、
 テンプレートヘッドメッシュを使って。 あなたの直接整列よりもむしろ
 電極の位置(緑色で表示)、ヘッドメッシュ、モンタージュ
 関連する電極の位置をテンプレートに整列する
-同じ被写体の頭部のスキャンによるヘッドメッシュ(赤)。
+同じ被験者の頭部のスキャンによるヘッドメッシュ(赤)。
 サンプルデータセットの場合、このアライメントは既に実行されています。
 (*Labels on* プッシュボタン、ラベル)
 
@@ -240,5 +240,5 @@ Ok* と A の 共同作業
 異なる条件を比較し、統計を実行
 ---------------------------
 
-条件ERPの比較は、 [グループレベルの分析](/tutorials/10_Group_analysis/) ※1件のみです。 条件をクリアする [単一の被験者のための試験全体で統計を計算する](/tutorials/10_Group_analysis/study_statistics.html#single-subject-statistics). 
+条件ERPの比較は、 [グループレベルの分析](/tutorials/10_Group_analysis/) ※1件のみです。 条件をクリアする [単一の被験者のための試験全体で統計を計算する](/tutorials/10_Group_analysis/study_statistics.html#single-subject-statistics).
 

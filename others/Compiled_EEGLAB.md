@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Download EEGLAB compiled
-nav_title: "ダウンロード EEGLAB コンパイル"
-long_title: Download the compiled of EEGLAB 
+nav_title: "コンパイル版EEGLAB"
+long_title: Download the compiled of EEGLAB
 parent: Download EEGLAB
 ---
 
@@ -12,7 +12,7 @@ EEGLABのコンパイルバージョン
 EEGLABは、Mac、Windows、Ubuntu、Ubuntuなどのコンパイルされたバイナリとして存在します。
 [EEGLABダウンロードページ](https://sccn.ucsd.edu/eeglab/download.php)でダウンロードできます。 EEGLABのコンパイル版をインストールする方法は次のとおりです。
 
-<center> <iframe width="560" height="315" src="https://www.youtube.com/embed/_F-5spN1FL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> 
+<center> <iframe width="560" height="315" src="https://www.youtube.com/embed/_F-5spN1FL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 <details open markdown="block">
   <summary>
@@ -24,57 +24,57 @@ EEGLABは、Mac、Windows、Ubuntu、Ubuntuなどのコンパイルされたバ�
 インストール
 ------------
 
-MACバージョンをインストールする手順は次のとおりです。 Windows版は同じ手順に従います(ただし、これはMAC版に焦点を合わせる理由です)。 アーカイブを解凍し、インストーラを実行します。 
+MACバージョンをインストールする手順は次のとおりです。 Windows版は同じ手順に従います(ただし、これはMAC版に焦点を合わせる理由です)。 アーカイブを解凍し、インストーラを実行します。
 
 -   EEGLABコンパイル版のZIPファイルをダウンロード
     [ダウンロードページ](http://sccn.ucsd.edu/eeglab/download.php) そして、
-    それを解凍して下さい
+    それを解凍してください
 -   zipファイルを解凍し、インストールファイルを実行します。
 -   何らかの理由でインストールプロセスが失敗した場合は、管理者として実行する必要があります。
 
 次の画面がポップアップ表示されます。
 
-<br/><br/> 
+<br/><br/>
 
 <img width="844" alt="Screen Shot 2023-09-01 at 11 40 52 AM" src="https://github.com/sccn/sccn.github.io/assets/1872705/de3a5a88-8c88-4c72-84ca-5d54bab23cb2">
 
-<br/><br/> 
+<br/><br/>
 
 次回のプレス 次の3つの画面で、次の3つの画面で次のいずれかを押します。 デフォルトパスを変更しないでください。
 
-<br/><br/> 
+<br/><br/>
 
 <img width="839" alt="Screen Shot 2023-09-01 at 11 40 59 AM" src="https://github.com/sccn/sccn.github.io/assets/1872705/4b291279-5d08-462a-b89f-6b6283b7e6cb">
 
-<br/><br/> 
+<br/><br/>
 
 <img width="841" alt="Screen Shot 2023-09-01 at 11 41 17 AM" src="https://github.com/sccn/sccn.github.io/assets/1872705/1a2b6822-59d6-4e2c-b376-5bdd0d020a0d">
 
-<br/><br/> 
+<br/><br/>
 
 <img width="841" alt="Screen Shot 2023-09-01 at 11 10 54 AM" src="https://github.com/sccn/sccn.github.io/assets/1872705/9c197d8b-d664-4787-a770-634cd36a5b44">
 
-<br/><br/> 
+<br/><br/>
 
 **MACのみ**. インストールが完了すると、次のメッセージが表示されます。 **メッセージを受信できる* * 必須
 
-<br/><br/> 
+<br/><br/>
 
 <img width="837" alt="Screen Shot 2023-09-01 at 11 54 52 AM" src="https://github.com/sccn/sccn.github.io/assets/1872705/eaee9f29-9875-4b2e-91f6-5e904484278f">
 
-<br/><br/> 
+<br/><br/>
 
 代わりに、インストールした EEGLAB バージョンに移動し、 MAC の [**EEGLAB_verbose**] または [*EEGLAB.exe**] を Windows で選択します。 MACで**EEGLAB.app**をクリックしないでください。コマンドプロンプトがないので、上記のパスを設定しない限り、EEGLABは起動しません(無視すべき部分)。 パスの設定は可能ですが、簡単です。 また、MACでは、コマンド "./run_EEGLAB.sh /Applications/MATLAB/MATLAB_Runtime/R2024a/" (MATLABのランタイムバージョンは、EEGLABをコンパイルするために使用されるものと一致し、EEGLABで自動的にインストールする必要があります。 見つけられない場合 [詳しくはこちら](https://www.mathworks.com/products/compiler/matlab-runtime.html)).
 
-<br/><br/> 
+<br/><br/>
 
 ![スクリーンショット 2024-08-29 に 13 20 25](https://github.com/user-attachments/assets/6757f18f-eb1d-4c4c-8b04-6924bba63275)
 
-<br/><br/> 
+<br/><br/>
 
 EEGLABの開始まで約1分かかります。
 
-<br/><br/> 
+<br/><br/>
 
 <img width="844" alt="Screen Shot 2023-09-01 at 11 42 30 AM" src="https://github.com/sccn/sccn.github.io/assets/1872705/8a08b846-a0cb-45b2-9be8-f8732f5a6ecf">
 
@@ -125,7 +125,7 @@ EEGLABのコンパイルとMATLABバージョンの類似性
 
 ### コンパイルされたバージョンを使用することができないもの
 
--   新しいプラグインを追加したり、サードパーティをインストールしたりすることはできません 
+-   新しいプラグインを追加したり、サードパーティをインストールしたりすることはできません
     プラグイン。 そのためには、EEGLABは、
     追加プラグイン。
 -   スクリプトを使用する場合は、外部カスタムMATLABを使用できません。
@@ -196,7 +196,7 @@ MATLAB Compiler Graphical App を使用したルート EEGLAB フォルダー)
 
 1. デフォルトプラグインで EEGLAB をクローンする
 
-``` Matlab 
+``` MATLAB
 git clone --recurse-submodules https://github.com/sccn/eeglab.git
 ```
 
@@ -261,11 +261,11 @@ rmdir(fullfile(FieldTrip_folder,'external','egi_mff_v2'), 's');
 
 3. オプション: eeglab.m ファイルを編集し、EEGLAB (line 900) のコンパイルされたバージョンに新しいプラグインを追加します。
 
-3. Matlabエディタで「eeglab.prj」ファイルを開きます。 プラグインのパスを確認します。 新しいバージョンが利用可能な場合は、eeglab.prj ファイルのバージョンの名前を変更します。
+3. MATLABエディタで「eeglab.prj」ファイルを開きます。 プラグインのパスを確認します。 新しいバージョンが利用可能な場合は、eeglab.prj ファイルのバージョンの名前を変更します。
 
 3. EEGLAB バージョンを eeg_getversion.m に変更します。 eeglab.prj ファイルの**と**
 
-3. アプリケーションコンパイラ(Matlabタブ「Apps」とボタンを開きます。
+3. アプリケーションコンパイラ(MATLABタブ「Apps」とボタンを開きます。
 「アプリケーションコンパイラ」を開き、「eeglab.prj」ファイルを開きます。 十字板のコイルのためのパスを増加させるためのITとして、アプリケーション・コンパイラでプロジェクトを残さない。
 
 4. クラスのエラーがある場合(そしてそこにある)、以下のコマンドを使用してください。 依存関係をチェックする際にはクラスエラーが発生しますが、EEGLABはとにかくコンパイルします。 コマンドラインで、タイプ

@@ -1,7 +1,7 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-title: Welcome to the EEGLAB Wiki
+title: EEGLAB Wikiへようこそ
 nav_title: "EEGLAB Wikiへようこそ"
 layout: home
 nav_exclude: true
@@ -43,14 +43,14 @@ EEGLABチュートリアルは、このページの下部セクションで参�
 -    [バグ報告と提案](/others/EEGLAB_Bugs.html)
 -    [GitHubでバグを報告する](https://github.com/sccn/eeglab/issues)
 -    [EEGLABテストケースのダウンロード](https://github.com/sccn/eeglab-testcases)
--    [TIPSとFAQ](/others/TIPS_and_FAQ)
--    [EEGLABフィルターFAQ](/others/Firfilt_FAQ)
+-    [TIPSとFAQ](/others/TIPS_and_FAQ.html)
+-    [EEGLABフィルターFAQ](/others/Firfilt_FAQ.html)
 
-<h3><a href="/tutorials"><span style="color: black;">EEGLAB チュートリアル</span></a></h3>
+### [EEGLABチュートリアル](/tutorials/)
 {%- assign children_list = site.pages | where: "parent", "Tutorials" -%}
 {% include toc_nav.html nav=children_list %}
 
-<h3><a href="/workshops"><span style="color: black;">ワークショップ</span></a></h3>
+### [ワークショップ](/workshops/)
 {%- assign children_list = site.pages | where: "parent", "Workshops" -%}
 {% include toc_nav.html nav=children_list %}
 <hr>

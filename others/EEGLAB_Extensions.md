@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EEGLAB Extensions
-nav_title: "EEGLAB エクステンション"
+nav_title: "EEGLAB拡張機能"
 long_title: EEGLAB Extensions
 parent: Download EEGLAB
 ---
@@ -70,7 +70,7 @@ EEGLAB プラグインのフォルダーと EEGLAB を再起動します。
 
 次に、EEGLAB ユーザが使えるように、上記のリストに拡張機能を追加できます。
 EEGLABから自動的にダウンロードします。 これを行うには、[このフォーム](http://sccn.ucsd.edu/eeglab/plugin_uploader/upload_form.php)を使用する。
-プラグインの新しいバージョンをアップロードしたい、 
+プラグインの新しいバージョンをアップロードしたい、
 [この単純化されたフォーム](http://sccn.ucsd.edu/eeglab/plugin_uploader/version_update.php).
 
 管理者は、これらはメンテナンスページです。
@@ -99,11 +99,11 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
 
 これらのプラグインは EEGLAB コードとともに配布されます。
 
--   **[フリル](https://github.com/widmann/firfilt):** EEGLABのデータに様々なリニアフィルタを適用します。
+-   **[FIRfilt](https://github.com/widmann/firfilt):** EEGLABのデータに様々な線形フィルタを適用します。
 
--   **[CleanRawデータ](https://github.com/sccn/clean_rawdata):** Artifact Subspace Reconstruction を含むさまざまな方法を使用して未加工 EEG データをきれいにして下さい。
+-   **[Clean_rawdata](https://github.com/sccn/clean_rawdata):** Artifact Subspace Reconstruction を含むさまざまな方法を使用して未加工 EEG データをクリーニングします。
 
--   **[ディップフィット](https://github.com/sccn/dipfit):** 独立したデータコンポーネントのダイポールモデリング
+-   **[DIPFIT](https://github.com/sccn/dipfit):** 独立成分のダイポールモデリング
     球面または境界要素ヘッドモデル。 関数を使う
     FIELDTRIPツールボックス
 
@@ -122,40 +122,38 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
 
 - **[bids-matlab ツール](https://github.com/sccn/bids-matlab-tools)*: bids-matlab-tool リポジトリには、BIDS (Brain Imaging Data Structure) 形式の実験をインポートおよびエクスポートする機能のコレクションが含まれています。
 
-- **[ビオシグ](http://biosig.sourceforge.net/):** さまざまなデータにデータをインポート/エクスポート
-    フォーマット。
+- **[Biosig](http://biosig.sourceforge.net/):** さまざまなデータフォーマットをインポート/エクスポートします。
 
-- **[ファイルIO](https://github.com/fieldtrip/fileio):** 複数のデータフォーマットでデータをインポートできるツールボックス。 EEGLABで冗長機能も含まれていますが、ユニークな機能も含まれています。
+- **[File-IO](https://github.com/fieldtrip/fileio):** 複数のデータフォーマットをインポートできるツールボックスです。EEGLABと重複する機能もありますが、独自機能も含まれています。
 
-- **[ANTeepimport(アンテピムポート)](https://www.ant-neuro.com/support/supporting-documentation-and-downloads)**: ANT EEG社のEEP形式のデータをインポートします。
+- **[ANTeepimport](https://www.ant-neuro.com/support/supporting-documentation-and-downloads)**: ANT EEG社のEEP形式のデータをインポートします。
 
-- **[bva-io](https://github.com/arnodelorme/bva-io)**: インポート/エクスポートファイル from/ から Brain
-    ビジョンソフトウェアアナライザースイート。
+- **[bva-io](https://github.com/arnodelorme/bva-io)**: Brain Vision Analyzer形式のファイルをインポート/エクスポートします。
 
 - **[Neuroscan-io](https://github.com/sccn/neuroscanio)**:Neuroscanソフトウェアから/へのインポート/エクスポートファイル。
 
-- **[マフマトロビ](https://github.com/arnodelorme/MFFMATLABIO)**: MFF 形式の EGI 社のインポート/エクスポートファイル。
+- **[MFFMATLABIO](https://github.com/arnodelorme/MFFMATLABIO)**: EGI社のMFF形式ファイルをインポート/エクスポートします。
 
-- **[xdfimportの特長](https://github.com/xdf-modules/xdf-EEGLAB)**: XDF (LSL) 形式でファイルをインポート (EEG ストリームと EEG マーカーストリームのみ).
+- **[xdfimport](https://github.com/xdf-modules/xdf-EEGLAB)**: XDF (LSL) 形式のファイルをインポートします（EEGストリームとEEGマーカーストリームのみ）。
 
-- **[モビラボラ](https://github.com/sccn/mobilab)*: XDF (LSL) 形式でファイルをインポートし、EEGLAB での共同処理のための異なるサンプリング速度でストリームを溶かします。
+- **[Mobilab](https://github.com/sccn/mobilab)*: XDF (LSL) 形式のファイルをインポートし、異なるサンプリングレートのストリームをEEGLABで共同処理できるように統合します。
 
 ### 事前処理
 
--   **[IIRfiltの](https://github.com/sccn/IIRfilt):** 短い適用
+-   **[IIRfilt](https://github.com/sccn/IIRfilt):** 短い適用
     EEGLABのデータに対する非線形無限衝動応答フィルタ。
 
 - **[REST](https://github.com/sccn/REST):** scalp EEGの記録の参照を無限点に標準化する方法。
 
--   **[アアール](http://kasku.org/aar/):** 自動アーティファクト除去ツールボックスは、電気脳グラム(EEG)における楕円および筋肉のアーティファクトの自動除去のためのいくつかの最新の方法を統合することを目指しています。
+-   **[AAR](http://kasku.org/aar/):** 自動アーティファクト除去ツールボックスは、EEGにおける眼球および筋肉アーティファクトの自動除去のための最新手法を統合することを目指しています。
 
--   **[バイセッド](https://github.com/BUCANL/Vised-Marks):** EEGLABのVised Marks拡張機能は、ネイティブ*eegplot*データスクロール図に編集機能を追加します。 具体的には、イベントマーカーの追加/編集、チャネル/コンポーネントのフラグ付け、時間期間のフラグ付け、マーク構造のプロパティを表示することができます。
+-   **[Vised Marks](https://github.com/BUCANL/Vised-Marks):** EEGLABのVised Marks拡張機能は、標準の*eegplot*データスクロール図に編集機能を追加します。具体的には、イベントマーカーの追加/編集、チャネル/コンポーネントのフラグ付け、時間区間のフラグ付け、マーク構造のプロパティ表示ができます。
 
 -   **[get_chanlocs 関数](https://github.com/sccn/get_chanlocs/wiki):** get_chanlocs EEGLAB プラグインは、3D のスキャンされたヘッドイメージから 3D の電極の位置を見つけます。 これらの画像をオフシェルフ機器で入手する方法に関するチュートリアルが含まれています。
 
 ### EEG/fMRIアーティファクト除去
 
--   **[FMRIBについて](http://www.fmrib.ox.ac.uk/%7Erami/fmribplugin):** EEGLABのデータからfMRI-environmentアーティファクトを削除します。
+-   **[FMRIB](http://www.fmrib.ox.ac.uk/%7Erami/fmribplugin):** EEGLABのデータからfMRI環境由来のアーティファクトを削除します。
     エクステンションにより、スキャナー関連のアーティファクトの除去が可能
     fMRIスキャン中に収集したEEGデータから。 詳しくはこちら [GitHubリポジトリ](https://github.com/sccn/fmrib).
 
@@ -169,22 +167,22 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
     コンポーネント。 MARAとは
     6つの抽出によって専門家の評価から学ぶ線形分類器
     空間、スペクトル、およびテンポラルドメインからの機能。
-    
--   **[ファスター](https://sourceforge.net/projects/faster/):** 完全に自動化された、監視されていないメソッドを実装
+
+-   **[FASTER](https://sourceforge.net/projects/faster/):** 完全自動の教師なしメソッドを実装
     高密度EEGデータの処理 FASTERは、ICAに基づくデータインポート、エッチング、リレファレンス、グランド平均作成、自動チャンネル、エポック、アーティファクト拒否などの一般的な機能を含みます。
 
--   **[ADJUSTについて](http://www.unicog.org/pm/pmwiki.php/MEG/RemovingArtifactsWithADJUST):** ステレオタイプのアーティファクト固有の空間と一時的な機能を組み合わせることで、アーティファクト関連インディペンデントコンポーネントを識別する完全自動アルゴリズム。
+-   **[ADJUST](http://www.unicog.org/pm/pmwiki.php/MEG/RemovingArtifactsWithADJUST):** ステレオタイプ化されたアーティファクト固有の空間・時間特徴を組み合わせて、アーティファクト関連の独立成分を識別する完全自動アルゴリズムです。
 
--   **[こちら](https://github.com/sccn/corrmap):** 共通のEEGのアーティファクトの半自動同一証明
+-   **[CORRMAP](https://github.com/sccn/corrmap):** 共通するEEGアーティファクトの半自動同定
     テンプレートに基づく。 CORRMAP拡張は、セットのセットで構成されています
     MATLABの機能により、識別とクラスタリングが可能
     一般的なEEGアーティファクトを表す独立したコンポーネント。
 
--   **[CIACについて](http://www.debener.de/CIAC_tutorial/ciacplugin.html):** コクレアインプラントアーティファクト補正は半自動
+-   **[CIAC](http://www.debener.de/CIAC_tutorial/ciacplugin.html):** 人工内耳アーティファクト補正は半自動
     電気アーティファクトの修正のためのICAベースのツール
     コクレアーインプラントから発信
 
--   **[リリカ](https://github.com/sccn/relica)*: RELICAの目標は、データフレームやエポックの多くのランダムなブートストラップ選択を渡る分解データから最も安定的に分離されるICプロセスを特定することです。
+-   **[RELICA](https://github.com/sccn/relica)*: RELICAの目標は、データフレームやエポックの多くのランダムなブートストラップ選択を渡る分解データから最も安定的に分離されるICプロセスを特定することです。
 
 -   **[MP_クラスタリング](https://github.com/sccn/mp_clustering)*: EEG対策を計画するための予測分析のためのツールボックス タグ別
     一般的なテンプレートの脳空間にソースの場所, ローカルのテスト
@@ -194,58 +192,50 @@ EEGLABで利用可能な一般的なプラグインは以下の通りです。 E
 -   **[リーガシー](https://doi.org/10.1016/j.bspc.2011.02.001):** EOGアーティファクトを除去する拡張
     ICAコンポーネントで行われる回帰。 半同時データセット
     いかなるアーティファクト除去研究でも使われるかもしれない
-    利用できる。 
+    利用できる。
 
-- **[サスカ](https://github.com/dnacombo/SASICA):** SASICAは、これらのコンポーネントのさまざまな特性に基づいて独立したコンポーネントを拒否/選択するのに役立つEEGLABプラグインです。
+- **[SASICA](https://github.com/dnacombo/SASICA):** SASICAは、これらのコンポーネントのさまざまな特性に基づいて独立したコンポーネントを拒否/選択するのに役立つEEGLABプラグインです。
 
 - **[オートマチック](https://github.com/methlabUZH/automagic):** Automagic は EEG-datasets の前処理のための MATLAB ベースのツールボックスです。 ビッグ(小型)EEGデータセット用のユーザーフレンドリーな事前処理ソフトウェアを提供する目的で開発されました。
 
-- **[アメリカ](https://github.com/japalmer29/amica):** アダプティブ・ミックスチャー・インディペンデント・コンポーネント・アナリシス(AMICA)は、インプット・データに関する独立したコンポーネント・分析(ICA)を行うバイナリ・プログラムと、複数のICAモデルとの併用が可能です。 また、postAmicaUtilityプラグインのダウンロードを検討してください。 
+- **[AMICA](https://github.com/japalmer29/amica):** Adaptive Mixture Independent Component Analysis (AMICA) は、入力データに独立成分分析(ICA)を行い、複数のICAモデルも扱えるバイナリプログラムです。postAmicaUtilityプラグインのダウンロードも検討してください。
 
 ### 統計と信号処理
 
--   **[ FieldTripライト](https://github.com/fieldtrip/fieldtrip):** フィールド トリップはスタンドアローンのツールボックスですが、ソースローカリゼーション方法と追加の統計方法を提供する EEGLAB 拡張機能として機能することもできます。
+-   **[FieldTrip lite](https://github.com/fieldtrip/fieldtrip):** フィールド トリップはスタンドアローンのツールボックスですが、ソースローカリゼーション方法と追加の統計方法を提供する EEGLAB 拡張機能として機能することもできます。
 
--   **[リモ](https://github.com/LIMO-EEG-Toolbox/limo_tools):** MEEGデータ(LIMO MEEG)ツールボックスのLInear MOdellingは、MEEGデータの統計解析に専用のEEGLABプラグインです。
+-   **[LIMO](https://github.com/LIMO-EEG-Toolbox/limo_tools):** Linear Modelling of MEEG data (LIMO MEEG) ツールボックスは、MEEGデータの統計解析に特化したEEGLABプラグインです。
 
--   **[ERPラボ](http://www.erpinfo.org/erplab/erplab-home/)*: ERPLABの特長
-    Toolbox はセットのセットです
-    オープンソースとして動作するERPデータを分析するためのMATLABルーチン
-    EEGLAB への拡張のセット。
+-   **[ERPLAB](http://www.erpinfo.org/erplab/erplab-home/)*: ERPLAB Toolboxは、ERPデータ解析用のMATLABルーチン群で、EEGLAB拡張機能としてオープンソースで提供されています。
 
--   **[アイイー・イージー](http://www2.hu-berlin.de/eyelab/)**: EYE-EEG ツールボックス
+-   **[EYE-EEG](http://www2.hu-berlin.de/eyelab/)**: EYE-EEG ツールボックス
     統合分析を促進する目的で開発されたEEGLABの拡張
-    電気生理学的およびoculomotorデータの。 
+    電気生理学的およびoculomotorデータの。
 
--   **[質量_univ](http://openwetware.org/wiki/Mass_Univariate_ERP_Toolbox):** MATLABのMass Univariate ERP ToolboxはMATLABの利用可能なセットです。
-    質量を実行するための関数
-    イベント関連の脳の潜在能力(ERPs)の分析
-    認知症で人気の神経活動の非侵襲的な測定
-    神経科学。
+-   **[Mass_univ](http://openwetware.org/wiki/Mass_Univariate_ERP_Toolbox):** Mass Univariate ERP Toolboxは、ERPのmass-univariate解析を行うためのMATLAB関数群です。
 
 -   **[Bioelectromagnetism](http://eeg.sourceforge.net/bioelectromagnetism.html)*:    バイオエレクトロマネシス
     MATLABツールボックスは、平均ERPをプロットするために、この拡張機能でインターフェイスしています。
-    彼らのミニマとマキシマ(ピーク検索)を見つけるために。 このツールボックスからいくつかのファイルのみがこの拡張子に含まれています。
+    彼らの最小値と最大値(ピーク検索)を見つけるために。 このツールボックスからいくつかのファイルのみがこの拡張子に含まれています。
 
 ### ソースと接続分析
 
--   **[シャフト](https://sccn.ucsd.edu/wiki/SIFT)*: ソース情報フローツールボックスとEEGLABプラグインは、さまざまな種類の計算を行います
+-   **[SIFT](https://sccn.ucsd.edu/wiki/SIFT)*: ソース情報フローツールボックスとEEGLABプラグインは、さまざまな種類の計算を行います
     ソース分解されたEEGデータの多重化効果的な因果モデル。
     イベント関連のインタラクティブな視覚化とアニメーション
     'information Flow' のネットワークは含まれています。
 
--   **[NFTの特長](https://github.com/sccn/NFT/wiki)**:Neuroelectromagneticのフォワード・ヘッドのモデリングのツールボックスは注文の境界を造ります
-    要素方法(BEM)および有限要素モデル(FEM)は頭部を先に進めます
-    対象のMRヘッド画像やMNIテンプレートの脳からのモデル
+-   **[NFT](https://github.com/sccn/NFT/wiki)**:Neuroelectromagnetic Forward Head Modeling Toolbox は、境界
+    要素法(BEM)および有限要素法(FEM)によるヘッドモデルを作成します
+    被験者のMRヘッド画像やMNIテンプレートの脳からのモデル
     測定された電極の位置へのモデルゆがみ。
 
-- **[パックツール](https://github.com/sccn/PACTools)**: イベント関連 PACTools は、EEGLAB プラグインで、単一サブジェクトデータの相振れを補正します。 PACを計算するための伝統的な方法に加えて、プラグインには、相互情報フェーズ振幅カップリング方法(MIPAC)の瞬間およびイベント関連の実装が含まれています。
+- **[PACTools](https://github.com/sccn/PACTools)**: イベント関連 PACTools は、EEGLAB プラグインで、単一被験者データの相振れを補正します。 PACを計算するための伝統的な方法に加えて、プラグインには、相互情報フェーズ振幅カップリング方法(MIPAC)の瞬間およびイベント関連の実装が含まれています。
 
--   **[パクト](https://github.com/sccn/PACT):** PACTは、コンピューティングのクロス周波数のためのEEGLAB拡張です
-    段階振幅のカップリング。
+-   **[PACT](https://github.com/sccn/PACT):** PACTは、クロス周波数の位相振幅カップリングを計算するためのEEGLAB拡張機能です。
 
 - **[エルプソース](https://github.com/sccn/erpsource)*: eLoretaを使用してERPのソースローカリゼーション。
 
 ### 高性能コンピューティング
 
--   **[nsgportal](https://github.com/sccn/nsgportal)**: NSG EEGLABポータルから、高性能コンピューティングリソースで、サンディエゴスーパーコンピュータセンターのNSF主催のExpanseスーパーコンピュータに、Neuroscience Gateway Portal(NSG)を自由に利用できるようにEEGLABスクリプトを実行するために、High-Performance Computingに使用することができます。 
+-   **[nsgportal](https://github.com/sccn/nsgportal)**: NSG EEGLABポータルから、高性能コンピューティングリソースで、サンディエゴスーパーコンピュータセンターのNSF主催のExpanseスーパーコンピュータに、Neuroscience Gateway Portal(NSG)を自由に利用できるようにEEGLABスクリプトを実行するために、High-Performance Computingに使用することができます。

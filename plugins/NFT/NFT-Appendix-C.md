@@ -5,7 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: NFT-Appendix-C
-nav_title: "NFT-付録C"
+nav_title: "NFT付録C"
 long_title: NFT-Appendix-C
 ---
 EEGソースローカリゼーションに対する脳対頭脳伝導率推定の影響
@@ -30,7 +30,7 @@ intra-cranial と scalp EEG の記録、平均的な脳対頭骨
 以下では、使用効果を示すシミュレーション結果を紹介します。
 同等ダイポールソースの誤った頭蓋骨伝導値
 ローカリゼーション。 この目的のために、私達は前方電気頭部を解決しました
-現実的、主題固有の4層BEMモデルを用いたモデルの問題
+現実的、被験者固有の4層BEMモデルを用いたモデルの問題
 NFTツールボックス(Akalin Acar)を用いたMRヘッドイメージから構築
 & Makeig、2010年。 フォワードモデル(「地理」)を設定します。
 脳対頭の導電率を25にし、逆に解決

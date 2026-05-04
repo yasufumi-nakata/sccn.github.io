@@ -1,7 +1,7 @@
 ---
 layout: default
 title: FirFilt
-nav_title: "フリル"
+nav_title: "FIRfilt"
 long_title: FirFilt
 parent: Plugins
 render_with_liquid: false
@@ -13,13 +13,13 @@ FIRFILT EEGLABプラグイン
 -------------
 FIRfilt EEGLAB プラグインは EEGLAB 環境で使用されるツールです。 FIRfilt は Finite Impulse 応答 (FIR) フィルターを使用して EEG データをろ過するためにとりわけ設計されています。 ここでは、FIRfilt プラグインの主な機能と機能は次のとおりです。
 
-* フリル フィルター: FIRfilt は EEG のデータに FIR フィルターを加えるための簡単なインターフェイスを提供します。 FIRフィルタは、安定性とリニアフェーズ特性により一般的に使用されます。
+* FIRfilt フィルター: FIRfilt は EEG のデータに FIR フィルターを加えるための簡単なインターフェイスを提供します。 FIRフィルタは、安定性と線形位相特性により一般的に使用されます。
 * フィルター タイプ: ユーザーは、ローパス、ハイパス、バンドパス、バンドストップフィルタなど、さまざまな種類のFIRフィルタを作成できます。 この柔軟性により、ユーザーは特定の周波数帯域の利益を分離することができます。
 * 設計方法: FIRfilt は、window メソッド、少なくとも squares メソッド、および equiripple メソッドなどの FIR フィルターを設計するためのいくつかの方法を提供しています。 各方法に特定のろ過条件によって自身の利点があります。
 * グラフィック インターフェイス: プラグインは EEGLAB GUI と統合し、データ処理タスクのグラフィカルなユーザーインターフェイスを好むユーザーのためにアクセス可能にします。
 * コマンドラインサポート: より高度なユーザーの場合、FIRfilt はコマンドライン操作もサポートし、スクリプトベースの自動化とより大きなデータ処理パイプラインへの統合を可能にします。
- 
-[こちら](https://eeglab.org/others/Firfilt_FAQ.html) または [ペーパー](https://home.uni-leipzig.de/biocog/eprints/widmann_a2015jneuroscimeth250_34.pdf) を参照 追加のドキュメント。
+
+[こちら](https://eeglab.org/others/Firfilt_FAQ.html) または [論文](https://home.uni-leipzig.de/biocog/eprints/widmann_a2015jneuroscimeth250_34.pdf) を参照 追加のドキュメント。
 
 参考文献
 -------------

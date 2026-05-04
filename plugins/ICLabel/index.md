@@ -14,7 +14,7 @@ EEGLAB用の自動EEG独立したコンポーネントのclassiferプラグイ�
 詳しくは、 [ICLabelのウェブサイトチュートリアル](https://labeling.ucsd.edu/tutorial/about).
 
 ## インストール
-ICLabel プラグインを取得する最も簡単な方法は、EEGLAB プラグインマネージャです。 
+ICLabel プラグインを取得する最も簡単な方法は、EEGLAB プラグインマネージャです。
 
 EEGLABプラグインマネージャではなくGitHubでプラグインをインストールする予定がある場合は、matconvnetがサブモジュールとして含まれていることに注意してください。 つまり、zip-fileのダウンロードには含まれません。 ダウンロードする必要があります [matconvnetの私のフォーク(バージョン)](https://github.com/lucapton/matconvnet) ICLabelフォルダにzipを抽出します。 また、コマンドラインでこのリポジトリをクローニングしている場合、サブモジュールをクローンする「---recusive」フラグを必ず含めてください。 必要なディレクトリにあると、正しいコマンドは次のようになります。
 
@@ -93,7 +93,7 @@ Pending - シグナル処理ツールボックスが不在である場合、新�
 
 1.3 - 同じICAの分解と複数のデータセットを処理するとき、分類の確率が同一であることを確認してください
 
-1.2.6 - 2016年の前にMaatlabのためのpop_iclabel.mで問題を修正し、まれなパスの問題を修正し、Autocorrelation長さで問題が発生します
+1.2.6 - 2016年の前にMATLABのためのpop_iclabel.mで問題を修正し、まれなパスの問題を修正し、Autocorrelation長さで問題が発生します
 
 1.2.5 - pop_iclabelでキャンセルを押すと問題を修正します。 m 点
 

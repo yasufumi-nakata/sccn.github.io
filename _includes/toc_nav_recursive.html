@@ -1,6 +1,7 @@
 {%- comment -%}Copied from _includes/nav.html{%- endcomment -%}
 {%- assign titled_pages = include.nav
-        | where_exp:"item", "item.title != nil" -%}
+        | where_exp:"item", "item.title != nil"
+        | where_exp:"item", "item.nav_exclude != true" -%}
   {%- comment -%}
     The values of `title` and `nav_order` can be numbers or strings.
     Jekyll gives build failures when sorting on mixtures of different types,
@@ -12,7 +13,7 @@
 
     The case-sensitivity of string sorting is determined by `site.nav_sort`.
   {%- endcomment -%}
-  
+
   {%- assign string_ordered_pages = titled_pages
         | where_exp:"item", "item.nav_order == nil" -%}
   {%- assign nav_ordered_pages = titled_pages
@@ -33,9 +34,9 @@
       {%- assign number_ordered_pages = number_ordered_pages | concat: group.items -%}
     {%- endif -%}
   {%- endfor -%}
-  
+
   {%- assign sorted_number_ordered_pages = number_ordered_pages | sort:"nav_order" -%}
-  
+
   {%- comment -%}
     The string_ordered_pages have to be sorted by nav_order, and otherwise title
     (where appending the empty string to a numeric title converts it to a string).
@@ -58,11 +59,8 @@
 
 <ul>
   {% for item in pages_list %}
-	{% if item.long_title %}
-    	    <li><a href="{{ item.url | relative_url }}">{{ item.long_title }}</a></li>
-  	{%- else -%}
-    	    <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-  	{%- endif -%}
+    {%- assign item_label = item.nav_title | default: item.long_title | default: item.title -%}
+    <li><a href="{{ item.url | relative_url }}">{{ item_label }}</a></li>
     {%- assign children_list = site.pages | where: "parent", item.title -%}
     {% if children_list %}
       {% include toc_nav_recursive.html nav=children_list %}

@@ -34,7 +34,7 @@ EEGおよび関連データの高度な分析を実行し、詳細
 
 登録費用は、学生とポストドキュメントの300ユーロ、500ユーロです。
 教員、その他の専門家。 これらの登録費用には、
-会議スペースレンタル、コーヒーブレイク、ショートエクスカーション 
+会議スペースレンタル、コーヒーブレイク、ショートエクスカーション
 レジスタでは、宿泊料とボイ・ペルチェ・リトリート・センター(合計470ユーロ)へのすべての食事の支払いも参加者が期待されます。 CNRSからの助成金のため、登録(宿泊施設ではありませんが)はフランスの研究所からの参加者に無料であり、CRNS助成金による宿泊施設はCNRSの従業員にも無料で提供されています。
 
 [お申し込みはこちらから](https://www.azur-colloque.fr/DR14/inscription/inscription/201)
@@ -64,7 +64,7 @@ MATLABサポート
 --------------
 
 MathWorksは、ワークショップに特別なMATLABライセンスを提供していただきありがとうございます
-ワークショップ期間中に利用する参加者 EEGLAB チーム 感謝 Vijay Iyer, 
+ワークショップ期間中に利用する参加者 EEGLAB チーム 感謝 Vijay Iyer,
 MathWorksのNeuroscience Community Liaisonが、MathWorksのワークショップにこのサポートを手配
 .
  <span style="color: red">ライセンス情報を公開いたしました。</span>
@@ -122,10 +122,10 @@ MATLABをインストールしたノートパソコン
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">16:15 - 17:15 -- フォワードと逆モデル - ディップフィットツール(ロバート・オオステンド)</span> 
+<span style="color: purple">16:15 - 17:15 -- フォワードと逆モデル - ディップフィットツール(ロバート・オオステンド)</span>
 [サイトマップ](https://github.com/sccn/sccn.github.io/files/11945798/forward.and.inverse.models.pdf)
 
-<span style="color: purple">17:15 - 17:45 -- EEGLAB Dipfitプラグイン(Arnaud Delorme)の使用</span> 
+<span style="color: purple">17:15 - 17:45 -- EEGLAB Dipfitプラグイン(Arnaud Delorme)の使用</span>
 [サイトマップ](https://github.com/sccn/sccn.github.io/files/11950613/dipfit.pdf)
 
 <!-- -->
@@ -142,12 +142,12 @@ MATLABをインストールしたノートパソコン
 
 <span style="color: purple">8:30～9:15～ なぜクラスターICAコンポーネント? (Scott Makeig)</span>
 
-<span style="color: purple">9:15 - 10:00 -- クラスタのpermutationのテスト(Robert Oostenveld)</span> 
+<span style="color: purple">9:15 - 10:00 -- クラスタのpermutationのテスト(Robert Oostenveld)</span>
 [サイトマップ](https://github.com/sccn/sccn.github.io/files/11954943/cluster.statistics.pdf)
 
 <span style="color: green">-- ブレーク--</span>
 
-<span style="color: purple">10:15 - 10:45 -- データの作成 <i>フェア</i> BIDS(ロバート・オオステンド)</span> 
+<span style="color: purple">10:15 - 10:45 -- データの作成 <i>フェア</i> BIDS(ロバート・オオステンド)</span>
 [サイトマップ](https://github.com/sccn/sccn.github.io/files/11954944/fair.and.bids.pdf)
 
 <span style="color: purple">10:45 - 11:45 -- HW データセット(ICA)(Ramon Martinez)の連続処理</span> [サイトマップ](https://github.com/sccn/sccn.github.io/files/11980297/EEGLAB_WS_ASPET_2023_preprocessing_Session1_cont.pdf)
@@ -178,13 +178,13 @@ MATLABをインストールしたノートパソコン
 
 
  <u><span style="color: blue">7月6日(木)</span></u>
- 
+
 <span style="color: green">7:30 - 8:30 朝食</span>
 
 
 **時間周波数解析**
 
-<span style="color: purple">8:30～9:30 時間頻度分解: 理論と実践(Scott Makeig)</span> 
+<span style="color: purple">8:30～9:30 時間頻度分解: 理論と実践(Scott Makeig)</span>
 
 <span style="color: purple">9:30 – 10:00 -- フェーズ振幅カップリング(ラモンマルティネス)</span> [サイトマップ](https://github.com/sccn/sccn.github.io/files/11965384/RMC_PACTools_EEGLAB_WS_Aspet_2023_PDF.pdf)
 
@@ -197,7 +197,7 @@ MATLABをインストールしたノートパソコン
 
 <span style="color: orange">10:15 - 11:30 -- HW データセット(STUDY design)の継続的な処理(Ramon Martinez)</span> [サイトマップ](https://github.com/sccn/sccn.github.io/files/11965428/EEGLAB_WS_Aspet_2023_GroupAnalysis.pdf) (最終日はPDF)
 
-<span style="color: orange">11:30～12:30～ LIMO EEGLABプラグイン(Arnaud Delorme)を使用して、一般的なリニアモデルをEEGデータに適用する理論と実践</span>
+<span style="color: orange">11:30～12:30～ LIMO EEGLABプラグイン(Arnaud Delorme)を使用して、一般的な線形モデルをEEGデータに適用する理論と実践</span>
 [サイトマップ](https://github.com/sccn/sccn.github.io/files/11965482/EEGLAB_statistics2022.pdf)
 
 <span style="color: green">12:30-13:45 ランチ</span>
@@ -212,15 +212,15 @@ MATLABをインストールしたノートパソコン
 [サイトマップ](https://github.com/sccn/sccn.github.io/files/11965451/Connectivity_lecture2023.pdf)
 
 <span style="color: green">19:45～ ディナー </span>
- 
+
 <u><span style="color: blue">7月7日(金)</span></u>
 
 <span style="color: green">7:30～8:30 朝食</span>
 
-<span style="color: purple">8:30～9:30 ディープラーニングとEEG(アルナド・デルロメ、Dung Truong)</span> 
+<span style="color: purple">8:30～9:30 ディープラーニングとEEG(アルナド・デルロメ、Dung Truong)</span>
 [サイトマップ](https://github.com/sccn/sccn.github.io/files/11975145/ucsd22workshop_DL-EEG.pdf)
 
-<span style="color: purple">9:30〜10:15 マイニングイベント関連の脳力II(Scott Makeig)</span> 
+<span style="color: purple">9:30〜10:15 マイニングイベント関連の脳力II(Scott Makeig)</span>
 
 <span style="color: green">-- ブレーク--</span>
 
@@ -241,4 +241,4 @@ MATLABをインストールしたノートパソコン
 
 さらなる読書
 ----------------
-関連するEEGLAB紙のリストを調べることができます [詳しくはこちら](/others/EEGLAB_References.html) 
+関連するEEGLAB紙のリストを調べることができます [詳しくはこちら](/others/EEGLAB_References.html)

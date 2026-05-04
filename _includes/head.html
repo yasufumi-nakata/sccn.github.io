@@ -13,7 +13,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
   {% unless site.plugins contains "jekyll-seo-tag" %}
-    <title>{{ page.title }} - {{ site.title }}</title>
+    {%- assign page_label = page.nav_title | default: page.long_title | default: page.title -%}
+    <title>{{ page_label }} - {{ site.title }}</title>
 
     {% if page.description %}
       <meta name="Description" content="{{ page.description }}">

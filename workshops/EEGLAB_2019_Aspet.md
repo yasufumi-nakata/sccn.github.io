@@ -171,7 +171,7 @@ MATLABをインストールしたノートパソコン
 **一般リニアモデリング* * 必須
 
 
-<span style="color: orange">10:15～12:30～ LIMO EEGLABプラグイン(Cyril Pernet)を使用して、一般的なリニアモデルをEEGデータに適用する理論と実践</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/2019_aspet_hlm-glm.pdf)
+<span style="color: orange">10:15～12:30～ LIMO EEGLABプラグイン(Cyril Pernet)を使用して、一般的な線形モデルをEEGデータに適用する理論と実践</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/2019_aspet_hlm-glm.pdf)
 <!-- -->
 
 

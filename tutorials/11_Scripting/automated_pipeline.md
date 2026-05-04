@@ -3,7 +3,7 @@ layout: default
 title: e. Automated pipeline
 nav_title: "e. 自動パイプライン"
 parent: 11. Write scripts
-grand_parent: Tutorials 
+grand_parent: Tutorials
 ---
 EEGLABの自動化
 =====
@@ -61,7 +61,7 @@ ALLEEG = pop_clean_rawdata( ALLEEG,'FlatlineCriterion',5,'ChannelCriterion',0.87
 % recompute average reference
 ALLEEG = pop_reref( ALLEEG,[]);
 
-% run ICA reducing the dimension by 1 to account for average reference 
+% run ICA reducing the dimension by 1 to account for average reference
 plugin_askinstall('picard', 'picard', 1); % install Picard plugin
 ALLEEG = pop_runica(ALLEEG, 'icatype','picard','concatcond','on','options',{'pca',-1});
 
@@ -69,8 +69,8 @@ ALLEEG = pop_runica(ALLEEG, 'icatype','picard','concatcond','on','options',{'pca
 ALLEEG = pop_iclabel(ALLEEG, 'default');
 ALLEEG = pop_icflag( ALLEEG,[NaN NaN;0.9 1;0.9 1;NaN NaN;NaN NaN;NaN NaN;NaN NaN]);
 
-% Optional: remove flagged ICA components (otherwise done at the STUDY level), then recompute the  
-% average reference using the Huber method interpolating missing channels (and removing them again 
+% Optional: remove flagged ICA components (otherwise done at the STUDY level), then recompute the
+% average reference using the Huber method interpolating missing channels (and removing them again
 % after average reference). See tutorial section 5.b.
 if 0
     ALLEEG = pop_subcomp(ALLEEG, []);
@@ -138,7 +138,7 @@ ALLEEG = pop_clean_rawdata( ALLEEG,'FlatlineCriterion',5,'ChannelCriterion',0.87
 % them again after average reference - STUDY functions handle them automatically)
 ALLEEG = pop_reref( ALLEEG, []);
 
-% run ICA reducing the dimension by 1 to account for average reference 
+% run ICA reducing the dimension by 1 to account for average reference
 plugin_askinstall('picard', 'picard', 1); % install Picard plugin
 ALLEEG = pop_runica(ALLEEG, 'icatype','picard','concatcond','on','options',{'pca',-1});
 
@@ -146,8 +146,8 @@ ALLEEG = pop_runica(ALLEEG, 'icatype','picard','concatcond','on','options',{'pca
 ALLEEG = pop_iclabel(ALLEEG, 'default');
 ALLEEG = pop_icflag( ALLEEG,[NaN NaN;0.9 1;0.9 1;NaN NaN;NaN NaN;NaN NaN;NaN NaN]);
 
-% Optional: remove flagged ICA components (otherwise done at the STUDY level), then recompute the  
-% average reference using the Huber method interpolating missing channels (and removing them again 
+% Optional: remove flagged ICA components (otherwise done at the STUDY level), then recompute the
+% average reference using the Huber method interpolating missing channels (and removing them again
 % after average reference). See tutorial section 5.b.
 if 0
     ALLEEG = pop_subcomp(ALLEEG, []);
@@ -214,7 +214,7 @@ EEG = clean_artifacts( EEG,'FlatlineCriterion',5,'ChannelCriterion',0.8, ...
 
 ### ICAアルゴリズム
 
-EEGLAB のデフォルトは *runica* (Infomax) です。 [ペーパー](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135) を参照。要するに、理想的なアルゴリズムはありません。
+EEGLAB のデフォルトは *runica* (Infomax) です。 [論文](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030135) を参照。要するに、理想的なアルゴリズムはありません。
 - *Runica* は、Infomaxを使用しています。
 - *picard* は、*runica* の機能を利用できるようにします。また、ICAの先駆者であるジャン=フランソワ・カルドソが設計しました。
 - *FastICA* はEEGデータで利用可能です。
@@ -231,7 +231,7 @@ ICA コンポーネントのクラスタリングの詳細は、STUDY チュー�
 ```matlab
 % find dipoles for all ICA components of all subjects
 dipfitPath = fileparts(which('pop_dipfit_settings.m'));
-EEG = pop_dipfit_settings( EEG,'hdmfile', fullfile(dipfitPath, 'standard_BEM', 'standard_vol.mat'), ...   
+EEG = pop_dipfit_settings( EEG,'hdmfile', fullfile(dipfitPath, 'standard_BEM', 'standard_vol.mat'), ...
 'coordformat','MNI','mrifile',fullfile(dipfitPath, 'standard_BEM', 'standard_mri.mat'), ...
 'chanfile',fullfile(dipfitPath, 'standard_BEM','elec','standard_1005.elc'), ...
 'coord_transform',[-4.8299e-05 1.4553e-05 -0.00010483 2.9747e-06 5.8989e-06 -1.5708 1 1 1] );
@@ -249,7 +249,7 @@ STUDY = std_dipplot(STUDY,ALLEEG,'clusters',2, 'design', 1);
 
 * ERPs の詳細は [こちら](command_line_study_functions.html) を参照。
 * 統計解析 [他のセクション](../10_Group_analysis/study_statistics.html) を参照。また、カスタムコードを書くことで、紙の数字を生成できます。
-* パイプライン [この紙](https://www.frontiersin.org/articles/10.3389/fnins.2020.610388/full) および [リモウィキ](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) を参照。 
+* パイプライン [この論文](https://www.frontiersin.org/articles/10.3389/fnins.2020.610388/full) および [LIMO Wiki](https://github.com/LIMO-EEG-Toolbox/limo_meeg/wiki) を参照。
 
 参考文献
 ----------------------

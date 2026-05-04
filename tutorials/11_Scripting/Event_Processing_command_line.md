@@ -76,18 +76,7 @@ EEG = eeg_checkset(EEG, 'eventconsistency'); % Check all events for consistency
 eeglab redraw % Redraw the main EEGLAB window
 ```
 
-EEGLAB の 'urevent' 構造により、
-※実験中の2つのイベント無し*は実際に
-各イベントは必須です。
-問題に苦しむ、脳機能への洞察は、これから一目瞭然
-ダイナミクスがすべてのイベントにタイムロックされたときにビューのポイントが犠牲になります
-特にEEGLABは、 [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) そして、 [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m)
-関数は、潜在的な時間コースやスペクトルの違いを視覚化することができます
-epochs の振動幅は、関数によって書かれたイベントを時間にロックする
-を を を を を
-'rt' は、
-関数 [eeg_urlatency.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_urlatency.m)
-元のデータでイベントの遅延を得るのに便利です。 
+EEGLABの`urevent`構造体を使うと、実験中の2つのイベントが実際にどのような順序と間隔で起きたかを追跡できます。これは、すべてのエポックを同じイベントに時間ロックすると失われてしまう情報です。特に、[erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m)および[pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m)関数では、`rt`などのイベント関連値でエポックを並べ替え、電位時系列や振動振幅の差を可視化できます。[eeg_urlatency.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_urlatency.m)関数は、元データ内でのイベント潜時を取得する際に便利です。
 
 グループ分析のためのイベント情報の追加
 --------------

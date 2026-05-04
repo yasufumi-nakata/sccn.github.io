@@ -1,11 +1,11 @@
 ---
 layout: default
 title: EEGLAB vs. commercial soft.
-nav_title: "EEGLAB対市販ソフト"
+nav_title: "EEGLABと市販ソフト"
 summary: EEGLAB vs. Commercial EEG Software
 parent: Interoperability
 ---
-EEGLABと商用EEGソフトウェアパッケージ 
+EEGLABと商用EEGソフトウェアパッケージ
 ====
 
 <blockquote>

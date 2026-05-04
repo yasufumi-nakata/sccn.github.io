@@ -1,7 +1,7 @@
 ---
 layout: default
 title: LIMO
-nav_title: "リモ"
+nav_title: "LIMO"
 long_title: LIMO
 parent: Plugins
 render_with_liquid: false
@@ -12,9 +12,9 @@ nav_order: 6
 
 # MEEGデータのLInear MOdeling
 
-MEEGデータのLInear MOdelling(LIMO MEEG)ツールボックスは、MEEGデータの統計解析に専念するMatlabツールボックスです。 EEGLAB(特にEEGLABのSTUDYはバージョンを開発する)との対面があります。 ただし、データがインポートされると、LIMO MEEG内で実行され、ツールボックスは任意のデータセットのために動作することができます。
+MEEGデータのLInear MOdelling (LIMO MEEG)ツールボックスは、MEEGデータの統計解析に特化したMATLABツールボックスです。EEGLAB、特にSTUDY機能と連携してプラグインとして利用できます。データをインポートした後の解析はLIMO MEEG内で実行されるため、このツールボックスは任意のデータセットに適用できます。
 
-このリポジトリは、EEGLAB(EEGLAB)で使用するLIMO MEEG(v2)の安定版です。https://sccn.ucsd.edu/eeglab/) しかし、FieldTripのような他のアプリケーションで使用することができます(http://www.fieldtriptoolbox.org/)またはBrainStorm ()https://neuroimage.usc.edu/brainstorm/) あなたの研究の適用のための。 以前のバージョン(1.5)がここにアーカイブされています: http://datashare.is.ed.ac.uk/handle/10283/2190
+このリポジトリは、[EEGLAB](https://sccn.ucsd.edu/eeglab/)で使用するLIMO MEEG v2の安定版です。研究用途では、[FieldTrip](http://www.fieldtriptoolbox.org/)や[Brainstorm](https://neuroimage.usc.edu/brainstorm/)など他のアプリケーションと併用することもできます。以前のバージョン(v1.5)は、http://datashare.is.ed.ac.uk/handle/10283/2190 にアーカイブされています。
 
 ## はじめに
 
@@ -22,7 +22,7 @@ EEGLAB をインストール (一部の関数を呼び出すため) とプラグ
 
 ## ドキュメント
 docディレクトリに (少し古い)
-もちろんです。 [ウィキ](https://github.com/LIMO-EEG-Toolbox/limo_eeg/wiki)
+詳細は[Wiki](https://github.com/LIMO-EEG-Toolbox/limo_eeg/wiki)も参照してください。
 
 ## LIMOチュートリアルデータセット
 
@@ -30,7 +30,7 @@ docディレクトリに (少し古い)
 
 ## お問い合わせ
 
-一般的な分析質問のためのeeglabメーリングリストやneurostar(tagging people)などのディスカッションフォーラムを使用するのがベストです。  
+一般的な分析質問のためのeeglabメーリングリストやneurostar(tagging people)などのディスカッションフォーラムを使用するのがベストです。
 また、直接メールを送ったり、 github の問題を上げることもできます。特にバグです。
 
 ## 貢献する
@@ -44,7 +44,7 @@ docディレクトリに (少し古い)
 
 _重要なお知らせ _
 
-LIMO プロット機能を使用して表示するたびに、Matlab ワークスペースですべての変数が返されます。 たとえば、すべてのチャンネルと時間(ERP結果)をプロットすると、生の統計マップと重要なマスクが返されます。 タイムコースをプロットすると、その時間経過を自信の間隔で返します。 これらの変数を参照するには、Matlab コマンドラインで "who" を入力できます。
+LIMO プロット機能を使用して表示するたびに、MATLAB ワークスペースですべての変数が返されます。 たとえば、すべてのチャンネルと時間(ERP結果)をプロットすると、生の統計マップと重要なマスクが返されます。 タイムコースをプロットすると、その時間経過を自信の間隔で返します。 これらの変数を参照するには、MATLAB コマンドラインで "who" を入力できます。
 
 ## スタート
 
@@ -53,4 +53,3 @@ LIMO プロット機能を使用して表示するたびに、Matlab ワーク�
 このチュートリアルでは、最新の使い方を想定しています。 [EEGLAB](https://github.com/sccn/eeglab) 使用するバージョン(2020.0以降) [スタディ](https://sccn.ucsd.edu/wiki/Chapter_02:_STUDY_Creation) リンクについて [LIMOツール](https://github.com/LIMO-EEG-Toolbox/limo_tools).
 
 
- 

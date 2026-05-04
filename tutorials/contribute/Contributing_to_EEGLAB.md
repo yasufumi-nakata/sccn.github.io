@@ -10,7 +10,7 @@ nav_order: 3
 EEGLABグループ
 ========================
 
-EEGLAB は、EEGLAB が新しい関数の場所です。 外部リンク コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア に に コア コア コア に コア に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に 
+EEGLAB は、EEGLAB が新しい関数の場所です。 外部リンク コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア コア に に コア コア コア に コア に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に に
 
 <details open markdown="block">
   <summary>
@@ -28,18 +28,18 @@ EEGLABソフトウェア開発チーフ Arnaud DelormeとScott Makeigです。 E
 トニーベル、 Colin Humphries、SigurdとMakeigによる機能
 Enghoff、Tzyy-Ping Jung、Te-Won Leeetc、リリース
 1997年 スコッツ・マディグによる計算神経生物学
-サーク・インスティテュート、ラ・ホラーのテルレンス・セジュノスキの研究室。 
+サーク・インスティテュート、ラ・ホラーのテルレンス・セジュノスキの研究室。
 
 EEGLABの統合ツールボックスは、
 Delorme と Makeig は、Delorme と Makeig の共同作業を行います。
 Marissa Westerfield、Jörn Anemüller、 ルカ・フィネリ、ロバート・オオステンド、
-Hilit serby, Toby Fernsler, ニマ シャムロ Bigdeley, Jason Palmer, その他
+Hilit serby, Toby Fernsler, NIMA シャムロ Bigdeley, Jason Palmer, その他
 その他。 専用のベータテスターには、アンドレアス・ロメイケと彼のチームが含まれます。
 EEGLABの試験スイート、その他上級者向け
-Stefan Debener と Andreus Widmar. 
+Stefan Debener と Andreus Widmar.
 
 EEGLAB開発 Swartz Center for Computational Neuroscience (SCCN) のインスティテュートで現在に至る。
-カリフォルニア大学サンディエゴ校(UCSD) コアEEGLABのメンテナンスと開発は、米国国立科学研究所がサポートしています。 
+カリフォルニア大学サンディエゴ校(UCSD) コアEEGLABのメンテナンスと開発は、米国国立科学研究所がサポートしています。
 
 EEGLABのコードは、直接的に変更されます。
 ユーザーの投稿 [プルリクエスト](/tutorials/contribute/Contributing_to_EEGLAB.html#forking-the-eeglab-repository)EEGLABコア開発者
@@ -52,8 +52,8 @@ EEGLABのコードは、直接的に変更されます。
 研究室では、本ページに記載されているように、他の人が使用するためにそれらを解放することを検討してください。
 
 EEGLABは、
-開発者は、オーバーサブジェクトを含む機能を拡張しています。
-一般的なリニアモデル統計。 ユーザーの機能と機能
+開発者は、被験者間を含む機能を拡張しています。
+一般的な線形モデル統計。 ユーザーの機能と機能
 EEGLABの相互接続
 サイトマップ
 
@@ -63,9 +63,9 @@ EEGLABは、環境にやさしいソフトウェアです。
 任意のユーザに請求します。
 
 しかし、EEGLABでは、商用購入や登録を行っております。
-[環境方針](http://www.mathworks.com/store/) を参照してください。 マトラボ
+[環境方針](http://www.mathworks.com/store/) を参照してください。 MATLAB
 以下を参照してください。
-マトラボ MATLABとEEGLABは、Linux/Unix、Mac OS X、または
+MATLAB MATLABとEEGLABは、Linux/Unix、Mac OS X、または
 ウィンドウズ。 MATLABの学生が高価な価格で購入
 $ 50 アメリカ
 
@@ -75,7 +75,7 @@ MATLAB ツールボックス関数: ドキュメント。
 詳しくはこちら
 
 EEGLAB の処理機能がすべて揃っています。
-[オタクターブ](http://www.gnu.org/software/octave/download.html)EEGLAB は、MATLAB が、MATLAB がリリースされました。
+[Octave](http://www.gnu.org/software/octave/download.html)EEGLAB は、MATLAB が、MATLAB がリリースされました。
 
 ### ライセンスとクレジット
 
@@ -84,7 +84,7 @@ EEGLAB は [BSD] で います。
     EEGLAB追加機能
     このライセンスに基づく商用および非商用利用
 
-コントリビューター GitHub に GitHub を 使おう 
+コントリビューター GitHub に GitHub を 使おう
 
 *extension* または *plugin* のオプション
 EEGLAB の拡張機能により、Author は
@@ -159,8 +159,7 @@ Github では、
 
 ![基本情報|thumb\|400px](/assets/images/Clone_https_link.jpg)
 
--   の の の
-    前のステップでコピーしたリンクを実行します。
+-   前のステップでコピーしたリンクを使って、`git clone`を実行します。
 
 `$git clone `[`https://github.com/yourgitusername/eeglab.git`](https://github.com/yourgitusername/eeglab.git)
 

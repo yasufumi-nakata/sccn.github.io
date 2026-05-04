@@ -21,7 +21,7 @@ grand_parent: Workshops
 ----------------
 
 <span style="color:darkred"><b>EEGLAB 概要:コンセプトとコンセプト
-建築設計</b></span>  
+建築設計</b></span>
 
 <span style="color:purple">[採掘認知脳の動的I(Scott Makeig)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_I.html)</span> \- <span style="color:darkred">[インタビュー](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_Mining_I.html)</span> <span style="color:blue">[スライド](https://sccn.ucsd.edu/githubwiki/files/eeglab2010_sm_mining_brain_dynamics_i.pdf)</span>
 
@@ -78,9 +78,9 @@ grand_parent: Workshops
 
 
 <span style="color:purple">[DIPFITツールボックスの使用 (Julie Onton)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_dipfit.html)</span>
-[スライド](https://sccn.ucsd.edu/githubwiki/files/eeglab2010_jo_nov19_dipolemodeling.pdf) 
+[スライド](https://sccn.ucsd.edu/githubwiki/files/eeglab2010_jo_nov19_dipolemodeling.pdf)
 
-<span style="color:darkred"><b>被写体全体での計算
+<span style="color:darkred"><b>被験者全体での計算
 ご利用条件</b></span>
 
 
@@ -142,7 +142,7 @@ grand_parent: Workshops
 
 <span style="color:purple">[NFTヘッドモデリングツールボックス(Zeynep Akalin Akar)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_nft.html)</span>
 [インタビュー](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_nft.html)
-[スライド](https://sccn.ucsd.edu/githubwiki/files/nft_intro.pdf) 
+[スライド](https://sccn.ucsd.edu/githubwiki/files/nft_intro.pdf)
 <!-- -->
 
 
@@ -171,6 +171,6 @@ grand_parent: Workshops
 
 
 <span style="color:purple">[計測プロジェクションツールボックス(MPT)(Nima Bigdely Shamlo)](http://sccn.ucsd.edu/eeglab/Online_EEGLAB_Workshop/EEGLAB12_mpt.html)</span>
-[スライド](https://sccn.ucsd.edu/githubwiki/files/eeglab2010_ad_nov20_measure_projection.pdf) 
+[スライド](https://sccn.ucsd.edu/githubwiki/files/eeglab2010_ad_nov20_measure_projection.pdf)
 [効果と測定予測 プラグイン](ftp://sccn.ucsd.edu/pub/affinity_measure_projection.zip)
 [MPデータセット](ftp://sccn.ucsd.edu/pub/5subjects.zip)

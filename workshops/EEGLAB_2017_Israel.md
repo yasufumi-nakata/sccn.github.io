@@ -129,7 +129,7 @@ EEGおよび関連データ、詳細な方法の博覧会および実用的
 **一般リニアモデリング* * 必須
 
 
-<span style="color: orange">10:15 – 12:00 -- LIMO EEGLABプラグイン(Arnaud Delorme)を使用して、一般的なリニアモデルをEEGデータに適用するための理論と実践</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/limo_israel_2017.pdf)
+<span style="color: orange">10:15 – 12:00 -- LIMO EEGLABプラグイン(Arnaud Delorme)を使用して、一般的な線形モデルをEEGデータに適用するための理論と実践</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/limo_israel_2017.pdf)
 
 <span style="color: orange">12:00 – 12:30 -- EEGLABでのスクリプト (Arnaud Delorme)</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/israel_scripting.pdf)([Oddball_file.bdf の使い方](https://sccn.ucsd.edu/githubwiki/files/oddball_file.zip))
 <!-- -->

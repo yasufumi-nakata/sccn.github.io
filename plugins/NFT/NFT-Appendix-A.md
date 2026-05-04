@@ -5,7 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: NFT-Appendix-A
-nav_title: "NFT-付録-A"
+nav_title: "NFT付録A"
 long_title: NFT-Appendix-A
 ---
 ## メッシュ形式

@@ -151,7 +151,7 @@ EEGダイナミクスを分析するための進化方法。
 <span style="color: red">15:30～ 16:30～ EEGLAB STUDY構造の紹介 [(PDF)](https://sccn.ucsd.edu/githubwiki/files/6_study_intro.pdf)</span>
 
 
-<span style="color: darkblue">STUDY - Precompute、precluster、およびクラスターICを被写体全体に構築 - プロットとSTUDYクラスターの編集</span>
+<span style="color: darkblue">STUDY - Precompute、precluster、およびクラスターICを被験者全体に構築 - プロットとSTUDYクラスターの編集</span>
 
 <!-- -->
 
@@ -190,7 +190,7 @@ EEGLAB を使用した以下の操作を含む:
 ・ 適応型混合ICA(Amica)を非静止型EEGソースに適用
 ダイナミクス
 
-• 複数のサブジェクトICA-resolved EEGの測定の投射の分析を使用して下さい
+• 複数の被験者ICA-resolved EEGの測定の投射の分析を使用してください
 ダイナミクス
 
 ・ EEGデータ分析に統計機械学習を適用し、

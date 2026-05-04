@@ -35,7 +35,7 @@ grand_parent: Workshops
 
 [独立したコンポーネントのクラスタリング (Scott メイク)](https://sccn.ucsd.edu/githubwiki/files/makeig_ucsd18_clustering.pdf)
 
-[階層リニアモデルとそのアプリケーションをEEGに理解する (Cyril Pernet)](https://sccn.ucsd.edu/githubwiki/files/eeglab2018_hlm.pdf)
+[階層線形モデルとそのアプリケーションをEEGに理解する (Cyril Pernet)](https://sccn.ucsd.edu/githubwiki/files/eeglab2018_hlm.pdf)
 
 [脳全体の分析と複数の比較補正(Cyril パーネット)](https://sccn.ucsd.edu/githubwiki/files/eeglab2018_mcc.pdf)
 

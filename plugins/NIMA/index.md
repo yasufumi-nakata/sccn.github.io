@@ -1,7 +1,7 @@
 ---
 layout: default
 title: NIMA
-nav_title: "ニマ"
+nav_title: "NIMA"
 long_title: NIMA
 parent: Plugins
 render_with_liquid: false
@@ -14,7 +14,7 @@ nav_order: 16
 NIMA EEGLABプラグイン
 -------------------------------------------------------------
 
-NIMAは、測定投影分析からニマの画像の略です。 測定値
+NIMAは、測定投影分析からNIMAの画像の略です。 測定値
 投影ツールボックス(MPT)は公開方法(Bigdely-Shamlo et al.,
 2013年) ウィキページで見る
 リンクについてhttps://sccn.ucsd.edu/wiki/MPT)。 MPTの素晴らしい視覚化
@@ -50,7 +50,7 @@ sigma は Gaussian (任意入力として指定できます、
 クラスター 5, 6, 16 の画像、および voxel イメージ。 私の同僚は私に言った
 voxel イメージは、Minecraft の彼を思い出させます。
 
-![ニマフィグレ01.png](images/Nimafigure01.png)
+![NIMAフィグレ01.png](images/Nimafigure01.png)
 
 std_dipoleDensity() との比較
 -----------------------------------

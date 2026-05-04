@@ -122,13 +122,7 @@ EEGLABのメニューは、
 pop_ 関数対信号処理
 ----------------------
 
-*pop_funcname.m* 関数は
-*EEG*データ操作 グラフィックユーザーインターフェイス(gui)機能
-データセットの知識がないスタンドアローン処理機能
-EE を を を
-データ マトリックスか。
-例えば、 [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) データ処理を呼び出し、
-機能のプロット [m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m) を参照してください。 入力パラメータを確認するため
+*pop_funcname.m*関数は、*EEG*データ構造を操作するGUI関数です。一方、対応する低レベル関数は、EEGLABデータセットの構造を知らなくても、データ行列などを直接処理できるスタンドアローンの処理関数です。たとえば、[pop_erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m)は、データ処理とプロットを行う[erpimage.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=erpimage.m)を呼び出します。入力パラメータを確認するには、
 EEGLABヘルプメニュー
 MATLAB 関数ヘルプ (MATLAB )
 例:
@@ -206,4 +200,3 @@ EEGLABデータ処理機能が機能し、ライセンスを付与します。
 関数スクリプトファイル自身が、データの処理方法を正確に確認
 EEGLAB関数は、
 可能です。
-

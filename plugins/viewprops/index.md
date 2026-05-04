@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Viewprops
-nav_title: "ビュープロップ"
+nav_title: "Viewprops"
 long_title: Viewprops
 parent: Plugins
 render_with_liquid: false

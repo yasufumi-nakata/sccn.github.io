@@ -1,7 +1,7 @@
 ---
 layout: default
 title: PowPowCAT
-nav_title: "PowPowCATの特長"
+nav_title: "PowPowCAT"
 long_title: PowPowCAT
 parent: Plugins
 render_with_liquid: false
@@ -21,7 +21,7 @@ EEGLABのPowPowCATプラグイン
     (covariance) 'comodugram/comodulogram' と呼ばれる (以下参照)
     単一試行の連続的なICの活発化のため。
 -   前処理パイプラインは次のとおりです。
--   Matlab の spectrogram () を実行します(Matlab 信号が必要です)
+-   MATLAB の spectrogram () を実行します(MATLAB 信号が必要です)
     スペクトログラムとパワースペクトラムを計算するツールボックス
     密度(PSD)は1秒のウィンドウを使用して、その温度平均として50%
     オーバーラップと修正済み () logarithmical-spaced 周波数 bins.
@@ -54,14 +54,14 @@ freqBins = logspace(log10(1+deviationFromLog), log10([user_input_value]+devia
     左下プロット。
 -   2つの時間系列データのスキャッタープロットが表示されます。
 
-参照のペーパーおよびerratum
+参照の論文およびerratum
 ===========================
 
 [Thammasan N, ミヤコシM. (2020)] クロス周波数パワーカップリング
 分析:ICA分解を分類する有用な十字頻度測定
 *センサー* 20:7040 .)https://www.mdpi.com/1424-8220/20/24/7040)
 
-ここでは、erratum です。 上記の紙の中の方程式の(1)は正規化の用語1/kを欠きます。 悪すぎる 公開前に見つけられなかった! 
+ここでは、erratum です。 上記の紙の中の方程式の(1)は正規化の用語1/kを欠きます。 悪すぎる 公開前に見つけられなかった!
 
 
 使い方
@@ -88,7 +88,7 @@ freqBins = logspace(log10(1+deviationFromLog), log10([user_input_value]+devia
     主要なインタラクティブなプロット パネルの結果。 あなたが表示されます
     生相関係数、p\<0.05とp\<0.01でマスクされたもの
     誤った発見率(FDR)補正後。
-    
+
 コマンドラインからのバッチ処理
 ===============================
 プラグインパッケージには、EEG や他の 4 を取る calc_PowPowCAT() が含まれています。
@@ -203,7 +203,7 @@ k-means アルゴリズム。 青色の点で最適な点を強調していま�
 
 ![ショット7.png](images/shot7.png)
 
-デフォルトでベースワークスペースにMatlab変数PowPowCATを生成します。
+デフォルトでベースワークスペースにMATLAB変数PowPowCATを生成します。
 これは基本的にすべての結果が含まれている構造変数です。
 ユーザー定義のクラスターの最適数。 オプションのファイルエクスポートも
 要求される、それは出力の部分に救います:データセットID、選択されたICのインデックス、

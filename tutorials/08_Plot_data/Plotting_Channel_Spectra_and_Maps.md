@@ -30,10 +30,7 @@ EEGLAB をロードする
 
 ![](/assets/images/spectopo1gui.png)
 
-関数は戻るべきです [spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m) を参照してください。 プロット(下)。
-だけ50% を を を
-上記)は、各呼び出しに若干異なる結果です。 (当然、
-編集ボックスに100%を入れた場合はこれが発生しません。
+関数は[spectopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=spectopo.m)を呼び出し、下のプロットを返します。デフォルトではデータの50%だけを使用するため、呼び出すたびに結果がわずかに異なる場合があります。もちろん、編集ボックスに100%を入力した場合はこの違いは生じません。
 
 ![](/assets/images/spectopo1plot.png)
 
@@ -73,4 +70,3 @@ Welch のウィンドウサイズ128 のオーバーラップなし
 'electrodes', 'on' に 一番速い テキスト ボックスに 'electrodes', 'on' に 'on' ' を 'electrodes'
 (*Scalpのマップオプション*) [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m)
 ウィンドウ。
-

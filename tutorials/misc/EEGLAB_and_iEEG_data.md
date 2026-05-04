@@ -9,19 +9,19 @@ grand_parent: Tutorials
 EEGLABとiEEG、GSEE、またはECoGデータ
 ====================
 
-EEGLAB は、EEGLAB のソースコードを、EEGLAB は、EEGLAB のコードを、EEGLAB のコードを、EEGLAB のコードで作成しています。 
-もしくは、 BIDS-Matlab-tools EEGLAB プラグイン
+EEGLAB は、EEGLAB のソースコードを、EEGLAB は、EEGLAB のコードを、EEGLAB のコードを、EEGLAB のコードで作成しています。
+もしくは、 BIDS-MATLAB-tools EEGLAB プラグイン
 また、BIDSフォーマットのデータはEEGLABのメニュー項目 <span style="color: brown">File > EEGLAB extensions</span> からインポートできます。
 ## データのインポート
 
-例えば、MEF3 と BIDS-Matlab-tools は、 
-[ds003708 BIDSデータセット](https://nemar.org/dataexplorer/detail?dataset_id=ds003708&processed=0). 
-まず、データをダウンロードします。 第二に、メニュー項目を使用する <span style="color: brown">ファイル > BIDSツール > BIDSをフォルダにSTUDYにインポート</span>. 
+例えば、MEF3 と BIDS-MATLAB-tools は、
+[ds003708 BIDSデータセット](https://nemar.org/dataexplorer/detail?dataset_id=ds003708&processed=0).
+まず、データをダウンロードします。 第二に、メニュー項目を使用する <span style="color: brown">ファイル > BIDSツール > BIDSをフォルダにSTUDYにインポート</span>.
 デフォルト
-メニュー項目 <span style="color: brown">EEGLABの機能とプラグイン ドキュメント</span> インポートする <i>メフッド</i> 
+メニュー項目 <span style="color: brown">EEGLABの機能とプラグイン ドキュメント</span> インポートする <i>メフッド</i>
 フォルダにある <i>ds003708/sub-01/ses-ieeg01/ieeg/</i> BIDSデータセット
 
-BIDSに問い合わせると、その利点は、iEEGの電極や関連イベントの解決に役立ちます。 BIDSデータセットの被写体、生のSEEGデータが示されます。 <i>ds003708</i>.
+BIDSに問い合わせると、その利点は、iEEGの電極や関連イベントの解決に役立ちます。 BIDSデータセットの被験者、生のSEEGデータが示されます。 <i>ds003708</i>.
 
 ![スクリーンショット 2022-09-09 に 3 16 34 午後](https://user-images.githubusercontent.com/1872705/189453192-66169ca9-174b-419c-ba7b-2bada4cbda91.png)
 

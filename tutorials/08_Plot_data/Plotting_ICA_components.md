@@ -28,7 +28,7 @@ ICA は ICA から ICA へ [アーティファクト](/tutorials/06_RejectArtifa
 ![こちら](/assets/images/Pop_loadset2.png)
 
 どのコンポーネントが最も強く貢献しているかを見るのは関心です
-データの頻度。 選択する <span style="color: brown">コンポーネントのスペクトラとマップ</span>. 
+データの頻度。 選択する <span style="color: brown">コンポーネントのスペクトラとマップ</span>.
 これは呼び出します [pop_spectopo.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_spectopo.m) 機能。
 
 最初の入力はエポック時間の範囲です。
@@ -54,28 +54,28 @@ ICA は ICA から ICA へ [アーティファクト](/tutorials/06_RejectArtifa
 
 
 前のウィンドウでは、各コンポーネントのスペクトルをプロットしました。
- 
+
 もっと詳しく
 正確な戦略は、データ信号をプロットすることです
 コンポーネントのアクティビティをマイナスし、パワーの減少を推定
 1つのチャネルで元の信号と比較して-それはまた可能です
 すべてのチャンネルでこれを行いますが、スペクトルを計算する必要があります
 各チャネルで各コンポーネントのプロジェクションを計算する
-インテンシブ。 
+インテンシブ。
 
 そのためには、以前のインタラクティブウィンドウに戻ります。
  - 以下の手順を実行します:
 *10*最大入力 *電極番号 Hz
-分析...:*分野、 
+分析...:*分野、
 - コンポーネントのチェックを外す
-スペック...*. 
+スペック...*.
 - ※100*まで設定してください。
 - ディスプレイ *6*
 5(デフォルト)のコンポーネントマップ
-詳細はこちら) 
+詳細はこちら)
 - 描画される最大周波数を設定します
 *30* Hz は、サイドパネルの*Plotting 周波数範囲*オプションです。
-(下). 
+(下).
 - *Ok*は、
 
 
@@ -112,9 +112,9 @@ MATLABでは、次の手順を実行します。
 したがって、すべてのデータに対して 1 つのコンポーネントのアカウントがある場合、データがマイナスされます。
 コンポーネントのバックプロジェクションは0 で、pvaf は100% です。
 コンポーネントは ゼロヴァリアンス のアカウント、pvaf =
-0%. 
+0%.
 Pvaf は、100% より大きい場合があります(複数の
-コンポーネント、スペクトル出力は、実際には大きくなり、小さくなります!) 
+コンポーネント、スペクトル出力は、実際には大きくなり、小さくなります!)
 に従って
 上記出力に占める分散、コンポーネント10アカウント以上
 チャンネル番号は、
@@ -142,7 +142,7 @@ Pvaf は、100% より大きい場合があります(複数の
 ![](/assets/images/I103single_plotdata.jpg)
 
 <span style="color: brown">Plot → コンポーネントERP → コンポーネントマップ</span> を選択し、
-[pop_envtopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) 関数を呼び出します。 
+[pop_envtopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) 関数を呼び出します。
 プレス *7 をプロットする コンポーネントを
 データセットERPへ
 実際のコンポーネントは、以前のデータからサブトラクトすることができます。
@@ -163,7 +163,7 @@ Pvaf は、100% より大きい場合があります(複数の
 
 
 
-上の写真はメッシーに見えるので、再び呼び出します [pop_envtopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m) 
+上の写真はメッシーに見えるので、再び呼び出します [pop_envtopo.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_envtopo.m)
 *200* ms から *500* ms までの時間範囲 ウィンドウズ で囲む
 以下に示すようにポスト刺激。
 
@@ -194,8 +194,8 @@ Pvaf は、100% より大きい場合があります(複数の
 ----------------------------
 
 コンポーネントの代わりにERP-image図をプロットに、
-<span style="color: brown">コンポーネント 研究開発</span> 
-(電話) [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) 関数)。 
+<span style="color: brown">コンポーネント 研究開発</span>
+(電話) [pop_erpimage.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpimage.m) 関数)。
 
 この関数は、私たちが使用したものと同じ機能です。
 クラウドサービス
@@ -226,12 +226,12 @@ ICA では、極性性を兼ね備えています。
 コンポーネントの活性化は無意味であり、
 有利化のメリット(*EEG.icaact*)
 コンポーネントの活性化は極性が任意です。
-測定単位(注)、*proportional to* microvolt。 
+測定単位(注)、*proportional to* microvolt。
 1つに占める活動の絶対値と極性を回復するため
 与えられたチャネルでまたはより多くのコンポーネントは、バックプロジェクションをイメージします
 そのチャネルでコンポーネントの活性化:
 - 前のページへ
-- 同じパラメータを使用する 
+- 同じパラメータを使用する
 - *プロジェクトをチャンネル\#*から27に設定する
 
 ERPが極性で逆転する
@@ -248,7 +248,7 @@ ERPが極性で逆転する
 
 コンテンツの構成要素は、直接1頭脳科学研究所の構成要素である。
 
-コンポーネントの時間周波数変換をプロットするには、 <span style="color: brown">コンポーネントの頻度</span> 
+コンポーネントの時間周波数変換をプロットするには、 <span style="color: brown">コンポーネントの頻度</span>
 (電話) [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) 関数) それから:
 - *コンポーネント番号* に *1* を入力してください
 - *Bootstrap のリリース* を有効にしてください。
@@ -262,14 +262,14 @@ ERPが極性で逆転する
 
 ![](/assets/images/newtimef_comp1.png)
 
-以下について [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) ウィンドウが表示されます。 
+以下について [pop_newtimef.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_newtimef.m) ウィンドウが表示されます。
 
 ![](/assets/images/newtimef_comp2.png)
 
 ITC(*より)
 . . . .
-(*upper Panel*)は4から6Hzおよび 
-12〜18Hzのパワー消費量、4〜6Hzのパワー消費量。 
+(*upper Panel*)は4から6Hzおよび
+12〜18Hzのパワー消費量、4〜6Hzのパワー消費量。
 
 コンポーネントヘッドプロット
 ---------------
@@ -305,4 +305,4 @@ MATELLABは3Dオプションを回転させ、ヘッドプロットを回転さ�
 主に独立したコンポーネントの相互関連のペア? どうすればよいですか?
 関係は、時折進化し、条件全体で変化するのか?
 EEGLABグループの分析ツールは、
-脳の動的について、両方のために [シングルサブジェクト](/tutorials/10_Group_analysis/study_statistics.html#single-subject-statistics) そしてのために [被写体のグループ](/tutorials/10_Group_analysis/).
+脳の動的について、両方のために [単一被験者](/tutorials/10_Group_analysis/study_statistics.html#single-subject-statistics) そしてのために [被験者のグループ](/tutorials/10_Group_analysis/).

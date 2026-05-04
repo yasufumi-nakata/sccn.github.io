@@ -1,7 +1,7 @@
 ---
 layout: default
 title: ARfitStudio
-nav_title: "アルフィットスタジオ"
+nav_title: "ARfitStudio"
 long_title: ARfitStudio
 parent: Plugins
 render_with_liquid: false
@@ -12,7 +12,7 @@ nav_order: 20
 ARfitStudioとは?
 -------------------
 
-まずは、 Afit は Tapio が開発した Matlab モジュールのコレクションです。
+まずは、 Afit は Tapio が開発した MATLAB モジュールのコレクションです。
 シュナイダーとアーノルド・ノイマイヤーは、多変量体のパラメータを推定
 オートレグレッシブ(AR)モデル、適合したARモデルの診断チェック、および
 装着したARモデルのeigenmodeを分析します。 このプラグイン、ARfitStudio、使用
@@ -63,13 +63,13 @@ mex ファイルをコンパイルする必要があります。
 スクリーンショット
 -----------
 
-![300px\]|フィギュア1.インターポレートスパイク:
+![300px\]|図1.インターポレートスパイク:
 GUI:(画像/スクリーンショット3_interpolatespike.png)
 
-![600px\]|フィギュア2.インターポレートスパイク: 前のページへ
+![600px\]|図2.インターポレートスパイク: 前のページへ
 修正:(画像/スクリーンショット2_interpolatespike.png)
 
-![600px\]|フィギュア3.インターポレートスパイク: アフター
+![600px\]|図3.インターポレートスパイク: アフター
 修正:(画像/スクリーンショット1_interpolatespike.png)
 
 マイケル・ボリッチ氏によるデータ
@@ -133,7 +133,7 @@ A. NeumaierとT.シュナイダー、2001:パラメータの推定と
 多変復的なモデルのeigenmodes。 ACMについて トランス。 数学。
 ソフト、27-57
 
-T. シュナイダーとA. Neumaier, 2001: Algorithm 808: ARfit – Matlab
+T. シュナイダーとA. Neumaier, 2001: Algorithm 808: ARfit – MATLAB
 多variateの変数そしてeigenmodesの推定のためのパッケージ
 自動回帰モデル。 ACMについて トランス。 数学。 ソフト、27、58-65。
 

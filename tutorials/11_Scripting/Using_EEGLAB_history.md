@@ -112,7 +112,7 @@ eeglab redraw;
 
 *\>\> eeglab 再考*
 メインのグラフィックインターフェイスが確実になるように、最後に追加されました。
-データセットが処理された後更新される。 
+データセットが処理された後更新される。
 
 今すぐプレス <span style="color: brown">Run</span> MATLABのボタンです。 テキストが作成されます。 テキストが実行されます。 <span style="color: brown">ファイル → 履歴スクリプト → スクリプトを実行</span> このメニュー項目は、MATLAB です。 グラフィカル は、EEGLAB のコンパイルを受け付けています。 また、MATLAB では、以下の手順を実行できます。
 
@@ -156,7 +156,7 @@ MATLABでは、 EEG.nbchan* を入力
 EEGLAB は、EEGLAB のパートナーです。 メニュー
 現在のEEGデータセットは、*EEG.history* です。
 履歴フィールドの内容には、その関数呼び出しを含む
-現在のデータセットを修正し、関数をプロットする呼び出し。 
+現在のデータセットを修正し、関数をプロットする呼び出し。
 
 *EEG.history*は、
 EEGLABでは、バイナリデータセット(for)をインポートします。
@@ -250,7 +250,7 @@ MATLAB の機能 *path.m* と *addpath.m* は MATLAB です。
 3.  *\>\>\>EEG.history* のコマンドをコピーします。
     データ処理コマンド。
 4.  EEGLABメニューへ
-    マトラボ コマンド で
+    MATLAB コマンド で
     新しいデータセットで。
 5.  最後のデータセットが処理されるまで、このように進みます。
 
@@ -274,7 +274,7 @@ eeglab redraw;
 
 ![](/assets/images/eeglab20191.png)
 
--  EEGLAB 
+-  EEGLAB
 ``` matlab
 [ALLEEG EEG CURRENTSET] = eeg_store(ALLEEG, EEG, CURRENTSET);
 eeglab redraw;
@@ -320,7 +320,7 @@ EEGLAB 変数を出力する。 対象外
 変数を継承する、EEGLAB関数() は、 [eeglab.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m) 呼び出しは他の何も変更しません
 MATLABワークスペース(EEGLABグローバル変数)[pop_loadset.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_loadset.m)) データセットを
 *EEG* および[eeg_store.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_store.m)) ストア
-*ALLEEG*ファイルデータセット 
+*ALLEEG*ファイルデータセット
 
 前のセクションで示されているスクリプトの種類は、戻ってくる可能性があり、
 EEGLABのグラフィックとMATLABのコラボレーションで
@@ -371,12 +371,12 @@ EEGLAB ウィンドウが開きます。
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, CURRENTSET,'overwrite', 'on');
 ```
 
-変更された構造を保持するために新しいデータセットを作成する場合は、 
+変更された構造を保持するために新しいデータセットを作成する場合は、
 使用:
 
 ``` matlab
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, CURRENTSET);
-``` 
+```
 
 *CURRENTSET* は新しい番号セットです。
 EEGLABは、
@@ -421,32 +421,13 @@ user-added フィールドに格納されます。
 EEG.analysis_priority = 1;
 ```
 
-このページの先頭へ 現在のEEGデータセット、ALLEEG:すべての読み込みEEGデータセットの配列、現在のデータセットの構成 LASTCOM: EEGLABメニューから発行された最終コマンド; ALLCOM: EEGLABメニューから発行されたすべてのコマンド: EEGLABグループ CRENURTSTUDY: EEGLABグループ解析が0の場合、グループ解析は1EGLABの場合)。
-EEGLAB は、グローバル変数の定義です。
-コマンドラインからアクセス可能ですが、グローバルでは利用できません。
-EEGLAB の変数です。
-主要な 相互 相互 EEGLABの機能 [eeglab.mの](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab.m) (その他)
-display)関数 は、
-入力パラメータは、グローバル変数にアクセスしたり変更したりしません。
-望ましくない 'サイド 最小チャンス へ。
-データセットのエフェクト
+主なEEGLAB変数には、現在のEEGデータセットを保持する`EEG`、読み込み済みデータセットの配列である`ALLEEG`、現在のデータセット番号を示す`CURRENTSET`、EEGLABメニューから発行された最後のコマンド`LASTCOM`、すべてのメニューコマンドを保持する`ALLCOM`があります。グループ解析では、`STUDY`と`CURRENTSTUDY`も使われます。これらの変数はコマンドラインからアクセスできますが、主要なEEGLAB関数は通常、入力引数としてデータを受け取り、不要な副作用を避けるためにグローバル変数を直接変更しません。
 
 基本的なスクリプト例
 ------------------------
-EEGLABが保存済みか、LongEEGLAB MATLABが管理および実行
-そもそもそも、 EEGLAB の処理を実践する
-EEGLABメニューからEEGLABコマンド履歴書、再実行
-保存されたファイル。 MATLABは、実行する手順を説明します。
-手動で。
+EEGLABのコマンド履歴を保存しておくと、EEGLABメニューで実行した処理をMATLABスクリプトとして再実行できます。これにより、手動操作を再現可能なコードに変換できます。
 
-以下は、メインの最初のいくつかのステップの次の例です。
-パート から パート まで
-データセットで実行しなければならない最初の基本的な操作。
-チュートリアルデータセット *eeglab_data.set* と、
-対応するチャンネルファイル *eeglab_chan32.locs*. 追加しました
-コンピュータ と コード
-コメントはありません。 
-EEGLABのストーリーをコピーします。 [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_history.m)このページの先頭へ eegh は、
+以下は、チュートリアルデータセット*eeglab_data.set*と対応するチャネルファイル*eeglab_chan32.locs*を使い、最初に実行する基本的な処理をまとめた例です。コメントを追加して、各ステップが何を行うかを明確にしています。EEGLAB履歴の確認には、[eeglab_history.m](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_history.m)や`eegh`関数も利用できます。
 
 
 
@@ -471,7 +452,7 @@ EEG.chanlocs=pop_chanedit(EEG.chanlocs, 'load',{ fullfile(eeglab_path, 'sample_d
 [ALLEEG EEG CURRENTSET ] = eeg_store(ALLEEG, EEG);
 
 % High pass filter the data with cutoff frequency of 1 Hz.
-EEG = pop_eegfilt( EEG, 1, 0, [], [0]); 
+EEG = pop_eegfilt( EEG, 1, 0, [], [0]);
 
 % Below, create a new dataset with the name filtered Continuous EEG Data
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, CURRENTSET, 'setname', 'filtered Continuous EEG Data');% Now CURRENTSET= 2
@@ -508,14 +489,14 @@ eeglab_path = fileparts(which('eeglab.m'));
 pop_editoptions( 'option_storedisk', 0);
 EEG = pop_loadset( 'eeglab_data.set', fullfile(eeglab_path, 'sample_data')); % We modified the path manually here
 EEG.chanlocs=pop_chanedit(EEG.chanlocs, 'load',{ fullfile(eeglab_path, 'sample_data', 'eeglab_chan32.locs'), 'filetype', 'autodetect'});
-EEG = pop_eegfilt( EEG, 1, 0, [], [0]); 
+EEG = pop_eegfilt( EEG, 1, 0, [], [0]);
 EEG = pop_reref( EEG, [], 'refstate',0);
 EEG.comments = pop_comments(EEG.comments,'','Dataset was highpass filtered at 1 Hz and rereferenced.',1);
 EEG = pop_epoch( EEG, { 'square' }, [-1 2], 'newname', 'Continuous EEG Data epochs', 'epochinfo', 'yes');
 EEG = pop_rmbase( EEG, [-1000 0]);
 EEG.comments = pop_comments(EEG.comments,'','Extracted ''square'' epochs [-1 2] sec, and removed baseline.',1);
 [ALLEEG EEG CURRENTSET] = eeg_store(ALLEEG, EEG, 1);
-eeglab redraw 
+eeglab redraw
 ```
 
 EEGLABに対応しています。
@@ -539,7 +520,7 @@ EEG = eeg_retrieve(ALLEEG, 1); CURRENTSET = 1;
 ErPのスカルプマップを0msから500msまで作成可能 [pop_topoplot.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_topoplot.m) EEGLABの歴史 EEGLAB では、このコマンドをロードする、 [詳しくはこちら](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeglab_history.m).
 
 ``` matlab
-%% Plot ERP maps 
+%% Plot ERP maps
 % Every 100 ms from 0 ms to 500 ms [0:100:500]
 % Plot marks showing the locations of the electrodes on the scalp maps.
 pop_topoplot(EEG,1, [0:100:500] , 'ERP scalp topographies',[2:3] ,0, 'electrodes', 'on');
@@ -561,7 +542,7 @@ pos = round(eeg_lat2point(times/1000, 1, EEG.srate, [EEG.xmin EEG.xmax]));
 % See the event tutorial for more information on processing latencies
 mean_data = mean(EEG.data(:,pos,:),3);
 
-% Average over all trials in the desired time window (the third dimension of 
+% Average over all trials in the desired time window (the third dimension of
 % EEG.data allows to access different data trials). See tutorial about data structures
 maxlim = max(mean_data(:));
 minlim = min(mean_data(:));

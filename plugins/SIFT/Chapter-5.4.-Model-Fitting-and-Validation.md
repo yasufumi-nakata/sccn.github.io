@@ -5,7 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-5.4.-Model-Fitting-and-Validation
-nav_title: "Chapter-5.4.-モデル-フィッティングと検証"
+nav_title: "第5.4章 モデルフィッティングと検証"
 long_title: Chapter-5.4.-Model-Fitting-and-Validation
 ---
 データの処理が完了したら、**Model Fittingに進みます。
@@ -39,7 +39,7 @@ Schlögl(2006年)。 この例では Vieira-Morf アルゴリズムを使用し�
 oscillation は情報の流れを適切にモデル化し、
 私たちのNyquistまでの関心(デルタ)の最も低い周波数帯から
 128のHzの頻度。より多くののための理論セクションに相談して下さい
-適切なウィンドウの長さを選択するための詳細。 
+適切なウィンドウの長さを選択するための詳細。
 
 セクションに記載されている情報基準の1つ以上を計算する
 3.5. モデルの注文の範囲に(*p)<sub>ツイート</sub>* まで
@@ -103,7 +103,7 @@ VAR\[*p]<sub>マックス</sub>※\) モデル、ノイズコワランスの更�
 
 <img src="https://latex.codecogs.com/svg.latex?{ {M}^{2} }p\le \left( \frac{1}{10} \right)NW">
 
-または、等しく、 
+または、等しく、
 
 <img src="https://latex.codecogs.com/svg.latex?W\ge 10\left( \frac{ { {M}^{2} }p}{N} \right)">
 
@@ -222,7 +222,7 @@ EEG = pop_est_fitMVAR(EEG);
 GUI を使いたくない場合は、コマンドラインから以下のように実行できます。
 
 ```matlab
-EEG = pop_est_fitMVAR( EEG, 'nogui', 'Algorithm', 'Vieira-Morf', 'ModelOrder', 15, 'WindowLength', 0.4, 'WindowStepSize', 0.01, 'verb', 1); 
+EEG = pop_est_fitMVAR( EEG, 'nogui', 'Algorithm', 'Vieira-Morf', 'ModelOrder', 15, 'WindowLength', 0.4, 'WindowStepSize', 0.01, 'verb', 1);
 ```
 
 各条件ではVAR\[15\]モデルが適合します。

@@ -6,7 +6,7 @@ long_title: MATLAB tutorial
 parent: Reference Topics
 grand_parent: Tutorials
 ---
-Matlab チュートリアル
+MATLAB チュートリアル
 ===
 
 EEGLABのソリューション
@@ -18,18 +18,18 @@ MATLABデータ構造を操作する
 
 MathWorksは、MATLABのオンラインコースです。
  「MATLAB ONramp」を1〜2倍に導入
-  MATLABプログラミング 
-  
-MATLABのランプ: 
+  MATLABプログラミング
+
+MATLABのランプ:
 - フォロー [MATLABアカデミー](https://matlabacademy.mathworks.com/)
-- または、MATLAB は、 メニュー 
+- または、MATLAB は、 メニュー
 
 MathWorksをフォローする
- 無料で作成できるアカウント [詳しくはこちら](https://www.mathworks.com/mwaccount/register). 
+ 無料で作成できるアカウント [詳しくはこちら](https://www.mathworks.com/mwaccount/register).
 
 
 ## MATLABの特徴
-また、MATLABのヘルプやドキュメントも受け付けております。 
+また、MATLABのヘルプやドキュメントも受け付けております。
 以下のデモを実行し、次のヘルプセクションを読むことをお勧めします。
 
 MATLABヘルプ, チュートリアル4

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: std_dipoleDensity
-nav_title: "std_dipole密度"
+nav_title: "std_dipoleDensity"
 long_title: std_dipoleDensity
 parent: Plugins
 render_with_liquid: false
@@ -18,9 +18,9 @@ nav_order: 23
 研究セット内のダイポールクラスターの可視化ツール。 この機能
 選択したクラスターの3つの異なる視覚化を提示します
 脳全体の分布をよりよく理解する(クラスター)
-すでに計算されている必要があります。 
+すでに計算されている必要があります。
 
-EEGLABスタディプロットからダイポール密度を直接プロットすることも可能です。 しかし、このプラグインは追加の機能を提供します。 
+EEGLABスタディプロットからダイポール密度を直接プロットすることも可能です。 しかし、このプラグインは追加の機能を提供します。
 
 インターフェイスはここに示されます:
 
@@ -204,5 +204,4 @@ Gaussian カーネルのサイズは Gaussian の sigma から変更されまし
 *MNIのCentroid:\[-29-69 8\]*
 *標準偏差:\[ 8 15 16 \] * 必須
 *標準誤差 : \[ 2 4 5 \] * 必須
-
 

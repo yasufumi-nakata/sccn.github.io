@@ -100,7 +100,7 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 
 
 ウェアラブルEEG計測システム実証・ディスカッション(広島県広島大学・吉本修介、大阪大学)
- COI次世代研究者共同研究基金(H29W03)を日本科学技術振興機構より取得 
+ COI次世代研究者共同研究基金(H29W03)を日本科学技術振興機構より取得
 
 <span style="color: green">ピクニックランチとハイキング。</span>
 
@@ -133,7 +133,7 @@ EEGと関連する高度な分析を実行するためのEEGLABリンクツー�
 
 **一般線形モデリングと統計の継続* * 必須
 
-<span style="color: orange">14:15～14:45～ LIMO EEGLABプラグイン(Arnaud Delorme)を使用して、一般的なリニアモデルをEEGデータに適用する理論と実践</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/limo_japan_2017.pdf)
+<span style="color: orange">14:15～14:45～ LIMO EEGLABプラグイン(Arnaud Delorme)を使用して、一般的な線形モデルをEEGデータに適用する理論と実践</span> [PDF](https://sccn.ucsd.edu/githubwiki/files/limo_japan_2017.pdf)
 
 <span style="color: orange">14:45 – 15:15 -- LIMO と EEGLAB の練習 (Arnaud Delorme)</span>
 

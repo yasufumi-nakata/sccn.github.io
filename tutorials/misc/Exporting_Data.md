@@ -9,7 +9,7 @@ grand_parent: Tutorials
 データのエクスポート
 ================
 
-リファレンス では では
+このページでは、EEGLABからデータ、重み行列、イベント情報をエクスポートする方法を説明します。
 
 <details open markdown="block">
   <summary>
@@ -24,15 +24,15 @@ grand_parent: Tutorials
 以下のエクスポート形式がサポートされています。
 
 -  ASCII テキスト、.txt、.csv
--  EEGデータ: European Data Format（16ビット）、.edf 
--  EEGデータ:バイオセミ、.bdf  
--  EEGデータ: BIOSIG、.gdf  
--  脳の検光子、.dat、.vhdr、.vmrk 
+-  EEGデータ: European Data Format（16ビット）、.edf
+-  EEGデータ:バイオセミ、.bdf
+-  EEGデータ: BIOSIG、.gdf
+-  脳の検光子、.dat、.vhdr、.vmrk
 -  MFF EGIのフォーマット、.mff
 -  EEGデータ:Neuroscan .cnt (β)
--  アメリカ: ASCII テキスト、.txt               
--  ASCIIのテキスト、.txt               
--   ASCIIのテキスト、.txt               
+-  アメリカ: ASCII テキスト、.txt
+-  ASCIIのテキスト、.txt
+-   ASCIIのテキスト、.txt
 -  サポートされているデータフォーマットに関する詳細情報は [BIOSIGについて](http://biosig.sourceforge.net/) を参照してください。
 
 
@@ -42,7 +42,7 @@ grand_parent: Tutorials
 ### ASCII は、
 
 EEGLAB メニュー ASCIIファイルとして
-<span style="color: brown">テキストファイルデータとICAのチュートリアル</span>. 
+<span style="color: brown">テキストファイルデータとICAのチュートリアル</span>.
 ファイル名: *mydata.txt*
 。
 デフォルトでは、各行(4番目のチェックボックス)に電極ラベルが保存され、
@@ -113,10 +113,7 @@ EEGLABメニューの項目は、EEGの形式に分けられます。
 ディスク上のテキストファイルでは、重量行列が含まれています。
 メニュー項目別々にEEGLABデータセットが再発行されます
 <span style="color: brown">編集 → データセット情報</span> 以下に示すように、
-* の の の
-空に来たら、空に空に飛んでください。
-チュートリアル:(/tutorials/06_RejectArtifacts/RunICA.html)
-球および重量のマトリックスの細部。
+ICA重み行列や球面化行列の詳細については、[ICAチュートリアル](/tutorials/06_RejectArtifacts/RunICA.html)を参照してください。
 
 ![](/assets/images/Pop_editset.gif)
 
@@ -137,8 +134,8 @@ Open, Open, Open, Open Calc、Microsoft では、
 
 ![](/assets/images/Spreadsheet_event.png)
 
-エクスポートオプションをもっとコントロールしたい場合は、コマンドラインバージョンのコマンド・ライン・バージョンを使用する必要があります。 [pop_expevents.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_expevents.m) 機能。 代替手段 
-機能, [eeg_eventtable.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_eventtable.m)、でき事を輸出するための付加的な選択があります。
+エクスポートオプションをもっとコントロールしたい場合は、コマンドラインバージョンのコマンド・ライン・バージョンを使用する必要があります。 [pop_expevents.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_expevents.m) 機能。 代替手段
+機能, [eeg_eventtable.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=eeg_eventtable.m)、でき事をエクスポートするための付加的な選択があります。
 
 STUDY 結果のエクスポート
 ---

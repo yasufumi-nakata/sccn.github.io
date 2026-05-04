@@ -5,10 +5,10 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-8.-Conclusions-and-Acknowledgements
-nav_title: "第8章-結論と謝辞"
+nav_title: "第8章 結論と謝辞"
 long_title: Chapter-8.-Conclusions-and-Acknowledgements
 ---
-このチュートリアルでは、新しいオープンソース(Matlab-based)を導入しました。
+このチュートリアルでは、新しいオープンソース(MATLAB-based)を導入しました。
 電気生理学的情報の流れの分析のためのtoolbox、
 EEGLAB環境用のプラグインとして機能します。
 ベクトル自動回帰(VAR)モデルフィッティングの理論的根拠

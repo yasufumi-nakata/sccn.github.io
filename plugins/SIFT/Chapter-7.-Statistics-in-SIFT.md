@@ -5,7 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-7.-Statistics-in-SIFT
-nav_title: "第7章-統計-in-SIFT"
+nav_title: "第7章 SIFTでの統計"
 long_title: Chapter-7.-Statistics-in-SIFT
 ---
 情報の流れやニューラルの注意点を推測するとき
@@ -78,7 +78,7 @@ estimator は、推定値の推定値を計算することができます。
 再サンプル数が無限に近づくにつれて、ブートストラップ
 分布は、データの真の分布にアプローチします。収束速度は、データの性質上大きく左右されますが、ルール
 の親指は250-1000再サンプルが一般に農産物に十分であるということです
-配布物の合理的な見積もり。 
+配布物の合理的な見積もり。
 
 ### 7.2.2. フェーズランダム化
 
@@ -104,7 +104,7 @@ hermitian および (b) 代理スペクトルの実質の部品は同一です
 多変量的時間シリーズ、任意の観察された情報の流れを代理
 データセットはチャンスのために必要です。 したがって、推定者の値
 より大きい, 言う, null 分布の値の 95% は、
-5% レベル (p < 0.05) で重要な。 
+5% レベル (p < 0.05) で重要な。
 
 重要なのは、上記のテスト(分析と代理の両方)のみです。
 同様に重要なテスト、従って、共同テストするとき
@@ -112,31 +112,31 @@ hermitian および (b) 代理スペクトルの実質の部品は同一です
 時間頻度のイメージ)、私達は少数の重要でない少数を期待します
 重要なしきい値を超える値。 こんなに重要なのは、
 False Discoveryのようなテストを使用して複数の比較のために正しい
-料金(FDR) (Benjamini、Hochberg、1995) EEGLABの**使用`fdr()`**機能。 
+料金(FDR) (Benjamini、Hochberg、1995) EEGLABの**使用`fdr()`**機能。
 
 ## 7.3. SIFTにおける実用的な統計
 
 モデルがフィットし、コネクティビティが計算されたら、私たちはしばしば
 データセットの統計を計算したい 上記と述べた通り、これにはいくつかのアプローチを使用してSIFTで達成することができます。
 アシンプトティック分析試験(PDC、RPDC、DTF対策用)
-代理統計(bootstrapping、位相ランダム化)。 
+代理統計(bootstrapping、位相ランダム化)。
 
 ### 7.3.1. SIFT ネイティブ機能
 
-SIFT統計機能はコマンドラインからのみ利用できます。 これらの機能の助けを借りて、それらを使用する方法を見てみましょう。 
+SIFT統計機能はコマンドラインからのみ利用できます。 これらの機能の助けを借りて、それらを使用する方法を見てみましょう。
 
 ```matlab
 % Analytic stats
 EEG = pop_stat_analyticStats(EEG);
 
-% Generate surrogate distribution 
+% Generate surrogate distribution
 EEG = pop_stat_surrogateGen(EEG);
 
-% Compute stats on the surrogate distribution 
+% Compute stats on the surrogate distribution
 EEG = pop_stat_surrogateStats(EEG);
 ```
 
-**EEG.CAT.Stats** 構造は、これらの関数によって計算された統計を保存し、**TimeFreqGrid** および**Brainmovie** 関数が以前の機能で使用できるはずです。 統計を計算する他の関数の**SIFT/stats**フォルダを参照してください。 これらの関数のほとんどは進行中の作業であり、終了しませんでした。そのため、SIFTメニューには含まれていません。 
+**EEG.CAT.Stats** 構造は、これらの関数によって計算された統計を保存し、**TimeFreqGrid** および**Brainmovie** 関数が以前の機能で使用できるはずです。 統計を計算する他の関数の**SIFT/stats**フォルダを参照してください。 これらの関数のほとんどは進行中の作業であり、終了しませんでした。そのため、SIFTメニューには含まれていません。
 
 ### 7.3.2. SIFT接続構造で動作する
 
@@ -145,7 +145,7 @@ EEG = pop_stat_surrogateStats(EEG);
 ```
 >> EEG(1).CAT.Conn
 
-ans = 
+ans =
 
   struct with fields:
 
@@ -174,13 +174,13 @@ ans =
 EEG = pop_pre_prepData(EEG, 'nogui', 'SignalType',{'Components'}, 'NormalizeData', {'Method' {'time'  'ensemble'} }, 'verb', 1);
 
 % fit AR model
-EEG = pop_est_fitMVAR( EEG, 'nogui', 'Algorithm', 'Vieira-Morf', 'ModelOrder', 15, 'WindowLength', 0.4, 'WindowStepSize', 0.01, 'verb', 1); 
+EEG = pop_est_fitMVAR( EEG, 'nogui', 'Algorithm', 'Vieira-Morf', 'ModelOrder', 15, 'WindowLength', 0.4, 'WindowStepSize', 0.01, 'verb', 1);
 
 % Compute connectivity
-EEG = pop_est_mvarConnectivity( EEG, 'nogui', 'ConnectivityMeasures', {'Coh' 'S'}, 'freqs', [2:50], 'verb', 1); 
+EEG = pop_est_mvarConnectivity( EEG, 'nogui', 'ConnectivityMeasures', {'Coh' 'S'}, 'freqs', [2:50], 'verb', 1);
 ```
 
-その後、ブーツトラップ接続を補正し、ランダムなファッションと再コンパイル接続でデータ試用を繰り返し選択できます。
+その後、データ試行をランダムに再サンプリングしてコネクティビティを再計算することで、コネクティビティ推定値をブートストラップできます。
 
 ```matlab
 % Bootstrap data trials and repeat 100 times, assuming you have already preprocessed data from the GUI
@@ -188,8 +188,8 @@ allCoh = cell(1,100);
 parfor iAccu = 1:100
      EEGTMP = EEG(1);
      EEGTMP.CAT.srcdata = EEG(1).CAT.srcdata(:,:,ceil(rand(1,EEG(1).trials)*EEG(1).trials)); % randomly select data epochs
-     EEGTMP = pop_est_fitMVAR( EEGTMP, 'nogui', 'Algorithm', 'Vieira-Morf', 'ModelOrder', 15, 'WindowLength', 0.4, 'WindowStepSize', 0.01, 'verb', 1); 
-     EEGTMP = pop_est_mvarConnectivity( EEGTMP, 'nogui', 'ConnectivityMeasures', {'Coh' 'S'}, 'freqs', [2:50], 'verb', 1); 
+     EEGTMP = pop_est_fitMVAR( EEGTMP, 'nogui', 'Algorithm', 'Vieira-Morf', 'ModelOrder', 15, 'WindowLength', 0.4, 'WindowStepSize', 0.01, 'verb', 1);
+     EEGTMP = pop_est_mvarConnectivity( EEGTMP, 'nogui', 'ConnectivityMeasures', {'Coh' 'S'}, 'freqs', [2:50], 'verb', 1);
      allCoh{iAccu} = EEGTMP.CAT.Conn.Coh;
 end
 cohConcat = cat(5, allCoh{:}); % concatenate along 5th dim
@@ -233,10 +233,10 @@ parfor iAccu = 1:100
      allDataShuffled = shuffle(allTrials,3);
      EEGTMP1 = EEG(1); EEGTMP1.CAT.srcdata = allDataShuffled(:,:,1:EEGTMP1.trials); % randomly select data epochs
      EEGTMP2 = EEG(2); EEGTMP2.CAT.srcdata = allDataShuffled(:,:,EEGTMP1.trials+1:end); % Second dataset contains all the other epochs
-     EEGTMP1 = pop_est_fitMVAR( EEGTMP1, 'nogui', 'Algorithm', 'Vieira-Morf', 'ModelOrder', 15, 'WindowLength', 0.4, 'WindowStepSize', 0.01, 'verb', 1); 
-     EEGTMP2 = pop_est_fitMVAR( EEGTMP2, 'nogui', 'Algorithm', 'Vieira-Morf', 'ModelOrder', 15, 'WindowLength', 0.4, 'WindowStepSize', 0.01, 'verb', 1); 
-     EEGTMP1 = pop_est_mvarConnectivity( EEGTMP1, 'nogui', 'ConnectivityMeasures', {'Coh' 'S'}, 'freqs', [2:50], 'verb', 1); 
-     EEGTMP2 = pop_est_mvarConnectivity( EEGTMP2, 'nogui', 'ConnectivityMeasures', {'Coh' 'S'}, 'freqs', [2:50], 'verb', 1); 
+     EEGTMP1 = pop_est_fitMVAR( EEGTMP1, 'nogui', 'Algorithm', 'Vieira-Morf', 'ModelOrder', 15, 'WindowLength', 0.4, 'WindowStepSize', 0.01, 'verb', 1);
+     EEGTMP2 = pop_est_fitMVAR( EEGTMP2, 'nogui', 'Algorithm', 'Vieira-Morf', 'ModelOrder', 15, 'WindowLength', 0.4, 'WindowStepSize', 0.01, 'verb', 1);
+     EEGTMP1 = pop_est_mvarConnectivity( EEGTMP1, 'nogui', 'ConnectivityMeasures', {'Coh' 'S'}, 'freqs', [2:50], 'verb', 1);
+     EEGTMP2 = pop_est_mvarConnectivity( EEGTMP2, 'nogui', 'ConnectivityMeasures', {'Coh' 'S'}, 'freqs', [2:50], 'verb', 1);
      allCoh{iAccu} = EEGTMP1.CAT.Conn.Coh - EEGTMP2.CAT.Conn.Coh;
 end
 cohConcat = cat(5, allCoh{:}); % concatenate along 5th dim
@@ -274,7 +274,7 @@ vis_TimeFreqGrid('EEG', EEGTMP, 'Conn', EEGTMP.CAT.Conn, 'MatrixLayout', {'Parti
 認知実験は通常、コホート全体で行われます
 参加者は、差分を特徴付けるのに便利です。
 個人のためのグループ内との間の脳ネットワーク活動
-異なった条件。 
+異なった条件。
 
 そのような分析は、
 scalp チャネルで解析を実行すると比較的単純に、
@@ -286,9 +286,9 @@ scalp チャネルで解析を実行すると比較的単純に、
 他のすべての場所で観察された複数のソースを展示しない
 参加者 これらを考慮に入れない場合 *missing
 変数*は、平均の偏差推定値を取得する危険性があります。
-被写体人口を越えた接続。 この行方不明変数
+被験者集団を越えた接続。 この行方不明変数
 問題は統計学でよく知られ、いくつかのアプローチはありました
-これに対処するための提案。 
+これに対処するための提案。
 
 現在、ソースのグループ分析
 ドメインは 2 つの方法を使用して可能です: disjoint クラスタリング, これを行う
@@ -300,16 +300,16 @@ scalp チャネルで解析を実行すると比較的単純に、
 
 ### 7.4.1. クラスタリング解除
 
-上記のように、ユーザーは**EEGに保存されている接続マトリックスをエクスポートする必要があります。 CAT。 Conn** 構造と外部ソフトウェアを使用して、意義を計算します。 
+上記のように、ユーザーは**EEGに保存されている接続マトリックスをエクスポートする必要があります。 CAT。 Conn** 構造と外部ソフトウェアを使用して、意義を計算します。
 
 このアプローチは3段階のプロセスを採用しています。
 
 **1. K ROI(クラスター)を特定する。** ソースの親和性クラスタリングを使うことができます
-EEGLABの計測製品クラスタを使用して、被写体人口を越える。
+EEGLABの計測製品クラスタを使用して、被験者集団を越える。
 
 **2. 個別に統計的にすべての着信および発信を計算する
-ROIの各ペア間の重要な接続。** そのためには、2つのクラスター間の接続ごとに、被写体全体に重要な場合は、\[ K X K] を作成します。
-\[x freq x 時間 \] \] グループ接続行列。 接続の一部のペアは、他のものよりも多くの被写体を持っているかもしれません。 ユーザーは、すべての被験者に対して大きなコネクティビティマトリクスを構築し、NaNsといくつかの被験者におけるコネクションを交換し、LIMOを使用して計算統計(LIMOはNaNsを処理できる)に使うことができることに注意してください。
+ROIの各ペア間の重要な接続。** そのためには、2つのクラスター間の接続ごとに、被験者全体に重要な場合は、\[ K X K] を作成します。
+\[x freq x 時間 \] \] グループ接続行列。 接続の一部のペアは、他のものよりも多くの被験者を持っているかもしれません。 ユーザーは、すべての被験者に対して大きなコネクティビティマトリクスを構築し、NaNsといくつかの被験者におけるコネクションを交換し、LIMOを使用して計算統計(LIMOはNaNsを処理できる)に使うことができることに注意してください。
 
 **3. SIFTの視覚化のルーチンを使用して結果を視覚化して下さい。 メニュー
 この方法は、被験者がいないときに低統計力に苦しむ

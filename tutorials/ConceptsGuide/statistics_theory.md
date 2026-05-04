@@ -80,7 +80,7 @@ Permutationテストは置換なしでデータをシャッフルし、
 EEGLAB の解析
 -----------------------------------------
 EEGLAB は、パラメトリックテスト（ペアのt検定など）を実行します。
-ERPs、スペクトラ、ERSPs、ICCs は、対応なしt検定やANOVAで解析できます。 
+ERPs、スペクトラ、ERSPs、ICCs は、対応なしt検定やANOVAで解析できます。
 
 詳しくはこちら
 ソースレベルの解析では、代わりにソース推定値が使用されます。
@@ -101,7 +101,7 @@ EEGLAB関数は、置換検定（permutation test）を計算します。帰無�
 <span style="color: red"> a1, a2, a3, ... a15</span>, スカルプ
 各被験者のスカルプチャンネルマップを
 最初の条件、および <span style="color: green">b1、b2、b3、b15</span>,
- 2つの条件のERP値。 
+ 2つの条件のERP値。
 
  条件が異なるので、
 >
@@ -202,14 +202,14 @@ FieldTrip と LIMO -- は、最大、クラスター、および TFCE メソッ�
 -   <b>クラスタメソッド:</b> クラスターメソッドも利用できます
     統計情報(未修正)
 
--   <b>Threshold's は、次のようにします。</b> TFCE メソッドは、EEGLAB LIMO でのみ有効です。 
+-   <b>Threshold's は、次のようにします。</b> TFCE メソッドは、EEGLAB LIMO でのみ有効です。
 
-EEGLABのこだわり 
+EEGLABのこだわり
 ----------------------------------
 
 複雑な設計では、設計行列をこのように構築することも可能です。
 特許出願中
-パラメータに合った一般的なリニアモデル。 参照: [LIMOシリーズ](https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2Vrzte9ul3nrrG8AgB5OkU) EEGLABとEEGLABは、EEGLABとEEEGLABを融合し、 [LIMOツールボックス](https://limo-eeg-toolbox.github.io/limo_meeg/)このサイトでは、JavaScriptを有効にしてご覧ください。
+パラメータに合った一般的な線形モデル。 参照: [LIMOシリーズ](https://www.youtube.com/embed/videoseries?list=PLXc9qfVbMMN2Vrzte9ul3nrrG8AgB5OkU) EEGLABとEEGLABは、EEGLABとEEEGLABを融合し、 [LIMOツールボックス](https://limo-eeg-toolbox.github.io/limo_meeg/)このサイトでは、JavaScriptを有効にしてご覧ください。
 
 追加のヒントとリソース
 ---------------------

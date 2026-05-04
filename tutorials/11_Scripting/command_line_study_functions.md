@@ -4,7 +4,7 @@ title: c. Group level
 title: c. Group-level analysis
 nav_title: "c. グループレベルの分析"
 parent: 11. Write scripts
-grand_parent: Tutorials 
+grand_parent: Tutorials
 ---
 EEGLABの解析
 =====
@@ -37,7 +37,7 @@ STUDYをフォローする
 構造。
 
 MATLABは、
-GUI-equi同等主義者 [std_editset.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_editset.m) 
+GUI-equi同等主義者 [std_editset.m は](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_editset.m)
 "5subjects" の使い方 [詳しくはこちら](https://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip)) それからあなたが不圧縮したフォルダへのパスを変更します。 このページで使用されるコードスニペットは、 [._script.m 学習](http://sccn.ucsd.edu/eeglab/locatefile.php?file=study_script.m)
 
 ``` matlab
@@ -58,12 +58,12 @@ GUI-equi同等主義者 [std_editset.m は](http://sccn.ucsd.edu/eeglab/locatefi
         { 'dipselect' 0.15 } });
 ```
 
-上記では、コマンドの各行がデータセットをロードします。 
+上記では、コマンドの各行がデータセットをロードします。
 
 最後の行
 同等のダイポールモデルが15%未満のコンポーネントを選択
 コンポーネントのスカルプマップからの残留分散。
-詳細は std_editset* を参照してください。 
+詳細は std_editset* を参照してください。
 
 データセットへのパスについて
 上のコードは相対パスです。 その後、同じコードを実行する
@@ -71,7 +71,7 @@ snippet,MATLABの現在のディレクトリ,データセットは、現在に�
 
 *STUDY* 構造 (または *STUDY*) は、
 *STUDY* 構造と対応 *ALLEEG* は、
-MATLAB ワークスペースは 
+MATLAB ワークスペースは
 
 タイピング *\>\>
 MATLABの STUDY* は、
@@ -146,7 +146,7 @@ std_plotcurve(erptimes, erpdata, 'plotconditions', 'together', 'plotstderr', 'on
 上記のように、 [std_plotcurve.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_plotcurve.m) 関数は付加的な持っています
 標準的な間違いをプロットする変数はから利用できません
 EEGLABの出力 [std_erpplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m) また、追加で制御することもできます
-ネイティブパラメータ [std_erpplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m) そして、 [pop_erpparams.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpparams.m). 
+ネイティブパラメータ [std_erpplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m) そして、 [pop_erpparams.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_erpparams.m).
 
 
 たとえば、追加通知
@@ -214,7 +214,7 @@ STUDY = std_erspplot(STUDY,ALLEEG,'channels',{TMPEEG.chanlocs(1).labels}, 'subje
 
 統計を計算できる全てのプロット機能は、
 出力中の統計配列。 最初に統計を有効にする必要があります
-グラフィックインターフェイスから、またはコマンドラインコールを使用する。 
+グラフィックインターフェイスから、またはコマンドラインコールを使用する。
 
 条件統計を計算するインスタンスの場合、タイプ:
 
@@ -248,11 +248,11 @@ ERP パラメータ グラフィック インターフェイス で 選択しま
 
 *pgroup* と *pinter* の配列は、グループとグループを構成します。
 ANOVAの利用規約
-あります。 
+あります。
 
 その他の機能など [std_specplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_specplot.m), [std_erspplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erspplot.m)と [std_itcplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_itcplot.m) アクション
 同様の方法(詳細については、関数ヘルプメッセージを参照してください)。 より多くの制御のために、また直接呼ぶことができます注意して下さい [スタコンド。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) は、関数、*erpdata* を セル配列 に あります。
-入力。 
+入力。
 ヘルプメッセージを見る [スタコンド。 m 点](http://sccn.ucsd.edu/eeglab/locatefile.php?file=statcond.m) この件名にもっと役立つ機能(このページの最後に例も参照)。
 
 ### 他のソフトウェアパッケージで処理する結果を保存する
@@ -260,7 +260,7 @@ ANOVAの利用規約
 SPSS、Statistica、Stata、R、SAS、Excelの処理 STUDYを飲む MATLAB は、MATLAB のライセンスをそのまま使用しています。 以下は、 デフォルトではコンマ区の値を格納します。
 
 ``` matlab
-array = erpdata{1}; % or array = rand(100,200); 
+array = erpdata{1}; % or array = rand(100,200);
 dlmwrite('matlabarray1.txt',array,'delimiter', '\t', 'precision', 10); % tab separated values
 xlswrite('matlabarray2.xls',array);
 csvwrite('matlabarray3.csv',array); % comma separated values
@@ -268,7 +268,7 @@ writematrix(array, 'matlabarray4.csv');
 writetable(table(array), 'matlabarray5.csv')
 ```
 
-サイズ750ポイント×13の対象のERPデータに3つの条件をクリアする<i>erpdata</i> 前のセクションで得られた。 3つの条件があると想像してみてください <i>erpdata</i> 'erpfile.txt' は、 
+サイズ750ポイント×13の対象のERPデータに3つの条件をクリアする<i>erpdata</i> 前のセクションで得られた。 3つの条件があると想像してみてください <i>erpdata</i> 'erpfile.txt' は、
 ``` matlab
 [STUDY erpdata erptimes] = std_erpplot(STUDY,ALLEEG,'channels',{ 'FP1'}, 'noplot', 'on');
 dlmwrite('erpfile.txt',squeeze([ erptimes' erpdata{1} ones(size(erpdata{1},1),1)*1 ]),'delimiter', '\t', 'precision', 2);
@@ -284,7 +284,7 @@ dlmwrite('erpfile.txt',squeeze([ erpdata{2,1} ones(size(erpdata{2,1},1),1)*[2 1]
 dlmwrite('erpfile.txt',squeeze([ erpdata{2,2} ones(size(erpdata{2,2},1),1)*[2 2] ]),'-append', 'delimiter', '\t', 'precision', 2);
 ```
 
-被写体をケースとして使用する場合、通常のフォームでデータを保存できます。 <i>erpdata</i> 条件 1 は 750 ポイントと 13 件を含み、長いフォームでデータを保存すると、このように見えます。 このファイルは、2つの列のみ、対象のインデックスの1つと1つが含まれます。
+被験者をケースとして使用する場合、通常のフォームでデータを保存できます。 <i>erpdata</i> 条件 1 は 750 ポイントと 13 件を含み、長いフォームでデータを保存すると、このように見えます。 このファイルは、2つの列のみ、対象のインデックスの1つと1つが含まれます。
 
 ``` matlab
 dlmwrite('erpfile.txt',[ erpdata{1}(:,1) ones(size(erpdata{1},1),1)*1],'delimiter', '\t', 'precision', 2);
@@ -304,7 +304,7 @@ erspdata =
 
     {10×12×71x13 single}
     {10×12×71x13 single}
-    
+
 if exist('erpfile.txt'), delete('erpfile.txt'); end
 for iFreq = 1:10
   for iTime = 1:12
@@ -318,7 +318,7 @@ for iFreq = 1:10
 end
 ```
 
-以下は、保存したファイルの先頭に列名を追加しています。 スクリプトを変更して、自動的に追加することもできます。 これは一例です。 実際の周波数と時間は保存されるだけでなく、交換する <i>erspfreqs(iFreq)</i> そして、 <i>ersptimes(iTime)</i> 上記のスクリプトで。 
+以下は、保存したファイルの先頭に列名を追加しています。 スクリプトを変更して、自動的に追加することもできます。 これは一例です。 実際の周波数と時間は保存されるだけでなく、交換する <i>erspfreqs(iFreq)</i> そして、 <i>ersptimes(iTime)</i> 上記のスクリプトで。
 
 ![ERP data export](https://user-images.githubusercontent.com/1872705/200086058-98a10d7a-27f8-4f60-8bd4-e70d6170f6a6.png)
 
@@ -369,11 +369,7 @@ ICAコンポーネントのクラスタリングについて。 EEGLAB jargon �
 
 ### コンポーネントの前処理とクラスタリング
 
-ICAコンポーネントのクラスタリング、通常は順調に計算します。 
-パワースペクトルのクラスタリングを指定する
-\[3 30\]-Hz 周波数範囲、\[100 600\]-ms ウィンドウタイム ERP、
-このページの先頭へ
-上記のデフォルト値、タイプ:
+ICAコンポーネントのクラスタリングでは、通常、パワースペクトル、ERP、ERSPなどの測定値を事前計算します。ここでは、\[3 30\] Hzの周波数範囲、\[100 600\] msのERP時間窓、および上記のデフォルト値を指定する例を示します。
 
 ``` matlab
 >> [STUDY ALLEEG] = std_preclust(STUDY, ALLEEG, 1,...
@@ -409,15 +405,15 @@ ICAコンポーネントのクラスタリング、通常は順調に計算し�
 >> [STUDY] = pop_clustedit(STUDY, ALLEEG);
 ```
 
-この関数は、プロットするためのさまざまなプロット関数を呼び出します。 
- - scalpのマップ[std_topoplot.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_topoplot.m)), 
- - パワースペクトル ( )[std_specplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_specplot.m)), 
- - 同等のダイポール (等価ダイポール)[std_dipplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_dipplot.m)), 
- - ERPsについて[std_erpplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m)), 
- - ERSPs()[std_erspplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erspplot.m)), 
- - ITCs(イッツ)[std_itcplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_itcplot.m)). 
+この関数は、プロットするためのさまざまなプロット関数を呼び出します。
+ - scalpのマップ[std_topoplot.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_topoplot.m)),
+ - パワースペクトル ( )[std_specplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_specplot.m)),
+ - 同等のダイポール (等価ダイポール)[std_dipplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_dipplot.m)),
+ - ERPsについて[std_erpplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erpplot.m)),
+ - ERSPs()[std_erspplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_erspplot.m)),
+ - ITCs(イッツ)[std_itcplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_itcplot.m)).
 
-これらの関数のすべてが同じ呼び出し形式に従う (ただし) [std_dipplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_dipplot.m) 若干異なります。ヘルプメッセージを参照してください。 
+これらの関数のすべてが同じ呼び出し形式に従う (ただし) [std_dipplot.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_dipplot.m) 若干異なります。ヘルプメッセージを参照してください。
 機能の使用 [std_topoplot.m の使い方](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_topoplot.m) 例として、次のコードがプロットされます。
 クラスターの平均スカルプマップ2:
 
@@ -456,9 +452,9 @@ STUDYのカスタム対策をSTUDYで計算します。 [std_precomp.m は、](h
 機能、 [std_precomp.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) 関数は便利なようにデータセットの修飾語を適用します
 *rmclust*、*rmicacomps* か*interp* は、
 カスタムパラメータ *カスタムパラメータ
-カスタム機能へのパラメーター。 
+カスタム機能へのパラメーター。
 
-まず関数を呼び出します [std_precomp.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) 変換された単一致命的なデータを格納する。 例えば、ベースライン(820のうち1～410のデータサンプル)を外します。 単一のトライアルを変更したくない場合は、後で説明するように読み込みます。 
+まず関数を呼び出します [std_precomp.m は、](http://sccn.ucsd.edu/eeglab/locatefile.php?file=std_precomp.m) 変換された単一致命的なデータを格納する。 例えば、ベースライン(820のうち1～410のデータサンプル)を外します。 単一のトライアルを変更したくない場合は、後で説明するように読み込みます。
 
 ```matlab
 std_precomp(STUDY, ALLEEG, 'channels', 'customfunc', @(data)bsxfun(@minus, data, mean(data(:,1:410,:),2)), 'interp', 'on');
@@ -549,4 +545,3 @@ res = statcond(erpdata); size(res)
 ans =
    820    61
 ```
-

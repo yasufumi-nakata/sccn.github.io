@@ -5,14 +5,14 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Chapter-1.-Downloads
-nav_title: "Chapter-1.-ダウンロード"
+nav_title: "第1章 ダウンロード"
 long_title: Chapter-1.-Downloads
 ---
 ## SIFT ダウンロード
 
 SIFT リリースは、以下からダウンロードできます。
 
-SIFTをインストールできます。 [EEGLABエクステンションマネージャー](https://eeglab.org/others/EEGLAB_Extensions.html) (またセクション 5.1 参照して下さい。)                                                                                                                                                                                                                                                                                           
+SIFTをインストールできます。 [EEGLABエクステンションマネージャー](https://eeglab.org/others/EEGLAB_Extensions.html) (またセクション 5.1 参照して下さい。)
 
 <table>
 <tbody>

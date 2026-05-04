@@ -5,7 +5,7 @@ grand_parent: Plugins
 render_with_liquid: false
 
 title: Using-the-Open-EEGLAB-Portal
-nav_title: "使い方-Open-EEGLAB-Portal"
+nav_title: "Open EEGLAB Portalの使い方"
 long_title: Using-the-Open-EEGLAB-Portal
 ---
 Open EEGLAB Portal を使用するには、NSG Web インターフェイスを介して 2 つのアプローチがあります。http://www.NSGportal.org)、またはNSGコマンドラインRESTfulインターフェイス(NSG-R)の使用によって。 このセクションでは、Webインターフェイスの使用について説明します。
@@ -65,7 +65,7 @@ NSGポータルにログインします。 ログインすると、EEGLABスク�
 <img src="https://github.com/nucleuscub/pop_nsg_wiki/blob/master/docs/img/500px-NSG7.png?raw=true" alt="drawing" width="500"/>
 </center>
 
-タスクの出力、タスクの結果を含むzipファイルをダウンロードできるようになりました。 出力ファイル(以下のリストを参照)には、タスクのMaatlabログとエラーログが含まれます。 スクリプトがデータファイルを保存すると、そこに表示されます。 たとえば、上記のzipファイルとスクリプトを使用する場合、以下(左)は、未入力の出力アーカイブが含まれているものです。 以下の図(右)は、test.mスクリプトで作成した.jpgイメージです。 Matlab .fig 形式の出力画像を保存(.jpg ではなく)、Maatlab に読み込むことができます。 注意: 図内の数値データを .fig ファイル構造から読み込むこともできます。 また、ポストスクリプト(.epsc など)で図を保存することで、それらをIllustratorで編集することができます。
+タスクの出力、タスクの結果を含むzipファイルをダウンロードできるようになりました。 出力ファイル(以下のリストを参照)には、タスクのMATLABログとエラーログが含まれます。 スクリプトがデータファイルを保存すると、そこに表示されます。 たとえば、上記のzipファイルとスクリプトを使用する場合、以下(左)は、未入力の出力アーカイブが含まれているものです。 以下の図(右)は、test.mスクリプトで作成した.jpgイメージです。 MATLAB .fig 形式の出力画像を保存(.jpg ではなく)、MATLAB に読み込むことができます。 注意: 図内の数値データを .fig ファイル構造から読み込むこともできます。 また、ポストスクリプト(.epsc など)で図を保存することで、それらをIllustratorで編集することができます。
 
 Note: 不要な転送時間と労力を節約するために、アップロードされたデータファイル自体は、新しい名前で明示的に保存しない限り、出力で返されません。 将来的には、アップロードされたデータを一時的に保存して再利用することもできます。
 

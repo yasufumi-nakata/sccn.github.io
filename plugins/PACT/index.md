@@ -1,7 +1,7 @@
 ---
 layout: default
 title: PACT
-nav_title: "パクト"
+nav_title: "PACT"
 long_title: PACT
 parent: Plugins
 render_with_liquid: false
@@ -68,15 +68,15 @@ PACTはCircStat(Berens, 2009)を利用しています。 相を計算する
 PACT GUIはどのように見えますか?
 --------------------------------
 
-![thumb\]|400px\|フィギュア 1. 行為 EEGLABメインから見る
+![thumb\]|400px\|図 1. 行為 EEGLABメインから見る
 GUI.(画像/デモ01.jpg)
 
 <i><p style="text-align: center">プロフィール 1。 EEGLABメインGUIから見たPACT。</p></i>
 
-![thumb\]|400px\|フィギュア 2. 主要な
+![thumb\]|400px\|図 2. 主要な
 GUI.(画像/デモ02.jpg)
 
-<i><p style="text-align: center">プロフィール 2. 主要なGUI</p></i> 
+<i><p style="text-align: center">プロフィール 2. 主要なGUI</p></i>
 
 正常にインストールすると、アイテム
 'PACT' は 'Tools' (図1) で表示されるはずです。 現在 12
@@ -100,19 +100,19 @@ GUI.(画像/デモ02.jpg)
     -   フェーズビン数 \[N\]: これは円の感度に影響を与えます
         統計情報 非常に大きな値(例:\>100)を使用しないでください。
 
-![thumb\]|400px\|フィギュア 3. 検出されたHFO (で示される)
+![thumb\]|400px\|図 3. 検出されたHFO (で示される)
 赤).](images/Demo06.jpg)
 
-<i><p style="text-align: center">プロフィール 3. 検出されたHFO(赤)</p></i> 
+<i><p style="text-align: center">プロフィール 3. 検出されたHFO(赤)</p></i>
 
 -   Plot HFO マーク 未加工データ: このプロットは図3のように見えます。
 -   インバーター極性: これは、単純に EEG の極性を反転することです
     -1 をすべてのデータにマルチプライリングします。
 
-![thumb\]|400px\|フィギュア 4。 手動でHFOをマークする。 左、VisEdを使用して。
+![thumb\]|400px\|図 4。 手動でHFOをマークする。 左、VisEdを使用して。
 右、カスタマイズされたMoBILABプロットを使用して。](images/Demo04.jpg)
 
-<i><p style="text-align: center">プロフィール 4。 手動でHFOをマークする。 左、VisEdを使用して。 右、カスタマイズされたMoBILABのプロットを使用して</p></i> 
+<i><p style="text-align: center">プロフィール 4。 手動でHFOをマークする。 左、VisEdを使用して。 右、カスタマイズされたMoBILABのプロットを使用して</p></i>
 
 -   ハンピックHFO(VisEd): 左図4のように見えます。
     マウスクリックでマークポイントを選択します。 詳しい説明
@@ -122,10 +122,10 @@ GUI.(画像/デモ02.jpg)
 -   イベントマーカーをコピー: データセット1からイベントマーカーをコピーする
     データセット 2。
 
-![thumb\]|400px\|フィギュア 5. 統計セット
+![thumb\]|400px\|図 5. 統計セット
 (画像/Demo03.jpg)
 
-<i><p style="text-align: center">図5. 統計設定</p></i> 
+<i><p style="text-align: center">図5. 統計設定</p></i>
 
 -   統計情報の設定: 図5のように見えるGUIを示しています。
 -   Plotの変調の索引: 図7/8のように見えるプロットを示しています
@@ -136,10 +136,10 @@ GUI.(画像/デモ02.jpg)
 -   プロットフェーズソートアンプ: 図7/8のように見えるプロットを示しています
     左下。 各バーは、各フェーズビンの広さを意味します。
 
-![thumb\]|400px\|フィギュア 6. スキャン パラメータ スペースは LFO 段階から成っています
+![thumb\]|400px\|図 6. スキャン パラメータ スペースは LFO 段階から成っています
 周波数とHAS率。](images/Demo05.jpg)
 
-<i><p style="text-align: center">プロフィール 6. 走査変数スペースはLFO段階の頻度およびHAS率から成っています</p></i> 
+<i><p style="text-align: center">プロフィール 6. 走査変数スペースはLFO段階の頻度およびHAS率から成っています</p></i>
 
 -   LFO の freqs をスキャン (非常に遅い!): 図のようなGUIをポップアップ 6. 開始
     N=10前後、HAS率0.3-10 色正規化
@@ -187,7 +187,7 @@ Ch) 病理学的であるべき1信号およびCh2信号は正常です。
 
 ![](images/PACT05Hz.jpg)
 
-<i><p style="text-align: center">図7。 LFO 0.5Hz、HAS 3%、p < 0.01, CI 95%. Top left, LFO-HAS parameter space scan results. Top right, Modulation Index. Bottom left, Mean Resultant Vector Length. Bottom right, phase-sorted HFO amplitudes</p></i> 
+<i><p style="text-align: center">図7。 LFO 0.5Hz、HAS 3%、p < 0.01, CI 95%. Top left, LFO-HAS parameter space scan results. Top right, Modulation Index. Bottom left, Mean Resultant Vector Length. Bottom right, phase-sorted HFO amplitudes</p></i>
 
 図7は、パラメータ(LFO0.5 Hz、HAS 3%)を選択する結果を示しています。 変調指数
 Ch1はCh2よりも大きい。 Ch1値のみが到達
@@ -201,7 +201,7 @@ Ch1はCh2よりも大きい。 Ch1値のみが到達
 効果(図7、右下)。 また、大きな違いも注意してください。
 振幅スケール。
 
-![](images/PACT15Hz.jpg) <i><p style="text-align: center">プロフィール 8. LFO 1.5HzのHAS 1.5%、p < 0.01, CI 95%. Top right, Modulation Index. Bottom left, Mean Resultant Vector Length. Bottom right, Phase-sorted HFO amplitude. Note that the Ch1 Modulation Index is much larger than the confidence interval compared to Figure 7</p></i> 
+![](images/PACT15Hz.jpg) <i><p style="text-align: center">プロフィール 8. LFO 1.5HzのHAS 1.5%、p < 0.01, CI 95%. Top right, Modulation Index. Bottom left, Mean Resultant Vector Length. Bottom right, Phase-sorted HFO amplitude. Note that the Ch1 Modulation Index is much larger than the confidence interval compared to 図 7</p></i>
 
 図8は結果を示しています
 パラメータ(LFO 1.5 Hz、HAS 1.5%)を選択します。 変調指数、平均
@@ -219,9 +219,9 @@ Ch1変調 インデックスは、自信の間隔よりもはるかに大きい
 注意と制限
 ----------------------
 
-「Handpick HFO」メニューは、新しいMaatlabバージョンでは動作しません。
+「Handpick HFO」メニューは、新しいMATLABバージョンでは動作しません。
 *graphics.cursorbar*オブジェクトをサポートしなくなりました。 この機能を使用するには、
-ワークアラウンドとしてMaatlab 2013以上を使用してください。
+ワークアラウンドとしてMATLAB 2013以上を使用してください。
 
 スキャンフェーズ周波数対HFO周波数(07/24/2019更新)
 ---------------------------------------------------------------

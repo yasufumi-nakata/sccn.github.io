@@ -36,7 +36,7 @@ bids-matlab-tools プラグインをインストールした後、BIDS メニュ
 
 ![](bids_task.png)
 
-タスク情報を入力すると、参加者メニューを選択できます。 被写体として多くの行があります。 年齢、性別、グループなど、各科目に年齢、性別、グループなどを指定することができます。 session_id カラムのみが必須で、他のカラムはオプションです。
+タスク情報を入力すると、参加者メニューを選択できます。 被験者として多くの行があります。 年齢、性別、グループなど、各科目に年齢、性別、グループなどを指定することができます。 session_id カラムのみが必須で、他のカラムはオプションです。
 
 ![](participant.png)
 
@@ -51,15 +51,15 @@ bids-matlab-tools プラグインをインストールした後、BIDS メニュ
 
 # コマンドラインからBIDSにデータセットをエクスポートする
 
-データセットをBIDSにエクスポートすることで、コマンドラインから簡単に行えます。 文書化された例のスクリプト [bids_export_example.m](https://github.com/sccn/bids-matlab-tools/blob/master/bids_export_example.m) そして、 [bids_export_example2.m](https://github.com/sccn/bids-matlab-tools/blob/master/bids_export_example2.m) (詳細はこちら) これらのスクリプトを自分の目的に合わせて変更することができます。 機能のヘルプメッセージ [入札_export.m](https://github.com/sccn/bids-matlab-tools/blob/master/bids_export.m) また、BIDS形式のデータをエクスポートする方法に関する情報が含まれています。 
+データセットをBIDSにエクスポートすることで、コマンドラインから簡単に行えます。 文書化された例のスクリプト [bids_export_example.m](https://github.com/sccn/bids-matlab-tools/blob/master/bids_export_example.m) そして、 [bids_export_example2.m](https://github.com/sccn/bids-matlab-tools/blob/master/bids_export_example2.m) (詳細はこちら) これらのスクリプトを自分の目的に合わせて変更することができます。 機能のヘルプメッセージ [入札_export.m](https://github.com/sccn/bids-matlab-tools/blob/master/bids_export.m) また、BIDS形式のデータをエクスポートする方法に関する情報が含まれています。
 
-輸出のためのノート:
+エクスポートのためのノート:
 * 1つのBIDSコンテナに複数のタスクが含まれる場合があります。 この場合、メインタスクの名前は「混在タスク」と異なるタスクのための複数のEEGデータセットが単一の件名/例/フォルダに含まれていることができます。
 * チャンネル電極は、テンプレートの電極位置であればデフォルトでエクスポートしないでください。 これは、BIDSが生データについているからです。 テンプレート(平均)に基づく電極の位置は含まれていません。
 
 # EEGとアイトラッキングアライメント
 
-テストフォルダでは、**test_smi.m** 関数を使用して、EEG と eye-tracking 同期を調べます。 下のプロットは、元の目追跡データ(黒の垂直トレースとしてプロットされたイベントと並行して)と、ジョイントEEGと目追跡データ(比較のために目追跡データのみが表示される)を示しています。 異なるサンプリング速度にもかかわらず、アライメントは完璧に近いです。 
+テストフォルダでは、**test_smi.m** 関数を使用して、EEG と eye-tracking 同期を調べます。 下のプロットは、元の目追跡データ(黒の垂直トレースとしてプロットされたイベントと並行して)と、ジョイントEEGと目追跡データ(比較のために目追跡データのみが表示される)を示しています。 異なるサンプリング速度にもかかわらず、アライメントは完璧に近いです。
 
 ![スクリーンショット 2023-12-12 に 5 37 25](https://github.com/sccn/bids-matlab-tools/assets/1872705/f2d9f851-b6d9-4e7c-9360-1d7e6880e6b3)
 

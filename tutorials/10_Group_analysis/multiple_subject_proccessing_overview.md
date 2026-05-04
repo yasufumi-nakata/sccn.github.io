@@ -4,16 +4,16 @@ title: a. Batch processing
 nav_title: "a. バッチ処理"
 long_title: a. Batch processing for groups of subjects
 parent: 10. Group analysis
-grand_parent: Tutorials 
+grand_parent: Tutorials
 ---
-被写体のデータの一括処理
+被験者のデータの一括処理
 ====
 
-このチュートリアルでは、複数の被写体を想像してみてください。
+このチュートリアルでは、複数の被験者を想像してみてください。
 大規模な分析を成功にお勧め
-単一サブジェクト解析を超えた実験。 
+単一被験者解析を超えた実験。
 
-このチュートリアルでは、EEGLAB の複数の被写体処理をしています。
+このチュートリアルでは、EEGLAB の複数の被験者処理をしています。
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/-jL3PuHD3aY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
@@ -28,7 +28,7 @@ grand_parent: Tutorials
 ----
 EEGLABの様々なデータセットをロードして選択してください。
 
-このチュートリアルでは、 [5-サブジェクト実験](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (450Mb) [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html) このデータに関する詳細情報 
+このチュートリアルでは、 [5被験者実験](http://sccn.ucsd.edu/eeglab/download/STUDY5subjects.zip) (450Mb) [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html) このデータに関する詳細情報
 
 。 <span style="color: brown">ファイル → 既存のデータセットをロードする</span> メニュー項目. 複数のデータセットは, 以下は, EEGLAB
 
@@ -47,12 +47,12 @@ EEGLABの様々なデータセットをロードして選択してください�
 
 バッチ処理を実行
 ----
-EEGLAB は、STUDY* の略称で、データセットの構成要素です。 
+EEGLAB は、STUDY* の略称で、データセットの構成要素です。
 複数のデータセットがある場合、メニュー項目が表示されない
 複数のデータセットが無効になっています。 すべての利用可能なツールは、同様の方法でデータを処理します。 メニュー選択時、
 メニューウィンドウがポップアップ(単一のデータセットウィンドウに識別)
 処理パラメータを選択すると、すべてのパラメーターが適用されます。
-データセット。 
+データセット。
 
 EEGLABの動作オプションは、
 <span style="color: brown">ファイル → 環境設定</span>.
@@ -106,29 +106,29 @@ ICAの実行
 
 ![](/assets/images/pop_runica_multiple.png)
 
-デフォルトでは、 
+デフォルトでは、
 [pop_runica.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m)
  同じデータセットを連結します。
 テーマとセッション。 たとえば、複数のデータセットがイベントの異なるクラスにタイムロックされ、複数の実験を構成できます。
-被写体ごとの条件、同じセッションで収集されるすべてのもの
-電極モンタージュ。 
-デフォルトでは(チェックボックスを最低限にしておく)、 
+被験者ごとの条件、同じセッションで収集されるすべてのもの
+電極モンタージュ。
+デフォルトでは(チェックボックスを最低限にしておく)、
 [pop_runica.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m)  ICAの解任者。
 これらのデータセットからのデータ試用を連結し、その後、添付します
 それぞれのデータセットは、
 連結用に選択したデータセットに関する情報は、
-マトラボ 参加方法 [pop_runica.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m) を参照してください。
+MATLAB 参加方法 [pop_runica.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m) を参照してください。
 連結データセット、データセットのエポックの長さは
 等しいと仮定される。
 
-ご希望の場合(笑) 
+ご希望の場合(笑)
 [pop_runica.m 関数](http://sccn.ucsd.edu/eeglab/locatefile.php?file=pop_runica.m) 前にすべてのデータセットをロードして連結する
 ICAの運営について
 (そして不当に)非常に同じ脳および非脳を仮定します
 ソースと非常に同じ
 各セッションおよび/または対象に電極の位置が存在します。
 
-サブジェクトの選択とEEGLAB研究
+被験者の選択とEEGLAB研究
 ---
 
 選択したすべてのデータセットの処理後、メニュー項目を使用できます。
@@ -136,5 +136,5 @@ ICAの運営について
 選択したデータセットを使用するには、他のデータを削除する必要があります
 STUDY多重データセット [グループ分析チュートリアル](/tutorials/10_Group_analysis/) 詳しくはこちら
 
-STUDY*データセットが選択され、複数のサブジェクト処理メニューが利用できます。 [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html) *STUDY*の手順
+STUDY*データセットが選択され、複数の被験者処理メニューが利用できます。 [STUDY作成チュートリアル](/tutorials/10_Group_analysis/study_creation.html) *STUDY*の手順
 

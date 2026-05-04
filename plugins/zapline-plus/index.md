@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Zapline-Plus
-nav_title: "Zaplineプラス"
+nav_title: "Zapline-plus"
 long_title: Zapline-Plus
 parent: Plugins
 render_with_liquid: false
@@ -28,7 +28,7 @@ EEG = clean_data_with_zapline_plus_eeglab_wrapper(EEG,struct('noisefreqs',[50]))
 
 オリジナルのザップライン紙:チェヴェーニョ、アライン・デ・2020。 「ZapLine:電力線アーティファクトを除去するシンプルで効果的な方法」 NeuroImage 207(2月):116356。 [https://www.sciencedirect.com/science/article/pii/S1053811919309474](https://www.sciencedirect.com/science/article/pii/S1053811919309474).
 
-Zapline-plusのペーパー:Klug、M。およびN. A. Kloosterman。2021。 「Zapline-plus: M/EEGにおける周波数特異ノイズアーティファクトの自動および適応除去のためのZapline拡張」 バイオRxiv。 [https://www.biorxiv.org/content/10.1101/2021.10.18.464805.abstract](https://www.biorxiv.org/content/10.1101/2021.10.18.464805.abstract).
+Zapline-plusの論文:Klug、M。およびN. A. Kloosterman。2021。 「Zapline-plus: M/EEGにおける周波数特異ノイズアーティファクトの自動および適応除去のためのZapline拡張」 バイオRxiv。 [https://www.biorxiv.org/content/10.1101/2021.10.18.464805.abstract](https://www.biorxiv.org/content/10.1101/2021.10.18.464805.abstract).
 
 # バージョン
 
